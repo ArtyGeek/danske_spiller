@@ -46,7 +46,10 @@
     var pret = stem + 'ede';
     var part = stem + 'et';
     aux = aux || 'har';
-    return verbObj(level, inf, inf + 'r', pret, aux, part, stem,
+    // Imperative: a doubled consonant is written single when word-final
+    // (snakke -> snak, lukke -> luk, kysse -> kys, passe -> pas).
+    var imp = stem.replace(/([b-df-hj-np-tv-z])\1$/, '$1');
+    return verbObj(level, inf, inf + 'r', pret, aux, part, imp,
       transitive ? inf + 's' : null,
       inf + ' (' + gloss + ') bøjes svagt med -ede/-et: ' + pret + ', ' + aux + ' ' + part + '.',
       verify);
