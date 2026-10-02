@@ -31,9 +31,9 @@ window.TIDS_DATA = {
       "context": "Vi er i køkkenet nu.",
       "sentence": "Nu ___ vi aftensmad.",
       "options": [
+        "laver",
         "havde lavet",
-        null,
-        "laver"
+        "lavede"
       ],
       "correct": "laver",
       "accepted_answers": [
@@ -65,9 +65,9 @@ window.TIDS_DATA = {
       "context": "Hun er stadig på arbejde.",
       "sentence": "Min søster ___ stadig på kontoret.",
       "options": [
-        "arbejder",
         "havde arbejdet",
-        null
+        "arbejdede",
+        "arbejder"
       ],
       "correct": "arbejder",
       "accepted_answers": [
@@ -99,9 +99,9 @@ window.TIDS_DATA = {
       "context": "Det er sådan i dag.",
       "sentence": "Nu om dage ___ mange mennesker hjemmefra.",
       "options": [
-        "arbejder",
+        "havde arbejdet",
         "arbejdede",
-        null
+        "arbejder"
       ],
       "correct": "arbejder",
       "accepted_answers": [
@@ -117,7 +117,7 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ på hotel i denne uge.",
       "options": [
         "havde boet",
-        null,
+        "boede",
         "bor"
       ],
       "correct": "bor",
@@ -135,7 +135,7 @@ window.TIDS_DATA = {
       "options": [
         "ligger",
         "lå",
-        null
+        "havde ligget"
       ],
       "correct": "ligger",
       "accepted_answers": [
@@ -167,9 +167,9 @@ window.TIDS_DATA = {
       "context": "Du præsenterer dig selv.",
       "sentence": "Jeg ___ Mette, og jeg er 28 år.",
       "options": [
-        "hed",
         "havde heddet",
-        "hedder"
+        "hedder",
+        "hed"
       ],
       "correct": "hedder",
       "accepted_answers": [
@@ -185,7 +185,7 @@ window.TIDS_DATA = {
       "sentence": "Min bror ___ i København og studerer medicin.",
       "options": [
         "bor",
-        null,
+        "havde boet",
         "boede"
       ],
       "correct": "bor",
@@ -219,7 +219,7 @@ window.TIDS_DATA = {
       "sentence": "Til venstre ___ I Rundetårn, som blev bygget i 1600-tallet.",
       "options": [
         "ser",
-        null,
+        "havde set",
         "så"
       ],
       "correct": "ser",
@@ -237,7 +237,7 @@ window.TIDS_DATA = {
       "options": [
         "gælder",
         "gjaldt",
-        null
+        "havde gældt"
       ],
       "correct": "gælder",
       "accepted_answers": [
@@ -252,9 +252,9 @@ window.TIDS_DATA = {
       "context": "Det er butikkens tilbud i dag.",
       "sentence": "I øjeblikket ___ butikken rabat på alle varer.",
       "options": [
+        "giver",
         "havde givet",
-        "gav",
-        "giver"
+        "gav"
       ],
       "correct": "giver",
       "accepted_answers": [
@@ -271,7 +271,7 @@ window.TIDS_DATA = {
       "options": [
         "startede",
         "starter",
-        null
+        "havde startet"
       ],
       "correct": "starter",
       "accepted_answers": [
@@ -287,7 +287,7 @@ window.TIDS_DATA = {
       "sentence": "Vand ___ ved 100 grader.",
       "options": [
         "koger",
-        null,
+        "kogte",
         "havde kogt"
       ],
       "correct": "koger",
@@ -321,8 +321,8 @@ window.TIDS_DATA = {
       "sentence": "Danmark ___ mellem Nordsøen og Østersøen.",
       "options": [
         "lå",
-        "ligger",
-        null
+        "havde ligget",
+        "ligger"
       ],
       "correct": "ligger",
       "accepted_answers": [
@@ -423,7 +423,7 @@ window.TIDS_DATA = {
       "sentence": "Kunden ___ tre rundstykker.",
       "options": [
         "køber",
-        null,
+        "havde købt",
         "købte"
       ],
       "correct": "køber",
@@ -456,9 +456,9 @@ window.TIDS_DATA = {
       "context": "Du taler om i dag.",
       "sentence": "Børnene ___ stadig, så vi kan ikke gå endnu.",
       "options": [
+        "sover",
         "havde sovet",
-        "sov",
-        "sover"
+        "sov"
       ],
       "correct": "sover",
       "accepted_answers": [
@@ -474,7 +474,7 @@ window.TIDS_DATA = {
       "sentence": "Læreren ___ på tavlen, og vi skriver ned.",
       "options": [
         "skriver",
-        null,
+        "skrev",
         "havde skrevet"
       ],
       "correct": "skriver",
@@ -490,9 +490,9 @@ window.TIDS_DATA = {
       "context": "Det skete i går.",
       "sentence": "I går ___ jeg en lang tur i skoven.",
       "options": [
+        "gik",
         "var gået",
-        null,
-        "gik"
+        "går"
       ],
       "correct": "gik",
       "accepted_answers": [
@@ -507,9 +507,9 @@ window.TIDS_DATA = {
       "context": "Det skete i lørdags.",
       "sentence": "I lørdags ___ vi en god film.",
       "options": [
+        "så",
         "havde set",
-        "ser",
-        "så"
+        "ser"
       ],
       "correct": "så",
       "accepted_answers": [
@@ -526,7 +526,7 @@ window.TIDS_DATA = {
       "options": [
         "fik",
         "får",
-        null
+        "havde fået"
       ],
       "correct": "fik",
       "accepted_answers": [
@@ -543,7 +543,7 @@ window.TIDS_DATA = {
       "options": [
         "rejser",
         "rejste",
-        null
+        "havde rejst"
       ],
       "correct": "rejste",
       "accepted_answers": [
@@ -559,7 +559,7 @@ window.TIDS_DATA = {
       "sentence": "I morges ___ jeg tidligt og tog toget klokken seks.",
       "options": [
         "havde stået",
-        null,
+        "står",
         "stod"
       ],
       "correct": "stod",
@@ -660,9 +660,9 @@ window.TIDS_DATA = {
       "context": "Det skete for lidt siden.",
       "sentence": "For fem minutter siden ___ telefonen.",
       "options": [
-        "ringede",
+        "havde ringet",
         "ringer",
-        null
+        "ringede"
       ],
       "correct": "ringede",
       "accepted_answers": [
@@ -677,9 +677,9 @@ window.TIDS_DATA = {
       "context": "Det skete for et par måneder siden.",
       "sentence": "For et par måneder siden ___ vi en ny sofa.",
       "options": [
-        "købte",
         "havde købt",
-        null
+        "køber",
+        "købte"
       ],
       "correct": "købte",
       "accepted_answers": [
@@ -694,9 +694,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller om din barndom.",
       "sentence": "Som barn ___ jeg i en lille by ved havet.",
       "options": [
-        "bor",
         "havde boet",
-        "boede"
+        "boede",
+        "bor"
       ],
       "correct": "boede",
       "accepted_answers": [
@@ -712,8 +712,8 @@ window.TIDS_DATA = {
       "sentence": "Sidste sommer ___ vi i Italien.",
       "options": [
         "er",
-        "var",
-        null
+        "havde været",
+        "var"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -728,9 +728,9 @@ window.TIDS_DATA = {
       "context": "Det var i 2010.",
       "sentence": "I 2010 ___ hun sin uddannelse og fik straks arbejde.",
       "options": [
-        "afsluttede",
+        "havde afsluttet",
         "afslutter",
-        null
+        "afsluttede"
       ],
       "correct": "afsluttede",
       "accepted_answers": [
@@ -745,9 +745,9 @@ window.TIDS_DATA = {
       "context": "Det var i går.",
       "sentence": "I går ___ det hele dagen, så vi blev inde.",
       "options": [
+        "regnede",
         "havde regnet",
-        null,
-        "regnede"
+        "regner"
       ],
       "correct": "regnede",
       "accepted_answers": [
@@ -763,8 +763,8 @@ window.TIDS_DATA = {
       "sentence": "I tirsdags ___ jeg en pakke fra Tyskland.",
       "options": [
         "får",
-        "fik",
-        null
+        "havde fået",
+        "fik"
       ],
       "correct": "fik",
       "accepted_answers": [
@@ -847,9 +847,9 @@ window.TIDS_DATA = {
       "context": "Det er over nu.",
       "sentence": "Koncerten ___ klokken otte i går aftes.",
       "options": [
+        "startede",
         "havde startet",
-        "starter",
-        "startede"
+        "starter"
       ],
       "correct": "startede",
       "accepted_answers": [
@@ -866,7 +866,7 @@ window.TIDS_DATA = {
       "options": [
         "går",
         "gik",
-        null
+        "var gået"
       ],
       "correct": "gik",
       "accepted_answers": [
@@ -882,8 +882,8 @@ window.TIDS_DATA = {
       "sentence": "For mange år siden ___ der en bager i vores gade.",
       "options": [
         "var",
-        null,
-        null
+        "er",
+        "havde været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -917,7 +917,7 @@ window.TIDS_DATA = {
       "options": [
         "finder",
         "fandt",
-        null
+        "havde fundet"
       ],
       "correct": "fandt",
       "accepted_answers": [
@@ -950,8 +950,8 @@ window.TIDS_DATA = {
       "sentence": "Sidste måned ___ jeg en ny telefon.",
       "options": [
         "giver",
-        "gav",
-        null
+        "havde givet",
+        "gav"
       ],
       "correct": "gav",
       "accepted_answers": [
@@ -967,7 +967,7 @@ window.TIDS_DATA = {
       "sentence": "I aftes ___ jeg en film, og så gik jeg i seng.",
       "options": [
         "så",
-        null,
+        "ser",
         "havde set"
       ],
       "correct": "så",
@@ -1000,9 +1000,9 @@ window.TIDS_DATA = {
       "context": "Det er en afsluttet periode.",
       "sentence": "Jeg ___ fodbold i ti år, men jeg stoppede i 2020.",
       "options": [
+        "spillede",
         "havde spillet",
-        "spiller",
-        "spillede"
+        "spiller"
       ],
       "correct": "spillede",
       "accepted_answers": [
@@ -1018,8 +1018,8 @@ window.TIDS_DATA = {
       "sentence": "I september ___ vi til Berlin og besøgte nogle venner.",
       "options": [
         "kørte",
-        null,
-        null
+        "kører",
+        "havde kørt"
       ],
       "correct": "kørte",
       "accepted_answers": [
@@ -1034,9 +1034,9 @@ window.TIDS_DATA = {
       "context": "Hun er ikke her længere.",
       "sentence": "Hun ___ her indtil i fredags, men så flyttede hun.",
       "options": [
-        "boede",
         "havde boet",
-        null
+        "bor",
+        "boede"
       ],
       "correct": "boede",
       "accepted_answers": [
@@ -1051,9 +1051,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller, hvad du lavede i går.",
       "sentence": "I går ___ jeg til tandlæge, og bagefter handlede jeg.",
       "options": [
+        "gik",
         "var gået",
-        null,
-        "gik"
+        "går"
       ],
       "correct": "gik",
       "accepted_answers": [
@@ -1103,7 +1103,7 @@ window.TIDS_DATA = {
       "sentence": "Min far ___ altid avisen om morgenen.",
       "options": [
         "læser",
-        null,
+        "havde læst",
         "læste"
       ],
       "correct": "læser",
@@ -1121,7 +1121,7 @@ window.TIDS_DATA = {
       "options": [
         "spiste",
         "spiser",
-        null
+        "havde spist"
       ],
       "correct": "spiste",
       "accepted_answers": [
@@ -1137,8 +1137,8 @@ window.TIDS_DATA = {
       "sentence": "Hver tirsdag ___ jeg til svømning, og det gør jeg stadig.",
       "options": [
         "går",
-        null,
-        null
+        "gik",
+        "var gået"
       ],
       "correct": "går",
       "accepted_answers": [
@@ -1153,9 +1153,9 @@ window.TIDS_DATA = {
       "context": "Sådan var det i studietiden.",
       "sentence": "Som studerende ___ jeg næsten aldrig morgenmad.",
       "options": [
+        "spiste",
         "havde spist",
-        "spiser",
-        "spiste"
+        "spiser"
       ],
       "correct": "spiste",
       "accepted_answers": [
@@ -1204,9 +1204,9 @@ window.TIDS_DATA = {
       "context": "Sådan er det nu for tiden.",
       "sentence": "Nu for tiden ___ jeg ofte tidligt, fordi jeg vil løbe om morgenen.",
       "options": [
-        "stod",
         "havde stået",
-        "står"
+        "står",
+        "stod"
       ],
       "correct": "står",
       "accepted_answers": [
@@ -1221,9 +1221,9 @@ window.TIDS_DATA = {
       "context": "Din farmor fortæller om gamle dage.",
       "sentence": "Dengang ___ vi vores tøj i hånden.",
       "options": [
-        "vaskede",
         "havde vasket",
-        null
+        "vasker",
+        "vaskede"
       ],
       "correct": "vaskede",
       "accepted_answers": [
@@ -1291,7 +1291,7 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ aldrig sukker i sin kaffe.",
       "options": [
         "har",
-        null,
+        "havde haft",
         "havde"
       ],
       "correct": "har",
@@ -1307,9 +1307,9 @@ window.TIDS_DATA = {
       "context": "Du taler om dengang.",
       "sentence": "Dengang ___ posten kun én gang om dagen.",
       "options": [
+        "kom",
         "var kommet",
-        null,
-        "kom"
+        "kommer"
       ],
       "correct": "kom",
       "accepted_answers": [
@@ -1325,7 +1325,7 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ sammen om søndagen.",
       "options": [
         "spiser",
-        null,
+        "spiste",
         "havde spist"
       ],
       "correct": "spiser",
@@ -1427,7 +1427,7 @@ window.TIDS_DATA = {
       "sentence": "Hun kom hjem, ___ sin taske i gangen og gik direkte i seng.",
       "options": [
         "lagde",
-        null,
+        "havde lagt",
         "lægger"
       ],
       "correct": "lagde",
@@ -1478,8 +1478,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg lavede mad, spiste og ___ opvasken.",
       "options": [
         "tog",
-        null,
-        null
+        "tager",
+        "havde taget"
       ],
       "correct": "tog",
       "accepted_answers": [
@@ -1495,8 +1495,8 @@ window.TIDS_DATA = {
       "sentence": "Vi landede klokken seks, hentede vores bagage og ___ med taxa til hotellet.",
       "options": [
         "kører",
-        "kørte",
-        null
+        "havde kørt",
+        "kørte"
       ],
       "correct": "kørte",
       "accepted_answers": [
@@ -1512,7 +1512,7 @@ window.TIDS_DATA = {
       "sentence": "Pigen hørte en lyd, ___ sig om og så en ræv.",
       "options": [
         "havde vendt",
-        null,
+        "vender",
         "vendte"
       ],
       "correct": "vendte",
@@ -1528,9 +1528,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller om i går.",
       "sentence": "Jeg ringede til hende, men hun ___ ikke.",
       "options": [
+        "svarede",
         "havde svaret",
-        "svarer",
-        "svarede"
+        "svarer"
       ],
       "correct": "svarede",
       "accepted_answers": [
@@ -1546,8 +1546,8 @@ window.TIDS_DATA = {
       "sentence": "Han stod lidt ved vinduet og ___ derefter ud i regnen.",
       "options": [
         "går",
-        "gik",
-        null
+        "var gået",
+        "gik"
       ],
       "correct": "gik",
       "accepted_answers": [
@@ -1562,9 +1562,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller om i går.",
       "sentence": "Jeg kom hjem, ___ aftensmad og så fjernsyn.",
       "options": [
+        "lavede",
         "havde lavet",
-        null,
-        "lavede"
+        "laver"
       ],
       "correct": "lavede",
       "accepted_answers": [
@@ -1579,9 +1579,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller om et bryllup, der er slut.",
       "sentence": "Hun sagde ja, og alle gæsterne ___.",
       "options": [
+        "klappede",
         "havde klappet",
-        null,
-        "klappede"
+        "klapper"
       ],
       "correct": "klappede",
       "accepted_answers": [
@@ -1597,9 +1597,9 @@ window.TIDS_DATA = {
       "context": "En kort beretning om i går.",
       "sentence": "Toget stoppede, dørene gik op, og passagererne ___ ud.",
       "options": [
-        "strømmede",
         "var strømmet",
-        null
+        "strømmer",
+        "strømmede"
       ],
       "correct": "strømmede",
       "accepted_answers": [
@@ -1609,15 +1609,15 @@ window.TIDS_DATA = {
       "verify": true
     },
     {
-      "id": "toget-afgaar-klokken-otte-i-morgen",
+      "id": "toget-til-odense-afgaar-klokken-otte-i-morgen",
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Afgangen står i køreplanen.",
-      "sentence": "Toget ___ klokken otte i morgen.",
+      "sentence": "Toget til Odense ___ klokken otte i morgen.",
       "options": [
+        "var afgået",
         "afgik",
-        "afgår",
-        "var afgået"
+        "afgår"
       ],
       "correct": "afgår",
       "accepted_answers": [
@@ -1634,7 +1634,7 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ på fredag.",
       "options": [
         "havde rejst",
-        null,
+        "rejste",
         "rejser"
       ],
       "correct": "rejser",
@@ -1644,15 +1644,15 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "min-kusine-kommer-i-morgen-kl-15",
+      "id": "min-tante-kommer-i-morgen-kl-16",
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Det er aftalt.",
-      "sentence": "Min kusine ___ i morgen kl. 15.",
+      "sentence": "Min tante ___ i morgen kl. 16.",
       "options": [
         "kom",
-        "var kommet",
-        "kommer"
+        "kommer",
+        "var kommet"
       ],
       "correct": "kommer",
       "accepted_answers": [
@@ -1667,9 +1667,9 @@ window.TIDS_DATA = {
       "context": "Det står i kalenderen.",
       "sentence": "Mødet ___ i næste uge på tirsdag.",
       "options": [
+        "starter",
         "havde startet",
-        null,
-        "starter"
+        "startede"
       ],
       "correct": "starter",
       "accepted_answers": [
@@ -1695,15 +1695,15 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "skolen-lukker-for-sommerferie-den-24-juni",
+      "id": "gymnasiet-lukker-for-sommerferie-den-24-juni",
       "level": "B1",
       "mode": "present_vs_preterite",
       "context": "Skolen har planlagt det.",
-      "sentence": "Skolen ___ for sommerferie den 24. juni.",
+      "sentence": "Gymnasiet ___ for sommerferie den 24. juni.",
       "options": [
         "havde lukket",
-        "lukker",
-        "lukkede"
+        "lukkede",
+        "lukker"
       ],
       "correct": "lukker",
       "accepted_answers": [
@@ -1712,15 +1712,15 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "koncerten-begynder-klokken-20-paa-loerdag",
+      "id": "teaterstykket-begynder-klokken-20-paa-loerdag",
       "level": "B1",
       "mode": "present_vs_preterite",
       "context": "Programmet er trykt.",
-      "sentence": "Koncerten ___ klokken 20 på lørdag.",
+      "sentence": "Teaterstykket ___ klokken 20 på lørdag.",
       "options": [
-        "begyndte",
+        "havde begyndt",
         "begynder",
-        null
+        "begyndte"
       ],
       "correct": "begynder",
       "accepted_answers": [
@@ -1736,9 +1736,9 @@ window.TIDS_DATA = {
       "context": "Det er besluttet.",
       "sentence": "Vi ___ vores nye lejlighed næste måned.",
       "options": [
+        "overtager",
         "havde overtaget",
-        "overtog",
-        "overtager"
+        "overtog"
       ],
       "correct": "overtager",
       "accepted_answers": [
@@ -1748,15 +1748,15 @@ window.TIDS_DATA = {
       "verify": true
     },
     {
-      "id": "flyet-lander-i-rom-klokken-fjorten-i-morgen",
+      "id": "flyet-lander-i-rom-klokken-fjorten-paa-mandag",
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Flyet har en fast tid.",
-      "sentence": "Flyet ___ i Rom klokken fjorten i morgen.",
+      "sentence": "Flyet ___ i Rom klokken fjorten på mandag.",
       "options": [
         "lander",
         "landede",
-        null
+        "havde landet"
       ],
       "correct": "lander",
       "accepted_answers": [
@@ -1772,8 +1772,8 @@ window.TIDS_DATA = {
       "sentence": "Næste sommer ___ vi til Grækenland.",
       "options": [
         "rejser",
-        null,
-        null
+        "rejste",
+        "havde rejst"
       ],
       "correct": "rejser",
       "accepted_answers": [
@@ -1782,11 +1782,11 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "jeg-ringer-dig-klokken-ti-i-morgen",
+      "id": "jeg-ringer-dig-klokken-elleve-i-morgen",
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Det er aftalt til i morgen.",
-      "sentence": "Jeg ___ dig klokken ti i morgen.",
+      "sentence": "Jeg ___ dig klokken elleve i morgen.",
       "options": [
         "ringer",
         "havde ringet",
@@ -1805,9 +1805,9 @@ window.TIDS_DATA = {
       "context": "Butikken har åbningstider.",
       "sentence": "Butikken ___ først kl. 10 i morgen på grund af en kursusdag.",
       "options": [
-        "åbner",
         "havde åbnet",
-        null
+        "åbnede",
+        "åbner"
       ],
       "correct": "åbner",
       "accepted_answers": [
@@ -1839,9 +1839,9 @@ window.TIDS_DATA = {
       "context": "Det er en fast plan.",
       "sentence": "Hun ___ til London på søndag og bliver der en uge.",
       "options": [
-        "flyver",
+        "var fløjet",
         "fløj",
-        null
+        "flyver"
       ],
       "correct": "flyver",
       "accepted_answers": [
@@ -1873,9 +1873,9 @@ window.TIDS_DATA = {
       "context": "Din læge har sat det på.",
       "sentence": "Operationen ___ sted den 3. marts.",
       "options": [
-        "finder",
+        "havde fundet",
         "fandt",
-        null
+        "finder"
       ],
       "correct": "finder",
       "accepted_answers": [
@@ -1885,15 +1885,15 @@ window.TIDS_DATA = {
       "verify": true
     },
     {
-      "id": "vi-bor-paa-hotel-i-to-naetter-naar-vi-kommer-til-rom",
+      "id": "vi-bor-paa-hotel-i-tre-naetter-naar-vi-kommer-til-rom",
       "level": "B1",
       "mode": "present_vs_preterite",
       "context": "Du har bestilt hotellet.",
-      "sentence": "Vi ___ på hotel i to nætter, når vi kommer til Rom.",
+      "sentence": "Vi ___ på hotel i tre nætter, når vi kommer til Rom.",
       "options": [
         "havde boet",
-        "bor",
-        "boede"
+        "boede",
+        "bor"
       ],
       "correct": "bor",
       "accepted_answers": [
@@ -1908,9 +1908,9 @@ window.TIDS_DATA = {
       "context": "Det er sikkert nok, fordi det er planlagt.",
       "sentence": "Min bror ___ 30 i næste måned.",
       "options": [
+        "bliver",
         "var blevet",
-        "blev",
-        "bliver"
+        "blev"
       ],
       "correct": "bliver",
       "accepted_answers": [
@@ -1919,14 +1919,14 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "skolen-begynder-igen-paa-mandag-efter-ferien",
+      "id": "boernehaven-begynder-igen-paa-mandag-efter-ferien",
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Du har et fast skema.",
-      "sentence": "Skolen ___ igen på mandag efter ferien.",
+      "sentence": "Børnehaven ___ igen på mandag efter ferien.",
       "options": [
-        "begyndte",
         "havde begyndt",
+        "begyndte",
         "begynder"
       ],
       "correct": "begynder",
@@ -1944,8 +1944,8 @@ window.TIDS_DATA = {
       "sentence": "I morgen ___ jeg hjemmefra.",
       "options": [
         "arbejdede",
-        "arbejder",
-        null
+        "havde arbejdet",
+        "arbejder"
       ],
       "correct": "arbejder",
       "accepted_answers": [
@@ -1961,7 +1961,7 @@ window.TIDS_DATA = {
       "sentence": "I 1801 ___ englænderne København og sænker flåden.",
       "options": [
         "havde angrebet",
-        null,
+        "angreb",
         "angriber"
       ],
       "correct": "angriber",
@@ -2030,7 +2030,7 @@ window.TIDS_DATA = {
       "sentence": "I 1969 ___ mennesket for første gang på månen.",
       "options": [
         "havde landet",
-        null,
+        "landede",
         "lander"
       ],
       "correct": "lander",
@@ -2047,8 +2047,8 @@ window.TIDS_DATA = {
       "sentence": "Et år ___ tolv måneder.",
       "options": [
         "havde",
-        "har",
-        null
+        "havde haft",
+        "har"
       ],
       "correct": "har",
       "accepted_answers": [
@@ -2065,10 +2065,10 @@ window.TIDS_DATA = {
       "context": "Hun flyttede til Aarhus i 2023 og bor der stadig.",
       "sentence": "Hun ___ i Aarhus siden 2023.",
       "options": [
-        "boede",
-        "havde boet",
+        "bor",
         "har boet",
-        null
+        "boede",
+        "havde boet"
       ],
       "correct": "har boet",
       "accepted_answers": [
@@ -2113,7 +2113,7 @@ window.TIDS_DATA = {
       "options": [
         "har kendt",
         "kendte",
-        null,
+        "havde kendt",
         "kender"
       ],
       "correct": "har kendt",
@@ -2134,9 +2134,9 @@ window.TIDS_DATA = {
       "context": "Min bror lærte at spille guitar i 2020 og spiller stadig.",
       "sentence": "Han ___ guitar siden 2020.",
       "options": [
-        "spillede",
         "havde spillet",
         "spiller",
+        "spillede",
         "har spillet"
       ],
       "correct": "har spillet",
@@ -2180,10 +2180,10 @@ window.TIDS_DATA = {
       "context": "Jeg blev syg i mandags og er stadig syg.",
       "sentence": "Jeg ___ syg siden mandag.",
       "options": [
-        "havde været",
-        "er",
         "har været",
-        null
+        "havde været",
+        "var",
+        "er"
       ],
       "correct": "har været",
       "accepted_answers": [
@@ -2203,9 +2203,9 @@ window.TIDS_DATA = {
       "context": "Vi kom klokken otte og venter stadig.",
       "sentence": "Vi ___ på bussen siden klokken otte.",
       "options": [
-        "venter",
         "havde ventet",
-        null,
+        "ventede",
+        "venter",
         "har ventet"
       ],
       "correct": "har ventet",
@@ -2251,8 +2251,8 @@ window.TIDS_DATA = {
       "options": [
         "studerede",
         "har studeret",
-        null,
-        null
+        "havde studeret",
+        "studerer"
       ],
       "correct": "har studeret",
       "accepted_answers": [
@@ -2273,7 +2273,7 @@ window.TIDS_DATA = {
       "sentence": "Firmaet ___ siden 1990.",
       "options": [
         "eksisterer",
-        null,
+        "eksisterede",
         "har eksisteret",
         "havde eksisteret"
       ],
@@ -2296,7 +2296,7 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ hver morgen siden 2018.",
       "options": [
         "har trænet",
-        null,
+        "træner",
         "havde trænet",
         "trænede"
       ],
@@ -2319,9 +2319,9 @@ window.TIDS_DATA = {
       "sentence": "Min nabo ___ ved siden af os siden 2019.",
       "options": [
         "boede",
+        "bor",
         "har boet",
-        null,
-        null
+        "havde boet"
       ],
       "correct": "har boet",
       "accepted_answers": [
@@ -2341,10 +2341,10 @@ window.TIDS_DATA = {
       "context": "Det blev koldt i december, og det er stadig koldt.",
       "sentence": "Det ___ koldt siden december.",
       "options": [
-        "var",
+        "er",
         "har været",
-        null,
-        null
+        "havde været",
+        "var"
       ],
       "correct": "har været",
       "accepted_answers": [
@@ -2387,10 +2387,10 @@ window.TIDS_DATA = {
       "context": "Jeg så ham sidst i juni, og nu er det august.",
       "sentence": "Jeg ___ ham ikke siden juni.",
       "options": [
-        "havde ikke set",
+        "ser ikke",
         "har ikke set",
         "så ikke",
-        null
+        "havde ikke set"
       ],
       "correct": "har ikke set",
       "accepted_answers": [
@@ -2411,8 +2411,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ ikke med hende siden jul.",
       "options": [
         "talte ikke",
+        "havde ikke talt",
         "taler ikke",
-        null,
         "har ikke talt"
       ],
       "correct": "har ikke talt",
@@ -2433,10 +2433,10 @@ window.TIDS_DATA = {
       "context": "Kaffemaskinen holdt op med at virke i mandags.",
       "sentence": "Den ___ ikke siden mandag.",
       "options": [
+        "virker ikke",
+        "virkede ikke",
         "har ikke virket",
-        "havde ikke virket",
-        null,
-        null
+        "havde ikke virket"
       ],
       "correct": "har ikke virket",
       "accepted_answers": [
@@ -2456,10 +2456,10 @@ window.TIDS_DATA = {
       "context": "Hun fik kørekort i 2010 og kører stadig.",
       "sentence": "Hun ___ bil siden 2010.",
       "options": [
-        "kørte",
+        "kører",
         "har kørt",
-        null,
-        null
+        "havde kørt",
+        "kørte"
       ],
       "correct": "har kørt",
       "accepted_answers": [
@@ -2504,7 +2504,7 @@ window.TIDS_DATA = {
       "options": [
         "har deltaget",
         "deltager",
-        null,
+        "havde deltaget",
         "deltog"
       ],
       "correct": "har deltaget",
@@ -2548,9 +2548,9 @@ window.TIDS_DATA = {
       "context": "Hun overtog butikken i 2016 og driver den stadig.",
       "sentence": "Hun ___ butikken siden 2016.",
       "options": [
-        "havde drevet",
-        null,
         "har drevet",
+        "havde drevet",
+        "drev",
         "driver"
       ],
       "correct": "har drevet",
@@ -2595,7 +2595,7 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ ikke fra ham siden påske.",
       "options": [
         "havde ikke hørt",
-        null,
+        "hørte ikke",
         "hører ikke",
         "har ikke hørt"
       ],
@@ -2617,10 +2617,10 @@ window.TIDS_DATA = {
       "context": "Jeg kom til Odense for tre år siden og bor der stadig.",
       "sentence": "Jeg ___ i Odense i tre år.",
       "options": [
-        "havde boet",
-        "boede",
         "har boet",
-        null
+        "havde boet",
+        "bor",
+        "boede"
       ],
       "correct": "har boet",
       "accepted_answers": [
@@ -2663,10 +2663,10 @@ window.TIDS_DATA = {
       "context": "De blev gift for tyve år siden og er stadig gift.",
       "sentence": "De ___ gift i tyve år.",
       "options": [
-        "havde været",
-        null,
         "har været",
-        null
+        "havde været",
+        "er",
+        "var"
       ],
       "correct": "har været",
       "accepted_answers": [
@@ -2686,9 +2686,9 @@ window.TIDS_DATA = {
       "context": "Jeg begyndte på svømning for to måneder siden og går stadig til det.",
       "sentence": "Jeg ___ svømmetræning i to måneder.",
       "options": [
-        "har",
         "havde haft",
-        null,
+        "havde",
+        "har",
         "har haft"
       ],
       "correct": "har haft",
@@ -2710,9 +2710,9 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ i en time.",
       "options": [
         "har ventet",
-        "ventede",
-        null,
-        null
+        "venter",
+        "havde ventet",
+        "ventede"
       ],
       "correct": "har ventet",
       "accepted_answers": [
@@ -2732,9 +2732,9 @@ window.TIDS_DATA = {
       "context": "Min kusine flyttede for to år siden og bor der stadig.",
       "sentence": "Hun ___ i Paris i to år.",
       "options": [
-        "har boet",
+        "havde boet",
         "bor",
-        null,
+        "har boet",
         "boede"
       ],
       "correct": "har boet",
@@ -2756,9 +2756,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ for firmaet i ti år.",
       "options": [
         "har arbejdet",
-        "arbejder",
+        "havde arbejdet",
         "arbejdede",
-        null
+        "arbejder"
       ],
       "correct": "har arbejdet",
       "accepted_answers": [
@@ -2802,9 +2802,9 @@ window.TIDS_DATA = {
       "sentence": "Han ___ på sin afhandling i to år.",
       "options": [
         "havde arbejdet",
-        "arbejdede",
+        "arbejder",
         "har arbejdet",
-        null
+        "arbejdede"
       ],
       "correct": "har arbejdet",
       "accepted_answers": [
@@ -2824,9 +2824,9 @@ window.TIDS_DATA = {
       "context": "Vi købte lejligheden for seks år siden og har den stadig.",
       "sentence": "Vi ___ lejligheden i seks år.",
       "options": [
+        "har haft",
         "havde haft",
         "har",
-        "har haft",
         "havde"
       ],
       "correct": "har haft",
@@ -2849,8 +2849,8 @@ window.TIDS_DATA = {
       "options": [
         "har stået",
         "stod",
-        "havde stået",
-        null
+        "står",
+        "havde stået"
       ],
       "correct": "har stået",
       "accepted_answers": [
@@ -2870,9 +2870,9 @@ window.TIDS_DATA = {
       "context": "Danmark kom med i EU i 1973 og er stadig medlem.",
       "sentence": "Danmark ___ medlem af EU i over halvtreds år.",
       "options": [
-        "havde været",
-        null,
         "er",
+        "havde været",
+        "var",
         "har været"
       ],
       "correct": "har været",
@@ -2893,10 +2893,10 @@ window.TIDS_DATA = {
       "context": "Jeg lærte hende at kende for mange år siden, og jeg kender hende stadig.",
       "sentence": "Jeg ___ hende i mange år.",
       "options": [
-        "kendte",
         "havde kendt",
         "har kendt",
-        null
+        "kendte",
+        "kender"
       ],
       "correct": "har kendt",
       "accepted_answers": [
@@ -2916,9 +2916,9 @@ window.TIDS_DATA = {
       "context": "De flyttede ind for fyrre år siden og bor der stadig.",
       "sentence": "De ___ i huset i fyrre år.",
       "options": [
-        "har boet",
+        "havde boet",
         "bor",
-        null,
+        "har boet",
         "boede"
       ],
       "correct": "har boet",
@@ -2940,7 +2940,7 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ syg i tre dage.",
       "options": [
         "er",
-        null,
+        "var",
         "har været",
         "havde været"
       ],
@@ -2986,7 +2986,7 @@ window.TIDS_DATA = {
       "sentence": "Han ___ i køkkenet i to timer.",
       "options": [
         "havde været",
-        null,
+        "var",
         "er",
         "har været"
       ],
@@ -3009,9 +3009,9 @@ window.TIDS_DATA = {
       "context": "Jeg bor ikke længere i Odense.",
       "sentence": "Jeg ___ i Odense fra 2019 til 2021.",
       "options": [
-        "bor",
-        null,
         "boede",
+        "bor",
+        "har boet",
         "havde boet"
       ],
       "correct": "boede",
@@ -3035,7 +3035,7 @@ window.TIDS_DATA = {
         "arbejdede",
         "har arbejdet",
         "arbejder",
-        null
+        "havde arbejdet"
       ],
       "correct": "arbejdede",
       "accepted_answers": [
@@ -3058,7 +3058,7 @@ window.TIDS_DATA = {
         "har set",
         "så",
         "ser",
-        null
+        "havde set"
       ],
       "correct": "så",
       "accepted_answers": [
@@ -3081,7 +3081,7 @@ window.TIDS_DATA = {
         "har mødt",
         "mødte",
         "havde mødt",
-        null
+        "møder"
       ],
       "correct": "mødte",
       "accepted_answers": [
@@ -3101,9 +3101,9 @@ window.TIDS_DATA = {
       "context": "Hun bor i København nu, men flyttede for to år siden.",
       "sentence": "Hun ___ til København for to år siden.",
       "options": [
-        "flytter",
-        null,
         "flyttede",
+        "flytter",
+        "har flyttet",
         "havde flyttet"
       ],
       "correct": "flyttede",
@@ -3124,10 +3124,10 @@ window.TIDS_DATA = {
       "context": "Det var i 1998.",
       "sentence": "Jeg ___ min mand i 1998.",
       "options": [
-        "har mødt",
         "havde mødt",
         "mødte",
-        null
+        "har mødt",
+        "møder"
       ],
       "correct": "mødte",
       "accepted_answers": [
@@ -3149,8 +3149,8 @@ window.TIDS_DATA = {
       "options": [
         "har været",
         "var",
-        "havde været",
-        null
+        "er",
+        "havde været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -3173,7 +3173,7 @@ window.TIDS_DATA = {
         "havde arbejdet",
         "har arbejdet",
         "arbejdede",
-        null
+        "arbejder"
       ],
       "correct": "arbejdede",
       "accepted_answers": [
@@ -3193,9 +3193,9 @@ window.TIDS_DATA = {
       "context": "Klokken er nu 18, og morgenen er forbi.",
       "sentence": "I morges ___ jeg kaffe og tog derefter på arbejde.",
       "options": [
-        "drikker",
-        null,
         "drak",
+        "drikker",
+        "har drukket",
         "havde drukket"
       ],
       "correct": "drak",
@@ -3216,10 +3216,10 @@ window.TIDS_DATA = {
       "context": "Det var i 2012.",
       "sentence": "I 2012 ___ vi vores første hus.",
       "options": [
-        "havde købt",
-        null,
         "købte",
-        null
+        "køber",
+        "har købt",
+        "havde købt"
       ],
       "correct": "købte",
       "accepted_answers": [
@@ -3311,7 +3311,7 @@ window.TIDS_DATA = {
         "har været",
         "havde været",
         "var",
-        null
+        "er"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -3331,10 +3331,10 @@ window.TIDS_DATA = {
       "context": "Du fortæller om din barndom.",
       "sentence": "Da jeg var barn, ___ vi i Norge.",
       "options": [
-        "har boet",
+        "bor",
         "boede",
         "havde boet",
-        null
+        "har boet"
       ],
       "correct": "boede",
       "accepted_answers": [
@@ -3354,9 +3354,9 @@ window.TIDS_DATA = {
       "context": "Jeg bor ikke i Norge længere.",
       "sentence": "I tre år ___ jeg i Norge, og så flyttede jeg tilbage til Danmark.",
       "options": [
+        "boede",
         "bor",
-        null,
-        "boede"
+        "har boet"
       ],
       "correct": "boede",
       "accepted_answers": [
@@ -3379,7 +3379,7 @@ window.TIDS_DATA = {
         "har været",
         "var",
         "er",
-        null
+        "havde været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -3393,16 +3393,16 @@ window.TIDS_DATA = {
       "note": "Et bestemt tidspunkt i fortiden kræver datid."
     },
     {
-      "id": "i-gaar-aftes-laeste-jeg-en-bog-faerdig-2",
+      "id": "i-gaar-aftes-laeste-jeg-min-roman-faerdig",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det var i går aftes.",
-      "sentence": "I går aftes ___ jeg en bog færdig.",
+      "sentence": "I går aftes ___ jeg min roman færdig.",
       "options": [
         "læste",
-        null,
-        null,
-        "har læst"
+        "havde læst",
+        "har læst",
+        "læser"
       ],
       "correct": "læste",
       "accepted_answers": [
@@ -3445,9 +3445,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ os i påsken sidste år.",
       "options": [
         "besøgte",
-        null,
+        "har besøgt",
         "besøger",
-        null
+        "havde besøgt"
       ],
       "correct": "besøgte",
       "accepted_answers": [
@@ -3468,7 +3468,7 @@ window.TIDS_DATA = {
       "sentence": "Telefonen ___ for fem minutter siden.",
       "options": [
         "ringer",
-        null,
+        "har ringet",
         "havde ringet",
         "ringede"
       ],
@@ -3492,7 +3492,7 @@ window.TIDS_DATA = {
       "options": [
         "har arbejdet",
         "arbejdede",
-        null,
+        "havde arbejdet",
         "arbejder"
       ],
       "correct": "arbejdede",
@@ -3514,8 +3514,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ i Aarhus, mens jeg studerede.",
       "options": [
         "har boet",
-        "boede",
-        null
+        "bor",
+        "boede"
       ],
       "correct": "boede",
       "accepted_answers": [
@@ -3535,10 +3535,10 @@ window.TIDS_DATA = {
       "context": "Han var syg i en uge, men har det godt nu.",
       "sentence": "Han ___ syg fra mandag til fredag.",
       "options": [
-        "havde været",
-        null,
         "var",
-        null
+        "havde været",
+        "er",
+        "har været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -3559,8 +3559,8 @@ window.TIDS_DATA = {
       "sentence": "For tre år siden ___ jeg et nyt job.",
       "options": [
         "får",
-        null,
-        null,
+        "har fået",
+        "havde fået",
         "fik"
       ],
       "correct": "fik",
@@ -3582,9 +3582,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ ham i 2017, men siden da har de ikke set hinanden.",
       "options": [
         "besøgte",
-        null,
-        null,
-        null
+        "besøger",
+        "havde besøgt",
+        "har besøgt"
       ],
       "correct": "besøgte",
       "accepted_answers": [
@@ -3606,7 +3606,7 @@ window.TIDS_DATA = {
       "options": [
         "har været",
         "var",
-        null,
+        "havde været",
         "er"
       ],
       "correct": "var",
@@ -3627,9 +3627,9 @@ window.TIDS_DATA = {
       "context": "Det skete sidste år.",
       "sentence": "Sidste år ___ jeg to bøger.",
       "options": [
-        "skriver",
         "havde skrevet",
         "skrev",
+        "skriver",
         "har skrevet"
       ],
       "correct": "skrev",
@@ -3650,10 +3650,10 @@ window.TIDS_DATA = {
       "context": "Han er tidligere formand, og det var i fire år.",
       "sentence": "Han ___ formand i fire år, fra 2012 til 2016.",
       "options": [
+        "var",
         "havde været",
         "har været",
-        "var",
-        null
+        "er"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -3674,8 +3674,8 @@ window.TIDS_DATA = {
       "sentence": "I morges ___ det, men nu skinner solen.",
       "options": [
         "har regnet",
+        "havde regnet",
         "regner",
-        null,
         "regnede"
       ],
       "correct": "regnede",
@@ -3718,9 +3718,9 @@ window.TIDS_DATA = {
       "context": "Det var for ti år siden.",
       "sentence": "For ti år siden ___ der en stor storm.",
       "options": [
+        "var",
         "er",
-        "har været",
-        "var"
+        "har været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -3764,9 +3764,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ sin uddannelse i 2003.",
       "options": [
         "afsluttede",
-        "afslutter",
+        "har afsluttet",
         "havde afsluttet",
-        null
+        "afslutter"
       ],
       "correct": "afsluttede",
       "accepted_answers": [
@@ -3810,8 +3810,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg spørger, om du nogensinde ___ sushi.",
       "options": [
         "spiser",
-        null,
-        null,
+        "spiste",
+        "havde spist",
         "har spist"
       ],
       "correct": "har spist",
@@ -3832,10 +3832,10 @@ window.TIDS_DATA = {
       "context": "Det handler om hele hendes liv indtil nu.",
       "sentence": "Hun ___ aldrig en bil.",
       "options": [
-        "ejede aldrig",
+        "ejer aldrig",
+        "havde aldrig ejet",
         "har aldrig ejet",
-        null,
-        null
+        "ejede aldrig"
       ],
       "correct": "har aldrig ejet",
       "accepted_answers": [
@@ -3857,7 +3857,7 @@ window.TIDS_DATA = {
       "sentence": "Jeg spørger, om du nogensinde ___ en elg.",
       "options": [
         "havde set",
-        null,
+        "ser",
         "har set",
         "så"
       ],
@@ -3903,7 +3903,7 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ aldrig på ski.",
       "options": [
         "står aldrig",
-        null,
+        "stod aldrig",
         "har aldrig stået",
         "havde aldrig stået"
       ],
@@ -3925,9 +3925,9 @@ window.TIDS_DATA = {
       "context": "Du er til jobsamtale og ser tilbage på dit liv.",
       "sentence": "Jeg ___ i flere lande i mit liv.",
       "options": [
-        "har boet",
         "havde boet",
-        null,
+        "bor",
+        "har boet",
         "boede"
       ],
       "correct": "har boet",
@@ -3948,10 +3948,10 @@ window.TIDS_DATA = {
       "context": "Du taler om hans liv indtil nu.",
       "sentence": "Han ___ mange mennesker i sit liv.",
       "options": [
-        "havde mødt",
-        "mødte",
         "har mødt",
-        null
+        "møder",
+        "mødte",
+        "havde mødt"
       ],
       "correct": "har mødt",
       "accepted_answers": [
@@ -3972,8 +3972,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg spørger, om du nogensinde ___ en bog på dansk.",
       "options": [
         "har læst",
-        null,
-        null,
+        "læste",
+        "læser",
         "havde læst"
       ],
       "correct": "har læst",
@@ -3995,8 +3995,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ aldrig så mange mennesker samlet.",
       "options": [
         "så aldrig",
+        "havde aldrig set",
         "har aldrig set",
-        null,
         "ser aldrig"
       ],
       "correct": "har aldrig set",
@@ -4018,8 +4018,8 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ på mange hoteller i sit liv.",
       "options": [
         "har boet",
-        null,
-        null,
+        "bor",
+        "havde boet",
         "boede"
       ],
       "correct": "har boet",
@@ -4042,8 +4042,8 @@ window.TIDS_DATA = {
       "options": [
         "var",
         "har været",
-        null,
-        null
+        "havde været",
+        "er"
       ],
       "correct": "har været",
       "accepted_answers": [
@@ -4063,9 +4063,9 @@ window.TIDS_DATA = {
       "context": "Du taler om dit liv indtil nu.",
       "sentence": "Jeg ___ aldrig en rigtig ferie.",
       "options": [
-        "har aldrig haft",
+        "har aldrig",
         "havde aldrig",
-        null,
+        "har aldrig haft",
         "havde aldrig haft"
       ],
       "correct": "har aldrig haft",
@@ -4110,7 +4110,7 @@ window.TIDS_DATA = {
       "sentence": "Mine forældre ___ aldrig i USA.",
       "options": [
         "har aldrig været",
-        null,
+        "er aldrig",
         "var aldrig",
         "havde aldrig været"
       ],
@@ -4133,9 +4133,9 @@ window.TIDS_DATA = {
       "sentence": "Det er det mest spændende job, jeg nogensinde ___.",
       "options": [
         "har haft",
-        null,
-        null,
-        null
+        "havde haft",
+        "har",
+        "havde"
       ],
       "correct": "har haft",
       "accepted_answers": [
@@ -4179,8 +4179,8 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ aldrig en kat.",
       "options": [
         "har aldrig",
+        "havde aldrig haft",
         "har aldrig haft",
-        null,
         "havde aldrig"
       ],
       "correct": "har aldrig haft",
@@ -4248,8 +4248,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ allerede morgenmad.",
       "options": [
         "spiser",
+        "havde spist",
         "har spist",
-        null,
         "spiste"
       ],
       "correct": "har spist",
@@ -4294,8 +4294,8 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ ikke filmen endnu.",
       "options": [
         "har ikke set",
-        null,
-        null,
+        "så ikke",
+        "havde ikke set",
         "ser ikke"
       ],
       "correct": "har ikke set",
@@ -4318,7 +4318,7 @@ window.TIDS_DATA = {
       "options": [
         "spiste",
         "har spist",
-        null,
+        "havde spist",
         "spiser"
       ],
       "correct": "har spist",
@@ -4340,8 +4340,8 @@ window.TIDS_DATA = {
       "sentence": "Min mor ___ allerede, så hun ved det.",
       "options": [
         "har ringet",
-        null,
-        null,
+        "ringede",
+        "ringer",
         "havde ringet"
       ],
       "correct": "har ringet",
@@ -4362,9 +4362,9 @@ window.TIDS_DATA = {
       "context": "Du venter stadig på toget.",
       "sentence": "Toget ___ endnu ikke.",
       "options": [
-        "kommer ikke",
+        "var ikke kommet",
         "kom ikke",
-        null,
+        "kommer ikke",
         "er ikke kommet"
       ],
       "correct": "er ikke kommet",
@@ -4408,10 +4408,10 @@ window.TIDS_DATA = {
       "context": "Du spørger, om det er sket.",
       "sentence": "Jeg spørger, om du allerede ___ billetterne.",
       "options": [
-        "købte",
+        "køber",
+        "havde købt",
         "har købt",
-        null,
-        null
+        "købte"
       ],
       "correct": "har købt",
       "accepted_answers": [
@@ -4432,7 +4432,7 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ endnu ikke hende.",
       "options": [
         "har ikke mødt",
-        null,
+        "havde ikke mødt",
         "mødte ikke",
         "møder ikke"
       ],
@@ -4455,9 +4455,9 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ allerede alt, så I kan bare komme.",
       "options": [
         "har ordnet",
-        null,
+        "ordner",
         "ordnede",
-        null
+        "havde ordnet"
       ],
       "correct": "har ordnet",
       "accepted_answers": [
@@ -4478,9 +4478,9 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ endnu ikke, hvad vi skal lave i weekenden.",
       "options": [
         "havde ikke besluttet",
-        "besluttede ikke",
+        "beslutter ikke",
         "har ikke besluttet",
-        null
+        "besluttede ikke"
       ],
       "correct": "har ikke besluttet",
       "accepted_answers": [
@@ -4502,9 +4502,9 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ allerede maden, så vi kan spise nu.",
       "options": [
         "har lavet",
-        "havde lavet",
+        "laver",
         "lavede",
-        null
+        "havde lavet"
       ],
       "correct": "har lavet",
       "accepted_answers": [
@@ -4524,10 +4524,10 @@ window.TIDS_DATA = {
       "context": "Lektierne er ikke lavet.",
       "sentence": "Jeg ___ ikke mine lektier endnu.",
       "options": [
-        "havde lavet",
-        "lavede",
         "har lavet",
-        null
+        "havde lavet",
+        "laver",
+        "lavede"
       ],
       "correct": "har lavet",
       "accepted_answers": [
@@ -4570,10 +4570,10 @@ window.TIDS_DATA = {
       "context": "Du taler om denne uges møder.",
       "sentence": "Vi ___ allerede tre møder i denne uge.",
       "options": [
-        "havde",
         "har",
         "har haft",
-        null
+        "havde haft",
+        "havde"
       ],
       "correct": "har haft",
       "accepted_answers": [
@@ -4616,9 +4616,9 @@ window.TIDS_DATA = {
       "context": "Året er ikke slut, og du tæller indtil nu.",
       "sentence": "Vi ___ allerede to gange i Spanien i år.",
       "options": [
-        "var",
         "havde været",
         "har været",
+        "var",
         "er"
       ],
       "correct": "har været",
@@ -4639,9 +4639,9 @@ window.TIDS_DATA = {
       "context": "Du vil have noget at drikke, og din ven har ikke drukket endnu.",
       "sentence": "Han ___ endnu ikke noget i dag.",
       "options": [
+        "har ikke drukket",
         "havde ikke drukket",
         "drak ikke",
-        "har ikke drukket",
         "drikker ikke"
       ],
       "correct": "har ikke drukket",
@@ -4663,9 +4663,9 @@ window.TIDS_DATA = {
       "sentence": "Holdet ___ endnu ikke en eneste kamp i denne sæson.",
       "options": [
         "havde ikke vundet",
-        "vandt ikke",
+        "vinder ikke",
         "har ikke vundet",
-        null
+        "vandt ikke"
       ],
       "correct": "har ikke vundet",
       "accepted_answers": [
@@ -4688,7 +4688,7 @@ window.TIDS_DATA = {
         "havde været",
         "har været",
         "var",
-        null
+        "er"
       ],
       "correct": "har været",
       "accepted_answers": [
@@ -4708,9 +4708,9 @@ window.TIDS_DATA = {
       "context": "Du taler om de seneste år og frem til nu.",
       "sentence": "Priserne ___ meget de seneste tre år.",
       "options": [
-        "steg",
         "var steget",
         "stiger",
+        "steg",
         "er steget"
       ],
       "correct": "er steget",
@@ -4755,10 +4755,10 @@ window.TIDS_DATA = {
       "context": "Det gælder fra sæsonens start og frem til nu.",
       "sentence": "Holdet ___ hidtil alle kampe.",
       "options": [
-        "vandt",
-        "havde vundet",
+        "vinder",
         "har vundet",
-        null
+        "vandt",
+        "havde vundet"
       ],
       "correct": "har vundet",
       "accepted_answers": [
@@ -4778,10 +4778,10 @@ window.TIDS_DATA = {
       "context": "Det er sket i ugerne indtil nu.",
       "sentence": "Vi ___ hinanden næsten hver dag de seneste uger.",
       "options": [
-        "så",
+        "ser",
+        "havde set",
         "har set",
-        null,
-        null
+        "så"
       ],
       "correct": "har set",
       "accepted_answers": [
@@ -4802,9 +4802,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ meget i de seneste måneder.",
       "options": [
         "arbejdede",
-        "havde arbejdet",
+        "arbejder",
         "har arbejdet",
-        null
+        "havde arbejdet"
       ],
       "correct": "har arbejdet",
       "accepted_answers": [
@@ -4871,9 +4871,9 @@ window.TIDS_DATA = {
       "context": "Det er sket i de sidste fem år, og det fortsætter.",
       "sentence": "Boligpriserne ___ i de sidste fem år.",
       "options": [
-        "var steget",
-        null,
         "er steget",
+        "var steget",
+        "stiger",
         "steg"
       ],
       "correct": "er steget",
@@ -4895,9 +4895,9 @@ window.TIDS_DATA = {
       "context": "Det er sket i de seneste år, og vi står stadig midt i det.",
       "sentence": "Byen ___ sig meget i de seneste år.",
       "options": [
-        "udviklede",
         "havde udviklet",
         "udvikler",
+        "udviklede",
         "har udviklet"
       ],
       "correct": "har udviklet",
@@ -4943,10 +4943,10 @@ window.TIDS_DATA = {
       "context": "Du spørger om et bestemt tidspunkt i fortiden.",
       "sentence": "Hvornår ___ du til Danmark?",
       "options": [
-        "er kommet",
         "var kommet",
         "kom",
-        null
+        "er kommet",
+        "kommer"
       ],
       "correct": "kom",
       "accepted_answers": [
@@ -4967,8 +4967,8 @@ window.TIDS_DATA = {
       "sentence": "Hvornår ___ du ham sidst?",
       "options": [
         "har set",
+        "havde set",
         "ser",
-        null,
         "så"
       ],
       "correct": "så",
@@ -4990,9 +4990,9 @@ window.TIDS_DATA = {
       "sentence": "Hvornår ___ I gift?",
       "options": [
         "er blevet",
+        "bliver",
         "blev",
-        null,
-        null
+        "var blevet"
       ],
       "correct": "blev",
       "accepted_answers": [
@@ -5013,9 +5013,9 @@ window.TIDS_DATA = {
       "sentence": "Hvornår ___ hun sin uddannelse?",
       "options": [
         "afsluttede",
-        "har afsluttet",
-        null,
-        null
+        "afslutter",
+        "havde afsluttet",
+        "har afsluttet"
       ],
       "correct": "afsluttede",
       "accepted_answers": [
@@ -5035,10 +5035,10 @@ window.TIDS_DATA = {
       "context": "Du spørger, hvornår huset blev købt.",
       "sentence": "Hvornår ___ I huset?",
       "options": [
-        "har købt",
+        "køber",
+        "havde købt",
         "købte",
-        null,
-        null
+        "har købt"
       ],
       "correct": "købte",
       "accepted_answers": [
@@ -5082,7 +5082,7 @@ window.TIDS_DATA = {
       "sentence": "Hvornår ___ det?",
       "options": [
         "sker",
-        null,
+        "var sket",
         "er sket",
         "skete"
       ],
@@ -5104,10 +5104,10 @@ window.TIDS_DATA = {
       "context": "Du spørger om, hvornår hun ringede.",
       "sentence": "Hvornår ___ hun?",
       "options": [
-        "ringede",
         "havde ringet",
-        null,
-        null
+        "ringer",
+        "ringede",
+        "har ringet"
       ],
       "correct": "ringede",
       "accepted_answers": [
@@ -5174,9 +5174,9 @@ window.TIDS_DATA = {
       "sentence": "Hvornår ___ filmen?",
       "options": [
         "begyndte",
-        null,
+        "begynder",
         "var begyndt",
-        null
+        "er begyndt"
       ],
       "correct": "begyndte",
       "accepted_answers": [
@@ -5221,10 +5221,10 @@ window.TIDS_DATA = {
       "context": "Det skete i fredags.",
       "sentence": "Min bror ___ mig i fredags.",
       "options": [
-        "besøgte",
+        "havde besøgt",
         "har besøgt",
-        "besøger",
-        null
+        "besøgte",
+        "besøger"
       ],
       "correct": "besøgte",
       "accepted_answers": [
@@ -5245,9 +5245,9 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ en ny telefon i mandags.",
       "options": [
         "har fået",
-        "havde fået",
+        "får",
         "fik",
-        null
+        "havde fået"
       ],
       "correct": "fik",
       "accepted_answers": [
@@ -5269,8 +5269,8 @@ window.TIDS_DATA = {
       "options": [
         "var",
         "har været",
-        "havde været",
-        null
+        "er",
+        "havde været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -5292,7 +5292,7 @@ window.TIDS_DATA = {
       "options": [
         "slutter",
         "har sluttet",
-        null,
+        "havde sluttet",
         "sluttede"
       ],
       "correct": "sluttede",
@@ -5313,10 +5313,10 @@ window.TIDS_DATA = {
       "context": "Du fortæller om din første dag.",
       "sentence": "Min første arbejdsdag ___ i 2014.",
       "options": [
-        "havde været",
+        "er",
         "var",
         "har været",
-        null
+        "havde været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -5336,9 +5336,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller om din ferie, som er slut.",
       "sentence": "Vi ___ hver dag i havet, da vi var i Spanien.",
       "options": [
-        "har badet",
         "bader",
-        "badede"
+        "badede",
+        "har badet"
       ],
       "correct": "badede",
       "accepted_answers": [
@@ -5359,9 +5359,9 @@ window.TIDS_DATA = {
       "sentence": "Sidste år ___ de et hus på landet.",
       "options": [
         "har købt",
-        "havde købt",
+        "køber",
         "købte",
-        null
+        "havde købt"
       ],
       "correct": "købte",
       "accepted_answers": [
@@ -5384,7 +5384,7 @@ window.TIDS_DATA = {
         "er gået",
         "gik",
         "går",
-        null
+        "var gået"
       ],
       "correct": "gik",
       "accepted_answers": [
@@ -5405,9 +5405,9 @@ window.TIDS_DATA = {
       "sentence": "I april ___ jeg et nyt job.",
       "options": [
         "fik",
-        "får",
-        null,
-        null
+        "har fået",
+        "havde fået",
+        "får"
       ],
       "correct": "fik",
       "accepted_answers": [
@@ -5428,9 +5428,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ formand i 2015 og 2016.",
       "options": [
         "var",
-        null,
-        "har været",
-        null
+        "havde været",
+        "er",
+        "har været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -5474,7 +5474,7 @@ window.TIDS_DATA = {
       "sentence": "I går ___ jeg til tandlæge.",
       "options": [
         "gik",
-        null,
+        "var gået",
         "er gået",
         "går"
       ],
@@ -5499,7 +5499,7 @@ window.TIDS_DATA = {
         "har taget",
         "havde taget",
         "tog",
-        null
+        "tager"
       ],
       "correct": "tog",
       "accepted_answers": [
@@ -5543,8 +5543,8 @@ window.TIDS_DATA = {
       "sentence": "For et halvt år siden ___ de sig i København.",
       "options": [
         "har flyttet",
-        "flyttede",
-        null
+        "flytter",
+        "flyttede"
       ],
       "correct": "flyttede",
       "accepted_answers": [
@@ -5587,9 +5587,9 @@ window.TIDS_DATA = {
       "sentence": "Min ven ___ syg i går, men nu har han det godt.",
       "options": [
         "havde været",
-        "har været",
+        "er",
         "var",
-        null
+        "har været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -5611,7 +5611,7 @@ window.TIDS_DATA = {
       "options": [
         "har lydt",
         "lød",
-        null,
+        "lyder",
         "havde lydt"
       ],
       "correct": "lød",
@@ -5632,10 +5632,10 @@ window.TIDS_DATA = {
       "context": "Det skete i november.",
       "sentence": "I november ___ vi et nyt køkken.",
       "options": [
-        "har fået",
+        "får",
         "havde fået",
         "fik",
-        null
+        "har fået"
       ],
       "correct": "fik",
       "accepted_answers": [
@@ -5655,9 +5655,9 @@ window.TIDS_DATA = {
       "context": "Det skete i 2019.",
       "sentence": "I 2019 ___ firmaet tre nye medarbejdere.",
       "options": [
-        "har ansat",
         "ansætter",
         "ansatte",
+        "har ansat",
         "havde ansat"
       ],
       "correct": "ansatte",
@@ -5679,9 +5679,9 @@ window.TIDS_DATA = {
       "context": "Det var en kort periode.",
       "sentence": "Hun ___ i Paris fra januar til marts og kom så hjem.",
       "options": [
-        "boede",
         "bor",
-        null
+        "har boet",
+        "boede"
       ],
       "correct": "boede",
       "accepted_answers": [
@@ -5702,8 +5702,8 @@ window.TIDS_DATA = {
       "sentence": "For en uge siden ___ jeg ham første gang.",
       "options": [
         "ser",
-        null,
-        null,
+        "har set",
+        "havde set",
         "så"
       ],
       "correct": "så",
@@ -5725,8 +5725,8 @@ window.TIDS_DATA = {
       "sentence": "I går ___ vi kage, fordi det var min fødselsdag.",
       "options": [
         "har spist",
+        "havde spist",
         "spiste",
-        null,
         "spiser"
       ],
       "correct": "spiste",
@@ -5748,7 +5748,7 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ i samme by siden 2015.",
       "options": [
         "bor",
-        null,
+        "boede",
         "havde boet",
         "har boet"
       ],
@@ -5770,10 +5770,10 @@ window.TIDS_DATA = {
       "context": "Det startede i foråret og er stadig sådan.",
       "sentence": "Hun ___ ikke rigtig sig selv siden foråret.",
       "options": [
-        "var",
-        "havde været",
+        "er",
         "har været",
-        null
+        "var",
+        "havde været"
       ],
       "correct": "har været",
       "accepted_answers": [
@@ -5795,7 +5795,7 @@ window.TIDS_DATA = {
       "sentence": "Min søster ___ på universitetet siden 2021.",
       "options": [
         "studerer",
-        null,
+        "studerede",
         "havde studeret",
         "har studeret"
       ],
@@ -5820,7 +5820,7 @@ window.TIDS_DATA = {
         "har ventet",
         "ventede",
         "venter",
-        null
+        "havde ventet"
       ],
       "correct": "har ventet",
       "accepted_answers": [
@@ -5841,9 +5841,9 @@ window.TIDS_DATA = {
       "sentence": "De ___ hinanden, siden de var børn.",
       "options": [
         "har kendt",
-        null,
-        null,
-        null
+        "kender",
+        "havde kendt",
+        "kendte"
       ],
       "correct": "har kendt",
       "accepted_answers": [
@@ -5863,9 +5863,9 @@ window.TIDS_DATA = {
       "context": "Han er stadig ked af det.",
       "sentence": "Han ___ ked af det, siden han hørte nyheden.",
       "options": [
+        "har været",
         "er",
         "var",
-        "har været",
         "havde været"
       ],
       "correct": "har været",
@@ -5887,7 +5887,7 @@ window.TIDS_DATA = {
       "sentence": "Sagen ___ uafklaret, siden den kom op i 2020.",
       "options": [
         "har været",
-        null,
+        "var",
         "er",
         "havde været"
       ],
@@ -5934,9 +5934,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ i skole i ti år.",
       "options": [
         "gik",
-        "var gået",
+        "går",
         "er gået",
-        null
+        "var gået"
       ],
       "correct": "er gået",
       "accepted_answers": [
@@ -5958,9 +5958,9 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ på kollegiet i et halvt år.",
       "options": [
         "har boet",
-        null,
-        null,
-        null
+        "bor",
+        "havde boet",
+        "boede"
       ],
       "correct": "har boet",
       "accepted_answers": [
@@ -5981,7 +5981,7 @@ window.TIDS_DATA = {
       "sentence": "Kurset ___ fra august til oktober.",
       "options": [
         "løber",
-        null,
+        "har løbet",
         "løb",
         "havde løbet"
       ],
@@ -6050,9 +6050,9 @@ window.TIDS_DATA = {
       "context": "Det skete for tre uger siden.",
       "sentence": "For tre uger siden ___ vi nye naboer.",
       "options": [
-        "får",
         "havde fået",
         "fik",
+        "får",
         "har fået"
       ],
       "correct": "fik",
@@ -6097,9 +6097,9 @@ window.TIDS_DATA = {
       "sentence": "I weekenden ___ jeg meget.",
       "options": [
         "har sovet",
-        "havde sovet",
+        "sover",
         "sov",
-        null
+        "havde sovet"
       ],
       "correct": "sov",
       "accepted_answers": [
@@ -6142,10 +6142,10 @@ window.TIDS_DATA = {
       "context": "Du fortæller om 1990'erne.",
       "sentence": "I 1990'erne ___ internettet hurtigt.",
       "options": [
-        "har vokset",
         "havde vokset",
         "vokse",
-        null
+        "har vokset",
+        "vokser"
       ],
       "correct": "vokse",
       "accepted_answers": [
@@ -6191,9 +6191,9 @@ window.TIDS_DATA = {
       "sentence": "For tre måneder siden ___ vi om det.",
       "options": [
         "talte",
-        "taler",
+        "havde talt",
         "har talt",
-        null
+        "taler"
       ],
       "correct": "talte",
       "accepted_answers": [
@@ -6218,7 +6218,7 @@ window.TIDS_DATA = {
         "er begyndt",
         "begyndte",
         "var begyndt",
-        null
+        "begynder"
       ],
       "correct": "var begyndt",
       "accepted_answers": [
@@ -6262,9 +6262,9 @@ window.TIDS_DATA = {
       "context": "Butikken lukkede kl. 17. Vi kom kl. 17.30.",
       "sentence": "Butikken ___ allerede, da vi kom.",
       "options": [
-        "havde lukket",
+        "lukker",
         "lukkede",
-        null,
+        "havde lukket",
         "har lukket"
       ],
       "correct": "havde lukket",
@@ -6287,8 +6287,8 @@ window.TIDS_DATA = {
       "options": [
         "havde sluttet",
         "sluttede",
-        "har sluttet",
-        null
+        "slutter",
+        "har sluttet"
       ],
       "correct": "havde sluttet",
       "accepted_answers": [
@@ -6311,7 +6311,7 @@ window.TIDS_DATA = {
         "kom",
         "var kommet",
         "er kommet",
-        null
+        "kommer"
       ],
       "correct": "var kommet",
       "accepted_answers": [
@@ -6331,10 +6331,10 @@ window.TIDS_DATA = {
       "context": "Chefen aflyste mødet mandag. Vi mødte op tirsdag.",
       "sentence": "Chefen ___ allerede mødet, da vi mødte op.",
       "options": [
-        "aflyste",
+        "aflyser",
         "har aflyst",
         "havde aflyst",
-        null
+        "aflyste"
       ],
       "correct": "havde aflyst",
       "accepted_answers": [
@@ -6348,16 +6348,16 @@ window.TIDS_DATA = {
       "note": "\"Allerede\" og \"for længst\" viser, at noget var sket, før det andet tidspunkt i fortiden."
     },
     {
-      "id": "jeg-havde-handlet-allerede-da-du-ringede",
+      "id": "jeg-havde-handlet-allerede-i-supermarkedet-da-du-ringede",
       "level": "B1",
       "mode": "pluperfect",
       "context": "Jeg handlede kl. 15. Du ringede kl. 16.",
-      "sentence": "Jeg ___ allerede, da du ringede.",
+      "sentence": "Jeg ___ allerede i supermarkedet, da du ringede.",
       "options": [
-        "handlede",
-        "har handlet",
         "handler",
-        "havde handlet"
+        "handlede",
+        "havde handlet",
+        "har handlet"
       ],
       "correct": "havde handlet",
       "accepted_answers": [
@@ -6378,9 +6378,9 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ allerede rapporten, da chefen bad om den.",
       "options": [
         "havde skrevet",
-        null,
-        "har skrevet",
-        null
+        "skrev",
+        "skriver",
+        "har skrevet"
       ],
       "correct": "havde skrevet",
       "accepted_answers": [
@@ -6401,8 +6401,8 @@ window.TIDS_DATA = {
       "sentence": "Bussen ___ allerede, da jeg kom.",
       "options": [
         "kørte",
+        "kører",
         "var kørt",
-        null,
         "er kørt"
       ],
       "correct": "var kørt",
@@ -6424,7 +6424,7 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ allerede svaret, da hun spurgte.",
       "options": [
         "sender",
-        null,
+        "har sendt",
         "sendte",
         "havde sendt"
       ],
@@ -6448,8 +6448,8 @@ window.TIDS_DATA = {
       "options": [
         "har fået",
         "havde fået",
-        "fik",
-        null
+        "får",
+        "fik"
       ],
       "correct": "havde fået",
       "accepted_answers": [
@@ -6469,9 +6469,9 @@ window.TIDS_DATA = {
       "context": "Min mor ringede kl. 10. Jeg vågnede kl. 11.",
       "sentence": "Min mor ___ allerede to gange, da jeg vågnede.",
       "options": [
-        "ringer",
+        "har ringet",
         "ringede",
-        null,
+        "ringer",
         "havde ringet"
       ],
       "correct": "havde ringet",
@@ -6493,8 +6493,8 @@ window.TIDS_DATA = {
       "sentence": "Tyven ___ for længst, da politiet kom.",
       "options": [
         "forsvandt",
+        "er forsvundet",
         "forsvinder",
-        null,
         "var forsvundet"
       ],
       "correct": "var forsvundet",
@@ -6561,9 +6561,9 @@ window.TIDS_DATA = {
       "context": "Han glemte at ringe mandag. Chefen spurgte tirsdag.",
       "sentence": "Han ___ allerede at ringe, da chefen spurgte.",
       "options": [
-        "glemte",
         "har glemt",
         "glemmer",
+        "glemte",
         "havde glemt"
       ],
       "correct": "havde glemt",
@@ -6585,9 +6585,9 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ det for længst, da du fortalte det.",
       "options": [
         "vidste",
+        "har vidst",
         "havde vidst",
-        "ved",
-        null
+        "ved"
       ],
       "correct": "havde vidst",
       "accepted_answers": [
@@ -6607,10 +6607,10 @@ window.TIDS_DATA = {
       "context": "Børnene gik i seng kl. 20. Vi kom hjem kl. 22.",
       "sentence": "Børnene ___ for længst i seng, da vi kom hjem.",
       "options": [
-        "gik",
+        "går",
+        "er gået",
         "var gået",
-        null,
-        null
+        "gik"
       ],
       "correct": "var gået",
       "accepted_answers": [
@@ -6630,9 +6630,9 @@ window.TIDS_DATA = {
       "context": "Hun solgte huset i maj. Han ville købe det i juni.",
       "sentence": "Hun ___ for længst huset, da han ville købe det.",
       "options": [
+        "sælger",
         "har solgt",
         "solgte",
-        "sælger",
         "havde solgt"
       ],
       "correct": "havde solgt",
@@ -6653,9 +6653,9 @@ window.TIDS_DATA = {
       "context": "Vi åbnede kl. 9. De første kunder kom kl. 10.",
       "sentence": "Vi ___ allerede, da de første kunder kom.",
       "options": [
+        "åbner",
         "har åbnet",
         "åbnede",
-        "åbner",
         "havde åbnet"
       ],
       "correct": "havde åbnet",
@@ -6677,8 +6677,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ allerede, da du ringede.",
       "options": [
         "rejste",
+        "rejser",
         "var rejst",
-        null,
         "er rejst"
       ],
       "correct": "var rejst",
@@ -6700,9 +6700,9 @@ window.TIDS_DATA = {
       "context": "Jeg spiste kl. 12. Min ven kom kl. 13.",
       "sentence": "Jeg ___ allerede frokost, da min ven kom.",
       "options": [
-        "spiste",
         "har spist",
         "havde spist",
+        "spiste",
         "spiser"
       ],
       "correct": "havde spist",
@@ -6725,7 +6725,7 @@ window.TIDS_DATA = {
       "options": [
         "finder",
         "fandt",
-        null,
+        "har fundet",
         "havde fundet"
       ],
       "correct": "havde fundet",
@@ -6770,7 +6770,7 @@ window.TIDS_DATA = {
       "sentence": "Da vi kom, ___ gæsterne allerede spist.",
       "options": [
         "er",
-        null,
+        "har",
         "blev",
         "havde"
       ],
@@ -6792,9 +6792,9 @@ window.TIDS_DATA = {
       "context": "Jeg gik kl. 8. Hun kom kl. 9.",
       "sentence": "Da hun kom, ___ jeg allerede gået hjem.",
       "options": [
-        "blev",
         "har",
         "var",
+        "blev",
         "havde"
       ],
       "correct": "var",
@@ -6818,7 +6818,7 @@ window.TIDS_DATA = {
         "havde",
         "har",
         "blev",
-        null
+        "var"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -6862,7 +6862,7 @@ window.TIDS_DATA = {
       "sentence": "Da jeg kom til stationen, ___ toget allerede kørt.",
       "options": [
         "var",
-        null,
+        "har",
         "havde",
         "blev"
       ],
@@ -6886,9 +6886,9 @@ window.TIDS_DATA = {
       "sentence": "Da vi kom ud, ___ det regnet i to timer.",
       "options": [
         "havde",
-        null,
-        null,
-        null
+        "blev",
+        "var",
+        "har"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -6908,9 +6908,9 @@ window.TIDS_DATA = {
       "context": "Hun kom kl. 9. Jeg drak kaffe kl. 8.",
       "sentence": "Da hun kom, ___ jeg allerede drukket min kaffe.",
       "options": [
-        "har",
         "var",
         "blev",
+        "har",
         "havde"
       ],
       "correct": "havde",
@@ -7024,10 +7024,10 @@ window.TIDS_DATA = {
       "context": "Han sagde farvel kl. 8. Du kom kl. 9.",
       "sentence": "Da du kom, ___ han allerede sagt farvel.",
       "options": [
-        "var",
+        "blev",
         "havde",
         "har",
-        null
+        "var"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -7049,7 +7049,7 @@ window.TIDS_DATA = {
       "options": [
         "har",
         "havde",
-        null,
+        "var",
         "blev"
       ],
       "correct": "havde",
@@ -7071,7 +7071,7 @@ window.TIDS_DATA = {
       "sentence": "Da hun fandt en ny, ___ hun allerede solgt den gamle.",
       "options": [
         "blev",
-        null,
+        "var",
         "har",
         "havde"
       ],
@@ -7118,7 +7118,7 @@ window.TIDS_DATA = {
       "options": [
         "køber",
         "havde købt",
-        null,
+        "har købt",
         "købte"
       ],
       "correct": "havde købt",
@@ -7162,9 +7162,9 @@ window.TIDS_DATA = {
       "context": "Du fortæller om gårsdagens telefonsamtale.",
       "sentence": "Min mor spurgte, om jeg allerede ___ til hende.",
       "options": [
-        "ringede",
         "har ringet",
         "havde ringet",
+        "ringede",
         "ringer"
       ],
       "correct": "havde ringet",
@@ -7185,9 +7185,9 @@ window.TIDS_DATA = {
       "context": "Du refererer, hvad læreren sagde i går.",
       "sentence": "Læreren sagde, at eleverne allerede ___ teksten.",
       "options": [
-        "læser",
+        "har læst",
         "læste",
-        null,
+        "læser",
         "havde læst"
       ],
       "correct": "havde læst",
@@ -7233,8 +7233,8 @@ window.TIDS_DATA = {
       "options": [
         "havde fundet",
         "fandt",
-        "har fundet",
-        null
+        "finder",
+        "har fundet"
       ],
       "correct": "havde fundet",
       "accepted_answers": [
@@ -7255,7 +7255,7 @@ window.TIDS_DATA = {
       "sentence": "Lægen sagde, at patienten allerede ___ medicinen.",
       "options": [
         "havde taget",
-        null,
+        "tager",
         "har taget",
         "tog"
       ],
@@ -7277,10 +7277,10 @@ window.TIDS_DATA = {
       "context": "Du refererer, hvad han indrømmede.",
       "sentence": "Han indrømmede, at han allerede ___ det hele selv.",
       "options": [
-        "gjorde",
+        "gør",
         "har gjort",
         "havde gjort",
-        null
+        "gjorde"
       ],
       "correct": "havde gjort",
       "accepted_answers": [
@@ -7302,7 +7302,7 @@ window.TIDS_DATA = {
       "options": [
         "forsvandt",
         "forsvinder",
-        null,
+        "er forsvundet",
         "var forsvundet"
       ],
       "correct": "var forsvundet",
@@ -7325,7 +7325,7 @@ window.TIDS_DATA = {
       "options": [
         "køber",
         "havde købt",
-        null,
+        "har købt",
         "købte"
       ],
       "correct": "havde købt",
@@ -7347,9 +7347,9 @@ window.TIDS_DATA = {
       "sentence": "Jeg svarede, at jeg allerede ___ rapporten.",
       "options": [
         "læste",
-        "har læst",
+        "læser",
         "havde læst",
-        null
+        "har læst"
       ],
       "correct": "havde læst",
       "accepted_answers": [
@@ -7369,9 +7369,9 @@ window.TIDS_DATA = {
       "context": "Du kom til Danmark for ti år siden og så sne første gang dengang.",
       "sentence": "Da jeg kom til Danmark, ___ sne før.",
       "options": [
-        "så aldrig",
         "har aldrig set",
         "havde aldrig set",
+        "så aldrig",
         "ser aldrig"
       ],
       "correct": "havde aldrig set",
@@ -7393,7 +7393,7 @@ window.TIDS_DATA = {
       "sentence": "Da jeg kom til Danmark, ___ jeg aldrig smagt rugbrød.",
       "options": [
         "havde",
-        null,
+        "var",
         "blev",
         "har"
       ],
@@ -7417,7 +7417,7 @@ window.TIDS_DATA = {
       "options": [
         "har",
         "havde",
-        null,
+        "blev",
         "var"
       ],
       "correct": "havde",
@@ -7439,8 +7439,8 @@ window.TIDS_DATA = {
       "sentence": "Før 2018 ___ jeg aldrig boet alene.",
       "options": [
         "havde",
-        null,
-        null,
+        "har",
+        "blev",
         "var"
       ],
       "correct": "havde",
@@ -7484,10 +7484,10 @@ window.TIDS_DATA = {
       "context": "Du smagte sushi første gang i går.",
       "sentence": "Før i går ___ jeg aldrig smagt sushi.",
       "options": [
-        "har",
         "var",
         "havde",
-        null
+        "blev",
+        "har"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -7507,9 +7507,9 @@ window.TIDS_DATA = {
       "context": "Du var første gang i Aarhus i 2020.",
       "sentence": "Før 2020 ___ jeg aldrig været i Aarhus.",
       "options": [
-        "var",
-        null,
         "blev",
+        "var",
+        "har",
         "havde"
       ],
       "correct": "havde",
@@ -7530,10 +7530,10 @@ window.TIDS_DATA = {
       "context": "Hun stod første gang på ski i 2019.",
       "sentence": "Før 2019 ___ hun aldrig stået på ski.",
       "options": [
-        "har",
+        "blev",
+        "var",
         "havde",
-        null,
-        null
+        "har"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -7553,10 +7553,10 @@ window.TIDS_DATA = {
       "context": "Du så koncerten i lørdags.",
       "sentence": "Før lørdag ___ jeg aldrig været til en rigtig koncert.",
       "options": [
-        "har",
+        "blev",
         "havde",
         "var",
-        null
+        "har"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -7599,9 +7599,9 @@ window.TIDS_DATA = {
       "context": "Hun mødte ham efter fem år i Oslo.",
       "sentence": "Hun ___ i Oslo i fem år, da hun mødte ham.",
       "options": [
-        "bor",
+        "har boet",
         "boede",
-        null,
+        "bor",
         "havde boet"
       ],
       "correct": "havde boet",
@@ -7645,10 +7645,10 @@ window.TIDS_DATA = {
       "context": "Han arbejdede der fra 2000. I 2010 fik han sparken.",
       "sentence": "Han ___ der i ti år, da han fik sparken.",
       "options": [
-        "arbejdede",
+        "arbejder",
         "havde arbejdet",
         "har arbejdet",
-        null
+        "arbejdede"
       ],
       "correct": "havde arbejdet",
       "accepted_answers": [
@@ -7692,9 +7692,9 @@ window.TIDS_DATA = {
       "sentence": "De ___ gift i femogtyve år, da de blev skilt.",
       "options": [
         "var",
-        "havde været",
-        null,
-        null
+        "er",
+        "har været",
+        "havde været"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -7715,10 +7715,10 @@ window.TIDS_DATA = {
       "context": "Vi spillede fra kl. 14. Regnen kom kl. 16.",
       "sentence": "Vi ___ i to timer, da det begyndte at regne.",
       "options": [
-        "har spillet",
-        "spillede",
         "havde spillet",
-        null
+        "spiller",
+        "spillede",
+        "har spillet"
       ],
       "correct": "havde spillet",
       "accepted_answers": [
@@ -7738,10 +7738,10 @@ window.TIDS_DATA = {
       "context": "Hun læste fra kl. 18. Telefonen ringede kl. 21.",
       "sentence": "Hun ___ i tre timer, da telefonen ringede.",
       "options": [
-        "har læst",
-        "læste",
         "havde læst",
-        null
+        "har læst",
+        "læser",
+        "læste"
       ],
       "correct": "havde læst",
       "accepted_answers": [
@@ -7785,9 +7785,9 @@ window.TIDS_DATA = {
       "sentence": "Han ___ i otte timer, da vækkeuret ringede.",
       "options": [
         "havde sovet",
-        "sov",
-        null,
-        null
+        "sover",
+        "har sovet",
+        "sov"
       ],
       "correct": "havde sovet",
       "accepted_answers": [
@@ -7808,9 +7808,9 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ i fem år, da jeg skrev mit speciale.",
       "options": [
         "havde studeret",
-        "har studeret",
+        "studerer",
         "studerede",
-        null
+        "har studeret"
       ],
       "correct": "havde studeret",
       "accepted_answers": [
@@ -7830,9 +7830,9 @@ window.TIDS_DATA = {
       "context": "Først kom han hjem. Derefter lavede han mad.",
       "sentence": "Efter at han ___ hjem, lavede han mad.",
       "options": [
+        "var kommet",
         "kommer",
-        null,
-        "var kommet"
+        "er kommet"
       ],
       "correct": "var kommet",
       "accepted_answers": [
@@ -7855,7 +7855,7 @@ window.TIDS_DATA = {
       "options": [
         "har spist",
         "havde spist",
-        null
+        "spiser"
       ],
       "correct": "havde spist",
       "accepted_answers": [
@@ -7877,7 +7877,7 @@ window.TIDS_DATA = {
       "sentence": "Efter at hun ___ brevet, ringede hun til ham.",
       "options": [
         "havde læst",
-        null,
+        "læser",
         "har læst"
       ],
       "correct": "havde læst",
@@ -7922,9 +7922,9 @@ window.TIDS_DATA = {
       "context": "Først ankom gæsterne. Derefter begyndte talen.",
       "sentence": "Efter at gæsterne ___, begyndte talen.",
       "options": [
-        "er kommet",
         "kommer",
-        "var kommet"
+        "var kommet",
+        "er kommet"
       ],
       "correct": "var kommet",
       "accepted_answers": [
@@ -7969,7 +7969,7 @@ window.TIDS_DATA = {
       "sentence": "Efter at vi ___ kontrakten, underskrev vi den.",
       "options": [
         "havde skrevet",
-        null,
+        "har skrevet",
         "skriver"
       ],
       "correct": "havde skrevet",
@@ -8014,9 +8014,9 @@ window.TIDS_DATA = {
       "context": "Du ankom kl. 12. Han stod først op kl. 13.",
       "sentence": "Da jeg kom, ___ han endnu ikke stået op.",
       "options": [
+        "blev",
         "var",
         "har",
-        "blev",
         "havde"
       ],
       "correct": "havde",
@@ -8060,10 +8060,10 @@ window.TIDS_DATA = {
       "context": "Du ringede kl. 9. Hun kom først kl. 10.",
       "sentence": "Da jeg ringede, ___ hun endnu ikke kommet.",
       "options": [
-        "havde",
+        "blev",
         "var",
         "har",
-        null
+        "havde"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -8083,10 +8083,10 @@ window.TIDS_DATA = {
       "context": "Mødet begyndte kl. 10. Du kom først kl. 10.15.",
       "sentence": "Da jeg kom, ___ mødet allerede begyndt.",
       "options": [
-        "havde",
+        "blev",
         "var",
         "har",
-        null
+        "havde"
       ],
       "correct": "var",
       "accepted_answers": [
@@ -8107,9 +8107,9 @@ window.TIDS_DATA = {
       "context": "Ved midnat var alle gæster gået. Du kom kl. 1.",
       "sentence": "Da jeg endelig kom, ___ alle gæsterne gået.",
       "options": [
-        "havde",
         "har",
         "var",
+        "havde",
         "blev"
       ],
       "correct": "var",
@@ -8133,7 +8133,7 @@ window.TIDS_DATA = {
         "havde",
         "har",
         "var",
-        null
+        "blev"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -8154,8 +8154,8 @@ window.TIDS_DATA = {
       "sentence": "Da vi ankom, ___ de endnu ikke ryddet værelset.",
       "options": [
         "blev",
-        null,
-        null,
+        "har",
+        "var",
         "havde"
       ],
       "correct": "havde",
@@ -8200,9 +8200,9 @@ window.TIDS_DATA = {
       "context": "Du kom hjem kl. 20. Din mand lavede mad kl. 19.",
       "sentence": "Da jeg kom hjem, ___ min mand lavet mad.",
       "options": [
-        "har",
         "var",
         "blev",
+        "har",
         "havde"
       ],
       "correct": "havde",
@@ -8226,7 +8226,7 @@ window.TIDS_DATA = {
         "har",
         "havde",
         "var",
-        null
+        "blev"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -8247,9 +8247,9 @@ window.TIDS_DATA = {
       "sentence": "Da jeg ankom, ___ jeg allerede været vågen i tre timer.",
       "options": [
         "har",
+        "var",
         "havde",
-        "blev",
-        null
+        "blev"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -8271,7 +8271,7 @@ window.TIDS_DATA = {
       "sentence": "Hun ___ dansk i fire år, da hun begyndte at arbejde.",
       "options": [
         "lærer",
-        null,
+        "lærte",
         "havde lært",
         "har lært"
       ],
@@ -8294,9 +8294,9 @@ window.TIDS_DATA = {
       "context": "Han var forsvundet i en uge. Så fandt man ham.",
       "sentence": "Han ___ i en uge, da man fandt ham.",
       "options": [
+        "var forsvundet",
         "forsvinder",
-        "er forsvundet",
-        "var forsvundet"
+        "er forsvundet"
       ],
       "correct": "var forsvundet",
       "accepted_answers": [
@@ -8317,9 +8317,9 @@ window.TIDS_DATA = {
       "context": "Han havde malet siden morgenen. Kl. 16 var han færdig.",
       "sentence": "Han ___ hele dagen, da han endelig blev færdig.",
       "options": [
-        "malede",
         "har malet",
         "maler",
+        "malede",
         "havde malet"
       ],
       "correct": "havde malet",
@@ -8364,8 +8364,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ to timer, da telefonen ringede.",
       "options": [
         "sov",
+        "har sovet",
         "havde sovet",
-        null,
         "sover"
       ],
       "correct": "havde sovet",
@@ -8386,10 +8386,10 @@ window.TIDS_DATA = {
       "context": "Hun havde skrevet i en time. Så gik computeren i stykker.",
       "sentence": "Hun ___ i en time, da computeren gik i stykker.",
       "options": [
-        "skrev",
+        "skriver",
         "havde skrevet",
-        null,
-        null
+        "har skrevet",
+        "skrev"
       ],
       "correct": "havde skrevet",
       "accepted_answers": [
@@ -8410,8 +8410,8 @@ window.TIDS_DATA = {
       "sentence": "Firmaet ___ i halvtreds år, da det lukkede i 2020.",
       "options": [
         "eksisterer",
+        "har eksisteret",
         "havde eksisteret",
-        null,
         "eksisterede"
       ],
       "correct": "havde eksisteret",
@@ -8432,10 +8432,10 @@ window.TIDS_DATA = {
       "context": "Vi havde gået i to timer. Så kom regnen.",
       "sentence": "Vi ___ i to timer, da regnen kom.",
       "options": [
-        "gik",
         "er gået",
         "var gået",
-        null
+        "gik",
+        "går"
       ],
       "correct": "var gået",
       "accepted_answers": [
@@ -8456,10 +8456,10 @@ window.TIDS_DATA = {
       "context": "Hun havde sparet op i ti år. Så købte hun huset.",
       "sentence": "Hun ___ op i ti år, da hun endelig købte huset.",
       "options": [
+        "sparer",
+        "sparede",
         "havde sparet",
-        "har sparet",
-        null,
-        null
+        "har sparet"
       ],
       "correct": "havde sparet",
       "accepted_answers": [
@@ -8482,7 +8482,7 @@ window.TIDS_DATA = {
         "havde",
         "har",
         "blev",
-        null
+        "var"
       ],
       "correct": "havde",
       "accepted_answers": [
@@ -8503,14 +8503,13 @@ window.TIDS_DATA = {
       "sentence": "Ulykken ___ for flere timer siden, da han hørte om den.",
       "options": [
         "var sket",
-        "er sket",
+        "sker",
         "skete",
-        null
+        "er sket"
       ],
       "correct": "var sket",
       "accepted_answers": [
-        "var sket",
-        "havde sket"
+        "var sket"
       ],
       "timeline": {
         "start": "ulykke",
@@ -8518,6 +8517,2375 @@ window.TIDS_DATA = {
         "ongoing": false
       },
       "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+    }
+  ],
+  "future": [
+    {
+      "id": "toget-afgaar-klokken-otte-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Afgangen står i køreplanen.",
+      "sentence": "Toget ___ klokken otte i morgen.",
+      "accepted_answers": [
+        "afgår",
+        "skal afgå"
+      ],
+      "distractors": [
+        "afgik",
+        "ville afgå",
+        "kommer til at afgå"
+      ],
+      "note": "Planlagte fremtidige begivenheder kan stå i nutid sammen med et tidsudtryk."
+    },
+    {
+      "id": "jeg-rejser-paa-fredag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har købt billetten.",
+      "sentence": "Jeg ___ på fredag.",
+      "accepted_answers": [
+        "rejser",
+        "skal rejse"
+      ],
+      "distractors": [
+        "rejste",
+        "har rejst",
+        "ville rejse"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "moedet-starter-paa-tirsdag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Det står i kalenderen.",
+      "sentence": "Mødet ___ på tirsdag.",
+      "accepted_answers": [
+        "starter",
+        "skal starte"
+      ],
+      "distractors": [
+        "startede",
+        "har startet",
+        "ville starte"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "jeg-gaar-til-tandlaege-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har bestilt tid hos tandlægen.",
+      "sentence": "Jeg ___ til tandlæge i morgen.",
+      "accepted_answers": [
+        "går",
+        "skal gå"
+      ],
+      "distractors": [
+        "gik",
+        "har gået",
+        "ville gå"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "min-kusine-kommer-i-morgen-kl-15",
+      "level": "A2",
+      "mode": "future",
+      "context": "Hun har fået en aftale.",
+      "sentence": "Min kusine ___ i morgen kl. 15.",
+      "accepted_answers": [
+        "kommer",
+        "skal komme"
+      ],
+      "distractors": [
+        "kom",
+        "er kommet",
+        "ville komme"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "skolen-lukker-for-sommerferie-den-24-juni",
+      "level": "B1",
+      "mode": "future",
+      "context": "Skolen har planlagt det.",
+      "sentence": "Skolen ___ for sommerferie den 24. juni.",
+      "accepted_answers": [
+        "lukker",
+        "skal lukke"
+      ],
+      "distractors": [
+        "lukkede",
+        "har lukket",
+        "ville lukke"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "koncerten-begynder-klokken-20-paa-loerdag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Programmet er trykt.",
+      "sentence": "Koncerten ___ klokken 20 på lørdag.",
+      "accepted_answers": [
+        "begynder",
+        "skal begynde"
+      ],
+      "distractors": [
+        "begyndte",
+        "har begyndt",
+        "ville begynde"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "flyet-lander-i-rom-klokken-fjorten-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Flyet har en fast tid.",
+      "sentence": "Flyet ___ i Rom klokken fjorten i morgen.",
+      "accepted_answers": [
+        "lander",
+        "skal lande"
+      ],
+      "distractors": [
+        "landede",
+        "har landet",
+        "ville lande"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "jeg-ringer-til-dig-klokken-ti-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har ringet og aftalt det.",
+      "sentence": "Jeg ___ dig klokken ti i morgen.",
+      "accepted_answers": [
+        "ringer til",
+        "skal ringe til"
+      ],
+      "distractors": [
+        "ringede til",
+        "har ringet til",
+        "ville ringe til"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk.",
+      "verify": true
+    },
+    {
+      "id": "vi-rejser-til-graekenland-naeste-sommer",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er planlagt og betalt.",
+      "sentence": "Vi ___ til Grækenland næste sommer.",
+      "accepted_answers": [
+        "rejser",
+        "skal rejse"
+      ],
+      "distractors": [
+        "rejste",
+        "har rejst",
+        "ville rejse"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "butikken-aabner-foerst-kl-10-i-morgen",
+      "level": "B1",
+      "mode": "future",
+      "context": "Butikken har skiftet åbningstid.",
+      "sentence": "Butikken ___ først kl. 10 i morgen.",
+      "accepted_answers": [
+        "åbner",
+        "skal åbne"
+      ],
+      "distractors": [
+        "åbnede",
+        "har åbnet",
+        "ville åbne"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "der-kommer-gaester-til-middag-i-aften",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har inviteret gæster.",
+      "sentence": "Der ___ gæster til middag i aften.",
+      "accepted_answers": [
+        "kommer",
+        "skal komme"
+      ],
+      "distractors": [
+        "kom",
+        "er kommet",
+        "ville komme"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "hun-flyver-til-london-paa-soendag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er en fast plan.",
+      "sentence": "Hun ___ til London på søndag.",
+      "accepted_answers": [
+        "flyver",
+        "skal flyve"
+      ],
+      "distractors": [
+        "fløj",
+        "er fløjet",
+        "ville flyve"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "skolen-begynder-igen-paa-mandag-efter-ferien",
+      "level": "A2",
+      "mode": "future",
+      "context": "Skolen har et fast skema.",
+      "sentence": "Skolen ___ igen på mandag efter ferien.",
+      "accepted_answers": [
+        "begynder",
+        "skal begynde"
+      ],
+      "distractors": [
+        "begyndte",
+        "har begyndt",
+        "ville begynde"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "operationen-finder-sted-den-3-marts-2",
+      "level": "B1",
+      "mode": "future",
+      "context": "Lægen har sat en dato.",
+      "sentence": "Operationen ___ den 3. marts.",
+      "accepted_answers": [
+        "finder sted",
+        "skal finde sted"
+      ],
+      "distractors": [
+        "fandt sted",
+        "har fundet sted",
+        "ville finde sted"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "vi-bor-paa-hotel-i-to-naetter-naar-vi-kommer-til-rom",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har bestilt hotel til to nætter.",
+      "sentence": "Vi ___ på hotel i to nætter, når vi kommer til Rom.",
+      "accepted_answers": [
+        "bor",
+        "skal bo"
+      ],
+      "distractors": [
+        "boede",
+        "har boet",
+        "ville bo"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "jeg-arbejder-hjemmefra-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Det er aftalt med din chef.",
+      "sentence": "Jeg ___ hjemmefra i morgen.",
+      "accepted_answers": [
+        "arbejder",
+        "skal arbejde"
+      ],
+      "distractors": [
+        "arbejdede",
+        "har arbejdet",
+        "ville arbejde"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "vi-gaar-i-biografen-i-aften",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har fået en billet.",
+      "sentence": "Vi ___ i biografen i aften.",
+      "accepted_answers": [
+        "går",
+        "skal gå"
+      ],
+      "distractors": [
+        "gik",
+        "har gået",
+        "ville gå"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "konferencen-foregaar-naeste-uge-i-koebenhavn",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det står på programmet.",
+      "sentence": "Konferencen ___ næste uge i København.",
+      "accepted_answers": [
+        "foregår",
+        "skal foregå"
+      ],
+      "distractors": [
+        "foregik",
+        "har foregået",
+        "ville foregå"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk.",
+      "verify": true
+    },
+    {
+      "id": "biblioteket-lukker-i-naeste-maaned",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er besluttet af kommunen.",
+      "sentence": "Biblioteket ___ i næste måned.",
+      "accepted_answers": [
+        "lukker",
+        "skal lukke"
+      ],
+      "distractors": [
+        "lukkede",
+        "har lukket",
+        "ville lukke"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "bussen-koerer-hver-halve-time-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Der er en fast plan.",
+      "sentence": "Bussen ___ hver halve time i morgen.",
+      "accepted_answers": [
+        "kører",
+        "skal køre"
+      ],
+      "distractors": [
+        "kørte",
+        "har kørt",
+        "ville køre"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "du-skal-aflevere-rapporten-paa-fredag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din chef kræver det.",
+      "sentence": "Du ___ rapporten på fredag.",
+      "accepted_answers": [
+        "skal aflevere"
+      ],
+      "distractors": [
+        "kommer til at aflevere",
+        "vil gerne aflevere",
+        "afleverede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "vi-skal-moedes-foran-biografen-i-aften",
+      "level": "A2",
+      "mode": "future",
+      "context": "Det er en aftale.",
+      "sentence": "Vi ___ foran biografen i aften.",
+      "accepted_answers": [
+        "skal mødes"
+      ],
+      "distractors": [
+        "mødtes",
+        "har mødtes",
+        "vil gerne mødes"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
+      "verify": true
+    },
+    {
+      "id": "jeg-skal-besoege-min-mormor-i-weekenden",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har aftalt det med din mor.",
+      "sentence": "Jeg ___ min mormor i weekenden.",
+      "accepted_answers": [
+        "skal besøge"
+      ],
+      "distractors": [
+        "kommer til at besøge",
+        "vil gerne besøge",
+        "besøgte"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
+      "verify": true
+    },
+    {
+      "id": "du-skal-tage-medicinen-to-gange-om-dagen",
+      "level": "B1",
+      "mode": "future",
+      "context": "Lægen siger det.",
+      "sentence": "Du ___ medicinen to gange om dagen.",
+      "accepted_answers": [
+        "skal tage"
+      ],
+      "distractors": [
+        "kommer til at tage",
+        "vil gerne tage",
+        "tog"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "man-skal-ikke-larme-her",
+      "level": "A2",
+      "mode": "future",
+      "context": "Det er en regel i biblioteket.",
+      "sentence": "Man ___ her.",
+      "accepted_answers": [
+        "skal ikke larme"
+      ],
+      "distractors": [
+        "vil ikke larme",
+        "kommer ikke til at larme",
+        "larmede ikke"
+      ],
+      "note": "Skal ikke udtrykker et forbud eller en pligt til at lade være.",
+      "verify": true
+    },
+    {
+      "id": "du-skal-ikke-spise-sukker",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din læge forbyder det.",
+      "sentence": "Du ___ sukker.",
+      "accepted_answers": [
+        "skal ikke spise"
+      ],
+      "distractors": [
+        "kommer ikke til at spise",
+        "vil ikke spise",
+        "spiste ikke"
+      ],
+      "note": "Skal ikke udtrykker et forbud eller en pligt til at lade være.",
+      "verify": true
+    },
+    {
+      "id": "jeg-skal-holde-oplaeg-paa-moedet-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din chef har bestemt det.",
+      "sentence": "Jeg ___ oplæg på mødet i morgen.",
+      "accepted_answers": [
+        "skal holde"
+      ],
+      "distractors": [
+        "kommer til at holde",
+        "vil gerne holde",
+        "holdt"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "i-skal-rydde-op-foer-i-gaar-ud",
+      "level": "A2",
+      "mode": "future",
+      "context": "Børnene har fået besked.",
+      "sentence": "I ___ op, før I går ud.",
+      "accepted_answers": [
+        "skal rydde"
+      ],
+      "distractors": [
+        "kommer til at rydde",
+        "vil gerne rydde",
+        "ryddede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "holdet-skal-spille-finale-naeste-loerdag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Der er en fast aftale med klubben.",
+      "sentence": "Holdet ___ finale næste lørdag.",
+      "accepted_answers": [
+        "skal spille"
+      ],
+      "distractors": [
+        "kommer til at spille",
+        "vil gerne spille",
+        "spillede"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "jeg-skal-hjaelpe-min-nabo-med-at-flytte-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har aftalt at hjælpe.",
+      "sentence": "Jeg ___ min nabo med at flytte i morgen.",
+      "accepted_answers": [
+        "skal hjælpe"
+      ],
+      "distractors": [
+        "kommer til at hjælpe",
+        "hjalp",
+        "har hjulpet"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "alle-medarbejdere-skal-deltage-i-kurset",
+      "level": "B1",
+      "mode": "future",
+      "context": "Chefen kræver det.",
+      "sentence": "Alle medarbejdere ___ i kurset.",
+      "accepted_answers": [
+        "skal deltage"
+      ],
+      "distractors": [
+        "kommer til at deltage",
+        "vil gerne deltage",
+        "deltog"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "vi-skal-flytte-ind-i-det-nye-hus-i-naeste-uge",
+      "level": "B1",
+      "mode": "future",
+      "context": "Der er en fast aftale.",
+      "sentence": "Vi ___ ind i det nye hus i næste uge.",
+      "accepted_answers": [
+        "skal flytte"
+      ],
+      "distractors": [
+        "flyttede",
+        "har flyttet",
+        "kommer til at flytte"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
+      "verify": true
+    },
+    {
+      "id": "du-skal-ringe-til-din-mormor-i-dag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din mor har bedt dig om det.",
+      "sentence": "Du ___ til din mormor i dag.",
+      "accepted_answers": [
+        "skal ringe"
+      ],
+      "distractors": [
+        "kommer til at ringe",
+        "vil gerne ringe",
+        "ringede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "alle-virksomheder-skal-aflevere-regnskab-inden-1-maj",
+      "level": "B2",
+      "mode": "future",
+      "context": "Loven kræver det.",
+      "sentence": "Alle virksomheder ___ regnskab inden 1. maj.",
+      "accepted_answers": [
+        "skal aflevere"
+      ],
+      "distractors": [
+        "kommer til at aflevere",
+        "vil gerne aflevere",
+        "afleverede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "vi-skal-spille-fodbold-i-eftermiddag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har fået en aftale.",
+      "sentence": "Vi ___ fodbold i eftermiddag.",
+      "accepted_answers": [
+        "skal spille"
+      ],
+      "distractors": [
+        "kommer til at spille",
+        "vil gerne spille",
+        "spillede"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "vi-skal-ses-paa-mandag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er en aftale mellem dig og din ven.",
+      "sentence": "Vi ___ på mandag.",
+      "accepted_answers": [
+        "skal ses"
+      ],
+      "distractors": [
+        "sås",
+        "har set",
+        "kommer til at ses"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
+      "verify": true
+    },
+    {
+      "id": "i-skal-ikke-gaa-over-gaardspladsen",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er forbudt.",
+      "sentence": "I ___ over gårdspladsen.",
+      "accepted_answers": [
+        "skal ikke gå"
+      ],
+      "distractors": [
+        "kommer ikke til at gå",
+        "vil ikke gå",
+        "gik ikke"
+      ],
+      "note": "Skal ikke udtrykker et forbud eller en pligt til at lade være.",
+      "verify": true
+    },
+    {
+      "id": "du-skal-hvile-dig-i-tre-dage",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din læge har bestemt det.",
+      "sentence": "Du ___ dig i tre dage.",
+      "accepted_answers": [
+        "skal hvile"
+      ],
+      "distractors": [
+        "kommer til at hvile",
+        "vil gerne hvile",
+        "hvilede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "vi-skal-aflevere-bilen-paa-fredag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Der er aftalt en fast tid.",
+      "sentence": "Vi ___ bilen på fredag.",
+      "accepted_answers": [
+        "skal aflevere"
+      ],
+      "distractors": [
+        "kommer til at aflevere",
+        "vil gerne aflevere",
+        "afleverede"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "vi-skal-starte-projektet-i-januar",
+      "level": "B1",
+      "mode": "future",
+      "context": "Din chef har lagt en plan.",
+      "sentence": "Vi ___ projektet i januar.",
+      "accepted_answers": [
+        "skal starte"
+      ],
+      "distractors": [
+        "kommer til at starte",
+        "vil gerne starte",
+        "startede"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "i-skal-aflevere-lektierne-hver-mandag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Der er en regel i klassen.",
+      "sentence": "I ___ lektierne hver mandag.",
+      "accepted_answers": [
+        "skal aflevere"
+      ],
+      "distractors": [
+        "kommer til at aflevere",
+        "vil gerne aflevere",
+        "afleverede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "jeg-skal-hjaelpe-hende-med-at-male-i-weekenden",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har lovet din søster at hjælpe.",
+      "sentence": "Jeg ___ hende med at male i weekenden.",
+      "accepted_answers": [
+        "skal hjælpe"
+      ],
+      "distractors": [
+        "kommer til at hjælpe",
+        "hjalp",
+        "har hjulpet"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "beboerne-skal-sortere-affaldet-fra-nytaar",
+      "level": "B2",
+      "mode": "future",
+      "context": "Det er et påbud fra myndighederne.",
+      "sentence": "Beboerne ___ affaldet fra nytår.",
+      "accepted_answers": [
+        "skal sortere"
+      ],
+      "distractors": [
+        "kommer til at sortere",
+        "vil gerne sortere",
+        "sorterede"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "han-vil-flytte-til-norge-uanset-hvad-vi-siger",
+      "level": "B1",
+      "mode": "future",
+      "context": "Han har besluttet det selv.",
+      "sentence": "Han ___ til Norge, uanset hvad vi siger.",
+      "accepted_answers": [
+        "vil flytte"
+      ],
+      "distractors": [
+        "kommer til at flytte",
+        "flyttede",
+        "har flyttet"
+      ],
+      "note": "Vil udtrykker egen vilje eller beslutning."
+    },
+    {
+      "id": "jeg-vil-ikke-deltage-i-konkurrencen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har ikke lyst.",
+      "sentence": "Jeg ___ i konkurrencen.",
+      "accepted_answers": [
+        "vil ikke deltage"
+      ],
+      "distractors": [
+        "kommer ikke til at deltage",
+        "deltog ikke",
+        "har ikke deltaget"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "han-vil-ikke-undskylde-uanset-hvad-vi-siger",
+      "level": "B1",
+      "mode": "future",
+      "context": "Din ven nægter.",
+      "sentence": "Han ___, uanset hvad vi siger.",
+      "accepted_answers": [
+        "vil ikke undskylde"
+      ],
+      "distractors": [
+        "undskyldte ikke",
+        "har ikke undskyldt",
+        "kommer ikke til at undskylde"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "min-datter-vil-ikke-spise-groentsager",
+      "level": "A2",
+      "mode": "future",
+      "context": "Barnet nægter.",
+      "sentence": "Min datter ___ grøntsager.",
+      "accepted_answers": [
+        "vil ikke spise"
+      ],
+      "distractors": [
+        "kommer ikke til at spise",
+        "spiste ikke",
+        "har ikke spist"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "jeg-vil-spise-mere-sundt-fra-i-dag",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har besluttet det.",
+      "sentence": "Jeg ___ mere sundt fra i dag.",
+      "accepted_answers": [
+        "vil spise"
+      ],
+      "distractors": [
+        "kommer til at spise",
+        "spiste",
+        "har spist"
+      ],
+      "note": "Vil udtrykker egen vilje eller beslutning.",
+      "verify": true
+    },
+    {
+      "id": "han-vil-gerne-blive-laege",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er hans ønske.",
+      "sentence": "Han ___ læge.",
+      "accepted_answers": [
+        "vil gerne blive"
+      ],
+      "distractors": [
+        "kommer til at blive",
+        "blev",
+        "er blevet"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "jeg-vil-gerne-tage-opvasken-hvis-du-vil",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du tilbyder din hjælp.",
+      "sentence": "Jeg ___ opvasken, hvis du vil.",
+      "accepted_answers": [
+        "vil gerne tage"
+      ],
+      "distractors": [
+        "tog",
+        "har taget",
+        "kommer til at tage"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "hun-vil-gerne-rejse-til-japan-en-dag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Hun har lyst til at rejse.",
+      "sentence": "Hun ___ til Japan en dag.",
+      "accepted_answers": [
+        "vil gerne rejse"
+      ],
+      "distractors": [
+        "kommer til at rejse",
+        "rejste",
+        "har rejst"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "han-vil-betale-regningen-selv",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er hans beslutning, og han insisterer.",
+      "sentence": "Han ___ regningen selv.",
+      "accepted_answers": [
+        "vil betale"
+      ],
+      "distractors": [
+        "kommer til at betale",
+        "betalte",
+        "har betalt"
+      ],
+      "note": "Vil udtrykker egen vilje eller beslutning.",
+      "verify": true
+    },
+    {
+      "id": "hun-vil-ikke-komme-med-os",
+      "level": "A2",
+      "mode": "future",
+      "context": "Hun nægter.",
+      "sentence": "Hun ___ med os.",
+      "accepted_answers": [
+        "vil ikke komme"
+      ],
+      "distractors": [
+        "kom ikke",
+        "er ikke kommet",
+        "kommer ikke til at komme"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "de-vil-ikke-skrive-under-paa-kontrakten",
+      "level": "B1",
+      "mode": "future",
+      "context": "De nægter at skrive under.",
+      "sentence": "De ___ under på kontrakten.",
+      "accepted_answers": [
+        "vil ikke skrive"
+      ],
+      "distractors": [
+        "skrev ikke",
+        "har ikke skrevet",
+        "kommer ikke til at skrive"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "han-vil-gerne-bo-i-spanien",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din ven har et ønske.",
+      "sentence": "Han ___ i Spanien.",
+      "accepted_answers": [
+        "vil gerne bo"
+      ],
+      "distractors": [
+        "kommer til at bo",
+        "boede",
+        "har boet"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "jeg-vil-stoppe-med-at-ryge-fra-naeste-maaned",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har besluttet det.",
+      "sentence": "Jeg ___ med at ryge fra næste måned.",
+      "accepted_answers": [
+        "vil stoppe"
+      ],
+      "distractors": [
+        "kommer til at stoppe",
+        "stoppede",
+        "har stoppet"
+      ],
+      "note": "Vil udtrykker egen vilje eller beslutning."
+    },
+    {
+      "id": "jeg-vil-ikke-acceptere-den-loesning",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du er uenig og nægter.",
+      "sentence": "Jeg ___ den løsning.",
+      "accepted_answers": [
+        "vil ikke acceptere"
+      ],
+      "distractors": [
+        "accepterede ikke",
+        "har ikke accepteret",
+        "kommer ikke til at acceptere"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "vi-vil-gerne-spise-ude-i-aften",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har et ønske.",
+      "sentence": "Vi ___ ude i aften.",
+      "accepted_answers": [
+        "vil gerne spise"
+      ],
+      "distractors": [
+        "spiste gerne",
+        "har gerne spist",
+        "kommer til at spise"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på.",
+      "verify": true
+    },
+    {
+      "id": "hun-vil-vaere-den-bedste-i-sin-klasse",
+      "level": "B2",
+      "mode": "future",
+      "context": "Hun har et mål.",
+      "sentence": "Hun ___ den bedste i sin klasse.",
+      "accepted_answers": [
+        "vil være"
+      ],
+      "distractors": [
+        "kommer til at være",
+        "var",
+        "har været"
+      ],
+      "note": "Vil udtrykker egen vilje eller beslutning.",
+      "verify": true
+    },
+    {
+      "id": "jeg-vil-gerne-baere-din-taske",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du tilbyder hjælp.",
+      "sentence": "Jeg ___ din taske.",
+      "accepted_answers": [
+        "vil gerne bære"
+      ],
+      "distractors": [
+        "bar",
+        "har båret",
+        "kommer til at bære"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "jeg-vil-ikke-tale-om-det-mere",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du siger nej.",
+      "sentence": "Jeg ___ om det mere.",
+      "accepted_answers": [
+        "vil ikke tale"
+      ],
+      "distractors": [
+        "talte ikke",
+        "har ikke talt",
+        "kommer ikke til at tale"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst."
+    },
+    {
+      "id": "se-paa-himlen-det-kommer-til-at-regne",
+      "level": "A2",
+      "mode": "future",
+      "context": "Himlen er mørk, og det regner ikke endnu.",
+      "sentence": "Se på himlen! Det ___.",
+      "accepted_answers": [
+        "kommer til at regne"
+      ],
+      "distractors": [
+        "regnede",
+        "regner",
+        "har regnet"
+      ],
+      "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske."
+    },
+    {
+      "id": "du-kommer-til-at-fortryde-det-hvis-du-ikke-tager-med",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du forudsiger en følelse.",
+      "sentence": "Du ___ det, hvis du ikke tager med.",
+      "accepted_answers": [
+        "kommer til at fortryde",
+        "vil fortryde",
+        "fortryder"
+      ],
+      "distractors": [
+        "fortrød",
+        "har fortrudt",
+        "fortryder ikke"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "jeg-tror-at-han-kommer-til-at-blive-meget-glad",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du forudsiger fremtiden.",
+      "sentence": "Jeg tror, at han ___ meget glad.",
+      "accepted_answers": [
+        "kommer til at blive",
+        "bliver"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan.",
+      "verify": true
+    },
+    {
+      "id": "befolkningen-kommer-til-at-stige-kraftigt-de-naeste-ti",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du forudsiger fremtiden i en rapport.",
+      "sentence": "Befolkningen ___ kraftigt de næste ti år.",
+      "accepted_answers": [
+        "kommer til at stige",
+        "vil stige"
+      ],
+      "distractors": [
+        "steg",
+        "er steget",
+        "ville stige"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "gulvet-er-vaadt-du-kommer-til-at-glide",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du advarer.",
+      "sentence": "Gulvet er vådt. Du ___.",
+      "accepted_answers": [
+        "kommer til at glide",
+        "glider"
+      ],
+      "distractors": [
+        "gled",
+        "er gledet",
+        "gleder"
+      ],
+      "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske.",
+      "verify": true
+    },
+    {
+      "id": "det-kommer-til-at-koste-mere-efter-nytaar",
+      "level": "B1",
+      "mode": "future",
+      "context": "Prisen stiger efter nytår.",
+      "sentence": "Det ___ mere efter nytår.",
+      "accepted_answers": [
+        "kommer til at koste",
+        "vil koste"
+      ],
+      "distractors": [
+        "kostede",
+        "har kostet",
+        "koster ikke"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "klimaet-kommer-til-at-aendre-sig-meget-de-naeste-aartier",
+      "level": "B2",
+      "mode": "future",
+      "context": "Eksperterne forudsiger.",
+      "sentence": "Klimaet ___ meget de næste årtier.",
+      "accepted_answers": [
+        "kommer til at ændre sig",
+        "vil ændre sig"
+      ],
+      "distractors": [
+        "ændrede sig",
+        "har ændret sig",
+        "ville ændre sig"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "det-bliver-en-god-dag-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Det er en forudsigelse.",
+      "sentence": "Det ___ en god dag i morgen.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "har været",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "jeg-tror-at-vores-hold-kommer-til-at-vinde",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du forudsiger resultatet.",
+      "sentence": "Jeg tror, at vores hold ___.",
+      "accepted_answers": [
+        "kommer til at vinde",
+        "vil vinde",
+        "vinder"
+      ],
+      "distractors": [
+        "vandt",
+        "har vundet",
+        "ville vinde"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan.",
+      "verify": true
+    },
+    {
+      "id": "pas-paa-flasken-kommer-til-at-falde-ned",
+      "level": "A2",
+      "mode": "future",
+      "context": "Flasken står yderst på kanten af bordet.",
+      "sentence": "Pas på! Flasken ___ ned.",
+      "accepted_answers": [
+        "kommer til at falde",
+        "falder"
+      ],
+      "distractors": [
+        "faldt",
+        "er faldet",
+        "ville falde"
+      ],
+      "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske."
+    },
+    {
+      "id": "han-kommer-til-at-blive-ked-af-det-naar-han-hoerer-det",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du kender din chef godt.",
+      "sentence": "Han ___ ked af det, når han hører det.",
+      "accepted_answers": [
+        "kommer til at blive",
+        "bliver"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "ville blive"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "du-kommer-til-at-faa-ondt-i-maven-hvis-du-spiser-alt",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du advarer din ven om slik.",
+      "sentence": "Du ___ ondt i maven, hvis du spiser alt det slik.",
+      "accepted_answers": [
+        "kommer til at få",
+        "får"
+      ],
+      "distractors": [
+        "fik",
+        "har fået",
+        "ville få"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "vi-kommer-til-at-savne-dig-naar-du-rejser",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du siger farvel.",
+      "sentence": "Vi ___ dig, når du rejser.",
+      "accepted_answers": [
+        "kommer til at savne",
+        "vil savne",
+        "savner"
+      ],
+      "distractors": [
+        "savnede",
+        "har savnet",
+        "ville savne"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "boernene-kommer-til-at-blive-meget-glade-for-gaven",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om dine børn.",
+      "sentence": "Børnene ___ meget glade for gaven.",
+      "accepted_answers": [
+        "kommer til at blive",
+        "bliver"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "ville blive"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "bilen-kommer-til-at-ramme-muren",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du ser, at bilen kører mod muren.",
+      "sentence": "Bilen ___ muren!",
+      "accepted_answers": [
+        "kommer til at ramme",
+        "rammer"
+      ],
+      "distractors": [
+        "ramte",
+        "har ramt",
+        "ville ramme"
+      ],
+      "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske."
+    },
+    {
+      "id": "hun-kommer-til-at-grine-naar-hun-ser-billedet",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du kender din søster.",
+      "sentence": "Hun ___, når hun ser billedet.",
+      "accepted_answers": [
+        "kommer til at grine",
+        "griner"
+      ],
+      "distractors": [
+        "grinede",
+        "har grinet",
+        "ville grine"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "sommeren-i-aar-bliver-varm",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er en forudsigelse om sommeren.",
+      "sentence": "Sommeren i år ___ varm.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "har været",
+        "ville være"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "priserne-kommer-til-at-stige-i-de-kommende-maaneder",
+      "level": "B2",
+      "mode": "future",
+      "context": "Eksperterne regner med en udvikling.",
+      "sentence": "Priserne ___ i de kommende måneder.",
+      "accepted_answers": [
+        "kommer til at stige",
+        "vil stige"
+      ],
+      "distractors": [
+        "steg",
+        "er steget",
+        "ville stige"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "pas-paa-barnet-kommer-til-at-falde",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du ser, at barnet er ved at falde.",
+      "sentence": "Pas på! Barnet ___.",
+      "accepted_answers": [
+        "kommer til at falde",
+        "falder"
+      ],
+      "distractors": [
+        "faldt",
+        "er faldet",
+        "ville falde"
+      ],
+      "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske."
+    },
+    {
+      "id": "jeg-kommer-til-at-arbejde-meget-i-begyndelsen",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du taler om dit nye job.",
+      "sentence": "Jeg ___ meget i begyndelsen.",
+      "accepted_answers": [
+        "kommer til at arbejde",
+        "vil arbejde",
+        "arbejder"
+      ],
+      "distractors": [
+        "arbejdede",
+        "har arbejdet",
+        "ville arbejde"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan.",
+      "verify": true
+    },
+    {
+      "id": "teknologien-kommer-til-at-forandre-den-maade-vi",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du skriver en fremtidsprognose.",
+      "sentence": "Teknologien ___ den måde, vi arbejder på.",
+      "accepted_answers": [
+        "kommer til at forandre",
+        "vil forandre"
+      ],
+      "distractors": [
+        "forandrede",
+        "har forandret",
+        "ville forandre"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "min-bror-kommer-til-at-komme-for-sent-som-han-plejer",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du kender din bror.",
+      "sentence": "Min bror ___ for sent, som han plejer.",
+      "accepted_answers": [
+        "kommer til at komme",
+        "kommer"
+      ],
+      "distractors": [
+        "kom",
+        "er kommet",
+        "ville komme"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "vi-kommer-til-at-komme-for-sent-hvis-vi-ikke-skynder-os",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du ser, at det er sent.",
+      "sentence": "Vi ___ for sent, hvis vi ikke skynder os.",
+      "accepted_answers": [
+        "kommer til at komme",
+        "kommer"
+      ],
+      "distractors": [
+        "kom",
+        "er kommet",
+        "ville komme"
+      ],
+      "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske."
+    },
+    {
+      "id": "den-nye-skole-kommer-til-at-koste-mange-penge",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om en ny skole.",
+      "sentence": "Den nye skole ___ mange penge.",
+      "accepted_answers": [
+        "kommer til at koste",
+        "vil koste"
+      ],
+      "distractors": [
+        "kostede",
+        "har kostet",
+        "ville koste"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "du-kommer-til-at-faa-problemer-hvis-du-ikke-ringer-til",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du advarer en kollega.",
+      "sentence": "Du ___ problemer, hvis du ikke ringer til kunden.",
+      "accepted_answers": [
+        "kommer til at få",
+        "får"
+      ],
+      "distractors": [
+        "fik",
+        "har fået",
+        "ville få"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "danmark-kommer-til-at-vinde-kampen-i-aften",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du forudsiger udfaldet af kampen.",
+      "sentence": "Danmark ___ kampen i aften.",
+      "accepted_answers": [
+        "kommer til at vinde",
+        "vil vinde",
+        "vinder"
+      ],
+      "distractors": [
+        "vandt",
+        "har vundet",
+        "ville vinde"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan.",
+      "verify": true
+    },
+    {
+      "id": "jeg-kommer-til-at-elske-den-nye-lejlighed",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om din nye lejlighed.",
+      "sentence": "Jeg ___ den nye lejlighed.",
+      "accepted_answers": [
+        "kommer til at elske",
+        "vil elske"
+      ],
+      "distractors": [
+        "elskede",
+        "har elsket",
+        "ville elske"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan.",
+      "verify": true
+    },
+    {
+      "id": "det-kommer-til-at-gaa-godt",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din ven er bange.",
+      "sentence": "Det ___ godt.",
+      "accepted_answers": [
+        "kommer til at gå",
+        "går"
+      ],
+      "distractors": [
+        "gik",
+        "er gået",
+        "ville gå"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "du-kommer-til-at-dumpe-hvis-du-ikke-laeser",
+      "level": "B1",
+      "mode": "future",
+      "context": "Din mor ser, at du ikke har læst.",
+      "sentence": "Du ___, hvis du ikke læser.",
+      "accepted_answers": [
+        "kommer til at dumpe",
+        "dumper"
+      ],
+      "distractors": [
+        "dumpede",
+        "har dumpet",
+        "ville dumpe"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "det-bliver-varmt-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du læser vejrudsigten.",
+      "sentence": "Det ___ varmt i morgen.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "hun-bliver-tyve-naeste-aar",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din søster er 19 nu.",
+      "sentence": "Hun ___ tyve næste år.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "har været"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "jeg-bliver-meget-sulten-hvis-jeg-ikke-spiser-snart",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har ikke spist i dag.",
+      "sentence": "Jeg ___ meget sulten, hvis jeg ikke spiser snart.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "min-mor-bliver-vred-naar-hun-ser-det",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du taler om din mor.",
+      "sentence": "Min mor ___ vred, når hun ser det.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "min-bror-bliver-30-i-marts",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du taler om en fødselsdag.",
+      "sentence": "Min bror ___ 30 i marts.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "det-bliver-moerkt-klokken-fire-i-december",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om vinteren.",
+      "sentence": "Det ___ mørkt klokken fire i december.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "hun-bliver-glad-naar-hun-hoerer-at-hun-har-bestaaet",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om et eksamensresultat.",
+      "sentence": "Hun ___ glad, når hun hører, at hun har bestået.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "suppen-bliver-kold-hvis-vi-venter-for-laenge",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du taler om maden.",
+      "sentence": "Suppen ___ kold, hvis vi venter for længe.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "det-bliver-koldt-i-nat",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om natten.",
+      "sentence": "Det ___ koldt i nat.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "firmaet-bliver-halvtreds-aar-naeste-aar",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om et jubilæum.",
+      "sentence": "Firmaet ___ halvtreds år næste år.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "du-bliver-rask-igen-om-nogle-dage",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om, hvad der sker, hvis man er forkølet.",
+      "sentence": "Du ___ rask igen om nogle dage.",
+      "accepted_answers": [
+        "bliver",
+        "kommer til at blive"
+      ],
+      "distractors": [
+        "blev",
+        "er blevet",
+        "var"
+      ],
+      "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
+    },
+    {
+      "id": "jeg-har-taenkt-mig-at-laese-medicin-naar-jeg-er-faerdig",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du fortæller om din plan.",
+      "sentence": "Jeg ___ medicin, når jeg er færdig i gymnasiet.",
+      "accepted_answers": [
+        "har tænkt mig at læse",
+        "vil læse"
+      ],
+      "distractors": [
+        "tænkte mig at læse",
+        "har læst",
+        "læste"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "vi-har-taenkt-os-at-besoege-min-soester-i-norge",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du fortæller om din plan for ferien.",
+      "sentence": "Vi ___ min søster i Norge.",
+      "accepted_answers": [
+        "har tænkt os at besøge",
+        "vil besøge"
+      ],
+      "distractors": [
+        "tænkte os at besøge",
+        "har besøgt",
+        "besøgte"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "jeg-har-taenkt-mig-at-ringe-til-ham-i-morgen-og",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har en personlig plan.",
+      "sentence": "Jeg ___ til ham i morgen og undskylde.",
+      "accepted_answers": [
+        "har tænkt mig at ringe",
+        "vil ringe"
+      ],
+      "distractors": [
+        "tænkte mig at ringe",
+        "har ringet",
+        "ringede"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "jeg-har-taenkt-mig-at-soege-et-nyt-job-i-loebet-af",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du fortæller om din karriere.",
+      "sentence": "Jeg ___ et nyt job i løbet af foråret.",
+      "accepted_answers": [
+        "har tænkt mig at søge",
+        "vil søge"
+      ],
+      "distractors": [
+        "tænkte mig at søge",
+        "har søgt",
+        "søgte"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "han-har-taenkt-sig-at-male-huset-naeste-sommer",
+      "level": "B1",
+      "mode": "future",
+      "context": "Din ven fortæller om sin plan.",
+      "sentence": "Han ___ huset næste sommer.",
+      "accepted_answers": [
+        "har tænkt sig at male",
+        "vil male"
+      ],
+      "distractors": [
+        "tænkte sig at male",
+        "har malet",
+        "malede"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "min-mor-har-taenkt-sig-at-saelge-huset",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om din mors plan.",
+      "sentence": "Min mor ___ huset.",
+      "accepted_answers": [
+        "har tænkt sig at sælge",
+        "vil sælge"
+      ],
+      "distractors": [
+        "tænkte sig at sælge",
+        "har solgt",
+        "solgte"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "jeg-har-taenkt-mig-at-tage-et-kursus-i-dansk",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du fortæller om din plan for efteråret.",
+      "sentence": "Jeg ___ et kursus i dansk.",
+      "accepted_answers": [
+        "har tænkt mig at tage",
+        "vil tage"
+      ],
+      "distractors": [
+        "tænkte mig at tage",
+        "har taget",
+        "tog"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "jeg-har-taenkt-mig-at-aabne-en-lille-cafe-en-dag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du taler om din drøm.",
+      "sentence": "Jeg ___ en lille café en dag.",
+      "accepted_answers": [
+        "har tænkt mig at åbne",
+        "vil åbne"
+      ],
+      "distractors": [
+        "tænkte mig at åbne",
+        "har åbnet",
+        "åbnede"
+      ],
+      "note": "Har tænkt mig at udtrykker en personlig hensigt.",
+      "verify": true
+    },
+    {
+      "id": "skynd-dig-vi-er-ved-at-gaa-uden-dig",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du står i døren og venter.",
+      "sentence": "Skynd dig! Vi ___ uden dig.",
+      "accepted_answers": [
+        "er ved at gå",
+        "går"
+      ],
+      "distractors": [
+        "gik",
+        "er gået",
+        "var ved at gå"
+      ],
+      "note": "Er ved at udtrykker, at noget næsten er ved at ske."
+    },
+    {
+      "id": "pas-paa-kaffen-er-ved-at-koge-over",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er lige ved at ske.",
+      "sentence": "Pas på! Kaffen ___.",
+      "accepted_answers": [
+        "er ved at koge over",
+        "koger over"
+      ],
+      "distractors": [
+        "kogte over",
+        "har kogt over",
+        "var ved at koge over"
+      ],
+      "note": "Er ved at udtrykker, at noget næsten er ved at ske."
+    },
+    {
+      "id": "filmen-er-ved-at-begynde-saa-saet-dig-ned",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er ved at blive sent.",
+      "sentence": "Filmen ___, så sæt dig ned.",
+      "accepted_answers": [
+        "er ved at begynde",
+        "begynder"
+      ],
+      "distractors": [
+        "begyndte",
+        "er begyndt",
+        "var ved at begynde"
+      ],
+      "note": "Er ved at udtrykker, at noget næsten er ved at ske."
+    },
+    {
+      "id": "boernene-er-ved-at-falde-i-soevn",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du ser børnene.",
+      "sentence": "Børnene ___ i søvn.",
+      "accepted_answers": [
+        "er ved at falde",
+        "falder"
+      ],
+      "distractors": [
+        "faldt",
+        "er faldet",
+        "var ved at falde"
+      ],
+      "note": "Er ved at udtrykker, at noget næsten er ved at ske."
+    },
+    {
+      "id": "telefonen-er-ved-at-loebe-toer-for-stroem",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du ser, at batteriet snart er tomt.",
+      "sentence": "Telefonen ___ tør for strøm.",
+      "accepted_answers": [
+        "er ved at løbe",
+        "løber"
+      ],
+      "distractors": [
+        "løb",
+        "er løbet",
+        "var ved at løbe"
+      ],
+      "note": "Er ved at udtrykker, at noget næsten er ved at ske.",
+      "verify": true
+    },
+    {
+      "id": "projektet-vil-tage-mindst-to-aar",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du skriver en formel rapport.",
+      "sentence": "Projektet ___ mindst to år.",
+      "accepted_answers": [
+        "vil tage",
+        "kommer til at tage"
+      ],
+      "distractors": [
+        "tog",
+        "har taget",
+        "ville tage"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "beslutningen-vil-faa-store-foelger",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du skriver en formel rapport.",
+      "sentence": "Beslutningen ___ store følger.",
+      "accepted_answers": [
+        "vil få",
+        "kommer til at få"
+      ],
+      "distractors": [
+        "fik",
+        "har fået",
+        "ville få"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "efterspoergslen-vil-stige-gradvist",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du skriver en formel prognose.",
+      "sentence": "Efterspørgslen ___ gradvist.",
+      "accepted_answers": [
+        "vil stige",
+        "kommer til at stige"
+      ],
+      "distractors": [
+        "steg",
+        "er steget",
+        "ville stige"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "vi-vil-aldrig-glemme-det",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du taler om fremtiden i en tale.",
+      "sentence": "Vi ___ det.",
+      "accepted_answers": [
+        "vil aldrig glemme",
+        "kommer aldrig til at glemme"
+      ],
+      "distractors": [
+        "glemte aldrig",
+        "har aldrig glemt",
+        "ville aldrig glemme"
+      ],
+      "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
+    },
+    {
+      "id": "jeg-skal-nok-klare-det-saa-du-skal-ikke-bekymre-dig",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du lover din ven noget.",
+      "sentence": "Jeg ___ det, så du skal ikke bekymre dig.",
+      "accepted_answers": [
+        "skal nok klare"
+      ],
+      "distractors": [
+        "klarede nok",
+        "har nok klaret",
+        "ville nok klare"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
+      "verify": true
+    },
+    {
+      "id": "jeg-skal-nok-ringe-naar-jeg-er-hjemme",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du beroliger din mor.",
+      "sentence": "Jeg ___, når jeg er hjemme.",
+      "accepted_answers": [
+        "skal nok ringe"
+      ],
+      "distractors": [
+        "ringede nok",
+        "har nok ringet",
+        "ville nok ringe"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
+      "verify": true
+    },
+    {
+      "id": "alle-skal-moede-op-klokken-otte-i-morgen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din chef kræver det.",
+      "sentence": "Alle ___ op klokken otte i morgen.",
+      "accepted_answers": [
+        "skal møde",
+        "møder"
+      ],
+      "distractors": [
+        "mødte",
+        "har mødt",
+        "vil gerne møde"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "jeg-skal-lave-mad-til-hele-familien-i-aften",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har lovet din mor det.",
+      "sentence": "Jeg ___ mad til hele familien i aften.",
+      "accepted_answers": [
+        "skal lave",
+        "laver"
+      ],
+      "distractors": [
+        "lavede",
+        "har lavet",
+        "ville lave"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "vi-skal-hjaelpe-naboen-med-at-flytte-paa-loerdag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Der er en aftale med naboen.",
+      "sentence": "Vi ___ naboen med at flytte på lørdag.",
+      "accepted_answers": [
+        "skal hjælpe",
+        "hjælper"
+      ],
+      "distractors": [
+        "hjalp",
+        "har hjulpet",
+        "ville hjælpe"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "eleverne-skal-aflevere-deres-projekt-senest-i-marts",
+      "level": "B1",
+      "mode": "future",
+      "context": "Det er et krav fra skolen.",
+      "sentence": "Eleverne ___ deres projekt senest i marts.",
+      "accepted_answers": [
+        "skal aflevere"
+      ],
+      "distractors": [
+        "afleverede",
+        "har afleveret",
+        "ville aflevere"
+      ],
+      "note": "Skal udtrykker pligt eller et krav fra en anden."
+    },
+    {
+      "id": "jeg-skal-vaere-med-til-festen-i-morgen",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har lovet din ven at komme.",
+      "sentence": "Jeg ___ med til festen i morgen.",
+      "accepted_answers": [
+        "skal være",
+        "kommer"
+      ],
+      "distractors": [
+        "var",
+        "har været",
+        "kom"
+      ],
+      "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt."
+    },
+    {
+      "id": "jeg-vil-gerne-rejse-til-italien-i-sommer",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du har et ønske til sommeren.",
+      "sentence": "Jeg ___ til Italien i sommer.",
+      "accepted_answers": [
+        "vil gerne rejse"
+      ],
+      "distractors": [
+        "rejste",
+        "har rejst",
+        "kommer til at rejse"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "hun-vil-gerne-laese-mere-i-fremtiden",
+      "level": "B1",
+      "mode": "future",
+      "context": "Din veninde har et ønske.",
+      "sentence": "Hun ___ mere i fremtiden.",
+      "accepted_answers": [
+        "vil gerne læse"
+      ],
+      "distractors": [
+        "læste",
+        "har læst",
+        "kommer til at læse"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "jeg-vil-gerne-hjaelpe-dig-med-lektierne",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du tilbyder din hjælp.",
+      "sentence": "Jeg ___ dig med lektierne.",
+      "accepted_answers": [
+        "vil gerne hjælpe"
+      ],
+      "distractors": [
+        "hjalp",
+        "har hjulpet",
+        "kommer til at hjælpe"
+      ],
+      "note": "Vil gerne er den almindelige måde at udtrykke et ønske eller et tilbud på."
+    },
+    {
+      "id": "jeg-vil-ikke-goere-det",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du nægter.",
+      "sentence": "Jeg ___ det.",
+      "accepted_answers": [
+        "vil ikke gøre"
+      ],
+      "distractors": [
+        "gjorde ikke",
+        "har ikke gjort",
+        "ville ikke gøre"
+      ],
+      "note": "Vil ikke udtrykker, at man nægter eller ikke har lyst.",
+      "verify": true
+    },
+    {
+      "id": "han-vil-vaere-pilot",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din ven har et mål.",
+      "sentence": "Han ___ pilot.",
+      "accepted_answers": [
+        "vil være"
+      ],
+      "distractors": [
+        "var",
+        "har været",
+        "kommer til at være"
+      ],
+      "note": "Vil udtrykker egen vilje eller beslutning."
+    },
+    {
+      "id": "jeg-ringer-til-laegen-i-naeste-uge",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du aftaler en tid med lægen.",
+      "sentence": "Jeg ___ til lægen i næste uge.",
+      "accepted_answers": [
+        "ringer",
+        "skal ringe"
+      ],
+      "distractors": [
+        "ringede",
+        "har ringet",
+        "ville ringe"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "jeg-tager-en-tur-til-odense-paa-torsdag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du planlægger din uge.",
+      "sentence": "Jeg ___ en tur til Odense på torsdag.",
+      "accepted_answers": [
+        "tager",
+        "skal tage"
+      ],
+      "distractors": [
+        "tog",
+        "har taget",
+        "ville tage"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "vi-besoeger-vores-bedsteforaeldre-i-weekenden",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du planlægger weekenden.",
+      "sentence": "Vi ___ vores bedsteforældre i weekenden.",
+      "accepted_answers": [
+        "besøger",
+        "skal besøge"
+      ],
+      "distractors": [
+        "besøgte",
+        "har besøgt",
+        "ville besøge"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "vi-ses-paa-torsdag",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du planlægger et møde med din ven.",
+      "sentence": "Vi ___ på torsdag.",
+      "accepted_answers": [
+        "ses",
+        "skal ses"
+      ],
+      "distractors": [
+        "sås",
+        "har set",
+        "ville ses"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "hun-rejser-paa-ferie-i-naeste-uge",
+      "level": "A2",
+      "mode": "future",
+      "context": "Din kollega har fået ferie.",
+      "sentence": "Hun ___ på ferie i næste uge.",
+      "accepted_answers": [
+        "rejser",
+        "skal rejse"
+      ],
+      "distractors": [
+        "rejste",
+        "har rejst",
+        "ville rejse"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "vi-praesenterer-budgettet-den-1-oktober",
+      "level": "B1",
+      "mode": "future",
+      "context": "Chefen har bestemt datoen.",
+      "sentence": "Vi ___ budgettet den 1. oktober.",
+      "accepted_answers": [
+        "præsenterer",
+        "skal præsentere"
+      ],
+      "distractors": [
+        "præsenterede",
+        "har præsenteret",
+        "ville præsentere"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "regeringen-fremlaegger-lovforslaget-i-naeste-uge",
+      "level": "B2",
+      "mode": "future",
+      "context": "Du læser en nyhed.",
+      "sentence": "Regeringen ___ lovforslaget i næste uge.",
+      "accepted_answers": [
+        "fremlægger",
+        "skal fremlægge"
+      ],
+      "distractors": [
+        "fremlagde",
+        "har fremlagt",
+        "ville fremlægge"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk.",
+      "verify": true
+    },
+    {
+      "id": "jeg-moeder-dig-klokken-17-ved-stationen",
+      "level": "A2",
+      "mode": "future",
+      "context": "Du aftaler tid med en ven.",
+      "sentence": "Jeg ___ dig klokken 17 ved stationen.",
+      "accepted_answers": [
+        "møder",
+        "skal møde"
+      ],
+      "distractors": [
+        "mødte",
+        "har mødt",
+        "ville møde"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
+    },
+    {
+      "id": "jeg-koeber-en-ny-telefon-i-morgen",
+      "level": "B1",
+      "mode": "future",
+      "context": "Du har bestemt det.",
+      "sentence": "Jeg ___ en ny telefon i morgen.",
+      "accepted_answers": [
+        "køber",
+        "skal købe"
+      ],
+      "distractors": [
+        "købte",
+        "har købt",
+        "ville købe"
+      ],
+      "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
     }
   ]
 };
