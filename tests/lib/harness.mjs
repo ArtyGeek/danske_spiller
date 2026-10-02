@@ -96,7 +96,7 @@ export const lowContrast = page => page.evaluate(() => {
 });
 
 export async function shot(page, game, viewport, name) {
-  const dir = path.join('docs/redesign/screenshots', game);
+  const dir = path.join(process.env.SHOT_ROOT || 'docs/redesign/screenshots', game); // set SHOT_ROOT=<main repo>/docs/redesign/screenshots when running from a task worktree
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `${viewport}-${name}.png`);
   await page.screenshot({ path: file });

@@ -2,6 +2,8 @@
 !.claude/agents/
 !.claude/agent-memory/
 !.claude/skills/
+!.claude/hooks/
+.worktrees/
 .build-logs/
 
 # Local working artifacts, not repo content

@@ -8,7 +8,7 @@ const [file, playSel = '#btn-play'] = process.argv.slice(2).filter(a => !a.start
 if (!file) { console.error('usage: node smoke.mjs <game.html> [playSelector] [--shots]'); process.exit(2); }
 const shots = process.argv.includes('--shots');
 const dir = path.dirname(path.resolve(file));
-const game = dir === path.resolve('..') ? path.basename(file, '.html') : path.basename(dir); // root-level games use the file name
+const game = path.basename(file) === 'index.html' ? path.basename(dir) : path.basename(file, '.html'); // root-level games use the file name
 const rows = [];
 let failed = false;
 const rec = (check, ok, detail = '') => { rows.push({ check, result: ok ? 'PASS' : 'FAIL', detail }); if (!ok) failed = true; };

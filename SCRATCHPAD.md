@@ -36,7 +36,7 @@ This file is run *history + hand-off*. Never edit `prd.md` / `specs.md` because 
 - Gotchas: surprises, bugs found, things not to redo (optional)
 ```
 
-`type` ∈ `start` · `commit` · `verify` · `bug` · `block` · `stop` · `decision` · `manual` · `infra`
+`type` ∈ `start` · `commit` · `verify` · `bug` · `block` · `stop` · `decision` · `manual` · `infra` · `compact` (auto, written by the PreCompact hook) · `release`
 
 **Rules**
 1. Append new events at the **bottom** of §3. Never rewrite or delete old events (only §1 is overwritten).
