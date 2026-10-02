@@ -140,13 +140,6 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 # Gap-closing tasks (from grammar coverage review 2026-10-02; plan: .claude/plans/build-me-an-implementation-foamy-lobster.md)
 # Build order for the 4 specced games: pronomen → tids → saetning → skrive. Reconcile boejning-data first: counts now fire_former 1300, byg 570, adj 746, sammenligning 186, bestemt_ubestemt 250, maengde 221 — verify against prd § 2.4 targets and close.
 
-- id: fix-noun-laerer
-  spec: shared data
-  type: bug
-  status: todo
-  priority: P1
-  title: "nouns.js — 'lærer' is REGULAR and yields 'lærerene'; make it MANUAL 'lærerne'"
-  acceptance: "definite plural = lærerne; shared/validate.js 0 errors / 0 warnings; Bøjning Mode 1 item for lærer correct"
 
 - id: adj-agreement-gaps
   spec: boejningsvaerkstedet (4.4 Modes 2-3)
@@ -179,6 +172,7 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 ---
 
 ## Completed
+- fix-noun-laerer / nouns.js lærer/computer/printer definite plural fix / 2026-10-02 / c4e1167
 - shared-data-adj-verbs / Shared data — adjectives.js (220) + verbs.js (200) / 2026-09-24 / b2c7dc7
   notes: "Fully done. verbs.js = 201 verbs (commit 17a49fd). adjectives.js now = 220 (commit b2c7dc7): added 37 via the existing mechanical builders — 12 -ig/-lig (flittig, fornuftig, villig, rigelig, ivrig, grundig, hyppig, dygtig, kraftig, ordentlig, saftig, luftig), 16 regular monosyllabic -est class via adjReg (klar, fjern, stejl, vild, mild, stiv, våd, rar, dyb, fed, flink, frisk, rask, vred, tavs, barsk — all chosen so no consonant-doubling is needed, since adjReg does not double), 3 -som m-doubling (opmærksom, betænksom, sparsom), 4 -isk periphrastic (magisk, tragisk, komisk, demokratisk), 2 -løs periphrastic-with-neuter-t (trådløs, smagløs). node shared/validate.js = 0 errors / 0 warnings across all datasets; strict re-check (all 10 adjective schema fields required, dedupeField base) = 0 errors / 0 warnings, 220 items, unique ids+bases, all flags boolean, levels A1 45 / A2 72 / B1 74 / B2 29, 28 verify:true (carried over, native-speaker confirmation of rare comparatives). Downstream boejning-data Mode 2/3/4 can now read the full 220-adjective set at load time."
 
