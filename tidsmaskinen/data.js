@@ -19642,5 +19642,3297 @@ window.TIDS_DATA = {
       ],
       "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
     }
+  ],
+  "passive": [
+    {
+      "id": "doeren-aabnes-af-vagten-klokken-otte-hver-dag",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Skiltet beskriver den faste procedure.",
+      "sentence": "Døren ___ af vagten klokken otte hver dag.",
+      "options": [
+        "blev åbnet",
+        "åbnes",
+        "er åbnet",
+        "åbner"
+      ],
+      "correct": "åbnes",
+      "accepted_answers": [
+        "åbnes",
+        "bliver åbnet"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "maden-serveres-kun-mellem-klokken-11-og-13",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det står i reglerne for kantinen.",
+      "sentence": "Maden ___ kun mellem klokken 11 og 13.",
+      "options": [
+        "serverer",
+        "serveres",
+        "blev serveret",
+        "er serveret"
+      ],
+      "correct": "serveres",
+      "accepted_answers": [
+        "serveres",
+        "bliver serveret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "boegerne-laanes-ud-i-tre-uger-ad-gangen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En regel i biblioteket.",
+      "sentence": "Bøgerne ___ ud i tre uger ad gangen.",
+      "options": [
+        "låner",
+        "er lånt",
+        "blev lånt",
+        "lånes"
+      ],
+      "correct": "lånes",
+      "accepted_answers": [
+        "lånes",
+        "bliver lånt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "aeggene-piskes-i-en-skaal-og-derefter-tilsaettes-mel",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du læser en opskrift.",
+      "sentence": "Æggene ___ i en skål, og derefter tilsættes mel.",
+      "options": [
+        "piskes",
+        "blev pisket",
+        "pisker",
+        "er pisket"
+      ],
+      "correct": "piskes",
+      "accepted_answers": [
+        "piskes",
+        "bliver pisket"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "maskinerne-kontrolleres-hver-morgen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En regel på fabrikken.",
+      "sentence": "Maskinerne ___ hver morgen.",
+      "options": [
+        "kontrollerer",
+        "kontrolleres",
+        "er kontrolleret",
+        "blev kontrolleret"
+      ],
+      "correct": "kontrolleres",
+      "accepted_answers": [
+        "kontrolleres",
+        "bliver kontrolleret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "foedselsdagen-fejres-altid-med-kage-og-flag",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er en tradition.",
+      "sentence": "Fødselsdagen ___ altid med kage og flag.",
+      "options": [
+        "fejres",
+        "er fejret",
+        "fejrer",
+        "blev fejret"
+      ],
+      "correct": "fejres",
+      "accepted_answers": [
+        "fejres",
+        "bliver fejret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "lektierne-afleveres-hver-mandag",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Skolens faste procedure.",
+      "sentence": "Lektierne ___ hver mandag.",
+      "options": [
+        "blev afleveret",
+        "er afleveret",
+        "afleveres",
+        "afleverer"
+      ],
+      "correct": "afleveres",
+      "accepted_answers": [
+        "afleveres",
+        "bliver afleveret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "reglerne-opdateres-en-gang-om-aaret",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Reglerne bliver revideret jævnligt.",
+      "sentence": "Reglerne ___ en gang om året.",
+      "options": [
+        "opdateres",
+        "opdaterer",
+        "er opdateret",
+        "blev opdateret"
+      ],
+      "correct": "opdateres",
+      "accepted_answers": [
+        "opdateres",
+        "bliver opdateret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "varerne-leveres-hver-morgen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Et skilt i butikken.",
+      "sentence": "Varerne ___ hver morgen.",
+      "options": [
+        "leveres",
+        "leverer",
+        "er leveret",
+        "blev leveret"
+      ],
+      "correct": "leveres",
+      "accepted_answers": [
+        "leveres",
+        "bliver leveret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "alle-breve-sendes-med-en-dags-forsinkelse",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En fast procedure.",
+      "sentence": "Alle breve ___ med en dags forsinkelse.",
+      "options": [
+        "blev sendt",
+        "er sendt",
+        "sendes",
+        "sender"
+      ],
+      "correct": "sendes",
+      "accepted_answers": [
+        "sendes",
+        "bliver sendt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "moedet-holdes-hver-mandag-klokken-ni",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Sådan foregår det hos os.",
+      "sentence": "Mødet ___ hver mandag klokken ni.",
+      "options": [
+        "holder",
+        "blev holdt",
+        "er holdt",
+        "holdes"
+      ],
+      "correct": "holdes",
+      "accepted_answers": [
+        "holdes",
+        "bliver holdt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "proeverne-afholdes-i-maj",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Skolens faste plan.",
+      "sentence": "Prøverne ___ i maj.",
+      "options": [
+        "blev afholdt",
+        "afholder",
+        "afholdes",
+        "er afholdt"
+      ],
+      "correct": "afholdes",
+      "accepted_answers": [
+        "afholdes",
+        "bliver afholdt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "kagen-bages-i-ovnen-i-tredive-minutter",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En opskrift.",
+      "sentence": "Kagen ___ i ovnen i tredive minutter.",
+      "options": [
+        "er bagt",
+        "bages",
+        "blev bagt",
+        "bager"
+      ],
+      "correct": "bages",
+      "accepted_answers": [
+        "bages",
+        "bliver bagt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "vinduerne-pudses-hver-fredag",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En fast rutine.",
+      "sentence": "Vinduerne ___ hver fredag.",
+      "options": [
+        "blev pudset",
+        "pudses",
+        "er pudset",
+        "pudser"
+      ],
+      "correct": "pudses",
+      "accepted_answers": [
+        "pudses",
+        "bliver pudset"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "regningerne-betales-den-foerste-i-hver-maaned",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Reglerne er faste.",
+      "sentence": "Regningerne ___ den første i hver måned.",
+      "options": [
+        "betaler",
+        "er betalt",
+        "betales",
+        "blev betalt"
+      ],
+      "correct": "betales",
+      "accepted_answers": [
+        "betales",
+        "bliver betalt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "juletraeet-pyntes-i-stuen-den-23-december",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er en tradition.",
+      "sentence": "Juletræet ___ i stuen den 23. december.",
+      "options": [
+        "er pyntet",
+        "blev pyntet",
+        "pyntes",
+        "pynter"
+      ],
+      "correct": "pyntes",
+      "accepted_answers": [
+        "pyntes",
+        "bliver pyntet"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "dyrene-fodres-to-gange-om-dagen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Sådan gøres det på gården.",
+      "sentence": "Dyrene ___ to gange om dagen.",
+      "options": [
+        "er fodret",
+        "fodres",
+        "blev fodret",
+        "fodrer"
+      ],
+      "correct": "fodres",
+      "accepted_answers": [
+        "fodres",
+        "bliver fodret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "postkasserne-toemmes-hver-dag-klokken-fire",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En fast rutine.",
+      "sentence": "Postkasserne ___ hver dag klokken fire.",
+      "options": [
+        "blev tømt",
+        "tømmer",
+        "tømmes",
+        "er tømt"
+      ],
+      "correct": "tømmes",
+      "accepted_answers": [
+        "tømmes",
+        "bliver tømt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "ansoegninger-indsendes-senest-den-1-marts",
+      "level": "C1",
+      "mode": "passive",
+      "context": "Formelt skrift.",
+      "sentence": "Ansøgninger ___ senest den 1. marts.",
+      "options": [
+        "blev indsendt",
+        "er indsendt",
+        "indsender",
+        "indsendes"
+      ],
+      "correct": "indsendes",
+      "accepted_answers": [
+        "indsendes",
+        "bliver indsendt"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "dokumenterne-opbevares-i-ti-aar",
+      "level": "C1",
+      "mode": "passive",
+      "context": "Reglerne for arkivet.",
+      "sentence": "Dokumenterne ___ i ti år.",
+      "options": [
+        "opbevares",
+        "blev opbevaret",
+        "er opbevaret",
+        "opbevarer"
+      ],
+      "correct": "opbevares",
+      "accepted_answers": [
+        "opbevares",
+        "bliver opbevaret"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "sagerne-behandles-i-den-raekkefoelge-de-modtages",
+      "level": "C1",
+      "mode": "passive",
+      "context": "En fast procedure.",
+      "sentence": "Sagerne ___ i den rækkefølge, de modtages.",
+      "options": [
+        "behandles",
+        "er behandlet",
+        "blev behandlet",
+        "behandler"
+      ],
+      "correct": "behandles",
+      "accepted_answers": [
+        "behandles",
+        "bliver behandlet"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "rapporten-skrives-hver-torsdag",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En fast arbejdsgang.",
+      "sentence": "Rapporten ___ hver torsdag.",
+      "options": [
+        "blev skrevet",
+        "er skrevet",
+        "skriver",
+        "skrives"
+      ],
+      "correct": "skrives",
+      "accepted_answers": [
+        "skrives",
+        "bliver skrevet"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "alle-gaester-modtages-ved-indgangen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Regler for besøg.",
+      "sentence": "Alle gæster ___ ved indgangen.",
+      "options": [
+        "modtager",
+        "blev modtaget",
+        "modtages",
+        "er modtaget"
+      ],
+      "correct": "modtages",
+      "accepted_answers": [
+        "modtages",
+        "bliver modtaget"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "filtrene-skiftes-hver-tredje-maaned",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det står i brugsanvisningen.",
+      "sentence": "Filtrene ___ hver tredje måned.",
+      "options": [
+        "skiftes",
+        "blev skiftet",
+        "er skiftet",
+        "skifter"
+      ],
+      "correct": "skiftes",
+      "accepted_answers": [
+        "skiftes",
+        "bliver skiftet"
+      ],
+      "note": "S-passiv passer til faste regler, procedurer og generelle beskrivelser uden en bestemt person."
+    },
+    {
+      "id": "doeren-er-laast-saa-jeg-kan-ikke-komme-ind",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du står foran døren og kan ikke komme ind.",
+      "sentence": "Døren ___ , så jeg kan ikke komme ind.",
+      "options": [
+        "er låst",
+        "låser",
+        "blev låst",
+        "låses"
+      ],
+      "correct": "er låst",
+      "accepted_answers": [
+        "er låst"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "se-huset-er-malet-nu-saa-i-kan-flytte-ind",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det er færdigt, og I kan flytte ind.",
+      "sentence": "Se, huset ___ nu, så I kan flytte ind.",
+      "options": [
+        "maler",
+        "males",
+        "bliver malet",
+        "er malet"
+      ],
+      "correct": "er malet",
+      "accepted_answers": [
+        "er malet"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "bordet-er-daekket-allerede-saa-vi-kan-spise",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger på resultatet.",
+      "sentence": "Bordet ___ allerede, så vi kan spise.",
+      "options": [
+        "bliver dækket",
+        "dækker",
+        "dækkes",
+        "er dækket"
+      ],
+      "correct": "er dækket",
+      "accepted_answers": [
+        "er dækket"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "butikken-er-lukket-saa-vi-maa-komme-tilbage-i-morgen",
+      "level": "A2",
+      "mode": "passive",
+      "context": "Du står foran butikken.",
+      "sentence": "Butikken ___ , så vi må komme tilbage i morgen.",
+      "options": [
+        "er lukket",
+        "lukkes",
+        "lukker",
+        "bliver lukket"
+      ],
+      "correct": "er lukket",
+      "accepted_answers": [
+        "er lukket"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "alle-vinduer-er-aabnet-saa-der-kommer-kold-luft-ind",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger ind i rummet.",
+      "sentence": "Alle vinduer ___ , så der kommer kold luft ind.",
+      "options": [
+        "åbner",
+        "bliver åbnet",
+        "åbnes",
+        "er åbnet"
+      ],
+      "correct": "er åbnet",
+      "accepted_answers": [
+        "er åbnet"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "alle-opgaver-er-loest-nu-og-vi-kan-gaa-hjem",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kontrollerer listen.",
+      "sentence": "Alle opgaver ___ nu, og vi kan gå hjem.",
+      "options": [
+        "bliver løst",
+        "løser",
+        "løses",
+        "er løst"
+      ],
+      "correct": "er løst",
+      "accepted_answers": [
+        "er løst"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "bilen-er-repareret-nu-og-den-koerer-igen",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger på bilen.",
+      "sentence": "Bilen ___ nu, og den kører igen.",
+      "options": [
+        "reparerer",
+        "repareres",
+        "er repareret",
+        "bliver repareret"
+      ],
+      "correct": "er repareret",
+      "accepted_answers": [
+        "er repareret"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "regningen-er-betalt-allerede-saa-du-behoever-ikke-at",
+      "level": "A2",
+      "mode": "passive",
+      "context": "Du tjekker, om det er sket.",
+      "sentence": "Regningen ___ allerede, så du behøver ikke at gøre mere.",
+      "options": [
+        "betaler",
+        "bliver betalt",
+        "betales",
+        "er betalt"
+      ],
+      "correct": "er betalt",
+      "accepted_answers": [
+        "er betalt"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "alle-stole-er-stillet-op-og-vi-er-klar-til-at-starte",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger ind i lokalet.",
+      "sentence": "Alle stole ___ , og vi er klar til at starte.",
+      "options": [
+        "bliver stillet op",
+        "er stillet op",
+        "stiller op",
+        "stilles op"
+      ],
+      "correct": "er stillet op",
+      "accepted_answers": [
+        "er stillet op"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "bogen-er-udsolgt-ikke-laengere-saa-vi-kan-ikke-bestille",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du læser i kataloget.",
+      "sentence": "Bogen ___ ikke længere, så vi kan ikke bestille den.",
+      "options": [
+        "udsælges",
+        "bliver udsolgt",
+        "udsælger",
+        "er udsolgt"
+      ],
+      "correct": "er udsolgt",
+      "accepted_answers": [
+        "er udsolgt"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "kagen-er-bagt-nu-saa-vi-kan-saette-lys-i",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger på kagen.",
+      "sentence": "Kagen ___ nu, så vi kan sætte lys i.",
+      "options": [
+        "bages",
+        "er bagt",
+        "bager",
+        "bliver bagt"
+      ],
+      "correct": "er bagt",
+      "accepted_answers": [
+        "er bagt"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "aftalen-er-indgaaet-nu-saa-alt-er-paa-plads",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du læser en pressemeddelelse.",
+      "sentence": "Aftalen ___ nu, så alt er på plads.",
+      "options": [
+        "indgås",
+        "er indgået",
+        "bliver indgået",
+        "indgår"
+      ],
+      "correct": "er indgået",
+      "accepted_answers": [
+        "er indgået"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "boghandlen-var-lukket-allerede-da-vi-kom",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Da I kom, var det allerede sket.",
+      "sentence": "Boghandlen ___ allerede, da vi kom.",
+      "options": [
+        "er lukket",
+        "blev lukket",
+        "lukkede",
+        "var lukket"
+      ],
+      "correct": "var lukket",
+      "accepted_answers": [
+        "var lukket"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "bordet-var-daekket-allerede-da-gaesterne-kom",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om i går.",
+      "sentence": "Bordet ___ allerede, da gæsterne kom.",
+      "options": [
+        "blev dækket",
+        "dækkede",
+        "var dækket",
+        "er dækket"
+      ],
+      "correct": "var dækket",
+      "accepted_answers": [
+        "var dækket"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "alle-billetterne-var-solgt-allerede-da-vi-kom-til-kassen",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om en billetsalg.",
+      "sentence": "Alle billetterne ___ allerede, da vi kom til kassen.",
+      "options": [
+        "blev solgt",
+        "solgte",
+        "er solgt",
+        "var solgt"
+      ],
+      "correct": "var solgt",
+      "accepted_answers": [
+        "var solgt"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "maden-var-spist-allerede-da-jeg-kom",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du kom for sent til festen.",
+      "sentence": "Maden ___ allerede, da jeg kom.",
+      "options": [
+        "blev spist",
+        "var spist",
+        "spiste",
+        "er spist"
+      ],
+      "correct": "var spist",
+      "accepted_answers": [
+        "var spist"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "huset-var-malet-allerede-da-vi-kom",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det var gjort, før I kom.",
+      "sentence": "Huset ___ allerede, da vi kom.",
+      "options": [
+        "malede",
+        "var malet",
+        "blev malet",
+        "er malet"
+      ],
+      "correct": "var malet",
+      "accepted_answers": [
+        "var malet"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "koncerten-var-udsolgt-allerede-da-vi-ringede",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du ringede for sent.",
+      "sentence": "Koncerten ___ allerede, da vi ringede.",
+      "options": [
+        "blev udsolgt",
+        "var udsolgt",
+        "udsolgte",
+        "er udsolgt"
+      ],
+      "correct": "var udsolgt",
+      "accepted_answers": [
+        "var udsolgt"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "vinduerne-var-lukket-allerede-da-jeg-kom-hjem",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kom hjem sent.",
+      "sentence": "Vinduerne ___ allerede, da jeg kom hjem.",
+      "options": [
+        "er lukket",
+        "var lukket",
+        "blev lukket",
+        "lukkede"
+      ],
+      "correct": "var lukket",
+      "accepted_answers": [
+        "var lukket"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "doeren-var-laast-allerede-da-vi-naaede-frem",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kom for sent.",
+      "sentence": "Døren ___ allerede, da vi nåede frem.",
+      "options": [
+        "var låst",
+        "blev låst",
+        "låste",
+        "er låst"
+      ],
+      "correct": "var låst",
+      "accepted_answers": [
+        "var låst"
+      ],
+      "note": "Var + participium beskriver en tilstand, der allerede var opnået på det tidspunkt."
+    },
+    {
+      "id": "huset-blev-bygget-af-en-kendt-arkitekt-i-1920",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i 1920.",
+      "sentence": "Huset ___ af en kendt arkitekt i 1920.",
+      "options": [
+        "bliver bygget",
+        "bygges",
+        "byggede",
+        "blev bygget"
+      ],
+      "correct": "blev bygget",
+      "accepted_answers": [
+        "blev bygget"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "cyklen-blev-stjaalet-fra-gaarden-i-nat",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i nat.",
+      "sentence": "Cyklen ___ fra gården i nat.",
+      "options": [
+        "blev stjålet",
+        "bliver stjålet",
+        "stjal",
+        "stjæles"
+      ],
+      "correct": "blev stjålet",
+      "accepted_answers": [
+        "blev stjålet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "han-blev-valgt-til-formand-ved-moedet-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om et valg i går.",
+      "sentence": "Han ___ til formand ved mødet i går.",
+      "options": [
+        "bliver valgt",
+        "valgte",
+        "blev valgt",
+        "vælges"
+      ],
+      "correct": "blev valgt",
+      "accepted_answers": [
+        "blev valgt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "noeglen-blev-fundet-af-en-nabo-for-en-uge-siden",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete for en uge siden.",
+      "sentence": "Nøglen ___ af en nabo for en uge siden.",
+      "options": [
+        "findes",
+        "bliver fundet",
+        "fandt",
+        "blev fundet"
+      ],
+      "correct": "blev fundet",
+      "accepted_answers": [
+        "blev fundet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "skolen-blev-lukket-af-kommunen-sidste-aar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det var sidste år.",
+      "sentence": "Skolen ___ af kommunen sidste år.",
+      "options": [
+        "lukkes",
+        "blev lukket",
+        "bliver lukket",
+        "lukkede"
+      ],
+      "correct": "blev lukket",
+      "accepted_answers": [
+        "blev lukket"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "brevet-blev-sendt-med-posten-i-morges",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i morges.",
+      "sentence": "Brevet ___ med posten i morges.",
+      "options": [
+        "bliver sendt",
+        "sendte",
+        "sendes",
+        "blev sendt"
+      ],
+      "correct": "blev sendt",
+      "accepted_answers": [
+        "blev sendt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "broen-blev-oedelagt-af-tyskerne-under-krigen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det var under krigen.",
+      "sentence": "Broen ___ af tyskerne under krigen.",
+      "options": [
+        "ødelægges",
+        "bliver ødelagt",
+        "ødelagde",
+        "blev ødelagt"
+      ],
+      "correct": "blev ødelagt",
+      "accepted_answers": [
+        "blev ødelagt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "prisen-blev-givet-til-en-ung-forfatter-i-2015",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete i 2015.",
+      "sentence": "Prisen ___ til en ung forfatter i 2015.",
+      "options": [
+        "bliver givet",
+        "gav",
+        "blev givet",
+        "gives"
+      ],
+      "correct": "blev givet",
+      "accepted_answers": [
+        "blev givet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "vinduet-blev-knust-af-en-bold-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i går.",
+      "sentence": "Vinduet ___ af en bold i går.",
+      "options": [
+        "blev knust",
+        "knuste",
+        "knuses",
+        "bliver knust"
+      ],
+      "correct": "blev knust",
+      "accepted_answers": [
+        "blev knust"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "bogen-blev-skrevet-af-hende-i-2010",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om en bog.",
+      "sentence": "Bogen ___ af hende i 2010.",
+      "options": [
+        "bliver skrevet",
+        "skrev",
+        "skrives",
+        "blev skrevet"
+      ],
+      "correct": "blev skrevet",
+      "accepted_answers": [
+        "blev skrevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "moedet-blev-aflyst-i-fredags-paa-grund-af-sygdom",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i fredags.",
+      "sentence": "Mødet ___ i fredags på grund af sygdom.",
+      "options": [
+        "aflyste",
+        "blev aflyst",
+        "bliver aflyst",
+        "aflyses"
+      ],
+      "correct": "blev aflyst",
+      "accepted_answers": [
+        "blev aflyst"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "teatret-blev-renoveret-for-ti-aar-siden",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det var for ti år siden.",
+      "sentence": "Teatret ___ for ti år siden.",
+      "options": [
+        "blev renoveret",
+        "renoverede",
+        "bliver renoveret",
+        "renoveres"
+      ],
+      "correct": "blev renoveret",
+      "accepted_answers": [
+        "blev renoveret"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "hele-huset-blev-malet-af-to-malere-i-sommer",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det var i sommer.",
+      "sentence": "Hele huset ___ af to malere i sommer.",
+      "options": [
+        "blev malet",
+        "bliver malet",
+        "males",
+        "malede"
+      ],
+      "correct": "blev malet",
+      "accepted_answers": [
+        "blev malet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "alle-vinduerne-blev-pudset-af-pedellen-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i går.",
+      "sentence": "Alle vinduerne ___ af pedellen i går.",
+      "options": [
+        "pudses",
+        "pudsede",
+        "blev pudset",
+        "bliver pudset"
+      ],
+      "correct": "blev pudset",
+      "accepted_answers": [
+        "blev pudset"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "bagagen-blev-stjaalet-paa-vej-til-hotellet",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete under rejsen.",
+      "sentence": "Bagagen ___ på vej til hotellet.",
+      "options": [
+        "blev stjålet",
+        "stjal",
+        "stjæles",
+        "bliver stjålet"
+      ],
+      "correct": "blev stjålet",
+      "accepted_answers": [
+        "blev stjålet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "vi-blev-inviteret-til-festen-af-vores-naboer",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om festen i går.",
+      "sentence": "Vi ___ til festen af vores naboer.",
+      "options": [
+        "inviteres",
+        "bliver inviteret",
+        "blev inviteret",
+        "inviterede"
+      ],
+      "correct": "blev inviteret",
+      "accepted_answers": [
+        "blev inviteret"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "filmen-blev-rost-af-mange-kritikere-sidste-aar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det var sidste år.",
+      "sentence": "Filmen ___ af mange kritikere sidste år.",
+      "options": [
+        "blev rost",
+        "bliver rost",
+        "roses",
+        "roste"
+      ],
+      "correct": "blev rost",
+      "accepted_answers": [
+        "blev rost"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "byen-blev-oedelagt-af-en-stor-brand-i-1728",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det var i 1728.",
+      "sentence": "Byen ___ af en stor brand i 1728.",
+      "options": [
+        "blev ødelagt",
+        "ødelægges",
+        "ødelagde",
+        "bliver ødelagt"
+      ],
+      "correct": "blev ødelagt",
+      "accepted_answers": [
+        "blev ødelagt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "min-telefon-blev-stjaalet-af-en-tyv-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i går.",
+      "sentence": "Min telefon ___ af en tyv i går.",
+      "options": [
+        "blev stjålet",
+        "bliver stjålet",
+        "stjæles",
+        "stjal"
+      ],
+      "correct": "blev stjålet",
+      "accepted_answers": [
+        "blev stjålet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "vejen-blev-repareret-i-foraaret",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i foråret.",
+      "sentence": "Vejen ___ i foråret.",
+      "options": [
+        "repareres",
+        "reparerede",
+        "bliver repareret",
+        "blev repareret"
+      ],
+      "correct": "blev repareret",
+      "accepted_answers": [
+        "blev repareret"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "alle-ansoegninger-blev-behandlet-i-sidste-uge",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete i sidste uge.",
+      "sentence": "Alle ansøgninger ___ i sidste uge.",
+      "options": [
+        "behandlede",
+        "bliver behandlet",
+        "behandles",
+        "blev behandlet"
+      ],
+      "correct": "blev behandlet",
+      "accepted_answers": [
+        "blev behandlet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "kagen-blev-bagt-af-boernene-i-loerdags",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i lørdags.",
+      "sentence": "Kagen ___ af børnene i lørdags.",
+      "options": [
+        "bages",
+        "bagte",
+        "blev bagt",
+        "bliver bagt"
+      ],
+      "correct": "blev bagt",
+      "accepted_answers": [
+        "blev bagt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "sagen-blev-afgjort-i-retten-i-2019",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete i 2019.",
+      "sentence": "Sagen ___ i retten i 2019.",
+      "options": [
+        "afgjorde",
+        "blev afgjort",
+        "bliver afgjort",
+        "afgøres"
+      ],
+      "correct": "blev afgjort",
+      "accepted_answers": [
+        "blev afgjort"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "hendes-bog-blev-oversat-til-tyve-sprog",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det er sket for mange år siden.",
+      "sentence": "Hendes bog ___ til tyve sprog.",
+      "options": [
+        "bliver oversat",
+        "oversatte",
+        "blev oversat",
+        "oversættes"
+      ],
+      "correct": "blev oversat",
+      "accepted_answers": [
+        "blev oversat"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "hun-blev-paakoert-af-en-bil-paa-vej-hjem-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i går.",
+      "sentence": "Hun ___ af en bil på vej hjem i går.",
+      "options": [
+        "påkørte",
+        "påkøres",
+        "blev påkørt",
+        "bliver påkørt"
+      ],
+      "correct": "blev påkørt",
+      "accepted_answers": [
+        "blev påkørt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "han-blev-doemt-for-tyveri-sidste-aar",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete sidste år.",
+      "sentence": "Han ___ for tyveri sidste år.",
+      "options": [
+        "dømmes",
+        "bliver dømt",
+        "blev dømt",
+        "dømte"
+      ],
+      "correct": "blev dømt",
+      "accepted_answers": [
+        "blev dømt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "boernene-blev-hentet-fra-skole-af-deres-far",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i går.",
+      "sentence": "Børnene ___ fra skole af deres far.",
+      "options": [
+        "bliver hentet",
+        "hentede",
+        "hentes",
+        "blev hentet"
+      ],
+      "correct": "blev hentet",
+      "accepted_answers": [
+        "blev hentet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "en-gammel-moent-blev-fundet-i-haven-under-udgravningen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete under udgravningen.",
+      "sentence": "En gammel mønt ___ i haven under udgravningen.",
+      "options": [
+        "findes",
+        "fandt",
+        "blev fundet",
+        "bliver fundet"
+      ],
+      "correct": "blev fundet",
+      "accepted_answers": [
+        "blev fundet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "nyheden-blev-meddelt-til-alle-i-sidste-uge",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i sidste uge.",
+      "sentence": "Nyheden ___ til alle i sidste uge.",
+      "options": [
+        "meddeles",
+        "blev meddelt",
+        "bliver meddelt",
+        "meddelte"
+      ],
+      "correct": "blev meddelt",
+      "accepted_answers": [
+        "blev meddelt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "doeren-bliver-aabnet-af-vagten-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det foregår lige nu.",
+      "sentence": "Døren ___ af vagten lige nu.",
+      "options": [
+        "er åbnet",
+        "åbner",
+        "bliver åbnet",
+        "blev åbnet"
+      ],
+      "correct": "bliver åbnet",
+      "accepted_answers": [
+        "bliver åbnet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "gaden-bliver-renset-af-arbejdere-i-oejeblikket",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger på gaden.",
+      "sentence": "Gaden ___ af arbejdere i øjeblikket.",
+      "options": [
+        "renser",
+        "er renset",
+        "bliver renset",
+        "blev renset"
+      ],
+      "correct": "bliver renset",
+      "accepted_answers": [
+        "bliver renset"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "huset-bliver-malet-af-to-malere-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du ser på huset.",
+      "sentence": "Huset ___ af to malere lige nu.",
+      "options": [
+        "blev malet",
+        "bliver malet",
+        "maler",
+        "er malet"
+      ],
+      "correct": "bliver malet",
+      "accepted_answers": [
+        "bliver malet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "min-mor-bliver-opereret-af-en-kendt-laege-i-oejeblikket",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du ringer fra hospitalet.",
+      "sentence": "Min mor ___ af en kendt læge i øjeblikket.",
+      "options": [
+        "blev opereret",
+        "er opereret",
+        "bliver opereret",
+        "opererer"
+      ],
+      "correct": "bliver opereret",
+      "accepted_answers": [
+        "bliver opereret"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "alle-bagagerne-bliver-kontrolleret-af-sikkerhedsvagterne",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det foregår nu.",
+      "sentence": "Alle bagagerne ___ af sikkerhedsvagterne.",
+      "options": [
+        "er kontrolleret",
+        "kontrollerer",
+        "blev kontrolleret",
+        "bliver kontrolleret"
+      ],
+      "correct": "bliver kontrolleret",
+      "accepted_answers": [
+        "bliver kontrolleret"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "maden-bliver-lavet-af-kokken-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er i køkkenet.",
+      "sentence": "Maden ___ af kokken lige nu.",
+      "options": [
+        "laver",
+        "blev lavet",
+        "bliver lavet",
+        "er lavet"
+      ],
+      "correct": "bliver lavet",
+      "accepted_answers": [
+        "bliver lavet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "rapporten-bliver-skrevet-i-oejeblikket-af-to-kolleger",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du ser rapporten.",
+      "sentence": "Rapporten ___ i øjeblikket af to kolleger.",
+      "options": [
+        "skriver",
+        "bliver skrevet",
+        "er skrevet",
+        "blev skrevet"
+      ],
+      "correct": "bliver skrevet",
+      "accepted_answers": [
+        "bliver skrevet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "varerne-bliver-baaret-ind-i-butikken-af-to-maend",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du ser en flyttemand.",
+      "sentence": "Varerne ___ ind i butikken af to mænd.",
+      "options": [
+        "bærer",
+        "blev båret",
+        "er båret",
+        "bliver båret"
+      ],
+      "correct": "bliver båret",
+      "accepted_answers": [
+        "bliver båret"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "patienten-bliver-undersoegt-af-to-sygeplejersker-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er på hospitalet.",
+      "sentence": "Patienten ___ af to sygeplejersker lige nu.",
+      "options": [
+        "er undersøgt",
+        "blev undersøgt",
+        "undersøger",
+        "bliver undersøgt"
+      ],
+      "correct": "bliver undersøgt",
+      "accepted_answers": [
+        "bliver undersøgt"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "boernene-bliver-kaldt-ind-af-laereren-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er i skolegården.",
+      "sentence": "Børnene ___ ind af læreren lige nu.",
+      "options": [
+        "kalder",
+        "bliver kaldt",
+        "er kaldt",
+        "blev kaldt"
+      ],
+      "correct": "bliver kaldt",
+      "accepted_answers": [
+        "bliver kaldt"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "pengene-bliver-sendt-til-danmark-lige-nu",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det sker nu.",
+      "sentence": "Pengene ___ til Danmark lige nu.",
+      "options": [
+        "blev sendt",
+        "er sendt",
+        "bliver sendt",
+        "sender"
+      ],
+      "correct": "bliver sendt",
+      "accepted_answers": [
+        "bliver sendt"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "haven-bliver-vandet-af-naboen-i-oejeblikket",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger ud.",
+      "sentence": "Haven ___ af naboen i øjeblikket.",
+      "options": [
+        "bliver vandet",
+        "er vandet",
+        "vander",
+        "blev vandet"
+      ],
+      "correct": "bliver vandet",
+      "accepted_answers": [
+        "bliver vandet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu.",
+      "verify": true
+    },
+    {
+      "id": "kampen-bliver-set-af-mange-mennesker-i-oejeblikket",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du ser tv.",
+      "sentence": "Kampen ___ af mange mennesker i øjeblikket.",
+      "options": [
+        "er set",
+        "blev set",
+        "ser",
+        "bliver set"
+      ],
+      "correct": "bliver set",
+      "accepted_answers": [
+        "bliver set"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "bilen-bliver-stoppet-af-politiet",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det sker lige nu.",
+      "sentence": "Bilen ___ af politiet.",
+      "options": [
+        "stopper",
+        "bliver stoppet",
+        "er stoppet",
+        "blev stoppet"
+      ],
+      "correct": "bliver stoppet",
+      "accepted_answers": [
+        "bliver stoppet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "demonstrationerne-bliver-overvaaget-af-politiet-i",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du ser en demonstration.",
+      "sentence": "Demonstrationerne ___ af politiet i øjeblikket.",
+      "options": [
+        "blev overvåget",
+        "overvåger",
+        "er overvåget",
+        "bliver overvåget"
+      ],
+      "correct": "bliver overvåget",
+      "accepted_answers": [
+        "bliver overvåget"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "min-cykel-bliver-repareret-i-oejeblikket",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det foregår nu.",
+      "sentence": "Min cykel ___ i øjeblikket.",
+      "options": [
+        "reparerer",
+        "er repareret",
+        "bliver repareret",
+        "blev repareret"
+      ],
+      "correct": "bliver repareret",
+      "accepted_answers": [
+        "bliver repareret"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "vi-bliver-omringet-af-en-stor-gruppe-turister-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det sker i dag.",
+      "sentence": "Vi ___ af en stor gruppe turister lige nu.",
+      "options": [
+        "blev omringet",
+        "omringer",
+        "bliver omringet",
+        "er omringet"
+      ],
+      "correct": "bliver omringet",
+      "accepted_answers": [
+        "bliver omringet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "hendes-navn-bliver-kaldt-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du hører en høj stemme.",
+      "sentence": "Hendes navn ___ lige nu.",
+      "options": [
+        "bliver kaldt",
+        "er kaldt",
+        "blev kaldt",
+        "kalder"
+      ],
+      "correct": "bliver kaldt",
+      "accepted_answers": [
+        "bliver kaldt"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "cyklerne-bliver-samlet-af-cykelsmeden",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er på værkstedet.",
+      "sentence": "Cyklerne ___ af cykelsmeden.",
+      "options": [
+        "samler",
+        "bliver samlet",
+        "blev samlet",
+        "er samlet"
+      ],
+      "correct": "bliver samlet",
+      "accepted_answers": [
+        "bliver samlet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "musikken-bliver-spillet-af-et-orkester-lige-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er til fest.",
+      "sentence": "Musikken ___ af et orkester lige nu.",
+      "options": [
+        "bliver spillet",
+        "er spillet",
+        "spiller",
+        "blev spillet"
+      ],
+      "correct": "bliver spillet",
+      "accepted_answers": [
+        "bliver spillet"
+      ],
+      "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
+    },
+    {
+      "id": "der-blev-danset-til-langt-ud-paa-natten",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en fest i går.",
+      "sentence": "Der ___ til langt ud på natten.",
+      "options": [
+        "blev danset",
+        "danses",
+        "dansede",
+        "bliver danset"
+      ],
+      "correct": "blev danset",
+      "accepted_answers": [
+        "blev danset"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-drukket-meget-til-festen-i-gaar",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en fest i går.",
+      "sentence": "Der ___ meget til festen i går.",
+      "options": [
+        "drikkes",
+        "drak",
+        "bliver drukket",
+        "blev drukket"
+      ],
+      "correct": "blev drukket",
+      "accepted_answers": [
+        "blev drukket"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-klappet-da-hun-kom-ind",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en koncert i går.",
+      "sentence": "Der ___ , da hun kom ind.",
+      "options": [
+        "blev klappet",
+        "klappes",
+        "bliver klappet",
+        "klappede"
+      ],
+      "correct": "blev klappet",
+      "accepted_answers": [
+        "blev klappet"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-spist-og-drukket-hele-aftenen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en fest.",
+      "sentence": "Der ___ hele aftenen.",
+      "options": [
+        "bliver spist og drukket",
+        "spiste og drak",
+        "spises og drikkes",
+        "blev spist og drukket"
+      ],
+      "correct": "blev spist og drukket",
+      "accepted_answers": [
+        "blev spist og drukket"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-ventet-i-flere-timer",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en lang dag.",
+      "sentence": "Der ___ i flere timer.",
+      "options": [
+        "ventes",
+        "blev ventet",
+        "bliver ventet",
+        "ventede"
+      ],
+      "correct": "blev ventet",
+      "accepted_answers": [
+        "blev ventet"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-talt-meget-om-hende",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om et møde i går.",
+      "sentence": "Der ___ meget om hende.",
+      "options": [
+        "bliver talt",
+        "talte",
+        "tales",
+        "blev talt"
+      ],
+      "correct": "blev talt",
+      "accepted_answers": [
+        "blev talt"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-sunget-i-kirken-i-soendags",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en gudstjeneste.",
+      "sentence": "Der ___ i kirken i søndags.",
+      "options": [
+        "bliver sunget",
+        "blev sunget",
+        "sang",
+        "synges"
+      ],
+      "correct": "blev sunget",
+      "accepted_answers": [
+        "blev sunget"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-raabt-og-skreget-hele-kampen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en kamp.",
+      "sentence": "Der ___ og skreget hele kampen.",
+      "options": [
+        "råbte",
+        "blev råbt",
+        "bliver råbt",
+        "råbes"
+      ],
+      "correct": "blev råbt",
+      "accepted_answers": [
+        "blev råbt"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-arbejdet-hele-natten-paa-byggepladsen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om natten.",
+      "sentence": "Der ___ hele natten på byggepladsen.",
+      "options": [
+        "arbejdes",
+        "bliver arbejdet",
+        "arbejdede",
+        "blev arbejdet"
+      ],
+      "correct": "blev arbejdet",
+      "accepted_answers": [
+        "blev arbejdet"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-festet-til-langt-ud-paa-morgenen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en fest.",
+      "sentence": "Der ___ til langt ud på morgenen.",
+      "options": [
+        "blev festet",
+        "bliver festet",
+        "festede",
+        "festes"
+      ],
+      "correct": "blev festet",
+      "accepted_answers": [
+        "blev festet"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset.",
+      "verify": true
+    },
+    {
+      "id": "der-blev-lagt-blomster-ved-monumentet",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om et mindesmærke.",
+      "sentence": "Der ___ blomster ved monumentet.",
+      "options": [
+        "bliver lagt",
+        "lægges",
+        "lagde",
+        "blev lagt"
+      ],
+      "correct": "blev lagt",
+      "accepted_answers": [
+        "blev lagt"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-blev-handlet-hurtigt-og-alle-blev-reddet",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en ulykke.",
+      "sentence": "Der ___ hurtigt, og alle blev reddet.",
+      "options": [
+        "handlede",
+        "bliver handlet",
+        "blev handlet",
+        "handles"
+      ],
+      "correct": "blev handlet",
+      "accepted_answers": [
+        "blev handlet"
+      ],
+      "note": "I upersonlig passiv står der som formelt subjekt: Der blev danset."
+    },
+    {
+      "id": "der-tales-dansk-her",
+      "level": "A2",
+      "mode": "passive",
+      "context": "Det er en regel her.",
+      "sentence": "Der ___ dansk her.",
+      "options": [
+        "taler",
+        "blev talt",
+        "tales",
+        "talte"
+      ],
+      "correct": "tales",
+      "accepted_answers": [
+        "tales",
+        "bliver talt"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-drikkes-meget-kaffe-i-danmark",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder altid.",
+      "sentence": "Der ___ meget kaffe i Danmark.",
+      "options": [
+        "drikkes",
+        "drak",
+        "drikker",
+        "blev drukket"
+      ],
+      "correct": "drikkes",
+      "accepted_answers": [
+        "drikkes",
+        "bliver drukket"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-serveres-vin-til-maden",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En restaurant.",
+      "sentence": "Der ___ vin til maden.",
+      "options": [
+        "serverer",
+        "blev serveret",
+        "serverede",
+        "serveres"
+      ],
+      "correct": "serveres",
+      "accepted_answers": [
+        "serveres",
+        "bliver serveret"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-synges-hver-soendag-i-kirken",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En kirke.",
+      "sentence": "Der ___ hver søndag i kirken.",
+      "options": [
+        "sang",
+        "synger",
+        "blev sunget",
+        "synges"
+      ],
+      "correct": "synges",
+      "accepted_answers": [
+        "synges",
+        "bliver sunget"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-betales-kun-med-kort-her",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Butikken accepterer ikke kontanter.",
+      "sentence": "Der ___ kun med kort her.",
+      "options": [
+        "betaler",
+        "betales",
+        "betalte",
+        "blev betalt"
+      ],
+      "correct": "betales",
+      "accepted_answers": [
+        "betales",
+        "bliver betalt"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-tales-meget-om-politik-ved-middagen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er et emne, folk diskuterer.",
+      "sentence": "Der ___ meget om politik ved middagen.",
+      "options": [
+        "talte",
+        "taler",
+        "blev talt",
+        "tales"
+      ],
+      "correct": "tales",
+      "accepted_answers": [
+        "tales",
+        "bliver talt"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-spises-klokken-seks-hjemme-hos-os",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er en vane.",
+      "sentence": "Der ___ klokken seks hjemme hos os.",
+      "options": [
+        "spiser",
+        "spises",
+        "blev spist",
+        "spiste"
+      ],
+      "correct": "spises",
+      "accepted_answers": [
+        "spises",
+        "bliver spist"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-arbejdes-hver-dag-paa-kontoret",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder altid.",
+      "sentence": "Der ___ hver dag på kontoret.",
+      "options": [
+        "arbejdes",
+        "blev arbejdet",
+        "arbejder",
+        "arbejdede"
+      ],
+      "correct": "arbejdes",
+      "accepted_answers": [
+        "arbejdes",
+        "bliver arbejdet"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "der-synges-og-danses-hele-aftenen-til-sankthans",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er en tradition.",
+      "sentence": "Der ___ og danses hele aftenen til sankthans.",
+      "options": [
+        "sang",
+        "synger",
+        "synges",
+        "blev sunget"
+      ],
+      "correct": "synges",
+      "accepted_answers": [
+        "synges",
+        "bliver sunget"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her.",
+      "verify": true
+    },
+    {
+      "id": "der-handles-mange-steder-i-byen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er en stor by.",
+      "sentence": "Der ___ mange steder i byen.",
+      "options": [
+        "handler",
+        "handles",
+        "handlede",
+        "blev handlet"
+      ],
+      "correct": "handles",
+      "accepted_answers": [
+        "handles",
+        "bliver handlet"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her.",
+      "verify": true
+    },
+    {
+      "id": "vagten-aabner-doeren-klokken-otte",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Vagten har et objekt.",
+      "sentence": "Vagten ___ døren klokken otte.",
+      "options": [
+        "bliver åbnet",
+        "åbnes",
+        "åbner",
+        "blev åbnet"
+      ],
+      "correct": "åbner",
+      "accepted_answers": [
+        "åbner"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "hun-skrev-brevet-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om i går.",
+      "sentence": "Hun ___ brevet i går.",
+      "options": [
+        "skrives",
+        "blev skrevet",
+        "skrev",
+        "bliver skrevet"
+      ],
+      "correct": "skrev",
+      "accepted_answers": [
+        "skrev"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "laereren-retter-opgaven-hver-dag",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om en lærer.",
+      "sentence": "Læreren ___ opgaven hver dag.",
+      "options": [
+        "bliver rettet",
+        "retter",
+        "rettes",
+        "blev rettet"
+      ],
+      "correct": "retter",
+      "accepted_answers": [
+        "retter"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "boernene-aabnede-vinduet-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om børnene.",
+      "sentence": "Børnene ___ vinduet i går.",
+      "options": [
+        "bliver åbnet",
+        "åbnes",
+        "åbnede",
+        "blev åbnet"
+      ],
+      "correct": "åbnede",
+      "accepted_answers": [
+        "åbnede"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "min-mor-laver-maden-hver-dag",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om din mor.",
+      "sentence": "Min mor ___ maden hver dag.",
+      "options": [
+        "laves",
+        "bliver lavet",
+        "blev lavet",
+        "laver"
+      ],
+      "correct": "laver",
+      "accepted_answers": [
+        "laver"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "politiet-anholdt-tyven-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om politiet.",
+      "sentence": "Politiet ___ tyven i går.",
+      "options": [
+        "bliver anholdt",
+        "anholdes",
+        "anholdt",
+        "blev anholdt"
+      ],
+      "correct": "anholdt",
+      "accepted_answers": [
+        "anholdt"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "direktoeren-traf-beslutningen-i-gaar",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om en beslutning.",
+      "sentence": "Direktøren ___ beslutningen i går.",
+      "options": [
+        "træffes",
+        "traf",
+        "blev truffet",
+        "bliver truffet"
+      ],
+      "correct": "traf",
+      "accepted_answers": [
+        "traf"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "kokken-tilbereder-maden-i-oejeblikket",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er i et køkken.",
+      "sentence": "Kokken ___ maden i øjeblikket.",
+      "options": [
+        "tilberedes",
+        "blev tilberedt",
+        "bliver tilberedt",
+        "tilbereder"
+      ],
+      "correct": "tilbereder",
+      "accepted_answers": [
+        "tilbereder"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "eleverne-afleverer-boegerne-hver-mandag",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om skolen.",
+      "sentence": "Eleverne ___ bøgerne hver mandag.",
+      "options": [
+        "afleverer",
+        "blev afleveret",
+        "bliver afleveret",
+        "afleveres"
+      ],
+      "correct": "afleverer",
+      "accepted_answers": [
+        "afleverer"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "firmaet-leverer-varerne-til-hele-landet",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om firmaet.",
+      "sentence": "Firmaet ___ varerne til hele landet.",
+      "options": [
+        "leverer",
+        "bliver leveret",
+        "blev leveret",
+        "leveres"
+      ],
+      "correct": "leverer",
+      "accepted_answers": [
+        "leverer"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "min-bror-vasker-bilen-hver-weekend",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om din bror.",
+      "sentence": "Min bror ___ bilen hver weekend.",
+      "options": [
+        "blev vasket",
+        "vasker",
+        "bliver vasket",
+        "vaskes"
+      ],
+      "correct": "vasker",
+      "accepted_answers": [
+        "vasker"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "vi-modtog-jeres-forslag-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om et forslag.",
+      "sentence": "Vi ___ jeres forslag i går.",
+      "options": [
+        "modtages",
+        "blev modtaget",
+        "bliver modtaget",
+        "modtog"
+      ],
+      "correct": "modtog",
+      "accepted_answers": [
+        "modtog"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "laegen-undersoeger-patienten-nu",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du er på hospitalet.",
+      "sentence": "Lægen ___ patienten nu.",
+      "options": [
+        "undersøger",
+        "blev undersøgt",
+        "undersøges",
+        "bliver undersøgt"
+      ],
+      "correct": "undersøger",
+      "accepted_answers": [
+        "undersøger"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "kommunen-indfoerer-nye-regler-fra-januar",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om kommunen.",
+      "sentence": "Kommunen ___ nye regler fra januar.",
+      "options": [
+        "indføres",
+        "bliver indført",
+        "indfører",
+        "blev indført"
+      ],
+      "correct": "indfører",
+      "accepted_answers": [
+        "indfører"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "hun-gav-sin-ven-en-gave-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om en gave.",
+      "sentence": "Hun ___ sin ven en gave i går.",
+      "options": [
+        "gav",
+        "bliver givet",
+        "gives",
+        "blev givet"
+      ],
+      "correct": "gav",
+      "accepted_answers": [
+        "gav"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "pedellen-fejer-trappen-hver-morgen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om pedellen.",
+      "sentence": "Pedellen ___ trappen hver morgen.",
+      "options": [
+        "fejes",
+        "bliver fejet",
+        "blev fejet",
+        "fejer"
+      ],
+      "correct": "fejer",
+      "accepted_answers": [
+        "fejer"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "vi-malede-huset-i-sommer",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om huset.",
+      "sentence": "Vi ___ huset i sommer.",
+      "options": [
+        "blev malet",
+        "bliver malet",
+        "males",
+        "malede"
+      ],
+      "correct": "malede",
+      "accepted_answers": [
+        "malede"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "journalisten-interviewede-ministeren-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om et interview.",
+      "sentence": "Journalisten ___ ministeren i går.",
+      "options": [
+        "interviewede",
+        "bliver interviewet",
+        "blev interviewet",
+        "interviewes"
+      ],
+      "correct": "interviewede",
+      "accepted_answers": [
+        "interviewede"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "kunderne-henter-varerne-selv",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om kunderne.",
+      "sentence": "Kunderne ___ varerne selv.",
+      "options": [
+        "henter",
+        "bliver hentet",
+        "hentes",
+        "blev hentet"
+      ],
+      "correct": "henter",
+      "accepted_answers": [
+        "henter"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "pigen-kastede-bolden-til-sin-ven",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om en pige.",
+      "sentence": "Pigen ___ bolden til sin ven.",
+      "options": [
+        "bliver kastet",
+        "kastede",
+        "kastes",
+        "blev kastet"
+      ],
+      "correct": "kastede",
+      "accepted_answers": [
+        "kastede"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "fuglene-ses-ofte-i-skoven",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Man kan opleve dem.",
+      "sentence": "Fuglene ___ ofte i skoven.",
+      "options": [
+        "blev set",
+        "er set",
+        "ser",
+        "ses"
+      ],
+      "correct": "ses",
+      "accepted_answers": [
+        "ses"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "bogen-faas-i-alle-boghandlere",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kan købe den.",
+      "sentence": "Bogen ___ i alle boghandlere.",
+      "options": [
+        "blev fået",
+        "er fået",
+        "får",
+        "fås"
+      ],
+      "correct": "fås",
+      "accepted_answers": [
+        "fås"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "der-findes-mange-slags-aebler-i-danmark",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om, hvad der findes.",
+      "sentence": "Der ___ mange slags æbler i Danmark.",
+      "options": [
+        "finder",
+        "blev fundet",
+        "findes"
+      ],
+      "correct": "findes",
+      "accepted_answers": [
+        "findes"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "vi-moedes-foran-biografen-i-morgen-kl-19",
+      "level": "A2",
+      "mode": "passive",
+      "context": "Du aftaler en tid.",
+      "sentence": "Vi ___ foran biografen i morgen kl. 19.",
+      "options": [
+        "mødes",
+        "er mødt",
+        "møder",
+        "blev mødt"
+      ],
+      "correct": "mødes",
+      "accepted_answers": [
+        "mødes"
+      ],
+      "note": "Nogle verber har s-form med gensidig eller fast betydning (mødes, ses, findes); det er ikke passiv."
+    },
+    {
+      "id": "vi-ses-i-morgen-klokken-ti",
+      "level": "A2",
+      "mode": "passive",
+      "context": "Du aftaler en tid.",
+      "sentence": "Vi ___ i morgen klokken ti.",
+      "options": [
+        "blev set",
+        "er set",
+        "ser",
+        "ses"
+      ],
+      "correct": "ses",
+      "accepted_answers": [
+        "ses"
+      ],
+      "note": "Nogle verber har s-form med gensidig eller fast betydning (mødes, ses, findes); det er ikke passiv."
+    },
+    {
+      "id": "musikken-hoeres-helt-hen-til-os",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du beskriver, hvad man kan høre.",
+      "sentence": "Musikken ___ helt hen til os.",
+      "options": [
+        "høres",
+        "blev hørt",
+        "hører",
+        "er hørt"
+      ],
+      "correct": "høres",
+      "accepted_answers": [
+        "høres"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "bjergene-ses-fra-hele-byen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Man kan se dem.",
+      "sentence": "Bjergene ___ fra hele byen.",
+      "options": [
+        "blev set",
+        "ser",
+        "ses",
+        "er set"
+      ],
+      "correct": "ses",
+      "accepted_answers": [
+        "ses"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "rapporten-skal-skrives-inden-fredag",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Der er en deadline.",
+      "sentence": "Rapporten skal ___ inden fredag.",
+      "options": [
+        "skrives",
+        "skrive",
+        "skriver",
+        "skrevet"
+      ],
+      "correct": "skrives",
+      "accepted_answers": [
+        "skrives",
+        "blive skrevet"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "bilen-skal-repareres-inden-synet",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Bilen skal til syn.",
+      "sentence": "Bilen skal ___ inden synet.",
+      "options": [
+        "reparerer",
+        "reparere",
+        "repareres",
+        "repareret"
+      ],
+      "correct": "repareres",
+      "accepted_answers": [
+        "repareres",
+        "blive repareret"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "toejet-skal-vaskes-ved-fyrre-grader",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En vaskeanvisning.",
+      "sentence": "Tøjet skal ___ ved fyrre grader.",
+      "options": [
+        "vaske",
+        "vasket",
+        "vaskes",
+        "vasker"
+      ],
+      "correct": "vaskes",
+      "accepted_answers": [
+        "vaskes",
+        "blive vasket"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "alle-regninger-skal-betales-senest-den-foerste",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En regel.",
+      "sentence": "Alle regninger skal ___ senest den første.",
+      "options": [
+        "betaler",
+        "betalt",
+        "betale",
+        "betales"
+      ],
+      "correct": "betales",
+      "accepted_answers": [
+        "betales",
+        "blive betalt"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes.",
+      "verify": true
+    },
+    {
+      "id": "kagen-skal-bages-i-en-time",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Opskriften siger det.",
+      "sentence": "Kagen skal ___ i en time.",
+      "options": [
+        "bagt",
+        "bager",
+        "bage",
+        "bages"
+      ],
+      "correct": "bages",
+      "accepted_answers": [
+        "bages",
+        "blive bagt"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "pakken-kan-afhentes-i-receptionen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Information på hjemmesiden.",
+      "sentence": "Pakken kan ___ i receptionen.",
+      "options": [
+        "afhente",
+        "afhentes",
+        "afhenter",
+        "afhentet"
+      ],
+      "correct": "afhentes",
+      "accepted_answers": [
+        "afhentes",
+        "blive afhentet"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "billetten-skal-vises-ved-indgangen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Reglen ved indgangen.",
+      "sentence": "Billetten skal ___ ved indgangen.",
+      "options": [
+        "vist",
+        "vises",
+        "vise",
+        "viser"
+      ],
+      "correct": "vises",
+      "accepted_answers": [
+        "vises",
+        "blive vist"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "dokumentet-kan-hentes-paa-nettet",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Informationen er på nettet.",
+      "sentence": "Dokumentet kan ___ på nettet.",
+      "options": [
+        "hente",
+        "henter",
+        "hentet",
+        "hentes"
+      ],
+      "correct": "hentes",
+      "accepted_answers": [
+        "hentes",
+        "blive hentet"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "opgaven-skal-afleveres-i-haanden",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En regel for eleverne.",
+      "sentence": "Opgaven skal ___ i hånden.",
+      "options": [
+        "afleveres",
+        "afleverer",
+        "afleveret",
+        "aflevere"
+      ],
+      "correct": "afleveres",
+      "accepted_answers": [
+        "afleveres",
+        "blive afleveret"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "doeren-maa-ikke-laases-op-efter-klokken-ti",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En regel i huset.",
+      "sentence": "Døren må ikke ___ efter klokken ti.",
+      "options": [
+        "låses op",
+        "låst op",
+        "låse op",
+        "låser op"
+      ],
+      "correct": "låses op",
+      "accepted_answers": [
+        "låses op",
+        "blive låst op"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes.",
+      "verify": true
+    },
+    {
+      "id": "taget-skal-males-inden-vinteren",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En gammel bygning.",
+      "sentence": "Taget skal ___ inden vinteren.",
+      "options": [
+        "maler",
+        "male",
+        "males",
+        "malet"
+      ],
+      "correct": "males",
+      "accepted_answers": [
+        "males",
+        "blive malet"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "varerne-kan-byttes-inden-for-fjorten-dage",
+      "level": "B2",
+      "mode": "passive",
+      "context": "En regel i butikken.",
+      "sentence": "Varerne kan ___ inden for fjorten dage.",
+      "options": [
+        "byttes",
+        "bytte",
+        "byttet",
+        "bytter"
+      ],
+      "correct": "byttes",
+      "accepted_answers": [
+        "byttes",
+        "blive byttet"
+      ],
+      "note": "Passiv i modalkonstruktion dannes med s-form: Døren skal åbnes."
+    },
+    {
+      "id": "mange-huse-er-blevet-revet-ned-siden-2020",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder fra 2020 og frem til nu.",
+      "sentence": "Mange huse ___ revet ned siden 2020.",
+      "options": [
+        "blev",
+        "er blevet",
+        "var",
+        "bliver"
+      ],
+      "correct": "er blevet",
+      "accepted_answers": [
+        "er blevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "over-tusind-mennesker-er-blevet-ramt-af-sygdommen-hidtil",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder indtil nu.",
+      "sentence": "Over tusind mennesker ___ ramt af sygdommen hidtil.",
+      "options": [
+        "var",
+        "bliver",
+        "blev",
+        "er blevet"
+      ],
+      "correct": "er blevet",
+      "accepted_answers": [
+        "er blevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "flere-veje-er-blevet-lukket-for-trafik-siden-stormen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder fra mandag og frem til nu.",
+      "sentence": "Flere veje ___ lukket for trafik, siden stormen begyndte.",
+      "options": [
+        "blev",
+        "var",
+        "bliver",
+        "er blevet"
+      ],
+      "correct": "er blevet",
+      "accepted_answers": [
+        "er blevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "mange-butikker-er-blevet-lukket-de-seneste-aar",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder de seneste år.",
+      "sentence": "Mange butikker ___ lukket de seneste år.",
+      "options": [
+        "var",
+        "er blevet",
+        "bliver",
+        "blev"
+      ],
+      "correct": "er blevet",
+      "accepted_answers": [
+        "er blevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "alle-gaester-er-blevet-informeret-siden-i-morges",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder siden i morges.",
+      "sentence": "Alle gæster ___ informeret siden i morges.",
+      "options": [
+        "var",
+        "blev",
+        "er blevet",
+        "bliver"
+      ],
+      "correct": "er blevet",
+      "accepted_answers": [
+        "er blevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "ingen-sager-er-blevet-afgjort-endnu",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det gælder indtil nu.",
+      "sentence": "Ingen sager ___ afgjort endnu.",
+      "options": [
+        "var",
+        "bliver",
+        "blev",
+        "er blevet"
+      ],
+      "correct": "er blevet",
+      "accepted_answers": [
+        "er blevet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "huset-er-bygget-nu-og-alle-moebler-er-koert-ind",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du står foran huset.",
+      "sentence": "Huset ___ nu, og alle møbler er kørt ind.",
+      "options": [
+        "bliver bygget",
+        "bygger",
+        "bygges",
+        "er bygget"
+      ],
+      "correct": "er bygget",
+      "accepted_answers": [
+        "er bygget"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "alle-tallerkener-er-vasket-allerede-og-de-staar-i-skabet",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger ind i køkkenet.",
+      "sentence": "Alle tallerkener ___ allerede, og de står i skabet.",
+      "options": [
+        "vaskes",
+        "vasker",
+        "bliver vasket",
+        "er vasket"
+      ],
+      "correct": "er vasket",
+      "accepted_answers": [
+        "er vasket"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "kufferten-er-pakket-allerede-og-den-staar-i-entreen",
+      "level": "A2",
+      "mode": "passive",
+      "context": "Du tjekker bagagen.",
+      "sentence": "Kufferten ___ allerede, og den står i entréen.",
+      "options": [
+        "pakkes",
+        "pakker",
+        "bliver pakket",
+        "er pakket"
+      ],
+      "correct": "er pakket",
+      "accepted_answers": [
+        "er pakket"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "cyklen-er-repareret-nu-og-den-koerer-fint",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger på cyklen.",
+      "sentence": "Cyklen ___ nu, og den kører fint.",
+      "options": [
+        "bliver repareret",
+        "reparerer",
+        "repareres",
+        "er repareret"
+      ],
+      "correct": "er repareret",
+      "accepted_answers": [
+        "er repareret"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "din-ansoegning-er-behandlet-allerede-og-du-har-faaet",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du læser i systemet.",
+      "sentence": "Din ansøgning ___ allerede, og du har fået svar.",
+      "options": [
+        "behandler",
+        "behandles",
+        "bliver behandlet",
+        "er behandlet"
+      ],
+      "correct": "er behandlet",
+      "accepted_answers": [
+        "er behandlet"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "alle-rapporterne-er-afleveret-nu-og-vi-kan-gaa-hjem",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du ser på ugens opgaver.",
+      "sentence": "Alle rapporterne ___ nu, og vi kan gå hjem.",
+      "options": [
+        "afleverer",
+        "bliver afleveret",
+        "er afleveret",
+        "afleveres"
+      ],
+      "correct": "er afleveret",
+      "accepted_answers": [
+        "er afleveret"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "gulvet-er-vasket-nu-saa-du-kan-gaa-ind",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du kigger på gulvet.",
+      "sentence": "Gulvet ___ nu, så du kan gå ind.",
+      "options": [
+        "er vasket",
+        "vaskes",
+        "vasker",
+        "bliver vasket"
+      ],
+      "correct": "er vasket",
+      "accepted_answers": [
+        "er vasket"
+      ],
+      "note": "Er + participium beskriver en tilstand som resultat af en handling."
+    },
+    {
+      "id": "hotellet-blev-solgt-af-en-ny-ejer-i-sommer",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i sommer.",
+      "sentence": "Hotellet ___ af en ny ejer i sommer.",
+      "options": [
+        "bliver solgt",
+        "solgte",
+        "sælges",
+        "blev solgt"
+      ],
+      "correct": "blev solgt",
+      "accepted_answers": [
+        "blev solgt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "kassen-blev-baaret-af-to-maend-i-morges",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i morges.",
+      "sentence": "Kassen ___ af to mænd i morges.",
+      "options": [
+        "blev båret",
+        "bliver båret",
+        "bæres",
+        "bar"
+      ],
+      "correct": "blev båret",
+      "accepted_answers": [
+        "blev båret"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "kirken-blev-ramt-af-en-bombe-under-krigen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete under krigen.",
+      "sentence": "Kirken ___ af en bombe under krigen.",
+      "options": [
+        "ramte",
+        "blev ramt",
+        "bliver ramt",
+        "rammes"
+      ],
+      "correct": "blev ramt",
+      "accepted_answers": [
+        "blev ramt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "pakken-blev-sendt-til-forkert-adresse-tidligere-i-dag",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i dag tidligere.",
+      "sentence": "Pakken ___ til forkert adresse tidligere i dag.",
+      "options": [
+        "blev sendt",
+        "sendte",
+        "bliver sendt",
+        "sendes"
+      ],
+      "correct": "blev sendt",
+      "accepted_answers": [
+        "blev sendt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "fabrikken-blev-koebt-af-en-stor-koncern-i-halvfemserne",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det skete i 1990'erne.",
+      "sentence": "Fabrikken ___ af en stor koncern i halvfemserne.",
+      "options": [
+        "købes",
+        "bliver købt",
+        "købte",
+        "blev købt"
+      ],
+      "correct": "blev købt",
+      "accepted_answers": [
+        "blev købt"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "hunden-blev-fundet-af-naboen-i-aftes",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Det skete i aftes.",
+      "sentence": "Hunden ___ af naboen i aftes.",
+      "options": [
+        "bliver fundet",
+        "findes",
+        "fandt",
+        "blev fundet"
+      ],
+      "correct": "blev fundet",
+      "accepted_answers": [
+        "blev fundet"
+      ],
+      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+    },
+    {
+      "id": "kokken-lavede-suppen-i-gaar",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om kokken.",
+      "sentence": "Kokken ___ suppen i går.",
+      "options": [
+        "bliver lavet",
+        "lavede",
+        "blev lavet",
+        "laves"
+      ],
+      "correct": "lavede",
+      "accepted_answers": [
+        "lavede"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "chefen-indkalder-medarbejderne-til-et-moede-i-morgen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om chefen.",
+      "sentence": "Chefen ___ medarbejderne til et møde i morgen.",
+      "options": [
+        "bliver indkaldt",
+        "indkalder",
+        "blev indkaldt",
+        "indkaldes"
+      ],
+      "correct": "indkalder",
+      "accepted_answers": [
+        "indkalder"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "boernene-tegner-en-tegning-til-deres-mor",
+      "level": "B1",
+      "mode": "passive",
+      "context": "Du fortæller om børnene.",
+      "sentence": "Børnene ___ en tegning til deres mor.",
+      "options": [
+        "tegnes",
+        "bliver tegnet",
+        "tegner",
+        "blev tegnet"
+      ],
+      "correct": "tegner",
+      "accepted_answers": [
+        "tegner"
+      ],
+      "note": "Når subjektet selv udfører handlingen og har et objekt, bruges aktiv; passiv kræver, at det påvirkede er subjekt."
+    },
+    {
+      "id": "der-spises-ikke-i-klassen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Det er en regel.",
+      "sentence": "Der ___ ikke i klassen.",
+      "options": [
+        "spises",
+        "blev spist",
+        "spiser",
+        "spiste"
+      ],
+      "correct": "spises",
+      "accepted_answers": [
+        "spises",
+        "bliver spist"
+      ],
+      "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her."
+    },
+    {
+      "id": "bogen-findes-i-kataloget",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller om, hvad der findes.",
+      "sentence": "Bogen ___ i kataloget.",
+      "options": [
+        "fandt",
+        "findes",
+        "finder"
+      ],
+      "correct": "findes",
+      "accepted_answers": [
+        "findes"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "priserne-ses-paa-skiltet-ved-indgangen",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Man kan læse det.",
+      "sentence": "Priserne ___ på skiltet ved indgangen.",
+      "options": [
+        "ses",
+        "kan se",
+        "ser"
+      ],
+      "correct": "ses",
+      "accepted_answers": [
+        "ses"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    },
+    {
+      "id": "den-faas-i-alle-supermarkeder",
+      "level": "B2",
+      "mode": "passive",
+      "context": "Du fortæller, hvor man kan købe den.",
+      "sentence": "Den ___ i alle supermarkeder.",
+      "options": [
+        "fås",
+        "er fået",
+        "blev fået",
+        "får"
+      ],
+      "correct": "fås",
+      "accepted_answers": [
+        "fås"
+      ],
+      "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    }
   ]
 };
