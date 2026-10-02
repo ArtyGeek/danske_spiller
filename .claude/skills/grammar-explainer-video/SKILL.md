@@ -14,7 +14,7 @@ Files live next to this skill:
 | `reference/scene-schema.md` | The scene contract (step types, player API). Read it before writing a scene. |
 | `templates/explainer.html` / `.js` / `.css` | The player and demo page. Loads one scene via `<script src>`. |
 | `templates/monitor.txt`, `monitor.meta.json` | Pixel monitor sprite (48x40 grid, screen rect x6 y5 36x24, `z` = screen). |
-| `examples/*.scene.js` | `en-et`, `v2-ordstilling`, `ikke-placering`. Copy the closest one. |
+| `examples/*.scene.js` | `en-et`, `v2-ordstilling`, `ikke-placering`, `i-paa` (place prepositions), `konjunktioner` (conjunction word order). Copy the closest one. |
 | `scripts/validate-scene.mjs` | Checks a scene: fields, step types, indices, gaps, `ok` flags, 20-40 s. |
 | `scripts/record.mjs` | Records one loop of a page to WebM. |
 
