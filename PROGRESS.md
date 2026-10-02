@@ -83,11 +83,6 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
   title: "Pronomenmysteriet — data.js: 760 curated items (Mode 3 items manually QA'd: no two plausible answers)"
   notes: "Completed with commit 2d606e5: 760 items across 6 modes. Subject/object (120), possessive agreement (120), reflexive possessive (180), anaphoric agreement (100), indefinite pronouns (140), demonstrative (100). All items validated: unique IDs, valid levels, required fields present."
 
-- id: pronomen-game
-  spec: pronomenmysteriet
-  status: todo
-  title: "Pronomenmysteriet — index.html: navy courtroom theme, 6 modes, SRS, register in index.html"
-
 - id: saetning-data
   spec: saetningsmaskinen
   status: todo
@@ -166,6 +161,34 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
   title: "Ordstillingsdetektiven — add case 13: ikke/adverb placement in subordinate clauses and indirect questions"
   acceptance: ">= 20 new tile sentences (at, som, fordi, om, hvor); one defensible order each; grammarTip explains SAV; no regression in cases 1-12"
 
+- id: srs-prioritise-missed
+  type: bug
+  status: todo
+  priority: P2
+  title: "buildRound treats unseen items as due so just-missed items are not prioritised (seen in Pronomenmysteriet; check boejningsvaerkstedet for the same logic and fix both or the shared DanskCore.srs.nextItems usage)"
+  acceptance: "after a round with 3 misses, those 3 appear in the next round (or earliest due), tested in 2 modes"
+
+- id: pronomen-gloss-spoiler
+  type: code
+  status: todo
+  priority: P2
+  title: "Pronomenmysteriet: English gloss shown before answering gives away reflexive answers; show it only after answering (or behind a toggle); owner-chain arrows wrap at 360 px"
+  acceptance: "gloss hidden until answered; chain does not wrap awkwardly at 360 px; smoke passes"
+
+- id: pronomen-native-review
+  type: data
+  status: todo
+  priority: P2
+  title: "Native-speaker review of Pronomenmysteriet content: 22 rp-de-* deres items, nogle after negation (4), 'Jeg kender ikke ___ i byen', 'tilfælles' spelling, odd notes ('spørger nogen', 'i ukendt betydning'), 3 verify:true sådan items"
+  acceptance: "native speaker confirms or corrects each listed item; data.js updated; validate.js passes"
+
+- id: seo-pronomen
+  type: chore
+  status: todo
+  priority: P2
+  title: "seo agent: finalise head copy, JSON-LD and sitemap.xml entry for pronomenmysteriet/index.html"
+  acceptance: "head copy + JSON-LD present; sitemap.xml lists the page"
+
 ---
 
 ## Blocked
@@ -173,6 +196,8 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 ---
 
 ## Completed
+- pronomen-game / Pronomenmysteriet game, 6 modes + courtroom theme / 2026-10-03 / 08cf0da
+  notes: "PASS WITH ISSUES accepted by PM; SEO head copy + sitemap entry still to do (seo agent)"
 - pronomen-data / Pronomenmysteriet data.js, 760 items / 2026-10-02 / a5eceb1
   notes: "native-speaker review still open: 22 rp-de-* deres items, 4 nogle-after-negation items, borrowed-bike item, 3 verify:true sådan items."
 - fix-noun-laerer / nouns.js lærer/computer/printer definite plural fix / 2026-10-02 / c4e1167
