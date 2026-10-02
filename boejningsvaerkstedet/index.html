@@ -324,7 +324,7 @@
 
   <!-- ================= START SCREEN ================= -->
   <main id="start-screen" class="card">
-    <h1 class="title"><span data-sd-sprite="polle" data-scale="5" class="sd-bob" aria-hidden="true"></span> Bøjningsværkstedet</h1>
+    <h1 class="title"><span data-sd-sprite="tandhjul" data-scale="5" class="sd-bob" aria-hidden="true"></span> Bøjningsværkstedet</h1>
     <p class="lede">Bøj hele navneordsgruppen — former, artikler, tillægsord og mængder.</p>
 
     <div class="group-label">Vælg værksted</div>
@@ -1291,7 +1291,7 @@
     // celebration + mascot (visual only)
     var S = window.Sjovt;
     if (S){
-      var mascot = S.sprite(acc >= 50 ? 'pokal' : 'polle', { scale: 6, cls: acc >= 50 ? 'sd-hop' : 'sd-bob' });
+      var mascot = S.sprite(acc >= 50 ? 'pokal' : 'tandhjul', { scale: 6, cls: acc >= 50 ? 'sd-hop' : 'sd-bob' });
       mascot.className += ' sum-mascot';
       el.sumHost.insertBefore(mascot, el.sumHost.firstChild);
       if (state.correct > 0) S.fx.celebrate();

@@ -241,7 +241,7 @@ body{
 <body>
 <div class="wrap">
   <div class="masthead">
-    <div class="mast-row"><span data-sd-sprite="hat" data-scale="6" class="sd-bob" aria-hidden="true"></span><h1>Danish Word Order Detective</h1></div>
+    <div class="mast-row"><span data-sd-sprite="lup" data-scale="6" class="sd-bob" aria-hidden="true"></span><h1>Danish Word Order Detective</h1></div>
     <div class="tag">Ordstillings&shy;detektiven — 12 Cases · A1 → B2</div>
     <div class="rank" id="rankBadge">Rank: Trainee Detective</div>
   </div>
@@ -1059,7 +1059,7 @@ function finishSession(){
   if(G.mode==="weak"){
     const remaining=Object.values(prog.weak).filter(v=>v>0).length;
     area.innerHTML=
-      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="polle" data-scale="6" class="sd-hop"></span></div>`+
+      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="lup" data-scale="6" class="sd-hop"></span></div>`+
       `<div class="bigstamp" style="color:#d98324;border-color:#d98324;transform:rotate(-3deg)">ØVET</div>`+
       `<h2>Svage sætninger</h2>`+
       `<div class="score">${G.correct} sætninger klaret ud af ${G.total}</div>`+
@@ -1081,7 +1081,7 @@ function finishSession(){
     }
     const next=CASES.find(x=>x.n===G.caseN+1);
     area.innerHTML=
-      `<div class="res-sprites" aria-hidden="true">${passed?'<span data-sd-sprite="pokal" data-scale="6"></span>':''}<span data-sd-sprite="polle" data-scale="6" class="${passed?'sd-hop':'sd-wig'}"></span>${passed?'<span data-sd-sprite="stjerne" data-scale="6"></span>':''}</div>`+
+      `<div class="res-sprites" aria-hidden="true">${passed?'<span data-sd-sprite="pokal" data-scale="6"></span>':''}<span data-sd-sprite="lup" data-scale="6" class="${passed?'sd-hop':'sd-wig'}"></span>${passed?'<span data-sd-sprite="stjerne" data-scale="6"></span>':''}</div>`+
       (passed?`<div class="bigstamp">SOLVED</div>`:`<div class="bigstamp" style="color:#8a6a30;border-color:#8a6a30;transform:rotate(-4deg)">REOPEN</div>`)+
       `<h2>${G.c.title}</h2>`+
       `<div class="score">${G.correct} / ${G.total} correct · ${pct}%</div>`+
@@ -1099,7 +1099,7 @@ function finishSession(){
     const m=Math.floor(G.time/60),s=G.time%60;
     const title = pct>=90?"MASTER DETECTIVE":pct>=70?"Ace Investigator":pct>=50?"Solid Sleuth":"Keep Investigating";
     area.innerHTML=
-      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="pokal" data-scale="6"></span><span data-sd-sprite="polle" data-scale="6" class="sd-hop"></span></div>`+
+      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="pokal" data-scale="6"></span><span data-sd-sprite="lup" data-scale="6" class="sd-hop"></span></div>`+
       `<div class="bigstamp" style="${pct>=90?'':'color:#8a6a30;border-color:#8a6a30'}">${pct>=90?'MASTER':'CASE'}</div>`+
       `<h2>${title}</h2>`+
       `<div class="score">${G.correct} / ${G.total} · ${pct}%</div>`+

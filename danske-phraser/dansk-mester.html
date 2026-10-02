@@ -716,7 +716,7 @@ function topbar(){
 }
 function bottomnav(active){
   const b=(n,ico,lbl)=>`<button class="navbtn ${active===n?'active':''}" onclick="go('${n}')"><span class="nico" data-sd-sprite="${ico}" data-scale="2" aria-hidden="true"></span>${lbl}</button>`;
-  return `<div class="bottomnav">${b('home','polle','Home')}${b('stats','pokal','Stats')}${b('badges','stjerne','Badges')}</div>`;
+  return `<div class="bottomnav">${b('home','snak','Home')}${b('stats','pokal','Stats')}${b('badges','stjerne','Badges')}</div>`;
 }
 
 function render(){
@@ -761,7 +761,7 @@ function screenHome(){
       <button class="btn small" onclick="go('modes',{path:'${P.last.path}',ci:${P.last.cat}})">Continue ▸</button>
     </div>`;
   }
-  return `<div class="dm-welcome"><span data-sd-sprite="polle" data-scale="6" class="sd-bob" aria-hidden="true"></span><div class="h1">Hej! Ready to learn Danish?</div></div>
+  return `<div class="dm-welcome"><span data-sd-sprite="snak" data-scale="6" class="sd-bob" aria-hidden="true"></span><div class="h1">Hej! Ready to learn Danish?</div></div>
     <p class="sub">Master verb combinations & native phrases. Choose a path to begin.</p>
     ${cont}
     <div class="path-grid">${pc('verbs')}${pc('phrases')}</div>
@@ -1076,7 +1076,7 @@ function pickMatch(btn){
 function finishMatch(){
   const acc=overallAccuracy();
   $("#gamewrap").innerHTML=`<div class="card result">
-    <div class="big"><span data-sd-sprite="stjerne" data-scale="8" class="sd-hop" aria-hidden="true"></span><span data-sd-sprite="polle" data-scale="6" class="sd-bob" aria-hidden="true"></span></div>
+    <div class="big"><span data-sd-sprite="stjerne" data-scale="8" class="sd-hop" aria-hidden="true"></span><span data-sd-sprite="snak" data-scale="6" class="sd-bob" aria-hidden="true"></span></div>
     <h2 style="margin:0 0 6px">All pairs matched!</h2>
     <p class="muted">Great memory work in "${esc(G.cfg.title)}".</p>
     <div class="btn-row" style="justify-content:center;margin-top:18px" id="matchContinueRow"></div></div>`;
@@ -1113,7 +1113,7 @@ function finishGame(){
   const xpEarned = G.results.reduce((s,r)=>s+(r.correct?10:2),0);
   const wrap=$("#gamewrap");
   wrap.innerHTML=`<div class="card result">
-    <div class="dm-hero"><span data-sd-sprite="${pct>=80?'pokal':'polle'}" data-scale="6" class="${pct>=80?'sd-hop':'sd-bob'}" aria-hidden="true"></span></div>
+    <div class="dm-hero"><span data-sd-sprite="${pct>=80?'pokal':'snak'}" data-scale="6" class="${pct>=80?'sd-hop':'sd-bob'}" aria-hidden="true"></span></div>
     ${ringSVG(pct,color)}
     <h2 style="margin:2px 0 4px">${headline}</h2>
     <p class="muted">${esc(G.cfg.title)}</p>
@@ -1198,7 +1198,7 @@ function resetAll(){ if(confirm("Reset ALL progress, XP and streaks?")){P=blankP
 /* =========================================================
    BADGES
 ========================================================= */
-const BADGE_SPR=['stjerne','pokal','hjerte','snegl','molle','cykel','hat','flag','polle'];
+const BADGE_SPR=['stjerne','pokal','hjerte','snegl','molle','cykel','hat','flag','snak'];
 function screenBadges(){
   const cells=ACHS.map(a=>{const un=P.badges.includes(a.id);
     return `<div class="ach ${un?'un':''}"><div class="aico" data-sd-sprite="${BADGE_SPR[ACHS.indexOf(a)%BADGE_SPR.length]}" data-scale="4" aria-hidden="true"></div><div class="aname">${a.name}</div></div>`;}).join("");

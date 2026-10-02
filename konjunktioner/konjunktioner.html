@@ -223,7 +223,7 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
 <!-- START -->
 <div class="screen" id="startScreen">
   <div class="panel">
-    <div class="big"><span data-sd-sprite="polle" data-scale="6" data-label="Pølle, maskot" class="sd-bob"></span></div>
+    <div class="big"><span data-sd-sprite="slik" data-scale="6" data-label="Ikon" class="sd-bob"></span></div>
     <h2>Konjunktion Crush</h2>
     <p>Udfyld hullet i sætningen med den rigtige <b>konjunktion</b>. Ram rigtigt for at samle combo og point — og læs reglen efter hvert svar.</p>
     <p>Du har <b>5 liv</b> <span data-sd-sprite="hjerte" data-scale="2"></span>. Klar?</p>
@@ -888,7 +888,7 @@ function gameOver(){
   const isNew = score>0 && score>=getHi();
   $('newHi').style.display = (score>0 && score===getHi()) ? 'inline' : 'none';
   const oe=$('overEmoji'); oe.innerHTML='';
-  if(window.Sjovt){ oe.appendChild(Sjovt.sprite(score>=300?'pokal':score>=150?'stjerne':'polle',{scale:6,cls:'sd-bob'})); if(score>=150) Sjovt.fx.celebrate(); }
+  if(window.Sjovt){ oe.appendChild(Sjovt.sprite(score>=300?'pokal':score>=150?'stjerne':'slik',{scale:6,cls:'sd-bob'})); if(score>=150) Sjovt.fx.celebrate(); }
   $('overTitle').textContent = score>=300?'Sukkermester!': score>=150?'Flot spillet!':'Slut!';
   $('reviewBtn').style.display = sessionMistakes.length>0 ? 'block' : 'none';
   $('overScreen').classList.remove('hidden');

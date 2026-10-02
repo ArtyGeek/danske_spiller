@@ -245,7 +245,7 @@
     <div class="eyebrow">Velkommen til</div>
     <h1>Ordenes Vidunderland</h1>
     <p class="quote" id="quote">"Hvor skal jeg gå hen herfra?" – "Det afhænger af, hvor du vil hen."</p>
-    <div class="rule"><span data-sd-sprite="polle" data-scale="4" data-label="Pølle, maskot" class="sd-bob"></span></div>
+    <div class="rule"><span data-sd-sprite="terning" data-scale="4" data-label="Ikon" class="sd-bob"></span></div>
   </header>
   <div class="stage">
 
@@ -1315,14 +1315,14 @@ function showEnd(pct,line,sub,isSpeed,isFlash){
   let emoji="stjerne",title="Vidunderligt!",grade=sub;
   if(isFlash){emoji="stjerne";title="Færdig med kortene!";}
   else if(isSpeed){
-    if(speedCorrect>=25){emoji="polle";title="Hurtigere end Kaninen!";}
+    if(speedCorrect>=25){emoji="terning";title="Hurtigere end Kaninen!";}
     else if(speedCorrect>=15){emoji="stjerne";title="Flot tempo!";}
-    else{emoji="polle";title="Bliv ved!";}
+    else{emoji="terning";title="Bliv ved!";}
   }else{
     if(pct>=90){emoji="pokal";title="Dronningen er imponeret!";}
     else if(pct>=70){emoji="stjerne";title="Vidunderligt!";}
-    else if(pct>=50){emoji="polle";title="Godt på vej!";}
-    else{emoji="polle";title="Øvelse gør mester!";}
+    else if(pct>=50){emoji="terning";title="Godt på vej!";}
+    else{emoji="terning";title="Øvelse gør mester!";}
     grade=pct+"% rigtige · "+sub;
   }
   const ee=$("endEmoji");ee.innerHTML="";
