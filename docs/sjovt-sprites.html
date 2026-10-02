@@ -1,0 +1,8 @@
+<!doctype html><html lang="da"><head><meta charset="utf-8"><title>Sjovt Dansk — sprites</title>
+<link rel="stylesheet" href="../shared/sjovt.css"><script src="../shared/sjovt.js"></script></head>
+<body data-sd-home style="padding:24px"><h1 class="sd-h1">Sprites æøå ÆØÅ</h1>
+<p class="sd-text">Brødtekst i JetBrains Mono: Blåbærgrød med røde æbler. <b>Fed: Åben ørn.</b></p>
+<div class="sd-panel" style="display:flex;gap:24px;flex-wrap:wrap;align-items:end" id="s"></div>
+<p><a class="sd-btn" href="#">Spil nu</a> <button class="sd-btn sd-btn--cream">Næste ø</button> <button class="sd-btn sd-btn--ink">Ink</button> <button class="sd-btn" disabled>Disabled</button></p>
+<div class="sd-fb sd-fb--ok">Rigtigt! æøå</div><div class="sd-fb sd-fb--bad">Forkert — rødgrød</div>
+<script>var s=document.getElementById('s');Sjovt.sprites.forEach(function(n){var w=document.createElement('div');w.appendChild(Sjovt.sprite(n,{scale:8,cls:'sd-bob'}));var l=document.createElement('div');l.className='sd-label';l.textContent=n;w.appendChild(l);s.appendChild(w)});</script></body></html>

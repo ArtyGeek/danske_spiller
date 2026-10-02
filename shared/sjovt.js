@@ -1,0 +1,363 @@
+/* =============================================================================
+   SJOVT DANSK — shared runtime  (window.Sjovt)
+   Load in <head> right after sjovt.css (synchronous, so the preloader covers the
+   very first paint):   <script src="../shared/sjovt.js"></script>
+   Provides: pixel sprites, preloader (real progress), page transitions,
+   game chrome bar, feedback fx, screen-enter watcher.  Vanilla, no network.
+   ============================================================================= */
+(function () {
+  "use strict";
+  var doc = document, root = doc.documentElement, win = window;
+  var scriptEl = doc.currentScript;
+  var base = scriptEl ? scriptEl.src.replace(/[^\/]*$/, "") : "";           // …/shared/
+  var homeUrl = base.replace(/shared\/$/, "index.html");
+  var mq = win.matchMedia ? win.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+  function reduced() { return mq.matches || root.getAttribute("data-sd-motion") === "off"; }
+  function store(get, k, v) { try { return get ? sessionStorage.getItem(k) : sessionStorage.setItem(k, v); } catch (e) { return null; } }
+
+  root.classList.add("sd-page");
+
+  /* ------------------------------------------------------------ sprites */
+  var PAL = { K: "#101010", W: "#FFFFFF", O: "#F94F37", Y: "#E1AD12", C: "#FFC25A", A: "#FD9E4F",
+              B: "#8A4A1C", R: "#D7263D", T: "#EDB366", G: "#148A3C", L: "#2B3FD6", P: "#FFE9B0", S: "#8E8E8E" };
+  var SPR = {
+    // Pølle — the hot-dog mascot
+    polle: [
+      "................",
+      "....KKKKKKKK....",
+      "..KKTTTTTTTTKK..",
+      ".KTTTTTTTTTTTTK.",
+      "KTTKKKKKKKKKKTTK",
+      "KTKOOOOOOOOOOKTK",
+      "KTKOWOOOOOOWOKTK",
+      "KTKOKOOOOOOKOKTK",
+      "KTKOOKOOOOKOOKTK",
+      "KTKOOOKKKKOOOKTK",
+      "KTKCOOOOOOOOCKTK",
+      "KTTKKKKKKKKKKTTK",
+      ".KTTTTTTTTTTTTK.",
+      "..KKKKKKKKKKKK..",
+      "..KK........KK..",
+      ".KKK........KKK."],
+    // Kanelsnegl — cinnamon roll
+    snegl: [
+      "....KKKKKK....",
+      "..KKTTTTTTKK..",
+      ".KTTBBBBBBTTK.",
+      ".KTBBTTTTBBTK.",
+      "KTTBTTBBTTBTTK",
+      "KTBBTBBBBTBBTK",
+      "KTBTTBPPBTTBTK",
+      "KTBTTBPPBTTBTK",
+      "KTBBTBBBBTBBTK",
+      "KTTBTTBBTTBTTK",
+      ".KTBBTTTTBBTK.",
+      ".KTTBBBBBBTTK.",
+      "..KKTTTTTTKK..",
+      "....KKKKKK...."],
+    // Mølle — windmill
+    molle: [
+      "KK............KK",
+      "KWK..........KWK",
+      ".KWK........KWK.",
+      "..KWK......KWK..",
+      "...KWK....KWK...",
+      "....KWK..KWK....",
+      ".....KWKKWK.....",
+      "......KKKK......",
+      ".....KOOOOK.....",
+      ".....KOCCOK.....",
+      "....KOOOOOOK....",
+      "....KOCKKCOK....",
+      "...KOOOKKOOOK...",
+      "...KOOOKKOOOK...",
+      "..KOOOOOOOOOOK..",
+      "..KKKKKKKKKKKK.."],
+    // Cykel — bicycle
+    cykel: [
+      "......KKKK......",
+      "...........KK...",
+      "....KKKKKKK.K...",
+      "...K..K...KK....",
+      "..K....K..K.....",
+      ".KKKK..KK.KKKK..",
+      "K....K.K.K....K.",
+      "K....KKKKK....K.",
+      "K....K...K....K.",
+      ".KKKK.....KKKK.."],
+    // Stjerne — star
+    stjerne: [
+      "....K....",
+      "...KCK...",
+      "...KCK...",
+      "KKKKCKKKK",
+      "KCCCCCCCK",
+      ".KCCCCCK.",
+      "..KCCCK..",
+      ".KCCKCCK.",
+      ".KCK.KCK.",
+      "..K...K.."],
+    // Hjerte — heart
+    hjerte: [
+      ".KKK...KKK.",
+      "KOOOK.KOOOK",
+      "KOWOOKOOOOK",
+      "KOOOOOOOOOK",
+      ".KOOOOOOOK.",
+      "..KOOOOOK..",
+      "...KOOOK...",
+      "....KOK....",
+      ".....K....."],
+    // Pokal — trophy
+    pokal: [
+      "KKKKKKKKKKK",
+      "KCCCCCCCCCK",
+      "KCWCCCCCCCK",
+      "KCWCCCCCCCK",
+      ".KCCCCCCCK.",
+      "..KCCCCCK..",
+      "...KCCCK...",
+      "....KCK....",
+      "....KCK....",
+      "..KKKKKKK..",
+      "..KOOOOOK..",
+      "..KKKKKKK.."],
+    // Vagt-hat — tall guard hat (for reading / "fejl" screens)
+    hat: [
+      "....KKKK....",
+      "...KSSSSK...",
+      "..KSSSSSSK..",
+      "..KSSSSSSK..",
+      "..KSSSSSSK..",
+      ".KKKKKKKKKK.",
+      "KRRRRRRRRRRK",
+      ".KKKKKKKKKK."]
+  };
+  // Dannebrog — generated (red field, white Nordic cross)
+  (function () {
+    var w = 17, h = 12, rows = [], x, y, line;
+    for (y = 0; y < h; y++) { line = "";
+      for (x = 0; x < w; x++) {
+        var edge = (y === 0 || y === h - 1 || x === 0 || x === w - 1);
+        var cross = (x === 5 || x === 6) || (y === 5 || y === 6);
+        line += edge ? "K" : cross ? "W" : "R"; }
+      rows.push(line); }
+    SPR.flag = rows;
+  })();
+
+  function spriteSVG(name, scale, label) {
+    var g = SPR[name]; if (!g) return "";
+    scale = scale || 4;
+    var h = g.length, w = g[0].length, out = "", y, x, c, run, start;
+    for (y = 0; y < h; y++) {
+      x = 0;
+      while (x < w) {
+        c = g[y].charAt(x);
+        if (c === "." || !PAL[c]) { x++; continue; }
+        start = x; run = c;
+        while (x < w && g[y].charAt(x) === run) x++;
+        out += '<rect x="' + start + '" y="' + y + '" width="' + (x - start) + '" height="1" fill="' + PAL[c] + '"/>';
+      }
+    }
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + w + " " + h + '" width="' + w * scale + '" height="' + h * scale + '" shape-rendering="crispEdges"' +
+      (label ? ' role="img" aria-label="' + label + '"' : ' aria-hidden="true" focusable="false"') + ">" + out + "</svg>";
+  }
+  function sprite(name, opts) {
+    opts = opts || {};
+    var s = doc.createElement("span");
+    s.className = "sd-sprite" + (opts.cls ? " " + opts.cls : "");
+    s.innerHTML = spriteSVG(name, opts.scale, opts.label);
+    return s;
+  }
+  // <span data-sd-sprite="polle" data-scale="6" class="sd-bob"></span>
+  function hydrateSprites(scope) {
+    var els = (scope || doc).querySelectorAll("[data-sd-sprite]:not([data-sd-done])");
+    for (var i = 0; i < els.length; i++) {
+      var e = els[i];
+      e.classList.add("sd-sprite");
+      e.innerHTML = spriteSVG(e.getAttribute("data-sd-sprite"), parseInt(e.getAttribute("data-scale"), 10) || 4, e.getAttribute("data-label"));
+      e.setAttribute("data-sd-done", "1");
+    }
+  }
+
+  /* ---------------------------------------------------------- preloader */
+  var pre = null, preState = { start: Date.now(), full: false, target: 0, shown: 0, done: false, holds: [], note: "", failed: 0 };
+  var SEEN = "sd:intro-seen";
+  function buildPre() {
+    var full = !store(true, SEEN) && !reduced();
+    var quick = !full;
+    preState.full = full;
+    pre = doc.createElement("div");
+    pre.className = "sd-pre" + (quick ? " is-quick" : "");
+    pre.setAttribute("role", "status");
+    pre.setAttribute("aria-live", "polite");
+    pre.setAttribute("aria-label", "Indlæser Sjovt Dansk");
+    var h = "";
+    if (full && !reduced()) {
+      var rows = Math.max(4, Math.ceil((win.innerHeight || 800) / ((win.innerWidth || 1200) * 0.094 * 1.5)) + 1);
+      h += '<div class="sd-pre-rows" aria-hidden="true">';
+      for (var r = 0; r < rows; r++) h += '<div class="sd-pre-row"><span>SJOVT DANSK SJOVT DANSK SJOVT DANSK SJOVT DANSK&nbsp;</span></div>';
+      h += "</div>";
+    }
+    h += '<div class="sd-pre-mini" aria-hidden="true">' + '<span class="sd-sprite ' + (reduced() ? "" : "sd-hop") + '">' + spriteSVG("polle", 6) + "</span></div>";
+    h += '<div class="sd-pre-card"><span class="sd-sprite ' + (reduced() ? "" : "sd-hop") + '" aria-hidden="true">' + spriteSVG("polle", 6) + "</span>" +
+      '<div class="sd-pre-title">SJOVT <b>DANSK</b></div>' +
+      '<div class="sd-pre-bar" aria-hidden="true">' + new Array(13).join("<i></i>") + "</div>" +
+      '<div class="sd-pre-meta"><span>INDLÆSER</span><span class="sd-pre-pct">0%</span></div>' +
+      '<div class="sd-pre-note"></div></div>';
+    pre.innerHTML = h;
+    root.appendChild(pre);
+  }
+  function paintProgress() {
+    if (!pre) return;
+    var segs = pre.querySelectorAll(".sd-pre-bar i"), n = Math.round(preState.shown / 100 * segs.length), i;
+    for (i = 0; i < segs.length; i++) segs[i].className = i < n ? "on" : "";
+    var p = pre.querySelector(".sd-pre-pct"); if (p) p.textContent = Math.round(preState.shown) + "%";
+    var nt = pre.querySelector(".sd-pre-note"); if (nt) nt.textContent = preState.note;
+  }
+  function tick() {
+    if (!pre || preState.done) return;
+    preState.shown += Math.max(1, (preState.target - preState.shown) * 0.2);
+    if (preState.shown > preState.target) preState.shown = preState.target;
+    paintProgress();
+    win.requestAnimationFrame ? win.requestAnimationFrame(tick) : win.setTimeout(tick, 40);
+  }
+  function finishPre() {
+    if (!pre || preState.done) return;
+    preState.done = true;
+    preState.target = preState.shown = 100; paintProgress();
+    store(false, SEEN, "1");
+    var node = pre;
+    node.classList.add("is-out");
+    root.classList.add("sd-ready");
+    var kill = function () { if (node.parentNode) node.parentNode.removeChild(node); };
+    node.addEventListener("transitionend", kill);
+    win.setTimeout(kill, 800);
+  }
+  function whenAll() {
+    var minMs = preState.full ? 900 : 120;
+    var maxMs = 6000, parts = [];
+    // 1) DOM + subresources
+    parts.push(new Promise(function (res) {
+      function chk() { if (doc.readyState === "interactive") preState.target = Math.max(preState.target, 45);
+                       if (doc.readyState === "complete") { preState.target = Math.max(preState.target, 80); res(); } }
+      if (doc.readyState === "complete") { preState.target = 80; res(); }
+      else { doc.addEventListener("readystatechange", chk); win.addEventListener("load", function () { chk(); res(); }); chk(); }
+    }));
+    // 2) fonts (never rejects: on failure we proceed with the monospace fallback)
+    if (doc.fonts && doc.fonts.ready) {
+      var fp = Promise.race([doc.fonts.ready, new Promise(function (r) { win.setTimeout(r, 2500); })]);
+      parts.push(fp.then(function () { preState.target = Math.max(preState.target, 92); }).catch(function () {}));
+      try { doc.fonts.load('16px "SD Mono"'); doc.fonts.load('16px "SD Pixel"'); doc.fonts.load('16px "SD Label"'); } catch (e) {}
+    }
+    // 3) failed assets are noted, never block
+    win.addEventListener("error", function (ev) {
+      var t = ev.target; if (t && t !== win && /^(LINK|SCRIPT|IMG)$/.test(t.tagName || "")) { preState.failed++; preState.note = "Nogle filer kunne ikke hentes — fortsætter"; }
+    }, true);
+    // 4) pages can hold the curtain while their own data initialises
+    var started = Date.now();
+    Promise.all(parts).then(function () { return Promise.all(preState.holds); }).catch(function () {})
+      .then(function () {
+        var wait = Math.max(0, minMs - (Date.now() - preState.start));
+        win.setTimeout(finishPre, wait);
+      });
+    win.setTimeout(function () { if (!preState.done) { preState.note = "Det tager lidt længere end ventet…"; } }, 3500);
+    win.setTimeout(finishPre, maxMs);   // hard failsafe — never trap the learner behind the curtain
+  }
+
+  /* ------------------------------------------- leaving: pixel curtain on link clicks */
+  function installTransitions() {
+    doc.addEventListener("click", function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest ? e.target.closest("a[href]") : null;
+      if (!a || a.target === "_blank" || a.hasAttribute("download") || a.hasAttribute("data-sd-nofx")) return;
+      var href = a.getAttribute("href");
+      if (!href || href.charAt(0) === "#" || /^(mailto:|tel:|javascript:)/i.test(href)) return;
+      var url; try { url = new URL(a.href, location.href); } catch (err) { return; }
+      if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return;
+      if (reduced()) return;                       // reduced motion: plain, instant navigation
+      e.preventDefault();
+      var c = doc.createElement("div");
+      c.className = "sd-pre is-quick is-in"; c.setAttribute("aria-hidden", "true");
+      c.innerHTML = '<div class="sd-pre-mini"><span class="sd-sprite sd-hop">' + spriteSVG("polle", 6) + "</span></div>";
+      root.appendChild(c);
+      void c.offsetWidth; c.classList.add("go");
+      var go = function () { location.href = a.href; };
+      win.setTimeout(go, 230);
+      win.setTimeout(function () { if (c.parentNode) c.parentNode.removeChild(c); }, 1500);   // if navigation is blocked
+    }, true);
+    win.addEventListener("pageshow", function (e) {
+      if (e.persisted) { var all = doc.querySelectorAll(".sd-pre"); for (var i = 0; i < all.length; i++) all[i].parentNode.removeChild(all[i]); }
+    });
+  }
+
+  /* ----------------------------------------------------- game chrome bar */
+  function buildBar() {
+    if (root.hasAttribute("data-sd-nobar") || doc.querySelector(".sd-bar") || doc.body.hasAttribute("data-sd-home")) return;
+    var bar = doc.createElement("nav");
+    bar.className = "sd-bar"; bar.setAttribute("aria-label", "Sjovt Dansk");
+    bar.innerHTML = '<a class="sd-bar-home" href="' + homeUrl + '">← MENU</a>' +
+      '<span class="sd-bar-logo">' + '<span class="sd-sprite">' + spriteSVG("polle", 2) + '</span><span class="t">SJOVT <b>DANSK</b></span></span>';
+    doc.body.insertBefore(bar, doc.body.firstChild);
+    root.style.setProperty("--sd-bar-h", "48px");
+  }
+
+  /* ----------------------------------------------------------------- fx */
+  var COLORS = ["#F94F37", "#FFC25A", "#FD9E4F", "#FFFFFF", "#E1AD12", "#2B3FD6"];
+  function restart(el, cls) { if (!el) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+  var fx = {
+    correct: function (el) { restart(el, "sd-fx-correct"); if (el) fx.burst(el, 8); },
+    wrong:   function (el) { restart(el, "sd-fx-wrong"); },
+    bump:    function (el) { restart(el, "sd-fx-bump"); },
+    enter:   function (el) { restart(el, "sd-enter"); },
+    burst: function (el, n) {
+      if (reduced() || !el || !el.getBoundingClientRect) return;
+      var r = el.getBoundingClientRect(), b = doc.createElement("div"), i;
+      b.className = "sd-burst"; b.style.left = (r.left + r.width / 2) + "px"; b.style.top = (r.top + r.height / 2) + "px";
+      for (i = 0; i < (n || 8); i++) { var p = doc.createElement("i"), ang = (Math.PI * 2 * i) / (n || 8), d = 28 + (i % 3) * 14;
+        p.style.setProperty("--dx", Math.round(Math.cos(ang) * d) + "px"); p.style.setProperty("--dy", Math.round(Math.sin(ang) * d) + "px");
+        p.style.setProperty("--c", COLORS[i % COLORS.length]); b.appendChild(p); }
+      doc.body.appendChild(b); win.setTimeout(function () { if (b.parentNode) b.parentNode.removeChild(b); }, 600);
+    },
+    confetti: function (count) {
+      if (reduced()) return;
+      var c = doc.createElement("div"), i; c.className = "sd-conf"; c.setAttribute("aria-hidden", "true");
+      for (i = 0; i < Math.min(count || 36, 60); i++) { var p = doc.createElement("i");
+        p.style.left = (Math.random() * 100) + "%"; p.style.setProperty("--c", COLORS[i % COLORS.length]);
+        p.style.setProperty("--dx", Math.round((Math.random() - .5) * 160) + "px"); p.style.setProperty("--r", Math.round(Math.random() * 360) + "deg");
+        p.style.setProperty("--t", (1.1 + Math.random() * 0.9).toFixed(2) + "s"); p.style.animationDelay = (Math.random() * 0.4).toFixed(2) + "s"; c.appendChild(p); }
+      doc.body.appendChild(c); win.setTimeout(function () { if (c.parentNode) c.parentNode.removeChild(c); }, 2600);
+    },
+    celebrate: function () { fx.confetti(40); }
+  };
+
+  // Watch elements that games show/hide (class / hidden / style) and play a short enter animation.
+  //   Sjovt.watchScreens(".screen, .view, [data-screen]")
+  function visible(el) { return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length); }
+  function watchScreens(selector) {
+    if (!win.MutationObserver) return;
+    var last = new WeakMap();
+    function scan() {
+      var els = doc.querySelectorAll(selector);
+      for (var i = 0; i < els.length; i++) { var v = visible(els[i]); if (v && last.get(els[i]) === false) fx.enter(els[i]); last.set(els[i], v); }
+    }
+    scan();
+    new MutationObserver(function () { win.requestAnimationFrame(scan); })
+      .observe(doc.body, { attributes: true, subtree: true, attributeFilter: ["class", "hidden", "style"] });
+  }
+
+  /* ------------------------------------------------------------- boot */
+  buildPre();
+  tick();
+  whenAll();
+  installTransitions();
+  if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", onReady); else onReady();
+  function onReady() { buildBar(); hydrateSprites(); }
+
+  win.Sjovt = {
+    sprite: sprite, spriteSVG: spriteSVG, hydrate: hydrateSprites, sprites: Object.keys(SPR), fx: fx,
+    watchScreens: watchScreens, reduced: reduced, homeUrl: homeUrl,
+    hold: function (p) { preState.holds.push(Promise.resolve(p).catch(function () {})); },   // keep curtain until p settles
+    ready: function () { finishPre(); }
+  };
+})();

@@ -1,453 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Danish Learning Games</title>
-<meta name="description" content="A collection of interactive games for learning Danish — vocabulary, grammar, phrases, verbs, prepositions and more." />
+<title>Sjovt Dansk — lær dansk ved at spille</title>
+<meta name="description" content="Sjovt Dansk (sjovtdansk.dk): spil og øvelser der gør det sjovt at lære dansk — ordforråd, grammatik, vendinger, verber og præpositioner." />
+<link rel="stylesheet" href="shared/sjovt.css" />
+<script src="shared/sjovt.js"></script>
 <style>
-  /* =========================================================================
-     THEME — edit these CSS variables to recolor the whole dashboard
-     ========================================================================= */
-  :root {
-    --bg:            #dceeff;
-    --bg-soft:       #c9e4ff;
-    --surface:       #ffffff;
-    --surface-2:     #f9fafc;
-    --border:        #e6e8ef;
-    --text:          #1e2330;
-    --text-soft:     #5b6173;
-    --text-faint:    #8b91a3;
-
-    --brand:         #58cc02;   /* Duolingo-style green */
-    --brand-dark:    #46a302;
-    --brand-soft:    #e8f8d8;
-    --accent:        #1cb0f6;   /* friendly blue */
-    --accent-soft:   #e3f4fe;
-    --dk-red:        #c8102e;   /* Danish flag red */
-
-    --shadow-sm: 0 1px 2px rgba(20,25,40,.06), 0 1px 3px rgba(20,25,40,.05);
-    --shadow-md: 0 6px 16px rgba(20,25,40,.08), 0 2px 6px rgba(20,25,40,.05);
-    --shadow-lg: 0 16px 40px rgba(20,25,40,.14);
-
-    --radius:   18px;
-    --radius-sm:12px;
-    --maxw:     1180px;
-    --font: 'Nunito', 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-  }
-
-  /* Dark mode — applied when <html data-theme="dark"> (toggle) or by OS preference */
-  :root[data-theme="dark"] {
-    --bg:            #0f1320;
-    --bg-soft:       #141a2b;
-    --surface:       #1a2030;
-    --surface-2:     #20283b;
-    --border:        #2a3348;
-    --text:          #eef1f7;
-    --text-soft:     #aab2c5;
-    --text-faint:    #7b859b;
-    --brand-soft:    #1f3315;
-    --accent-soft:   #102a3a;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
-    --shadow-md: 0 6px 18px rgba(0,0,0,.45);
-    --shadow-lg: 0 18px 44px rgba(0,0,0,.55);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg:#0f1320; --bg-soft:#141a2b; --surface:#1a2030; --surface-2:#20283b;
-      --border:#2a3348; --text:#eef1f7; --text-soft:#aab2c5; --text-faint:#7b859b;
-      --brand-soft:#1f3315; --accent-soft:#102a3a;
-      --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow-md:0 6px 18px rgba(0,0,0,.45); --shadow-lg:0 18px 44px rgba(0,0,0,.55);
-    }
-  }
-
+  /* Homepage layout — everything visual comes from shared/sjovt.css tokens */
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-    transition: background .25s ease, color .25s ease;
-  }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
 
-  /* ---------- Header ---------- */
-  header.site {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 20;
-    backdrop-filter: saturate(1.2);
-  }
-  .topbar { display: flex; align-items: center; gap: 14px; padding: 14px 0; }
-  .logo { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 1.25rem; }
-  .logo .flag {
-    position: relative; overflow: hidden;
-    width: 40px; height: 40px; border-radius: 14px; flex: none;
-    background: var(--dk-red);
-    box-shadow: var(--shadow-sm);
-  }
-  .logo .flag::before { content: ""; position: absolute; top: 0; left: 15px; width: 9px; height: 100%; background: #fff; }
-  .logo .flag::after  { content: ""; position: absolute; left: 0; top: 15px; width: 100%; height: 9px; background: #fff; }
-  .logo small { display:block; font-weight:700; font-size:.72rem; color: var(--text-faint); letter-spacing:.04em; text-transform:uppercase; }
+  /* top bar */
+  header.site { background: var(--sd-ink); border-bottom: 4px solid var(--sd-orange); position: sticky; top: 0; z-index: 50; }
+  .topbar { display: flex; align-items: center; gap: 12px; min-height: 64px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--sd-cream); min-height: 48px; }
+  .logo .wm { font-family: var(--sd-font-logo); font-size: 14px; line-height: 1.3; }
+  .logo .wm b { font-weight: 400; color: var(--sd-orange); }
+  .logo .dom { display: block; font-family: var(--sd-font-body); font-size: 12px; color: var(--sd-cream); opacity: .85; margin-top: 4px; }
   .spacer { flex: 1; }
-  .theme-btn {
-    border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
-    width: 42px; height: 42px; border-radius: 12px; cursor: pointer; font-size: 1.1rem;
-    display: grid; place-items: center; transition: transform .15s ease, background .2s ease;
+  .theme-btn { min-width: 48px; min-height: 48px; padding: 0 12px; background: var(--sd-cream); color: #101010; border: 0; font-family: var(--sd-font-display); font-weight: 700; font-size: 16px; cursor: pointer;
+    box-shadow: 0 -4px 0 #FFC25A, 0 4px 0 #FFC25A, -4px 0 0 #FFC25A, 4px 0 0 #FFC25A; margin: 4px; }
+  .theme-btn:hover { background: #fff; }
+  .theme-btn:active { transform: translateY(2px); }
+
+  /* hero */
+  .hero { margin: 32px 4px 16px; background: var(--sd-orange); color: #101010; box-shadow: var(--sd-box), var(--sd-drop); position: relative; overflow: hidden; }
+  .hero-in { padding: 32px 28px 152px; position: relative; z-index: 2; max-width: 760px; }
+  .hero .kicker { display: inline-block; background: var(--sd-ink); color: var(--sd-cream); font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; padding: 6px 10px; letter-spacing: .04em; margin-bottom: 16px; }
+  .hero h1 { margin: 0 0 16px; font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(34px, 8vw, 64px); line-height: 1.05; letter-spacing: .01em; }
+  .hero h1 em { font-style: normal; background: var(--sd-ink); color: var(--sd-cream); padding: 0 .18em; display: inline-block; }
+  .hero p { margin: 0 0 24px; font-size: 17px; max-width: 54ch; font-weight: 700; }
+  .hero-scene { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; z-index: 1; }
+  .hero-scene .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 24px; background: var(--sd-ink);
+    background-image: repeating-linear-gradient(90deg, #101010 0 16px, #2a2a2a 16px 32px); border-top: 4px solid var(--sd-cream); }
+  .hero-scene .actor { position: absolute; bottom: 24px; }
+  .a-mill  { right: 6%; } .a-bike { right: 22%; } .a-flag { right: 36%; bottom: 24px; } .a-snegl { right: 48%; }
+  .a-polle { left: 0; animation: walk 22s steps(44) infinite alternate; }
+  @keyframes walk { from { left: 2%; } to { left: calc(100% - 140px); } }
+  .a-polle > span { display: block; animation: sd-hop .7s steps(4) infinite; }
+  .cloud { position: absolute; top: 18px; opacity: .9; }
+  .c1 { right: 14%; } .c2 { right: 3%; top: 52px; }
+
+  /* search */
+  .controls { margin: 40px 4px 0; display: flex; gap: 16px; align-items: end; flex-wrap: wrap; }
+  .controls .sd-h2 { margin: 0; }
+  .search { flex: 1 1 280px; max-width: 480px; }
+  .search label { display: block; font-family: var(--sd-font-display); font-weight: 700; font-size: 15px; margin: 0 0 6px 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .count { font-family: var(--sd-font-body); font-weight: 700; font-size: 16px; margin-left: auto; text-transform: uppercase; }
+
+  /* games grid — beige-force style cells: sprite on top, label underneath */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 28px; margin: 28px 4px 8px; }
+  .card { display: flex; flex-direction: column; gap: 12px; padding: 0; text-decoration: none; color: var(--sd-text); margin: 4px; overflow: hidden; }
+  .card .stage { height: 148px; background: var(--sd-mustard); display: grid; place-items: center; border-bottom: 4px solid var(--sd-ink);
+    background-image: linear-gradient(rgba(16,16,16,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(16,16,16,.14) 1px, transparent 1px); background-size: 16px 16px; position: relative; }
+  :root[data-theme="dark"] .card .stage { background-color: #26200f; border-bottom-color: #E1AD12; }
+  .card .stage .sd-sprite { transition: transform .12s steps(2); }
+  .card:hover .stage .sd-sprite, .card:focus-visible .stage .sd-sprite { animation: sd-hop .5s steps(4) infinite; }
+  .card .lvl { position: absolute; top: 10px; right: 10px; }
+  .card .body { padding: 0 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card h3 { margin: 0; font-family: var(--sd-font-display); font-weight: 700; font-size: 21px; line-height: 1.15; text-transform: uppercase; letter-spacing: .02em; overflow-wrap: anywhere; hyphens: auto; }
+  .card .desc { margin: 0; font-size: 15px; line-height: 1.55; flex: 1; color: var(--sd-text-soft); }
+  .card .tags { display: flex; flex-wrap: wrap; }
+  .card .open { align-self: flex-start; margin: 4px 0 0; }
+  .card:hover .open { --_bg: var(--sd-cream); }
+  .empty { text-align: center; padding: 48px 16px; margin: 28px 4px; }
+  .empty .sd-sprite { margin-bottom: 12px; }
+
+  footer.site { margin: 64px 0 0; background: var(--sd-ink); color: var(--sd-cream); border-top: 4px solid var(--sd-orange); padding: 28px 0 36px; font-size: 14px; }
+  footer.site .wrap { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  footer.site b { font-family: var(--sd-font-logo); font-weight: 400; font-size: 12px; }
+  footer.site b i { font-style: normal; color: var(--sd-orange); }
+
+  @media (max-width: 560px) {
+    .hero-in { padding: 24px 18px 148px; }
+    .logo .wm { font-size: 12px; }
+    .a-bike, .a-snegl, .c2 { display: none; }
+    .a-flag { right: 6%; } .a-mill { right: 26%; }
+    .count { margin-left: 4px; }
   }
-  .theme-btn:hover { transform: translateY(-1px); background: var(--bg-soft); }
-
-  /* ---------- Hero / intro — pixel-art SMB1-style sky banner ---------- */
-  .hero {
-    --p: 9px; /* one pixel-art unit; resize the whole scene by changing this */
-    position: relative; overflow: hidden;
-    margin: 20px 0 8px; padding: 38px 20px;
-    border-radius: var(--radius); min-height: 150px;
-    display: flex; align-items: center; justify-content: center;
-    background: #5c94fc; box-shadow: var(--shadow-md);
-  }
-  .hero h1 {
-    position: relative; z-index: 1; text-align: center;
-    font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.1; margin: 0; font-weight: 900; letter-spacing: -.01em;
-    color: #fff;
-    text-shadow: 2px 2px 0 #1e2330, -2px 2px 0 #1e2330, 2px -2px 0 #1e2330, -2px -2px 0 #1e2330, 0 4px 0 rgba(0,0,0,.25);
-  }
-  .hero-bg { position: absolute; inset: 0; z-index: 0; }
-
-  .cloud {
-    position: absolute; width: var(--p); height: var(--p); background: #fff; transform-origin: top left;
-    box-shadow:
-      var(--p) 0 #fff, calc(2*var(--p)) 0 #fff,
-      calc(-1*var(--p)) var(--p) #fff, 0 var(--p) #fff, var(--p) var(--p) #fff, calc(2*var(--p)) var(--p) #fff, calc(3*var(--p)) var(--p) #fff,
-      calc(-2*var(--p)) calc(2*var(--p)) #fff, calc(-1*var(--p)) calc(2*var(--p)) #fff, 0 calc(2*var(--p)) #fff, var(--p) calc(2*var(--p)) #fff, calc(2*var(--p)) calc(2*var(--p)) #fff, calc(3*var(--p)) calc(2*var(--p)) #fff, calc(4*var(--p)) calc(2*var(--p)) #fff;
-  }
-  .cloud-1 { top: 16px; left: 8%; }
-  .cloud-2 { top: 30px; left: 62%; transform: scale(.8); opacity: .9; }
-
-  .hill {
-    position: absolute; bottom: 16px; width: var(--p); height: var(--p); background: #4aa342; transform-origin: bottom left;
-    box-shadow:
-      var(--p) 0 #4aa342, calc(2*var(--p)) 0 #4aa342, calc(3*var(--p)) 0 #4aa342, calc(4*var(--p)) 0 #4aa342, calc(5*var(--p)) 0 #4aa342, calc(6*var(--p)) 0 #4aa342, calc(7*var(--p)) 0 #4aa342,
-      var(--p) calc(-1*var(--p)) #4aa342, calc(2*var(--p)) calc(-1*var(--p)) #4aa342, calc(3*var(--p)) calc(-1*var(--p)) #4aa342, calc(4*var(--p)) calc(-1*var(--p)) #4aa342, calc(5*var(--p)) calc(-1*var(--p)) #4aa342, calc(6*var(--p)) calc(-1*var(--p)) #4aa342,
-      calc(2*var(--p)) calc(-2*var(--p)) #4aa342, calc(3*var(--p)) calc(-2*var(--p)) #4aa342, calc(4*var(--p)) calc(-2*var(--p)) #4aa342, calc(5*var(--p)) calc(-2*var(--p)) #4aa342,
-      calc(3*var(--p)) calc(-3*var(--p)) #4aa342, calc(4*var(--p)) calc(-3*var(--p)) #4aa342;
-  }
-  .hill-1 { left: 4%; }
-  .hill-2 { left: 70%; transform: scale(1.15); opacity: .9; }
-
-  .ground {
-    position: absolute; left: 0; right: 0; bottom: 0; height: 16px;
-    background:
-      repeating-linear-gradient(90deg, rgba(0,0,0,.28) 0 2px, transparent 2px var(--p)),
-      repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 2px, transparent 2px 8px),
-      #c2710f;
-  }
-
-  .flagpole { position: absolute; bottom: 16px; left: 88%; width: 3px; height: calc(8*var(--p)); background: #e4e8ee; }
-  .flag { position: absolute; top: 0; left: 3px; width: calc(3*var(--p)); height: calc(2*var(--p)); background: #c8102e; }
-  .flag::before { content: ""; position: absolute; top: 0; left: calc(.9*var(--p)); width: calc(.6*var(--p)); height: 100%; background: #fff; }
-  .flag::after  { content: ""; position: absolute; left: 0; top: calc(.7*var(--p)); width: 100%; height: calc(.6*var(--p)); background: #fff; }
-
-  /* ---------- Controls (search + filters) ---------- */
-  .controls { margin: 30px 0 8px; display: flex; flex-direction: column; gap: 16px; }
-  .search {
-    display: flex; align-items: center; gap: 10px; background: var(--surface);
-    border: 2px solid var(--border); border-radius: 14px; padding: 4px 14px; box-shadow: var(--shadow-sm);
-    transition: border-color .2s ease, box-shadow .2s ease; max-width: 460px;
-  }
-  .search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
-  .search input { border: none; outline: none; background: transparent; color: var(--text); font: inherit; font-size: 1rem; padding: 11px 0; width: 100%; }
-  .search .ico { color: var(--text-faint); font-size: 1.05rem; }
-
-  /* ---------- Section heading ---------- */
-  .section-head { display: flex; align-items: baseline; gap: 12px; margin: 34px 0 16px; }
-  .section-head h2 { font-size: 1.25rem; font-weight: 900; margin: 0; }
-  .section-head .count { color: var(--text-faint); font-weight: 700; font-size: .9rem; }
-
-  /* ---------- Cards grid ---------- */
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-  .card {
-    position: relative; background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm);
-    display: flex; flex-direction: column; gap: 12px; cursor: pointer;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    text-decoration: none; color: inherit; overflow: hidden;
-  }
-  .card::before { content:""; position:absolute; inset:0 0 auto 0; height:4px; background: linear-gradient(90deg, var(--brand), var(--accent)); opacity:.0; transition: opacity .18s ease; }
-  .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: transparent; }
-  .card:hover::before { opacity: 1; }
-  .card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-
-  .card .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-  .card .emoji { font-size: 1.9rem; line-height: 1; }
-  .badges { display: flex; gap: 7px; flex-wrap: wrap; }
-  .badge { font-size: .72rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: .02em; }
-  .badge.type  { background: var(--accent-soft); color: var(--accent); }
-  .badge.level { background: var(--brand-soft); color: var(--brand-dark); }
-  :root[data-theme="dark"] .badge.level { color: #9fe06a; }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .badge.level { color:#9fe06a; } }
-
-  .card h3 { font-size: 1.16rem; font-weight: 900; margin: 2px 0 0; letter-spacing: -.01em; }
-  .card p.desc { color: var(--text-soft); font-size: .94rem; margin: 0; flex: 1; }
-  .card .open {
-    margin-top: 6px; align-self: flex-start; background: var(--brand); color: #fff; font: inherit; font-weight: 800;
-    border: none; border-radius: 12px; padding: 11px 20px; font-size: .95rem; cursor: pointer;
-    box-shadow: 0 4px 0 var(--brand-dark); transition: transform .12s ease, box-shadow .12s ease; text-decoration: none;
-  }
-  .card:hover .open { transform: translateY(-1px); box-shadow: 0 5px 0 var(--brand-dark); }
-  .card .open:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--brand-dark); }
-
-  .empty { text-align: center; padding: 60px 20px; color: var(--text-soft); }
-  .empty .big { font-size: 2.4rem; margin-bottom: 8px; }
-
-  footer.site { margin: 56px 0 40px; color: var(--text-faint); font-size: .88rem; text-align: center; }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 720px) {
-    .hero { padding: 28px 16px; min-height: 120px; }
-    .cloud-2, .hill-2, .flagpole { display: none; }
-  }
-  @media (max-width: 420px) {
-    .grid { grid-template-columns: 1fr; }
-  }
+  @media (prefers-reduced-motion: reduce) { .a-polle { animation: none; left: 8%; } .a-polle > span { animation: none; } .card:hover .stage .sd-sprite { animation: none; } }
 </style>
 </head>
-<body>
-
+<body data-sd-home>
   <header class="site">
     <div class="wrap topbar">
-      <div class="logo">
-        <span class="flag" aria-hidden="true"></span>
-        <span>Danish Learning Games<small>Interactive practice collection</small></span>
-      </div>
+      <a class="logo" href="./" aria-label="Sjovt Dansk — forside" data-sd-nofx>
+        <span data-sd-sprite="polle" data-scale="3" aria-hidden="true"></span>
+        <span><span class="wm">SJOVT <b>DANSK</b></span><span class="dom">sjovtdansk.dk</span></span>
+      </a>
       <span class="spacer"></span>
-      <button class="theme-btn" id="themeBtn" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <button class="theme-btn" id="themeBtn" title="Skift mellem lys og mørk" aria-label="Skift mellem lys og mørk tilstand" aria-pressed="false">MØRK</button>
     </div>
   </header>
 
-  <main class="wrap">
-
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="cloud cloud-1"></span>
-        <span class="cloud cloud-2"></span>
-        <span class="hill hill-1"></span>
-        <span class="hill hill-2"></span>
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero-in">
+        <span class="kicker">12 SPIL · A1–C1</span>
+        <h1 id="h1">Lær dansk <em>ved at spille</em></h1>
+        <p>Ordforråd, grammatik og vendinger i små, hurtige spil. Vælg et spil, tryk på knappen — og kom i gang på under ét sekund.</p>
+        <a class="sd-btn sd-btn--ink sd-btn--lg" href="#spil" data-sd-nofx>Vælg spil ▼</a>
+      </div>
+      <div class="hero-scene" aria-hidden="true">
+        <span class="cloud c1" data-sd-sprite="stjerne" data-scale="4"></span>
+        <span class="cloud c2" data-sd-sprite="hjerte" data-scale="3"></span>
+        <span class="actor a-mill"  data-sd-sprite="molle" data-scale="5"></span>
+        <span class="actor a-bike"  data-sd-sprite="cykel" data-scale="5"></span>
+        <span class="actor a-flag"  data-sd-sprite="flag"  data-scale="4"></span>
+        <span class="actor a-snegl" data-sd-sprite="snegl" data-scale="4"></span>
+        <span class="actor a-polle"><span data-sd-sprite="polle" data-scale="6"></span></span>
         <span class="ground"></span>
-        <span class="flagpole"><span class="flag"></span></span>
       </div>
-      <h1>Learn Danish by playing</h1>
     </section>
 
-    <!-- Search -->
-    <section class="controls">
-      <label class="search">
-        <span class="ico">🔍</span>
-        <input id="search" type="search" placeholder="Search games by title or description…" autocomplete="off" aria-label="Search games" />
-      </label>
+    <section class="controls" id="spil" aria-label="Find et spil">
+      <div class="search">
+        <label for="search">Søg efter spil</label>
+        <input id="search" class="sd-input" type="search" placeholder="fx verber, præpositioner …" autocomplete="off" />
+      </div>
+      <div class="count" id="allCount" aria-live="polite"></div>
     </section>
 
-    <!-- Games -->
-    <section>
-      <div class="section-head"><h2>Games</h2><span class="count" id="allCount"></span></div>
+    <section aria-label="Spil">
       <div class="grid" id="games"></div>
-      <div class="empty" id="empty" hidden>
-        <div class="big">🔎</div>
-        <p>No games match your search. Try a different word.</p>
+      <div class="empty sd-panel" id="empty" hidden>
+        <span data-sd-sprite="hat" data-scale="6"></span>
+        <p class="sd-text">Ingen spil matcher din søgning. Prøv et andet ord.</p>
       </div>
     </section>
-
   </main>
 
   <footer class="site">
     <div class="wrap">
-      <p>Danish Learning Games</p>
+      <span data-sd-sprite="flag" data-scale="2"></span>
+      <b>SJOVT <i>DANSK</i></b>
+      <span>sjovtdansk.dk — øv dig lidt hver dag.</span>
     </div>
   </footer>
 
 <script>
 /* ===========================================================================
-   1) GAME DATA  —  👉 EDIT THIS ARRAY TO ADD / CHANGE GAMES
-   ---------------------------------------------------------------------------
-   Each game is one object:
-     {
-       title:       "Game name shown on the card",
-       description: "One short sentence describing the game.",
-       category:    "Vocabulary" | "Grammar" | "Phrases" | "Verbs" | "Prepositions" | "Antonyms",
-       level:       "A1" | "A2" | "B1" | "B2"  (or a range like "B1–B2"),
-       type:        "Vocabulary" / "Grammar" / ... (free label shown as a badge),
-       url:         "./folder/file.html"   <-- RELATIVE path to the game (see note),
-       emoji:       "🎯"  (optional icon on the card),
-       recommended: true   (optional — shows the game in the Recommended section)
-     }
-
-   📁 PATHS: links are RELATIVE to this index.html, so the whole folder works
-   on any server path. When you rename or move a game, update its "url" here.
+   GAME DATA — add / change games here. Links are relative to this file.
+   sprite: one of Sjovt.sprites (polle, snegl, molle, cykel, stjerne, hjerte, pokal, hat, flag)
    =========================================================================== */
 const games = [
-  {
-    title: "Danske Antonymer",
-    description: "Practice common Danish antonyms through interactive quiz exercises and match-up rounds.",
-    category: "Antonyms",
-    level: "B1–B2",
-    type: "Vocabulary",
-    url: "./danish-antonyms-game.html",   // 👈 update path if you rename the file
-    emoji: "🔁",
-    recommended: true
-  },
-  {
-    title: "Verb-glosekort",
-    description: "Flip through Danish verbs and drill their forms with a fast, focused flashcard trainer.",
-    category: "Verbs",
-    level: "A2–B1",
-    type: "Verbs",
-    url: "./danish_flashcards/danish_flashcards_game/index.html",
-    emoji: "🃏",
-    recommended: true
-  },
-  {
-    title: "Magiske Verber",
-    description: "Train Danish verb conjugation across tenses in a playful, game-style workout.",
-    category: "Verbs",
-    level: "A2–B1",
-    type: "Verbs",
-    url: "./magiske_verber.html",
-    emoji: "✨"
-  },
-  {
-    title: "Præpositionstest",
-    description: "Master tricky Danish prepositions (i, på, til, af …) with targeted practice questions.",
-    category: "Prepositions",
-    level: "A2–B1",
-    type: "Grammar",
-    url: "./dansk-praepositioner.html",
-    emoji: "📍",
-    recommended: true
-  },
-  {
-    title: "Dansk Mester — Frasebygger",
-    description: "Build and learn everyday Danish phrases step by step, from greetings to small talk.",
-    category: "Phrases",
-    level: "A1–A2",
-    type: "Phrases",
-    url: "./danske-phraser/dansk-mester.html",
-    emoji: "💬"
-  },
-  {
-    title: "En/Et-træner",
-    description: "Stop guessing noun gender — practice en- and et-words until they feel automatic.",
-    category: "Grammar",
-    level: "A1–A2",
-    type: "Grammar",
-    url: "./en%20og%20et/index.html",
-    emoji: "🎲",
-    recommended: true
-  },
-  {
-    title: "Konjunktionsknus",
-    description: "Connect Danish sentences with the right conjunctions in a fast match-and-clear game.",
-    category: "Grammar",
-    level: "B1",
-    type: "Grammar",
-    url: "./konjunktioner/konjunktioner.html",
-    emoji: "🍬"
-  },
-  {
-    title: "Ordstillingsdetektiven",
-    description: "Crack Danish sentence structure and the V2 rule by reordering scrambled sentences.",
-    category: "Grammar",
-    level: "B1–B2",
-    type: "Grammar",
-    url: "./ordstilling-detektiv/index.html",
-    emoji: "🕵️"
-  },
-  {
-    title: "Forbindenor — Gitterprotokol",
-    description: "A word-connection grid puzzle: link related Danish words against the clock.",
-    category: "Vocabulary",
-    level: "B1",
-    type: "Vocabulary",
-    url: "./forbindenor/Forbindenor.html",
-    emoji: "🧩"
-  },
-  {
-    title: "Idiomjægeren",
-    description: "Hunt down Danish idioms and learn what they really mean in a treasure-hunt quiz.",
-    category: "Phrases",
-    level: "B2",
-    type: "Phrases",
-    url: "./idiomjaeger.html",
-    emoji: "🎯"
-  },
-  {
-    title: "Bøjningsværkstedet",
-    description: "Bend the whole Danish noun phrase — plural forms, definiteness, adjective agreement, comparison and quantifiers.",
-    category: "Grammar",
-    level: "A1–B2",
-    type: "Grammar",
-    url: "./boejningsvaerkstedet/index.html",
-    emoji: "🛠️",
-    recommended: true
-  }
+  { title: "Danske Antonymer", description: "Øv modsætningsord med quiz og par-spil.", level: "B1–B2", type: "Ordforråd",
+    url: "./danish-antonyms-game.html", sprite: "stjerne" },
+  { title: "Verb-glosekort", description: "Vend kortene og lær danske verbers former.", level: "A2–B1", type: "Verber",
+    url: "./danish_flashcards/danish_flashcards_game/index.html", sprite: "cykel" },
+  { title: "Magiske Verber", description: "Træn bøjning af verber i alle tider.", level: "A2–B1", type: "Verber",
+    url: "./magiske_verber.html", sprite: "hjerte" },
+  { title: "Præpositions-Mester", description: "Slå de drilske småord: i, på, til, af …", level: "A2–B1", type: "Grammatik",
+    url: "./dansk-praepositioner.html", sprite: "molle" },
+  { title: "Dansk Mester", description: "Lær hverdagsvendinger — fra hilsner til småsnak.", level: "A1–A2", type: "Vendinger",
+    url: "./danske-phraser/dansk-mester.html", sprite: "polle" },
+  { title: "En/Et-træner", description: "Stop med at gætte: lær hvilke ord der er en- og et-ord.", level: "A1–A2", type: "Grammatik",
+    url: "./en%20og%20et/index.html", sprite: "flag" },
+  { title: "Konjunktion Crush", description: "Bind sætninger sammen med de rigtige konjunktioner.", level: "B1", type: "Grammatik",
+    url: "./konjunktioner/konjunktioner.html", sprite: "snegl" },
+  { title: "Ordstillingsdetektiven", description: "Knæk V2-reglen ved at sætte rodede sætninger i orden.", level: "B1–B2", type: "Grammatik",
+    url: "./ordstilling-detektiv/index.html", sprite: "hat" },
+  { title: "Forbindeord", description: "Gitterpuslespil: forbind ordene mod uret.", level: "B1", type: "Ordforråd",
+    url: "./forbindenor/Forbindenor.html", sprite: "cykel" },
+  { title: "Idiomjægeren", description: "Jagt på danske idiomer — og hvad de egentlig betyder.", level: "B2", type: "Vendinger",
+    url: "./idiomjaeger.html", sprite: "pokal" },
+  { title: "Bøjningsværkstedet", description: "Bøj hele navneleddet: flertal, bestemthed, tillægsord og komparation.", level: "A1–B2", type: "Grammatik",
+    url: "./boejningsvaerkstedet/index.html", sprite: "molle" },
+  { title: "Adverbier & Konnektorer", description: "Byg danske sætninger med adverbier og bindeord.", level: "B1–B2", type: "Grammatik",
+    url: "./adverbs.html", sprite: "stjerne" }
 ];
 
-/* ===========================================================================
-   2) RENDER LOGIC — usually no need to edit below this line
-   =========================================================================== */
-const $ = (sel) => document.querySelector(sel);
+const $ = (s) => document.querySelector(s);
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 let searchTerm = "";
 
-// ---- One card's HTML ----
 function cardHTML(g) {
   return `
-    <a class="card" href="${g.url}" aria-label="Open ${g.title}">
-      <div class="row">
-        <span class="emoji">${g.emoji || "🎮"}</span>
-        <div class="badges">
-          <span class="badge type">${g.type}</span>
-          <span class="badge level">${g.level}</span>
-        </div>
+    <a class="sd-card card" href="${g.url}" aria-label="Åbn ${esc(g.title)}">
+      <div class="stage">
+        <span class="sd-badge sd-badge--cream lvl">${esc(g.level)}</span>
+        ${Sjovt.spriteSVG(g.sprite, 7).replace("<svg", '<svg class="spr"')}
       </div>
-      <h3>${g.title}</h3>
-      <p class="desc">${g.description}</p>
-      <span class="open">Open Game →</span>
+      <div class="body">
+        <h3>${esc(g.title)}</h3>
+        <div class="tags"><span class="sd-badge">${esc(g.type)}</span></div>
+        <p class="desc">${esc(g.description)}</p>
+        <span class="sd-btn sd-btn--sm open">Spil →</span>
+      </div>
     </a>`;
 }
-
-// ---- Render the games grid ----
 function renderGames() {
   const term = searchTerm.trim().toLowerCase();
-  const list = games.filter(g => !term ||
-    g.title.toLowerCase().includes(term) ||
-    g.description.toLowerCase().includes(term));
-
+  const list = games.filter(g => !term || (g.title + " " + g.description + " " + g.type).toLowerCase().includes(term));
   $("#games").innerHTML = list.map(cardHTML).join("");
-  $("#allCount").textContent = list.length + (list.length === 1 ? " game" : " games");
+  document.querySelectorAll("#games .stage > svg").forEach(s => { const w = document.createElement("span"); w.className = "sd-sprite"; s.replaceWith(w); w.appendChild(s); });
+  $("#allCount").textContent = list.length + (list.length === 1 ? " spil" : " spil");
   $("#empty").hidden = list.length !== 0;
 }
+$("#search").addEventListener("input", (e) => { searchTerm = e.target.value; renderGames(); });
 
-// ---- Search box ----
-$("#search").addEventListener("input", (e) => {
-  searchTerm = e.target.value;
-  renderGames();
-});
-
-// ---- Dark mode toggle (remembers choice for the session) ----
+/* Light / dark (follows the OS until the user chooses; choice kept for the session) */
 const themeBtn = $("#themeBtn");
-function setTheme(mode) {
-  document.documentElement.setAttribute("data-theme", mode);
-  themeBtn.textContent = mode === "dark" ? "☀️" : "🌙";
+function isDark() {
+  const c = document.documentElement.getAttribute("data-theme");
+  return c === "dark" || (c !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 }
+function paintTheme() { const d = isDark(); themeBtn.textContent = d ? "LYS" : "MØRK"; themeBtn.setAttribute("aria-pressed", String(d)); }
 themeBtn.addEventListener("click", () => {
-  const current = document.documentElement.getAttribute("data-theme");
-  const isDark = current === "dark" ||
-    (current !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-  setTheme(isDark ? "light" : "dark");
+  document.documentElement.setAttribute("data-theme", isDark() ? "light" : "dark"); paintTheme();
 });
-
-// ---- Init ----
+paintTheme();
 renderGames();
 </script>
 </body>
