@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bøjningsværkstedet 🛠️</title>
+<title>Bøjningsværkstedet</title>
 <style>
   /* ---- Bøjningsværkstedet — parchment/brass bookbinding workshop ----
      Palette (prd.md § 2.2): Parchment #E8DDC4, Dark parchment #2B2925,
@@ -310,18 +310,21 @@
     .primary:active{transform:none}
   }
 </style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<script src="../shared/sjovt.js"></script>
+<link rel="stylesheet" href="../shared/themes/boejningsvaerkstedet.css">
 </head>
 <body>
 <div class="shell">
   <header class="topbar">
-    <div class="brand">🛠️ Bøjningsværkstedet</div>
-    <button class="icon-btn" id="btn-dark" type="button" aria-label="Skift mørk tilstand" title="Mørk tilstand">🌙</button>
-    <button class="icon-btn" id="btn-sound" type="button" aria-label="Slå lyd til eller fra" title="Lyd">🔊</button>
+    <div class="brand"><span data-sd-sprite="molle" data-scale="3" aria-hidden="true"></span> Bøjningsværkstedet</div>
+    <button class="icon-btn" id="btn-dark" type="button" aria-label="Skift mørk tilstand" title="Mørk tilstand">MØRK</button>
+    <button class="icon-btn" id="btn-sound" type="button" aria-label="Slå lyd til eller fra" title="Lyd">LYD</button>
   </header>
 
   <!-- ================= START SCREEN ================= -->
   <main id="start-screen" class="card">
-    <h1 class="title">Bøjningsværkstedet</h1>
+    <h1 class="title"><span data-sd-sprite="polle" data-scale="5" class="sd-bob" aria-hidden="true"></span> Bøjningsværkstedet</h1>
     <p class="lede">Bøj hele navneordsgruppen — former, artikler, tillægsord og mængder.</p>
 
     <div class="group-label">Vælg værksted</div>
@@ -458,7 +461,7 @@
     if (on) SOUND.select();
   });
   function syncSoundIcon(){
-    document.getElementById('btn-sound').textContent = DC.ui.sound.isEnabled() ? '🔊' : '🔇';
+    document.getElementById('btn-sound').textContent = DC.ui.sound.isEnabled() ? 'LYD' : 'LYD ✗';
   }
 
   document.getElementById('btn-play').addEventListener('click', startRound);
@@ -575,7 +578,7 @@
     el.itemHost.innerHTML = '';
     var box = document.createElement('div');
     box.className = 'empty-state';
-    box.innerHTML = '<span class="big">🛠️</span>' +
+    box.innerHTML = '<span class="big"><span data-sd-sprite="hat" data-scale="6" aria-hidden="true"></span></span>' +
       '<p>Denne tilstand er endnu ikke klar. Prøv <strong>Fire former</strong>.</p>';
     var back = document.createElement('button');
     back.className = 'btn accent';
@@ -584,6 +587,7 @@
     back.addEventListener('click', showStart);
     box.appendChild(back);
     el.itemHost.appendChild(box);
+    if (window.Sjovt) window.Sjovt.hydrate(box);
     back.focus();
   }
 
@@ -1125,6 +1129,7 @@
           blank.classList.add(correct ? 'done-correct' : 'done-wrong');
         }
         recordAnswer(item, correct, patternKey);
+        sdFx(correct, buttons[i]);
         if (correct){
           SOUND.correct();
           if (!DC.ui.motion.isReduced()) ctx.classList.add('press');
@@ -1157,6 +1162,7 @@
   // line and the TTS replay button). noteText: one grammar note.
   function buildSlip(host, correct, solutionText, noteText, onNext){
     host.innerHTML = '';
+    sdFx(correct, host);
     var slip = document.createElement('div');
     slip.className = 'slip ' + (correct ? 'correct' : 'wrong');
 
@@ -1165,6 +1171,11 @@
       sol.innerHTML = 'Rigtigt svar: <span class="sol bad">' +
         escapeHtml(solutionText || '') + '</span>';
       slip.appendChild(sol);
+    }
+    if (correct){
+      var okl = document.createElement('div');
+      okl.innerHTML = '<span class="sol ok">Rigtigt!</span>';
+      slip.appendChild(okl);
     }
     if (noteText){
       var note = document.createElement('div');
@@ -1277,6 +1288,15 @@
 
     el.sumHost.appendChild(actions);
     again.focus();
+    // celebration + mascot (visual only)
+    var S = window.Sjovt;
+    if (S){
+      var mascot = S.sprite(acc >= 50 ? 'pokal' : 'polle', { scale: 6, cls: acc >= 50 ? 'sd-hop' : 'sd-bob' });
+      mascot.className += ' sum-mascot';
+      el.sumHost.insertBefore(mascot, el.sumHost.firstChild);
+      if (state.correct > 0) S.fx.celebrate();
+      S.fx.bump(stats.firstChild.firstChild);
+    }
   }
 
   function uniqueMissed(){
@@ -1322,8 +1342,14 @@
     var a = document.createElement('a');
     a.className = 'xgame';
     a.href = '../en og et/index.html';
-    a.textContent = '🔎 Problemer med navneordsformer? → En/Et-træner';
+    a.textContent = '→ Problemer med navneordsformer? → En/Et-træner';
     return a;
+  }
+
+  // ---- Sjovt Dansk visual hooks (additive; no game logic) ----
+  function sdFx(correct, node){
+    var S = window.Sjovt; if (!S || !node) return;
+    if (correct) S.fx.correct(node); else S.fx.wrong(node);
   }
 
   // ---- helpers ----
@@ -1342,6 +1368,7 @@
 
   // ---- boot ----
   buildStartControls();
+  if (window.Sjovt) window.Sjovt.watchScreens('#start-screen, #play-screen, #summary-screen');
 })();
 </script>
 </body>

@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Magiske Verber — Dansk Verbumtræning</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Cinzel+Decorative:wght@700;900&family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=MedievalSharp&display=swap');
-
 :root{
   --bg:#0b1020;
   --bg2:#161a33;
@@ -46,7 +44,7 @@ body::before{
   position:fixed; inset:0; z-index:-2;
   background:
     linear-gradient(180deg, rgba(6,9,20,.55) 0%, rgba(6,9,20,.72) 55%, rgba(4,6,14,.92) 100%),
-    url('hogwarts.jpg') center 20% / cover no-repeat;
+    none;
   filter:saturate(1.05) contrast(1.02);
 }
 /* Soft vignette + moonlight bloom on top of the photo */
@@ -219,15 +217,14 @@ h1{
 .badge{display:inline-block;background:#1c2348;border:1px solid var(--gold);color:var(--gold2);border-radius:999px;padding:3px 10px;font-size:12px;margin:3px;font-family:var(--heading)}
 .back-link{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:var(--muted);font-size:14px;margin-bottom:8px}
 .back-link:hover{color:var(--gold2)}
-.dsg-home{position:fixed;top:14px;right:14px;z-index:999999;display:inline-flex;align-items:center;gap:6px;background:rgba(20,20,30,.62);color:#fff;text-decoration:none;font:700 .85rem 'Segoe UI',system-ui,sans-serif;padding:9px 16px;border-radius:999px;backdrop-filter:blur(4px);box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
-.dsg-home:hover{transform:translateY(-2px);background:rgba(20,20,30,.8)}
 </style>
+<link rel="stylesheet" href="shared/sjovt.css">
+<script src="shared/sjovt.js"></script>
+<link rel="stylesheet" href="shared/themes/magiske-verber.css">
 </head>
 <body>
-<a class="dsg-home" href="index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
-<div class="stars" id="stars"></div>
 <div class="wrap">
-  <div class="crest"><span class="spark">✦ ⚡ ✦</span></div>
+  <div class="crest"><span class="spark sd-bob" data-sd-sprite="hat" data-scale="6" aria-hidden="true"></span></div>
   <h1>Magiske Verber</h1>
   <p class="subtitle">Trylleskolen for danske udsagnsord · Practise Danish verbs</p>
 
@@ -239,29 +236,29 @@ h1{
     </div>
     <div class="menu-grid" id="menuGrid"></div>
     <div class="row">
-      <button class="btn gold sm" onclick="showStats()">📜 Statistik</button>
-      <button class="btn ghost sm" onclick="startReview()">🪄 Gennemse fejl</button>
-      <button class="btn ghost sm" onclick="resetProgress()">↺ Nulstil</button>
+      <button class="btn gold sm" onclick="showStats()">Statistik</button>
+      <button class="btn ghost sm" onclick="startReview()">Gennemse fejl</button>
+      <button class="btn ghost sm" onclick="resetProgress()">Nulstil</button>
     </div>
     <p class="foot" id="poolInfo"></p>
   </div>
 
   <!-- DIFFICULTY -->
   <div id="screen-diff" class="panel hidden">
-    <span class="back-link" onclick="goMenu()">‹ Tilbage til hovedmenu</span>
+    <button type="button" class="back-link" onclick="goMenu()">‹ Tilbage til hovedmenu</button>
     <h2 class="center title" id="diffTitle" style="color:var(--gold2)"></h2>
     <p class="center" style="color:var(--muted);margin:.2em 0 0" id="diffDesc"></p>
     <div class="diff-grid" id="diffGrid"></div>
-    <div class="row"><button class="btn gold" id="diffStart" onclick="beginGame()">Begynd ⚡</button></div>
+    <div class="row"><button class="btn gold" id="diffStart" onclick="beginGame()">Begynd →</button></div>
   </div>
 
   <!-- GAME -->
   <div id="screen-game" class="panel hidden">
-    <span class="back-link" onclick="quitGame()">‹ Forlad spil</span>
+    <button type="button" class="back-link" onclick="quitGame()">‹ Forlad spil</button>
     <div class="hud">
       <span class="chip" id="hudGame"></span>
       <span class="chip" id="hudProgress"></span>
-      <span class="chip streak">Stime <b id="hudStreak">0</b> 🔥</span>
+      <span class="chip streak">Stime <b id="hudStreak">0</b></span>
       <span class="chip timer-chip hidden" id="hudTimerChip">Tid <b id="hudTimer">60</b>s</span>
     </div>
     <div class="bar-wrap"><div class="bar"><i id="gameBar"></i></div></div>
@@ -270,12 +267,12 @@ h1{
       <div class="fb-h" id="fbHead"></div>
       <div class="fb-ex" id="fbExplain"></div>
     </div>
-    <div class="row hidden" id="nextRow"><button class="btn gold" id="nextBtn" onclick="nextQuestion()">Næste ⚡</button></div>
+    <div class="row hidden" id="nextRow"><button class="btn gold" id="nextBtn" onclick="nextQuestion()">Næste →</button></div>
   </div>
 
   <!-- RESULT -->
   <div id="screen-result" class="panel hidden center">
-    <div class="crest"><span class="spark">🏆</span></div>
+    <div class="crest"><span class="spark sd-hop" data-sd-sprite="pokal" data-scale="8" aria-hidden="true"></span></div>
     <h2 class="title" style="color:var(--gold2)" id="resTitle">Runde fuldført!</h2>
     <div class="stat-grid" style="grid-template-columns:1fr 1fr 1fr;margin-top:14px">
       <div class="stat"><div class="sv" id="resScore">0</div><div class="sl">Rigtige</div></div>
@@ -284,16 +281,16 @@ h1{
     </div>
     <div id="resBadges" style="margin-top:14px"></div>
     <div class="row">
-      <button class="btn gold" onclick="replaySame()">Spil igen ⚡</button>
+      <button class="btn gold" onclick="replaySame()">Spil igen →</button>
       <button class="btn ghost" onclick="goMenu()">Hovedmenu</button>
-      <button class="btn" onclick="showStats()">Statistik 📜</button>
+      <button class="btn" onclick="showStats()">Statistik</button>
     </div>
   </div>
 
   <!-- STATS -->
   <div id="screen-stats" class="panel hidden">
-    <span class="back-link" onclick="goMenu()">‹ Tilbage til hovedmenu</span>
-    <h2 class="center title" style="color:var(--gold2)">📜 Din Tryllebog</h2>
+    <button type="button" class="back-link" onclick="goMenu()">‹ Tilbage til hovedmenu</button>
+    <h2 class="center title" style="color:var(--gold2)">Din Tryllebog</h2>
     <div class="stat-grid">
       <div class="stat"><div class="sv" id="stAcc">0%</div><div class="sl">Samlet præcision</div></div>
       <div class="stat"><div class="sv" id="stTotal">0</div><div class="sl">Spørgsmål i alt</div></div>
@@ -304,19 +301,19 @@ h1{
     <div class="section-h">Mestring pr. niveau</div>
     <div id="masteryBox"></div>
 
-    <div class="section-h">⚠️ Svageste verber</div>
+    <div class="section-h">Svageste verber</div>
     <div class="verb-tags" id="weakBox"><span style="color:var(--muted)">Endnu ingen data — spil lidt først.</span></div>
 
-    <div class="section-h">⭐ Stærkeste verber</div>
+    <div class="section-h">Stærkeste verber</div>
     <div class="verb-tags" id="strongBox"><span style="color:var(--muted)">Endnu ingen data.</span></div>
 
     <div class="row">
-      <button class="btn gold" onclick="startReview()">🪄 Gennemse fejl (<span id="missCount">0</span>)</button>
+      <button class="btn gold" onclick="startReview()">Gennemse fejl (<span id="missCount">0</span>)</button>
       <button class="btn ghost" onclick="goMenu()">Hovedmenu</button>
     </div>
   </div>
 
-  <p class="foot">Magiske Verber · Lavet til danske verbumtrollinger ⚡ · Fremskridt gemmes lokalt på din enhed</p>
+  <p class="foot">Magiske Verber · Lavet til danske verbumtrollinger · Fremskridt gemmes lokalt på din enhed</p>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -677,6 +674,7 @@ Object.keys(V).forEach(inf=>{
 });
 
 /* ---------- GAME METADATA ---------- */
+const GAME_SPR = {arena:'hat',timemachine:'snegl',perfect:'cykel',irregular:'hjerte',repair:'molle',detective:'flag',speed:'stjerne',mixed:'pokal'};
 const GAMES = {
   arena:       {n:'Verb Form Arena',     ico:'⚔️', d:'Vælg den rigtige verbumform i sætningen.'},
   timemachine: {n:'Time Machine Challenge',ico:'⏳', d:'Sætningen skifter tid — vælg den rigtige form.'},
@@ -688,6 +686,7 @@ const GAMES = {
   mixed:       {n:'Mixed Verb Review',   ico:'🎲', d:'Tilfældige spørgsmål fra alle spil og tider.'}
 };
 const GAME_ORDER = ['arena','timemachine','perfect','irregular','repair','detective','speed','mixed'];
+const DIFF_SPR = {easy:'snegl',medium:'cykel',hard:'molle'};
 const DIFFS = {
   easy:  {n:'Nem',    lvl:1, sym:'🪶', label:'A1'},
   medium:{n:'Mellem', lvl:2, sym:'🔮', label:'A2 / B1'},
@@ -713,10 +712,12 @@ let S = null; // current round
 
 /* ---------- DOM helpers ---------- */
 const $ = id => document.getElementById(id);
+function spr(n,sc,cls){ return window.Sjovt?'<span class="sd-sprite '+(cls||"")+'">'+Sjovt.spriteSVG(n,sc||3)+'</span>':""; }
 function showScreen(name){
   ['menu','diff','game','result','stats'].forEach(s=>$('screen-'+s).classList.add('hidden'));
   $('screen-'+name).classList.remove('hidden');
   $('screen-'+name).classList.remove('fadein'); void $('screen-'+name).offsetWidth; $('screen-'+name).classList.add('fadein');
+  if(window.Sjovt) Sjovt.fx.enter($('screen-'+name));
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
@@ -750,8 +751,8 @@ function speakerBtn(text, cls){
   const b = document.createElement('button');
   b.className = 'speaker ' + (cls||'');
   b.type = 'button';
-  b.textContent = '🔊';
-  b.setAttribute('aria-label','Pronounce');
+  b.textContent = '▶';
+  b.setAttribute('aria-label','Udtal sætningen');
   b.addEventListener('click', e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -764,12 +765,13 @@ function buildMenu(){
     const done = P.completed[key] ? ' ✓' : '';
     const card = document.createElement('div');
     card.className='game-card';
+    card.setAttribute('role','button'); card.tabIndex=0;
     card.onclick=()=>openDiff(key);
-    card.innerHTML=`<div class="ico">${g.ico}</div><div><div class="gc-t">${g.n}${done?'<span style="color:#7be0a0">'+done+'</span>':''}</div><div class="gc-d">${g.d}</div></div>`;
+    card.innerHTML=`<div class="ico">${spr(GAME_SPR[key],4)}</div><div><div class="gc-t">${g.n}${done?'<span class="gc-done">'+done+'</span>':''}</div><div class="gc-d">${g.d}</div></div>`;
     grid.appendChild(card);
   });
   updateMenuBar();
-  $('poolInfo').textContent = `📚 ${QUESTIONS.length} spørgsmål · ${Object.keys(V).length} verber · nutid, datid & førnutid`;
+  $('poolInfo').textContent = `${QUESTIONS.length} spørgsmål · ${Object.keys(V).length} verber · nutid, datid & førnutid`;
 }
 function overallMastery(){
   let t=0,c=0; for(const d of ['easy','medium','hard']){ t+=P.perDiff[d].t; c+=P.perDiff[d].c; }
@@ -787,15 +789,16 @@ function openDiff(gameKey){
   pendingGame = gameKey;
   selectedDiff = selectedDiff || 'easy';
   const g = GAMES[gameKey];
-  $('diffTitle').textContent = `${g.ico} ${g.n}`;
+  $('diffTitle').innerHTML = spr(GAME_SPR[gameKey],4)+' <span></span>'; $('diffTitle').lastElementChild.textContent = g.n;
   $('diffDesc').textContent = g.d;
   const grid = $('diffGrid'); grid.innerHTML='';
   Object.keys(DIFFS).forEach(dk=>{
     const d = DIFFS[dk];
     const el = document.createElement('div');
     el.className='diff'+(selectedDiff===dk?' active':'');
-    el.onclick=()=>{ selectedDiff=dk; document.querySelectorAll('.diff').forEach(x=>x.classList.remove('active')); el.classList.add('active'); };
-    el.innerHTML=`<div class="ds">${d.sym}</div><div class="dn">${d.n}</div><div class="dl">${d.label}</div>`;
+    el.setAttribute('role','button'); el.tabIndex=0; el.setAttribute('aria-pressed',selectedDiff===dk?'true':'false');
+    el.onclick=()=>{ selectedDiff=dk; document.querySelectorAll('.diff').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false');}); el.classList.add('active'); el.setAttribute('aria-pressed','true'); };
+    el.innerHTML=`<div class="ds">${spr(DIFF_SPR[dk],4)}</div><div class="dn">${d.n}</div><div class="dl">${d.label}</div>`;
     grid.appendChild(el);
   });
   showScreen('diff');
@@ -837,7 +840,7 @@ function startRound(gameKey, diffKey, isReview){
     timeLeft:60, timer:null, locked:false
   };
   $('hudTimerChip').classList.toggle('hidden', !S.speed);
-  $('hudGame').textContent = (isReview?'🪄 Gennemse fejl':(GAMES[gameKey].ico+' '+GAMES[gameKey].n));
+  $('hudGame').textContent = (isReview?'Gennemse fejl':GAMES[gameKey].n);
   if(S.speed){ startTimer(); }
   showScreen('game');
   renderQuestion();
@@ -874,7 +877,7 @@ function renderQuestion(){
   const opts = $('opts');
   q.options.forEach((opt,i)=>{
     const b=document.createElement('div');
-    b.className='opt'; b.textContent=opt;
+    b.className='opt'; b.textContent=opt; b.setAttribute('role','button'); b.tabIndex=0;
     b.onclick=()=>answer(i,b);
     opts.appendChild(b);
   });
@@ -898,7 +901,7 @@ function answer(i, el){
   recordResult(q, correct);
   if(correct){
     S.correct++; S.streak++; if(S.streak>S.bestStreak) S.bestStreak=S.streak;
-    if(S.streak>0 && S.streak%5===0) toast('🔥 '+S.streak+' i træk!');
+    if(S.streak>0 && S.streak%5===0) toast('★ '+S.streak+' i træk!');
   } else {
     S.streak=0;
   }
@@ -907,8 +910,12 @@ function answer(i, el){
   // feedback
   const fb=$('feedback'); const fbh=$('fbHead'); const fbx=$('fbExplain');
   fb.className='feedback show '+(correct?'ok':'no');
-  fbh.textContent = correct? pick(OK_MSGS) : pick(NO_MSGS);
-  fbx.textContent = correct ? q.explanation : ('❌ ' + q.explanation);
+  fbh.textContent = (correct? '✓ ':'✗ ') + (correct? pick(OK_MSGS) : pick(NO_MSGS));
+  fbx.textContent = q.explanation;
+  if(window.Sjovt){
+    if(correct){ Sjovt.fx.correct(opts[q.correct]); Sjovt.fx.bump($('hudStreak')); }
+    else { Sjovt.fx.wrong(el); Sjovt.fx.enter(fb); }
+  }
 
   if(S.speed){
     // brief pause then auto-advance
@@ -916,7 +923,7 @@ function answer(i, el){
   } else {
     $('nextRow').classList.remove('hidden');
     const last = (S.idx >= S.queue.length-1);
-    $('nextBtn').textContent = last ? 'Se resultat 🏆' : 'Næste ⚡';
+    $('nextBtn').textContent = last ? 'Se resultat →' : 'Næste →';
   }
 }
 
@@ -961,16 +968,17 @@ function endRound(){
   $('resScore').textContent = S.correct + (S.speed? '':' / '+S.answered);
   $('resAcc').textContent = acc+'%';
   $('resStreak').textContent = S.bestStreak;
-  $('resTitle').textContent = S.review ? 'Gennemgang fuldført!' : (S.speed? 'Tiden er gået! ⚡':'Runde fuldført!');
+  $('resTitle').textContent = S.review ? 'Gennemgang fuldført!' : (S.speed? 'Tiden er gået!':'Runde fuldført!');
   // badges
   const badges=[];
-  if(acc===100 && S.answered>=5) badges.push('🏅 Perfekt runde');
-  if(S.bestStreak>=8) badges.push('🔥 Stime på '+S.bestStreak);
-  if(S.speed) badges.push('⚡ '+S.correct+' på 60 sek');
-  if(acc>=80) badges.push('✨ Troldmandsniveau');
+  if(acc===100 && S.answered>=5) badges.push('★ Perfekt runde');
+  if(S.bestStreak>=8) badges.push('★ Stime på '+S.bestStreak);
+  if(S.speed) badges.push('★ '+S.correct+' på 60 sek');
+  if(acc>=80) badges.push('★ Troldmandsniveau');
   $('resBadges').innerHTML = badges.map(b=>`<span class="badge">${b}</span>`).join('');
   updateMenuBar();
   showScreen('result');
+  if(window.Sjovt) Sjovt.fx.celebrate();
 }
 function replaySame(){
   if(S.review){ startReview(); return; }
@@ -984,7 +992,7 @@ function buildReviewQueue(){
   return shuffle(QUESTIONS.filter(q=>ids.has(q.id))).slice(0,15);
 }
 function startReview(){
-  if(P.mistakes.length===0){ toast('Ingen fejl at gennemse — flot! ✨'); return; }
+  if(P.mistakes.length===0){ toast('Ingen fejl at gennemse — flot!'); return; }
   startRound(null, null, true);
 }
 
@@ -1000,7 +1008,7 @@ function showStats(){
   const mb=$('masteryBox'); mb.innerHTML='';
   ['easy','medium','hard'].forEach(dk=>{
     const d=P.perDiff[dk]; const pct=d.t?Math.round(d.c/d.t*100):0;
-    mb.innerHTML+=`<div class="mastery-row"><span class="ml">${DIFFS[dk].sym} ${DIFFS[dk].n}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="mp">${pct}%</span></div>`;
+    mb.innerHTML+=`<div class="mastery-row"><span class="ml">${spr(DIFF_SPR[dk],2)} ${DIFFS[dk].n}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="mp">${pct}%</span></div>`;
   });
   // weakest / strongest verbs
   const arr = Object.keys(P.perVerb).map(k=>{
@@ -1021,18 +1029,11 @@ function resetProgress(){
   }
 }
 
-/* ---------- STARS ---------- */
-(function(){
-  const s=$('stars'); let html='';
-  for(let i=0;i<70;i++){
-    const x=Math.random()*100, y=Math.random()*100, d=(Math.random()*3).toFixed(2), sz=(Math.random()*1.6+0.6).toFixed(1);
-    html+=`<div class="star" style="left:${x}%;top:${y}%;width:${sz}px;height:${sz}px;animation-delay:${d}s"></div>`;
-  }
-  s.innerHTML=html;
-})();
-
 /* ---------- KEYBOARD ---------- */
 document.addEventListener('keydown',e=>{
+  /* keyboard-operable custom buttons (cards, options, difficulty) */
+  if((e.key==='Enter'||e.key===' ') && e.target && e.target.getAttribute && e.target.getAttribute('role')==='button'){ e.preventDefault(); e.target.click(); return; }
+  if(e.target && e.target.tagName==='BUTTON') return;   /* native buttons activate themselves */
   if($('screen-game').classList.contains('hidden')) return;
   if(['1','2','3'].includes(e.key)){
     const opts=document.querySelectorAll('.opt'); const i=+e.key-1;
@@ -1045,7 +1046,6 @@ document.addEventListener('keydown',e=>{
 /* ---------- INIT ---------- */
 buildMenu();
 showScreen('menu');
-console.log('Magiske Verber loaded. Questions:', QUESTIONS.length);
 </script>
 </body>
 </html>

@@ -206,16 +206,16 @@ footer{text-align:center;color:rgba(255,255,255,.85);font-size:.72rem;margin-top
   .dex h1{font-size:1.05rem}
   .opt{font-size:1.05rem}
 }
-.dsg-home{position:fixed;top:14px;right:14px;z-index:999999;display:inline-flex;align-items:center;gap:6px;background:rgba(20,20,30,.62);color:#fff;text-decoration:none;font:700 .85rem 'Segoe UI',system-ui,sans-serif;padding:9px 16px;border-radius:999px;backdrop-filter:blur(4px);box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
-.dsg-home:hover{transform:translateY(-2px);background:rgba(20,20,30,.8)}
 </style>
+<link rel="stylesheet" href="shared/sjovt.css">
+<script src="shared/sjovt.js"></script>
+<link rel="stylesheet" href="shared/themes/praepositioner.css">
 </head>
 <body>
-<a class="dsg-home" href="index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
 <div class="wrap">
 
   <div class="dex">
-    <div class="dexlight"></div>
+    <span class="dexlight sd-bob" data-sd-sprite="polle" data-scale="5" aria-hidden="true"></span>
     <div>
       <h1>Præpositions-Mester</h1>
       <p>Bliv ekspert i danske præpositioner!</p>
@@ -654,6 +654,8 @@ function clearReviewItem(text){
    ============================================================ */
 function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 function pick(a){ return a[Math.floor(Math.random()*a.length)]; }
+function spr(n,sc,cls){ return (window.Sjovt?'<span class="sd-sprite '+(cls||"")+'">'+Sjovt.spriteSVG(n,sc||4)+'</span>':""); }
+function noEmoji(t){ return String(t).replace(/^[^A-Za-zÆØÅæøå]+/,""); }
 function sample(arr,n){ return shuffle(arr.slice()).slice(0,n); }
 function rand(item){ return JSON.parse(JSON.stringify(item)); }
 function activeLvl(){
@@ -716,8 +718,8 @@ function speakerBtn(text, cls){
   const b = document.createElement("button");
   b.className = "speaker " + (cls||"");
   b.type = "button";
-  b.textContent = "🔊";
-  b.setAttribute("aria-label","Udtal");
+  b.textContent = "▶";
+  b.setAttribute("aria-label","Udtal sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -733,7 +735,7 @@ function burst(x,y){
   }
 }
 function streakPop(n){
-  const d=document.createElement("div");d.className="streakpop";d.textContent="🔥 "+n+" i træk!";
+  const d=document.createElement("div");d.className="streakpop";d.textContent="★ "+n+" i træk!";
   document.body.appendChild(d);
   d.addEventListener("animationend",()=>d.remove());
 }
@@ -756,7 +758,8 @@ function levelInfo(){
 function updateTopBar(){
   const li=levelInfo();
   document.getElementById("lvlText").textContent="Niveau "+li.num+" · "+li.name;
-  document.getElementById("xpText").textContent=prog.xp+" XP";
+  const xe=document.getElementById("xpText"), nx=prog.xp+" XP";
+  if(xe.textContent!==nx){ const first=xe.textContent==="0 XP"&&prog.xp===0; xe.textContent=nx; if(!first && window.Sjovt) Sjovt.fx.bump(xe); }
   document.getElementById("pbarFill").style.width=li.pct+"%";
 }
 
@@ -786,6 +789,7 @@ const MODES=[
   {id:"review", t:"Gentag fejl", d:"Træn dine fejl", e:"🔁", c:"c-slate"},
   {id:"stats", t:"Statistik", d:"Se din fremgang", e:"📊", c:"c-gold"}
 ];
+const MODE_SPR={fill:"polle",mc:"stjerne",drag:"cykel",mistake:"hat",correct:"snegl",trans:"flag",pairs:"hjerte",speed:"molle",review:"snegl",stats:"pokal"};
 function renderMenu(){
   const g=document.getElementById("menuGrid");
   g.innerHTML="";
@@ -794,7 +798,7 @@ function renderMenu(){
     b.className="mode-btn "+m.c;
     let extra="";
     if(m.id==="review"){ extra=' <span style="font-size:.7rem;background:rgba(0,0,0,.18);padding:1px 7px;border-radius:10px">'+prog.reviewQ.length+'</span>'; }
-    b.innerHTML='<span class="emoji">'+m.e+'</span><span class="t">'+m.t+extra+'</span><span class="d">'+m.d+'</span>';
+    b.innerHTML='<span class="emoji">'+spr(MODE_SPR[m.id],4)+'</span><span class="t">'+m.t+extra+'</span><span class="d">'+m.d+'</span>';
     b.onclick=()=>{ if(m.id==="stats") openStats(); else startMode(m.id); };
     g.appendChild(b);
   });
@@ -822,7 +826,7 @@ function exShell(modeLabel, theme, bodyHtml){
         '<span class="qcount">Spørgsmål '+session.n+'</span>'+
       '</div>'+
       '<div class="exhead" style="margin-top:12px">'+
-        '<span class="badge">'+modeLabel+'</span>'+
+        '<span class="badge">'+noEmoji(modeLabel)+'</span>'+
         (theme?'<span class="badge theme">'+theme+'</span>':'')+
       '</div>'+
       bodyHtml+
@@ -834,9 +838,9 @@ function goMenu(){ if(speedTimer){clearInterval(speedTimer);speedTimer=null;} re
 function showFB(ok, item, correctText){
   const fb=document.getElementById("fb");
   fb.className="fb show "+(ok?"good":"bad");
-  let html='<span class="big">'+(ok?"✅ "+goodMsg():"❌ "+badMsg())+'</span>';
+  let html='<span class="big">'+(ok?"✓ "+goodMsg():"✗ "+badMsg())+'</span>';
   if(!ok && correctText){ html+='<div>Rigtigt svar: <span class="corr">'+correctText+'</span></div>'; }
-  if(item && item.ex){ html+='<div style="margin-top:6px">💡 '+item.ex+'</div>'; }
+  if(item && item.ex){ html+='<div style="margin-top:6px"><b class="tipk">TIP</b> '+item.ex+'</div>'; }
   fb.innerHTML=html;
 }
 
@@ -988,7 +992,8 @@ function nextMistake(item){
   words.forEach((w,wi)=>{
     const clean=w.replace(/[.,!?]/g,"");
     if(/\S/.test(w) && PREPS.indexOf(clean.toLowerCase())>=0){
-      const span=document.createElement("span");span.className="word";span.textContent=w;
+      const span=document.createElement("span");span.className="word";span.textContent=w;span.tabIndex=0;span.setAttribute("role","button");
+      span.addEventListener("keydown",ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); span.click(); } });
       span.onclick=(e)=>{
         if(answered) return; answered=true;
         const ok = (wi===errIndex);
@@ -998,10 +1003,10 @@ function nextMistake(item){
         if(!ok) addReview(item);
         const fb=document.getElementById("fb");
         fb.className="fb show "+(ok?"good":"bad");
-        fb.innerHTML='<span class="big">'+(ok?"✅ "+goodMsg():"❌ "+badMsg())+'</span>'+
+        fb.innerHTML='<span class="big">'+(ok?"✓ "+goodMsg():"✗ "+badMsg())+'</span>'+
           '<div>Fejlen: <span class="corr">'+item.err+' → '+item.a+'</span></div>'+
           '<div style="margin-top:6px">Korrekt: <b>'+item.text+'</b></div>'+
-          '<div style="margin-top:6px">💡 '+item.ex+'</div>';
+          '<div style="margin-top:6px"><b class="tipk">TIP</b> '+item.ex+'</div>';
         const nb=document.createElement("button");nb.className="btn full";nb.textContent="Næste →";nb.onclick=()=>nextMistake();
         sent.after(nb);
       };
@@ -1031,9 +1036,9 @@ function nextCorrect(item){
     record(item.a,ok); if(!ok) addReview(item);
     const fb=document.getElementById("fb");
     fb.className="fb show "+(ok?"good":"bad");
-    fb.innerHTML='<span class="big">'+(ok?"✅ "+goodMsg():"❌ "+badMsg())+'</span>'+
+    fb.innerHTML='<span class="big">'+(ok?"✓ "+goodMsg():"✗ "+badMsg())+'</span>'+
       '<div>Korrekt: <span class="corr">'+item.text+'</span></div>'+
-      '<div style="margin-top:6px">💡 '+item.ex+'</div>';
+      '<div style="margin-top:6px"><b class="tipk">TIP</b> '+item.ex+'</div>';
     document.getElementById("corrCheck").textContent="Næste →";
     document.getElementById("corrCheck").onclick=()=>nextCorrect();
     document.getElementById("corrShow").classList.add("hide");
@@ -1066,9 +1071,9 @@ function nextTrans(){
     record(t[2],ok); if(!ok) addReview(item);
     const fb=document.getElementById("fb");
     fb.className="fb show "+(ok?"good":"bad");
-    fb.innerHTML='<span class="big">'+(ok?"✅ "+goodMsg():"❌ "+badMsg())+'</span>'+
+    fb.innerHTML='<span class="big">'+(ok?"✓ "+goodMsg():"✗ "+badMsg())+'</span>'+
       '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">Korrekt: <span class="corr">'+t[1]+'</span></div>'+
-      '<div style="margin-top:6px">💡 '+t[3]+'</div>';
+      '<div style="margin-top:6px"><b class="tipk">TIP</b> '+t[3]+'</div>';
     fb.querySelector(".corr").after(speakerBtn(t[1],"sm"));
     document.getElementById("trCheck").textContent="Næste →";
     document.getElementById("trCheck").onclick=()=>nextTrans();
@@ -1098,7 +1103,7 @@ function startPairs(){
   const cols=["c-red","c-blue","c-green","c-yellow","c-purple","c-orange"];
   PAIR_GROUPS.forEach((p,i)=>{
     const b=document.createElement("button");b.className="mode-btn "+cols[i%cols.length];
-    b.innerHTML='<span class="emoji">⚖️</span><span class="t">'+p.label+'</span>';
+    b.innerHTML='<span class="emoji">'+spr("hjerte",4)+'</span><span class="t">'+p.label+'</span>';
     b.onclick=()=>{ curPair=p; session.n=0; nextPair(); };
     g.appendChild(b);
   });
@@ -1157,9 +1162,9 @@ function speedTick(first){
   elEx.innerHTML=
     '<div class="card">'+
     '<div class="backrow"><button class="topbtn" onclick="goMenu()">‹ Menu</button>'+
-    '<span class="qcount">⚡ Lynrunde</span></div>'+
+    '<span class="qcount">Lynrunde</span></div>'+
     '<div class="timer'+(speedLeft<=10?' warn':'')+'" id="spTimer">'+speedLeft+'s</div>'+
-    '<div class="scoreline">Point: '+speedScore+' &nbsp;·&nbsp; ✅ '+speedHits+' &nbsp; ❌ '+speedMiss+'</div>'+
+    '<div class="scoreline">Point: '+speedScore+' &nbsp;·&nbsp; ✓ '+speedHits+' &nbsp; ✗ '+speedMiss+'</div>'+
     '<div class="sentwrap" style="justify-content:center"><div class="sentence" style="text-align:center">'+html+'</div></div>'+
     '<div class="opts" id="spOpts"></div>'+
     '</div>';
@@ -1185,9 +1190,10 @@ function endSpeed(){
   const best=parseInt(localStorage.getItem("praep_speed_best")||"0");
   if(speedScore>best) localStorage.setItem("praep_speed_best",speedScore);
   saveProg();
+  if(window.Sjovt) Sjovt.fx.celebrate();
   elEx.innerHTML=
     '<div class="card" style="text-align:center">'+
-    '<div style="font-size:3rem">⚡</div>'+
+    '<div>'+spr("pokal",8,"sd-hop")+'</div>'+
     '<h2 style="margin:6px 0">Tiden er gået!</h2>'+
     '<div class="statgrid" style="margin-top:10px">'+
     '<div class="stat"><div class="n">'+speedScore+'</div><div class="l">Point</div></div>'+
@@ -1204,7 +1210,7 @@ function endSpeed(){
 function nextReview(){
   if(prog.reviewQ.length===0){
     elEx.innerHTML='<div class="card" style="text-align:center">'+
-      '<div style="font-size:3rem">🎉</div>'+
+      '<div>'+spr("stjerne",8,"sd-hop")+'</div>'+
       '<h2>Ingen fejl at gentage!</h2>'+
       '<p style="color:var(--ink-soft)">Når du laver fejl i en øvelse, samles de her, så du kan mestre dem.</p>'+
       '<button class="btn full" onclick="goMenu()">Tilbage til menu</button></div>';
@@ -1233,7 +1239,7 @@ function nextReview(){
       if(ok){ clearReviewItem(item.text); burst(e.clientX,e.clientY); }
       else { prog.reviewQ.push(prog.reviewQ.shift()); saveProg(); } // move to back, try later
       showFB(ok,item,item.a);
-      const nb=document.createElement("button");nb.className="btn full";nb.textContent= prog.reviewQ.length?"Næste →":"Færdig 🎉";
+      const nb=document.createElement("button");nb.className="btn full";nb.textContent= prog.reviewQ.length?"Næste →":"Færdig ✓";
       nb.onclick=()=>nextReview();
       box.after(nb);
     };
@@ -1272,7 +1278,7 @@ function renderStats(){
   elStats.innerHTML=
     '<div class="card">'+
     '<div class="backrow"><button class="topbtn" onclick="goMenu()">‹ Menu</button>'+
-    '<span class="qcount">📊 Statistik</span></div>'+
+    '<span class="qcount">Statistik</span></div>'+
     '<div class="statgrid" style="margin-top:14px">'+
     '<div class="stat"><div class="n">'+acc+'%</div><div class="l">Nøjagtighed</div></div>'+
     '<div class="stat"><div class="n">'+prog.total+'</div><div class="l">Spørgsmål i alt</div></div>'+
@@ -1306,6 +1312,22 @@ renderMenu();
 renderMiniStats();
 updateTopBar();
 show("menu");
+
+/* ---- Sjovt Dansk fx hooks (additive; no game logic touched) ---- */
+if(window.Sjovt){
+  Sjovt.watchScreens("#menu,#exercise,#stats");
+  new MutationObserver(function(ms){
+    ms.forEach(function(m){
+      const t=m.target, was=(m.oldValue||"");
+      if(t.classList.contains("opt")){
+        if(t.classList.contains("correct")&&was.indexOf("correct")<0) Sjovt.fx.correct(t);
+        else if(t.classList.contains("wrong")&&was.indexOf("wrong")<0) Sjovt.fx.wrong(t);
+      } else if(t.id==="fb"){
+        if(t.classList.contains("bad")&&was.indexOf("bad")<0) Sjovt.fx.wrong(t);
+      }
+    });
+  }).observe(elEx,{attributes:true,attributeFilter:["class"],attributeOldValue:true,subtree:true});
+}
 </script>
 </body>
 </html>

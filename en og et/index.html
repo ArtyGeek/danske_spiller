@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ordenes Vidunderland · Dansk Ordtræner</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<script src="../shared/sjovt.js"></script>
 <style>
   :root{
     --ink:#2b1d3a;            /* deep aubergine */
@@ -236,19 +234,18 @@
     .match-wrap{grid-template-columns:1fr;gap:10px}
     .match-tile{overflow-wrap:break-word;word-break:break-word;font-size:.95rem}
   }
-.dsg-home{position:fixed;top:14px;right:14px;z-index:999999;display:inline-flex;align-items:center;gap:6px;background:rgba(20,20,30,.62);color:#fff;text-decoration:none;font:700 .85rem 'Segoe UI',system-ui,sans-serif;padding:9px 16px;border-radius:999px;backdrop-filter:blur(4px);box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
-.dsg-home:hover{transform:translateY(-2px);background:rgba(20,20,30,.8)}
 </style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<link rel="stylesheet" href="../shared/themes/en-og-et.css">
 </head>
 <body>
-<a class="dsg-home" href="../index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
 <div class="book">
   <button class="home-btn" id="homeBtn">← Tilbage</button>
   <header>
     <div class="eyebrow">Velkommen til</div>
     <h1>Ordenes Vidunderland</h1>
     <p class="quote" id="quote">"Hvor skal jeg gå hen herfra?" – "Det afhænger af, hvor du vil hen."</p>
-    <div class="rule">♠ ♥ ♣ ♦</div>
+    <div class="rule"><span data-sd-sprite="polle" data-scale="4" data-label="Pølle, maskot" class="sd-bob"></span></div>
   </header>
   <div class="stage">
 
@@ -301,10 +298,10 @@
           <span class="emblem">
             <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#fff8e8" stroke="#c79a3a" stroke-width="2"/><path d="M16 32 Q24 16 32 32" fill="none" stroke="#a8132b" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="34" r="2" fill="#a8132b"/></svg>
           </span>
-          <span><h3>Svage ord 🔁</h3><p id="weakSubtitle">Gentræn de ord du har fejlet</p></span>
+          <span><h3>Svage ord</h3><p id="weakSubtitle">Gentræn de ord du har fejlet</p></span>
         </button>
       </div>
-      <div class="count-note">♦ <span id="wordCount">0</span> navneord · 100 modsætninger · 100 synonymer ♦</div>
+      <div class="count-note"><span id="wordCount">0</span> navneord · 100 modsætninger · 100 synonymer</div>
       <div class="cefr-filter">
         <label>Niveau:</label>
         <button class="cefr-btn active" data-cefr="all">Alle</button>
@@ -337,8 +334,8 @@
     <section id="game" class="hidden">
       <div class="topbar">
         <span class="pill" id="scorePill">Point: 0 / 0</span>
-        <span class="pill streak" id="streakPill">🔥 0</span>
-        <span class="pill timer hidden" id="timerPill">⏱ 60</span>
+        <span class="pill streak" id="streakPill">Serie: 0</span>
+        <span class="pill timer hidden" id="timerPill">Tid: 60</span>
       </div>
       <div id="progress-bar"><div id="progress"></div></div>
 
@@ -363,7 +360,7 @@
 
       <div class="options hidden" id="optionsBox"></div>
 
-      <div class="flash hidden" id="flashCard">
+      <div class="flash hidden" id="flashCard" role="button" tabindex="0" aria-label="Vend kortet">
         <div class="flash-inner">
           <div class="flash-face"><span class="tag" id="flashTagF"></span><span class="big" id="flashFront"></span><span id="flashFrontSpeaker"></span><span class="sub" id="flashFrontT"></span></div>
           <div class="flash-face flash-back"><span class="tag" id="flashTagB"></span><span class="big" id="flashBack"></span><span id="flashBackSpeaker"></span><span class="sub" id="flashBackT"></span></div>
@@ -376,14 +373,14 @@
         <div class="match-col" id="matchRight"></div>
       </div>
 
-      <div id="message"></div>
+      <div id="message" role="status" aria-live="polite"></div>
       <button id="next">Næste →</button>
     </section>
 
     <!-- END -->
     <section id="end" class="hidden">
       <div class="end">
-        <div class="big" id="endEmoji">🎉</div>
+        <div class="big" id="endEmoji"></div>
         <h2 id="endTitle">Færdig!</h2>
         <p id="endLine"></p>
         <div class="grade" id="endGrade"></div>
@@ -847,8 +844,8 @@ function speakerBtn(text, cls){
   const b = document.createElement("button");
   b.className = "speaker " + (cls||"");
   b.type = "button";
-  b.textContent = "🔊";
-  b.setAttribute("aria-label","Pronounce");
+  b.textContent = "♪";
+  b.setAttribute("aria-label","Udtal ordet");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -965,7 +962,7 @@ homeBtn.addEventListener("click",toMenu);
 document.querySelectorAll(".cefr-btn").forEach(btn=>{
   btn.addEventListener("click",()=>{
     cefrFilter=btn.dataset.cefr;
-    document.querySelectorAll(".cefr-btn").forEach(b=>b.classList.toggle("active",b===btn));
+    document.querySelectorAll(".cefr-btn").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-pressed",b===btn?"true":"false");});
   });
 });
 $("menuBtn").addEventListener("click",toMenu);
@@ -1021,14 +1018,14 @@ function hideAllInputs(){
   optionsBox.classList.add("hidden");flashCard.classList.add("hidden");
   flashTip.classList.add("hidden");matchBox.classList.add("hidden");
   nextBtn.style.display="none";nextBtn.textContent="Næste →";
-  messageEl.innerHTML="";transEl.textContent="";
+  messageEl.innerHTML="";clearFb();transEl.textContent="";
   setWordSpeaker(null);
 }
 
 function startTimer(){
-  timerPill.textContent="⏱ "+timeLeft;timerPill.classList.remove("low");
+  timerPill.textContent="Tid: "+timeLeft;timerPill.classList.remove("low");
   timer=setInterval(()=>{
-    timeLeft--;timerPill.textContent="⏱ "+timeLeft;
+    timeLeft--;timerPill.textContent="Tid: "+timeLeft;
     if(timeLeft<=10)timerPill.classList.add("low");
     if(timeLeft<=0){stopTimer();finishSpeed();}
   },1000);
@@ -1040,17 +1037,19 @@ function updateStats(){
   else if(style==="match"){scorePill.textContent="Par: "+matchDone+" / "+matchTotal;progressEl.style.width=(matchTotal?matchDone/matchTotal*100:0)+"%";}
   else if(style==="flash"){scorePill.textContent="Kort: "+(idx+1)+" / "+queue.length;progressEl.style.width=((idx+1)/queue.length*100)+"%";}
   else{scorePill.textContent="Point: "+correct+" / "+queue.length;progressEl.style.width=(idx/queue.length*100)+"%";}
-  streakPill.textContent="🔥 "+streak;
+  streakPill.textContent="Serie: "+streak;
+  if(window.Sjovt){ const sig=scorePill.textContent; if(updateStats._p!==undefined&&updateStats._p!==sig) Sjovt.fx.bump(scorePill); updateStats._p=sig;
+    if(updateStats._s!==undefined&&streak>updateStats._s) Sjovt.fx.bump(streakPill); updateStats._s=streak; }
 }
 
 function showQuestion(){
-  answered=false;messageEl.innerHTML="";messageEl.style.color="";nextBtn.style.display="none";transEl.textContent="";
+  answered=false;messageEl.innerHTML="";messageEl.style.color="";clearFb();nextBtn.style.display="none";transEl.textContent="";
   if(mode!=="speed" && idx>=queue.length){finishRound();return;}
 
   let item = mode==="speed" ? pick(filteredWords()) : queue[idx];
   current=item;
   // standard ordstil (kan overskrives nedenfor)
-  wordEl.style.fontFamily="'Cinzel Decorative',serif";wordEl.style.fontSize="2.1rem";
+  wordEl.classList.remove("is-sentence");
 
   if(mode==="enet"||mode==="speed"||mode==="weak"){
     hintEl.textContent="Hvilken artikel?";wordEl.textContent=item.w;
@@ -1068,8 +1067,8 @@ function showQuestion(){
     resetInput();
   }else if(mode==="sentence"){
     hintEl.innerHTML="Udfyld: <b>"+item.form+"</b> af <em>"+item.lemma+"</em>";
-    wordEl.innerHTML=item.s.replace("___",'<span style="color:#a8132b">_____</span>');
-    wordEl.style.fontFamily="'EB Garamond',serif";wordEl.style.fontSize="1.45rem";
+    wordEl.innerHTML=item.s.replace("___",'<span class="gap">_____</span>');
+    wordEl.classList.add("is-sentence");
     setWordSpeaker(null); // sentence has a gap — speak the full answer sentence once revealed
     resetInput();
   }
@@ -1080,6 +1079,7 @@ function answerArticle(sel){
   if(answered)return;answered=true;
   const ok=sel===current.a;
   register(ok,current.a+" "+current.w);
+  if(window.Sjovt) (ok?Sjovt.fx.correct:Sjovt.fx.wrong)(sel==="en"?btnEn:btnEt);
   setWordSpeaker(current.a+" "+current.w); // reveal pronunciation now that the article is known
   btnEn.disabled=true;btnEt.disabled=true;
   if(mode==="speed"){setTimeout(()=>{if(timer)showQuestion();},520);}
@@ -1094,10 +1094,14 @@ function submitTyped(){
   else{target=current.answer;full=current.answer+(current.en?'  ('+current.en+')':'');}
   const ok=norm(target)===val;
   register(ok,target,full);
+  if(window.Sjovt) (ok?Sjovt.fx.correct:Sjovt.fx.wrong)(ok?submitBtn:answerInput);
   if(mode==="sentence") setWordSpeaker(current.s.replace("___",current.answer)); // speak the completed sentence
   answerInput.disabled=true;submitBtn.disabled=true;idx++;updateStats();nextBtn.style.display="block";
 }
+function setFb(ok){ messageEl.className="sd-fb "+(ok?"sd-fb--ok":"sd-fb--bad"); }
+function clearFb(){ messageEl.className=""; }
 function register(ok,answerTxt,full){
+  setFb(ok);
   if(ok){
     correct++;if(mode==="speed")speedCorrect++;
     streak++;bestStreak=Math.max(bestStreak,streak);
@@ -1141,7 +1145,7 @@ function initMC(){
   updateStats();mcQuestion();
 }
 function mcQuestion(){
-  answered=false;messageEl.innerHTML="";transEl.textContent="";nextBtn.style.display="none";
+  answered=false;messageEl.innerHTML="";clearFb();transEl.textContent="";nextBtn.style.display="none";
   if(idx>=queue.length){finishRound();return;}
   const p=queue[idx];current=p;
   // randomly ask for partner of a or b
@@ -1151,7 +1155,7 @@ function mcQuestion(){
   current._ans=answer;
   hintEl.textContent=category==="opposites"?"Find modsætningen til:":"Find synonymet til:";
   wordEl.textContent=promptWord;
-  wordEl.style.fontFamily="'Cinzel Decorative',serif";wordEl.style.fontSize="2.1rem";
+  wordEl.classList.remove("is-sentence");
   setWordSpeaker(promptWord);
   transEl.textContent=askA?glossOf(p,"a"):glossOf(p,"b");
   // distractors – unikke og forskellige fra svaret
@@ -1179,7 +1183,8 @@ function mcAnswer(btn,chosen){
     if(b.textContent===current._ans)b.classList.add("correct");
     if(b===btn&&!ok)b.classList.add("wrong");
   });
-  const p=current;
+  const p=current; setFb(ok);
+  if(window.Sjovt) (ok?Sjovt.fx.correct:Sjovt.fx.wrong)(btn);
   if(ok){correct++;streak++;bestStreak=Math.max(bestStreak,streak);messageEl.style.color="var(--ok)";messageEl.innerHTML=pick(praise);}
   else{streak=0;messageEl.style.color="var(--bad)";messageEl.innerHTML=pick(consol);}
   // show full pair + translations
@@ -1195,6 +1200,7 @@ function initFlash(){
   hintEl.textContent=category==="opposites"?"Modsætninger – vend kortet":"Synonymer – vend kortet";
   wordEl.textContent="";transEl.textContent="";
   flashCard.onclick=()=>flashCard.classList.toggle("flipped");
+  flashCard.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();e.stopPropagation();flashCard.classList.toggle("flipped");}};
   updateStats();flashShow();
   nextBtn.style.display="block";nextBtn.textContent="Næste kort →";
 }
@@ -1237,7 +1243,10 @@ function renderMatchCol(col,items){
     const label=document.createElement("span");label.textContent=it.txt;
     t.appendChild(label);
     t.appendChild(speakerBtn(it.txt,"speaker-sm"));
-    t.addEventListener("click",()=>matchClick(t));col.appendChild(t);
+    t.addEventListener("click",()=>matchClick(t));
+    t.tabIndex=0;t.setAttribute("role","button");
+    t.addEventListener("keydown",e=>{if(e.target===t&&(e.key==="Enter"||e.key===" ")){e.preventDefault();e.stopPropagation();matchClick(t);}});
+    col.appendChild(t);
   });
 }
 function matchClick(tile){
@@ -1254,13 +1263,14 @@ function matchClick(tile){
     matchSel.classList.add("done");tile.classList.add("done");
     matchSel.classList.remove("sel");matchSel=null;matchDone++;
     streak++;bestStreak=Math.max(bestStreak,streak);updateStats();
+    if(window.Sjovt) Sjovt.fx.correct(tile);
     if(matchDone>=matchTotal){
-      messageEl.style.color="var(--ok)";messageEl.innerHTML=pick(praise)+" Alle par fundet!";
+      setFb(true);messageEl.style.color="var(--ok)";messageEl.innerHTML=pick(praise)+" Alle par fundet!";
       nextBtn.style.display="block";nextBtn.textContent="Nye par →";
     }
   }else{
     streak=0;updateStats();
-    const a=matchSel,b=tile;a.classList.add("err");b.classList.add("err");a.classList.remove("sel");
+    const a=matchSel,b=tile;if(window.Sjovt)Sjovt.fx.wrong(b);a.classList.add("err");b.classList.add("err");a.classList.remove("sel");
     const x=a,y=b;matchSel=null;
     setTimeout(()=>{x.classList.remove("err");y.classList.remove("err");},650);
   }
@@ -1270,7 +1280,7 @@ function matchClick(tile){
 /* ===================== NEXT BUTTON ===================== */
 nextBtn.addEventListener("click",()=>{
   if(style==="flash"){idx++;flashShow();}
-  else if(style==="match"){messageEl.innerHTML="";nextBtn.style.display="none";buildMatchBatch();}
+  else if(style==="match"){messageEl.innerHTML="";clearFb();nextBtn.style.display="none";buildMatchBatch();}
   else if(style==="mc"){mcQuestion();}
   else{showQuestion();}
 });
@@ -1279,7 +1289,7 @@ nextBtn.addEventListener("click",()=>{
 function finishRound(){
   stopTimer();
   if(style==="flash"){
-    showEnd(null,"Du gennemgik alle "+queue.length+" kort","Godt studeret! 🔮",false,true);return;
+    showEnd(null,"Du gennemgik alle "+queue.length+" kort","Godt studeret!",false,true);return;
   }
   const total=queue.length, pct=Math.round(correct/total*100);
   if(mode==="weak"){
@@ -1290,32 +1300,35 @@ function finishRound(){
     }).length;
     refreshWeakCard();
     showEnd(pct,correct+" / "+total+" rigtige",
-      "Ryddet: "+cleared+" / "+total+" svage ord · Strime: "+bestStreak+" 🔥");
+      "Ryddet: "+cleared+" / "+total+" svage ord · Strime: "+bestStreak);
     return;
   }
-  showEnd(pct,correct+" / "+total+" rigtige","Bedste stime: "+bestStreak+" 🔥");
+  showEnd(pct,correct+" / "+total+" rigtige","Bedste stime: "+bestStreak);
 }
 function finishSpeed(){
   answered=true;btnEn.disabled=true;btnEt.disabled=true;
-  showEnd(null,speedCorrect+" rigtige på "+SPEED_TIME+" sek.","Bedste stime: "+bestStreak+" 🔥",true);
+  showEnd(null,speedCorrect+" rigtige på "+SPEED_TIME+" sek.","Bedste stime: "+bestStreak,true);
 }
 function showEnd(pct,line,sub,isSpeed,isFlash){
   show("end");
   $("endLine").textContent=line;
-  let emoji="🎉",title="Vidunderligt!",grade=sub;
-  if(isFlash){emoji="🔮";title="Færdig med kortene!";}
+  let emoji="stjerne",title="Vidunderligt!",grade=sub;
+  if(isFlash){emoji="stjerne";title="Færdig med kortene!";}
   else if(isSpeed){
-    if(speedCorrect>=25){emoji="🐇";title="Hurtigere end Kaninen!";}
-    else if(speedCorrect>=15){emoji="⏱";title="Flot tempo!";}
-    else{emoji="💪";title="Bliv ved!";}
+    if(speedCorrect>=25){emoji="polle";title="Hurtigere end Kaninen!";}
+    else if(speedCorrect>=15){emoji="stjerne";title="Flot tempo!";}
+    else{emoji="polle";title="Bliv ved!";}
   }else{
-    if(pct>=90){emoji="👑";title="Dronningen er imponeret!";}
-    else if(pct>=70){emoji="🎉";title="Vidunderligt!";}
-    else if(pct>=50){emoji="🍄";title="Godt på vej!";}
-    else{emoji="💪";title="Øvelse gør mester!";}
+    if(pct>=90){emoji="pokal";title="Dronningen er imponeret!";}
+    else if(pct>=70){emoji="stjerne";title="Vidunderligt!";}
+    else if(pct>=50){emoji="polle";title="Godt på vej!";}
+    else{emoji="polle";title="Øvelse gør mester!";}
     grade=pct+"% rigtige · "+sub;
   }
-  $("endEmoji").textContent=emoji;$("endTitle").textContent=title;$("endGrade").textContent=grade;
+  const ee=$("endEmoji");ee.innerHTML="";
+  if(window.Sjovt){ee.appendChild(Sjovt.sprite(emoji,{scale:7,cls:"sd-bob"}));
+    if(isFlash||(isSpeed?speedCorrect>=15:pct>=70)) Sjovt.fx.celebrate();}
+  $("endTitle").textContent=title;$("endGrade").textContent=grade;
 }
 
 /* ===================== EVENTS ===================== */
@@ -1332,6 +1345,7 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Enter"&&nextBtn.style.display==="block"&&document.activeElement!==answerInput)nextBtn.click();
 });
 
+if(window.Sjovt) Sjovt.watchScreens("#menu,#submenu,#game,#end");
 toMenu();
 </script>
 </body>

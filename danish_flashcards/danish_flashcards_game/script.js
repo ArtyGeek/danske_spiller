@@ -260,7 +260,7 @@ function speakerBtn(text, cls){
     const b = document.createElement("button");
     b.className = "speaker " + (cls||"");
     b.type = "button";
-    b.textContent = "🔊";
+    b.textContent = "▶";
     b.setAttribute("aria-label","Pronounce");
     b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
     return b;
@@ -436,8 +436,17 @@ function renderCard() {
     // Append faces and event listener to flip
     card.appendChild(front);
     card.appendChild(back);
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', 'Flip card');
     card.addEventListener('click', () => {
         card.classList.toggle('is-flipped');
+    });
+    card.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && e.target === card) {
+            e.preventDefault();
+            card.classList.toggle('is-flipped');
+        }
     });
 
     cardWrapper.appendChild(card);
@@ -642,3 +651,49 @@ window.addEventListener('DOMContentLoaded', () => {
     // Reflect persisted mistake state on the Review button
     updateReviewBtn();
 });
+
+
+/* ---------- Sjovt Dansk visual hooks (additive; no game logic) ---------- */
+(function () {
+    const S = window.Sjovt;
+    const fbEl = document.getElementById('sd-fb');
+    const doneEl = document.getElementById('sd-done');
+    const doneText = document.getElementById('sd-done-text');
+    let wasDone = null, lastC = null, lastW = null;
+
+    function setFb(ok, text) {
+        if (!fbEl) return;
+        fbEl.className = 'sd-fb-line ' + (ok ? 'ok' : 'bad');
+        fbEl.textContent = (ok ? '✓ ' : '✗ ') + text;
+    }
+    wrongBtn.addEventListener('click', () => {
+        if (wrongBtn.disabled) return;
+        setFb(false, 'Marked wrong — card flipped so you can study it');
+        if (S) S.fx.wrong(wrongBtn);
+    });
+    rightBtn.addEventListener('click', () => {
+        if (rightBtn.disabled) return;
+        setFb(true, 'Marked correct');
+        if (S) S.fx.correct(rightBtn);
+    });
+    restartBtn.addEventListener('click', () => { if (fbEl) { fbEl.className = 'sd-fb-line'; fbEl.textContent = ''; } });
+
+    const baseUpdate = updateScoreboard;
+    updateScoreboard = function () {
+        baseUpdate();
+        const fv = filteredVerbs();
+        const done = !inReviewMode() && fv.length > 0 && fv.every(v => statuses[verbs.indexOf(v)].status !== 'unreviewed');
+        if (doneEl) {
+            doneEl.hidden = !done;
+            if (done && doneText) doneText.textContent = `Correct: ${correctCount} · Wrong: ${wrongCount}`;
+        }
+        if (done && wasDone === false && S) { S.fx.celebrate(); S.fx.enter(doneEl); }
+        wasDone = done;
+        if (S) {
+            if (lastC !== null && correctCount !== lastC) S.fx.bump(correctCountEl);
+            if (lastW !== null && wrongCount !== lastW) S.fx.bump(wrongCountEl);
+        }
+        lastC = correctCount; lastW = wrongCount;
+    };
+    if (S) S.watchScreens('.review-mode-banner');
+})();

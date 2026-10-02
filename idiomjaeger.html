@@ -253,18 +253,20 @@ label.flt{display:flex;flex-direction:column;gap:3px;font-size:.78rem;font-weigh
 .speaker:active{transform:scale(.92);box-shadow:0 1px 0 #7a5b2a;}
 .speaker.small{width:26px;height:26px;font-size:.75rem;margin-left:4px;}
 </style>
+<link rel="stylesheet" href="shared/sjovt.css">
+<script src="shared/sjovt.js"></script>
+<link rel="stylesheet" href="shared/themes/idiomjaeger.css">
 </head>
 <body>
-<a class="dsg-home" href="index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
 <div class="wrap">
   <header class="app">
-    <h1><span class="compass">🧭</span> Idiomjæger</h1>
+    <h1><span class="compass" data-sd-sprite="polle" data-scale="5" aria-hidden="true"></span> Idiomjæger</h1>
     <p>Den danske idiom-skattejagt · A2 → C1</p>
   </header>
   <div id="app"></div>
   <div class="foot">Fremgang gemmes automatisk på din enhed.</div>
 </div>
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 
 <script>
 /* ============================================================
@@ -608,7 +610,7 @@ function toast(msg){const t=document.getElementById('toast');t.innerHTML=msg;t.c
 function burst(x,y,colors){colors=colors||['#f0c14b','#c8941f','#3f8f4a','#fff'];for(let i=0;i<14;i++){const p=document.createElement('div');p.className='particle';const ang=Math.random()*Math.PI*2,dist=40+Math.random()*70;p.style.cssText=`left:${x}px;top:${y}px;background:${colors[i%colors.length]};--dx:${Math.cos(ang)*dist}px;--dy:${Math.sin(ang)*dist}px`;document.body.appendChild(p);p.addEventListener('animationend',()=>p.remove());}}
 function burstAt(el){if(!el)return;const r=el.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2);}
 
-function topbar(extra){return`<div class="topbar"><button class="btn small ghost" onclick="goMenu()">⟵ Menu</button><div class="coins">💰 <span>${S.coins}</span> guld</div></div>${extra||''}`;}
+function topbar(extra){return`<div class="topbar"><button class="btn small ghost" onclick="goMenu()">⟵ Jagtmenu</button><div class="coins"><span data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span> <span id="coinNum">${S.coins}</span> guld</div></div>${extra||''}`;}
 
 /* ============================================================
    ACHIEVEMENTS
@@ -641,12 +643,12 @@ function renderMenu(){
       <label class="flt">Niveau<select id="fPlayLvl" onchange="setPlayLevel(this.value)">${['all',...LEVELS].map(l=>`<option value="${l}" ${PLAY_LVL===l?'selected':''}>${l==='all'?'Alle niveauer':l}</option>`).join('')}</select></label>
     </div>
     <div class="menu-grid">
-      <button class="btn primary" onclick="renderLearn()"><span class="ico">📖</span>Lærings-tilstand<span class="sub">Bladr & studér</span></button>
-      <button class="btn" onclick="renderPractice()"><span class="ico">🎯</span>Øve-tilstand<span class="sub">Bland alle modes</span></button>
-      <button class="btn" onclick="renderGames()"><span class="ico">🎮</span>Spil<span class="sub">13 spiltyper</span></button>
-      <button class="btn" onclick="startWeak()"><span class="ico">🔁</span>Svage Idiomer<span class="sub">${weakIdioms().length} til repetition</span></button>
-      <button class="btn" onclick="renderStats()"><span class="ico">📊</span>Statistik<span class="sub">Din fremgang</span></button>
-      <button class="btn" onclick="renderDict()"><span class="ico">📜</span>Idiom-ordbog<span class="sub">Alle ${DATA.length} idiomer</span></button>
+      <button class="btn primary" onclick="renderLearn()"><span class="ico" data-sd-sprite="molle" data-scale="4" aria-hidden="true"></span>Lærings-tilstand<span class="sub">Bladr & studér</span></button>
+      <button class="btn" onclick="renderPractice()"><span class="ico" data-sd-sprite="stjerne" data-scale="4" aria-hidden="true"></span>Øve-tilstand<span class="sub">Bland alle modes</span></button>
+      <button class="btn" onclick="renderGames()"><span class="ico" data-sd-sprite="cykel" data-scale="4" aria-hidden="true"></span>Spil<span class="sub">13 spiltyper</span></button>
+      <button class="btn" onclick="startWeak()"><span class="ico" data-sd-sprite="hjerte" data-scale="4" aria-hidden="true"></span>Svage Idiomer<span class="sub">${weakIdioms().length} til repetition</span></button>
+      <button class="btn" onclick="renderStats()"><span class="ico" data-sd-sprite="pokal" data-scale="4" aria-hidden="true"></span>Statistik<span class="sub">Din fremgang</span></button>
+      <button class="btn" onclick="renderDict()"><span class="ico" data-sd-sprite="hat" data-scale="4" aria-hidden="true"></span>Idiom-ordbog<span class="sub">Alle ${DATA.length} idiomer</span></button>
     </div>
     <div class="center mt"><button class="btn small ghost" onclick="renderAch()">🏆 Badges (${S.ach.length}/${ACHS.length})</button></div>
   </div>`;
@@ -780,7 +782,8 @@ function nextQuestion(){
 function renderQuestion(){
   const c=Q.cfg,q=Q.current;
   const total=c.total?` / ${c.total}`:'';
-  const lives=c.lives?`<span class="lives">${'❤️'.repeat(Q.lives)}${'🖤'.repeat(Math.max(0,(c.lives)-Q.lives))}</span>`:'';
+  const heart=window.Sjovt?Sjovt.spriteSVG('hjerte',2):'♥';
+  const lives=c.lives?`<span class="lives" role="img" aria-label="Liv: ${Q.lives} af ${c.lives}">${Array(Math.max(0,Q.lives)).fill('<span class="sd-sprite">'+heart+'</span>').join('')}${Array(Math.max(0,(c.lives)-Q.lives)).fill('<span class="sd-sprite lost">'+heart+'</span>').join('')}<span aria-hidden="true">&nbsp;${Q.lives}/${c.lives}</span></span>`:'';
   const timer=c.timer?`<div class="timer-big" id="timerBig">⏱️ ${Q.timeLeft}s</div>`:'';
   app.innerHTML=`<div class="panel">${topbar()}
     <h2 class="section-title">${c.ico} ${c.title}</h2>
@@ -818,7 +821,7 @@ function endQuiz(){
   let msg=pct>=80?'Native-niveau forståelse! 🎓':pct>=50?'Godt jaget! 🏴‍☠️':'Bliv ved med at jage! 💪';
   app.innerHTML=`<div class="panel center">${topbar()}
     <h2 class="section-title">${c.ico} Runde slut</h2>
-    <div style="font-size:3rem">🏆</div>
+    <div class="ij-hero"><span data-sd-sprite="pokal" data-scale="8" class="sd-hop" aria-hidden="true"></span></div>
     <div class="stat-box" style="max-width:240px;margin:10px auto"><div class="num">${Q.score}</div><div class="lbl">rigtige svar${c.timer?' på 60s':''}</div></div>
     <p style="font-size:1.1rem"><b>${msg}</b></p>
     <p class="progress-line">Nøjagtighed: ${accuracy()}% · Guld: 💰 ${S.coins}</p>
@@ -877,7 +880,7 @@ function endText(){
   const c=T.cfg,pct=Math.round(T.score/c.total*100);
   let msg=pct>=80?'Native-niveau! 🎓':pct>=50?'Godt klaret! 🏴‍☠️':'Bliv ved! 💪';
   app.innerHTML=`<div class="panel center">${topbar()}<h2 class="section-title">${c.ico} Runde slut</h2>
-    <div style="font-size:3rem">🏆</div>
+    <div class="ij-hero"><span data-sd-sprite="pokal" data-scale="8" class="sd-hop" aria-hidden="true"></span></div>
     <div class="stat-box" style="max-width:240px;margin:10px auto"><div class="num">${T.score}/${c.total}</div><div class="lbl">rigtige</div></div>
     <p><b>${msg}</b></p>
     <div class="row" style="justify-content:center"><button class="btn primary" onclick="launchGame('${c.gid}')">Spil igen 🔁</button><button class="btn ghost" onclick="renderGames()">Andre spil</button></div></div>`;
@@ -899,7 +902,7 @@ function renderMemory(){
     <h2 class="section-title">🃏 Idiom Memory</h2>
     <div class="progress-line">Par fundet: <b>${MEM.matched}</b>/6 · Træk: ${MEM.moves}</div>
     <div class="mem-grid" id="memGrid">
-      ${MEM.cards.map((c,i)=>`<div class="mem-card${c.matched?' matched':''}${MEM.flipped.includes(i)?' flipped':''}" data-i="${i}"><span class="back">⚜️</span><span class="face">${esc(c.text)}${c.kind==='d'?speakerBtn(c.text,'small'):''}</span></div>`).join('')}
+      ${MEM.cards.map((c,i)=>`<div class="mem-card${c.matched?' matched':''}${MEM.flipped.includes(i)?' flipped':''}" data-i="${i}"><span class="back" data-sd-sprite="stjerne" data-scale="3" aria-hidden="true"></span><span class="face">${esc(c.text)}${c.kind==='d'?speakerBtn(c.text,'small'):''}</span></div>`).join('')}
     </div>
     <div class="scrollnote">Vend to kort og find idiom + betydning.</div></div>`;
   document.querySelectorAll('#memGrid .mem-card').forEach(el=>el.onclick=()=>memFlip(parseInt(el.dataset.i)));
@@ -924,7 +927,7 @@ function memFlip(i){
 }
 function endMemory(){
   app.innerHTML=`<div class="panel center">${topbar()}<h2 class="section-title">🃏 Færdig!</h2>
-  <div style="font-size:3rem">🎉</div><p><b>Alle par fundet på ${MEM.moves} træk!</b></p>
+  <div class="ij-hero"><span data-sd-sprite="stjerne" data-scale="8" class="sd-hop" aria-hidden="true"></span><span data-sd-sprite="polle" data-scale="6" class="sd-bob" aria-hidden="true"></span></div><p><b>Alle par fundet på ${MEM.moves} træk!</b></p>
   <div class="row" style="justify-content:center"><button class="btn primary" onclick="launchGame('memory')">Igen 🔁</button><button class="btn ghost" onclick="renderGames()">Andre spil</button></div></div>`;
 }
 
@@ -966,7 +969,7 @@ function matchClick(el){
 }
 function endMatch(){
   app.innerHTML=`<div class="panel center">${topbar()}<h2 class="section-title">🔗 Færdig!</h2>
-  <div style="font-size:3rem">🎉</div><p><b>Alle par forbundet!</b></p>
+  <div class="ij-hero"><span data-sd-sprite="stjerne" data-scale="8" class="sd-hop" aria-hidden="true"></span><span data-sd-sprite="polle" data-scale="6" class="sd-bob" aria-hidden="true"></span></div><p><b>Alle par forbundet!</b></p>
   <div class="row" style="justify-content:center"><button class="btn primary" onclick="launchGame('match')">Igen 🔁</button><button class="btn ghost" onclick="renderGames()">Andre spil</button></div></div>`;
 }
 
@@ -1060,6 +1063,74 @@ function renderAch(){
    INIT
    ============================================================ */
 renderMenu();
+</script>
+<script>
+/* ---- Sjovt Dansk integration (additive hooks only: fx, sprites, a11y; no game logic) ---- */
+(function(){
+  var SD=window.Sjovt; if(!SD) return;
+  var app=document.getElementById('app');
+  /* particles -> shared pixel burst */
+  window.burstAt=function(el){ if(el) SD.fx.burst(el,10); };
+  /* feedback fx wrappers (call the original first, then react to the result) */
+  var _answer=window.answer;
+  window.answer=function(idx,btn){
+    var was=Q&&Q.answered; _answer(idx,btn); if(was||!btn) return;
+    var ok=Q.current.options[idx].correct;
+    if(ok) SD.fx.correct(btn); else { SD.fx.wrong(btn); var c=document.querySelector('#choices .choice.correct'); if(c) SD.fx.correct(c); }
+  };
+  var _check=window.checkText;
+  window.checkText=function(){
+    var fb=document.getElementById('fb'), before=fb&&fb.className; _checkRun(fb,before);
+  };
+  function _checkRun(fb,before){
+    _check(); if(!fb||fb.className===before) return;
+    var inp=document.getElementById('txtIn');
+    if(/good/.test(fb.className)) SD.fx.correct(document.getElementById('txtGo')); else SD.fx.wrong(inp);
+  }
+  ['endQuiz','endText','endMemory','endMatch'].forEach(function(n){
+    var f=window[n]; window[n]=function(){ var r=f.apply(this,arguments); SD.fx.celebrate(); return r; };
+  });
+  /* keep keyboard focus on the same card after memory/match re-render */
+  function keepFocus(name,sel){
+    var f=window[name];
+    window[name]=function(){
+      var a=document.activeElement, key=a&&a.getAttribute&&a.getAttribute('data-i');
+      var r=f.apply(this,arguments);
+      if(key!==null&&key!==undefined&&a&&a.classList&&a.classList.contains('mem-card')){ var n=document.querySelector(sel+'[data-i="'+key+'"]'); if(n) n.focus(); }
+      return r;
+    };
+  }
+  keepFocus('renderMemory','.mem-card');
+
+  /* per-render polish: sprites, a11y roles, emoji-free headings, enter animation on real screen changes */
+  var lastKey='', lastScore='';
+  var EMO=/^[\p{Extended_Pictographic}️‍\s]+/u;
+  function polish(){
+    SD.hydrate(app);
+    var panel=app.firstElementChild; if(!panel) return;
+    app.querySelectorAll('h2.section-title,h3').forEach(function(h){
+      var t=h.firstChild; if(t&&t.nodeType===3){ var v=t.nodeValue.replace(EMO,''); if(v!==t.nodeValue) t.nodeValue=v; }
+    });
+    app.querySelectorAll('.mem-card,.match-item').forEach(function(el){
+      if(!el.hasAttribute('tabindex')){ el.setAttribute('tabindex','0'); el.setAttribute('role','button'); }
+      if(el.classList.contains('mem-card')) el.setAttribute('aria-label', el.classList.contains('matched')?'Matchet par: '+el.textContent.replace(/♪/g,'').trim():(el.classList.contains('flipped')?el.textContent.replace(/♪/g,'').trim():'Vend kort'));
+      if(el.classList.contains('match-item')) el.setAttribute('aria-pressed', el.classList.contains('sel')?'true':'false');
+    });
+    document.documentElement.classList.toggle('ij-compact',!!panel.querySelector('.q-prompt,.mem-grid,.match-cols'));
+    var h2=panel.querySelector('h2.section-title'), pl=panel.querySelector('.q-prompt,.text-input-row')&&panel.querySelector('.progress-line span');
+    var key=(h2?h2.textContent:'')+'|'+(pl?pl.textContent:'');
+    if(key!==lastKey){ lastKey=key; SD.fx.enter(panel); }
+    var b=panel.querySelector('.progress-line b'), q=panel.querySelector('.q-prompt');
+    if(q&&b){ if(lastScore!==''&&b.textContent!==lastScore) SD.fx.bump(b); lastScore=b.textContent; } else lastScore='';
+  }
+  new MutationObserver(function(){ polish(); }).observe(app,{childList:true});
+  polish();
+  /* keyboard: Enter/Space activates role=button divs */
+  document.addEventListener('keydown',function(e){
+    var t=e.target; if(!t||!t.matches||!t.matches('.mem-card,.match-item')) return;
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); t.click(); }
+  });
+})();
 </script>
 </body>
 </html>

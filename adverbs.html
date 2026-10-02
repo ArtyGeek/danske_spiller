@@ -307,12 +307,15 @@
       padding: 0.3rem 0;
     }
   </style>
+  <link rel="stylesheet" href="shared/sjovt.css">
+  <script src="shared/sjovt.js"></script>
+  <link rel="stylesheet" href="shared/themes/adverbs.css">
 </head>
 <body>
   <header>
-    <h1>Danish Sentence Builder</h1>
+    <h1><span data-sd-sprite="polle" data-scale="3" class="sd-bob" aria-hidden="true"></span> <span>Danish Sentence Builder</span></h1>
     <div class="header-buttons">
-      <button id="darkToggle" title="Toggle dark mode">🌙</button>
+      <button id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode">Dark / Light</button>
       <button id="importBtn" title="Import CSV data">Import Data</button>
       <button id="reviewBtn" title="Review saved words (R)">Review</button>
       <button id="settingsBtn" title="Settings">Settings</button>
@@ -940,7 +943,8 @@
             reviewActive = false;
             updateDashboard();
             populateMap();
-            document.getElementById("game").innerHTML = "<p>Review complete!</p>";
+            document.getElementById("game").innerHTML = '<p>Review complete!</p><span data-sd-sprite="pokal" data-scale="6" class="sd-bob" aria-hidden="true"></span>';
+            if (window.Sjovt) { Sjovt.hydrate(); Sjovt.fx.celebrate(); }
           } else {
             const next = reviewQueue.shift();
             currentEntry = next.entry;
@@ -1033,11 +1037,15 @@
       const darkToggle = document.getElementById("darkToggle");
       if (localStorage.getItem("danishDarkMode") === "true") {
         document.body.classList.add("dark");
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else if (localStorage.getItem("danishDarkMode") === "false") {
+        document.documentElement.setAttribute("data-theme", "light");
       }
       darkToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark");
         const isDark = document.body.classList.contains("dark");
         localStorage.setItem("danishDarkMode", isDark);
+        document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
       });
       // Import modal events
       const importBtn = document.getElementById("importBtn");
@@ -1141,6 +1149,50 @@
         }
       });
     });
+  </script>
+  <script>
+    /* Sjovt Dansk fx hooks (additive only; game logic untouched) */
+    (function () {
+      if (!window.Sjovt) return;
+      var S = window.Sjovt, last = null;
+      document.addEventListener("click", function (e) {
+        var b = e.target.closest && e.target.closest("#options button, #content button");
+        if (b) last = b;
+      }, true);
+      var origAnswer = window.handleAnswer;
+      window.handleAnswer = function (correct) {
+        var was = awaitingAnswer;
+        origAnswer.apply(this, arguments);
+        if (!was) return;
+        var fb = document.getElementById("feedback");
+        if (fb) fb.className = correct ? "fb-ok" : "fb-bad";
+        if (correct) { S.fx.correct(last); }
+        else {
+          S.fx.wrong(last);
+          if (last && last.parentNode && last.parentNode.id === "options" && !last.classList.contains("correct")) last.classList.add("wrong");
+        }
+      };
+      var origRender = window.renderGame;
+      window.renderGame = function () {
+        origRender.apply(this, arguments);
+        var c = document.getElementById("content"); if (c) S.fx.enter(c);
+      };
+      var prev = { score: null, streak: null, level: null };
+      var origDash = window.updateDashboard;
+      window.updateDashboard = function () {
+        origDash.apply(this, arguments);
+        var stats = document.querySelectorAll("#dashboard .stat");
+        if (prev.score !== null && progress.score !== prev.score && stats[0]) S.fx.bump(stats[0]);
+        if (prev.streak !== null && progress.streak !== prev.streak && stats[2]) S.fx.bump(stats[2]);
+        if (prev.level !== null && progress.level > prev.level && stats[1]) {
+          S.fx.bump(stats[1]);
+          var st = S.sprite("stjerne", { scale: 3, cls: "sd-bob" }); st.style.marginLeft = "8px"; stats[1].appendChild(st);
+          S.fx.celebrate();
+        }
+        prev.score = progress.score; prev.streak = progress.streak; prev.level = progress.level;
+      };
+      S.watchScreens("#importModal .modal-content, #settingsModal .modal-content, #reviewModal .modal-content");
+    })();
   </script>
 </body>
 </html>

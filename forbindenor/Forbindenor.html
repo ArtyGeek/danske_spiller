@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FORBINDEORD // Grid Protocol</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&display=swap');
 :root{
   --bg:#02060d; --bg2:#04101c; --grid:#0a3a4a;
   --cyan:#37e2ff; --cyan-dim:#0e7a93; --orange:#ff8a1e; --orange-hot:#ff7a18;
@@ -154,24 +153,25 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
   transition:border-color .15s,box-shadow .15s}
 .back-btn:hover{border-color:var(--cyan);box-shadow:0 0 10px rgba(55,226,255,.3)}
 </style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<script src="../shared/sjovt.js"></script>
+<link rel="stylesheet" href="../shared/themes/forbindeord.css">
 </head>
 <body>
-<a class="dsg-home" href="../index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
-<div class="grid-bg"></div>
-<div class="scan"></div>
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="wrap">
-  <h1>FORBIND<span class="o">EORD</span></h1>
-  <div class="sub">Grid Protocol &middot; Danske forbindeord</div>
+  <div class="hero"><span data-sd-sprite="polle" data-scale="5" class="sd-bob" aria-hidden="true"></span>
+    <div><h1>FORBIND<span class="o">EORD</span></h1>
+  <div class="sub">Danske forbindeord</div></div></div>
   <div class="hud">
     <div class="chip score">Score<b id="score">0</b></div>
     <div class="chip streak">Streak<b id="streak">0</b></div>
-    <div class="chip lives">Energy<b id="lives">6</b></div>
+    <div class="chip lives">Energi<b id="lives">6</b></div>
     <div class="chip best">Best<b id="best">0</b></div>
-    <button class="weak-btn" id="weakBtn" type="button">Svage forbindeord 🔁</button>
+    <button class="weak-btn" id="weakBtn" type="button">Svage forbindeord</button>
   </div>
   <div class="weak-banner" id="weakBanner">
-    <b>⚠ SVAGE ORD TILSTAND</b>
+    <b>SVAGE ORD</b>
     <span id="weakCount"></span>
     <button class="back-btn" id="backBtn" type="button">Tilbage til normalt spil ✕</button>
   </div>
@@ -192,12 +192,13 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
     <div class="count" id="count"></div>
   </div>
   <div class="panel end" id="end">
-    <h2>SYSTEM RESET</h2>
+    <div class="end-sprites" aria-hidden="true"><span data-sd-sprite="pokal" data-scale="6"></span><span data-sd-sprite="polle" data-scale="6" class="sd-hop"></span><span data-sd-sprite="stjerne" data-scale="6"></span></div>
+    <h2>RESULTAT</h2>
     <div class="big" id="finalScore">0</div>
     <p id="endMsg"></p>
-    <button class="btn show" id="again" style="display:block">Genstart // Restart</button>
+    <button class="btn show" id="again" style="display:block">Spil igen</button>
   </div>
-  <div class="foot">// 359 sekvenser &middot; husk inversion //</div>
+  <div class="foot">359 sekvenser &middot; husk inversion</div>
 </div>
 <script>
 /* ============================================================
@@ -634,8 +635,8 @@ function speakerBtn(text, cls){
   const b = document.createElement("button");
   b.className = "speaker " + (cls||"");
   b.type = "button";
-  b.textContent = "🔊";
-  b.setAttribute("aria-label","Pronounce");
+  b.textContent = "♪"; b.title = "Lyt";
+  b.setAttribute("aria-label","Lyt til sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -672,7 +673,7 @@ function render(){
   const order = state.weakMode ? state.weakOrder : state.order;
   const rec=pool[order[state.i]];
   $('cat').textContent=rec.cat;
-  $('catEn').textContent='// '+rec.catEn;
+  $('catEn').textContent='/ '+rec.catEn;
   $('sentence').innerHTML=esc(rec.da).replace('{}','<span class="blank" id="bk">_____</span>');
   const fullSentence=rec.da.replace('{}',rec.initial?cap(rec.ans):rec.ans);
   const slot=$('speakerSlot'); slot.innerHTML='';
@@ -692,7 +693,7 @@ function render(){
   updateHud();
   const total = order.length;
   $('bar').style.width=(state.i/total*100)+'%';
-  $('count').textContent='Sekvens '+(state.i+1)+' / '+total+(state.weakMode?' // Svage ord':'');
+  $('count').textContent='Sekvens '+(state.i+1)+' / '+total+(state.weakMode?' · Svage ord':'');
 }
 function choose(btn,w,rec){
   if(state.answered) return;
@@ -706,14 +707,14 @@ function choose(btn,w,rec){
   bk.textContent=disp; bk.classList.add('filled');
   const isCorrect = w===rec.ans;
   if(isCorrect){
-    btn.classList.add('correct');
+    btn.classList.add('correct'); Sjovt.fx.correct(btn);
     state.streak++; state.score+=100+Math.min(state.streak,10)*10;
     if(state.streak%5===0){
-      if(state.lives<6){ state.lives++; energyPopup('⚡ +1 ENERGY'); }
-      else { energyPopup('⚡ ENERGY FULL'); }
+      if(state.lives<6){ state.lives++; energyPopup('+1 ENERGY'); }
+      else { energyPopup('ENERGI FULD'); }
     }
   }else{
-    btn.classList.add('wrong');
+    btn.classList.add('wrong'); Sjovt.fx.wrong(btn);
     state.streak=0; state.lives--;
   }
   recordAnswer(rec,isCorrect);
@@ -742,6 +743,7 @@ function energyPopup(msg){
   t.classList.add('show');
 }
 function updateHud(){
+  if($('score').textContent!==String(state.score)) Sjovt.fx.bump($('score'));
   $('score').textContent=state.score;
   $('streak').textContent=state.streak;
   $('lives').textContent='◆'.repeat(Math.max(state.lives,0))||'—';
@@ -769,9 +771,10 @@ function end(win){
   $('end').classList.add('show');
   $('weakBanner').classList.remove('show');
   $('finalScore').textContent=state.score;
+  Sjovt.fx.enter($('end')); Sjovt.fx.celebrate();
   $('endMsg').textContent=win
-    ? 'Du gennemførte alle '+records.length+' sekvenser. // You cleared the whole grid!'
-    : 'Energien er brugt op efter '+(state.i+1)+' sekvenser. // Derezzed — try again.';
+    ? 'Du gennemførte alle '+records.length+' sekvenser. Flot klaret!'
+    : 'Energien er brugt op efter '+(state.i+1)+' sekvenser. Prøv igen!';
 }
 $('again').onclick=()=>{
   state.score=0;state.streak=0;state.lives=6;state.i=0;
@@ -821,6 +824,7 @@ $('backBtn').onclick=()=>exitWeakMode();
 
 refreshWeakBtn();
 render();
+Sjovt.watchScreens('#game');
 </script>
 </body>
 </html>

@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Danish Word Order Detective 🕵️</title>
+<title>Danish Word Order Detective</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Franklin:wght@400;500;600;700;800&display=swap');
 
 :root{
   --ink:#1a1410; --paper:#f3e9d2; --paper2:#e7d9b8;
@@ -235,19 +234,21 @@ body{
 .dsg-home{position:fixed;top:14px;right:14px;z-index:999999;display:inline-flex;align-items:center;gap:6px;background:rgba(20,20,30,.62);color:#fff;text-decoration:none;font:700 .85rem 'Segoe UI',system-ui,sans-serif;padding:9px 16px;border-radius:999px;backdrop-filter:blur(4px);box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
 .dsg-home:hover{transform:translateY(-2px);background:rgba(20,20,30,.8)}
 </style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<script src="../shared/sjovt.js"></script>
+<link rel="stylesheet" href="../shared/themes/ordstilling.css">
 </head>
 <body>
-<a class="dsg-home" href="../index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
 <div class="wrap">
   <div class="masthead">
-    <h1>🕵️ Danish Word Order Detective</h1>
+    <div class="mast-row"><span data-sd-sprite="hat" data-scale="6" class="sd-bob" aria-hidden="true"></span><h1>Danish Word Order Detective</h1></div>
     <div class="tag">Ordstillings&shy;detektiven — 12 Cases · A1 → B2</div>
     <div class="rank" id="rankBadge">Rank: Trainee Detective</div>
   </div>
 
   <!-- ================= MAP ================= -->
   <div class="card" id="mapScreen">
-    <p class="intro-line">// CASE FILES — CITY POLICE, GRAMMAR DIVISION //</p>
+    <p class="intro-line">CASE FILES — CITY POLICE, GRAMMAR DIVISION</p>
     <div class="tiers">
       <span class="tier-pill t-a1">A1 · Cases 1–3</span>
       <span class="tier-pill t-a2">A2 · Cases 4–6</span>
@@ -259,22 +260,22 @@ body{
     <p class="progress-note" id="progNote">Cases solved: 0 / 12</p>
     <div class="bar"><div id="progBar"></div></div>
     <button class="reset" id="resetBtn">Reset all progress</button>
-    <button class="weak-btn hidden" id="weakBtn">Svage sætninger 🔁</button>
+    <button class="weak-btn hidden" id="weakBtn">Svage sætninger</button>
   </div>
 
   <!-- ================= PLAY ================= -->
   <div class="card hidden" id="playScreen">
     <div class="topbar">
       <button class="back" id="backBtn">‹ Case Map</button>
-      <span class="timer hidden" id="timer">⏱ 0:00</span>
+      <span class="timer hidden" id="timer">0:00</span>
       <div class="hud">
         <div class="stat"><div class="l">Score</div><div class="v" id="scoreV">0</div></div>
         <div class="stat"><div class="l">Streak</div><div class="v" id="streakV">0</div></div>
-        <div class="stat"><div class="l">Lives</div><div class="v lives" id="livesV">❤❤❤</div></div>
+        <div class="stat"><div class="l">Lives</div><div class="v lives" id="livesV">♥♥♥</div></div>
       </div>
     </div>
 
-    <div class="weak-banner hidden" id="weakBanner">⚠ Svage sætninger tilstand — øvetilstand</div>
+    <div class="weak-banner hidden" id="weakBanner">Svage sætninger tilstand — øvetilstand</div>
     <div class="casehead" id="caseHead"></div>
     <div class="qbar"><div id="qFill"></div></div>
 
@@ -284,8 +285,8 @@ body{
       <div class="answer empty" id="answer"></div>
       <div class="pool" id="pool"></div>
       <div class="controls">
-        <button class="btn clear" id="clearBtn">⟲ Clear</button>
-        <button class="btn check" id="checkBtn" disabled>🔍 Examine</button>
+        <button class="btn clear" id="clearBtn">Clear</button>
+        <button class="btn check" id="checkBtn" disabled>Examine</button>
       </div>
       <div class="explain" id="explain"><div class="inner">
         <div class="verdict" id="verdict"></div>
@@ -759,8 +760,8 @@ function speakerBtn(text, cls){
   const b = document.createElement("button");
   b.className = "speaker " + (cls||"");
   b.type = "button";
-  b.textContent = "🔊";
-  b.setAttribute("aria-label","Pronounce");
+  b.textContent = "♪"; b.title = "Lyt";
+  b.setAttribute("aria-label","Lyt til sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -807,7 +808,7 @@ function renderMap(){
       `<span class="ct">${c.title}</span>`+
       `<span class="cf">${c.focus}</span>`+
       (done?`<span class="stamp">Solved</span>`:"")+
-      (!unlocked?`<span class="lock">🔒</span>`:"")+
+      (!unlocked?`<span class="lock">LOCKED</span>`:"")+
       (done&&prog.best[c.n]?`<span class="best">best ${prog.best[c.n]}%</span>`:"");
     if(unlocked) b.onclick=()=>startCase(c.n);
     g.appendChild(b);
@@ -818,9 +819,9 @@ function renderMap(){
   f.className="casebtn final-card"+(fUnlocked?"":" locked");
   f.disabled=!fUnlocked;
   f.innerHTML=`<span class="lvl lb-b2">FINAL</span>`+
-    `<span class="ct">🗝️ The Final Investigation</span>`+
+    `<span class="ct">The Final Investigation</span>`+
     `<span class="cf">100 mixed questions · adaptive · timed · all concepts</span>`+
-    (fUnlocked?(prog.finalBest?`<div class="best" style="position:static;margin-top:6px">best ${prog.finalBest}%</div>`:""):`<span class="lock" style="position:static;display:block;margin-top:6px">🔒 Solve all 12 cases to unlock</span>`);
+    (fUnlocked?(prog.finalBest?`<div class="best" style="position:static;margin-top:6px">best ${prog.finalBest}%</div>`:""):`<span class="lock" style="position:static;display:block;margin-top:6px">Solve all 12 cases to unlock</span>`);
   if(fUnlocked) f.onclick=()=>startFinal();
   g.appendChild(f);
 
@@ -850,9 +851,9 @@ function startWeak(){
   $("timer").classList.add("hidden");
   $("caseHead").innerHTML=
     `<div class="file">ØVETILSTAND · ALLE NIVEAUER</div>`+
-    `<h2>Svage sætninger 🔁</h2>`+
+    `<h2>Svage sætninger</h2>`+
     `<div class="story">Gennemgå de sætninger, du har haft svært ved. Hver korrekt svar reducerer puljen — den skrumper, efterhånden som du øver dig.</div>`+
-    `<div class="focus">🎯 ${q.length} sætning${q.length===1?"":"er"} i puljen</div>`;
+    `<div class="focus">${q.length} sætning${q.length===1?"":"er"} i puljen</div>`;
   show("play"); renderHUD(); loadQuestion();
 }
 
@@ -880,7 +881,7 @@ function startCase(n){
     `<div class="file">CASE FILE #${String(n).padStart(2,"0")} · ${c.cefr}</div>`+
     `<h2>${c.title}</h2>`+
     `<div class="story">${c.story}</div>`+
-    `<div class="focus">🎯 Focus: ${c.focus}</div>`;
+    `<div class="focus">Focus: ${c.focus}</div>`;
   show("play"); renderHUD(); loadQuestion();
 }
 
@@ -899,16 +900,16 @@ function startFinal(){
   G={mode:"final", caseN:0, c:null, queue:q, i:0, score:0, streak:0, lives:99, correct:0, total:0, time:0};
   $("caseHead").innerHTML=
     `<div class="file">SPECIAL DOSSIER · ALL LEVELS</div>`+
-    `<h2>🗝️ The Final Investigation</h2>`+
+    `<h2>The Final Investigation</h2>`+
     `<div class="story">100 mixed statements from every case. Difficulty rises, weak areas appear more often, and the clock is running. Prove you are the Master Detective.</div>`+
-    `<div class="focus">🎯 Adaptive · Timed · A1 → B2</div>`;
+    `<div class="focus">Adaptive · Timed · A1 → B2</div>`;
   show("play"); renderHUD(); startTimer(); loadQuestion();
 }
 
 function renderHUD(){
   $("scoreV").textContent=G.score;
   $("streakV").textContent=G.streak;
-  $("livesV").textContent=(G.mode==="final"||G.mode==="weak")?"∞":"❤".repeat(G.lives)+"♡".repeat(3-G.lives);
+  $("livesV").textContent=(G.mode==="final"||G.mode==="weak")?"∞":"♥".repeat(G.lives)+"♡".repeat(3-G.lives);
 }
 
 /* ---------- timer (final) ---------- */
@@ -918,7 +919,7 @@ function startTimer(){
   timerInt=setInterval(()=>{
     G.time++;
     const m=Math.floor(G.time/60), s=G.time%60;
-    el.textContent=`⏱ ${m}:${String(s).padStart(2,"0")}`;
+    el.textContent=`${m}:${String(s).padStart(2,"0")}`;
   },1000);
 }
 function stopTimer(){ if(timerInt){clearInterval(timerInt);timerInt=null;} }
@@ -992,6 +993,7 @@ $("checkBtn").onclick=()=>{
   const ok=built.join(" ")===cur.correct.join(" ");
   $("answer").classList.add("locked");
   $("answer").classList.add(ok?"ok":"no");
+  Sjovt.fx[ok?"correct":"wrong"]($("answer"));
   $("checkBtn").classList.add("hidden");
   $("clearBtn").classList.add("hidden");
   G.total++;
@@ -999,7 +1001,7 @@ $("checkBtn").onclick=()=>{
     G.correct++; G.streak++;
     const pts=10+Math.min(G.streak,5)*2+(G.mode==="final"?5:0);
     G.score+=pts;
-    if(G.streak>1&&G.streak%3===0) flash("🔥 x"+G.streak+" streak!");
+    if(G.streak>1&&G.streak%3===0) flash("x"+G.streak+" streak!");
     if(G.mode==="weak"){
       const cn=cur.caseN;
       prog.weak[cn]=(prog.weak[cn]||1)-1;
@@ -1012,7 +1014,7 @@ $("checkBtn").onclick=()=>{
     if(G.mode!=="weak"){ prog.weak[cn]=(prog.weak[cn]||0)+1; saveP(prog); }
     if(G.mode!=="final"&&G.mode!=="weak"){ G.lives--; }
   }
-  renderHUD();
+  renderHUD(); Sjovt.fx.bump($("scoreV"));
   showExplain(ok);
 };
 
@@ -1052,18 +1054,20 @@ function finishSession(){
   $("qFill").style.width="100%";
   const pct=Math.round(G.correct/Math.max(1,G.total)*100);
   const area=$("completeArea"); area.classList.remove("hidden");
+  setTimeout(()=>{Sjovt.hydrate(area);Sjovt.fx.enter(area);if(pct>=60)Sjovt.fx.celebrate();},0);
 
   if(G.mode==="weak"){
     const remaining=Object.values(prog.weak).filter(v=>v>0).length;
     area.innerHTML=
+      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="polle" data-scale="6" class="sd-hop"></span></div>`+
       `<div class="bigstamp" style="color:#d98324;border-color:#d98324;transform:rotate(-3deg)">ØVET</div>`+
-      `<h2>Svage sætninger 🔁</h2>`+
+      `<h2>Svage sætninger</h2>`+
       `<div class="score">${G.correct} sætninger klaret ud af ${G.total}</div>`+
       `<p>${remaining>0
         ? `Godt arbejde! Der er stadig <b>${remaining} sag${remaining===1?"":"er"}</b> med svage sætninger. Fortsæt med at øve dig!`
-        : `Fremragende! Du har ryddet alle svage sætninger fra puljen. 🎉`}</p>`+
+        : `Fremragende! Du har ryddet alle svage sætninger fra puljen.`}</p>`+
       `<div class="controls" style="margin-top:16px">
-         <button class="btn clear" id="againBtn">🔁 Øv igen</button>
+         <button class="btn clear" id="againBtn">Øv igen</button>
          <button class="btn check" id="mapBtn2">Tilbage til kortvalg ▸</button>
        </div>`;
     $("againBtn").onclick=()=>startWeak();
@@ -1077,6 +1081,7 @@ function finishSession(){
     }
     const next=CASES.find(x=>x.n===G.caseN+1);
     area.innerHTML=
+      `<div class="res-sprites" aria-hidden="true">${passed?'<span data-sd-sprite="pokal" data-scale="6"></span>':''}<span data-sd-sprite="polle" data-scale="6" class="${passed?'sd-hop':'sd-wig'}"></span>${passed?'<span data-sd-sprite="stjerne" data-scale="6"></span>':''}</div>`+
       (passed?`<div class="bigstamp">SOLVED</div>`:`<div class="bigstamp" style="color:#8a6a30;border-color:#8a6a30;transform:rotate(-4deg)">REOPEN</div>`)+
       `<h2>${G.c.title}</h2>`+
       `<div class="score">${G.correct} / ${G.total} correct · ${pct}%</div>`+
@@ -1084,7 +1089,7 @@ function finishSession(){
         ? (next?`Case closed, Detective. <b>Case ${next.n}: ${next.title}</b> is now unlocked.`:`Outstanding — every case is solved! The <b>Final Investigation</b> awaits.`)
         : `You ran low on leads. Score at least 60% (and keep a life) to stamp this case <b>Solved</b>. Try again — the words are shuffled fresh each time.`}</p>`+
       `<div class="controls" style="margin-top:16px">
-         <button class="btn clear" id="againBtn">⟲ Retry case</button>
+         <button class="btn clear" id="againBtn">Retry case</button>
          <button class="btn check" id="mapBtn2">Case Map ▸</button>
        </div>`;
     $("againBtn").onclick=()=>startCase(G.caseN);
@@ -1092,14 +1097,15 @@ function finishSession(){
   }else{
     prog.finalBest=Math.max(prog.finalBest,pct); saveP(prog);
     const m=Math.floor(G.time/60),s=G.time%60;
-    const title = pct>=90?"🏆 MASTER DETECTIVE":pct>=70?"🥇 Ace Investigator":pct>=50?"🔎 Solid Sleuth":"📁 Keep Investigating";
+    const title = pct>=90?"MASTER DETECTIVE":pct>=70?"Ace Investigator":pct>=50?"Solid Sleuth":"Keep Investigating";
     area.innerHTML=
+      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="pokal" data-scale="6"></span><span data-sd-sprite="polle" data-scale="6" class="sd-hop"></span></div>`+
       `<div class="bigstamp" style="${pct>=90?'':'color:#8a6a30;border-color:#8a6a30'}">${pct>=90?'MASTER':'CASE'}</div>`+
       `<h2>${title}</h2>`+
       `<div class="score">${G.correct} / ${G.total} · ${pct}%</div>`+
-      `<p>Time: <b>${m}:${String(s).padStart(2,"0")}</b> · Score: <b>${G.score}</b>${pct>=90?"<br>You have mastered Danish word order from A1 to B2. 🎉":"<br>The weak spots you missed will appear more often next time."}</p>`+
+      `<p>Time: <b>${m}:${String(s).padStart(2,"0")}</b> · Score: <b>${G.score}</b>${pct>=90?"<br>You have mastered Danish word order from A1 to B2.":"<br>The weak spots you missed will appear more often next time."}</p>`+
       `<div class="controls" style="margin-top:16px">
-         <button class="btn clear" id="againBtn">⟲ Run again</button>
+         <button class="btn clear" id="againBtn">Run again</button>
          <button class="btn check" id="mapBtn2">Case Map ▸</button>
        </div>`;
     $("againBtn").onclick=()=>startFinal();
@@ -1109,6 +1115,7 @@ function finishSession(){
 
 /* ---------- boot ---------- */
 renderMap();
+Sjovt.watchScreens('#mapScreen, #playScreen');
 </script>
 </body>
 </html>

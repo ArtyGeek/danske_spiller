@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dansk Mester — Learn Danish</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
-
 :root{
   --bg:#0f1626;
   --bg2:#142036;
@@ -278,10 +276,12 @@ body{
 .dsg-home{position:fixed;top:14px;right:14px;z-index:999999;display:inline-flex;align-items:center;gap:6px;background:rgba(20,20,30,.62);color:#fff;text-decoration:none;font:700 .85rem 'Segoe UI',system-ui,sans-serif;padding:9px 16px;border-radius:999px;backdrop-filter:blur(4px);box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
 .dsg-home:hover{transform:translateY(-2px);background:rgba(20,20,30,.8)}
 </style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<script src="../shared/sjovt.js"></script>
+<link rel="stylesheet" href="../shared/themes/dansk-mester.css">
 </head>
 <body>
-<a class="dsg-home" href="../index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 <div id="app"></div>
 
 <script>
@@ -708,15 +708,15 @@ function filterItems(items){
 
 function topbar(){
   return `<div class="topbar">
-    <div class="brand"><span class="flag"></span> Dansk Mester</div>
+    <div class="brand"><span data-sd-sprite="flag" data-scale="3" aria-hidden="true"></span> Dansk Mester</div>
     <div class="spacer"></div>
-    <div class="stat-chip xp"><span class="ico">⭐</span>${P.xp}</div>
-    <div class="stat-chip streak"><span class="ico">🔥</span>${P.currentStreak}</div>
+    <div class="stat-chip xp" role="img" aria-label="XP: ${P.xp}"><span class="ico" data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span><span aria-hidden="true">${P.xp}</span></div>
+    <div class="stat-chip streak" role="img" aria-label="Day streak: ${P.currentStreak}"><span class="ico" data-sd-sprite="molle" data-scale="2" aria-hidden="true"></span><span aria-hidden="true">${P.currentStreak}</span></div>
   </div>`;
 }
 function bottomnav(active){
-  const b=(n,ico,lbl)=>`<button class="navbtn ${active===n?'active':''}" onclick="go('${n}')"><span class="nico">${ico}</span>${lbl}</button>`;
-  return `<div class="bottomnav">${b('home','🏠','Home')}${b('stats','📊','Stats')}${b('badges','🏅','Badges')}</div>`;
+  const b=(n,ico,lbl)=>`<button class="navbtn ${active===n?'active':''}" onclick="go('${n}')"><span class="nico" data-sd-sprite="${ico}" data-scale="2" aria-hidden="true"></span>${lbl}</button>`;
+  return `<div class="bottomnav">${b('home','polle','Home')}${b('stats','pokal','Stats')}${b('badges','stjerne','Badges')}</div>`;
 }
 
 function render(){
@@ -740,7 +740,7 @@ function screenHome(){
     const d=DATA[key], m=pathMastery(key), learned=pathLearned(key), tot=pathTotal(key);
     return `<div class="path-card ${key}" onclick="go('path',{path:'${key}'})">
       <div class="glow"></div>
-      <div class="pico">${d.icon}</div>
+      <div class="pico" data-sd-sprite="${key==='verbs'?'cykel':'snegl'}" data-scale="5" aria-hidden="true"></div>
       <h3>${d.label}</h3>
       <p>${d.blurb} • ${tot} items</p>
       <div style="display:flex;align-items:center;gap:10px;margin-top:16px">
@@ -753,7 +753,7 @@ function screenHome(){
   if(P.last.path!=null){
     const d=DATA[P.last.path], c=d.categories[P.last.cat];
     cont=`<div class="card" style="margin-bottom:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-      <div style="font-size:2rem">⏯️</div>
+      <div data-sd-sprite="flag" data-scale="3" aria-hidden="true"></div>
       <div style="flex:1;min-width:140px">
         <div style="font-weight:900">Continue where you left off</div>
         <div class="muted" style="font-size:.9rem">${d.label} — ${c?c.name:''}</div>
@@ -761,7 +761,7 @@ function screenHome(){
       <button class="btn small" onclick="go('modes',{path:'${P.last.path}',ci:${P.last.cat}})">Continue ▸</button>
     </div>`;
   }
-  return `<div class="h1">Hej! 👋 Ready to learn Danish?</div>
+  return `<div class="dm-welcome"><span data-sd-sprite="polle" data-scale="6" class="sd-bob" aria-hidden="true"></span><div class="h1">Hej! Ready to learn Danish?</div></div>
     <p class="sub">Master verb combinations & native phrases. Choose a path to begin.</p>
     ${cont}
     <div class="path-grid">${pc('verbs')}${pc('phrases')}</div>
@@ -816,6 +816,7 @@ function screenPath(path){
 /* =========================================================
    MODES for a category
 ========================================================= */
+const MODE_SPR={mc:'stjerne',flash:'snegl',match:'hjerte',timed:'cykel',mixed:'molle',sr:'pokal',weak:'hat'};
 function screenModes(path,ci){
   P.last={path,cat:ci}; save();
   const d=DATA[path], c=d.categories[ci];
@@ -829,7 +830,7 @@ function screenModes(path,ci){
     {id:"weak", ico:"🩹", name:"Weak Words", desc:"Fix your trouble spots"},
   ];
   const cells=modes.map(m=>`<div class="mode" onclick="launchMode('${path}',${ci},'${m.id}')">
-      <div class="mico">${m.ico}</div><div class="mname">${m.name}</div><div class="mdesc">${m.desc}</div>
+      <div class="mico" data-sd-sprite="${MODE_SPR[m.id]||'stjerne'}" data-scale="4" aria-hidden="true"></div><div class="mname">${m.name}</div><div class="mdesc">${m.desc}</div>
     </div>`).join("");
   return `<div class="back" onclick="go('path',{path:'${path}'})">‹ ${d.label}</div>
     <div class="h1">${c.icon} ${c.name}</div>
@@ -907,7 +908,7 @@ function nextQuestion(){
     `<div class="prompt">
       <div class="lbl">${cfg.title}</div>
       <div class="word" id="promptWord">${esc(promptText)}</div>
-      <div class="dir-tag">${ask==='da2en'?'🇩🇰 Danish → 🇬🇧 English':'🇬🇧 English → 🇩🇰 Danish'}</div>
+      <div class="dir-tag">${ask==='da2en'?'Danish → English':'English → Danish'}</div>
     </div>
     <div class="options" id="opts"></div>
     <div class="feedback" id="fb"></div>`;
@@ -984,8 +985,8 @@ function renderFlash(){
   wrap.innerHTML=gameHead(`<span class="muted" style="font-weight:800">${G.idx+1}/${cfg.pool.length}</span>`)+
     `<div class="prompt" style="padding:14px"><div class="lbl">${cfg.title} • tap card to flip</div></div>
      <div class="flash-wrap"><div class="flash" id="flash" onclick="flipCard()">
-        <div class="face front"><div class="lbl">🇩🇰 Danish</div><div class="ftext">${esc(q.it.da)}</div><div class="hint">tap to reveal</div></div>
-        <div class="face back"><div class="lbl">🇬🇧 English</div><div class="ftext">${esc(q.it.en)}</div><div class="hint">did you know it?</div></div>
+        <div class="face front"><div class="lbl">Danish</div><div class="ftext">${esc(q.it.da)}</div><div class="hint">tap to reveal</div></div>
+        <div class="face back"><div class="lbl">English</div><div class="ftext">${esc(q.it.en)}</div><div class="hint">did you know it?</div></div>
      </div></div>
      <div class="btn-row" style="justify-content:center" id="flashbtns" style="opacity:.4">
        <button class="btn secondary" onclick="gradeFlash(false)">😕 Still learning</button>
@@ -1075,7 +1076,7 @@ function pickMatch(btn){
 function finishMatch(){
   const acc=overallAccuracy();
   $("#gamewrap").innerHTML=`<div class="card result">
-    <div class="big">🧲✨</div>
+    <div class="big"><span data-sd-sprite="stjerne" data-scale="8" class="sd-hop" aria-hidden="true"></span><span data-sd-sprite="polle" data-scale="6" class="sd-bob" aria-hidden="true"></span></div>
     <h2 style="margin:0 0 6px">All pairs matched!</h2>
     <p class="muted">Great memory work in "${esc(G.cfg.title)}".</p>
     <div class="btn-row" style="justify-content:center;margin-top:18px" id="matchContinueRow"></div></div>`;
@@ -1112,6 +1113,7 @@ function finishGame(){
   const xpEarned = G.results.reduce((s,r)=>s+(r.correct?10:2),0);
   const wrap=$("#gamewrap");
   wrap.innerHTML=`<div class="card result">
+    <div class="dm-hero"><span data-sd-sprite="${pct>=80?'pokal':'polle'}" data-scale="6" class="${pct>=80?'sd-hop':'sd-bob'}" aria-hidden="true"></span></div>
     ${ringSVG(pct,color)}
     <h2 style="margin:2px 0 4px">${headline}</h2>
     <p class="muted">${esc(G.cfg.title)}</p>
@@ -1196,9 +1198,10 @@ function resetAll(){ if(confirm("Reset ALL progress, XP and streaks?")){P=blankP
 /* =========================================================
    BADGES
 ========================================================= */
+const BADGE_SPR=['stjerne','pokal','hjerte','snegl','molle','cykel','hat','flag','polle'];
 function screenBadges(){
   const cells=ACHS.map(a=>{const un=P.badges.includes(a.id);
-    return `<div class="ach ${un?'un':''}"><div class="aico">${a.ico}</div><div class="aname">${a.name}</div></div>`;}).join("");
+    return `<div class="ach ${un?'un':''}"><div class="aico" data-sd-sprite="${BADGE_SPR[ACHS.indexOf(a)%BADGE_SPR.length]}" data-scale="4" aria-hidden="true"></div><div class="aname">${a.name}</div></div>`;}).join("");
   const got=P.badges.length;
   return `<div class="h1">🏅 Achievements</div>
     <p class="sub">${got}/${ACHS.length} badges earned</p>
@@ -1210,6 +1213,50 @@ function screenBadges(){
    BOOT
 ========================================================= */
 render();
+</script>
+<script>
+/* ---- Sjovt Dansk integration (additive hooks only: fx, sprites, a11y; no game logic) ---- */
+(function(){
+  var SD=window.Sjovt; if(!SD) return;
+  /* particles -> shared pixel burst at the same coordinates */
+  window.burst=function(x,y){
+    var d=document.createElement('div'); d.style.cssText='position:fixed;width:1px;height:1px;left:'+x+'px;top:'+y+'px;pointer-events:none';
+    document.body.appendChild(d); SD.fx.burst(d,10); d.remove();
+  };
+  /* feedback fx: answerMC already bursts on correct; add pop / shake on the buttons */
+  var _am=window.answerMC;
+  window.answerMC=function(btn,chosen){
+    var was=G&&G._answered; _am(btn,chosen); if(was) return;
+    if(btn.classList.contains('correct')) btn.classList.add('sd-fx-correct'); else if(btn.classList.contains('wrong')) SD.fx.wrong(btn);
+  };
+  var _pm=window.pickMatch;
+  window.pickMatch=function(btn){ _pm(btn); if(btn.classList.contains('miss')){ /* shake handled by .miss css */ } };
+  ['finishGame','finishMatch'].forEach(function(n){ var f=window[n]; window[n]=function(){ var r=f.apply(this,arguments); SD.fx.celebrate(); return r; }; });
+  /* flash cards: front/back are one control; make it keyboard operable */
+  var app=document.getElementById('app');
+  var EMO=/^[\p{Extended_Pictographic}\uFE0F\u200D\s]+/u, lastScreen=null, lastQ='';
+  function stripLead(el){ var t=el.firstChild; if(t&&t.nodeType===3){ var v=t.nodeValue.replace(EMO,''); if(v!==t.nodeValue) t.nodeValue=v; } }
+  function polish(){
+    SD.hydrate(app);
+    app.querySelectorAll('.h1,.section-title,.cname,.mname,.btn:not(.opt),.timer-pill').forEach(stripLead);
+    app.querySelectorAll('.cat.locked .num').forEach(function(n){ if(n.textContent.trim()!=='LOCK') n.textContent='LOCK'; });
+    app.querySelectorAll('.path-card,.cat,.mode,.back:not(.face),#flash').forEach(function(el){
+      if(!el.hasAttribute('tabindex')){ el.setAttribute('tabindex','0'); el.setAttribute('role','button'); }
+      if(el.classList.contains('locked')) el.setAttribute('aria-disabled','true');
+      if(el.id==='flash') el.setAttribute('aria-label','Flash card: press Enter to flip');
+    });
+    var scr=app.querySelector('.screen'); if(scr&&scr!==lastScreen){ lastScreen=scr; SD.fx.enter(scr); }
+    var w=document.getElementById('promptWord'), pr=app.querySelector('.prompt'), ft=app.querySelector('#flash .face.front .ftext');
+    var key=(w?w.textContent:(ft?ft.textContent:''))+'|'+(G&&G.idx);
+    if((w||ft)&&key!==lastQ){ lastQ=key; SD.fx.enter(w?pr:document.querySelector('.flash-wrap')); }
+  }
+  new MutationObserver(function(){ polish(); }).observe(app,{childList:true,subtree:true});
+  polish();
+  document.addEventListener('keydown',function(e){
+    var t=e.target; if(!t||!t.matches||!t.matches('.path-card,.cat,.mode,.back,#flash')) return;
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); t.click(); }
+  });
+})();
 </script>
 </body>
 </html>

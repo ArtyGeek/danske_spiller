@@ -160,7 +160,7 @@ html.sd-page ::selection { background: var(--sd-ink); color: var(--sd-cream); }
   display: inline-flex; align-items: center; justify-content: center; gap: var(--sd-3);
   min-height: 48px; min-width: 48px; padding: 14px 22px; margin: var(--sd-bw);
   background: var(--_bg); color: var(--_fg); border: 0; border-radius: 0;
-  font-family: var(--sd-font-display); font-weight: 700; font-size: 18px; line-height: 1.2; text-transform: uppercase; text-decoration: none; letter-spacing: .04em;
+  font-family: var(--sd-font-display); font-weight: 500; font-size: 18px; line-height: 1.2; text-transform: uppercase; text-decoration: none; letter-spacing: .04em;
   cursor: pointer; position: relative;
   box-shadow: var(--sd-box), var(--sd-bevel), 0 12px 0 -4px var(--sd-ink);   /* black frame + bevel + 8px base */
   transform: translateY(0); transition: transform .08s steps(2), box-shadow .08s steps(2), background .08s steps(2);
@@ -209,9 +209,9 @@ html.sd-page ::selection { background: var(--sd-ink); color: var(--sd-cream); }
 .sd-bar { position: sticky; top: 0; z-index: 900; display: flex; align-items: center; gap: var(--sd-3);
   min-height: var(--sd-bar-h); padding: 4px 12px; background: var(--sd-ink); color: var(--sd-cream);
   border-bottom: 4px solid var(--sd-orange); font-family: var(--sd-font-display); box-sizing: border-box; }
-.sd-bar a { color: var(--sd-cream); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; font-size: 16px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.sd-bar a { color: var(--sd-cream); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; font-size: 16px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
 .sd-bar a:hover { background: var(--sd-orange); color: #101010; }
-.sd-bar .sd-bar-logo { margin-left: auto; font-family: var(--sd-font-logo); font-size: 10px; display: inline-flex; align-items: center; gap: 8px; color: var(--sd-cream); }
+.sd-bar .sd-bar-logo { margin-left: auto; font-family: var(--sd-font-logo); font-size: 12px; display: inline-flex; align-items: center; gap: 8px; color: var(--sd-cream); }
 .sd-bar .sd-bar-logo b { font-weight: 400; color: var(--sd-orange); }
 @media (max-width: 420px) { .sd-bar .sd-bar-logo span.t { display: none; } }
 
@@ -262,7 +262,7 @@ html.sd-page ::selection { background: var(--sd-ink); color: var(--sd-cream); }
 .sd-pre-title b { font-weight: 400; color: var(--sd-orange); }
 .sd-pre-bar { width: 100%; height: 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
 .sd-pre-bar i { background: #3a3a3a; } .sd-pre-bar i.on { background: var(--sd-orange); }
-.sd-pre-meta { font-family: var(--sd-font-display); font-weight: 700; font-size: 14px; letter-spacing: 0; display: flex; justify-content: space-between; width: 100%; }
+.sd-pre-meta { font-family: var(--sd-font-display); font-weight: 500; font-size: 14px; letter-spacing: 0; display: flex; justify-content: space-between; width: 100%; }
 .sd-pre-note { font-family: var(--sd-font-body); font-size: 12px; color: var(--sd-cream); text-align: center; min-height: 1.4em; }
 .sd-pre-hero { margin-top: -56px; }
 /* quick (repeat) transition: plain orange curtain + hopping mascot, no rows */

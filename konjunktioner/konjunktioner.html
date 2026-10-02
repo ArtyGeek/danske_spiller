@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konjunktion Crush 🍬</title>
+<script src="../shared/sjovt.js"></script>
+<title>Konjunktion Crush</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap');
 
 :root{
   --c-pink:#ff5fa2; --c-pink2:#ff8cc6;
@@ -187,13 +187,14 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
 .review-badge{display:inline-block;font-family:'Baloo 2';font-weight:800;font-size:13px;letter-spacing:.5px;padding:5px 14px;border-radius:20px;margin-bottom:10px;color:#fff;background:linear-gradient(135deg,var(--c-purple),var(--c-blue));box-shadow:0 3px 0 #2a5fcc}
 #reviewBtn:active{transform:translateY(4px);box-shadow:0 3px 0 #2a5fcc}
 </style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<link rel="stylesheet" href="../shared/themes/konjunktioner.css">
 </head>
 <body>
-<a class="dsg-home" href="../index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
 <div class="wrap">
   <div class="shell">
     <h1>Konjunktion Crush</h1>
-    <p class="sub">Vælg den rigtige konjunktion 🍬 og lær reglen!</p>
+    <p class="sub">Vælg den rigtige konjunktion og lær reglen!</p>
 
     <div class="hud">
       <div class="stat"><div class="lab">Point</div><div class="val" id="scoreVal">0</div></div>
@@ -211,7 +212,7 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
       <div class="head" id="ruleHead"></div>
       <div class="body" id="ruleBody"></div>
     </div>
-    <button class="next hidden" id="next">Næste 🍭</button>
+    <button class="next hidden" id="next">Næste →</button>
     <footer>300 sætninger · helt offline · ét spil</footer>
   </div>
 </div>
@@ -222,21 +223,21 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
 <!-- START -->
 <div class="screen" id="startScreen">
   <div class="panel">
-    <div class="big">🍬🍭🍫</div>
+    <div class="big"><span data-sd-sprite="polle" data-scale="6" data-label="Pølle, maskot" class="sd-bob"></span></div>
     <h2>Konjunktion Crush</h2>
     <p>Udfyld hullet i sætningen med den rigtige <b>konjunktion</b>. Ram rigtigt for at samle combo og point — og læs reglen efter hvert svar.</p>
-    <p>Du har <b>5 liv</b> ❤️. Klar?</p>
+    <p>Du har <b>5 liv</b> <span data-sd-sprite="hjerte" data-scale="2"></span>. Klar?</p>
     <div class="legend">
       <span style="background:linear-gradient(135deg,#ff595e,#ff9f1c)">Hovedsætning</span>
       <span style="background:linear-gradient(135deg,#9b5de5,#3a86ff)">Ledsætning</span>
       <span style="background:linear-gradient(135deg,#19c3b2,#52d869)">Hv-ord</span>
     </div>
-    <label class="flt" style="display:block;margin-top:10px;font-size:13px">Niveau
-      <select id="lvlSelect" style="margin-left:6px;font-family:inherit;border-radius:8px;padding:4px 8px">
+    <label class="flt" for="lvlSelect">Niveau
+      <select id="lvlSelect">
         <option value="all">Alle niveauer</option>
       </select>
     </label>
-    <button class="play" id="startBtn">Spil! 🎮</button>
+    <button class="play" id="startBtn">Spil!</button>
     <p style="margin-top:12px;font-size:13px">Rekord: <b id="hiStart">0</b></p>
   </div>
 </div>
@@ -244,23 +245,23 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
 <!-- GAME OVER -->
 <div class="screen hidden" id="overScreen">
   <div class="panel">
-    <div class="big" id="overEmoji">🍭</div>
+    <div class="big" id="overEmoji"></div>
     <h2 id="overTitle">Slut!</h2>
     <p>Du fik <b id="finalScore">0</b> point</p>
     <p>Rigtige svar: <b id="finalRight">0</b> · Længste combo: <b id="finalCombo">0</b></p>
-    <p>Rekord: <b id="hiOver">0</b> <span id="newHi" style="display:none">🏆 Ny rekord!</span></p>
-    <button class="play" id="againBtn">Spil igen 🔁</button>
-    <button class="play" id="reviewBtn" style="display:none;margin-top:10px;background:linear-gradient(135deg,var(--c-purple),var(--c-blue));box-shadow:0 7px 0 #2a5fcc, inset 0 3px 6px rgba(255,255,255,.45)">Gennemgå fejl 🔁</button>
+    <p>Rekord: <b id="hiOver">0</b> <span id="newHi" style="display:none">★ Ny rekord!</span></p>
+    <button class="play" id="againBtn">Spil igen</button>
+    <button class="play play2" id="reviewBtn" style="display:none">Gennemgå fejl</button>
   </div>
 </div>
 
 <!-- REVIEW COMPLETE -->
 <div class="screen hidden" id="reviewDoneScreen">
   <div class="panel">
-    <div class="big">🎓</div>
-    <h2 style="color:var(--c-purple)">Gennemgang færdig!</h2>
+    <div class="big"><span data-sd-sprite="stjerne" data-scale="6" class="sd-bob"></span></div>
+    <h2>Gennemgang færdig!</h2>
     <p>Du har gennemgået alle dine fejl. Godt gået!</p>
-    <button class="play" id="reviewDoneBtn">Spil igen 🎮</button>
+    <button class="play" id="reviewDoneBtn">Spil igen</button>
   </div>
 </div>
 
@@ -685,8 +686,8 @@ function speakerBtn(text, cls){
   const b = document.createElement("button");
   b.className = "speaker " + (cls||"");
   b.type = "button";
-  b.textContent = "🔊";
-  b.setAttribute("aria-label","Pronounce");
+  b.textContent = "♪";
+  b.setAttribute("aria-label","Udtal sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -730,11 +731,17 @@ function start(){
   nextQuestion();
 }
 
+function renderLives(){
+  const el=$('lives'); el.innerHTML=''; el.setAttribute('aria-label',lives+' liv tilbage'); el.setAttribute('role','img');
+  for(let i=0;i<5;i++){ const s=document.createElement('span'); s.className='life'+(i<lives?'':' lost'); s.innerHTML=window.Sjovt?Sjovt.spriteSVG('hjerte',3):''; el.appendChild(s); }
+}
 function updateHud(){
   $('scoreVal').textContent=score;
   $('streakVal').textContent=streak;
   $('lvlVal').textContent=level;
-  $('lives').textContent='❤️'.repeat(lives)+'🖤'.repeat(Math.max(0,5-lives));
+  renderLives();
+  if(window.Sjovt){ if(updateHud._s!==score) Sjovt.fx.bump($('scoreVal')); if(updateHud._k!==streak && streak>0) Sjovt.fx.bump($('streakVal')); }
+  updateHud._s=score; updateHud._k=streak;
   $('pfill').style.width = ((idx%10)/10*100)+'%';
 }
 
@@ -787,7 +794,7 @@ function startReview(){
     const chipEl=$('chip');
     chipEl.parentNode.insertBefore(badge,chipEl);
   }
-  badge.textContent='📖 Gennemgang af fejl ('+reviewDeck.length+' sætninger)';
+  badge.textContent='Gennemgang af fejl ('+reviewDeck.length+' sætninger)';
   badge.style.display='block';
 
   renderQuestion(reviewDeck[reviewIdx]);
@@ -820,6 +827,7 @@ function choose(btn,word){
 
   if(correct){
     btn.classList.add('correct');
+    if(window.Sjovt) Sjovt.fx.correct(btn);
     if(!inReview){
       streak++; bestStreak=Math.max(bestStreak,streak); right++;
       const mult = 1 + Math.floor(streak/3); // combo multiplier
@@ -833,6 +841,7 @@ function choose(btn,word){
     blank.style.borderColor='var(--c-green)';
   } else {
     btn.classList.add('wrong');
+    if(window.Sjovt) Sjovt.fx.wrong(btn);
     // highlight the real answer
     const ans=buttons.find(b=>b.textContent===current.answer);
     if(ans){ans.classList.remove('dim');ans.classList.add('correct');}
@@ -864,8 +873,8 @@ function choose(btn,word){
 function showRule(correct){
   const r=$('rule');
   $('ruleHead').innerHTML = correct
-    ? '<span class="verdict ok">✅ Rigtigt!</span>'
-    : '<span class="verdict no">❌ Det rigtige er: '+current.answer+'</span>';
+    ? '<span class="verdict ok">✓ Rigtigt!</span>'
+    : '<span class="verdict no">✗ Det rigtige er: '+current.answer+'</span>';
   $('ruleBody').innerHTML = current.rule;
   r.classList.add('show');
 }
@@ -878,7 +887,8 @@ function gameOver(){
   $('hiOver').textContent=getHi();
   const isNew = score>0 && score>=getHi();
   $('newHi').style.display = (score>0 && score===getHi()) ? 'inline' : 'none';
-  $('overEmoji').textContent = score>=300?'🏆': score>=150?'🍫':'🍬';
+  const oe=$('overEmoji'); oe.innerHTML='';
+  if(window.Sjovt){ oe.appendChild(Sjovt.sprite(score>=300?'pokal':score>=150?'stjerne':'polle',{scale:6,cls:'sd-bob'})); if(score>=150) Sjovt.fx.celebrate(); }
   $('overTitle').textContent = score>=300?'Sukkermester!': score>=150?'Flot spillet!':'Slut!';
   $('reviewBtn').style.display = sessionMistakes.length>0 ? 'block' : 'none';
   $('overScreen').classList.remove('hidden');
@@ -888,6 +898,7 @@ function gameOver(){
 function showCombo(t){const c=$('combo');c.textContent=t;c.classList.remove('show');void c.offsetWidth;c.classList.add('show');}
 function flashGreen(){const f=$('flash');f.classList.remove('go');void f.offsetWidth;f.classList.add('go');}
 function burstAt(el,good){
+  if(window.Sjovt && Sjovt.reduced()) return;
   const r=el.getBoundingClientRect();
   const x=r.left+r.width/2, y=r.top+r.height/2;
   const cols=good?['#ff5fa2','#9b5de5','#3a86ff','#19c3b2','#ff9f1c','#52d869']:['#ff595e','#ff9f1c'];
@@ -904,8 +915,7 @@ function burstAt(el,good){
   }
 }
 
-// floating candy backdrop
-(function(){const e=['🍬','🍭','🍫','🧁','🍩','🍪','🍯'];for(let i=0;i<10;i++){const s=document.createElement('div');s.className='bg-candy';s.textContent=e[i%e.length];s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';s.style.animationDelay=(Math.random()*9)+'s';s.style.fontSize=(22+Math.random()*30)+'px';document.body.appendChild(s);}})();
+if(window.Sjovt) Sjovt.watchScreens('.screen');
 
 // events
 initLvlSelect();
@@ -916,6 +926,7 @@ $('reviewDoneBtn').onclick=start;
 $('next').onclick=nextQuestion;
 $('hiStart').textContent=getHi();
 document.addEventListener('keydown',e=>{
+  if(e.target && e.target.tagName==='SELECT') return;
   if(e.key==='Enter'){
     if(!$('startScreen').classList.contains('hidden')) start();
     else if(!$('overScreen').classList.contains('hidden')) start();

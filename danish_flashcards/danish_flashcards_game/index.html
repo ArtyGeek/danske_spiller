@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verb-glosekort</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/sjovt.css">
+    <script src="../../shared/sjovt.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../shared/themes/flashcards.css">
 </head>
 <body>
-    <a class="dsg-home" href="../../index.html" title="Tilbage til spiloversigt">🏠 Oversigt</a>
     <div class="wl-bg" aria-hidden="true">
         <span class="wl-card wl-c1">♠</span>
         <span class="wl-card wl-c2">♥</span>
@@ -30,7 +29,7 @@
 
         <!-- Main content showing the card and controls -->
         <section class="main-content">
-            <h1 class="wl-title">🐇 Verb-glosekort</h1>
+            <h1 class="wl-title"><span data-sd-sprite="polle" data-scale="4" class="sd-bob" aria-hidden="true"></span> Verb-glosekort</h1>
             <div class="scoreboard">
                 <div class="progress-bar-container">
                     <div id="progress-bar" class="progress-bar"></div>
@@ -48,13 +47,20 @@
             </div>
 
             <div id="review-mode-banner" class="review-mode-banner" style="display:none;">
-                <span>🔴 Review Mode — fixing your mistakes</span>
+                <span>Review Mode — fixing your mistakes</span>
                 <button id="exit-review-btn" type="button">Back to full deck</button>
+            </div>
+
+            <div id="sd-done" class="sd-done" hidden role="status">
+                <span data-sd-sprite="pokal" data-scale="5" class="sd-hop" aria-hidden="true"></span>
+                <div><strong>✓ Deck complete!</strong> <span id="sd-done-text"></span></div>
             </div>
 
             <div class="card-wrapper">
                 <!-- Card will be injected here -->
             </div>
+
+            <p id="sd-fb" class="sd-fb-line" role="status" aria-live="polite"></p>
 
             <div class="action-buttons">
                 <button id="wrong-btn" class="wrong">Got it wrong</button>
