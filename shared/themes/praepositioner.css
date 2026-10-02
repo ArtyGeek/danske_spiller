@@ -231,4 +231,4 @@ html[data-sd-motion="off"].sd-page .particle { visibility: hidden; animation: sd
 }
 
 /* Pixelify bold closes the gap in C (reads as O): use a lighter weight for display labels */
-html.sd-page :is(.mode-btn .t, .btn, .topbtn, .section-title, .dex h1, .fb .big, .speaker, .chip, .streakpop, h2) { font-weight: 500; }
+html.sd-page :is(.mode-btn .t, .btn, .topbtn, .section-title, .dex h1, .fb .big, .speaker, .chip, .streakpop, h2) { font-weight: 700; }

@@ -21,11 +21,11 @@ html.sd-page .wrap { max-width: 780px; padding: 20px 16px 64px; }
 html.sd-page .crest { margin: 8px 0 0; }
 html.sd-page .crest .spark { filter: none; font-size: 0; display: inline-block; }
 html.sd-page h1 {
-  font-family: var(--sd-font-display); font-weight: 500; text-transform: uppercase; color: var(--sd-text); text-shadow: none;
+  font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; color: var(--sd-text); text-shadow: none;
   font-size: clamp(30px, 8vw, 54px); line-height: 1.1; margin: 8px 0 4px; overflow-wrap: anywhere;
 }
 html.sd-page .subtitle { font-family: var(--sd-font-body); font-style: normal; font-weight: 700; color: var(--sd-text); font-size: 15px; letter-spacing: 0; margin: 0 0 20px; }
-html.sd-page h2, html.sd-page h3, html.sd-page .title { font-family: var(--sd-font-display); font-weight: 500; text-transform: uppercase; letter-spacing: .01em; }
+html.sd-page h2, html.sd-page h3, html.sd-page .title { font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; }
 html.sd-page h2.title { font-size: clamp(22px, 5vw, 30px); color: var(--sd-text) !important; margin: 12px 0 8px; overflow-wrap: anywhere; }
 html.sd-page h2.title .sd-sprite { margin-right: 8px; }
 
@@ -41,7 +41,7 @@ html.sd-page .panel .foot { color: var(--sd-text-soft); }
 /* buttons */
 html.sd-page .btn {
   min-height: 52px; padding: 12px 22px; margin: 4px; background: var(--sd-orange); color: #101010; border: 0; width: auto;
-  font-family: var(--sd-font-display); font-weight: 500; font-size: 18px; text-transform: uppercase; letter-spacing: .04em; filter: none;
+  font-family: var(--sd-font-display); font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: .04em; filter: none;
   box-shadow: var(--sd-box), var(--sd-bevel), 0 12px 0 -4px var(--sd-ink); transition: transform .08s steps(2), box-shadow .08s steps(2);
 }
 html.sd-page .btn:hover { background: var(--sd-cream); filter: none; }
@@ -58,7 +58,7 @@ html.sd-page .row .btn.gold:only-child { width: calc(100% - 8px); }
 html.sd-page .back-link {
   display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: 8px 14px; margin: 4px 4px 12px; cursor: pointer;
   background: var(--sd-ink); color: var(--sd-cream); border: 0; box-shadow: var(--sd-box);
-  font-family: var(--sd-font-display); font-weight: 500; font-size: 16px; text-transform: uppercase; letter-spacing: .04em;
+  font-family: var(--sd-font-display); font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: .04em;
 }
 html.sd-page .back-link:hover { background: var(--sd-orange); color: #101010; }
 
@@ -74,7 +74,7 @@ html.sd-page .game-card:nth-child(4n+4) { background: #FFA9C6; }
 html.sd-page .game-card:hover { transform: translate(-2px,-2px); border: 0; box-shadow: var(--sd-box), var(--sd-bevel), 10px 10px 0 0 var(--sd-ink); }
 html.sd-page .game-card:active { transform: translate(4px,4px); box-shadow: var(--sd-box), var(--sd-bevel), 2px 2px 0 0 var(--sd-ink); }
 html.sd-page .game-card .ico { filter: none; font-size: 0; width: 68px; min-width: 68px; display: grid; place-items: center; }
-html.sd-page .game-card .gc-t { font-family: var(--sd-font-display); font-weight: 500; font-size: 18px; color: #101010; text-transform: uppercase; line-height: 1.2; overflow-wrap: anywhere; }
+html.sd-page .game-card .gc-t { font-family: var(--sd-font-display); font-weight: 700; font-size: 18px; color: #101010; text-transform: uppercase; line-height: 1.2; overflow-wrap: anywhere; }
 html.sd-page .game-card .gc-d { font-family: var(--sd-font-body); font-size: 14px; color: #101010; margin-top: 4px; line-height: 1.4; overflow-wrap: anywhere; }
 html.sd-page .gc-done { margin-left: 6px; background: #101010; color: var(--sd-cream); padding: 0 6px; font-family: var(--sd-font-body); font-size: 14px; }
 
@@ -88,7 +88,7 @@ html.sd-page .diff:hover { border: 0; transform: translateY(-2px); background: v
 html.sd-page .diff.active { background: var(--sd-cream); box-shadow: var(--sd-box), var(--sd-bevel), 0 12px 0 -4px var(--sd-ink), inset 0 0 0 4px var(--sd-orange); }
 html.sd-page .diff.active .dn::after { content: " \2713"; }
 html.sd-page .diff .ds { font-size: 0; min-height: 32px; }
-html.sd-page .diff .dn { font-family: var(--sd-font-display); font-weight: 500; font-size: 20px; color: #101010; text-transform: uppercase; margin-top: 6px; }
+html.sd-page .diff .dn { font-family: var(--sd-font-display); font-weight: 700; font-size: 20px; color: #101010; text-transform: uppercase; margin-top: 6px; }
 html.sd-page .diff .dl { font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; color: #101010; }
 
 /* progress bars */
@@ -116,7 +116,7 @@ html.sd-page .q-prompt-row .q-prompt { flex: 1 1 200px; min-width: 0; }
 
 html.sd-page .speaker {
   width: 48px; height: 48px; min-width: 48px; margin: 4px; padding: 0; background: var(--sd-cream); color: #101010; border: 0;
-  box-shadow: var(--sd-box), 4px 4px 0 0 var(--sd-ink); font-family: var(--sd-font-display); font-weight: 500; font-size: 18px;
+  box-shadow: var(--sd-box), 4px 4px 0 0 var(--sd-ink); font-family: var(--sd-font-display); font-weight: 700; font-size: 18px;
 }
 html.sd-page .speaker:hover { background: #fff; border: 0; }
 html.sd-page .speaker:active { transform: translate(2px,2px); box-shadow: var(--sd-box), 2px 2px 0 0 var(--sd-ink); }
@@ -139,12 +139,12 @@ html.sd-page .opt.wrong::before   { content: "\2717\00a0"; font-family: var(--sd
 
 /* feedback - icon + text */
 html.sd-page .feedback { position: relative; margin: 20px 4px 4px; padding: 14px 16px 14px 64px; border: 0; animation: none; color: var(--sd-text); min-height: 64px; }
-html.sd-page .feedback::before { position: absolute; left: 14px; top: 14px; width: 36px; height: 36px; display: grid; place-items: center; font-family: var(--sd-font-display); font-weight: 500; font-size: 22px; color: #101010; }
+html.sd-page .feedback::before { position: absolute; left: 14px; top: 14px; width: 36px; height: 36px; display: grid; place-items: center; font-family: var(--sd-font-display); font-weight: 700; font-size: 22px; color: #101010; }
 html.sd-page .feedback.ok  { background: var(--sd-ok-bg); box-shadow: var(--sd-box-ok); }
 html.sd-page .feedback.ok::before  { content: "\2713"; background: var(--sd-ok); }
 html.sd-page .feedback.no  { background: var(--sd-bad-bg); box-shadow: var(--sd-box-bad); }
 html.sd-page .feedback.no::before  { content: "\2717"; background: var(--sd-bad); }
-html.sd-page .feedback .fb-h, html.sd-page .feedback.ok .fb-h, html.sd-page .feedback.no .fb-h { font-family: var(--sd-font-display); font-weight: 500; font-size: 20px; text-transform: uppercase; color: var(--sd-text); margin-bottom: 6px; }
+html.sd-page .feedback .fb-h, html.sd-page .feedback.ok .fb-h, html.sd-page .feedback.no .fb-h { font-family: var(--sd-font-display); font-weight: 700; font-size: 20px; text-transform: uppercase; color: var(--sd-text); margin-bottom: 6px; }
 html.sd-page .feedback .fb-ex { font-family: var(--sd-font-body); font-size: 16px; color: var(--sd-text); margin-top: 4px; line-height: 1.5; overflow-wrap: anywhere; }
 
 /* stats + result */
@@ -152,7 +152,7 @@ html.sd-page .stat-grid { gap: 16px; padding: 4px; }
 html.sd-page .stat { background: var(--sd-panel-2); border: 0; box-shadow: var(--sd-box); margin: 4px; padding: 14px 8px; }
 html.sd-page .stat .sv { font-family: var(--sd-font-body); font-weight: 700; font-size: 30px; color: var(--sd-text); }
 html.sd-page .stat .sl { font-family: var(--sd-font-body); font-size: 14px; color: var(--sd-text-soft); margin-top: 2px; }
-html.sd-page .section-h { font-family: var(--sd-font-display); font-weight: 500; text-transform: uppercase; color: var(--sd-text); font-size: 20px; margin: 28px 0 8px; padding-bottom: 6px; border-bottom: 4px solid var(--sd-orange); }
+html.sd-page .section-h { font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; color: var(--sd-text); font-size: 20px; margin: 28px 0 8px; padding-bottom: 6px; border-bottom: 4px solid var(--sd-orange); }
 html.sd-page .mastery-row { gap: 10px; margin: 12px 0; }
 html.sd-page .mastery-row .ml { width: 104px; flex: none; font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; color: var(--sd-text); }
 html.sd-page .mastery-row .mp { width: 52px; font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; color: var(--sd-text); }
@@ -168,7 +168,7 @@ html.sd-page p[style*="--muted"] { color: var(--sd-text-soft) !important; }
 
 /* toast */
 html.sd-page .toast {
-  background: var(--sd-cream); color: #101010; box-shadow: var(--sd-box), var(--sd-drop); font-family: var(--sd-font-display); font-weight: 500; font-size: 18px;
+  background: var(--sd-cream); color: #101010; box-shadow: var(--sd-box), var(--sd-drop); font-family: var(--sd-font-display); font-weight: 700; font-size: 18px;
   padding: 12px 20px; text-transform: uppercase; transition: opacity .2s steps(3), transform .2s steps(3); max-width: calc(100vw - 32px);
 }
 
