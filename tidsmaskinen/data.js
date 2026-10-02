@@ -1782,11 +1782,11 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "jeg-ringer-dig-klokken-elleve-i-morgen",
+      "id": "jeg-ringer-til-dig-klokken-elleve-i-morgen",
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Det er aftalt til i morgen.",
-      "sentence": "Jeg ___ dig klokken elleve i morgen.",
+      "sentence": "Jeg ___ til dig klokken elleve i morgen.",
       "options": [
         "ringer",
         "havde ringet",
@@ -2381,15 +2381,15 @@ window.TIDS_DATA = {
       "note": "\"Siden\" + et startpunkt for noget, der stadig gælder, kræver perfektum."
     },
     {
-      "id": "jeg-har-ikke-set-ham-ikke-siden-juni",
+      "id": "jeg-har-ikke-set-ham-siden-juni",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Jeg så ham sidst i juni, og nu er det august.",
-      "sentence": "Jeg ___ ham ikke siden juni.",
+      "sentence": "Jeg ___ ham siden juni.",
       "options": [
-        "ser ikke",
         "har ikke set",
         "så ikke",
+        "ser ikke",
         "havde ikke set"
       ],
       "correct": "har ikke set",
@@ -2404,16 +2404,16 @@ window.TIDS_DATA = {
       "note": "\"Ikke ... siden\" om noget, der ikke er sket frem til nu, kræver perfektum."
     },
     {
-      "id": "jeg-har-ikke-talt-ikke-med-hende-siden-jul",
+      "id": "jeg-har-ikke-talt-med-hende-siden-jul",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du talte sidst med din mor til jul.",
-      "sentence": "Jeg ___ ikke med hende siden jul.",
+      "sentence": "Jeg ___ med hende siden jul.",
       "options": [
-        "talte ikke",
         "havde ikke talt",
-        "taler ikke",
-        "har ikke talt"
+        "talte ikke",
+        "har ikke talt",
+        "taler ikke"
       ],
       "correct": "har ikke talt",
       "accepted_answers": [
@@ -2427,16 +2427,16 @@ window.TIDS_DATA = {
       "note": "\"Ikke ... siden\" om noget, der ikke er sket frem til nu, kræver perfektum."
     },
     {
-      "id": "den-har-ikke-virket-ikke-siden-mandag",
+      "id": "den-har-ikke-virket-siden-mandag",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Kaffemaskinen holdt op med at virke i mandags.",
-      "sentence": "Den ___ ikke siden mandag.",
+      "sentence": "Den ___ siden mandag.",
       "options": [
         "virker ikke",
+        "havde ikke virket",
         "virkede ikke",
-        "har ikke virket",
-        "havde ikke virket"
+        "har ikke virket"
       ],
       "correct": "har ikke virket",
       "accepted_answers": [
@@ -2565,11 +2565,11 @@ window.TIDS_DATA = {
       "note": "\"Siden\" + et startpunkt for noget, der stadig gælder, kræver perfektum."
     },
     {
-      "id": "jeg-har-ikke-set-ikke-et-teaterstykke-siden-2023",
+      "id": "jeg-har-ikke-set-et-teaterstykke-siden-2023",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Jeg så sidst et teaterstykke for to år siden.",
-      "sentence": "Jeg ___ ikke et teaterstykke siden 2023.",
+      "sentence": "Jeg ___ et teaterstykke siden 2023.",
       "options": [
         "havde ikke set",
         "så ikke",
@@ -2588,16 +2588,16 @@ window.TIDS_DATA = {
       "note": "\"Ikke ... siden\" om noget, der ikke er sket frem til nu, kræver perfektum."
     },
     {
-      "id": "hun-har-ikke-hoert-ikke-fra-ham-siden-paaske",
+      "id": "hun-har-ikke-hoert-fra-ham-siden-paaske",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Han er rejst, og hun har ikke hørt fra ham siden.",
-      "sentence": "Hun ___ ikke fra ham siden påske.",
+      "sentence": "Hun ___ fra ham siden påske.",
       "options": [
         "havde ikke hørt",
+        "har ikke hørt",
         "hørte ikke",
-        "hører ikke",
-        "har ikke hørt"
+        "hører ikke"
       ],
       "correct": "har ikke hørt",
       "accepted_answers": [
@@ -3780,15 +3780,15 @@ window.TIDS_DATA = {
       "note": "Et bestemt tidspunkt i fortiden kræver datid."
     },
     {
-      "id": "jeg-har-aldrig-vaeret-aldrig-til-island",
+      "id": "jeg-har-aldrig-vaeret-til-island-indtil-nu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om hele dit liv indtil nu.",
-      "sentence": "Jeg ___ aldrig til Island.",
+      "sentence": "Jeg ___ til Island indtil nu.",
       "options": [
         "var aldrig",
-        "er aldrig",
         "havde aldrig været",
+        "er aldrig",
         "har aldrig været"
       ],
       "correct": "har aldrig været",
@@ -3826,15 +3826,15 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "hun-har-aldrig-ejet-aldrig-en-bil",
+      "id": "hun-har-aldrig-ejet-en-bil-indtil-nu",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det handler om hele hendes liv indtil nu.",
-      "sentence": "Hun ___ aldrig en bil.",
+      "sentence": "Hun ___ en bil indtil nu.",
       "options": [
         "ejer aldrig",
-        "havde aldrig ejet",
         "har aldrig ejet",
+        "havde aldrig ejet",
         "ejede aldrig"
       ],
       "correct": "har aldrig ejet",
@@ -3896,11 +3896,11 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "hun-har-aldrig-staaet-aldrig-paa-ski",
+      "id": "hun-har-aldrig-staaet-paa-ski-indtil-nu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Hun er 35 og taler om sit liv.",
-      "sentence": "Hun ___ aldrig på ski.",
+      "sentence": "Hun ___ på ski indtil nu.",
       "options": [
         "står aldrig",
         "stod aldrig",
@@ -3988,16 +3988,16 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "jeg-har-aldrig-set-aldrig-saa-mange-mennesker-samlet",
+      "id": "jeg-har-aldrig-set-saa-mange-mennesker-samlet-indtil-nu",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Jeg ___ aldrig så mange mennesker samlet.",
+      "sentence": "Jeg ___ så mange mennesker samlet indtil nu.",
       "options": [
         "så aldrig",
         "havde aldrig set",
-        "har aldrig set",
-        "ser aldrig"
+        "ser aldrig",
+        "har aldrig set"
       ],
       "correct": "har aldrig set",
       "accepted_answers": [
@@ -4057,16 +4057,16 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "jeg-har-aldrig-haft-aldrig-en-rigtig-ferie",
+      "id": "jeg-har-aldrig-haft-en-rigtig-ferie-indtil-nu",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Jeg ___ aldrig en rigtig ferie.",
+      "sentence": "Jeg ___ en rigtig ferie indtil nu.",
       "options": [
-        "har aldrig",
-        "havde aldrig",
+        "havde aldrig haft",
         "har aldrig haft",
-        "havde aldrig haft"
+        "var aldrig",
+        "blev aldrig"
       ],
       "correct": "har aldrig haft",
       "accepted_answers": [
@@ -4103,15 +4103,15 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "mine-foraeldre-har-aldrig-vaeret-aldrig-i-usa",
+      "id": "mine-foraeldre-har-aldrig-vaeret-i-usa-indtil-nu",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dine forældre og deres liv indtil nu.",
-      "sentence": "Mine forældre ___ aldrig i USA.",
+      "sentence": "Mine forældre ___ i USA indtil nu.",
       "options": [
-        "har aldrig været",
-        "er aldrig",
         "var aldrig",
+        "er aldrig",
+        "har aldrig været",
         "havde aldrig været"
       ],
       "correct": "har aldrig været",
@@ -4149,16 +4149,16 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "han-har-aldrig-vaeret-aldrig-til-koncert",
+      "id": "han-har-aldrig-vaeret-til-koncert-indtil-nu",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om hele hans liv indtil nu.",
-      "sentence": "Han ___ aldrig til koncert.",
+      "sentence": "Han ___ til koncert indtil nu.",
       "options": [
-        "er aldrig",
         "havde aldrig været",
+        "har aldrig været",
         "var aldrig",
-        "har aldrig været"
+        "er aldrig"
       ],
       "correct": "har aldrig været",
       "accepted_answers": [
@@ -4172,16 +4172,16 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "vi-har-aldrig-haft-aldrig-en-kat",
+      "id": "vi-har-aldrig-haft-en-kat-indtil-nu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Vi ___ aldrig en kat.",
+      "sentence": "Vi ___ en kat indtil nu.",
       "options": [
-        "har aldrig",
+        "blev aldrig",
         "havde aldrig haft",
-        "har aldrig haft",
-        "havde aldrig"
+        "var aldrig",
+        "har aldrig haft"
       ],
       "correct": "har aldrig haft",
       "accepted_answers": [
@@ -4195,14 +4195,14 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "jeg-har-aldrig-haft-aldrig-brug-for-en-tolk",
+      "id": "jeg-har-aldrig-haft-brug-for-en-tolk-indtil-nu",
       "level": "B2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om din erfaring indtil nu.",
-      "sentence": "Jeg ___ aldrig brug for en tolk.",
+      "sentence": "Jeg ___ brug for en tolk indtil nu.",
       "options": [
-        "havde aldrig",
-        "har aldrig",
+        "var aldrig",
+        "blev aldrig",
         "havde aldrig haft",
         "har aldrig haft"
       ],
@@ -4218,16 +4218,16 @@ window.TIDS_DATA = {
       "note": "Livserfaring uden bestemt tidspunkt udtrykkes med perfektum."
     },
     {
-      "id": "min-mormor-har-aldrig-siddet-aldrig-i-et-fly",
+      "id": "min-mormor-har-aldrig-siddet-i-et-fly-indtil-nu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Min mormor ___ aldrig i et fly.",
+      "sentence": "Min mormor ___ i et fly indtil nu.",
       "options": [
-        "havde aldrig siddet",
         "har aldrig siddet",
         "sidder aldrig",
-        "sad aldrig"
+        "sad aldrig",
+        "havde aldrig siddet"
       ],
       "correct": "har aldrig siddet",
       "accepted_answers": [
@@ -4264,15 +4264,15 @@ window.TIDS_DATA = {
       "note": "\"Allerede\", \"endnu\" og \"aldrig\" knytter fortiden til nutiden og kræver perfektum."
     },
     {
-      "id": "jeg-har-ikke-spist-endnu-ikke-frokost",
+      "id": "jeg-har-ikke-spist-frokost-endnu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det er endnu ikke sket.",
-      "sentence": "Jeg ___ endnu ikke frokost.",
+      "sentence": "Jeg ___ frokost endnu.",
       "options": [
+        "har ikke spist",
         "spiste ikke",
         "spiser ikke",
-        "har ikke spist",
         "havde ikke spist"
       ],
       "correct": "har ikke spist",
@@ -4287,11 +4287,11 @@ window.TIDS_DATA = {
       "note": "\"Allerede\", \"endnu\" og \"aldrig\" knytter fortiden til nutiden og kræver perfektum."
     },
     {
-      "id": "vi-har-ikke-set-ikke-filmen-endnu",
+      "id": "vi-har-ikke-set-filmen-endnu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du har endnu ikke set filmen.",
-      "sentence": "Vi ___ ikke filmen endnu.",
+      "sentence": "Vi ___ filmen endnu.",
       "options": [
         "har ikke set",
         "så ikke",
@@ -4356,16 +4356,16 @@ window.TIDS_DATA = {
       "note": "\"Allerede\", \"endnu\" og \"aldrig\" knytter fortiden til nutiden og kræver perfektum."
     },
     {
-      "id": "toget-er-ikke-kommet-endnu-ikke",
+      "id": "toget-er-ikke-kommet-endnu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du venter stadig på toget.",
-      "sentence": "Toget ___ endnu ikke.",
+      "sentence": "Toget ___ endnu.",
       "options": [
         "var ikke kommet",
-        "kom ikke",
         "kommer ikke",
-        "er ikke kommet"
+        "er ikke kommet",
+        "kom ikke"
       ],
       "correct": "er ikke kommet",
       "accepted_answers": [
@@ -4425,16 +4425,16 @@ window.TIDS_DATA = {
       "note": "\"Allerede\", \"endnu\" og \"aldrig\" knytter fortiden til nutiden og kræver perfektum."
     },
     {
-      "id": "jeg-har-ikke-moedt-endnu-ikke-hende",
+      "id": "jeg-har-ikke-moedt-hende-endnu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det er ikke sket endnu.",
-      "sentence": "Jeg ___ endnu ikke hende.",
+      "sentence": "Jeg ___ hende endnu.",
       "options": [
         "har ikke mødt",
+        "møder ikke",
         "havde ikke mødt",
-        "mødte ikke",
-        "møder ikke"
+        "mødte ikke"
       ],
       "correct": "har ikke mødt",
       "accepted_answers": [
@@ -4471,16 +4471,16 @@ window.TIDS_DATA = {
       "note": "\"Allerede\", \"endnu\" og \"aldrig\" knytter fortiden til nutiden og kræver perfektum."
     },
     {
-      "id": "vi-har-ikke-besluttet-endnu-ikke-hvad-vi-skal-lave-i",
+      "id": "vi-har-ikke-besluttet-endnu-hvad-vi-skal-lave-i",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det er ikke afgjort endnu.",
-      "sentence": "Vi ___ endnu ikke, hvad vi skal lave i weekenden.",
+      "sentence": "Vi ___ endnu, hvad vi skal lave i weekenden.",
       "options": [
-        "havde ikke besluttet",
-        "beslutter ikke",
         "har ikke besluttet",
-        "besluttede ikke"
+        "besluttede ikke",
+        "havde ikke besluttet",
+        "beslutter ikke"
       ],
       "correct": "har ikke besluttet",
       "accepted_answers": [
@@ -4518,20 +4518,20 @@ window.TIDS_DATA = {
       "note": "\"Allerede\", \"endnu\" og \"aldrig\" knytter fortiden til nutiden og kræver perfektum."
     },
     {
-      "id": "jeg-har-lavet-ikke-mine-lektier-endnu",
+      "id": "jeg-har-ikke-lavet-mine-lektier-endnu",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Lektierne er ikke lavet.",
-      "sentence": "Jeg ___ ikke mine lektier endnu.",
+      "sentence": "Jeg ___ mine lektier endnu.",
       "options": [
-        "har lavet",
-        "havde lavet",
-        "laver",
-        "lavede"
+        "har ikke lavet",
+        "havde ikke lavet",
+        "lavede ikke",
+        "laver ikke"
       ],
-      "correct": "har lavet",
+      "correct": "har ikke lavet",
       "accepted_answers": [
-        "har lavet"
+        "har ikke lavet"
       ],
       "timeline": {
         "start": "før nu",
@@ -4633,16 +4633,16 @@ window.TIDS_DATA = {
       "note": "Når tidsrummet ikke er slut (i dag, i år, denne uge), bruges perfektum."
     },
     {
-      "id": "han-har-ikke-drukket-endnu-ikke-noget-i-dag",
+      "id": "han-har-ikke-drukket-noget-endnu-i-dag",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du vil have noget at drikke, og din ven har ikke drukket endnu.",
-      "sentence": "Han ___ endnu ikke noget i dag.",
+      "sentence": "Han ___ noget endnu i dag.",
       "options": [
         "har ikke drukket",
         "havde ikke drukket",
-        "drak ikke",
-        "drikker ikke"
+        "drikker ikke",
+        "drak ikke"
       ],
       "correct": "har ikke drukket",
       "accepted_answers": [
@@ -4656,16 +4656,16 @@ window.TIDS_DATA = {
       "note": "Når tidsrummet ikke er slut (i dag, i år, denne uge), bruges perfektum."
     },
     {
-      "id": "holdet-har-ikke-vundet-endnu-ikke-en-eneste-kamp-i",
+      "id": "holdet-har-ikke-vundet-en-eneste-kamp-endnu-i-denne",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om denne sæson, som stadig er i gang.",
-      "sentence": "Holdet ___ endnu ikke en eneste kamp i denne sæson.",
+      "sentence": "Holdet ___ en eneste kamp endnu i denne sæson.",
       "options": [
         "havde ikke vundet",
-        "vinder ikke",
+        "vandt ikke",
         "har ikke vundet",
-        "vandt ikke"
+        "vinder ikke"
       ],
       "correct": "har ikke vundet",
       "accepted_answers": [
@@ -5764,20 +5764,20 @@ window.TIDS_DATA = {
       "note": "\"Siden\" + et startpunkt for noget, der stadig gælder, kræver perfektum."
     },
     {
-      "id": "hun-har-vaeret-ikke-rigtig-sig-selv-siden-foraaret",
+      "id": "hun-har-ikke-vaeret-rigtig-sig-selv-siden-foraaret",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det startede i foråret og er stadig sådan.",
-      "sentence": "Hun ___ ikke rigtig sig selv siden foråret.",
+      "sentence": "Hun ___ rigtig sig selv siden foråret.",
       "options": [
-        "er",
-        "har været",
-        "var",
-        "havde været"
+        "havde ikke været",
+        "er ikke",
+        "har ikke været",
+        "var ikke"
       ],
-      "correct": "har været",
+      "correct": "har ikke været",
       "accepted_answers": [
-        "har været"
+        "har ikke været"
       ],
       "timeline": {
         "start": "foråret",
@@ -5927,28 +5927,27 @@ window.TIDS_DATA = {
       "verify": true
     },
     {
-      "id": "hun-er-gaaet-i-skole-i-ti-aar",
+      "id": "hun-har-gaaet-i-skole-i-ti-aar",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Din søster er stadig i skole.",
       "sentence": "Hun ___ i skole i ti år.",
       "options": [
+        "havde gået",
+        "har gået",
         "gik",
-        "går",
-        "er gået",
-        "var gået"
+        "går"
       ],
-      "correct": "er gået",
+      "correct": "har gået",
       "accepted_answers": [
-        "er gået"
+        "har gået"
       ],
       "timeline": {
         "start": "for 10 år siden",
         "end": "now",
         "ongoing": true
       },
-      "note": "Når perioden fortsætter helt til nu, bruges perfektum, ikke datid eller nutid.",
-      "verify": true
+      "note": "Når perioden fortsætter helt til nu, bruges perfektum, ikke datid eller nutid."
     },
     {
       "id": "jeg-har-boet-paa-kollegiet-i-et-halvt-aar",
@@ -5998,14 +5997,14 @@ window.TIDS_DATA = {
       "verify": true
     },
     {
-      "id": "hun-var-min-kollega-i-to-aar-men-nu-har-hun-nyt-job",
+      "id": "hun-var-min-kollega-fra-2018-til-2020",
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Hun er ikke længere kollega.",
-      "sentence": "Hun ___ min kollega i to år, men nu har hun nyt job.",
+      "sentence": "Hun ___ min kollega fra 2018 til 2020.",
       "options": [
-        "har været",
         "er",
+        "har været",
         "havde været",
         "var"
       ],
@@ -6014,8 +6013,8 @@ window.TIDS_DATA = {
         "var"
       ],
       "timeline": {
-        "start": "ukendt tidspunkt",
-        "end": "ukendt tidspunkt",
+        "start": "2018",
+        "end": "2020",
         "ongoing": false
       },
       "note": "En afsluttet periode med fast start og slut står i datid."
@@ -6253,7 +6252,7 @@ window.TIDS_DATA = {
         "end": "du kommer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "butikken-havde-lukket-allerede-da-vi-kom",
@@ -6322,7 +6321,7 @@ window.TIDS_DATA = {
         "end": "vi kommer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "chefen-havde-aflyst-allerede-moedet-da-vi-moedte-op",
@@ -6506,7 +6505,7 @@ window.TIDS_DATA = {
         "end": "politiet kommer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "hun-havde-betalt-allerede-regningen-da-rykkeren-kom",
@@ -6621,7 +6620,7 @@ window.TIDS_DATA = {
         "end": "vi kommer hjem",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "hun-havde-solgt-for-laengst-huset-da-han-ville-koebe-det",
@@ -6690,7 +6689,7 @@ window.TIDS_DATA = {
         "end": "du ringer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\".",
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge.",
       "verify": true
     },
     {
@@ -6806,7 +6805,7 @@ window.TIDS_DATA = {
         "end": "hun kommer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "da-jeg-vaagnede-havde-han-allerede-ringet-tre-gange",
@@ -6875,7 +6874,7 @@ window.TIDS_DATA = {
         "end": "jeg kommer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\".",
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge.",
       "verify": true
     },
     {
@@ -6945,7 +6944,7 @@ window.TIDS_DATA = {
         "end": "besøg",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "da-jeg-ringede-var-hun-allerede-gaaet",
@@ -6968,7 +6967,7 @@ window.TIDS_DATA = {
         "end": "jeg ringer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\".",
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge.",
       "verify": true
     },
     {
@@ -7685,19 +7684,20 @@ window.TIDS_DATA = {
       "note": "Pluskvamperfektum viser, hvor længe noget havde varet, før en anden begivenhed i fortiden indtraf."
     },
     {
-      "id": "de-var-gift-i-femogtyve-aar-da-de-blev-skilt",
+      "id": "de-havde-vaeret-gift-i-femogtyve-aar-da-de-blev-skilt",
       "level": "B1",
       "mode": "pluperfect",
       "context": "De blev gift i 1990 og blev skilt i 2015.",
       "sentence": "De ___ gift i femogtyve år, da de blev skilt.",
       "options": [
-        "var",
+        "bliver",
         "er",
         "har været",
         "havde været"
       ],
-      "correct": "var",
+      "correct": "havde været",
       "accepted_answers": [
+        "havde været",
         "var"
       ],
       "timeline": {
@@ -8074,7 +8074,7 @@ window.TIDS_DATA = {
         "end": "jeg ringer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "da-jeg-kom-var-moedet-allerede-begyndt",
@@ -8083,22 +8083,22 @@ window.TIDS_DATA = {
       "context": "Mødet begyndte kl. 10. Du kom først kl. 10.15.",
       "sentence": "Da jeg kom, ___ mødet allerede begyndt.",
       "options": [
-        "blev",
+        "er",
         "var",
-        "har",
-        "havde"
+        "blev",
+        "har"
       ],
       "correct": "var",
       "accepted_answers": [
-        "var"
+        "var",
+        "havde"
       ],
       "timeline": {
         "start": "møde",
         "end": "jeg kommer",
         "ongoing": false
       },
-      "note": "Pluskvamperfektum dannes med \"havde\" + participium; nutidens \"har\" passer ikke i en fortælling i datid.",
-      "verify": true
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "da-jeg-endelig-kom-var-alle-gaesterne-gaaet",
@@ -8121,7 +8121,7 @@ window.TIDS_DATA = {
         "end": "jeg kommer",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "da-hun-kom-hjem-havde-han-allerede-lavet-mad-i-to-timer",
@@ -8190,7 +8190,7 @@ window.TIDS_DATA = {
         "end": "vi nåede",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\".",
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge.",
       "verify": true
     },
     {
@@ -8307,7 +8307,7 @@ window.TIDS_DATA = {
         "end": "fund",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\".",
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge.",
       "verify": true
     },
     {
@@ -8426,28 +8426,27 @@ window.TIDS_DATA = {
       "note": "Pluskvamperfektum viser, hvor længe noget havde varet, før en anden begivenhed i fortiden indtraf."
     },
     {
-      "id": "vi-var-gaaet-i-to-timer-da-regnen-kom",
+      "id": "vi-havde-gaaet-i-to-timer-da-regnen-kom",
       "level": "B1",
       "mode": "pluperfect",
       "context": "Vi havde gået i to timer. Så kom regnen.",
       "sentence": "Vi ___ i to timer, da regnen kom.",
       "options": [
-        "er gået",
-        "var gået",
-        "gik",
-        "går"
+        "havde gået",
+        "har gået",
+        "går",
+        "gik"
       ],
-      "correct": "var gået",
+      "correct": "havde gået",
       "accepted_answers": [
-        "var gået"
+        "havde gået"
       ],
       "timeline": {
         "start": "gåtur",
         "end": "regn",
         "ongoing": false
       },
-      "note": "Pluskvamperfektum viser, hvor længe noget havde varet, før en anden begivenhed i fortiden indtraf.",
-      "verify": true
+      "note": "Pluskvamperfektum viser, hvor længe noget havde varet, før en anden begivenhed i fortiden indtraf."
     },
     {
       "id": "hun-havde-sparet-op-i-ti-aar-da-hun-endelig-koebte-huset",
@@ -8516,7 +8515,7 @@ window.TIDS_DATA = {
         "end": "nyhed",
         "ongoing": false
       },
-      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     }
   ],
   "future": [
@@ -20263,16 +20262,16 @@ window.TIDS_DATA = {
       "note": "Er + participium beskriver en tilstand som resultat af en handling."
     },
     {
-      "id": "bogen-er-udsolgt-ikke-laengere-saa-vi-kan-ikke-bestille",
+      "id": "bogen-er-udsolgt-saa-vi-kan-ikke-bestille-den",
       "level": "B1",
       "mode": "passive",
       "context": "Du læser i kataloget.",
-      "sentence": "Bogen ___ ikke længere, så vi kan ikke bestille den.",
+      "sentence": "Bogen ___ , så vi kan ikke bestille den.",
       "options": [
-        "udsælges",
         "bliver udsolgt",
-        "udsælger",
-        "er udsolgt"
+        "er udsolgt",
+        "udsælges",
+        "udsælger"
       ],
       "correct": "er udsolgt",
       "accepted_answers": [
@@ -22702,20 +22701,20 @@ window.TIDS_DATA = {
       "note": "Er + participium beskriver en tilstand som resultat af en handling."
     },
     {
-      "id": "hotellet-blev-solgt-af-en-ny-ejer-i-sommer",
+      "id": "hotellet-blev-koebt-af-en-ny-ejer-i-sommer",
       "level": "B1",
       "mode": "passive",
       "context": "Det skete i sommer.",
       "sentence": "Hotellet ___ af en ny ejer i sommer.",
       "options": [
-        "bliver solgt",
-        "solgte",
-        "sælges",
-        "blev solgt"
+        "bliver købt",
+        "købes",
+        "købte",
+        "blev købt"
       ],
-      "correct": "blev solgt",
+      "correct": "blev købt",
       "accepted_answers": [
-        "blev solgt"
+        "blev købt"
       ],
       "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
     },
@@ -22759,7 +22758,7 @@ window.TIDS_DATA = {
       "id": "pakken-blev-sendt-til-forkert-adresse-tidligere-i-dag",
       "level": "B1",
       "mode": "passive",
-      "context": "Det skete i dag tidligere.",
+      "context": "Det skete tidligere i dag.",
       "sentence": "Pakken ___ til forkert adresse tidligere i dag.",
       "options": [
         "blev sendt",
@@ -22774,20 +22773,20 @@ window.TIDS_DATA = {
       "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
     },
     {
-      "id": "fabrikken-blev-koebt-af-en-stor-koncern-i-halvfemserne",
+      "id": "fabrikken-blev-overtaget-af-en-stor-koncern-i",
       "level": "B2",
       "mode": "passive",
       "context": "Det skete i 1990'erne.",
       "sentence": "Fabrikken ___ af en stor koncern i halvfemserne.",
       "options": [
-        "købes",
-        "bliver købt",
-        "købte",
-        "blev købt"
+        "overtog",
+        "overtages",
+        "blev overtaget",
+        "bliver overtaget"
       ],
-      "correct": "blev købt",
+      "correct": "blev overtaget",
       "accepted_answers": [
-        "blev købt"
+        "blev overtaget"
       ],
       "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
     },
@@ -22933,6 +22932,1450 @@ window.TIDS_DATA = {
         "fås"
       ],
       "note": "S-former kan udtrykke, at noget kan ses, høres eller fås (Det ses, Den fås i butikken)."
+    }
+  ],
+  "imperative": [
+    {
+      "id": "luk-doeren-tak",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du beder din ven om noget.",
+      "sentence": "___ døren, tak.",
+      "options": [
+        "Lukke",
+        "Lukket",
+        "Lukker",
+        "Luk"
+      ],
+      "correct": "Luk",
+      "accepted_answers": [
+        "Luk"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "drej-til-hoejre-ved-lyset",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du viser vej.",
+      "sentence": "___ til højre ved lyset.",
+      "options": [
+        "Drej",
+        "Drejet",
+        "Drejer",
+        "Dreje"
+      ],
+      "correct": "Drej",
+      "accepted_answers": [
+        "Drej"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "aabn-munden-op",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er læge.",
+      "sentence": "___ munden op.",
+      "options": [
+        "Åbner",
+        "Åbnet",
+        "Åbn",
+        "Åbne"
+      ],
+      "correct": "Åbn",
+      "accepted_answers": [
+        "Åbn"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "laes-side-23",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ side 23.",
+      "options": [
+        "Læser",
+        "Læs",
+        "Læse",
+        "Læst"
+      ],
+      "correct": "Læs",
+      "accepted_answers": [
+        "Læs"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "vask-dine-haender-foer-vi-spiser",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er mor.",
+      "sentence": "___ dine hænder, før vi spiser.",
+      "options": [
+        "Vasker",
+        "Vask",
+        "Vasket",
+        "Vaske"
+      ],
+      "correct": "Vask",
+      "accepted_answers": [
+        "Vask"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "loeb-hurtigere",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er træner.",
+      "sentence": "___ hurtigere!",
+      "options": [
+        "Løb",
+        "Løbet",
+        "Løbe",
+        "Løber"
+      ],
+      "correct": "Løb",
+      "accepted_answers": [
+        "Løb"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "spis-din-mad",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er mor.",
+      "sentence": "___ din mad.",
+      "options": [
+        "Spiser",
+        "Spise",
+        "Spist",
+        "Spis"
+      ],
+      "correct": "Spis",
+      "accepted_answers": [
+        "Spis"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "kom-her",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du siger til din ven.",
+      "sentence": "___ her!",
+      "options": [
+        "Kommer",
+        "Komme",
+        "Kommet",
+        "Kom"
+      ],
+      "correct": "Kom",
+      "accepted_answers": [
+        "Kom"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "saet-dig-ned",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du siger til din ven.",
+      "sentence": "___ dig ned.",
+      "options": [
+        "Sat",
+        "Sæt",
+        "Sætte",
+        "Sætter"
+      ],
+      "correct": "Sæt",
+      "accepted_answers": [
+        "Sæt"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "ring-til-mig-i-aften",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du siger til din ven.",
+      "sentence": "___ til mig i aften.",
+      "options": [
+        "Ring",
+        "Ringer",
+        "Ringe",
+        "Ringet"
+      ],
+      "correct": "Ring",
+      "accepted_answers": [
+        "Ring"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "kog-vandet-i-ti-minutter",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er kok.",
+      "sentence": "___ vandet i ti minutter.",
+      "options": [
+        "Koge",
+        "Kog",
+        "Koger",
+        "Kogt"
+      ],
+      "correct": "Kog",
+      "accepted_answers": [
+        "Kog"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "pas-godt-paa-dine-ting",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er guide.",
+      "sentence": "___ godt på dine ting.",
+      "options": [
+        "Passe",
+        "Pas",
+        "Passet",
+        "Passer"
+      ],
+      "correct": "Pas",
+      "accepted_answers": [
+        "Pas"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "laeg-dine-boeger-paa-bordet",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ dine bøger på bordet.",
+      "options": [
+        "Lagt",
+        "Lægge",
+        "Lægger",
+        "Læg"
+      ],
+      "correct": "Læg",
+      "accepted_answers": [
+        "Læg"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "fortael-mig-hvad-der-skete",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil høre historien.",
+      "sentence": "___ mig, hvad der skete.",
+      "options": [
+        "Fortæller",
+        "Fortalt",
+        "Fortæl",
+        "Fortælle"
+      ],
+      "correct": "Fortæl",
+      "accepted_answers": [
+        "Fortæl"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "vaer-stille",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil have ro.",
+      "sentence": "___ stille!",
+      "options": [
+        "Vær",
+        "Været",
+        "Er",
+        "Være"
+      ],
+      "correct": "Vær",
+      "accepted_answers": [
+        "Vær"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "giv-mig-lige-den-bog",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du beder om en bog.",
+      "sentence": "___ mig lige den bog.",
+      "options": [
+        "Givet",
+        "Giv",
+        "Give",
+        "Giver"
+      ],
+      "correct": "Giv",
+      "accepted_answers": [
+        "Giv"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "hjaelp-mig-lige",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du har brug for hjælp.",
+      "sentence": "___ mig lige!",
+      "options": [
+        "Hjælpe",
+        "Hjulpet",
+        "Hjælp",
+        "Hjælper"
+      ],
+      "correct": "Hjælp",
+      "accepted_answers": [
+        "Hjælp"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "taend-lyset",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er i et mørkt rum.",
+      "sentence": "___ lyset.",
+      "options": [
+        "Tænd",
+        "Tænde",
+        "Tændt",
+        "Tænder"
+      ],
+      "correct": "Tænd",
+      "accepted_answers": [
+        "Tænd"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "sluk-lyset-tak",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du går i seng.",
+      "sentence": "___ lyset, tak.",
+      "options": [
+        "Slukke",
+        "Slukker",
+        "Sluk",
+        "Slukket"
+      ],
+      "correct": "Sluk",
+      "accepted_answers": [
+        "Sluk"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "lyt-godt-efter",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ godt efter.",
+      "options": [
+        "Lytter",
+        "Lyttet",
+        "Lyt",
+        "Lytte"
+      ],
+      "correct": "Lyt",
+      "accepted_answers": [
+        "Lyt"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "hold-en-pause",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er træt.",
+      "sentence": "___ en pause!",
+      "options": [
+        "Holdt",
+        "Holder",
+        "Holde",
+        "Hold"
+      ],
+      "correct": "Hold",
+      "accepted_answers": [
+        "Hold"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "hent-din-tallerken-fra-koekkenet",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er mor.",
+      "sentence": "___ din tallerken fra køkkenet.",
+      "options": [
+        "Hentet",
+        "Henter",
+        "Hent",
+        "Hente"
+      ],
+      "correct": "Hent",
+      "accepted_answers": [
+        "Hent"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "traek-vejret-dybt-ind",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er læge.",
+      "sentence": "___ vejret dybt ind.",
+      "options": [
+        "Trækker",
+        "Træk",
+        "Trække",
+        "Trukket"
+      ],
+      "correct": "Træk",
+      "accepted_answers": [
+        "Træk"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "bestil-en-kop-kaffe-til-mig",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er på en café.",
+      "sentence": "___ en kop kaffe til mig.",
+      "options": [
+        "Bestille",
+        "Bestil",
+        "Bestilt",
+        "Bestiller"
+      ],
+      "correct": "Bestil",
+      "accepted_answers": [
+        "Bestil"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "ryd-op-paa-dit-vaerelse",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er mor.",
+      "sentence": "___ op på dit værelse.",
+      "options": [
+        "Rydder",
+        "Ryd",
+        "Ryddet",
+        "Rydde"
+      ],
+      "correct": "Ryd",
+      "accepted_answers": [
+        "Ryd"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "kast-bolden-til-mig",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er træner.",
+      "sentence": "___ bolden til mig.",
+      "options": [
+        "Kastet",
+        "Kast",
+        "Kaste",
+        "Kaster"
+      ],
+      "correct": "Kast",
+      "accepted_answers": [
+        "Kast"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "vend-dig-om-og-se-paa-tavlen",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ dig om og se på tavlen.",
+      "options": [
+        "Vendt",
+        "Vender",
+        "Vend",
+        "Vende"
+      ],
+      "correct": "Vend",
+      "accepted_answers": [
+        "Vend"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "hop-hoejere",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er træner.",
+      "sentence": "___ højere!",
+      "options": [
+        "Hopper",
+        "Hop",
+        "Hoppet",
+        "Hoppe"
+      ],
+      "correct": "Hop",
+      "accepted_answers": [
+        "Hop"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "skriv-dit-navn-her",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ dit navn her.",
+      "options": [
+        "Skrive",
+        "Skrevet",
+        "Skriver",
+        "Skriv"
+      ],
+      "correct": "Skriv",
+      "accepted_answers": [
+        "Skriv"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "loeft-dine-haender-op",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er politi.",
+      "sentence": "___ dine hænder op!",
+      "options": [
+        "Løft",
+        "Løftet",
+        "Løfte",
+        "Løfter"
+      ],
+      "correct": "Løft",
+      "accepted_answers": [
+        "Løft"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "tal-langsomt-tak",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er tolk.",
+      "sentence": "___ langsomt, tak.",
+      "options": [
+        "Tal",
+        "Tale",
+        "Taler",
+        "Talt"
+      ],
+      "correct": "Tal",
+      "accepted_answers": [
+        "Tal"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "vis-mig-svaret",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ mig svaret.",
+      "options": [
+        "Vis",
+        "Viser",
+        "Vist",
+        "Vise"
+      ],
+      "correct": "Vis",
+      "accepted_answers": [
+        "Vis"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "pisk-aegget-i-en-skaal",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er kok.",
+      "sentence": "___ ægget i en skål.",
+      "options": [
+        "Pisket",
+        "Pisker",
+        "Piske",
+        "Pisk"
+      ],
+      "correct": "Pisk",
+      "accepted_answers": [
+        "Pisk"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "tag-en-jakke-paa-det-er-koldt",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Det er koldt ude.",
+      "sentence": "___ en jakke på, det er koldt.",
+      "options": [
+        "Tage",
+        "Tag",
+        "Tager",
+        "Taget"
+      ],
+      "correct": "Tag",
+      "accepted_answers": [
+        "Tag"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "vaer-nu-venlig-mod-din-bror",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil have fred.",
+      "sentence": "___ nu venlig mod din bror!",
+      "options": [
+        "Vær",
+        "Være",
+        "Er",
+        "Været"
+      ],
+      "correct": "Vær",
+      "accepted_answers": [
+        "Vær"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "goer-det-med-det-samme",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil have, at han handler.",
+      "sentence": "___ det med det samme.",
+      "options": [
+        "Gjorde",
+        "Gjort",
+        "Gøre",
+        "Gør"
+      ],
+      "correct": "Gør",
+      "accepted_answers": [
+        "Gør"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "bliv-ved-med-at-oeve-dig",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du opmuntrer en ven.",
+      "sentence": "___ ved med at øve dig.",
+      "options": [
+        "Blevet",
+        "Bliver",
+        "Bliv",
+        "Blive"
+      ],
+      "correct": "Bliv",
+      "accepted_answers": [
+        "Bliv"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "sig-mig-hvad-du-hedder",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil vide det.",
+      "sentence": "___ mig, hvad du hedder.",
+      "options": [
+        "Siger",
+        "Sagt",
+        "Sig",
+        "Sige"
+      ],
+      "correct": "Sig",
+      "accepted_answers": [
+        "Sig"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "se-paa-tavlen",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er lærer.",
+      "sentence": "___ på tavlen.",
+      "options": [
+        "Så",
+        "Ser",
+        "Set",
+        "Se"
+      ],
+      "correct": "Se",
+      "accepted_answers": [
+        "Se"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "laan-mig-venligst-nogle-penge",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil låne noget.",
+      "sentence": "___ mig venligst nogle penge.",
+      "options": [
+        "Låner",
+        "Lån",
+        "Låne",
+        "Lånt"
+      ],
+      "correct": "Lån",
+      "accepted_answers": [
+        "Lån"
+      ],
+      "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
+    },
+    {
+      "id": "bliv-lige-her-og-vent-paa-mig",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du vil have, at han bliver.",
+      "sentence": "___ lige her og vent på mig.",
+      "options": [
+        "Bliv",
+        "Bliver",
+        "Blive",
+        "Blevet"
+      ],
+      "correct": "Bliv",
+      "accepted_answers": [
+        "Bliv"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "tag-dine-sko-af-og-kom-ind",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er ved indgangen.",
+      "sentence": "___ dine sko af og kom ind.",
+      "options": [
+        "Tager",
+        "Tage",
+        "Tag",
+        "Taget"
+      ],
+      "correct": "Tag",
+      "accepted_answers": [
+        "Tag"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "lad-mig-ikke-i-stikken",
+      "level": "B2",
+      "mode": "imperative",
+      "context": "Du er skuffet.",
+      "sentence": "___ mig ikke i stikken!",
+      "options": [
+        "Lader",
+        "Lade",
+        "Ladet",
+        "Lad"
+      ],
+      "correct": "Lad",
+      "accepted_answers": [
+        "Lad"
+      ],
+      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+    },
+    {
+      "id": "roer-ikke",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du advarer.",
+      "sentence": "___ ikke!",
+      "options": [
+        "Rører",
+        "Rør",
+        "Røre",
+        "Rørt"
+      ],
+      "correct": "Rør",
+      "accepted_answers": [
+        "Rør"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "raab-ikke-saa-hoejt",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er mor.",
+      "sentence": "___ ikke så højt!",
+      "options": [
+        "Råbe",
+        "Råber",
+        "Råbt",
+        "Råb"
+      ],
+      "correct": "Råb",
+      "accepted_answers": [
+        "Råb"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "bekymr-dig-ikke",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du trøster din ven.",
+      "sentence": "___ dig ikke.",
+      "options": [
+        "Bekymr",
+        "Bekymret",
+        "Bekymre",
+        "Bekymrer"
+      ],
+      "correct": "Bekymr",
+      "accepted_answers": [
+        "Bekymr"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe.",
+      "verify": true
+    },
+    {
+      "id": "glem-ikke-at-ringe-til-mig-i-aften",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du minder din ven om noget.",
+      "sentence": "___ ikke at ringe til mig i aften.",
+      "options": [
+        "Glemme",
+        "Glemmer",
+        "Glem",
+        "Glemt"
+      ],
+      "correct": "Glem",
+      "accepted_answers": [
+        "Glem"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "smid-den-ikke-ud",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du advarer.",
+      "sentence": "___ den ikke ud!",
+      "options": [
+        "Smider",
+        "Smide",
+        "Smidt",
+        "Smid"
+      ],
+      "correct": "Smid",
+      "accepted_answers": [
+        "Smid"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "brug-ikke-min-cykel",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er ejer af en cykel.",
+      "sentence": "___ ikke min cykel!",
+      "options": [
+        "Bruger",
+        "Brugt",
+        "Bruge",
+        "Brug"
+      ],
+      "correct": "Brug",
+      "accepted_answers": [
+        "Brug"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "koer-ikke-saa-hurtigt",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er i bilen.",
+      "sentence": "___ ikke så hurtigt!",
+      "options": [
+        "Køre",
+        "Kør",
+        "Kørt",
+        "Kører"
+      ],
+      "correct": "Kør",
+      "accepted_answers": [
+        "Kør"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "kom-ikke-ind-her",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du advarer.",
+      "sentence": "___ ikke ind her!",
+      "options": [
+        "Kommer",
+        "Kom",
+        "Komme",
+        "Kommet"
+      ],
+      "correct": "Kom",
+      "accepted_answers": [
+        "Kom"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "toev-ikke-med-at-spoerge-hvis-du-er-i-tvivl",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du opmuntrer.",
+      "sentence": "___ ikke med at spørge, hvis du er i tvivl.",
+      "options": [
+        "Tøver",
+        "Tøvet",
+        "Tøve",
+        "Tøv"
+      ],
+      "correct": "Tøv",
+      "accepted_answers": [
+        "Tøv"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "rejs-dig-ikke-foer-jeg-siger-til",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du advarer.",
+      "sentence": "___ dig ikke, før jeg siger til.",
+      "options": [
+        "Rejser",
+        "Rejse",
+        "Rejst",
+        "Rejs"
+      ],
+      "correct": "Rejs",
+      "accepted_answers": [
+        "Rejs"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "udsaet-ikke-opgaven-til-sidste-oejeblik",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er leder.",
+      "sentence": "___ ikke opgaven til sidste øjeblik.",
+      "options": [
+        "Udsætter",
+        "Udsat",
+        "Udsætte",
+        "Udsæt"
+      ],
+      "correct": "Udsæt",
+      "accepted_answers": [
+        "Udsæt"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "tryk-ikke-for-haardt-paa-knappen",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du er i en maskinhal.",
+      "sentence": "___ ikke for hårdt på knappen.",
+      "options": [
+        "Tryk",
+        "Trykker",
+        "Trykket",
+        "Trykke"
+      ],
+      "correct": "Tryk",
+      "accepted_answers": [
+        "Tryk"
+      ],
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
+    },
+    {
+      "id": "vil-du-ikke-nok-lukke-vinduet",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du taler pænt til en nabo.",
+      "sentence": "___ lukke vinduet?",
+      "options": [
+        "Vil du ikke nok",
+        "Luk",
+        "Hvorfor lukker",
+        "Du skal"
+      ],
+      "correct": "Vil du ikke nok",
+      "accepted_answers": [
+        "Vil du ikke nok"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "vil-du-vaere-saa-venlig-at-hjaelpe-mig",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du taler pænt til en ukendt.",
+      "sentence": "___ være så venlig at hjælpe mig?",
+      "options": [
+        "Du er",
+        "Hjælp",
+        "Vær",
+        "Vil du"
+      ],
+      "correct": "Vil du",
+      "accepted_answers": [
+        "Vil du"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "underskriv-venligst-dokumentet",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du skriver til en kunde.",
+      "sentence": "___ venligst dokumentet.",
+      "options": [
+        "Underskriver",
+        "Underskriv",
+        "Underskrive",
+        "Underskrevet"
+      ],
+      "correct": "Underskriv",
+      "accepted_answers": [
+        "Underskriv"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "luk-doeren-tak-2",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du beder høfligt.",
+      "sentence": "Luk døren, ___ .",
+      "options": [
+        "fordi",
+        "ellers",
+        "tak",
+        "mens"
+      ],
+      "correct": "tak",
+      "accepted_answers": [
+        "tak"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "send-venligst-jeres-svar-senest-fredag",
+      "level": "B2",
+      "mode": "imperative",
+      "context": "Du skriver en høflig besked.",
+      "sentence": "___ venligst jeres svar senest fredag.",
+      "options": [
+        "Sendt",
+        "Sender",
+        "Send",
+        "Sende"
+      ],
+      "correct": "Send",
+      "accepted_answers": [
+        "Send"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "vent-venligst-ved-indgangen",
+      "level": "B2",
+      "mode": "imperative",
+      "context": "Du skriver på et skilt.",
+      "sentence": "___ venligst ved indgangen.",
+      "options": [
+        "Vente",
+        "Ventet",
+        "Vent",
+        "Venter"
+      ],
+      "correct": "Vent",
+      "accepted_answers": [
+        "Vent"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "giv-mig-gerne-besked-hvis-du-har-tid",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du skriver til en kollega.",
+      "sentence": "___ mig gerne besked, hvis du har tid.",
+      "options": [
+        "Givet",
+        "Give",
+        "Giv",
+        "Giver"
+      ],
+      "correct": "Giv",
+      "accepted_answers": [
+        "Giv"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "tag-daekslet-forsigtigt-af",
+      "level": "B2",
+      "mode": "imperative",
+      "context": "Du skriver instruktioner.",
+      "sentence": "___ dækslet forsigtigt af.",
+      "options": [
+        "Tager",
+        "Tag",
+        "Tage",
+        "Taget"
+      ],
+      "correct": "Tag",
+      "accepted_answers": [
+        "Tag"
+      ],
+      "note": "Høflige opfordringer bruger fx \"vil du ikke nok\", \"vær så venlig\" eller \"venligst\" efter imperativen."
+    },
+    {
+      "id": "tag-jakken-paa-det-er-koldt",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Det er koldt ude.",
+      "sentence": "Tag jakken ___ , det er koldt.",
+      "options": [
+        "på",
+        "op",
+        "af",
+        "ned"
+      ],
+      "correct": "på",
+      "accepted_answers": [
+        "på"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "tag-jakken-af-her-er-varmt",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Her er varmt.",
+      "sentence": "Tag jakken ___ , her er varmt.",
+      "options": [
+        "på",
+        "ned",
+        "af",
+        "op"
+      ],
+      "correct": "af",
+      "accepted_answers": [
+        "af"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "skru-ned-for-musikken",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Musikken er for høj.",
+      "sentence": "Skru ___ for musikken.",
+      "options": [
+        "ned",
+        "op",
+        "ud",
+        "af"
+      ],
+      "correct": "ned",
+      "accepted_answers": [
+        "ned"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "skru-op-for-lyden",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du vil høre bedre.",
+      "sentence": "Skru ___ for lyden.",
+      "options": [
+        "op",
+        "ind",
+        "ud",
+        "ned"
+      ],
+      "correct": "op",
+      "accepted_answers": [
+        "op"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "saet-dig-ned-2",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du står.",
+      "sentence": "Sæt dig ___ .",
+      "options": [
+        "ned",
+        "op",
+        "ud",
+        "på"
+      ],
+      "correct": "ned",
+      "accepted_answers": [
+        "ned"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "taend-for-lyset",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Det er mørkt.",
+      "sentence": "Tænd ___ lyset.",
+      "options": [
+        "af",
+        "på",
+        "ud",
+        "for"
+      ],
+      "correct": "for",
+      "accepted_answers": [
+        "for"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "sluk-for-lyset",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Det er for lyst.",
+      "sentence": "Sluk ___ lyset.",
+      "options": [
+        "på",
+        "op",
+        "for",
+        "ind"
+      ],
+      "correct": "for",
+      "accepted_answers": [
+        "for"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "kom-ind",
+      "level": "A2",
+      "mode": "imperative",
+      "context": "Du er ved indgangen.",
+      "sentence": "Kom ___ !",
+      "options": [
+        "ned",
+        "af",
+        "ind",
+        "på"
+      ],
+      "correct": "ind",
+      "accepted_answers": [
+        "ind"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "pas-paa-der-er-glat",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du advarer mod fare.",
+      "sentence": "Pas ___ , der er glat.",
+      "options": [
+        "af",
+        "på",
+        "ned",
+        "ud"
+      ],
+      "correct": "på",
+      "accepted_answers": [
+        "på",
+        "op"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "smid-den-ud",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du vil af med noget.",
+      "sentence": "Smid den ___ .",
+      "options": [
+        "op",
+        "ind",
+        "ud",
+        "på"
+      ],
+      "correct": "ud",
+      "accepted_answers": [
+        "ud"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "tag-troejen-af-saa-du-ikke-har-saa-varmt",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Det er for varmt.",
+      "sentence": "Tag trøjen ___ , så du ikke har så varmt.",
+      "options": [
+        "af",
+        "ned",
+        "op",
+        "på"
+      ],
+      "correct": "af",
+      "accepted_answers": [
+        "af"
+      ],
+      "note": "Mange imperativer er faste forbindelser med partikel: tag på, tag af, skru ned, sæt dig ned."
+    },
+    {
+      "id": "lad-vaere-med-at-aabne-doeren",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du vil ikke have, at han åbner døren.",
+      "sentence": "Lad være ___ at åbne døren!",
+      "options": [
+        "for",
+        "med",
+        "af",
+        "til"
+      ],
+      "correct": "med",
+      "accepted_answers": [
+        "med"
+      ],
+      "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
+    },
+    {
+      "id": "hold-op-med-at-larme",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Han larmer.",
+      "sentence": "Hold op ___ at larme!",
+      "options": [
+        "for",
+        "af",
+        "med",
+        "til"
+      ],
+      "correct": "med",
+      "accepted_answers": [
+        "med"
+      ],
+      "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
+    },
+    {
+      "id": "lad-vaere-med-at-goere-det",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du forbyder det.",
+      "sentence": "___ med at gøre det!",
+      "options": [
+        "Lader være",
+        "Lad være",
+        "Lade være",
+        "Lad at være"
+      ],
+      "correct": "Lad være",
+      "accepted_answers": [
+        "Lad være"
+      ],
+      "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
+    },
+    {
+      "id": "hold-op-med-at-raabe",
+      "level": "B1",
+      "mode": "imperative",
+      "context": "Du forbyder det.",
+      "sentence": "___ med at råbe!",
+      "options": [
+        "Holde op",
+        "Holder op",
+        "Holdt op",
+        "Hold op"
+      ],
+      "correct": "Hold op",
+      "accepted_answers": [
+        "Hold op"
+      ],
+      "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
+    },
+    {
+      "id": "lad-vaere-nu-med-at-skrige",
+      "level": "B2",
+      "mode": "imperative",
+      "context": "Du vil have ham til at stoppe.",
+      "sentence": "___ nu med at skrige!",
+      "options": [
+        "Ladet være",
+        "Lader være",
+        "Lade være",
+        "Lad være"
+      ],
+      "correct": "Lad være",
+      "accepted_answers": [
+        "Lad være"
+      ],
+      "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
+    },
+    {
+      "id": "lad-vaere-med-at-pille-ved-den",
+      "level": "B2",
+      "mode": "imperative",
+      "context": "Du siger til din søn.",
+      "sentence": "___ med at pille ved den!",
+      "options": [
+        "Lad være",
+        "Lade være",
+        "Ladet være",
+        "Lader være"
+      ],
+      "correct": "Lad være",
+      "accepted_answers": [
+        "Lad være"
+      ],
+      "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
     }
   ]
 };
