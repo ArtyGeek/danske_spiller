@@ -932,7 +932,7 @@ window.TIDS_DATA = {
       "context": "Hendes mand døde i 2018.",
       "sentence": "Før 2018 ___ de sammen i et lille hus ved vandet.",
       "options": [
-        "havde boet",
+        "har boet",
         "boede",
         "bor"
       ],
@@ -1695,15 +1695,15 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "gymnasiet-lukker-for-sommerferie-den-24-juni",
+      "id": "gymnasiet-lukker-for-sommerferie-den-25-juni",
       "level": "B1",
       "mode": "present_vs_preterite",
       "context": "Skolen har planlagt det.",
-      "sentence": "Gymnasiet ___ for sommerferie den 24. juni.",
+      "sentence": "Gymnasiet ___ for sommerferie den 25. juni.",
       "options": [
-        "havde lukket",
         "lukkede",
-        "lukker"
+        "lukker",
+        "havde lukket"
       ],
       "correct": "lukker",
       "accepted_answers": [
@@ -1867,15 +1867,15 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "operationen-finder-sted-den-3-marts",
+      "id": "auktionen-finder-sted-den-3-marts",
       "level": "B1",
       "mode": "present_vs_preterite",
       "context": "Din læge har sat det på.",
-      "sentence": "Operationen ___ sted den 3. marts.",
+      "sentence": "Auktionen ___ sted den 3. marts.",
       "options": [
-        "havde fundet",
         "fandt",
-        "finder"
+        "finder",
+        "havde fundet"
       ],
       "correct": "finder",
       "accepted_answers": [
@@ -1954,11 +1954,11 @@ window.TIDS_DATA = {
       "note": "Planlagte begivenheder i fremtiden kan stå i nutid sammen med et tidsudtryk."
     },
     {
-      "id": "i-1801-angriber-englaenderne-koebenhavn-og-saenker",
+      "id": "i-1807-angriber-englaenderne-koebenhavn-og-tager-den",
       "level": "B2",
       "mode": "present_vs_preterite",
       "context": "Teksten fortæller i nutid for at gøre historien levende.",
-      "sentence": "I 1801 ___ englænderne København og sænker flåden.",
+      "sentence": "I 1807 ___ englænderne København og tager den danske flåde.",
       "options": [
         "havde angrebet",
         "angreb",
@@ -2706,7 +2706,7 @@ window.TIDS_DATA = {
       "id": "vi-har-ventet-i-en-time",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Vi har ventet siden klokken to, og klokken er nu tre.",
+      "context": "Vi stillede os i kø klokken to, og klokken er nu tre.",
       "sentence": "Vi ___ i en time.",
       "options": [
         "har ventet",
@@ -3069,7 +3069,7 @@ window.TIDS_DATA = {
         "end": "sidste uge",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "jeg-moedte-ham-i-gaar",
@@ -3092,7 +3092,7 @@ window.TIDS_DATA = {
         "end": "i går",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "hun-flyttede-til-koebenhavn-for-to-aar-siden",
@@ -3115,7 +3115,7 @@ window.TIDS_DATA = {
         "end": "for 2 år siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "jeg-moedte-min-mand-i-1998",
@@ -3138,7 +3138,7 @@ window.TIDS_DATA = {
         "end": "1998",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "vi-var-tre-uger-i-spanien-sidste-sommer",
@@ -3161,7 +3161,7 @@ window.TIDS_DATA = {
         "end": "sidste sommer",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "hun-arbejdede-som-sygeplejerske-fra-1985-til-2020",
@@ -3207,7 +3207,7 @@ window.TIDS_DATA = {
         "end": "i morges",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-2012-koebte-vi-vores-foerste-hus",
@@ -3230,7 +3230,7 @@ window.TIDS_DATA = {
         "end": "2012",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-loerdags-gik-jeg-til-fest",
@@ -3253,7 +3253,7 @@ window.TIDS_DATA = {
         "end": "lørdag",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "dengang-boede-jeg-i-en-lille-lejlighed",
@@ -3390,7 +3390,7 @@ window.TIDS_DATA = {
         "end": "jul 2022",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-gaar-aftes-laeste-jeg-min-roman-faerdig",
@@ -3413,14 +3413,14 @@ window.TIDS_DATA = {
         "end": "i går aftes",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
-      "id": "i-2005-flyttede-de-sig-til-aarhus",
+      "id": "i-2005-flyttede-de-til-aarhus",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det var i 2005.",
-      "sentence": "I 2005 ___ de sig til Aarhus.",
+      "sentence": "I 2005 ___ de til Aarhus.",
       "options": [
         "har flyttet",
         "flytter",
@@ -3435,7 +3435,7 @@ window.TIDS_DATA = {
         "end": "2005",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "hun-besoegte-os-i-paasken-sidste-aar",
@@ -3458,7 +3458,7 @@ window.TIDS_DATA = {
         "end": "påsken sidste år",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "telefonen-ringede-for-fem-minutter-siden",
@@ -3481,7 +3481,7 @@ window.TIDS_DATA = {
         "end": "for 5 min. siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "i-1990-erne-arbejdede-min-far-i-en-bank",
@@ -3504,7 +3504,7 @@ window.TIDS_DATA = {
         "end": "1990'erne",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "jeg-boede-i-aarhus-mens-jeg-studerede",
@@ -3572,7 +3572,7 @@ window.TIDS_DATA = {
         "end": "for 3 år siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "hun-besoegte-ham-i-2017-men-siden-da-har-de-ikke-set",
@@ -3595,7 +3595,7 @@ window.TIDS_DATA = {
         "end": "2017",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "vi-var-venner-da-vi-gik-i-skole",
@@ -3641,7 +3641,7 @@ window.TIDS_DATA = {
         "end": "sidste år",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "han-var-formand-i-fire-aar-fra-2012-til-2016",
@@ -3687,7 +3687,7 @@ window.TIDS_DATA = {
         "end": "i morges",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "han-boede-i-tyskland-til-sidst-i-halvfemserne",
@@ -3709,7 +3709,7 @@ window.TIDS_DATA = {
         "end": "sidst i 90'erne",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "for-ti-aar-siden-var-der-en-stor-storm",
@@ -3731,7 +3731,7 @@ window.TIDS_DATA = {
         "end": "for 10 år siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "sidste-vinter-var-vi-i-fjeldene-i-en-uge",
@@ -3754,7 +3754,7 @@ window.TIDS_DATA = {
         "end": "sidste vinter",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "hun-afsluttede-sin-uddannelse-i-2003",
@@ -3777,7 +3777,7 @@ window.TIDS_DATA = {
         "end": "2003",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "jeg-har-aldrig-vaeret-til-island-indtil-nu",
@@ -4133,8 +4133,8 @@ window.TIDS_DATA = {
       "sentence": "Det er det mest spændende job, jeg nogensinde ___.",
       "options": [
         "har haft",
+        "fik",
         "havde haft",
-        "har",
         "havde"
       ],
       "correct": "har haft",
@@ -4567,12 +4567,12 @@ window.TIDS_DATA = {
       "id": "vi-har-haft-allerede-tre-moeder-i-denne-uge",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du taler om denne uges møder.",
+      "context": "Tre møder er allerede afholdt denne uge.",
       "sentence": "Vi ___ allerede tre møder i denne uge.",
       "options": [
-        "har",
-        "har haft",
         "havde haft",
+        "har haft",
+        "fik",
         "havde"
       ],
       "correct": "har haft",
@@ -4825,8 +4825,8 @@ window.TIDS_DATA = {
       "sentence": "Vi ___ det meget varmt de seneste dage.",
       "options": [
         "havde",
+        "fik",
         "havde haft",
-        "har",
         "har haft"
       ],
       "correct": "har haft",
@@ -4848,8 +4848,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ meget travlt de seneste uger.",
       "options": [
         "havde",
-        "har",
         "havde haft",
+        "fik",
         "har haft"
       ],
       "correct": "har haft",
@@ -4919,9 +4919,9 @@ window.TIDS_DATA = {
       "context": "Det gælder hele ugen frem til nu.",
       "sentence": "Vi ___ hele ugen travlt.",
       "options": [
-        "har",
-        "havde",
         "havde haft",
+        "havde",
+        "fik",
         "har haft"
       ],
       "correct": "har haft",
@@ -4940,7 +4940,7 @@ window.TIDS_DATA = {
       "id": "hvornaar-kom-du-til-danmark",
       "level": "A2",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om et bestemt tidspunkt i fortiden.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ du til Danmark?",
       "options": [
         "var kommet",
@@ -4957,13 +4957,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-saa-du-ham-sidst",
       "level": "A2",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om et bestemt tidspunkt i fortiden.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ du ham sidst?",
       "options": [
         "har set",
@@ -4980,13 +4981,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-blev-i-gift",
       "level": "A2",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om bryllupsdatoen.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ I gift?",
       "options": [
         "er blevet",
@@ -5003,13 +5005,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-afsluttede-hun-sin-uddannelse",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om et bestemt tidspunkt.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ hun sin uddannelse?",
       "options": [
         "afsluttede",
@@ -5026,13 +5029,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-koebte-i-huset",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger, hvornår huset blev købt.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ I huset?",
       "options": [
         "køber",
@@ -5049,13 +5053,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-stod-du-op-i-morges",
       "level": "A2",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om i morges.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ du op i morges?",
       "options": [
         "var stået",
@@ -5072,13 +5077,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-skete-det",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om et uheld, der skete.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ det?",
       "options": [
         "sker",
@@ -5095,13 +5101,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-ringede-hun",
       "level": "A2",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om, hvornår hun ringede.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ hun?",
       "options": [
         "havde ringet",
@@ -5118,13 +5125,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvornaar-moedte-du-din-mand",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om et bestemt tidspunkt.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ du din mand?",
       "options": [
         "har mødt",
@@ -5141,7 +5149,8 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid."
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
+      "verify": true
     },
     {
       "id": "hvor-var-du-i-gaar",
@@ -5164,13 +5173,13 @@ window.TIDS_DATA = {
         "end": "i går",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "hvornaar-begyndte-filmen",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger, hvornår filmen begyndte.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ filmen?",
       "options": [
         "begyndte",
@@ -5187,14 +5196,14 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid.",
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
       "verify": true
     },
     {
       "id": "hvornaar-rejste-i-til-norge",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Du spørger om et bestemt tidspunkt.",
+      "context": "Du spørger om tidspunktet for en afsluttet hændelse i fortiden.",
       "sentence": "Hvornår ___ I til Norge?",
       "options": [
         "rejste",
@@ -5211,7 +5220,7 @@ window.TIDS_DATA = {
         "end": "ukendt tidspunkt",
         "ongoing": false
       },
-      "note": "Spørgsmål om et bestemt tidspunkt (\"hvornår\") bruger datid.",
+      "note": "Spørgsmål om et bestemt, afsluttet tidspunkt (\"hvornår\") bruger oftest datid.",
       "verify": true
     },
     {
@@ -5235,7 +5244,7 @@ window.TIDS_DATA = {
         "end": "fredag",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "jeg-fik-en-ny-telefon-i-mandags",
@@ -5258,7 +5267,7 @@ window.TIDS_DATA = {
         "end": "mandag",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-sommer-var-vi-en-uge-i-tyskland",
@@ -5281,7 +5290,7 @@ window.TIDS_DATA = {
         "end": "sommer",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "festen-sluttede-klokken-tre-i-nat",
@@ -5304,7 +5313,7 @@ window.TIDS_DATA = {
         "end": "i nat",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "min-foerste-arbejdsdag-var-i-2014",
@@ -5327,7 +5336,7 @@ window.TIDS_DATA = {
         "end": "2014",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "vi-badede-hver-dag-i-havet-da-vi-var-i-spanien",
@@ -5372,7 +5381,7 @@ window.TIDS_DATA = {
         "end": "sidste år",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-tirsdags-gik-vi-til-svoemning",
@@ -5395,7 +5404,7 @@ window.TIDS_DATA = {
         "end": "tirsdag",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-april-fik-jeg-et-nyt-job",
@@ -5418,7 +5427,7 @@ window.TIDS_DATA = {
         "end": "april",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "hun-var-formand-i-2015-og-2016",
@@ -5487,7 +5496,7 @@ window.TIDS_DATA = {
         "end": "i går",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "klokken-otte-i-morges-tog-jeg-bussen",
@@ -5510,7 +5519,7 @@ window.TIDS_DATA = {
         "end": "kl. 8",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-1972-fik-min-far-sit-koerekort",
@@ -5533,17 +5542,17 @@ window.TIDS_DATA = {
         "end": "1972",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
-      "id": "for-et-halvt-aar-siden-flyttede-de-sig-i-koebenhavn",
+      "id": "for-et-halvt-aar-siden-flyttede-de-til-koebenhavn",
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det var for et halvt år siden.",
-      "sentence": "For et halvt år siden ___ de sig i København.",
+      "sentence": "For et halvt år siden ___ de til København.",
       "options": [
-        "har flyttet",
         "flytter",
+        "har flyttet",
         "flyttede"
       ],
       "correct": "flyttede",
@@ -5555,7 +5564,7 @@ window.TIDS_DATA = {
         "end": "for 6 mdr. siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "som-ung-boede-hun-i-amerika-i-to-aar",
@@ -5600,7 +5609,7 @@ window.TIDS_DATA = {
         "end": "i går",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "for-tyve-minutter-siden-loed-brandalarmen",
@@ -5623,7 +5632,7 @@ window.TIDS_DATA = {
         "end": "for 20 min. siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "i-november-fik-vi-et-nyt-koekken",
@@ -5646,7 +5655,7 @@ window.TIDS_DATA = {
         "end": "november",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-2019-ansatte-firmaet-tre-nye-medarbejdere",
@@ -5669,7 +5678,7 @@ window.TIDS_DATA = {
         "end": "2019",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid.",
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid.",
       "verify": true
     },
     {
@@ -5715,7 +5724,7 @@ window.TIDS_DATA = {
         "end": "for en uge siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "i-gaar-spiste-vi-kage-fordi-det-var-min-foedselsdag",
@@ -5738,7 +5747,7 @@ window.TIDS_DATA = {
         "end": "i går",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "vi-har-boet-i-samme-by-siden-2015",
@@ -6063,7 +6072,7 @@ window.TIDS_DATA = {
         "end": "for 3 uger siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     },
     {
       "id": "sidste-sommer-regnede-det-naesten-aldrig",
@@ -6086,7 +6095,7 @@ window.TIDS_DATA = {
         "end": "sidste sommer",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "i-weekenden-sov-jeg-meget",
@@ -6109,7 +6118,7 @@ window.TIDS_DATA = {
         "end": "weekenden",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
       "id": "sidste-maaned-holdt-vi-et-moede-om-budgettet",
@@ -6132,30 +6141,30 @@ window.TIDS_DATA = {
         "end": "sidste måned",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid."
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid."
     },
     {
-      "id": "i-1990-erne-vokse-internettet-hurtigt",
+      "id": "i-1990-erne-voksede-internettet-hurtigt",
       "level": "B2",
       "mode": "preterite_vs_perfect",
       "context": "Du fortæller om 1990'erne.",
       "sentence": "I 1990'erne ___ internettet hurtigt.",
       "options": [
+        "voksede",
         "havde vokset",
-        "vokse",
-        "har vokset",
-        "vokser"
+        "vokser",
+        "har vokset"
       ],
-      "correct": "vokse",
+      "correct": "voksede",
       "accepted_answers": [
-        "vokse"
+        "voksede"
       ],
       "timeline": {
         "start": "1990'erne",
         "end": "1990'erne",
         "ongoing": false
       },
-      "note": "Et bestemt tidspunkt i fortiden kræver datid.",
+      "note": "Et bestemt tidspunkt i fortiden peger normalt på datid.",
       "verify": true
     },
     {
@@ -6179,7 +6188,7 @@ window.TIDS_DATA = {
         "end": "for lidt siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid.",
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid.",
       "verify": true
     },
     {
@@ -6203,7 +6212,7 @@ window.TIDS_DATA = {
         "end": "for 3 mdr. siden",
         "ongoing": false
       },
-      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og kræver datid."
+      "note": "\"For ... siden\" peger på et bestemt tidspunkt i fortiden og giver normalt datid."
     }
   ],
   "pluperfect": [
@@ -7094,7 +7103,7 @@ window.TIDS_DATA = {
       "options": [
         "spiser",
         "havde spist",
-        "har spist",
+        "ville have spist",
         "spiste"
       ],
       "correct": "havde spist",
@@ -7106,7 +7115,8 @@ window.TIDS_DATA = {
         "end": "hun siger",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "han-sagde-at-han-allerede-havde-koebt-billetterne",
@@ -7117,7 +7127,7 @@ window.TIDS_DATA = {
       "options": [
         "køber",
         "havde købt",
-        "har købt",
+        "ville have købt",
         "købte"
       ],
       "correct": "havde købt",
@@ -7129,7 +7139,8 @@ window.TIDS_DATA = {
         "end": "udsagn",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "hun-fortalte-at-hun-allerede-havde-forberedet-alt-til",
@@ -7140,7 +7151,7 @@ window.TIDS_DATA = {
       "options": [
         "forberedede",
         "forbereder",
-        "har forberedet",
+        "ville have forberedet",
         "havde forberedet"
       ],
       "correct": "havde forberedet",
@@ -7152,7 +7163,8 @@ window.TIDS_DATA = {
         "end": "fortælling",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "min-mor-spurgte-om-jeg-allerede-havde-ringet-til-hende",
@@ -7161,7 +7173,7 @@ window.TIDS_DATA = {
       "context": "Du fortæller om gårsdagens telefonsamtale.",
       "sentence": "Min mor spurgte, om jeg allerede ___ til hende.",
       "options": [
-        "har ringet",
+        "ville have ringet",
         "havde ringet",
         "ringede",
         "ringer"
@@ -7175,7 +7187,8 @@ window.TIDS_DATA = {
         "end": "spørgsmål",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "laereren-sagde-at-eleverne-allerede-havde-laest-teksten",
@@ -7184,7 +7197,7 @@ window.TIDS_DATA = {
       "context": "Du refererer, hvad læreren sagde i går.",
       "sentence": "Læreren sagde, at eleverne allerede ___ teksten.",
       "options": [
-        "har læst",
+        "ville have læst",
         "læste",
         "læser",
         "havde læst"
@@ -7198,7 +7211,8 @@ window.TIDS_DATA = {
         "end": "udsagn",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "direktoeren-forklarede-at-firmaet-for-laengst-havde",
@@ -7210,7 +7224,7 @@ window.TIDS_DATA = {
         "mister",
         "havde mistet",
         "mistede",
-        "har mistet"
+        "ville have mistet"
       ],
       "correct": "havde mistet",
       "accepted_answers": [
@@ -7221,7 +7235,8 @@ window.TIDS_DATA = {
         "end": "forklaring",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "han-skrev-at-han-allerede-havde-fundet-sin-telefon",
@@ -7233,7 +7248,7 @@ window.TIDS_DATA = {
         "havde fundet",
         "fandt",
         "finder",
-        "har fundet"
+        "ville have fundet"
       ],
       "correct": "havde fundet",
       "accepted_answers": [
@@ -7244,7 +7259,8 @@ window.TIDS_DATA = {
         "end": "besked",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "laegen-sagde-at-patienten-allerede-havde-taget-medicinen",
@@ -7255,7 +7271,7 @@ window.TIDS_DATA = {
       "options": [
         "havde taget",
         "tager",
-        "har taget",
+        "ville have taget",
         "tog"
       ],
       "correct": "havde taget",
@@ -7267,7 +7283,8 @@ window.TIDS_DATA = {
         "end": "udsagn",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "han-indroemmede-at-han-allerede-havde-gjort-det-hele",
@@ -7277,7 +7294,7 @@ window.TIDS_DATA = {
       "sentence": "Han indrømmede, at han allerede ___ det hele selv.",
       "options": [
         "gør",
-        "har gjort",
+        "ville have gjort",
         "havde gjort",
         "gjorde"
       ],
@@ -7290,7 +7307,8 @@ window.TIDS_DATA = {
         "end": "indrømmelse",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "politiet-sagde-at-tyven-allerede-var-forsvundet",
@@ -7301,7 +7319,7 @@ window.TIDS_DATA = {
       "options": [
         "forsvandt",
         "forsvinder",
-        "er forsvundet",
+        "ville have forsvundet",
         "var forsvundet"
       ],
       "correct": "var forsvundet",
@@ -7313,7 +7331,8 @@ window.TIDS_DATA = {
         "end": "udsagn",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "hun-sagde-at-de-allerede-havde-koebt-et-hus",
@@ -7324,7 +7343,7 @@ window.TIDS_DATA = {
       "options": [
         "køber",
         "havde købt",
-        "har købt",
+        "ville have købt",
         "købte"
       ],
       "correct": "havde købt",
@@ -7336,7 +7355,8 @@ window.TIDS_DATA = {
         "end": "udsagn",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
       "id": "jeg-svarede-at-jeg-allerede-havde-laest-rapporten",
@@ -7348,7 +7368,7 @@ window.TIDS_DATA = {
         "læste",
         "læser",
         "havde læst",
-        "har læst"
+        "ville have læst"
       ],
       "correct": "havde læst",
       "accepted_answers": [
@@ -7359,19 +7379,20 @@ window.TIDS_DATA = {
         "end": "svar",
         "ongoing": false
       },
-      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum."
+      "note": "I referat af noget, der allerede var sket, bruges pluskvamperfektum.",
+      "verify": true
     },
     {
-      "id": "da-jeg-kom-til-danmark-havde-aldrig-set-sne-foer",
+      "id": "jeg-havde-aldrig-set-sne-foer-da-jeg-kom-til-danmark",
       "level": "B1",
       "mode": "pluperfect",
       "context": "Du kom til Danmark for ti år siden og så sne første gang dengang.",
-      "sentence": "Da jeg kom til Danmark, ___ sne før.",
+      "sentence": "Jeg ___ sne før, da jeg kom til Danmark.",
       "options": [
-        "har aldrig set",
-        "havde aldrig set",
         "så aldrig",
-        "ser aldrig"
+        "havde aldrig set",
+        "ser aldrig",
+        "har aldrig set"
       ],
       "correct": "havde aldrig set",
       "accepted_answers": [
@@ -7411,7 +7432,7 @@ window.TIDS_DATA = {
       "id": "foer-i-gaar-havde-hun-aldrig-set-ham",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Du mødte ham første gang i går.",
+      "context": "Hun mødte ham første gang i går.",
       "sentence": "Før i går ___ hun aldrig set ham.",
       "options": [
         "har",
@@ -8008,19 +8029,20 @@ window.TIDS_DATA = {
       "note": "Efter \"efter at\" kommer pluskvamperfektum om den handling, der skete først; datid er mere uformel."
     },
     {
-      "id": "da-jeg-kom-havde-han-endnu-ikke-staaet-op",
+      "id": "da-jeg-kom-var-han-endnu-ikke-staaet-op",
       "level": "B1",
       "mode": "pluperfect",
       "context": "Du ankom kl. 12. Han stod først op kl. 13.",
       "sentence": "Da jeg kom, ___ han endnu ikke stået op.",
       "options": [
+        "er",
         "blev",
-        "var",
         "har",
-        "havde"
+        "var"
       ],
-      "correct": "havde",
+      "correct": "var",
       "accepted_answers": [
+        "var",
         "havde"
       ],
       "timeline": {
@@ -8028,7 +8050,7 @@ window.TIDS_DATA = {
         "end": "jeg kommer",
         "ongoing": false
       },
-      "note": "Pluskvamperfektum dannes med \"havde\" + participium; nutidens \"har\" passer ikke i en fortælling i datid."
+      "note": "Gå, komme, blive og forsvinde danner perfektum og pluskvamperfektum med \"er/var\", ikke \"har/havde\"; begynde kan have begge."
     },
     {
       "id": "da-vi-kom-havde-de-endnu-ikke-lavet-mad",
@@ -8605,11 +8627,11 @@ window.TIDS_DATA = {
       "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
     },
     {
-      "id": "skolen-lukker-for-sommerferie-den-24-juni",
+      "id": "folkeskolerne-lukker-for-sommerferie-den-24-juni",
       "level": "B1",
       "mode": "future",
       "context": "Skolen har planlagt det.",
-      "sentence": "Skolen ___ for sommerferie den 24. juni.",
+      "sentence": "Folkeskolerne ___ for sommerferie den 24. juni.",
       "accepted_answers": [
         "lukker",
         "skal lukke"
@@ -8622,11 +8644,11 @@ window.TIDS_DATA = {
       "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
     },
     {
-      "id": "koncerten-begynder-klokken-20-paa-loerdag",
+      "id": "forestillingen-begynder-klokken-19-paa-fredag",
       "level": "B1",
       "mode": "future",
       "context": "Programmet er trykt.",
-      "sentence": "Koncerten ___ klokken 20 på lørdag.",
+      "sentence": "Forestillingen ___ klokken 19 på fredag.",
       "accepted_answers": [
         "begynder",
         "skal begynde"
@@ -8759,7 +8781,7 @@ window.TIDS_DATA = {
       "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
     },
     {
-      "id": "operationen-finder-sted-den-3-marts-2",
+      "id": "operationen-finder-sted-den-3-marts",
       "level": "B1",
       "mode": "future",
       "context": "Lægen har sat en dato.",
@@ -8951,7 +8973,8 @@ window.TIDS_DATA = {
       "context": "Det er en regel i biblioteket.",
       "sentence": "Man ___ her.",
       "accepted_answers": [
-        "skal ikke larme"
+        "skal ikke larme",
+        "må ikke larme"
       ],
       "distractors": [
         "vil ikke larme",
@@ -9324,7 +9347,8 @@ window.TIDS_DATA = {
       "context": "Du har besluttet det.",
       "sentence": "Jeg ___ mere sundt fra i dag.",
       "accepted_answers": [
-        "vil spise"
+        "vil spise",
+        "skal spise"
       ],
       "distractors": [
         "kommer til at spise",
@@ -9627,7 +9651,7 @@ window.TIDS_DATA = {
       "distractors": [
         "gled",
         "er gledet",
-        "gleder"
+        "ville glide"
       ],
       "note": "Kommer til at bruges, når der er tegn på, at noget snart vil ske.",
       "verify": true
@@ -9877,12 +9901,11 @@ window.TIDS_DATA = {
       "id": "jeg-kommer-til-at-arbejde-meget-i-begyndelsen",
       "level": "B2",
       "mode": "future",
-      "context": "Du taler om dit nye job.",
+      "context": "Du skal starte i et nyt job næste måned.",
       "sentence": "Jeg ___ meget i begyndelsen.",
       "accepted_answers": [
         "kommer til at arbejde",
-        "vil arbejde",
-        "arbejder"
+        "vil arbejde"
       ],
       "distractors": [
         "arbejdede",
@@ -9910,11 +9933,11 @@ window.TIDS_DATA = {
       "note": "Kommer til at bruges om forudsigelser og om ting, der sker uden nogens plan."
     },
     {
-      "id": "min-bror-kommer-til-at-komme-for-sent-som-han-plejer",
+      "id": "min-bror-kommer-til-at-komme-for-sent-til-festen-som",
       "level": "B1",
       "mode": "future",
-      "context": "Du kender din bror.",
-      "sentence": "Min bror ___ for sent, som han plejer.",
+      "context": "Festen er i morgen, og din bror kommer næsten altid for sent.",
+      "sentence": "Min bror ___ for sent til festen, som han plejer.",
       "accepted_answers": [
         "kommer til at komme",
         "kommer"
@@ -9947,7 +9970,7 @@ window.TIDS_DATA = {
       "id": "den-nye-skole-kommer-til-at-koste-mange-penge",
       "level": "B1",
       "mode": "future",
-      "context": "Du taler om en ny skole.",
+      "context": "Byrådet planlægger en ny skole, som skal bygges næste år.",
       "sentence": "Den nye skole ___ mange penge.",
       "accepted_answers": [
         "kommer til at koste",
@@ -10000,11 +10023,12 @@ window.TIDS_DATA = {
       "id": "jeg-kommer-til-at-elske-den-nye-lejlighed",
       "level": "B1",
       "mode": "future",
-      "context": "Du taler om din nye lejlighed.",
+      "context": "Du flytter ind i en ny lejlighed næste måned.",
       "sentence": "Jeg ___ den nye lejlighed.",
       "accepted_answers": [
         "kommer til at elske",
-        "vil elske"
+        "vil elske",
+        "elsker"
       ],
       "distractors": [
         "elskede",
@@ -10120,7 +10144,7 @@ window.TIDS_DATA = {
       "id": "min-bror-bliver-30-i-marts",
       "level": "A2",
       "mode": "future",
-      "context": "Du taler om en fødselsdag.",
+      "context": "Det er februar, og din bror fylder år næste måned.",
       "sentence": "Min bror ___ 30 i marts.",
       "accepted_answers": [
         "bliver",
@@ -10134,11 +10158,11 @@ window.TIDS_DATA = {
       "note": "Bliver bruges om tilstande, der indtræder i fremtiden (blive + adjektiv eller tal)."
     },
     {
-      "id": "det-bliver-moerkt-klokken-fire-i-december",
+      "id": "det-bliver-moerkt-klokken-fire-i-december-i-aar",
       "level": "B1",
       "mode": "future",
-      "context": "Du taler om vinteren.",
-      "sentence": "Det ___ mørkt klokken fire i december.",
+      "context": "Det er november, og du taler om næste måned.",
+      "sentence": "Det ___ mørkt klokken fire i december i år.",
       "accepted_answers": [
         "bliver",
         "kommer til at blive"
@@ -10188,7 +10212,7 @@ window.TIDS_DATA = {
       "id": "det-bliver-koldt-i-nat",
       "level": "B1",
       "mode": "future",
-      "context": "Du taler om natten.",
+      "context": "Det er eftermiddag, og du læser vejrudsigten for natten.",
       "sentence": "Det ___ koldt i nat.",
       "accepted_answers": [
         "bliver",
@@ -10351,7 +10375,8 @@ window.TIDS_DATA = {
       "sentence": "Jeg ___ et kursus i dansk.",
       "accepted_answers": [
         "har tænkt mig at tage",
-        "vil tage"
+        "vil tage",
+        "tager"
       ],
       "distractors": [
         "tænkte mig at tage",
@@ -11878,7 +11903,7 @@ window.TIDS_DATA = {
       "id": "smerterne-kan-have-flere-aarsager",
       "level": "B1",
       "mode": "modal",
-      "context": "Du taler om lægens undersøgelse.",
+      "context": "Lægen ved ikke endnu, hvad det er; flere forklaringer er mulige.",
       "sentence": "Smerterne ___ have flere årsager.",
       "options": [
         "bør",
@@ -11967,35 +11992,34 @@ window.TIDS_DATA = {
       "verify": true
     },
     {
-      "id": "i-en-bedre-verden-kunne-alle-boern-gaa-i-skole",
+      "id": "som-barn-kunne-hun-laese-foer-hun-kom-i-skole",
       "level": "B2",
       "mode": "modal",
-      "context": "Du forestiller dig en anden verden.",
-      "sentence": "I en bedre verden ___ alle børn gå i skole.",
+      "context": "Du fortæller om hende som barn.",
+      "sentence": "Som barn ___ hun læse, før hun kom i skole.",
       "options": [
-        "kunne",
         "skal",
-        "bør",
+        "kan",
+        "kunne",
         "må"
       ],
       "correct": "kunne",
       "accepted_answers": [
-        "kunne",
-        "ville"
+        "kunne"
       ],
-      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed."
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
     },
     {
-      "id": "vi-kunne-maaske-gaa-i-biografen-i-aften",
+      "id": "hun-kunne-have-sagt-ja-men-hun-sagde-nej",
       "level": "B1",
       "mode": "modal",
-      "context": "Du kommer med et forsigtigt forslag.",
-      "sentence": "Vi ___ måske gå i biografen i aften.",
+      "context": "Du kunne have valgt anderledes, men valgte ikke.",
+      "sentence": "Hun ___ have sagt ja, men hun sagde nej.",
       "options": [
-        "kunne",
-        "må",
         "skal",
-        "bør"
+        "må",
+        "kan",
+        "kunne"
       ],
       "correct": "kunne",
       "accepted_answers": [
@@ -12518,12 +12542,12 @@ window.TIDS_DATA = {
       "id": "jeg-maa-skynde-mig-toget-gaar-om-fem-minutter",
       "level": "B1",
       "mode": "modal",
-      "context": "Du har lovet at nå det.",
+      "context": "Du har ingen anden mulighed, ellers misser du toget.",
       "sentence": "Jeg ___ skynde mig; toget går om fem minutter.",
       "options": [
-        "vil",
         "kan",
         "ville",
+        "måtte",
         "må"
       ],
       "correct": "må",
@@ -13256,7 +13280,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "ville"
       ],
-      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+      "note": "Ville ikke udtrykker en nægtelse i fortiden: man ville ikke."
     },
     {
       "id": "som-barn-ville-jeg-vaere-astronaut",
@@ -13330,7 +13354,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "ville"
       ],
-      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+      "note": "Ville ikke udtrykker en nægtelse i fortiden: man ville ikke."
     },
     {
       "id": "jeg-ville-gerne-have-hjulpet-dig-men-jeg-havde-ikke-tid",
@@ -13463,7 +13487,7 @@ window.TIDS_DATA = {
       "id": "chefen-skal-angiveligt-vaere-paa-vej-til-en-ny-stilling",
       "level": "B2",
       "mode": "modal",
-      "context": "Det siger vejrmeldingen.",
+      "context": "Det siger kollegerne.",
       "sentence": "Chefen ___ angiveligt være på vej til en ny stilling.",
       "options": [
         "skal",
@@ -13626,7 +13650,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Må"
       ],
-      "note": "Kunne og ville bruges til høflige forespørgsler."
+      "note": "Må jeg ...? bruges, når man høfligt beder om lov."
     },
     {
       "id": "maa-jeg-faa-lov-at-gaa-tidligt-i-dag",
@@ -13644,7 +13668,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Må"
       ],
-      "note": "Kunne og ville bruges til høflige forespørgsler."
+      "note": "Må jeg ...? bruges, når man høfligt beder om lov."
     },
     {
       "id": "kunne-de-fortaelle-mig-hvor-stationen-er",
@@ -13681,7 +13705,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Må"
       ],
-      "note": "Kunne og ville bruges til høflige forespørgsler."
+      "note": "Må jeg ...? bruges, når man høfligt beder om lov."
     },
     {
       "id": "kunne-de-sende-mig-de-relevante-dokumenter",
@@ -13718,7 +13742,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Må"
       ],
-      "note": "Kunne og ville bruges til høflige forespørgsler."
+      "note": "Må jeg ...? bruges, når man høfligt beder om lov."
     },
     {
       "id": "kunne-du-laane-mig-en-kop-sukker",
@@ -13755,7 +13779,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Må"
       ],
-      "note": "Kunne og ville bruges til høflige forespørgsler."
+      "note": "Må jeg ...? bruges, når man høfligt beder om lov."
     },
     {
       "id": "hvis-vi-havde-tid-ville-vi-hjaelpe-dig",
@@ -13765,7 +13789,7 @@ window.TIDS_DATA = {
       "sentence": "Hvis vi havde tid, ___ vi hjælpe dig.",
       "options": [
         "skal",
-        "vil",
+        "må",
         "ville",
         "bør"
       ],
@@ -13785,7 +13809,7 @@ window.TIDS_DATA = {
       "options": [
         "skal",
         "bør",
-        "vil",
+        "må",
         "ville"
       ],
       "correct": "ville",
@@ -13805,7 +13829,7 @@ window.TIDS_DATA = {
         "skal",
         "bør",
         "ville",
-        "vil"
+        "må"
       ],
       "correct": "ville",
       "accepted_answers": [
@@ -13824,7 +13848,7 @@ window.TIDS_DATA = {
         "bør",
         "ville",
         "skal",
-        "vil"
+        "må"
       ],
       "correct": "ville",
       "accepted_answers": [
@@ -13842,7 +13866,7 @@ window.TIDS_DATA = {
         "bør",
         "skal",
         "ville",
-        "vil"
+        "må"
       ],
       "correct": "ville",
       "accepted_answers": [
@@ -13859,7 +13883,7 @@ window.TIDS_DATA = {
       "options": [
         "bør",
         "ville",
-        "vil",
+        "må",
         "skal"
       ],
       "correct": "ville",
@@ -13876,7 +13900,7 @@ window.TIDS_DATA = {
       "sentence": "Hvis jeg var hende, ___ jeg sige ja.",
       "options": [
         "ville",
-        "vil",
+        "må",
         "skal",
         "bør"
       ],
@@ -13895,7 +13919,7 @@ window.TIDS_DATA = {
       "options": [
         "ville",
         "skal",
-        "vil",
+        "må",
         "bør"
       ],
       "correct": "ville",
@@ -13911,7 +13935,7 @@ window.TIDS_DATA = {
       "context": "Du drømmer.",
       "sentence": "Jeg ___ gerne være pilot, hvis jeg kunne vælge igen.",
       "options": [
-        "vil",
+        "må",
         "ville",
         "bør",
         "skal"
@@ -13931,7 +13955,7 @@ window.TIDS_DATA = {
       "options": [
         "skal",
         "bør",
-        "vil",
+        "må",
         "ville"
       ],
       "correct": "ville",
@@ -13950,7 +13974,7 @@ window.TIDS_DATA = {
       "options": [
         "ville",
         "skal",
-        "vil",
+        "må",
         "bør"
       ],
       "correct": "ville",
@@ -13966,7 +13990,7 @@ window.TIDS_DATA = {
       "context": "Du tænker på hypotetiske følger.",
       "sentence": "Hvad ___ der ske, hvis alle stoppede med at betale skat?",
       "options": [
-        "vil",
+        "må",
         "ville",
         "bør",
         "skal"
@@ -14168,7 +14192,7 @@ window.TIDS_DATA = {
       "options": [
         "skal",
         "bør",
-        "vil",
+        "må",
         "ville"
       ],
       "correct": "ville",
@@ -15096,7 +15120,8 @@ window.TIDS_DATA = {
       "slots": [
         {
           "accepted_answers": [
-            "kunne"
+            "kunne",
+            "talte"
           ],
           "distractors": [
             "kan",
@@ -15501,7 +15526,7 @@ window.TIDS_DATA = {
             "ville"
           ],
           "distractors": [
-            "vil",
+            "må",
             "skal",
             "bør"
           ]
@@ -16068,7 +16093,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "conditional",
       "context": "Der var ingen bus, så du gik.",
-      "sentence": "Hvis bussen ___ , ville jeg ikke have gået.",
+      "sentence": "Hvis bussen ___, ville jeg ikke have gået.",
       "slots": [
         {
           "accepted_answers": [
@@ -16291,11 +16316,11 @@ window.TIDS_DATA = {
       "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
     },
     {
-      "id": "hvis-jeg-maatte-faa-lov-at-bede-om-regningen-ville-det",
+      "id": "hvis-jeg-maatte-bede-om-regningen-ville-det-vaere-rart",
       "level": "B2",
       "mode": "conditional",
       "context": "Du taler høfligt til en servitrice.",
-      "sentence": "Hvis jeg ___ få lov at bede om regningen, ville det være rart.",
+      "sentence": "Hvis jeg ___ bede om regningen, ville det være rart.",
       "slots": [
         {
           "accepted_answers": [
@@ -17516,7 +17541,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "infinitive",
       "context": "Det starter nu.",
-      "sentence": "Det begynder ___ .",
+      "sentence": "Det begynder ___.",
       "options": [
         "ved at regne",
         "for at regne",
@@ -17822,7 +17847,7 @@ window.TIDS_DATA = {
       "id": "han-tillod-os-at-gaa-tidligt",
       "level": "B2",
       "mode": "infinitive",
-      "context": "Du er uenig.",
+      "context": "Han gav os lov.",
       "sentence": "Han tillod os ___ tidligt.",
       "options": [
         "for at gå",
@@ -18309,7 +18334,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "infinitive",
       "context": "Det er ved at ske.",
-      "sentence": "Vi er ___ , så vent lidt.",
+      "sentence": "Vi er ___, så vent lidt.",
       "options": [
         "til at pakke",
         "at pakke",
@@ -18363,7 +18388,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "infinitive",
       "context": "Det er lige ved at ske.",
-      "sentence": "Toget er ___ .",
+      "sentence": "Toget er ___.",
       "options": [
         "for at køre",
         "til at køre",
@@ -18527,7 +18552,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "infinitive",
       "context": "Du roser hende.",
-      "sentence": "Hun er god ___ .",
+      "sentence": "Hun er god ___.",
       "options": [
         "at synge",
         "ved at synge",
@@ -18545,7 +18570,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du har travlt.",
-      "sentence": "Jeg har ikke tid ___ .",
+      "sentence": "Jeg har ikke tid ___.",
       "options": [
         "at læse",
         "til at læse",
@@ -18754,7 +18779,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "af at være"
       ],
-      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv."
+      "note": "Stolt kræver \"af at\" + infinitiv."
     },
     {
       "id": "jeg-er-sikker-paa-at-klare-det",
@@ -18772,7 +18797,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "på at klare"
       ],
-      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv.",
+      "note": "Sikker kræver \"på at\" + infinitiv.",
       "verify": true
     },
     {
@@ -18780,7 +18805,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du er klar.",
-      "sentence": "Vi er klar ___ .",
+      "sentence": "Vi er klar ___.",
       "options": [
         "for at starte",
         "at starte",
@@ -18798,7 +18823,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du er begejstret.",
-      "sentence": "Hun er begejstret ___ .",
+      "sentence": "Hun er begejstret ___.",
       "options": [
         "at rejse",
         "for at rejse",
@@ -18809,7 +18834,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "for at rejse"
       ],
-      "note": "\"Glad for\" kræver \"for at\" + infinitiv."
+      "note": "Begejstret kræver \"for at\" + infinitiv."
     },
     {
       "id": "det-er-vigtigt-at-passe-paa-sig-selv",
@@ -18870,7 +18895,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du mærkede det.",
-      "sentence": "Jeg kunne mærke jorden ___ .",
+      "sentence": "Jeg kunne mærke jorden ___.",
       "options": [
         "rystet",
         "ryste",
@@ -18906,7 +18931,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du så det.",
-      "sentence": "Hun så toget ___ .",
+      "sentence": "Hun så toget ___.",
       "options": [
         "kørt",
         "køre",
@@ -18997,7 +19022,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du hørte det.",
-      "sentence": "Hun hørte ham ___ .",
+      "sentence": "Hun hørte ham ___.",
       "options": [
         "komme",
         "at komme",
@@ -19033,7 +19058,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "infinitive",
       "context": "Du fik en tjeneste.",
-      "sentence": "Jeg skal have bilen ___ .",
+      "sentence": "Jeg skal have bilen ___.",
       "options": [
         "til at reparere",
         "repareret",
@@ -19105,7 +19130,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "infinitive",
       "context": "Han tillod det.",
-      "sentence": "Han lod mig ___ .",
+      "sentence": "Han lod mig ___.",
       "options": [
         "gå",
         "for at gå",
@@ -19178,7 +19203,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "infinitive",
       "context": "Du bestilte det.",
-      "sentence": "Vi skal have tapetet ___ .",
+      "sentence": "Vi skal have tapetet ___.",
       "options": [
         "sætte op",
         "sat op",
@@ -19196,7 +19221,7 @@ window.TIDS_DATA = {
       "level": "C1",
       "mode": "infinitive",
       "context": "Du lod det ske.",
-      "sentence": "Han lod mig ___ , hvad der var sket.",
+      "sentence": "Han lod mig ___, hvad der var sket.",
       "options": [
         "for at forklare",
         "forklare",
@@ -19250,7 +19275,7 @@ window.TIDS_DATA = {
       "level": "C1",
       "mode": "infinitive",
       "context": "Du overtalte.",
-      "sentence": "Det lykkedes mig at få ham ___ .",
+      "sentence": "Det lykkedes mig at få ham ___.",
       "options": [
         "til at skifte mening",
         "skifte mening",
@@ -19268,7 +19293,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "infinitive",
       "context": "Du bestilte det.",
-      "sentence": "Vi har fået vinduerne ___ .",
+      "sentence": "Vi har fået vinduerne ___.",
       "options": [
         "at pudse",
         "pudse",
@@ -19304,7 +19329,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "infinitive",
       "context": "Hun ringede ikke; hun valgte en anden måde.",
-      "sentence": "___ , sendte hun en mail.",
+      "sentence": "___, sendte hun en mail.",
       "options": [
         "Efter at ringe",
         "I stedet for at ringe",
@@ -19322,7 +19347,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "infinitive",
       "context": "Du var uopmærksom.",
-      "sentence": "Jeg kom ind ___ .",
+      "sentence": "Jeg kom ind ___.",
       "options": [
         "uden at banke på",
         "at banke på",
@@ -19412,7 +19437,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "infinitive",
       "context": "Du har ikke lært det.",
-      "sentence": "Min bror kan ikke ___ .",
+      "sentence": "Min bror kan ikke ___.",
       "options": [
         "til at svømme",
         "at svømme",
@@ -19574,7 +19599,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "infinitive",
       "context": "Du hørte det.",
-      "sentence": "Jeg hørte telefonen ___ .",
+      "sentence": "Jeg hørte telefonen ___.",
       "options": [
         "at ringe",
         "ringet",
@@ -20104,7 +20129,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "passive",
       "context": "Du står foran døren og kan ikke komme ind.",
-      "sentence": "Døren ___ , så jeg kan ikke komme ind.",
+      "sentence": "Døren ___, så jeg kan ikke komme ind.",
       "options": [
         "er låst",
         "låser",
@@ -20158,7 +20183,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "passive",
       "context": "Du står foran butikken.",
-      "sentence": "Butikken ___ , så vi må komme tilbage i morgen.",
+      "sentence": "Butikken ___, så vi må komme tilbage i morgen.",
       "options": [
         "er lukket",
         "lukkes",
@@ -20176,7 +20201,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "passive",
       "context": "Du kigger ind i rummet.",
-      "sentence": "Alle vinduer ___ , så der kommer kold luft ind.",
+      "sentence": "Alle vinduer ___, så der kommer kold luft ind.",
       "options": [
         "åbner",
         "bliver åbnet",
@@ -20248,7 +20273,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "passive",
       "context": "Du kigger ind i lokalet.",
-      "sentence": "Alle stole ___ , og vi er klar til at starte.",
+      "sentence": "Alle stole ___, og vi er klar til at starte.",
       "options": [
         "bliver stillet op",
         "er stillet op",
@@ -20266,7 +20291,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "passive",
       "context": "Du læser i kataloget.",
-      "sentence": "Bogen ___ , så vi kan ikke bestille den.",
+      "sentence": "Bogen ___, så vi kan ikke bestille den.",
       "options": [
         "bliver udsolgt",
         "er udsolgt",
@@ -21307,16 +21332,16 @@ window.TIDS_DATA = {
       "note": "Bliver + participium viser en konkret handling, der foregår eller sker nu."
     },
     {
-      "id": "cyklerne-bliver-samlet-af-cykelsmeden",
+      "id": "cyklerne-bliver-samlet-af-cykelsmeden-lige-nu",
       "level": "B1",
       "mode": "passive",
-      "context": "Du er på værkstedet.",
-      "sentence": "Cyklerne ___ af cykelsmeden.",
+      "context": "Du er på værkstedet nu.",
+      "sentence": "Cyklerne ___ af cykelsmeden lige nu.",
       "options": [
+        "er samlet",
         "samler",
         "bliver samlet",
-        "blev samlet",
-        "er samlet"
+        "blev samlet"
       ],
       "correct": "bliver samlet",
       "accepted_answers": [
@@ -21383,7 +21408,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "passive",
       "context": "Du fortæller om en koncert i går.",
-      "sentence": "Der ___ , da hun kom ind.",
+      "sentence": "Der ___, da hun kom ind.",
       "options": [
         "blev klappet",
         "klappes",
@@ -21400,7 +21425,7 @@ window.TIDS_DATA = {
       "id": "der-blev-spist-og-drukket-hele-aftenen",
       "level": "B2",
       "mode": "passive",
-      "context": "Du fortæller om en fest.",
+      "context": "Du fortæller om en fest i går aftes.",
       "sentence": "Der ___ hele aftenen.",
       "options": [
         "bliver spist og drukket",
@@ -21418,7 +21443,7 @@ window.TIDS_DATA = {
       "id": "der-blev-ventet-i-flere-timer",
       "level": "B2",
       "mode": "passive",
-      "context": "Du fortæller om en lang dag.",
+      "context": "Du fortæller om i går.",
       "sentence": "Der ___ i flere timer.",
       "options": [
         "ventes",
@@ -21472,7 +21497,7 @@ window.TIDS_DATA = {
       "id": "der-blev-raabt-og-skreget-hele-kampen",
       "level": "B2",
       "mode": "passive",
-      "context": "Du fortæller om en kamp.",
+      "context": "Du fortæller om en kamp i lørdags.",
       "sentence": "Der ___ og skreget hele kampen.",
       "options": [
         "råbte",
@@ -21490,7 +21515,7 @@ window.TIDS_DATA = {
       "id": "der-blev-arbejdet-hele-natten-paa-byggepladsen",
       "level": "B2",
       "mode": "passive",
-      "context": "Du fortæller om natten.",
+      "context": "Du fortæller om natten til i går.",
       "sentence": "Der ___ hele natten på byggepladsen.",
       "options": [
         "arbejdes",
@@ -21508,7 +21533,7 @@ window.TIDS_DATA = {
       "id": "der-blev-festet-til-langt-ud-paa-morgenen",
       "level": "B2",
       "mode": "passive",
-      "context": "Du fortæller om en fest.",
+      "context": "Du fortæller om festen i lørdags.",
       "sentence": "Der ___ til langt ud på morgenen.",
       "options": [
         "blev festet",
@@ -21527,7 +21552,7 @@ window.TIDS_DATA = {
       "id": "der-blev-lagt-blomster-ved-monumentet",
       "level": "B2",
       "mode": "passive",
-      "context": "Du fortæller om et mindesmærke.",
+      "context": "Du fortæller om en ceremoni sidste år.",
       "sentence": "Der ___ blomster ved monumentet.",
       "options": [
         "bliver lagt",
@@ -21601,7 +21626,7 @@ window.TIDS_DATA = {
       "id": "der-serveres-vin-til-maden",
       "level": "B2",
       "mode": "passive",
-      "context": "En restaurant.",
+      "context": "Du læser, hvad der gælder på restauranten i dag.",
       "sentence": "Der ___ vin til maden.",
       "options": [
         "serverer",
@@ -21620,7 +21645,7 @@ window.TIDS_DATA = {
       "id": "der-synges-hver-soendag-i-kirken",
       "level": "B2",
       "mode": "passive",
-      "context": "En kirke.",
+      "context": "Du beskriver, hvordan det foregår i kirken i dag.",
       "sentence": "Der ___ hver søndag i kirken.",
       "options": [
         "sang",
@@ -21725,8 +21750,7 @@ window.TIDS_DATA = {
       ],
       "correct": "synges",
       "accepted_answers": [
-        "synges",
-        "bliver sunget"
+        "synges"
       ],
       "note": "S-passiv bruges i upersonlig passiv om det almindelige: Der tales dansk her.",
       "verify": true
@@ -21755,7 +21779,7 @@ window.TIDS_DATA = {
       "id": "vagten-aabner-doeren-klokken-otte",
       "level": "B1",
       "mode": "passive",
-      "context": "Vagten har et objekt.",
+      "context": "Du fortæller om vagten.",
       "sentence": "Vagten ___ døren klokken otte.",
       "options": [
         "bliver åbnet",
@@ -22482,7 +22506,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "er blevet"
       ],
-      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+      "note": "Er blevet + participium bruges om en begivenhed, der er sket frem til nu (perfektum passiv)."
     },
     {
       "id": "over-tusind-mennesker-er-blevet-ramt-af-sygdommen-hidtil",
@@ -22500,7 +22524,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "er blevet"
       ],
-      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+      "note": "Er blevet + participium bruges om en begivenhed, der er sket frem til nu (perfektum passiv)."
     },
     {
       "id": "flere-veje-er-blevet-lukket-for-trafik-siden-stormen",
@@ -22518,7 +22542,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "er blevet"
       ],
-      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+      "note": "Er blevet + participium bruges om en begivenhed, der er sket frem til nu (perfektum passiv)."
     },
     {
       "id": "mange-butikker-er-blevet-lukket-de-seneste-aar",
@@ -22536,7 +22560,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "er blevet"
       ],
-      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+      "note": "Er blevet + participium bruges om en begivenhed, der er sket frem til nu (perfektum passiv)."
     },
     {
       "id": "alle-gaester-er-blevet-informeret-siden-i-morges",
@@ -22554,7 +22578,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "er blevet"
       ],
-      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+      "note": "Er blevet + participium bruges om en begivenhed, der er sket frem til nu (perfektum passiv)."
     },
     {
       "id": "ingen-sager-er-blevet-afgjort-endnu",
@@ -22572,7 +22596,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "er blevet"
       ],
-      "note": "Blev + participium bruges om en afsluttet begivenhed i datid, ofte med en agent (af ...)."
+      "note": "Er blevet + participium bruges om en begivenhed, der er sket frem til nu (perfektum passiv)."
     },
     {
       "id": "huset-er-bygget-nu-og-alle-moebler-er-koert-ind",
@@ -23296,20 +23320,20 @@ window.TIDS_DATA = {
       "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
     },
     {
-      "id": "hold-en-pause",
+      "id": "tag-en-pause",
       "level": "A2",
       "mode": "imperative",
       "context": "Du er træt.",
       "sentence": "___ en pause!",
       "options": [
-        "Holdt",
-        "Holder",
-        "Holde",
-        "Hold"
+        "Tag",
+        "Tage",
+        "Taget",
+        "Tager"
       ],
-      "correct": "Hold",
+      "correct": "Tag",
       "accepted_answers": [
-        "Hold"
+        "Tag"
       ],
       "note": "Imperativ dannes af infinitiv uden -e (luk, åbn, spis); den bruges, når man henvender sig direkte til nogen."
     },
@@ -23746,23 +23770,22 @@ window.TIDS_DATA = {
       "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
     },
     {
-      "id": "bekymr-dig-ikke",
+      "id": "skynd-dig-ikke",
       "level": "A2",
       "mode": "imperative",
-      "context": "Du trøster din ven.",
+      "context": "Du siger, at der ikke er travlt.",
       "sentence": "___ dig ikke.",
       "options": [
-        "Bekymr",
-        "Bekymret",
-        "Bekymre",
-        "Bekymrer"
+        "Skyndt",
+        "Skynd",
+        "Skynder",
+        "Skynde"
       ],
-      "correct": "Bekymr",
+      "correct": "Skynd",
       "accepted_answers": [
-        "Bekymr"
+        "Skynd"
       ],
-      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe.",
-      "verify": true
+      "note": "I negativ imperativ står \"ikke\" efter verbet: Rør ikke! Glem ikke at ringe."
     },
     {
       "id": "glem-ikke-at-ringe-til-mig-i-aften",
@@ -23985,7 +24008,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "imperative",
       "context": "Du beder høfligt.",
-      "sentence": "Luk døren, ___ .",
+      "sentence": "Luk døren, ___.",
       "options": [
         "fordi",
         "ellers",
@@ -24075,7 +24098,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "imperative",
       "context": "Det er koldt ude.",
-      "sentence": "Tag jakken ___ , det er koldt.",
+      "sentence": "Tag jakken ___, det er koldt.",
       "options": [
         "på",
         "op",
@@ -24093,7 +24116,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "imperative",
       "context": "Her er varmt.",
-      "sentence": "Tag jakken ___ , her er varmt.",
+      "sentence": "Tag jakken ___, her er varmt.",
       "options": [
         "på",
         "ned",
@@ -24116,7 +24139,7 @@ window.TIDS_DATA = {
         "ned",
         "op",
         "ud",
-        "af"
+        "ind"
       ],
       "correct": "ned",
       "accepted_answers": [
@@ -24147,7 +24170,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "imperative",
       "context": "Du står.",
-      "sentence": "Sæt dig ___ .",
+      "sentence": "Sæt dig ___.",
       "options": [
         "ned",
         "op",
@@ -24201,7 +24224,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "imperative",
       "context": "Du er ved indgangen.",
-      "sentence": "Kom ___ !",
+      "sentence": "Kom ___!",
       "options": [
         "ned",
         "af",
@@ -24219,7 +24242,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "imperative",
       "context": "Du advarer mod fare.",
-      "sentence": "Pas ___ , der er glat.",
+      "sentence": "Pas ___, der er glat.",
       "options": [
         "af",
         "på",
@@ -24238,7 +24261,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "imperative",
       "context": "Du vil af med noget.",
-      "sentence": "Smid den ___ .",
+      "sentence": "Smid den ___.",
       "options": [
         "op",
         "ind",
@@ -24256,7 +24279,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "imperative",
       "context": "Det er for varmt.",
-      "sentence": "Tag trøjen ___ , så du ikke har så varmt.",
+      "sentence": "Tag trøjen ___, så du ikke har så varmt.",
       "options": [
         "af",
         "ned",
