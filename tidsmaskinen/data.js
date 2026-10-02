@@ -10887,5 +10887,3315 @@ window.TIDS_DATA = {
       ],
       "note": "Faste planer kan udtrykkes både med nutid og med skal; nutid kræver et tidsudtryk."
     }
+  ],
+  "modal": [
+    {
+      "id": "hun-kan-tale-fem-sprog",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Hun er god til sprog.",
+      "sentence": "Hun ___ tale fem sprog.",
+      "options": [
+        "skal",
+        "må",
+        "kan",
+        "bør"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "jeg-kan-svoemme-400-meter",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du har lært at svømme.",
+      "sentence": "Jeg ___ svømme 400 meter.",
+      "options": [
+        "må",
+        "skal",
+        "bør",
+        "kan"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "jeg-kan-ikke-koere-bil",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du har aldrig lært det, så det er umuligt for dig.",
+      "sentence": "Jeg ___ ikke køre bil.",
+      "options": [
+        "skal",
+        "kan",
+        "må",
+        "bør"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "han-kan-se-meget-langt",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din ven har et godt syn.",
+      "sentence": "Han ___ se meget langt.",
+      "options": [
+        "må",
+        "kan",
+        "bør",
+        "skal"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "kan-du-spille-klaver",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du spørger, om han har lært det.",
+      "sentence": "___ du spille klaver?",
+      "options": [
+        "Bør",
+        "Skal",
+        "Må",
+        "Kan"
+      ],
+      "correct": "Kan",
+      "accepted_answers": [
+        "Kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "kassen-er-saa-tung-at-jeg-ikke-kan-loefte-den",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Kassen er meget tung.",
+      "sentence": "Kassen er så tung, at jeg ikke ___ løfte den.",
+      "options": [
+        "kan",
+        "skal",
+        "bør",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "nu-kan-hun-cykle-uden-stoettehjul",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Hun er blevet bedre til at cykle.",
+      "sentence": "Nu ___ hun cykle uden støttehjul.",
+      "options": [
+        "bør",
+        "må",
+        "skal",
+        "kan"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "nu-kan-fuglen-flyve-igen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Fuglen er rask igen.",
+      "sentence": "Nu ___ fuglen flyve igen.",
+      "options": [
+        "bør",
+        "kan",
+        "skal",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "hun-kan-allerede-taelle-til-hundrede",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du taler om en pige på tre år.",
+      "sentence": "Hun ___ allerede tælle til hundrede.",
+      "options": [
+        "kan",
+        "bør",
+        "skal",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "han-kan-reparere-naesten-alle-slags-computere",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Din kollega er ekspert.",
+      "sentence": "Han ___ reparere næsten alle slags computere.",
+      "options": [
+        "skal",
+        "kan",
+        "bør",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "som-barn-kunne-jeg-ikke-svoemme",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du fortæller om din barndom. Du havde ikke lært det.",
+      "sentence": "Som barn ___ jeg ikke svømme.",
+      "options": [
+        "må",
+        "kunne",
+        "kan",
+        "skulle"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "min-mormor-kunne-synge-smukt-da-hun-var-ung",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om din mormor, da hun var ung.",
+      "sentence": "Min mormor ___ synge smukt, da hun var ung.",
+      "options": [
+        "skulle",
+        "kan",
+        "kunne",
+        "må"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "dengang-kunne-jeg-loebe-en-mil-uden-problemer",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om gamle dage.",
+      "sentence": "Dengang ___ jeg løbe en mil uden problemer.",
+      "options": [
+        "må",
+        "skal",
+        "kan",
+        "kunne"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "i-gaar-kunne-jeg-ikke-lugte-noget",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du var forkølet i går.",
+      "sentence": "I går ___ jeg ikke lugte noget.",
+      "options": [
+        "kunne",
+        "skal",
+        "må",
+        "kan"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "vi-kunne-ikke-se-noget-fordi-der-var-saa-moerkt",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det var for mørkt til at se noget.",
+      "sentence": "Vi ___ ikke se noget, fordi der var så mørkt.",
+      "options": [
+        "kan",
+        "skulle",
+        "måtte",
+        "kunne"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "som-ung-kunne-hun-loefte-tunge-ting-uden-hjaelp",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Hun er blevet 80. Dengang var hun stærk.",
+      "sentence": "Som ung ___ hun løfte tunge ting uden hjælp.",
+      "options": [
+        "må",
+        "skal",
+        "kunne",
+        "kan"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "vi-kunne-ikke-komme-hjem-fordi-der-ikke-koerte-nogen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om i går, hvor der ikke var nogen bus.",
+      "sentence": "Vi ___ ikke komme hjem, fordi der ikke kørte nogen busser.",
+      "options": [
+        "skulle",
+        "måtte",
+        "kunne",
+        "kan"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "i-gaar-var-jeg-saa-traet-at-jeg-naesten-ikke-kunne-staa",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du har haft en lang dag.",
+      "sentence": "I går var jeg så træt, at jeg næsten ikke ___ stå.",
+      "options": [
+        "skal",
+        "kan",
+        "kunne",
+        "burde"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne er datid af kan og udtrykker evne i fortiden."
+    },
+    {
+      "id": "maa-jeg-gaa-paa-toilettet",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du beder din lærer om lov.",
+      "sentence": "___ jeg gå på toilettet?",
+      "options": [
+        "Skal",
+        "Bør",
+        "Må",
+        "Vil"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "du-maa-gaa-hjem-nu-hvis-du-vil",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din chef giver dig lov.",
+      "sentence": "Du ___ gå hjem nu, hvis du vil.",
+      "options": [
+        "skal",
+        "bør",
+        "må",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "i-maa-se-tv-naar-i-har-lavet-lektier",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Mor giver børnene lov.",
+      "sentence": "I ___ se tv, når I har lavet lektier.",
+      "options": [
+        "må",
+        "vil",
+        "skal",
+        "bør"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "maa-jeg-saette-mig-her",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du spørger høfligt om lov.",
+      "sentence": "___ jeg sætte mig her?",
+      "options": [
+        "Skal",
+        "Vil",
+        "Må",
+        "Bør"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "maa-jeg-aabne-vinduet",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du spørger din vært om lov.",
+      "sentence": "___ jeg åbne vinduet?",
+      "options": [
+        "Bør",
+        "Må",
+        "Vil",
+        "Skal"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "her-maa-man-gerne-tage-billeder",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det er tilladt at tage billeder.",
+      "sentence": "Her ___ man gerne tage billeder.",
+      "options": [
+        "vil",
+        "skal",
+        "bør",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse.",
+      "verify": true
+    },
+    {
+      "id": "du-maa-spise-lidt-chokolade-men-ikke-for-meget",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din læge giver dig lov.",
+      "sentence": "Du ___ spise lidt chokolade, men ikke for meget.",
+      "options": [
+        "må",
+        "skal",
+        "bør",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "medlemmer-maa-tage-gaester-med",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Reglen giver medlemmerne lov.",
+      "sentence": "Medlemmer ___ tage gæster med.",
+      "options": [
+        "bør",
+        "skal",
+        "vil",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "maa-jeg-laane-bilen-i-aften",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du beder om lov til at låne bilen.",
+      "sentence": "___ jeg låne bilen i aften?",
+      "options": [
+        "Vil",
+        "Må",
+        "Skal",
+        "Bør"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "maa-man-ryge-her",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du spørger om lov til at ryge.",
+      "sentence": "___ man ryge her?",
+      "options": [
+        "Bør",
+        "Skal",
+        "Vil",
+        "Må"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "boern-maa-gerne-komme-med-ind",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Nogen siger, at det er tilladt.",
+      "sentence": "Børn ___ gerne komme med ind.",
+      "options": [
+        "vil",
+        "skal",
+        "bør",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse.",
+      "verify": true
+    },
+    {
+      "id": "du-maa-godt-gaa-i-biografen-med-din-ven",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din mor giver dig lov.",
+      "sentence": "Du ___ godt gå i biografen med din ven.",
+      "options": [
+        "vil",
+        "må",
+        "bør",
+        "skal"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "her-maa-man-ikke-ryge",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Der er et forbud.",
+      "sentence": "Her ___ man ikke ryge.",
+      "options": [
+        "må",
+        "ville",
+        "vil",
+        "kunne"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "du-maa-ikke-parkere-her",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Skiltet viser, at det er forbudt.",
+      "sentence": "Du ___ ikke parkere her.",
+      "options": [
+        "kunne",
+        "vil",
+        "ville",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "du-maa-ikke-drikke-alkohol-mens-du-tager-medicinen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Lægen har forbudt det.",
+      "sentence": "Du ___ ikke drikke alkohol, mens du tager medicinen.",
+      "options": [
+        "vil",
+        "ville",
+        "kunne",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "man-maa-ikke-spise-i-timerne",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Reglen i klassen.",
+      "sentence": "Man ___ ikke spise i timerne.",
+      "options": [
+        "ville",
+        "vil",
+        "må",
+        "kunne"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "boern-under-12-maa-ikke-se-filmen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Børn er for unge.",
+      "sentence": "Børn under 12 ___ ikke se filmen.",
+      "options": [
+        "må",
+        "vil",
+        "ville",
+        "kunne"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "du-maa-ikke-bruge-mobiltelefon-her",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Hospitalet har et forbud.",
+      "sentence": "Du ___ ikke bruge mobiltelefon her.",
+      "options": [
+        "ville",
+        "vil",
+        "kunne",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "hunde-maa-ikke-loebe-frit-i-parken",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det er et forbud i parken.",
+      "sentence": "Hunde ___ ikke løbe frit i parken.",
+      "options": [
+        "ville",
+        "vil",
+        "må",
+        "kunne"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "eleverne-maa-ikke-bruge-hjaelpemidler-til-eksamen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er et forbud mod at hjælpe.",
+      "sentence": "Eleverne ___ ikke bruge hjælpemidler til eksamen.",
+      "options": [
+        "kunne",
+        "må",
+        "vil",
+        "ville"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "du-maa-ikke-gaa-ud-foer-du-har-ryddet-op",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din mor forbyder det.",
+      "sentence": "Du ___ ikke gå ud, før du har ryddet op.",
+      "options": [
+        "må",
+        "vil",
+        "ville",
+        "kunne"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "man-maa-ikke-koere-over-for-roedt",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Loven forbyder det.",
+      "sentence": "Man ___ ikke køre over for rødt.",
+      "options": [
+        "ville",
+        "kunne",
+        "vil",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "som-barn-maatte-jeg-ikke-se-tv-hver-dag",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller om din barndom. Dine forældre var strenge.",
+      "sentence": "Som barn ___ jeg ikke se tv hver dag.",
+      "options": [
+        "må",
+        "skal",
+        "kunne",
+        "måtte"
+      ],
+      "correct": "måtte",
+      "accepted_answers": [
+        "måtte",
+        "skulle"
+      ],
+      "note": "Måtte ikke udtrykker et forbud i fortiden."
+    },
+    {
+      "id": "i-gaar-maatte-jeg-gaa-tidligt-hjem",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Din chef gav dig lov i går.",
+      "sentence": "I går ___ jeg gå tidligt hjem.",
+      "options": [
+        "må",
+        "vil",
+        "måtte",
+        "skal"
+      ],
+      "correct": "måtte",
+      "accepted_answers": [
+        "måtte"
+      ],
+      "note": "Måtte er datid af må og udtrykker tilladelse i fortiden."
+    },
+    {
+      "id": "vi-maatte-aldrig-blive-ude-efter-klokken-ti",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Dine forældre var meget strenge.",
+      "sentence": "Vi ___ aldrig blive ude efter klokken ti.",
+      "options": [
+        "måtte",
+        "kunne",
+        "må",
+        "skal"
+      ],
+      "correct": "måtte",
+      "accepted_answers": [
+        "måtte"
+      ],
+      "note": "Måtte ikke udtrykker et forbud i fortiden.",
+      "verify": true
+    },
+    {
+      "id": "sidste-uge-maatte-vi-vaelge-opgave-selv",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Din lærer gav jer lov sidste uge.",
+      "sentence": "Sidste uge ___ vi vælge opgave selv.",
+      "options": [
+        "måtte",
+        "må",
+        "skal",
+        "vil"
+      ],
+      "correct": "måtte",
+      "accepted_answers": [
+        "måtte"
+      ],
+      "note": "Måtte er datid af må og udtrykker tilladelse i fortiden."
+    },
+    {
+      "id": "som-barn-maatte-jeg-ikke-spise-slik-andet-end-om",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Din mormor var streng, da du var barn.",
+      "sentence": "Som barn ___ jeg ikke spise slik andet end om lørdagen.",
+      "options": [
+        "vil",
+        "kunne",
+        "måtte",
+        "må"
+      ],
+      "correct": "måtte",
+      "accepted_answers": [
+        "måtte"
+      ],
+      "note": "Måtte ikke udtrykker et forbud i fortiden."
+    },
+    {
+      "id": "i-den-tid-maatte-eleverne-ikke-tale-i-timerne",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du fortæller om dine første år på skolen.",
+      "sentence": "I den tid ___ eleverne ikke tale i timerne.",
+      "options": [
+        "må",
+        "måtte",
+        "vil",
+        "kunne"
+      ],
+      "correct": "måtte",
+      "accepted_answers": [
+        "måtte"
+      ],
+      "note": "Måtte ikke udtrykker et forbud i fortiden."
+    },
+    {
+      "id": "det-kan-regne-i-morgen",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Ingen ved, hvordan vejret bliver.",
+      "sentence": "Det ___ regne i morgen.",
+      "options": [
+        "kan",
+        "bør",
+        "skal",
+        "vil"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "han-kan-komme-senere-men-jeg-ved-det-ikke",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Han er ikke hjemme, men måske kommer han senere.",
+      "sentence": "Han ___ komme senere, men jeg ved det ikke.",
+      "options": [
+        "vil",
+        "kan",
+        "skal",
+        "bør"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "det-kan-vaere-at-hun-har-glemt-det",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du er ikke sikker på noget.",
+      "sentence": "Det ___ være, at hun har glemt det.",
+      "options": [
+        "kan",
+        "bør",
+        "vil",
+        "skal"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "hvis-du-ikke-passer-paa-kan-du-blive-syg",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om en risiko.",
+      "sentence": "Hvis du ikke passer på, ___ du blive syg.",
+      "options": [
+        "må",
+        "bør",
+        "kan",
+        "skal"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "moedet-kan-blive-udsat-til-naeste-uge",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om en mulighed.",
+      "sentence": "Mødet ___ blive udsat til næste uge.",
+      "options": [
+        "bør",
+        "skal",
+        "må",
+        "kan"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "hun-kan-naa-det-hvis-toget-ikke-er-forsinket",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du ved ikke, om hun kommer.",
+      "sentence": "Hun ___ nå det, hvis toget ikke er forsinket.",
+      "options": [
+        "bør",
+        "kan",
+        "skal",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "det-kan-vaere-en-fejl-i-systemet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det er en mulighed, men ikke sikkert.",
+      "sentence": "Det ___ være en fejl i systemet.",
+      "options": [
+        "bør",
+        "skal",
+        "vil",
+        "kan"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "prisen-kan-stige-hvis-der-kommer-en-ny-afgift",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du er forsigtig med at love noget.",
+      "sentence": "Prisen ___ stige, hvis der kommer en ny afgift.",
+      "options": [
+        "kan",
+        "bør",
+        "skal",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "smerterne-kan-have-flere-aarsager",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om lægens undersøgelse.",
+      "sentence": "Smerterne ___ have flere årsager.",
+      "options": [
+        "bør",
+        "kan",
+        "må",
+        "skal"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "vejene-kan-vaere-glatte-i-morgen-tidlig",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er risiko for glatføre.",
+      "sentence": "Vejene ___ være glatte i morgen tidlig.",
+      "options": [
+        "må",
+        "skal",
+        "bør",
+        "kan"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "det-kunne-godt-vaere-at-han-tog-fejl-dengang",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du er ikke sikker på, hvad der skete.",
+      "sentence": "Det ___ godt være, at han tog fejl dengang.",
+      "options": [
+        "skal",
+        "bør",
+        "kunne",
+        "vil"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne",
+        "kan"
+      ],
+      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed."
+    },
+    {
+      "id": "det-kunne-vaere-gaaet-meget-vaerre",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du ser tilbage og tænker på, hvad der var muligt.",
+      "sentence": "Det ___ være gået meget værre.",
+      "options": [
+        "bør",
+        "kunne",
+        "skal",
+        "kan"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed."
+    },
+    {
+      "id": "han-kunne-have-ringet-men-han-gjorde-det-ikke",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om en forkert afgørelse.",
+      "sentence": "Han ___ have ringet, men han gjorde det ikke.",
+      "options": [
+        "skal",
+        "kunne",
+        "kan",
+        "må"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed.",
+      "verify": true
+    },
+    {
+      "id": "i-en-bedre-verden-kunne-alle-boern-gaa-i-skole",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du forestiller dig en anden verden.",
+      "sentence": "I en bedre verden ___ alle børn gå i skole.",
+      "options": [
+        "kunne",
+        "skal",
+        "bør",
+        "må"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne",
+        "ville"
+      ],
+      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed."
+    },
+    {
+      "id": "vi-kunne-maaske-gaa-i-biografen-i-aften",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du kommer med et forsigtigt forslag.",
+      "sentence": "Vi ___ måske gå i biografen i aften.",
+      "options": [
+        "kunne",
+        "må",
+        "skal",
+        "bør"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed."
+    },
+    {
+      "id": "han-kunne-vaere-blevet-laege-hvis-han-havde-villet",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du taler om en tidligere mulighed.",
+      "sentence": "Han ___ være blevet læge, hvis han havde villet.",
+      "options": [
+        "skal",
+        "må",
+        "kunne",
+        "kan"
+      ],
+      "correct": "kunne",
+      "accepted_answers": [
+        "kunne"
+      ],
+      "note": "Kunne udtrykker en svagere, hypotetisk eller datids mulighed."
+    },
+    {
+      "id": "han-maa-vaere-hjemme-der-er-lys-i-vinduet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er næsten sikker, for lyset er tændt.",
+      "sentence": "Han ___ være hjemme; der er lys i vinduet.",
+      "options": [
+        "bør",
+        "vil",
+        "skal",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "det-maa-vaere-en-dyr-bil-den-har-et-maerke-jeg-kender",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er næsten sikker, fordi du ser det.",
+      "sentence": "Det ___ være en dyr bil; den har et mærke, jeg kender.",
+      "options": [
+        "bør",
+        "vil",
+        "skal",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved.",
+      "verify": true
+    },
+    {
+      "id": "hun-maa-vaere-meget-traet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Hun har ikke sovet i to dage.",
+      "sentence": "Hun ___ være meget træt.",
+      "options": [
+        "må",
+        "vil",
+        "bør",
+        "skal"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "han-maa-vaere-meget-rig",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Han har tre huse og to både.",
+      "sentence": "Han ___ være meget rig.",
+      "options": [
+        "vil",
+        "må",
+        "skal",
+        "bør"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "hun-maa-vaere-udmattet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Hun har arbejdet hele natten.",
+      "sentence": "Hun ___ være udmattet.",
+      "options": [
+        "bør",
+        "vil",
+        "skal",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "jeg-maa-have-laest-det-et-sted",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er næsten sikker på, at du har hørt det før.",
+      "sentence": "Jeg ___ have læst det et sted.",
+      "options": [
+        "bør",
+        "skal",
+        "må",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "der-maa-vaere-noget-gratis",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Der er masser af folk i køen.",
+      "sentence": "Der ___ være noget gratis.",
+      "options": [
+        "bør",
+        "skal",
+        "vil",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "han-maa-vaere-paa-arbejde",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Han tager aldrig telefonen.",
+      "sentence": "Han ___ være på arbejde.",
+      "options": [
+        "må",
+        "bør",
+        "vil",
+        "skal"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved.",
+      "verify": true
+    },
+    {
+      "id": "hun-maa-vaere-meget-ked-af-det",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du ser, at hun græder.",
+      "sentence": "Hun ___ være meget ked af det.",
+      "options": [
+        "må",
+        "skal",
+        "bør",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "hun-maa-vaere-meget-dygtig",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Hun fik en 12-tal på eksamen.",
+      "sentence": "Hun ___ være meget dygtig.",
+      "options": [
+        "vil",
+        "bør",
+        "må",
+        "skal"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    },
+    {
+      "id": "du-skal-aflevere-rapporten-i-dag",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din chef kræver det.",
+      "sentence": "Du ___ aflevere rapporten i dag.",
+      "options": [
+        "ville",
+        "kunne",
+        "skal",
+        "kan"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "alle-elever-skal-baere-skoleuniform",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Det er en regel.",
+      "sentence": "Alle elever ___ bære skoleuniform.",
+      "options": [
+        "skal",
+        "kan",
+        "ville",
+        "kunne"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "du-skal-tage-medicinen-hver-dag",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Lægen kræver det.",
+      "sentence": "Du ___ tage medicinen hver dag.",
+      "options": [
+        "kunne",
+        "ville",
+        "kan",
+        "skal"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "alle-bilister-skal-have-en-gyldig-forsikring",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Loven kræver det.",
+      "sentence": "Alle bilister ___ have en gyldig forsikring.",
+      "options": [
+        "skal",
+        "kunne",
+        "ville",
+        "kan"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "du-skal-goere-dine-lektier-foerst",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din mor kræver det.",
+      "sentence": "Du ___ gøre dine lektier først.",
+      "options": [
+        "kunne",
+        "ville",
+        "skal",
+        "kan"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "gaester-skal-melde-sig-i-receptionen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er en regel.",
+      "sentence": "Gæster ___ melde sig i receptionen.",
+      "options": [
+        "ville",
+        "skal",
+        "kan",
+        "kunne"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "medarbejdere-skal-aflevere-deres-noegler-naar-de-stopper",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det er en kontraktlig pligt.",
+      "sentence": "Medarbejdere ___ aflevere deres nøgler, når de stopper.",
+      "options": [
+        "kunne",
+        "skal",
+        "ville",
+        "kan"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "eleverne-skal-sidde-stille-under-proeven",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Der er en regel i klassen.",
+      "sentence": "Eleverne ___ sidde stille under prøven.",
+      "options": [
+        "kan",
+        "kunne",
+        "ville",
+        "skal"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "ansoegere-skal-dokumentere-deres-indkomst",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Reglerne for tilskuddet.",
+      "sentence": "Ansøgere ___ dokumentere deres indkomst.",
+      "options": [
+        "kunne",
+        "kan",
+        "ville",
+        "skal"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "alle-skal-deltage-i-moedet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Chefen har besluttet det.",
+      "sentence": "Alle ___ deltage i mødet.",
+      "options": [
+        "skal",
+        "ville",
+        "kunne",
+        "kan"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "du-skal-rydde-dit-vaerelse-i-dag",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din far siger det.",
+      "sentence": "Du ___ rydde dit værelse i dag.",
+      "options": [
+        "ville",
+        "kan",
+        "skal",
+        "kunne"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "du-skal-udfylde-formularen-foer-du-kan-faa-et-kort",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er flere krav.",
+      "sentence": "Du ___ udfylde formularen, før du kan få et kort.",
+      "options": [
+        "ville",
+        "kunne",
+        "skal",
+        "kan"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "jeg-maa-gaa-nu-ellers-misser-jeg-bussen",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du har travlt og kan ikke blive.",
+      "sentence": "Jeg ___ gå nu, ellers misser jeg bussen.",
+      "options": [
+        "må",
+        "vil",
+        "kan",
+        "ville"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "vi-maa-vente-til-han-kommer",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er ingen anden mulighed.",
+      "sentence": "Vi ___ vente, til han kommer.",
+      "options": [
+        "må",
+        "vil",
+        "ville",
+        "kan"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "jeg-er-syg-saa-jeg-maa-gaa-hjem",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du er nødt til at tage hjem.",
+      "sentence": "Jeg er syg, så jeg ___ gå hjem.",
+      "options": [
+        "vil",
+        "ville",
+        "må",
+        "kan"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "naar-man-bor-i-danmark-maa-man-betale-skat",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du har ikke noget valg.",
+      "sentence": "Når man bor i Danmark, ___ man betale skat.",
+      "options": [
+        "ville",
+        "må",
+        "kan",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "vi-maa-droppe-turen-hvis-det-bliver-ved-med-at-regne",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er ikke andet at gøre.",
+      "sentence": "Vi ___ droppe turen, hvis det bliver ved med at regne.",
+      "options": [
+        "ville",
+        "kan",
+        "vil",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "jeg-maa-skynde-mig-toget-gaar-om-fem-minutter",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du har lovet at nå det.",
+      "sentence": "Jeg ___ skynde mig; toget går om fem minutter.",
+      "options": [
+        "vil",
+        "kan",
+        "ville",
+        "må"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "hvis-vi-vil-naa-det-maa-vi-arbejde-hele-weekenden",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Der er ingen vej uden om.",
+      "sentence": "Hvis vi vil nå det, ___ vi arbejde hele weekenden.",
+      "options": [
+        "vil",
+        "kan",
+        "må",
+        "ville"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "jeg-maa-desvaerre-aflyse-moedet-paa-grund-af-sygdom",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du kan ikke undgå det.",
+      "sentence": "Jeg ___ desværre aflyse mødet på grund af sygdom.",
+      "options": [
+        "må",
+        "vil",
+        "kan",
+        "ville"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må kan udtrykke nødvendighed: man er nødt til noget."
+    },
+    {
+      "id": "jeg-skulle-vaere-paa-arbejde-klokken-otte-i-gaar",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det var aftalt, at du kom kl. 8.",
+      "sentence": "Jeg ___ være på arbejde klokken otte i går.",
+      "options": [
+        "kan",
+        "bør",
+        "skulle",
+        "skal"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "vi-skulle-moedes-kl-18-men-han-kom-for-sent",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller, hvad der var planen.",
+      "sentence": "Vi ___ mødes kl. 18, men han kom for sent.",
+      "options": [
+        "kan",
+        "skal",
+        "bør",
+        "skulle"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "i-skolen-skulle-vi-staa-op-naar-laereren-kom-ind",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der var en regel dengang.",
+      "sentence": "I skolen ___ vi stå op, når læreren kom ind.",
+      "options": [
+        "ville",
+        "skal",
+        "kunne",
+        "skulle"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "i-gaar-skulle-jeg-tage-opvasken-men-jeg-glemte-det",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det var din pligt i går.",
+      "sentence": "I går ___ jeg tage opvasken, men jeg glemte det.",
+      "options": [
+        "bør",
+        "kan",
+        "skal",
+        "skulle"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "sidste-uge-skulle-vi-aflevere-en-opgave",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller om sidste uge.",
+      "sentence": "Sidste uge ___ vi aflevere en opgave.",
+      "options": [
+        "bør",
+        "skal",
+        "skulle",
+        "kan"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "alle-ansoegere-skulle-sende-en-tekst-paa-dansk-men",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du fortæller, hvad der var kravet.",
+      "sentence": "Alle ansøgere ___ sende en tekst på dansk, men flere glemte det.",
+      "options": [
+        "kan",
+        "skulle",
+        "bør",
+        "skal"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "min-bror-skulle-hente-mig-men-han-kom-aldrig",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller, hvad der var aftalt.",
+      "sentence": "Min bror ___ hente mig, men han kom aldrig.",
+      "options": [
+        "kan",
+        "bør",
+        "skal",
+        "skulle"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "i-gymnasiet-skulle-vi-laese-tre-boeger-om-aaret",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller om skoletiden.",
+      "sentence": "I gymnasiet ___ vi læse tre bøger om året.",
+      "options": [
+        "kan",
+        "bør",
+        "skulle",
+        "skal"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle er datid af skal og udtrykker pligt eller aftale i fortiden."
+    },
+    {
+      "id": "du-boer-sove-mere-hvis-du-vil-have-det-bedre",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Lægen giver et råd.",
+      "sentence": "Du ___ sove mere, hvis du vil have det bedre.",
+      "options": [
+        "ville",
+        "bør",
+        "vil",
+        "måtte"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "man-boer-drikke-mindst-to-liter-vand-om-dagen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du anbefaler noget.",
+      "sentence": "Man ___ drikke mindst to liter vand om dagen.",
+      "options": [
+        "vil",
+        "ville",
+        "måtte",
+        "bør"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "virksomheder-boer-overveje-at-flytte-til-billigere",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du skriver en anbefaling.",
+      "sentence": "Virksomheder ___ overveje at flytte til billigere lokaler.",
+      "options": [
+        "bør",
+        "vil",
+        "måtte",
+        "ville"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "du-boer-tage-en-pause-hvis-du-er-saa-traet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du rådgiver en ven.",
+      "sentence": "Du ___ tage en pause, hvis du er så træt.",
+      "options": [
+        "vil",
+        "måtte",
+        "bør",
+        "ville"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "alle-boer-kende-deres-rettigheder",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du giver et rigtigt godt råd.",
+      "sentence": "Alle ___ kende deres rettigheder.",
+      "options": [
+        "bør",
+        "måtte",
+        "vil",
+        "ville"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "du-burde-ringe-til-kunden-inden-du-sender-fakturaen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du rådgiver en kollega.",
+      "sentence": "Du ___ ringe til kunden, inden du sender fakturaen.",
+      "options": [
+        "burde",
+        "måtte",
+        "vil",
+        "ville"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "bør"
+      ],
+      "note": "Burde udtrykker et blødere råd eller en svag anbefaling."
+    },
+    {
+      "id": "vi-burde-nok-tage-en-paraply-med",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du kommer med et blødt råd.",
+      "sentence": "Vi ___ nok tage en paraply med.",
+      "options": [
+        "burde",
+        "vil",
+        "ville",
+        "måtte"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "bør"
+      ],
+      "note": "Burde udtrykker et blødere råd eller en svag anbefaling."
+    },
+    {
+      "id": "du-burde-besoege-aarhus-hvis-du-faar-tid",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du anbefaler din ven et sted.",
+      "sentence": "Du ___ besøge Aarhus, hvis du får tid.",
+      "options": [
+        "måtte",
+        "burde",
+        "vil",
+        "ville"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "bør"
+      ],
+      "note": "Burde udtrykker et blødere råd eller en svag anbefaling."
+    },
+    {
+      "id": "man-burde-nok-tjekke-tallene-en-ekstra-gang",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du kritiserer forsigtigt.",
+      "sentence": "Man ___ nok tjekke tallene en ekstra gang.",
+      "options": [
+        "vil",
+        "ville",
+        "burde",
+        "måtte"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "bør"
+      ],
+      "note": "Burde udtrykker et blødere råd eller en svag anbefaling."
+    },
+    {
+      "id": "du-burde-spise-noget-foer-du-gaar",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du giver din ven et råd.",
+      "sentence": "Du ___ spise noget, før du går.",
+      "options": [
+        "ville",
+        "måtte",
+        "vil",
+        "burde"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "bør"
+      ],
+      "note": "Burde udtrykker et blødere råd eller en svag anbefaling."
+    },
+    {
+      "id": "man-boer-motionere-mere-hvis-man-sidder-ved-en-computer",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om sundhed.",
+      "sentence": "Man ___ motionere mere, hvis man sidder ved en computer hele dagen.",
+      "options": [
+        "bør",
+        "vil",
+        "ville",
+        "måtte"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "du-burde-begynde-paa-opgaven-i-god-tid",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du vejleder en studerende.",
+      "sentence": "Du ___ begynde på opgaven i god tid.",
+      "options": [
+        "ville",
+        "måtte",
+        "vil",
+        "burde"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "bør"
+      ],
+      "note": "Burde udtrykker et blødere råd eller en svag anbefaling."
+    },
+    {
+      "id": "jeg-burde-have-ringet-til-hende-i-gaar",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du ringede ikke, og det var en fejl.",
+      "sentence": "Jeg ___ have ringet til hende i går.",
+      "options": [
+        "burde",
+        "kan",
+        "bør",
+        "skal"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "skulle"
+      ],
+      "note": "Burde have + participium udtrykker, at man ikke gjorde det rigtige i fortiden."
+    },
+    {
+      "id": "jeg-burde-vaere-gaaet-tidligere-hjemmefra",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du kom for sent, fordi du ikke tog tidligere af sted.",
+      "sentence": "Jeg ___ være gået tidligere hjemmefra.",
+      "options": [
+        "vil",
+        "bør",
+        "burde",
+        "kan"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "skulle"
+      ],
+      "note": "Burde have + participium udtrykker, at man ikke gjorde det rigtige i fortiden."
+    },
+    {
+      "id": "han-burde-have-lyttet-til-sin-soester",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Han tog en forkert beslutning.",
+      "sentence": "Han ___ have lyttet til sin søster.",
+      "options": [
+        "bør",
+        "burde",
+        "kan",
+        "vil"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "skulle"
+      ],
+      "note": "Burde have + participium udtrykker, at man ikke gjorde det rigtige i fortiden."
+    },
+    {
+      "id": "jeg-burde-have-taget-en-jakke-med",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du glemte at tage en jakke med.",
+      "sentence": "Jeg ___ have taget en jakke med.",
+      "options": [
+        "burde",
+        "vil",
+        "bør",
+        "kan"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "skulle"
+      ],
+      "note": "Burde have + participium udtrykker, at man ikke gjorde det rigtige i fortiden."
+    },
+    {
+      "id": "vi-burde-have-forberedt-os-bedre",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det gik galt, fordi vi ikke forberedte os.",
+      "sentence": "Vi ___ have forberedt os bedre.",
+      "options": [
+        "vil",
+        "kan",
+        "burde",
+        "bør"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "skulle"
+      ],
+      "note": "Burde have + participium udtrykker, at man ikke gjorde det rigtige i fortiden."
+    },
+    {
+      "id": "hun-burde-have-sagt-noget-dengang",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Hun fortryder, at hun ikke sagde noget.",
+      "sentence": "Hun ___ have sagt noget dengang.",
+      "options": [
+        "burde",
+        "kan",
+        "vil",
+        "bør"
+      ],
+      "correct": "burde",
+      "accepted_answers": [
+        "burde",
+        "skulle"
+      ],
+      "note": "Burde have + participium udtrykker, at man ikke gjorde det rigtige i fortiden."
+    },
+    {
+      "id": "jeg-vil-laere-dansk-foer-jeg-flytter-til-danmark",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du har besluttet det.",
+      "sentence": "Jeg ___ lære dansk, før jeg flytter til Danmark.",
+      "options": [
+        "ville",
+        "vil",
+        "bør",
+        "kan"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "han-vil-vaere-pilot-naar-han-bliver-stor",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Din ven drømmer om det.",
+      "sentence": "Han ___ være pilot, når han bliver stor.",
+      "options": [
+        "bør",
+        "ville",
+        "kan",
+        "vil"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "jeg-vil-goere-mit-bedste-for-at-bestaa-eksamen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du har et mål.",
+      "sentence": "Jeg ___ gøre mit bedste for at bestå eksamen.",
+      "options": [
+        "bør",
+        "vil",
+        "kan",
+        "ville"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "hun-vil-have-den-uddannelse-uanset-hvad-det-koster",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er fast besluttet.",
+      "sentence": "Hun ___ have den uddannelse, uanset hvad det koster.",
+      "options": [
+        "bør",
+        "kan",
+        "vil",
+        "ville"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "han-vil-ikke-have-groentsager",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Barnet nægter.",
+      "sentence": "Han ___ ikke have grøntsager.",
+      "options": [
+        "vil",
+        "ville",
+        "bør",
+        "kan"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "jeg-vil-gerne-have-en-kop-kaffe",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du har et ønske.",
+      "sentence": "Jeg ___ gerne have en kop kaffe.",
+      "options": [
+        "burde",
+        "bør",
+        "vil",
+        "må"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil",
+        "ville"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "vi-vil-ikke-give-op-foer-vi-har-vundet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er fast besluttet.",
+      "sentence": "Vi ___ ikke give op, før vi har vundet.",
+      "options": [
+        "kan",
+        "ville",
+        "vil",
+        "bør"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "jeg-vil-flytte-til-aarhus-naar-jeg-har-fundet-arbejde",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det er din plan.",
+      "sentence": "Jeg ___ flytte til Aarhus, når jeg har fundet arbejde.",
+      "options": [
+        "bør",
+        "kan",
+        "vil",
+        "ville"
+      ],
+      "correct": "vil",
+      "accepted_answers": [
+        "vil"
+      ],
+      "note": "Vil udtrykker egen vilje eller hensigt."
+    },
+    {
+      "id": "jeg-ville-ringe-til-dig-men-telefonen-var-doed",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du havde en plan, men det gik ikke.",
+      "sentence": "Jeg ___ ringe til dig, men telefonen var død.",
+      "options": [
+        "vil",
+        "må",
+        "skal",
+        "ville"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "skulle"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "jeg-ville-komme-men-jeg-fik-ikke-fri",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det var din hensigt, men du nåede det ikke.",
+      "sentence": "Jeg ___ komme, men jeg fik ikke fri.",
+      "options": [
+        "må",
+        "ville",
+        "vil",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "skulle"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "barnet-ville-ikke-spise-sin-aftensmad-i-gaar",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Barnet nægtede i går.",
+      "sentence": "Barnet ___ ikke spise sin aftensmad i går.",
+      "options": [
+        "ville",
+        "må",
+        "vil",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "som-barn-ville-jeg-vaere-astronaut",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du fortæller om dit gamle ønske.",
+      "sentence": "Som barn ___ jeg være astronaut.",
+      "options": [
+        "vil",
+        "må",
+        "ville",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "hun-ville-spoerge-sin-chef-om-en-loenforhoejelse-men",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det var hendes plan i sidste uge.",
+      "sentence": "Hun ___ spørge sin chef om en lønforhøjelse, men turde ikke.",
+      "options": [
+        "må",
+        "ville",
+        "skal",
+        "vil"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "skulle"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "vi-ville-starte-tidligt-men-bilen-ville-ikke-starte",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du fortæller om en plan, der ikke gik efter hensigten.",
+      "sentence": "Vi ___ starte tidligt, men bilen ville ikke starte.",
+      "options": [
+        "må",
+        "skal",
+        "ville",
+        "vil"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget.",
+      "verify": true
+    },
+    {
+      "id": "han-ville-ikke-fortaelle-os-hvad-der-var-sket",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Han nægtede at forklare sig.",
+      "sentence": "Han ___ ikke fortælle os, hvad der var sket.",
+      "options": [
+        "vil",
+        "skal",
+        "må",
+        "ville"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "jeg-ville-gerne-have-hjulpet-dig-men-jeg-havde-ikke-tid",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller, hvad du havde tænkt.",
+      "sentence": "Jeg ___ gerne have hjulpet dig, men jeg havde ikke tid.",
+      "options": [
+        "ville",
+        "skal",
+        "vil",
+        "må"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hensigt i fortiden, som ofte ikke blev til noget."
+    },
+    {
+      "id": "han-skal-vaere-meget-rig-siger-folk",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du har kun hørt det fra andre.",
+      "sentence": "Han ___ være meget rig, siger folk.",
+      "options": [
+        "ville",
+        "skal",
+        "vil",
+        "bør"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved."
+    },
+    {
+      "id": "politikeren-skal-have-solgt-sit-hus-for-30-millioner",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du refererer en avis.",
+      "sentence": "Politikeren ___ have solgt sit hus for 30 millioner.",
+      "options": [
+        "bør",
+        "skal",
+        "vil",
+        "ville"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved."
+    },
+    {
+      "id": "den-nye-chef-skal-vaere-meget-streng",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du refererer, hvad kollegerne siger.",
+      "sentence": "Den nye chef ___ være meget streng.",
+      "options": [
+        "bør",
+        "ville",
+        "skal",
+        "vil"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved."
+    },
+    {
+      "id": "filmen-skal-vaere-fremragende-siger-kritikerne",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Det siger anmelderne.",
+      "sentence": "Filmen ___ være fremragende, siger kritikerne.",
+      "options": [
+        "bør",
+        "vil",
+        "ville",
+        "skal"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved."
+    },
+    {
+      "id": "ifoelge-naboen-skal-de-have-koebt-et-nyt-hus",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det siger naboerne.",
+      "sentence": "Ifølge naboen ___ de have købt et nyt hus.",
+      "options": [
+        "skal",
+        "ville",
+        "bør",
+        "vil"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved.",
+      "verify": true
+    },
+    {
+      "id": "hun-skal-vaere-blevet-gift-i-hemmelighed",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Det er et rygte.",
+      "sentence": "Hun ___ være blevet gift i hemmelighed.",
+      "options": [
+        "skal",
+        "bør",
+        "vil",
+        "ville"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved."
+    },
+    {
+      "id": "chefen-skal-angiveligt-vaere-paa-vej-til-en-ny-stilling",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Det siger vejrmeldingen.",
+      "sentence": "Chefen ___ angiveligt være på vej til en ny stilling.",
+      "options": [
+        "skal",
+        "ville",
+        "bør",
+        "vil"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved.",
+      "verify": true
+    },
+    {
+      "id": "der-skal-vaere-over-tusind-mennesker-til-demonstrationen",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du har læst det i en avis.",
+      "sentence": "Der ___ være over tusind mennesker til demonstrationen.",
+      "options": [
+        "vil",
+        "skal",
+        "ville",
+        "bør"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal kan referere til noget, man har hørt, men ikke selv ved."
+    },
+    {
+      "id": "han-skulle-vaere-foedt-i-norge-ifoelge-avisen",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du refererer en gammel avis.",
+      "sentence": "Han ___ være født i Norge, ifølge avisen.",
+      "options": [
+        "må",
+        "skal",
+        "kan",
+        "skulle"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle kan referere til noget, man har hørt om fortiden.",
+      "verify": true
+    },
+    {
+      "id": "dengang-skulle-det-vaere-det-bedste-gymnasium-i-landet",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Man mente det dengang.",
+      "sentence": "Dengang ___ det være det bedste gymnasium i landet.",
+      "options": [
+        "skal",
+        "må",
+        "skulle",
+        "kan"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle kan referere til noget, man har hørt om fortiden.",
+      "verify": true
+    },
+    {
+      "id": "hun-skulle-angiveligt-have-set-et-spoegelse-i-huset",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du refererer en gammel historie.",
+      "sentence": "Hun ___ angiveligt have set et spøgelse i huset.",
+      "options": [
+        "skulle",
+        "må",
+        "skal",
+        "kan"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle kan referere til noget, man har hørt om fortiden.",
+      "verify": true
+    },
+    {
+      "id": "han-skulle-vaere-en-meget-dygtig-laege-sagde-man",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Man sagde det om ham.",
+      "sentence": "Han ___ være en meget dygtig læge, sagde man.",
+      "options": [
+        "skal",
+        "kan",
+        "må",
+        "skulle"
+      ],
+      "correct": "skulle",
+      "accepted_answers": [
+        "skulle"
+      ],
+      "note": "Skulle kan referere til noget, man har hørt om fortiden.",
+      "verify": true
+    },
+    {
+      "id": "kunne-du-hjaelpe-mig-med-mine-tasker",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du taler til en fremmed.",
+      "sentence": "___ du hjælpe mig med mine tasker?",
+      "options": [
+        "Må",
+        "Skal",
+        "Bør",
+        "Kunne"
+      ],
+      "correct": "Kunne",
+      "accepted_answers": [
+        "Kunne",
+        "Ville"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "kunne-du-vaere-saa-venlig-at-lukke-vinduet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler til en ukendt kollega.",
+      "sentence": "___ du være så venlig at lukke vinduet?",
+      "options": [
+        "Må",
+        "Kunne",
+        "Bør",
+        "Skal"
+      ],
+      "correct": "Kunne",
+      "accepted_answers": [
+        "Kunne",
+        "Ville"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "maa-jeg-bede-om-regningen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du bestiller på en restaurant.",
+      "sentence": "___ jeg bede om regningen?",
+      "options": [
+        "Skal",
+        "Vil",
+        "Må",
+        "Bør"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "maa-jeg-faa-lov-at-gaa-tidligt-i-dag",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du taler til din chef.",
+      "sentence": "___ jeg få lov at gå tidligt i dag?",
+      "options": [
+        "Bør",
+        "Må",
+        "Skal",
+        "Vil"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "kunne-de-fortaelle-mig-hvor-stationen-er",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler til en hotelreceptionist.",
+      "sentence": "___ De fortælle mig, hvor stationen er?",
+      "options": [
+        "Skal",
+        "Kunne",
+        "Må",
+        "Bør"
+      ],
+      "correct": "Kunne",
+      "accepted_answers": [
+        "Kunne",
+        "Ville"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "maa-jeg-proeve-den-her-jakke",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er i en butik.",
+      "sentence": "___ jeg prøve den her jakke?",
+      "options": [
+        "Må",
+        "Bør",
+        "Skal",
+        "Vil"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "kunne-de-sende-mig-de-relevante-dokumenter",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du skriver en høflig mail.",
+      "sentence": "___ De sende mig de relevante dokumenter?",
+      "options": [
+        "Kunne",
+        "Bør",
+        "Skal",
+        "Må"
+      ],
+      "correct": "Kunne",
+      "accepted_answers": [
+        "Kunne",
+        "Ville"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "maa-jeg-tale-med-direktoeren",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du ringer til en receptionist.",
+      "sentence": "___ jeg tale med direktøren?",
+      "options": [
+        "Vil",
+        "Bør",
+        "Må",
+        "Skal"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "kunne-du-laane-mig-en-kop-sukker",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du spørger din nabo.",
+      "sentence": "___ du låne mig en kop sukker?",
+      "options": [
+        "Kunne",
+        "Må",
+        "Bør",
+        "Skal"
+      ],
+      "correct": "Kunne",
+      "accepted_answers": [
+        "Kunne",
+        "Ville"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "maa-jeg-sidde-her",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler til en fremmed i toget.",
+      "sentence": "___ jeg sidde her?",
+      "options": [
+        "Bør",
+        "Må",
+        "Skal",
+        "Vil"
+      ],
+      "correct": "Må",
+      "accepted_answers": [
+        "Må"
+      ],
+      "note": "Kunne og ville bruges til høflige forespørgsler."
+    },
+    {
+      "id": "hvis-jeg-havde-tid-ville-jeg-hjaelpe-dig",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du har ikke tid nu.",
+      "sentence": "Hvis jeg havde tid, ___ jeg hjælpe dig.",
+      "options": [
+        "bør",
+        "vil",
+        "skal",
+        "ville"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "kunne"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "hvis-jeg-var-rig-ville-jeg-rejse-jorden-rundt",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er ikke rig.",
+      "sentence": "Hvis jeg var rig, ___ jeg rejse jorden rundt.",
+      "options": [
+        "skal",
+        "bør",
+        "vil",
+        "ville"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "kunne"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "hvis-alle-cyklede-mere-ville-der-vaere-mindre-trafik",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du taler om en tænkt situation.",
+      "sentence": "Hvis alle cyklede mere, ___ der være mindre trafik.",
+      "options": [
+        "skal",
+        "bør",
+        "ville",
+        "vil"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "kunne"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "jeg-ville-gerne-rejse-til-japan-hvis-jeg-havde-raad",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du ved ikke, om det sker.",
+      "sentence": "Jeg ___ gerne rejse til Japan, hvis jeg havde råd.",
+      "options": [
+        "bør",
+        "ville",
+        "skal",
+        "vil"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "jeg-ville-elske-at-bo-ved-havet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om en drøm.",
+      "sentence": "Jeg ___ elske at bo ved havet.",
+      "options": [
+        "bør",
+        "skal",
+        "ville",
+        "vil"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "det-ville-vaere-dejligt-hvis-solen-skinnede-i-morgen",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du taler om, hvad der kunne ske.",
+      "sentence": "Det ___ være dejligt, hvis solen skinnede i morgen.",
+      "options": [
+        "bør",
+        "ville",
+        "vil",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "hvis-jeg-var-dig-ville-jeg-sige-ja",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er ikke i den situation.",
+      "sentence": "Hvis jeg var dig, ___ jeg sige ja.",
+      "options": [
+        "vil",
+        "ville",
+        "bør",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "det-ville-vaere-nemmere-hvis-vi-havde-flere-penge",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du taler om en situation, som ikke findes.",
+      "sentence": "Det ___ være nemmere, hvis vi havde flere penge.",
+      "options": [
+        "ville",
+        "skal",
+        "vil",
+        "bør"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "jeg-ville-gerne-vaere-pilot-hvis-jeg-kunne-vaelge-igen",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du drømmer.",
+      "sentence": "Jeg ___ gerne være pilot, hvis jeg kunne vælge igen.",
+      "options": [
+        "vil",
+        "ville",
+        "bør",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "hvis-der-var-flere-cykelstier-ville-flere-mennesker",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du forestiller dig en anden by.",
+      "sentence": "Hvis der var flere cykelstier, ___ flere mennesker cykle.",
+      "options": [
+        "skal",
+        "bør",
+        "vil",
+        "ville"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "kunne"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "jeg-ville-gerne-tale-med-chefen-hvis-det-var-muligt",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du vil gerne fortælle, hvad du ville.",
+      "sentence": "Jeg ___ gerne tale med chefen, hvis det var muligt.",
+      "options": [
+        "ville",
+        "skal",
+        "vil",
+        "bør"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "hvad-ville-der-ske-hvis-alle-stoppede-med-at-betale-skat",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du tænker på hypotetiske følger.",
+      "sentence": "Hvad ___ der ske, hvis alle stoppede med at betale skat?",
+      "options": [
+        "vil",
+        "ville",
+        "bør",
+        "skal"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "kan-hun-tale-dansk",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du vil vide, om hun har evnen.",
+      "sentence": "___ hun tale dansk?",
+      "options": [
+        "Kan",
+        "Må",
+        "Bør",
+        "Skal"
+      ],
+      "correct": "Kan",
+      "accepted_answers": [
+        "Kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "maskinen-kan-skaere-i-baade-trae-og-metal",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du taler om en maskine.",
+      "sentence": "Maskinen ___ skære i både træ og metal.",
+      "options": [
+        "bør",
+        "skal",
+        "kan",
+        "må"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "du-maa-ikke-komme-med-fordi-du-er-for-lille",
+      "level": "A2",
+      "mode": "modal",
+      "context": "Du er for lille til at komme med.",
+      "sentence": "Du ___ ikke komme med, fordi du er for lille.",
+      "options": [
+        "ville",
+        "kunne",
+        "må",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må",
+        "skal"
+      ],
+      "note": "Må ikke udtrykker forbud."
+    },
+    {
+      "id": "du-maa-vaelge-hvad-du-vil",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Der er ingen krav; det er op til dig.",
+      "sentence": "Du ___ vælge, hvad du vil.",
+      "options": [
+        "må",
+        "skal",
+        "bør",
+        "vil"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "hun-maa-gerne-bruge-min-computer",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du giver din ven lov.",
+      "sentence": "Hun ___ gerne bruge min computer.",
+      "options": [
+        "skal",
+        "må",
+        "vil",
+        "bør"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må udtrykker tilladelse."
+    },
+    {
+      "id": "du-boer-overveje-at-tale-med-en-raadgiver",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du anbefaler en ven en rådgiver.",
+      "sentence": "Du ___ overveje at tale med en rådgiver.",
+      "options": [
+        "ville",
+        "bør",
+        "måtte",
+        "vil"
+      ],
+      "correct": "bør",
+      "accepted_answers": [
+        "bør",
+        "burde"
+      ],
+      "note": "Bør udtrykker et råd eller en anbefaling."
+    },
+    {
+      "id": "naar-man-koerer-bil-skal-man-bruge-sele",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du forklarer en regel i trafikken.",
+      "sentence": "Når man kører bil, ___ man bruge sele.",
+      "options": [
+        "ville",
+        "skal",
+        "kan",
+        "kunne"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "leverandoeren-skal-levere-varerne-senest-den-1-maj",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Det står i kontrakten.",
+      "sentence": "Leverandøren ___ levere varerne senest den 1. maj.",
+      "options": [
+        "kunne",
+        "kan",
+        "skal",
+        "ville"
+      ],
+      "correct": "skal",
+      "accepted_answers": [
+        "skal"
+      ],
+      "note": "Skal udtrykker pligt eller krav fra andre."
+    },
+    {
+      "id": "hun-kan-godt-koere-bil-men-hun-har-ikke-noget-koerekort",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du fortæller om en ven.",
+      "sentence": "Hun ___ godt køre bil, men hun har ikke noget kørekort.",
+      "options": [
+        "bør",
+        "skal",
+        "må",
+        "kan"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker evne: noget, man har lært eller er i stand til."
+    },
+    {
+      "id": "det-kan-godt-vaere-at-jeg-tager-med",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Du er ikke helt sikker.",
+      "sentence": "Det ___ godt være, at jeg tager med.",
+      "options": [
+        "bør",
+        "vil",
+        "kan",
+        "skal"
+      ],
+      "correct": "kan",
+      "accepted_answers": [
+        "kan"
+      ],
+      "note": "Kan udtrykker, at noget er muligt, men ikke sikkert."
+    },
+    {
+      "id": "hvis-jeg-havde-mere-tid-ville-jeg-laese-flere-boeger",
+      "level": "B2",
+      "mode": "modal",
+      "context": "Du tænker højt om dit liv.",
+      "sentence": "Hvis jeg havde mere tid, ___ jeg læse flere bøger.",
+      "options": [
+        "skal",
+        "bør",
+        "vil",
+        "ville"
+      ],
+      "correct": "ville",
+      "accepted_answers": [
+        "ville",
+        "kunne"
+      ],
+      "note": "Ville udtrykker en hypotetisk følge af en betingelse."
+    },
+    {
+      "id": "han-har-loebet-maraton-han-maa-vaere-udmattet",
+      "level": "B1",
+      "mode": "modal",
+      "context": "Det er en sikker slutning, fordi han er træt.",
+      "sentence": "Han har løbet maraton; han ___ være udmattet.",
+      "options": [
+        "skal",
+        "vil",
+        "må",
+        "bør"
+      ],
+      "correct": "må",
+      "accepted_answers": [
+        "må"
+      ],
+      "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    }
   ]
 };
