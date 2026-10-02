@@ -22,7 +22,7 @@
   function noun(level, base, gender, indefinitePlural, pattern, note, example, tags, verify) {
     var isEn = gender === 'en';
     var defSingular = /e$/.test(base) ? base + (isEn ? 'n' : 't') : base + (isEn ? 'en' : 'et');
-    var defPlural = /(e|er)$/.test(indefinitePlural) ? indefinitePlural + 'ne' : indefinitePlural + 'ene';
+    var defPlural = /er$/.test(base) && indefinitePlural === base + 'e' ? base + 'ne' : (/(e|er)$/.test(indefinitePlural) ? indefinitePlural + 'ne' : indefinitePlural + 'ene'); // -er agent nouns: lærer → lærere → lærerne (not -erene)
     return {
       id: slug(base),
       level: level,
