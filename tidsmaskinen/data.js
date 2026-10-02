@@ -13759,16 +13759,16 @@ window.TIDS_DATA = {
       "note": "Kunne og ville bruges til høflige forespørgsler."
     },
     {
-      "id": "hvis-jeg-havde-tid-ville-jeg-hjaelpe-dig",
+      "id": "hvis-vi-havde-tid-ville-vi-hjaelpe-dig",
       "level": "B1",
       "mode": "modal",
       "context": "Du har ikke tid nu.",
-      "sentence": "Hvis jeg havde tid, ___ jeg hjælpe dig.",
+      "sentence": "Hvis vi havde tid, ___ vi hjælpe dig.",
       "options": [
-        "bør",
-        "vil",
         "skal",
-        "ville"
+        "vil",
+        "ville",
+        "bør"
       ],
       "correct": "ville",
       "accepted_answers": [
@@ -13870,16 +13870,16 @@ window.TIDS_DATA = {
       "note": "Ville udtrykker en hypotetisk følge af en betingelse."
     },
     {
-      "id": "hvis-jeg-var-dig-ville-jeg-sige-ja",
+      "id": "hvis-jeg-var-hende-ville-jeg-sige-ja",
       "level": "B1",
       "mode": "modal",
       "context": "Du er ikke i den situation.",
-      "sentence": "Hvis jeg var dig, ___ jeg sige ja.",
+      "sentence": "Hvis jeg var hende, ___ jeg sige ja.",
       "options": [
-        "vil",
         "ville",
-        "bør",
-        "skal"
+        "vil",
+        "skal",
+        "bør"
       ],
       "correct": "ville",
       "accepted_answers": [
@@ -14196,6 +14196,2923 @@ window.TIDS_DATA = {
         "må"
       ],
       "note": "Må kan udtrykke en næsten sikker slutning ud fra det, man ser eller ved."
+    }
+  ],
+  "conditional": [
+    {
+      "id": "vi-bliver-hjemme-hvis-det-regner-i-morgen",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du ved ikke, hvordan vejret bliver i morgen.",
+      "sentence": "Vi ___ hjemme, hvis det ___ i morgen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "bliver",
+            "vil blive"
+          ],
+          "distractors": [
+            "blev",
+            "ville blive"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "regner"
+          ],
+          "distractors": [
+            "regnede",
+            "ville regne"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-hun-kommer-i-aften-spiser-vi-sammen",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du ved ikke, om hun kommer.",
+      "sentence": "Hvis hun ___ i aften, spiser vi sammen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kommer"
+          ],
+          "distractors": [
+            "kom",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-faar-tid-ringer-jeg-til-dig",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du ved ikke, om du får tid.",
+      "sentence": "Hvis jeg ___ tid, ringer jeg til dig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "får"
+          ],
+          "distractors": [
+            "fik",
+            "ville få"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-bussen-ikke-kommer-tager-vi-en-taxa",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du ved ikke, om bussen kommer.",
+      "sentence": "Hvis bussen ikke ___, tager vi en taxa.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kommer"
+          ],
+          "distractors": [
+            "kom",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-du-ikke-kommer-til-tiden-tager-vi-uden-dig",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du kender reglen.",
+      "sentence": "Hvis du ikke ___ til tiden, ___ vi uden dig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kommer"
+          ],
+          "distractors": [
+            "kom",
+            "ville komme"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "tager",
+            "går"
+          ],
+          "distractors": [
+            "tog",
+            "ville tage"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "du-faar-en-gratis-kop-kaffe-hvis-du-koeber-en-kage",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Det er et tilbud.",
+      "sentence": "Du ___ en gratis kop kaffe, hvis du køber en kage.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "får"
+          ],
+          "distractors": [
+            "fik",
+            "ville få"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-man-ser-roedt-lys-skal-man-holde",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Det er en regel i trafikken.",
+      "sentence": "Hvis man ___ rødt lys, skal man holde.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ser"
+          ],
+          "distractors": [
+            "så",
+            "ville se"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-bestaar-eksamen-tager-jeg-paa-ferie",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om du består.",
+      "sentence": "Hvis jeg ___ eksamen, tager jeg på ferie.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "består"
+          ],
+          "distractors": [
+            "bestod",
+            "ville bestå"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-det-regner-i-weekenden-bliver-vi-hjemme",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du ved ikke, om det regner.",
+      "sentence": "Hvis det ___ i weekenden, bliver vi hjemme.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "regner"
+          ],
+          "distractors": [
+            "regnede",
+            "ville regne"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-du-tager-med-toget-klokken-otte-kommer-du-frem-i",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en mulighed.",
+      "sentence": "Hvis du ___ med toget klokken otte, ___ du frem i god tid.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "tager"
+          ],
+          "distractors": [
+            "tog",
+            "ville tage"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "kommer"
+          ],
+          "distractors": [
+            "kom",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-du-har-feber-skal-du-blive-hjemme",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om en mulig sygdom.",
+      "sentence": "Hvis du ___ feber, skal du blive hjemme.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "har"
+          ],
+          "distractors": [
+            "havde",
+            "ville have"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-han-ikke-ringer-inden-fem-kontakter-jeg-ham-selv",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om han ringer.",
+      "sentence": "Hvis han ikke ___ inden fem, ___ jeg ham selv.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ringer"
+          ],
+          "distractors": [
+            "ringede",
+            "ville ringe"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "kontakter"
+          ],
+          "distractors": [
+            "kontaktede",
+            "ville kontakte"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-du-koeber-mere-end-tre-faar-du-rabat",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om mulig rabat.",
+      "sentence": "Hvis du ___ mere end tre, får du rabat.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "køber"
+          ],
+          "distractors": [
+            "købte",
+            "ville købe"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "vi-kommer-for-sent-hvis-toget-bliver-forsinket",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om mulig forsinkelse.",
+      "sentence": "Vi ___ for sent, hvis toget bliver forsinket.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kommer"
+          ],
+          "distractors": [
+            "kom",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-han-er-rask-i-morgen-kan-han-komme-i-skole",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om han er rask.",
+      "sentence": "Hvis han ___ rask i morgen, kan han komme i skole.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "er"
+          ],
+          "distractors": [
+            "var",
+            "ville være"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-ikke-bliver-faerdig-inden-fredag-giver-jeg-dig",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om du bliver færdig.",
+      "sentence": "Hvis jeg ikke ___ færdig inden fredag, ___ jeg dig besked.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "bliver"
+          ],
+          "distractors": [
+            "blev",
+            "ville blive"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "giver"
+          ],
+          "distractors": [
+            "gav",
+            "ville give"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-solen-skinner-i-morgen-tager-vi-paa-stranden",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om en mulig udflugt.",
+      "sentence": "Hvis solen ___ i morgen, tager vi på stranden.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "skinner"
+          ],
+          "distractors": [
+            "skinnede",
+            "ville skinne"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-det-bliver-for-varmt-aabner-vi-vinduet",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om det sker.",
+      "sentence": "Hvis det ___ for varmt, åbner vi vinduet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "bliver"
+          ],
+          "distractors": [
+            "blev",
+            "ville blive"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-forhandlingerne-mislykkes-bliver-der-strejke-i",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om et muligt udfald.",
+      "sentence": "Hvis forhandlingerne ___, bliver der strejke i næste uge.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "mislykkes"
+          ],
+          "distractors": [
+            "mislykkedes",
+            "ville mislykkes"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen.",
+      "verify": true
+    },
+    {
+      "id": "hvis-nogen-banker-paa-doeren-skal-du-ikke-aabne",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om en mulig gæst.",
+      "sentence": "Hvis nogen ___ på døren, ___ du ikke åbne.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "banker"
+          ],
+          "distractors": [
+            "bankede",
+            "ville banke"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "skal"
+          ],
+          "distractors": [
+            "skulle",
+            "ville skulle"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen.",
+      "verify": true
+    },
+    {
+      "id": "hvis-du-giver-mig-lidt-tid-forklarer-jeg-dig-det-hele",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en mulig aftale.",
+      "sentence": "Hvis du ___ mig lidt tid, ___ jeg dig det hele.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "giver"
+          ],
+          "distractors": [
+            "gav",
+            "ville give"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "forklarer"
+          ],
+          "distractors": [
+            "forklarede",
+            "ville forklare"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-har-penge-nok-rejser-jeg-til-spanien",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om en mulig ferie.",
+      "sentence": "Hvis jeg ___ penge nok, rejser jeg til Spanien.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "har"
+          ],
+          "distractors": [
+            "havde",
+            "ville have"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-han-ryger-saa-meget-bliver-han-meget-syg",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en mulig udvikling.",
+      "sentence": "Hvis han ___ så meget, bliver han meget syg.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ryger"
+          ],
+          "distractors": [
+            "røg",
+            "ville ryge"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen.",
+      "verify": true
+    },
+    {
+      "id": "hvis-du-ikke-betaler-regningen-i-tide-faar-du-et-gebyr",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en mulig regning.",
+      "sentence": "Hvis du ikke ___ regningen i tide, ___ du et gebyr.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "betaler"
+          ],
+          "distractors": [
+            "betalte",
+            "ville betale"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "får"
+          ],
+          "distractors": [
+            "fik",
+            "ville få"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-du-siger-ja-moedes-vi-klokken-ti",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om en mulig aftale.",
+      "sentence": "Hvis du ___ ja, mødes vi klokken ti.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "siger"
+          ],
+          "distractors": [
+            "sagde",
+            "ville sige"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-hun-hoerer-det-bliver-hun-glad",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en mulig reaktion.",
+      "sentence": "Hvis hun ___ det, bliver hun glad.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "hører"
+          ],
+          "distractors": [
+            "hørte",
+            "ville høre"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-temperaturen-falder-under-nul-bliver-vejene-glatte",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en mulig konsekvens.",
+      "sentence": "Hvis temperaturen ___ under nul, ___ vejene glatte.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "falder"
+          ],
+          "distractors": [
+            "faldt",
+            "ville falde"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "bliver"
+          ],
+          "distractors": [
+            "blev",
+            "ville blive"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-maskinen-ikke-virker-ringer-vi-til-teknikeren",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om et muligt problem.",
+      "sentence": "Hvis maskinen ikke ___, ringer vi til teknikeren.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "virker"
+          ],
+          "distractors": [
+            "virkede",
+            "ville virke"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-du-koeber-billetten-i-dag-er-den-billigere",
+      "level": "A2",
+      "mode": "conditional",
+      "context": "Du taler om et muligt køb.",
+      "sentence": "Hvis du ___ billetten i dag, er den billigere.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "køber"
+          ],
+          "distractors": [
+            "købte",
+            "ville købe"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-flyet-bliver-forsinket-kommer-vi-ikke-til-tiden",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en mulig forsinkelse.",
+      "sentence": "Hvis flyet ___ forsinket, ___ vi ikke til tiden til mødet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "bliver"
+          ],
+          "distractors": [
+            "blev",
+            "ville blive"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "kommer"
+          ],
+          "distractors": [
+            "kom",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-havde-tid-ville-jeg-hjaelpe-dig",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du har ikke tid nu.",
+      "sentence": "Hvis jeg ___ tid, ville jeg hjælpe dig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-havde-tid-ville-jeg-hjaelpe-dig-2",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du har ikke tid nu.",
+      "sentence": "Hvis jeg havde tid, ___ jeg hjælpe dig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-var-rig-ville-jeg-koebe-et-hus-ved-havet",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke rig.",
+      "sentence": "Hvis jeg ___ rig, ville jeg købe et hus ved havet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-var-rig-ville-jeg-koebe-et-hus-ved-havet-2",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke rig.",
+      "sentence": "Hvis jeg var rig, ___ jeg købe et hus ved havet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-var-dig-ville-jeg-sige-ja",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du giver din ven et råd.",
+      "sentence": "Hvis jeg ___ dig, ville jeg sige ja.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-var-dig-ville-jeg-sige-ja-2",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du giver et råd.",
+      "sentence": "Hvis jeg var dig, ___ jeg sige ja.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-boede-ved-havet-ville-jeg-sejle-hver-dag",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du bor i en by uden hav.",
+      "sentence": "Hvis jeg ___ ved havet, ville jeg sejle hver dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "boede"
+          ],
+          "distractors": [
+            "bor",
+            "har boet",
+            "er boet"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-boede-ved-havet-ville-jeg-sejle-hver-dag-2",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du bor ikke ved havet.",
+      "sentence": "Hvis jeg boede ved havet, ___ jeg sejle hver dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-vi-havde-en-bil-ville-vi-tage-paa-landet-hver",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du har ikke bil.",
+      "sentence": "Hvis vi ___ en bil, ville vi tage på landet hver weekend.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-vi-havde-en-bil-ville-vi-tage-paa-landet-hver-weekend",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du har ikke bil.",
+      "sentence": "Hvis vi havde en bil, ___ vi tage på landet hver weekend.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-var-pilot-ville-jeg-flyve-til-japan-hver-uge",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke pilot.",
+      "sentence": "Hvis jeg ___ pilot, ville jeg flyve til Japan hver uge.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-kunne-kinesisk-ville-jeg-rejse-til-kina",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du kan ikke tale kinesisk.",
+      "sentence": "Hvis jeg ___ kinesisk, ville jeg rejse til Kina.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kunne"
+          ],
+          "distractors": [
+            "kan",
+            "kan ikke",
+            "har kunnet"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-havde-en-hund-ville-jeg-gaa-lange-ture-hver-dag",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du har ikke en hund.",
+      "sentence": "Hvis jeg ___ en hund, ville jeg gå lange ture hver dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-min-chef-havde-tid-ville-vi-tale-om-det-i-dag",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Din chef har ikke tid.",
+      "sentence": "Hvis min chef ___ tid, ville vi tale om det i dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-der-var-sne-ville-boernene-bygge-en-snemand",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Der er ingen sne.",
+      "sentence": "Hvis der ___ sne, ville børnene bygge en snemand.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-alle-cyklede-mere-ville-der-vaere-faerre-biler-i",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en tænkt verden.",
+      "sentence": "Hvis alle ___ mere, ville der være færre biler i byen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "cyklede"
+          ],
+          "distractors": [
+            "cykler",
+            "har cyklet",
+            "er cyklet"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "jeg-ville-oenske-at-jeg-havde-mere-tid",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ønsker noget, men det er ikke sandt.",
+      "sentence": "Jeg ___ ønske, at jeg havde mere tid.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Hypotetisk nutid (noget, der ikke er sandt nu) bruger datid i hvis-sætningen og ville + infinitiv i hovedsætningen.",
+      "verify": true
+    },
+    {
+      "id": "hvis-jeg-havde-mere-tid-ville-jeg-laese-mere",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Det er ikke sandt nu.",
+      "sentence": "Hvis jeg ___ mere tid, ville jeg læse mere.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-han-havde-penge-ville-han-koebe-en-ny-telefon",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Din ven har ingen penge.",
+      "sentence": "Hvis han ___ penge, ville han købe en ny telefon.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-havde-fri-i-dag-ville-jeg-tage-med-dig-i",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du har ikke fri.",
+      "sentence": "Hvis jeg ___ fri i dag, ville jeg tage med dig i biografen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-var-ti-aar-yngre-ville-jeg-laese-medicin",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke ti år yngre.",
+      "sentence": "Hvis jeg ___ ti år yngre, ville jeg læse medicin.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-vi-var-i-spanien-ville-vi-bade-hver-dag",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke i Spanien.",
+      "sentence": "Hvis vi ___ i Spanien, ville vi bade hver dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-vandt-i-lotto-ville-jeg-koebe-et-slot",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en usandsynlig situation.",
+      "sentence": "Hvis jeg ___ i lotto, ville jeg købe et slot.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "vandt"
+          ],
+          "distractors": [
+            "vinder",
+            "har vundet",
+            "ville vinde"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-var-i-bedre-form-ville-jeg-loebe-et-maraton",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke i form.",
+      "sentence": "Hvis jeg ___ i bedre form, ville jeg løbe et maraton.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-det-regnede-i-dag-ville-vi-blive-hjemme",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Det regner ikke, men du forestiller dig det.",
+      "sentence": "Hvis det ___ i dag, ville vi blive hjemme.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "regnede"
+          ],
+          "distractors": [
+            "regner",
+            "har regnet",
+            "er regnet"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-vi-havde-mere-plads-ville-vi-invitere-hele-familien",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du har ikke en stor lejlighed.",
+      "sentence": "Hvis vi ___ mere plads, ville vi invitere hele familien.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-havde-nogen-bedre-ide-ville-jeg-sige-det",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en tænkt situation.",
+      "sentence": "Hvis jeg ___ nogen bedre idé, ville jeg sige det.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-havde-nogen-bedre-ide-ville-jeg-sige-det-2",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en tænkt situation.",
+      "sentence": "Hvis jeg havde nogen bedre idé, ___ jeg sige det.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-min-soester-boede-taettere-paa-ville-vi-ses-oftere",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Din søster bor langt væk.",
+      "sentence": "Hvis min søster ___ tættere på, ville vi ses oftere.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "boede"
+          ],
+          "distractors": [
+            "bor",
+            "har boet",
+            "er boet"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-min-soester-boede-taettere-paa-ville-vi-ses-oftere-2",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Din søster bor langt væk.",
+      "sentence": "Hvis min søster boede tættere på, ___ vi ses oftere.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-var-i-dit-sted-ville-jeg-soege-jobbet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en tænkt situation.",
+      "sentence": "Hvis jeg ___ i dit sted, ville jeg søge jobbet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "jeg-ville-gerne-flytte-til-italien-hvis-jeg-havde-raad",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du drømmer.",
+      "sentence": "Jeg ___ gerne flytte til Italien, hvis jeg havde råd.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "skal",
+            "bør"
+          ]
+        }
+      ],
+      "note": "Når hvis-sætningen står i datid, bruger hovedsætningen ville (eller kunne) + infinitiv.",
+      "verify": true
+    },
+    {
+      "id": "hvis-det-var-hundrede-kroner-billigere-ville-jeg-koebe",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke sikker.",
+      "sentence": "Hvis det ___ hundrede kroner billigere, ville jeg købe den.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-skolen-begyndte-senere-ville-eleverne-vaere-mere",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du taler om en tænkt skole.",
+      "sentence": "Hvis skolen ___ senere, ville eleverne være mere veludhvilede.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "begyndte"
+          ],
+          "distractors": [
+            "begynder",
+            "har begyndt",
+            "er begyndt"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-vi-havde-laengere-ferie-ville-vi-kunne-rejse-langt",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler om en tænkt situation.",
+      "sentence": "Hvis vi ___ længere ferie, ville vi kunne rejse langt.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-jeg-var-paa-ferie-ville-jeg-sove-laenge",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er ikke på ferie.",
+      "sentence": "Hvis jeg ___ på ferie, ville jeg sove længe.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-det-var-min-foedselsdag-ville-jeg-holde-en-fest",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Det er ikke din fødselsdag i dag.",
+      "sentence": "Hvis det ___ min fødselsdag, ville jeg holde en fest.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "jeg-var-blevet-hjemme-hvis-jeg-havde-vidst-det",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du tog af sted i går, og det var en fejl.",
+      "sentence": "Jeg ___ hjemme, hvis jeg ___ det.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var blevet",
+            "ville være blevet"
+          ],
+          "distractors": [
+            "ville blive",
+            "blev",
+            "bliver"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "havde vidst"
+          ],
+          "distractors": [
+            "vidste",
+            "ved",
+            "ville vide"
+          ]
+        }
+      ],
+      "note": "Kontrafaktisk fortid bruger pluskvamperfektum i hvis-sætningen og var/ville have + participium i hovedsætningen."
+    },
+    {
+      "id": "hvis-hun-havde-ringet-i-gaar-var-jeg-kommet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Hun ringede ikke i går, så du kom ikke.",
+      "sentence": "Hvis hun ___ i går, var jeg kommet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde ringet"
+          ],
+          "distractors": [
+            "ringede",
+            "ringer",
+            "ville ringe"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-hun-havde-ringet-i-gaar-var-jeg-kommet-2",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Hun ringede ikke i går, så du kom ikke.",
+      "sentence": "Hvis hun havde ringet i går, ___ jeg kommet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "ville",
+            "er",
+            "blev"
+          ]
+        }
+      ],
+      "note": "Følgen af en betingelse, der ikke blev opfyldt i fortiden, udtrykkes med var eller ville have + participium."
+    },
+    {
+      "id": "hvis-jeg-ikke-var-kommet-for-sent-havde-jeg-faaet-jobbet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du fik ikke jobbet, fordi du kom for sent.",
+      "sentence": "Hvis jeg ikke ___ for sent, havde jeg fået jobbet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var kommet"
+          ],
+          "distractors": [
+            "kom",
+            "er kommet",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-ikke-var-kommet-for-sent-havde-jeg-faaet-jobbet-2",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du fik ikke jobbet, fordi du kom for sent.",
+      "sentence": "Hvis jeg ikke var kommet for sent, ___ jeg fået jobbet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "ville",
+            "har",
+            "fik"
+          ]
+        }
+      ],
+      "note": "Følgen af en betingelse, der ikke blev opfyldt i fortiden, udtrykkes med var eller ville have + participium."
+    },
+    {
+      "id": "hvis-jeg-var-staaet-tidligere-op-i-gaar-havde-jeg-naaet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du sov for længe i går.",
+      "sentence": "Hvis jeg ___ tidligere op i går, havde jeg nået toget.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var stået"
+          ],
+          "distractors": [
+            "stod",
+            "står",
+            "ville stå"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-havde-sagt-ja-ville-jeg-have-haft-et-godt-job",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du tog ikke imod tilbuddet, og nu fortryder du det.",
+      "sentence": "Hvis jeg ___ ja, ville jeg have haft et godt job.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde sagt"
+          ],
+          "distractors": [
+            "sagde",
+            "siger",
+            "ville sige"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-det-ikke-havde-regnet-i-gaar-ville-vi-vaere-gaaet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Det regnede i går, så vi blev hjemme.",
+      "sentence": "Hvis det ikke ___ i går, ville vi være gået en tur.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde regnet"
+          ],
+          "distractors": [
+            "regnede",
+            "regner",
+            "ville regne"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-det-ikke-havde-regnet-i-gaar-ville-vi-vaere-gaaet-en",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Det regnede i går, så vi blev hjemme.",
+      "sentence": "Hvis det ikke havde regnet i går, ___ vi være gået en tur.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "var",
+            "er"
+          ]
+        }
+      ],
+      "note": "Følgen af en betingelse, der ikke blev opfyldt i fortiden, udtrykkes med var eller ville have + participium."
+    },
+    {
+      "id": "hvis-jeg-havde-laast-doeren-var-tyven-ikke-kommet-ind",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du glemte at låse døren, og der kom en tyv.",
+      "sentence": "Hvis jeg ___ døren, var tyven ikke kommet ind.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde låst"
+          ],
+          "distractors": [
+            "låste",
+            "låser",
+            "ville låse"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum.",
+      "verify": true
+    },
+    {
+      "id": "hvis-jeg-havde-laast-doeren-ville-tyven-ikke-vaere",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du glemte at låse døren, og der kom en tyv.",
+      "sentence": "Hvis jeg havde låst døren, ___ tyven ikke være kommet ind.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "var",
+            "blev"
+          ]
+        }
+      ],
+      "note": "Følgen af en betingelse, der ikke blev opfyldt i fortiden, udtrykkes med var eller ville have + participium."
+    },
+    {
+      "id": "hvis-jeg-ikke-havde-spist-saa-meget-i-gaar-havde-jeg",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du spiste for meget i går.",
+      "sentence": "Hvis jeg ikke ___ så meget i går, havde jeg ikke fået ondt i maven.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde spist"
+          ],
+          "distractors": [
+            "spiste",
+            "spiser",
+            "ville spise"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-var-kommet-med-i-gaar-ville-jeg-have-moedt",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du tog ikke med i går.",
+      "sentence": "Hvis jeg ___ med i går, ville jeg have mødt hende.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var kommet"
+          ],
+          "distractors": [
+            "kom",
+            "kommer",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-var-kommet-med-i-gaar-ville-jeg-have-moedt-hende",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du tog ikke med i går.",
+      "sentence": "Hvis jeg var kommet med i går, ___ jeg have mødt hende.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "var",
+            "blev"
+          ]
+        }
+      ],
+      "note": "Følgen af en betingelse, der ikke blev opfyldt i fortiden, udtrykkes med var eller ville have + participium."
+    },
+    {
+      "id": "hvis-jeg-havde-lyttet-til-min-mor-havde-jeg-ikke",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du lyttede ikke til din mor dengang.",
+      "sentence": "Hvis jeg ___ til min mor, havde jeg ikke begået den fejl.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde lyttet"
+          ],
+          "distractors": [
+            "lyttede",
+            "lytter",
+            "ville lytte"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-han-havde-forberedt-sig-bedre-havde-han-bestaaet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Han var ikke forberedt, så han dumpede.",
+      "sentence": "Hvis han ___ sig bedre, havde han bestået.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde forberedt"
+          ],
+          "distractors": [
+            "forberedte",
+            "forbereder",
+            "ville forberede"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum.",
+      "verify": true
+    },
+    {
+      "id": "hvis-der-ikke-havde-vaeret-koe-var-vi-kommet-til-tiden",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Der var en kø, så vi kom for sent.",
+      "sentence": "Hvis der ikke ___ kø, var vi kommet til tiden.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde været"
+          ],
+          "distractors": [
+            "var",
+            "er",
+            "ville være"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-du-havde-koebt-billetten-i-tide-havde-den-ikke",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du købte ikke billetten i tide.",
+      "sentence": "Hvis du ___ billetten i tide, havde den ikke været så dyr.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde købt"
+          ],
+          "distractors": [
+            "købte",
+            "køber",
+            "ville købe"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-du-havde-spurgt-havde-du-faaet-hjaelp",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du spurgte ikke, så du fik ikke hjælp.",
+      "sentence": "Hvis du ___, havde du fået hjælp.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde spurgt"
+          ],
+          "distractors": [
+            "spurgte",
+            "spørger",
+            "ville spørge"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-havde-vidst-at-han-var-syg-havde-jeg-ringet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du vidste ikke, at han var syg, så du ringede ikke.",
+      "sentence": "Hvis jeg ___, at han var syg, havde jeg ringet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde vidst"
+          ],
+          "distractors": [
+            "vidste",
+            "ved",
+            "ville vide"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-havde-vidst-at-han-var-syg-havde-jeg-ringet-2",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du vidste ikke, at han var syg, så du ringede ikke.",
+      "sentence": "Hvis jeg havde vidst, at han var syg, ___ jeg ringet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "vil",
+            "har",
+            "ville"
+          ]
+        }
+      ],
+      "note": "Følgen af en betingelse, der ikke blev opfyldt i fortiden, udtrykkes med var eller ville have + participium."
+    },
+    {
+      "id": "hvis-jeg-var-blevet-inviteret-var-jeg-kommet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du var ikke til festen, fordi du ikke blev inviteret.",
+      "sentence": "Hvis jeg ___ inviteret, var jeg kommet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var blevet"
+          ],
+          "distractors": [
+            "blev",
+            "bliver",
+            "ville blive"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-bussen-var-kommet-ville-jeg-ikke-have-gaaet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Der var ingen bus, så du gik.",
+      "sentence": "Hvis bussen ___ , ville jeg ikke have gået.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var kommet"
+          ],
+          "distractors": [
+            "kom",
+            "kommer",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum.",
+      "verify": true
+    },
+    {
+      "id": "hvis-jeg-havde-slukket-for-ovnen-var-kagen-ikke-braendt",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du slukkede ikke for ovnen, og kagen brændte på.",
+      "sentence": "Hvis jeg ___ for ovnen, var kagen ikke brændt på.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde slukket"
+          ],
+          "distractors": [
+            "slukkede",
+            "slukker",
+            "ville slukke"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum.",
+      "verify": true
+    },
+    {
+      "id": "hvis-jeg-ikke-havde-vaeret-syg-i-gaar-var-jeg-gaaet-paa",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du var syg i går.",
+      "sentence": "Hvis jeg ikke ___ syg i går, var jeg gået på arbejde.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde været"
+          ],
+          "distractors": [
+            "var",
+            "er",
+            "ville være"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-jeg-ikke-havde-tabt-telefonen-i-gaar-ville-den",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du tabte telefonen i går.",
+      "sentence": "Hvis jeg ikke ___ telefonen i går, ville den ikke være gået i stykker.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde tabt"
+          ],
+          "distractors": [
+            "tabte",
+            "taber",
+            "ville tabe"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum.",
+      "verify": true
+    },
+    {
+      "id": "hvis-han-var-kommet-i-tide-havde-vi-ikke-maattet-vente",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Han kom for sent til mødet i går.",
+      "sentence": "Hvis han ___ i tide, havde vi ikke måttet vente.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var kommet"
+          ],
+          "distractors": [
+            "kom",
+            "kommer",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-du-var-kommet-i-gaar-havde-du-set-ham",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du kom ikke i går, så du missede festen.",
+      "sentence": "Hvis du ___ i går, havde du set ham.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var kommet"
+          ],
+          "distractors": [
+            "kom",
+            "kommer",
+            "ville komme"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-hun-havde-lukket-vinduet-var-gulvet-ikke-blevet",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Hun lukkede ikke vinduet, og det regnede ind.",
+      "sentence": "Hvis hun ___ vinduet, var gulvet ikke blevet vådt.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde lukket"
+          ],
+          "distractors": [
+            "lukkede",
+            "lukker",
+            "ville lukke"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-du-ville-vaere-saa-venlig-at-lukke-doeren-ville",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler høfligt til en fremmed.",
+      "sentence": "Hvis du ___ være så venlig at lukke døren, ville jeg sætte pris på det.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "hvis-de-ville-sende-mig-dokumenterne-ville-jeg-vaere",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du skriver en høflig mail.",
+      "sentence": "Hvis De ___ sende mig dokumenterne, ville jeg være taknemmelig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "hvis-du-kunne-hjaelpe-mig-i-dag-ville-det-vaere-en-stor",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler høfligt til en kollega.",
+      "sentence": "Hvis du ___ hjælpe mig i dag, ville det være en stor hjælp.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kunne",
+            "ville"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "hvis-i-ville-vaere-lidt-mere-stille-efter-ti-ville-vi",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler til dine naboer.",
+      "sentence": "Hvis I ___ være lidt mere stille efter ti, ville vi sætte pris på det.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-maatte-faa-lov-at-bede-om-regningen-ville-det",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler høfligt til en servitrice.",
+      "sentence": "Hvis jeg ___ få lov at bede om regningen, ville det være rart.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "måtte",
+            "kunne"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "vil"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv.",
+      "verify": true
+    },
+    {
+      "id": "hvis-de-ville-sende-mig-en-bekraeftelse-ville-jeg-vaere",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du skriver et brev til en myndighed.",
+      "sentence": "Hvis De ___ sende mig en bekræftelse, ville jeg være taknemmelig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "hvis-du-kunne-hjaelpe-mig-med-rapporten-ville-jeg-takke",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du taler høfligt til en kollega.",
+      "sentence": "Hvis du ___ hjælpe mig med rapporten, ville jeg takke dig meget.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "kunne",
+            "ville"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "hvis-du-ville-blive-lidt-laengere-ville-vi-blive-glade",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du er høflig mod en gæst.",
+      "sentence": "Hvis du ___ blive lidt længere, ville vi blive glade.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville",
+            "kunne"
+          ],
+          "distractors": [
+            "skal",
+            "bør",
+            "må"
+          ]
+        }
+      ],
+      "note": "I høflige forespørgsler bruges hvis du ville/kunne + infinitiv."
+    },
+    {
+      "id": "naar-du-kommer-til-koebenhavn-saa-ring-til-mig",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er helt sikker på, at du kommer til København.",
+      "sentence": "___ du kommer til København, så ring til mig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Når"
+          ],
+          "distractors": [
+            "Hvis",
+            "Om",
+            "Medmindre"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "hvis-du-kommer-til-aarhus-saa-ring-til-mig",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om du kommer til Aarhus.",
+      "sentence": "___ du kommer til Aarhus, så ring til mig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Hvis"
+          ],
+          "distractors": [
+            "Når",
+            "Om",
+            "Fordi"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "jeg-ved-ikke-om-han-kommer-i-morgen",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du spørger, om han kommer.",
+      "sentence": "Jeg ved ikke, ___ han kommer i morgen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "om"
+          ],
+          "distractors": [
+            "hvis",
+            "når",
+            "fordi"
+          ]
+        }
+      ],
+      "note": "\"Om\" bruges i indirekte ja/nej-spørgsmål, \"hvis\" i betingelser."
+    },
+    {
+      "id": "naar-sommeren-kommer-tager-vi-paa-campingferie",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved, at det sker hver sommer.",
+      "sentence": "___ sommeren kommer, tager vi på campingferie.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Når"
+          ],
+          "distractors": [
+            "Hvis",
+            "Om",
+            "Medmindre"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "hvis-det-sner-i-morgen-koerer-vi-ikke",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om det sker.",
+      "sentence": "___ det sner i morgen, kører vi ikke.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Hvis"
+          ],
+          "distractors": [
+            "Når",
+            "Om",
+            "Medmindre"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker.",
+      "verify": true
+    },
+    {
+      "id": "hun-spurgte-om-nogen-havde-set-noeglen",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du spørger, om nogen har set nøglen.",
+      "sentence": "Hun spurgte, ___ nogen havde set nøglen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "om"
+          ],
+          "distractors": [
+            "hvis",
+            "når",
+            "fordi"
+          ]
+        }
+      ],
+      "note": "\"Om\" bruges i indirekte ja/nej-spørgsmål, \"hvis\" i betingelser."
+    },
+    {
+      "id": "naar-jeg-har-foedselsdag-holder-jeg-altid-en-stor-fest",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du venter på en bestemt dag.",
+      "sentence": "___ jeg har fødselsdag, holder jeg altid en stor fest.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Når"
+          ],
+          "distractors": [
+            "Hvis",
+            "Om",
+            "Medmindre"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "jeg-kan-ikke-sige-om-det-er-sandt",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du er i tvivl.",
+      "sentence": "Jeg kan ikke sige, ___ det er sandt.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "om"
+          ],
+          "distractors": [
+            "hvis",
+            "når",
+            "fordi"
+          ]
+        }
+      ],
+      "note": "\"Om\" bruges i indirekte ja/nej-spørgsmål, \"hvis\" i betingelser."
+    },
+    {
+      "id": "hvis-der-er-billetter-tilbage-koeber-jeg-to",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Det er sandsynligt, men ikke sikkert.",
+      "sentence": "___ der er billetter tilbage, køber jeg to.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Hvis"
+          ],
+          "distractors": [
+            "Når",
+            "Om",
+            "Fordi"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "naar-klokken-ringer-gaar-eleverne-ind",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Det sker hver dag.",
+      "sentence": "___ klokken ringer, går eleverne ind.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Når"
+          ],
+          "distractors": [
+            "Hvis",
+            "Om",
+            "Medmindre"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "kan-du-hoere-om-det-er-rigtigt",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du spørger, om det passer.",
+      "sentence": "Kan du høre, ___ det er rigtigt?",
+      "slots": [
+        {
+          "accepted_answers": [
+            "om"
+          ],
+          "distractors": [
+            "hvis",
+            "når",
+            "fordi"
+          ]
+        }
+      ],
+      "note": "\"Om\" bruges i indirekte ja/nej-spørgsmål, \"hvis\" i betingelser.",
+      "verify": true
+    },
+    {
+      "id": "naar-han-tager-hjem-i-morgen-vil-han-hilse-paa-sin-mor",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Det er helt sikkert, at han tager hjem.",
+      "sentence": "___ han tager hjem i morgen, vil han hilse på sin mor.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Når"
+          ],
+          "distractors": [
+            "Hvis",
+            "Om",
+            "Medmindre"
+          ]
+        }
+      ],
+      "note": "\"Hvis\" bruges om noget uvist, \"når\" om noget, der helt sikkert sker."
+    },
+    {
+      "id": "havde-jeg-vidst-det-var-jeg-blevet-hjemme",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du vidste det ikke i går.",
+      "sentence": "___ jeg vidst det, var jeg blevet hjemme.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Havde"
+          ],
+          "distractors": [
+            "Hvis",
+            "Var",
+            "Ville"
+          ]
+        }
+      ],
+      "note": "Uden \"hvis\" kan betingelsen udtrykkes med omvendt ordstilling: Havde jeg ..., ville jeg ..."
+    },
+    {
+      "id": "havde-jeg-tid-ville-jeg-hjaelpe-dig",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du har ikke tid nu.",
+      "sentence": "___ jeg tid, ville jeg hjælpe dig.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Havde"
+          ],
+          "distractors": [
+            "Hvis",
+            "Var",
+            "Ville"
+          ]
+        }
+      ],
+      "note": "Uden \"hvis\" kan betingelsen udtrykkes med omvendt ordstilling: Havde jeg ..., ville jeg ..."
+    },
+    {
+      "id": "var-han-her-ville-han-hjaelpe-os",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Han er ikke her.",
+      "sentence": "___ han her, ville han hjælpe os.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Var"
+          ],
+          "distractors": [
+            "Hvis",
+            "Havde",
+            "Ville"
+          ]
+        }
+      ],
+      "note": "Uden \"hvis\" kan betingelsen udtrykkes med omvendt ordstilling: Havde jeg ..., ville jeg ..."
+    },
+    {
+      "id": "havde-du-ringet-var-jeg-kommet",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du ringede ikke i går.",
+      "sentence": "___ du ringet, var jeg kommet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Havde"
+          ],
+          "distractors": [
+            "Hvis",
+            "Var",
+            "Ville"
+          ]
+        }
+      ],
+      "note": "Uden \"hvis\" kan betingelsen udtrykkes med omvendt ordstilling: Havde jeg ..., ville jeg ..."
+    },
+    {
+      "id": "var-jeg-rig-ville-jeg-koebe-et-slot",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du er ikke rig.",
+      "sentence": "___ jeg rig, ville jeg købe et slot.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Var"
+          ],
+          "distractors": [
+            "Hvis",
+            "Havde",
+            "Ville"
+          ]
+        }
+      ],
+      "note": "Uden \"hvis\" kan betingelsen udtrykkes med omvendt ordstilling: Havde jeg ..., ville jeg ..."
+    },
+    {
+      "id": "havde-han-bedt-om-hjaelp-havde-vi-hjulpet-ham",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Han bad ikke om hjælp.",
+      "sentence": "___ han bedt om hjælp, havde vi hjulpet ham.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "Havde"
+          ],
+          "distractors": [
+            "Hvis",
+            "Var",
+            "Ville"
+          ]
+        }
+      ],
+      "note": "Uden \"hvis\" kan betingelsen udtrykkes med omvendt ordstilling: Havde jeg ..., ville jeg ..."
+    },
+    {
+      "id": "hvis-jeg-havde-sagt-ja-til-jobbet-ville-jeg-bo-i-london",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du sagde nej til jobbet i 2015.",
+      "sentence": "Hvis jeg ___ ja til jobbet, ville jeg bo i London nu.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde sagt"
+          ],
+          "distractors": [
+            "sagde",
+            "siger",
+            "ville sige"
+          ]
+        }
+      ],
+      "note": "Når betingelsen hører til fortiden, men følgen gælder nu, blandes pluskvamperfektum og ville + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-var-blevet-laege-ville-jeg-tjene-mere-i-dag",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du blev ikke læge, og nu er du lærer.",
+      "sentence": "Hvis jeg ___ læge, ville jeg tjene mere i dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var blevet"
+          ],
+          "distractors": [
+            "blev",
+            "bliver",
+            "ville blive"
+          ]
+        }
+      ],
+      "note": "Når betingelsen hører til fortiden, men følgen gælder nu, blandes pluskvamperfektum og ville + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-var-flyttet-til-norge-dengang-ville-jeg-tale",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du flyttede ikke til Norge, og nu bor du i Danmark.",
+      "sentence": "Hvis jeg ___ til Norge dengang, ville jeg tale norsk i dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var flyttet"
+          ],
+          "distractors": [
+            "flyttede",
+            "flytter",
+            "ville flytte"
+          ]
+        }
+      ],
+      "note": "Når betingelsen hører til fortiden, men følgen gælder nu, blandes pluskvamperfektum og ville + infinitiv."
+    },
+    {
+      "id": "hvis-han-havde-koebt-aktier-i-2010-ville-han-vaere-rig",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Han købte ikke aktier i 2010.",
+      "sentence": "Hvis han ___ aktier i 2010, ville han være rig i dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde købt"
+          ],
+          "distractors": [
+            "købte",
+            "køber",
+            "ville købe"
+          ]
+        }
+      ],
+      "note": "Når betingelsen hører til fortiden, men følgen gælder nu, blandes pluskvamperfektum og ville + infinitiv."
+    },
+    {
+      "id": "hvis-de-havde-moedt-hinanden-for-tyve-aar-siden-ville",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "De mødtes ikke for 20 år siden.",
+      "sentence": "Hvis de ___ hinanden for tyve år siden, ville de være gift i dag.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde mødt"
+          ],
+          "distractors": [
+            "mødte",
+            "møder",
+            "ville møde"
+          ]
+        }
+      ],
+      "note": "Når betingelsen hører til fortiden, men følgen gælder nu, blandes pluskvamperfektum og ville + infinitiv."
+    },
+    {
+      "id": "hvis-jeg-havde-valgt-uddannelsen-dengang-ville-jeg-have",
+      "level": "C1",
+      "mode": "conditional",
+      "context": "Du valgte ikke uddannelsen dengang.",
+      "sentence": "Hvis jeg havde valgt uddannelsen dengang, ___ jeg have et bedre job nu.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "ville"
+          ],
+          "distractors": [
+            "vil",
+            "havde",
+            "var"
+          ]
+        }
+      ],
+      "note": "Når betingelsen hører til fortiden, men følgen gælder nu, blandes pluskvamperfektum og ville + infinitiv."
+    },
+    {
+      "id": "vi-tager-af-sted-medmindre-det-regner",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du tager af sted, undtagen hvis det regner.",
+      "sentence": "Vi tager af sted, ___ det regner.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "medmindre"
+          ],
+          "distractors": [
+            "hvis",
+            "fordi",
+            "mens"
+          ]
+        }
+      ],
+      "note": "\"Medmindre\" betyder \"hvis ikke\" og angiver en undtagelse."
+    },
+    {
+      "id": "jeg-gaar-hjem-nu-medmindre-han-ringer",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du går, undtagen hvis han kommer.",
+      "sentence": "Jeg går hjem nu, ___ han ringer.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "medmindre"
+          ],
+          "distractors": [
+            "hvis",
+            "fordi",
+            "mens"
+          ]
+        }
+      ],
+      "note": "\"Medmindre\" betyder \"hvis ikke\" og angiver en undtagelse."
+    },
+    {
+      "id": "vi-ses-i-morgen-medmindre-jeg-bliver-syg",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Vi ses, undtagen hvis jeg er syg.",
+      "sentence": "Vi ses i morgen, ___ jeg bliver syg.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "medmindre"
+          ],
+          "distractors": [
+            "hvis",
+            "fordi",
+            "mens"
+          ]
+        }
+      ],
+      "note": "\"Medmindre\" betyder \"hvis ikke\" og angiver en undtagelse."
+    },
+    {
+      "id": "moedet-holdes-paa-torsdag-medmindre-der-sker-noget",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Det er fast, undtagen hvis der sker noget uventet.",
+      "sentence": "Mødet holdes på torsdag, ___ der sker noget uventet.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "medmindre"
+          ],
+          "distractors": [
+            "hvis",
+            "fordi",
+            "mens"
+          ]
+        }
+      ],
+      "note": "\"Medmindre\" betyder \"hvis ikke\" og angiver en undtagelse."
+    },
+    {
+      "id": "jeg-klarer-det-selv-medmindre-det-gaar-galt",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du har ikke brug for hjælp, undtagen hvis det går galt.",
+      "sentence": "Jeg klarer det selv, ___ det går galt.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "medmindre"
+          ],
+          "distractors": [
+            "hvis",
+            "fordi",
+            "mens"
+          ]
+        }
+      ],
+      "note": "\"Medmindre\" betyder \"hvis ikke\" og angiver en undtagelse."
+    },
+    {
+      "id": "jeg-koeber-den-medmindre-prisen-er-for-hoej",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du accepterer, undtagen hvis prisen er for høj.",
+      "sentence": "Jeg køber den, ___ prisen er for høj.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "medmindre"
+          ],
+          "distractors": [
+            "hvis",
+            "fordi",
+            "mens"
+          ]
+        }
+      ],
+      "note": "\"Medmindre\" betyder \"hvis ikke\" og angiver en undtagelse."
+    },
+    {
+      "id": "hvis-han-har-tid-i-morgen-hjaelper-han-os",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du ved ikke, om han har tid.",
+      "sentence": "Hvis han ___ tid i morgen, ___ han os.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "har"
+          ],
+          "distractors": [
+            "havde",
+            "ville have"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "hjælper"
+          ],
+          "distractors": [
+            "hjalp",
+            "ville hjælpe"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-havde-penge-nok-ville-jeg-koebe-en-baad",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Du forestiller dig noget, der ikke er sandt.",
+      "sentence": "Hvis jeg ___ penge nok, ville jeg købe en båd.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde"
+          ],
+          "distractors": [
+            "har",
+            "får",
+            "har haft"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
+    },
+    {
+      "id": "hvis-hun-er-hjemme-besoeger-vi-hende-i-morgen",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du ved ikke, om hun er hjemme.",
+      "sentence": "Hvis hun ___ hjemme, ___ vi hende i morgen.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "er"
+          ],
+          "distractors": [
+            "var",
+            "ville være"
+          ]
+        },
+        {
+          "accepted_answers": [
+            "besøger"
+          ],
+          "distractors": [
+            "besøgte",
+            "ville besøge"
+          ]
+        }
+      ],
+      "note": "Åbne betingelser bruger nutid i hvis-sætningen og nutid eller vil/skal i hovedsætningen."
+    },
+    {
+      "id": "hvis-jeg-havde-aendret-mening-i-tide-ville-jeg-ikke",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du ændrede ikke mening, og nu er det for sent.",
+      "sentence": "Hvis jeg ___ mening i tide, ville jeg ikke have mistet pengene.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde ændret"
+          ],
+          "distractors": [
+            "ændrede",
+            "ændrer",
+            "ville ændre"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-du-havde-sagt-til-ville-vi-have-vaeret-forberedt",
+      "level": "B2",
+      "mode": "conditional",
+      "context": "Du glemte at sige til, så de var ikke forberedt.",
+      "sentence": "Hvis du ___ til, ville vi have været forberedt.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "havde sagt"
+          ],
+          "distractors": [
+            "sagde",
+            "siger",
+            "ville sige"
+          ]
+        }
+      ],
+      "note": "Noget, der ikke skete i fortiden, udtrykkes i hvis-sætningen med pluskvamperfektum."
+    },
+    {
+      "id": "hvis-det-var-mit-hus-ville-jeg-male-det-gult",
+      "level": "B1",
+      "mode": "conditional",
+      "context": "Det er ikke dit hus.",
+      "sentence": "Hvis det ___ mit hus, ville jeg male det gult.",
+      "slots": [
+        {
+          "accepted_answers": [
+            "var"
+          ],
+          "distractors": [
+            "er",
+            "bliver",
+            "har været"
+          ]
+        }
+      ],
+      "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
     }
   ]
 };
