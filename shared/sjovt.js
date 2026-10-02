@@ -248,7 +248,7 @@
     if (doc.fonts && doc.fonts.ready) {
       var fp = Promise.race([doc.fonts.ready, new Promise(function (r) { win.setTimeout(r, 2500); })]);
       parts.push(fp.then(function () { preState.target = Math.max(preState.target, 92); }).catch(function () {}));
-      try { doc.fonts.load('16px "SD Mono"'); doc.fonts.load('16px "SD Pixel"'); doc.fonts.load('16px "SD Label"'); } catch (e) {}
+      try { doc.fonts.load('16px "SD Mono"'); doc.fonts.load('16px "SD Pixel"'); } catch (e) {}
     }
     // 3) failed assets are noted, never block
     win.addEventListener("error", function (ev) {
