@@ -137,6 +137,41 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
   status: todo
   title: "QA pass — all 5 games: 360 px, dark mode, keyboard nav, zero console errors via file://"
 
+# Gap-closing tasks (from grammar coverage review 2026-10-02; plan: .claude/plans/build-me-an-implementation-foamy-lobster.md)
+# Build order for the 4 specced games: pronomen → tids → saetning → skrive. Reconcile boejning-data first: counts now fire_former 1300, byg 570, adj 746, sammenligning 186, bestemt_ubestemt 250, maengde 221 — verify against prd § 2.4 targets and close.
+
+- id: fix-noun-laerer
+  spec: shared data
+  type: bug
+  status: todo
+  priority: P1
+  title: "nouns.js — 'lærer' is REGULAR and yields 'lærerene'; make it MANUAL 'lærerne'"
+  acceptance: "definite plural = lærerne; shared/validate.js 0 errors / 0 warnings; Bøjning Mode 1 item for lærer correct"
+
+- id: adj-agreement-gaps
+  spec: boejningsvaerkstedet (4.4 Modes 2-3)
+  type: data
+  status: todo
+  priority: P2
+  title: "Bøjningsværkstedet — add definite-neuter, definite-plural and predicative-vs-attributive adjective items; raise neuter share of Mode 2 (20 of 570)"
+  acceptance: "Mode 3 covers all 6 agreement cells; Mode 2 neuter >= 30%; generated from window.DANSK_ADJECTIVES; validate.js clean"
+
+- id: en-et-gender-rules
+  spec: en og et
+  type: code
+  status: todo
+  priority: P2
+  title: "En/Et-træner — add suffix/category rule hints (-ing/-hed/-else = en; -um/-ment = et) and a rules mode"
+  acceptance: "rule shown after wrong answer where a rule exists; new mode reachable from start screen; no console errors; 360 px ok"
+
+- id: ordstilling-subclause
+  spec: ordstilling-detektiv
+  type: data
+  status: todo
+  priority: P2
+  title: "Ordstillingsdetektiven — add case 13: ikke/adverb placement in subordinate clauses and indirect questions"
+  acceptance: ">= 20 new tile sentences (at, som, fordi, om, hvor); one defensible order each; grammarTip explains SAV; no regression in cases 1-12"
+
 ---
 
 ## Blocked
