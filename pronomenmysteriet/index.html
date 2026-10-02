@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronomenmysteriet — øv pronominer og ejerord | Sjovt Dansk</title>
+<meta name="description" content="Opklar sagen: jeg/mig, min/mit/mine, sin eller hans, den/det/de, nogen/nogle/noget og denne/dette. Gratis grammatikøvelser på A2–B2-niveau." />
+<meta property="og:title" content="Pronomenmysteriet — øv pronominer og ejerord | Sjovt Dansk" />
+<meta property="og:description" content="Opklar sagen: jeg/mig, min/mit/mine, sin eller hans, den/det/de, nogen/nogle/noget og denne/dette. Gratis grammatikøvelser på A2–B2-niveau." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sjovtdansk.dk/pronomenmysteriet/index.html" />
+<meta property="og:locale" content="da_DK" />
+<link rel="canonical" href="https://sjovtdansk.dk/pronomenmysteriet/index.html" />
+<style>
+  /* ---- Pronomenmysteriet — structural styles (courtroom palette defaults;
+     the per-game theme in shared/themes/pronomenmysteriet.css remaps the tokens). */
+  :root{
+    --navy:#17233F; --gold:#D2A94F; --paper:#F0E7D2; --ink:#22242B;
+    --correct:#3C7B61; --wrong:#A73D43;
+    --bg:#F0E7D2; --panel:#FBF6E8; --panel-2:#E8DCC0; --text:#22242B; --muted:#5b5646;
+    --line:rgba(23,35,63,.35); --accent:#D2A94F; --accent-fg:#17233F;
+    --dc-fg:var(--text); --dc-btn-bg:var(--panel); --dc-border:var(--line); --dc-accent:var(--accent); --dc-accent-fg:var(--accent-fg);
+    --dc-input-bg:#fff; --dc-correct:var(--correct); --dc-correct-bg:rgba(60,123,97,.18);
+    --dc-wrong:var(--wrong); --dc-wrong-bg:rgba(167,61,67,.16);
+  }
+  html[data-theme="dark"]{
+    --bg:#0D1426; --panel:#17233F; --panel-2:#1f2f52; --text:#F0E7D2; --muted:#b9b29c;
+    --line:rgba(210,169,79,.45); --dc-input-bg:#0D1426;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);min-height:100vh;padding:18px 12px 48px;line-height:1.5}
+  .shell{width:100%;max-width:640px;margin:0 auto}
+  header.topbar{display:flex;align-items:center;gap:.6em;margin-bottom:16px}
+  .brand{font-weight:700;font-size:1.3rem;flex:1 1 auto;display:flex;align-items:center;gap:.4em;min-width:0;overflow-wrap:anywhere}
+  .icon-btn{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;font:inherit;font-size:.9rem;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;cursor:pointer}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 18px;overflow-wrap:anywhere}
+  h1.title{margin:.1em 0 .3em;font-size:1.8rem}
+  .lede{margin:.2em 0 1em;color:var(--muted)}
+  .group-label{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:1em 0 .5em}
+  .chips{display:flex;flex-wrap:wrap;gap:.5em}
+  .chip{min-height:44px;min-width:44px;padding:.5em .95em;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;font:inherit}
+  .chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:700}
+  .chip[aria-pressed="true"]::before{content:"✓ "}
+  .modes{display:flex;flex-wrap:wrap;gap:.5em}
+  .mode-btn{display:inline-flex;align-items:center;gap:.5em;min-height:44px;padding:.45em .85em;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;font:inherit;text-align:left}
+  .mode-btn .num{width:26px;height:26px;flex:0 0 auto;border-radius:7px;background:var(--navy);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+  .mode-btn[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:700}
+  button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  html[data-theme="dark"] button:focus-visible,html[data-theme="dark"] a:focus-visible{outline-color:var(--paper)}
+  .primary{margin-top:1.3em;width:100%;min-height:56px;font:inherit;font-size:1.2rem;font-weight:700;border:none;border-radius:12px;cursor:pointer;background:var(--accent);color:var(--accent-fg)}
+  .btn{min-height:44px;min-width:44px;padding:.55em 1.1em;border-radius:10px;cursor:pointer;font:inherit;border:1px solid var(--line);background:var(--panel);color:var(--text)}
+  .btn.accent{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:700}
+
+  .playbar{display:flex;align-items:center;gap:.6em;margin-bottom:12px}
+  .progress{flex:1 1 auto;height:10px;border-radius:999px;background:var(--panel-2);overflow:hidden;border:1px solid var(--line)}
+  .progress > i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s ease}
+  .count{font-size:.85rem;color:var(--muted);min-width:3.2em;text-align:right}
+
+  .case-tag{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 .4em}
+  .evidence{list-style:none;margin:0 0 .6em;padding:0;display:flex;flex-direction:column;gap:.35em}
+  .evidence li{background:var(--panel-2);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:.45em .75em;font-size:1.05rem}
+  .target{font-size:1.3rem;line-height:1.6;margin:.4em 0;display:flex;align-items:center;gap:.5em;flex-wrap:wrap}
+  .target .sentence{flex:1 1 12em;min-width:0}
+  .blank{display:inline-block;min-width:3.2em;border-bottom:3px dashed var(--accent);text-align:center;font-weight:700}
+  .blank.done-correct{border-bottom:3px solid var(--correct);color:var(--correct)}
+  .blank.done-wrong{border-bottom:3px solid var(--wrong);color:var(--wrong)}
+  html[data-theme="dark"] .blank.done-correct{color:#8fd1b3}
+  html[data-theme="dark"] .blank.done-wrong{color:#f0a0a5}
+  .gloss{font-size:.9rem;color:var(--muted);font-style:italic;margin:.2em 0 .8em}
+  .options{display:flex;flex-direction:column;gap:.5em;margin-top:.6em}
+  .opt{display:flex;align-items:center;gap:.7em;text-align:left;min-height:52px;padding:.5em .9em;border-radius:11px;font:inherit;font-size:1.15rem;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer}
+  .opt .onum{width:28px;height:28px;flex:0 0 auto;border-radius:7px;background:var(--navy);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+  .opt:disabled{cursor:default;opacity:1;color:var(--text)}
+  .opt.chosen-correct{border:2px solid var(--correct);background:var(--dc-correct-bg)}
+  .opt.chosen-wrong{border:2px solid var(--wrong);background:var(--dc-wrong-bg)}
+  .opt.reveal-correct{border:2px solid var(--correct);background:var(--dc-correct-bg)}
+  .opt.chosen-correct .otxt::after,.opt.reveal-correct .otxt::after{content:"  ✓";color:var(--correct);font-weight:700}
+  .opt.chosen-wrong .otxt::after{content:"  ✗";color:var(--wrong);font-weight:700}
+
+  .chain{display:flex;flex-wrap:wrap;gap:.4em;align-items:center;margin:.5em 0 0;font-size:.95rem}
+  .chain .link{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.2em .6em}
+  .chain .link b{font-weight:700}
+  .chain .arrow{color:var(--muted)}
+  .slip{margin-top:1em;border-left:4px solid var(--accent);background:var(--panel-2);border-radius:0 8px 8px 0;padding:.7em .9em}
+  .slip.correct{border-left-color:var(--correct)}
+  .slip.wrong{border-left-color:var(--wrong)}
+  .slip .sol{font-weight:700;color:var(--wrong)}
+  html[data-theme="dark"] .slip .sol{color:#f0a0a5}
+  .slip .note{margin-top:.35em}
+  .slip .actions{margin-top:.7em;display:flex;gap:.5em;flex-wrap:wrap;align-items:center}
+
+  .sum-head{font-size:1.4rem;margin:.1em 0 .6em}
+  .sum-stats{display:flex;gap:1.4em;flex-wrap:wrap;margin-bottom:1em}
+  .sum-stats .stat b{display:block;font-size:1.8rem}
+  .sum-stats .stat span{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .weak-list{list-style:none;padding:0;margin:.2em 0 1em;display:flex;flex-direction:column;gap:.4em}
+  .weak-list li{background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:.5em .7em}
+  .xgame{display:inline-flex;align-items:center;min-height:44px;margin-top:.4em;text-decoration:none;background:var(--panel-2);border:1px solid var(--line);color:var(--text);padding:.55em .9em;border-radius:999px}
+  .sum-actions{display:flex;gap:.6em;flex-wrap:wrap;margin-top:1em}
+  .sum-actions .primary{width:auto;margin-top:0;padding:0 1.4em}
+  .empty-state{text-align:center;color:var(--muted);padding:1.5em .5em}
+  .hidden{display:none !important}
+  @keyframes press-in{0%{transform:scale(1)}45%{transform:scale(.98)}100%{transform:scale(1)}}
+  .press{animation:press-in .28s ease}
+  @media (prefers-reduced-motion: reduce){
+    .press{animation:none}
+    .progress > i{transition:none}
+  }
+</style>
+<link rel="stylesheet" href="../shared/sjovt.css">
+<script src="../shared/sjovt.js"></script>
+<link rel="stylesheet" href="../shared/themes/pronomenmysteriet.css">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><span data-sd-sprite="bog" data-scale="3" aria-hidden="true"></span> Pronomenmysteriet</div>
+    <button class="icon-btn" id="btn-dark" type="button" aria-label="Skift mørk tilstand" title="Mørk tilstand">MØRK</button>
+    <button class="icon-btn" id="btn-sound" type="button" aria-label="Slå lyd til eller fra" title="Lyd">LYD</button>
+  </header>
+
+  <main id="start-screen" class="card">
+    <h1 class="title">Pronomenmysteriet</h1>
+    <p class="lede">Opklar sagen: hvem peger ordet på?</p>
+    <div class="group-label" id="lbl-mode">Tilstand</div>
+    <div class="modes" id="mode-list" role="group" aria-labelledby="lbl-mode"></div>
+    <div class="group-label" id="lbl-level">Niveau</div>
+    <div class="chips" id="level-list" role="group" aria-labelledby="lbl-level"></div>
+    <button class="primary" id="btn-play" type="button">Spil</button>
+  </main>
+
+  <main id="play-screen" class="card hidden">
+    <div class="playbar">
+      <button class="icon-btn" id="btn-back" type="button" aria-label="Tilbage til start" title="Tilbage">✕</button>
+      <div class="progress" aria-hidden="true"><i id="progress-fill"></i></div>
+      <div class="count" id="progress-count">0/0</div>
+    </div>
+    <div id="item-host"></div>
+  </main>
+
+  <main id="summary-screen" class="card hidden">
+    <div id="summary-host"></div>
+  </main>
+</div>
+
+<script src="../shared/dansk-core.js"></script>
+<script src="./data.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  var DC = window.DanskCore;
+  var DATA = window.PRONOMEN_DATA || {};
+  var GAME_ID = 'pronomenmysteriet';
+  var ROUND_SIZE = 10;
+  var LEVELS = ['A2','B1','B2'];
+
+  var MODES = [
+    { key:'subject_object',       num:1, name:'Subjekt eller objekt',   patternType:'case' },
+    { key:'possessive_agreement', num:2, name:'Min, mit eller mine',    patternType:'possessive' },
+    { key:'reflexive_possessive', num:3, name:'Sin eller hans?',        patternType:'reflexive' },
+    { key:'den_det_de',           num:4, name:'Den, det eller de?',     patternType:'anaphor' },
+    { key:'nogen_nogle_noget',    num:5, name:'Nogen, nogle eller noget?', patternType:'indefinite' },
+    { key:'demonstrative',        num:6, name:'Demonstrativsporet',     patternType:'demonstrative' }
+  ];
+  var MODE_BY_KEY = {};
+  MODES.forEach(function(m){ MODE_BY_KEY[m.key] = m; });
+
+  // cross-game recommendation per mode (one chip, never more)
+  var CROSS = {
+    subject_object:       { href:'../ordstilling-detektiv/index.html', text:'Træn sætningsled → Ordstillingsdetektiven' },
+    possessive_agreement: { href:'../en%20og%20et/index.html',         text:'Usikker på en- og et-ord? → En/Et-træner' },
+    reflexive_possessive: { href:'../ordstilling-detektiv/index.html', text:'Træn sætningsled → Ordstillingsdetektiven' },
+    den_det_de:           { href:'../en%20og%20et/index.html',         text:'Usikker på en- og et-ord? → En/Et-træner' },
+    nogen_nogle_noget:    { href:'../boejningsvaerkstedet/index.html', text:'Træn mængdeord → Bøjningsværkstedet' },
+    demonstrative:        { href:'../boejningsvaerkstedet/index.html', text:'Træn bøjning → Bøjningsværkstedet' }
+  };
+
+  // ---- sound theme (prd Phase 3.6) ----
+  var SOUND = {
+    select:function(){ DC.ui.sound.sequence([{type:'triangle',frequency:440,duration:0.06,gain:0.03}]); },
+    correct:function(){ DC.ui.sound.sequence([
+      {type:'sine',frequency:180,duration:0.08,gain:0.05},
+      {type:'sine',frequency:440,duration:0.08,gain:0.06,delay:0.10},
+      {type:'sine',frequency:660,duration:0.10,gain:0.05,delay:0.18}
+    ]); },
+    wrong:function(){ DC.ui.sound.sequence([
+      {type:'noise',frequency:0,duration:0.08,gain:0.035},
+      {type:'sine',frequency:220,duration:0.10,gain:0.03,delay:0.08}
+    ]); },
+    roundComplete:function(){ DC.ui.sound.sequence([
+      {type:'triangle',frequency:180,duration:0.10,gain:0.07},
+      {type:'triangle',frequency:180,duration:0.10,gain:0.07,delay:0.22},
+      {type:'triangle',frequency:180,duration:0.10,gain:0.07,delay:0.44},
+      {type:'sine',frequency:330,duration:0.40,gain:0.07,delay:0.60}
+    ]); }
+  };
+
+  var prefs = DC.store.namespace(GAME_ID);
+  var srsState = DC.srs.load(GAME_ID);
+
+  var state = {
+    mode: 'subject_object',
+    levels: LEVELS.slice(),
+    round: [], idx: 0, correct: 0, missed: []
+  };
+
+  var el = {
+    start: document.getElementById('start-screen'),
+    play: document.getElementById('play-screen'),
+    summary: document.getElementById('summary-screen'),
+    modeList: document.getElementById('mode-list'),
+    levelList: document.getElementById('level-list'),
+    itemHost: document.getElementById('item-host'),
+    sumHost: document.getElementById('summary-host'),
+    fill: document.getElementById('progress-fill'),
+    pcount: document.getElementById('progress-count')
+  };
+
+  DC.ui.darkMode.init();
+  DC.ui.sound.init(prefs.get('sound') !== false);
+  syncSoundLabel();
+
+  var savedMode = prefs.get('mode');
+  if (savedMode && MODE_BY_KEY[savedMode]) state.mode = savedMode;
+  var savedLevels = prefs.get('levels');
+  if (Array.isArray(savedLevels)) {
+    var ok = savedLevels.filter(function(l){ return LEVELS.indexOf(l) !== -1; });
+    if (ok.length) state.levels = ok;
+  }
+
+  document.getElementById('btn-dark').addEventListener('click', function(){ DC.ui.darkMode.toggle(); });
+  document.getElementById('btn-sound').addEventListener('click', function(){
+    var on = DC.ui.sound.toggle();
+    prefs.set('sound', on);
+    syncSoundLabel();
+    if (on) SOUND.select();
+  });
+  function syncSoundLabel(){
+    var on = DC.ui.sound.isEnabled();
+    var b = document.getElementById('btn-sound');
+    b.textContent = on ? 'LYD' : 'LYD ✗';
+    b.setAttribute('aria-pressed', String(!on));
+  }
+  document.getElementById('btn-play').addEventListener('click', startRound);
+  document.getElementById('btn-back').addEventListener('click', showStart);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && !el.play.classList.contains('hidden')) showStart();
+  });
+
+  // ---- helpers ----
+  function shuffle(arr){
+    for (var i = arr.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(ch){
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[ch];
+    });
+  }
+  function slug(s){ return String(s).toLowerCase().replace(/[^a-zæøå0-9]+/g, '-').replace(/^-+|-+$/g, ''); }
+  function effMode(item){ return item.mode || state.mode; }
+  function srsKey(item){ return GAME_ID + ':' + effMode(item) + ':' + item.id; }
+  function patternKey(item){
+    var m = MODE_BY_KEY[effMode(item)];
+    return 'pattern:' + GAME_ID + ':' + (m ? m.patternType : 'other') + ':' + slug(item.correct);
+  }
+  function filled(item, word){ return String(item.sentence_da).replace(/_{2,}/, word); }
+  function poolFor(modeKey, levels){
+    var all = Array.isArray(DATA[modeKey]) ? DATA[modeKey] : [];
+    return DC.level.filter(all, levels);
+  }
+
+  // ---- start controls ----
+  function buildStartControls(){
+    el.modeList.innerHTML = '';
+    MODES.forEach(function(m){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'mode-btn';
+      btn.setAttribute('aria-pressed', String(m.key === state.mode));
+      btn.innerHTML = '<span class="num" aria-hidden="true">' + m.num + '</span><span>' + esc(m.name) + '</span>';
+      btn.addEventListener('click', function(){
+        state.mode = m.key;
+        prefs.set('mode', m.key);
+        var bs = el.modeList.querySelectorAll('.mode-btn');
+        for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', String(MODES[i].key === state.mode));
+      });
+      el.modeList.appendChild(btn);
+    });
+    el.levelList.innerHTML = '';
+    LEVELS.forEach(function(lvl){
+      var c = document.createElement('button');
+      c.type = 'button';
+      c.className = 'chip';
+      c.textContent = lvl;
+      c.setAttribute('aria-pressed', String(state.levels.indexOf(lvl) !== -1));
+      c.addEventListener('click', function(){
+        var i = state.levels.indexOf(lvl);
+        if (i === -1) state.levels.push(lvl);
+        else if (state.levels.length > 1) state.levels.splice(i, 1);
+        c.setAttribute('aria-pressed', String(state.levels.indexOf(lvl) !== -1));
+        prefs.set('levels', state.levels.slice());
+      });
+      el.levelList.appendChild(c);
+    });
+  }
+
+  function show(which){
+    el.start.classList.toggle('hidden', which !== 'start');
+    el.play.classList.toggle('hidden', which !== 'play');
+    el.summary.classList.toggle('hidden', which !== 'summary');
+  }
+
+  var advanceTimer = null;
+  var activeKeyHandler = null;
+  function clearPending(){
+    if (advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
+    if (activeKeyHandler){ document.removeEventListener('keydown', activeKeyHandler); activeKeyHandler = null; }
+  }
+
+  function showStart(){
+    clearPending();
+    buildStartControls();
+    show('start');
+    document.getElementById('btn-play').focus();
+  }
+
+  // ---- round lifecycle ----
+  function buildRound(pool){
+    var shuffled = shuffle(pool.slice());
+    var due = shuffled.filter(function(it){ return DC.srs.isDue(srsState, srsKey(it)); }).slice(0, ROUND_SIZE);
+    var chosen = due.slice();
+    if (chosen.length < ROUND_SIZE){
+      var seen = {};
+      chosen.forEach(function(it){ seen[it.id] = true; });
+      var rest = shuffled.filter(function(it){ return !seen[it.id]; });
+      for (var i = 0; i < rest.length && chosen.length < ROUND_SIZE; i++) chosen.push(rest[i]);
+    }
+    return shuffle(chosen);
+  }
+
+  function startRound(){
+    clearPending();
+    var pool = poolFor(state.mode, state.levels);
+    show('play');
+    if (!pool.length){ renderEmpty(); return; }
+    state.round = buildRound(pool);
+    state.idx = 0; state.correct = 0; state.missed = [];
+    renderItem();
+  }
+
+  function renderEmpty(){
+    el.fill.style.width = '0%';
+    el.pcount.textContent = '';
+    el.itemHost.innerHTML = '';
+    var box = document.createElement('div');
+    box.className = 'empty-state';
+    box.innerHTML = '<p>Der er ingen opgaver til dette valg. Vælg et andet niveau.</p>';
+    var back = document.createElement('button');
+    back.className = 'btn accent'; back.type = 'button'; back.textContent = 'Tilbage';
+    back.addEventListener('click', showStart);
+    box.appendChild(back);
+    el.itemHost.appendChild(box);
+    back.focus();
+  }
+
+  function renderItem(){
+    clearPending();
+    if (state.idx >= state.round.length){ finishRound(); return; }
+    var pct = Math.round((state.idx / state.round.length) * 100);
+    el.fill.style.width = pct + '%';
+    el.pcount.textContent = (state.idx + 1) + '/' + state.round.length;
+    var item = state.round[state.idx];
+    (RENDERERS[effMode(item)] || RENDERERS._default)(item);
+  }
+
+  function advance(){
+    if (advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
+    state.idx++;
+    renderItem();
+  }
+
+  function finishRound(){
+    el.fill.style.width = '100%';
+    SOUND.roundComplete();
+    renderSummary();
+    show('summary');
+  }
+
+  function recordAnswer(item, correct){
+    DC.srs.record(srsState, srsKey(item), correct);
+    DC.srs.pattern(srsState, patternKey(item), correct);
+    if (correct) state.correct++; else state.missed.push(item);
+  }
+
+  // ---- renderers ----
+  var RENDERERS = {};
+
+  function ownerChain(item){
+    var r = item.reference;
+    if (!r) return null;
+    var chain = document.createElement('div');
+    chain.className = 'chain';
+    chain.setAttribute('aria-label', 'Hvem ejer hvad');
+    var parts = [['Subjekt', r.subject], ['Ejer', r.owner], ['Ejet', r.possessed]];
+    parts.forEach(function(p, i){
+      if (!p[1]) return;
+      if (i > 0 && chain.childNodes.length){
+        var a = document.createElement('span'); a.className = 'arrow'; a.setAttribute('aria-hidden','true'); a.textContent = '→';
+        chain.appendChild(a);
+      }
+      var s = document.createElement('span'); s.className = 'link';
+      s.innerHTML = esc(p[0]) + ': <b>' + esc(p[1]) + '</b>';
+      chain.appendChild(s);
+    });
+    return chain;
+  }
+
+  function renderMC(item){
+    var m = MODE_BY_KEY[effMode(item)];
+    var wrap = document.createElement('div');
+    wrap.setAttribute('role', 'group');
+    wrap.setAttribute('aria-label', 'Opgave');
+
+    var tag = document.createElement('p');
+    tag.className = 'case-tag';
+    tag.textContent = 'Sag ' + (state.idx + 1) + (m ? ' · ' + m.name : '');
+    wrap.appendChild(tag);
+
+    var ctx = item.context_da || [];
+    if (ctx.length){
+      var ul = document.createElement('ul');
+      ul.className = 'evidence';
+      ctx.forEach(function(line){ var li = document.createElement('li'); li.textContent = line; ul.appendChild(li); });
+      wrap.appendChild(ul);
+    }
+
+    var target = document.createElement('div');
+    target.className = 'target';
+    var sent = document.createElement('div');
+    sent.className = 'sentence';
+    var blank = null;
+    String(item.sentence_da).split(/_{2,}/).forEach(function(seg, i, arr){
+      sent.appendChild(document.createTextNode(seg));
+      if (i < arr.length - 1){
+        blank = document.createElement('span');
+        blank.className = 'blank';
+        blank.textContent = '?';
+        blank.setAttribute('aria-label', 'tomt felt');
+        sent.appendChild(blank);
+      }
+    });
+    target.appendChild(sent);
+    var promptText = ctx.join(' ') + ' ' + String(item.sentence_da).replace(/_{2,}/g, '…');
+    DC.ui.ttsButton(promptText.trim(), target);
+    wrap.appendChild(target);
+
+    if (item.gloss_en){
+      var g = document.createElement('p');
+      g.className = 'gloss';
+      g.setAttribute('lang', 'en');
+      g.textContent = item.gloss_en;
+      wrap.appendChild(g);
+    }
+
+    var opts = document.createElement('div');
+    opts.className = 'options';
+    opts.setAttribute('role', 'group');
+    opts.setAttribute('aria-label', 'Svarmuligheder');
+    wrap.appendChild(opts);
+    var slip = document.createElement('div');
+    wrap.appendChild(slip);
+
+    el.itemHost.innerHTML = '';
+    el.itemHost.appendChild(wrap);
+
+    var buttons = [];
+    var answered = false;
+    shuffle((item.options || []).slice()).forEach(function(text, i){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opt';
+      b.setAttribute('data-value', text);
+      b.innerHTML = '<span class="onum" aria-hidden="true">' + (i + 1) + '</span><span class="otxt">' + esc(text) + '</span>';
+      b.addEventListener('click', function(){ choose(b); });
+      buttons.push(b);
+      opts.appendChild(b);
+    });
+
+    function choose(btn){
+      if (answered) return;
+      answered = true;
+      if (activeKeyHandler){ document.removeEventListener('keydown', activeKeyHandler); activeKeyHandler = null; }
+      var correct = DC.diff.normalize(btn.getAttribute('data-value')) === DC.diff.normalize(item.correct);
+      buttons.forEach(function(b){
+        b.disabled = true;
+        var isRight = DC.diff.normalize(b.getAttribute('data-value')) === DC.diff.normalize(item.correct);
+        if (b === btn) b.classList.add(correct ? 'chosen-correct' : 'chosen-wrong');
+        else if (!correct && isRight) b.classList.add('reveal-correct');
+      });
+      if (blank){
+        blank.textContent = item.correct;
+        blank.removeAttribute('aria-label');
+        blank.classList.add(correct ? 'done-correct' : 'done-wrong');
+      }
+      recordAnswer(item, correct);
+      sdFx(correct, btn);
+      var full = filled(item, item.correct);
+      if (correct){
+        SOUND.correct();
+        if (!DC.ui.motion.isReduced()) wrap.classList.add('press');
+        DC.ui.announce('Rigtigt.');
+        advanceTimer = setTimeout(advance, 800);
+      } else {
+        SOUND.wrong();
+        DC.ui.announce('Forkert. Rigtigt svar: ' + item.correct + '. ' + (item.note || ''));
+        buildSlip(slip, item, full);
+      }
+    }
+
+    activeKeyHandler = function(e){
+      if (answered) return;
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      var n = parseInt(e.key, 10);
+      if (n >= 1 && n <= buttons.length){ e.preventDefault(); choose(buttons[n - 1]); }
+    };
+    document.addEventListener('keydown', activeKeyHandler);
+    if (buttons[0]) buttons[0].focus();
+  }
+
+  Object.keys(MODE_BY_KEY).forEach(function(k){ RENDERERS[k] = renderMC; });
+  RENDERERS._default = renderMC;
+
+  // wrong-answer feedback: correct answer + one note + replay + Videre
+  function buildSlip(host, item, fullSentence){
+    host.innerHTML = '';
+    var slip = document.createElement('div');
+    slip.className = 'slip wrong';
+    var sol = document.createElement('div');
+    sol.innerHTML = 'Rigtigt svar: <span class="sol">' + esc(item.correct) + '</span>';
+    slip.appendChild(sol);
+    if (item.note){
+      var note = document.createElement('div');
+      note.className = 'note';
+      note.textContent = item.note;
+      slip.appendChild(note);
+    }
+    if (item.reference){
+      var chain = ownerChain(item);
+      if (chain) slip.appendChild(chain);
+    }
+    var actions = document.createElement('div');
+    actions.className = 'actions';
+    DC.ui.ttsButton((item.context_da || []).concat([fullSentence]).join(' '), actions);
+    var next = document.createElement('button');
+    next.className = 'btn accent';
+    next.type = 'button';
+    next.textContent = 'Videre';
+    next.addEventListener('click', advance);
+    actions.appendChild(next);
+    slip.appendChild(actions);
+    host.appendChild(slip);
+    next.focus();
+    sdFx(false, host);
+  }
+
+  // ---- summary ----
+  function uniqueMissed(){
+    var seen = {}, out = [];
+    state.missed.forEach(function(it){ if (!seen[it.id]){ seen[it.id] = true; out.push(it); } });
+    return out;
+  }
+
+  function renderSummary(){
+    var total = state.round.length;
+    var acc = total ? Math.round((state.correct / total) * 100) : 0;
+    el.sumHost.innerHTML = '';
+
+    var h = document.createElement('h2');
+    h.className = 'sum-head';
+    h.textContent = 'Sagen er afsluttet';
+    el.sumHost.appendChild(h);
+
+    var stats = document.createElement('div');
+    stats.className = 'sum-stats';
+    stats.innerHTML = '<div class="stat"><b>' + state.correct + '/' + total + '</b><span>Rigtige</span></div>' +
+      '<div class="stat"><b>' + acc + '%</b><span>Præcision</span></div>';
+    el.sumHost.appendChild(stats);
+
+    var weak = uniqueMissed().slice(0, 3);
+    if (weak.length){
+      var wl = document.createElement('div');
+      wl.className = 'group-label';
+      wl.textContent = 'Øv disse igen';
+      el.sumHost.appendChild(wl);
+      var ul = document.createElement('ul');
+      ul.className = 'weak-list';
+      weak.forEach(function(item){
+        var li = document.createElement('li');
+        li.textContent = filled(item, item.correct);
+        ul.appendChild(li);
+      });
+      el.sumHost.appendChild(ul);
+    }
+
+    var x = CROSS[state.mode];
+    if (x){
+      var a = document.createElement('a');
+      a.className = 'xgame';
+      a.href = x.href;
+      a.textContent = x.text;
+      el.sumHost.appendChild(a);
+    }
+
+    var actions = document.createElement('div');
+    actions.className = 'sum-actions';
+    var again = document.createElement('button');
+    again.className = 'primary';
+    again.type = 'button';
+    again.textContent = 'Spil igen';
+    again.addEventListener('click', startRound);
+    actions.appendChild(again);
+
+    if (state.missed.length){
+      var retry = document.createElement('button');
+      retry.className = 'btn';
+      retry.type = 'button';
+      retry.textContent = 'Gentag fejl';
+      retry.addEventListener('click', function(){
+        state.round = shuffle(uniqueMissed());
+        state.idx = 0; state.correct = 0; state.missed = [];
+        show('play');
+        renderItem();
+      });
+      actions.appendChild(retry);
+    }
+    var home = document.createElement('button');
+    home.className = 'btn';
+    home.type = 'button';
+    home.textContent = 'Til start';
+    home.addEventListener('click', showStart);
+    actions.appendChild(home);
+    el.sumHost.appendChild(actions);
+    again.focus();
+
+    var S = window.Sjovt;
+    if (S && state.correct > 0 && S.fx && S.fx.celebrate) S.fx.celebrate();
+  }
+
+  function sdFx(correct, node){
+    var S = window.Sjovt;
+    if (!S || !S.fx || !node) return;
+    if (correct) S.fx.correct(node); else S.fx.wrong(node);
+  }
+
+  buildStartControls();
+  if (window.Sjovt && window.Sjovt.watchScreens) window.Sjovt.watchScreens('#start-screen, #play-screen, #summary-screen');
+})();
+</script>
+</body>
+</html>

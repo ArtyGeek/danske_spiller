@@ -1,0 +1,23 @@
+/* Sjovt Dansk theme — Pronomenmysteriet (minimal structural mapping; the designer restyles this).
+   Loaded after the game's inline <style> and sjovt.css. Uses Sjovt tokens only. */
+html.sd-page {
+  --game: #D2A94F;
+  --sd-orange: #D2A94F; --sd-primary: #D2A94F;
+  --sd-cream: #EBD08F; --sd-amber: #E0BE72;
+  --sd-bg: #E6D9B8; --sd-bg-2: #EDE2C6;
+  --sd-panel: #F0E7D2; --sd-panel-2: #E2D6B8;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #D2A94F; --sd-line: #D2A94F; --sd-focus: #EBD08F;
+  --sd-bg: #0D1426; --sd-bg-2: #131C34;
+  --sd-panel: #17233F; --sd-panel-2: #22345C; --sd-grid: rgba(210,169,79,.16);
+}
+html.sd-page {
+  --bg: var(--sd-bg); --panel: var(--sd-panel); --panel-2: var(--sd-panel-2); --text: var(--sd-text); --muted: var(--sd-text-soft);
+  --line: var(--sd-line); --accent: var(--sd-orange); --accent-fg: #101010;
+  --correct: var(--sd-ok); --wrong: var(--sd-bad);
+  --dc-fg: var(--sd-text); --dc-btn-bg: var(--sd-panel); --dc-border: var(--sd-line); --dc-accent: var(--sd-orange); --dc-accent-fg: #101010;
+  --dc-input-bg: #fff; --dc-correct: var(--sd-ok); --dc-correct-bg: var(--sd-ok-bg); --dc-wrong: var(--sd-bad); --dc-wrong-bg: var(--sd-bad-bg);
+}
+html.sd-page body { display: block; min-height: calc(100dvh - var(--sd-bar-h)); padding: 0; font-family: var(--sd-font-body); }
+html.sd-page .shell { padding: var(--sd-5) var(--sd-3) var(--sd-8); }
