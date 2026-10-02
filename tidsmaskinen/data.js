@@ -17114,5 +17114,2533 @@ window.TIDS_DATA = {
       ],
       "note": "Efter ville i hovedsætningen står hvis-sætningen i datid, ikke i nutid."
     }
+  ],
+  "infinitive": [
+    {
+      "id": "jeg-kan-tale-dansk",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har lært det.",
+      "sentence": "Jeg kan ___ dansk.",
+      "options": [
+        "til at tale",
+        "tale",
+        "for at tale",
+        "at tale"
+      ],
+      "correct": "tale",
+      "accepted_answers": [
+        "tale"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "vi-skal-arbejde-i-morgen",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det er planlagt.",
+      "sentence": "Vi skal ___ i morgen.",
+      "options": [
+        "for at arbejde",
+        "at arbejde",
+        "arbejde",
+        "ved at arbejde"
+      ],
+      "correct": "arbejde",
+      "accepted_answers": [
+        "arbejde"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "jeg-vil-have-en-kop-kaffe",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har lyst.",
+      "sentence": "Jeg vil ___ en kop kaffe.",
+      "options": [
+        "til at have",
+        "for at have",
+        "at have",
+        "have"
+      ],
+      "correct": "have",
+      "accepted_answers": [
+        "have"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "du-maa-gaa-hjem-nu",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har lov.",
+      "sentence": "Du må ___ hjem nu.",
+      "options": [
+        "til at gå",
+        "for at gå",
+        "at gå",
+        "gå"
+      ],
+      "correct": "gå",
+      "accepted_answers": [
+        "gå"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "du-boer-drikke-mere-vand",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Et godt råd.",
+      "sentence": "Du bør ___ mere vand.",
+      "options": [
+        "drikke",
+        "til at drikke",
+        "at drikke",
+        "for at drikke"
+      ],
+      "correct": "drikke",
+      "accepted_answers": [
+        "drikke"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "hun-burde-tage-en-pause",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Et blødt råd.",
+      "sentence": "Hun burde ___ en pause.",
+      "options": [
+        "at tage",
+        "tage",
+        "ved at tage",
+        "for at tage"
+      ],
+      "correct": "tage",
+      "accepted_answers": [
+        "tage"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "jeg-ville-gerne-tale-med-dig",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har et ønske.",
+      "sentence": "Jeg ville gerne ___ med dig.",
+      "options": [
+        "for at tale",
+        "at tale",
+        "til at tale",
+        "tale"
+      ],
+      "correct": "tale",
+      "accepted_answers": [
+        "tale"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "han-kunne-ikke-aabne-doeren",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du fortæller om i går.",
+      "sentence": "Han kunne ikke ___ døren.",
+      "options": [
+        "at åbne",
+        "åbne",
+        "ved at åbne",
+        "for at åbne"
+      ],
+      "correct": "åbne",
+      "accepted_answers": [
+        "åbne"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "vi-skulle-ses-klokken-otte",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du fortæller om en aftale.",
+      "sentence": "Vi skulle ___ klokken otte.",
+      "options": [
+        "at ses",
+        "ved at ses",
+        "for at ses",
+        "ses"
+      ],
+      "correct": "ses",
+      "accepted_answers": [
+        "ses"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "vi-maatte-tage-hjem-tidligt",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du fortæller om i går.",
+      "sentence": "Vi måtte ___ hjem tidligt.",
+      "options": [
+        "at tage",
+        "tage",
+        "for at tage",
+        "til at tage"
+      ],
+      "correct": "tage",
+      "accepted_answers": [
+        "tage"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "min-soester-kan-svoemme-meget-hurtigt",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har lært det.",
+      "sentence": "Min søster kan ___ meget hurtigt.",
+      "options": [
+        "for at svømme",
+        "svømme",
+        "til at svømme",
+        "at svømme"
+      ],
+      "correct": "svømme",
+      "accepted_answers": [
+        "svømme"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "kan-du-hjaelpe-mig-med-at-flytte",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du spørger.",
+      "sentence": "Kan du ___ mig med at flytte?",
+      "options": [
+        "hjælpe",
+        "til at hjælpe",
+        "for at hjælpe",
+        "at hjælpe"
+      ],
+      "correct": "hjælpe",
+      "accepted_answers": [
+        "hjælpe"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "skal-vi-gaa-i-biografen-i-aften",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du planlægger.",
+      "sentence": "Skal vi ___ i biografen i aften?",
+      "options": [
+        "gå",
+        "at gå",
+        "til at gå",
+        "for at gå"
+      ],
+      "correct": "gå",
+      "accepted_answers": [
+        "gå"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "det-vil-jeg-ikke-tale-om",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du tænker.",
+      "sentence": "Det vil jeg ikke ___ om.",
+      "options": [
+        "for at tale",
+        "tale",
+        "at tale",
+        "til at tale"
+      ],
+      "correct": "tale",
+      "accepted_answers": [
+        "tale"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "man-maa-ikke-ryge-her",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du fortæller om en regel.",
+      "sentence": "Man må ikke ___ her.",
+      "options": [
+        "for at ryge",
+        "ved at ryge",
+        "at ryge",
+        "ryge"
+      ],
+      "correct": "ryge",
+      "accepted_answers": [
+        "ryge"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "de-vil-koebe-et-hus-paa-landet",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du taler om en plan.",
+      "sentence": "De vil ___ et hus på landet.",
+      "options": [
+        "til at købe",
+        "for at købe",
+        "at købe",
+        "købe"
+      ],
+      "correct": "købe",
+      "accepted_answers": [
+        "købe"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "jeg-skal-rejse-til-odense-i-naeste-uge",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du taler om dit job.",
+      "sentence": "Jeg skal ___ til Odense i næste uge.",
+      "options": [
+        "for at rejse",
+        "til at rejse",
+        "at rejse",
+        "rejse"
+      ],
+      "correct": "rejse",
+      "accepted_answers": [
+        "rejse"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "alle-skal-haenge-deres-jakker-op",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du taler om en regel.",
+      "sentence": "Alle skal ___ deres jakker op.",
+      "options": [
+        "til at hænge",
+        "for at hænge",
+        "hænge",
+        "at hænge"
+      ],
+      "correct": "hænge",
+      "accepted_answers": [
+        "hænge"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "jeg-kan-ikke-loebe-mere",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du er træt.",
+      "sentence": "Jeg kan ikke ___ mere.",
+      "options": [
+        "for at løbe",
+        "til at løbe",
+        "løbe",
+        "at løbe"
+      ],
+      "correct": "løbe",
+      "accepted_answers": [
+        "løbe"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "du-skal-betale-regningen-inden-fredag",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du taler om en pligt.",
+      "sentence": "Du skal ___ regningen inden fredag.",
+      "options": [
+        "for at betale",
+        "til at betale",
+        "at betale",
+        "betale"
+      ],
+      "correct": "betale",
+      "accepted_answers": [
+        "betale"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "jeg-proever-at-laere-dansk",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du taler om dine planer.",
+      "sentence": "Jeg prøver ___ dansk.",
+      "options": [
+        "for at lære",
+        "lære",
+        "at lære",
+        "ved at lære"
+      ],
+      "correct": "at lære",
+      "accepted_answers": [
+        "at lære"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "hun-haaber-at-faa-jobbet",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du håber.",
+      "sentence": "Hun håber ___ jobbet.",
+      "options": [
+        "få",
+        "ved at få",
+        "for at få",
+        "at få"
+      ],
+      "correct": "at få",
+      "accepted_answers": [
+        "at få"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "det-begynder-at-regne",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det starter nu.",
+      "sentence": "Det begynder ___ .",
+      "options": [
+        "ved at regne",
+        "for at regne",
+        "at regne",
+        "regne"
+      ],
+      "correct": "at regne",
+      "accepted_answers": [
+        "at regne"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-glemte-at-laase-doeren",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du glemte noget.",
+      "sentence": "Jeg glemte ___ døren.",
+      "options": [
+        "for at låse",
+        "ved at låse",
+        "låse",
+        "at låse"
+      ],
+      "correct": "at låse",
+      "accepted_answers": [
+        "at låse"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-lover-at-komme-i-tide",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du lover noget.",
+      "sentence": "Jeg lover ___ i tide.",
+      "options": [
+        "ved at komme",
+        "komme",
+        "at komme",
+        "for at komme"
+      ],
+      "correct": "at komme",
+      "accepted_answers": [
+        "at komme"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "de-har-besluttet-at-flytte-til-norge",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har besluttet det.",
+      "sentence": "De har besluttet ___ til Norge.",
+      "options": [
+        "at flytte",
+        "flytte",
+        "for at flytte",
+        "ved at flytte"
+      ],
+      "correct": "at flytte",
+      "accepted_answers": [
+        "at flytte"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "han-oensker-at-blive-laege",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har et ønske.",
+      "sentence": "Han ønsker ___ læge.",
+      "options": [
+        "ved at blive",
+        "for at blive",
+        "at blive",
+        "blive"
+      ],
+      "correct": "at blive",
+      "accepted_answers": [
+        "at blive"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "hun-naegtede-at-betale-regningen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Han vil ikke.",
+      "sentence": "Hun nægtede ___ regningen.",
+      "options": [
+        "betale",
+        "for at betale",
+        "at betale",
+        "ved at betale"
+      ],
+      "correct": "at betale",
+      "accepted_answers": [
+        "at betale"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-foreslaar-at-holde-en-pause",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du kommer med et forslag.",
+      "sentence": "Jeg foreslår ___ en pause.",
+      "options": [
+        "ved at holde",
+        "holde",
+        "for at holde",
+        "at holde"
+      ],
+      "correct": "at holde",
+      "accepted_answers": [
+        "at holde"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "vi-forsoegte-at-ringe-til-ham-men-han-tog-ikke-telefonen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du gør dit bedste.",
+      "sentence": "Vi forsøgte ___ ham, men han tog ikke telefonen.",
+      "options": [
+        "for at ringe til",
+        "ved at ringe til",
+        "ringe til",
+        "at ringe til"
+      ],
+      "correct": "at ringe til",
+      "accepted_answers": [
+        "at ringe til"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "hun-valgte-at-studere-ved-universitetet",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du valgte.",
+      "sentence": "Hun valgte ___ ved universitetet.",
+      "options": [
+        "at studere",
+        "studere",
+        "ved at studere",
+        "for at studere"
+      ],
+      "correct": "at studere",
+      "accepted_answers": [
+        "at studere"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "vi-naaede-at-spise-foer-filmen",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har tid nok.",
+      "sentence": "Vi nåede ___ før filmen.",
+      "options": [
+        "spise",
+        "for at spise",
+        "ved at spise",
+        "at spise"
+      ],
+      "correct": "at spise",
+      "accepted_answers": [
+        "at spise"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-kan-lide-at-staa-op-tidligt-om-morgenen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er glad for det.",
+      "sentence": "Jeg kan lide ___ tidligt om morgenen.",
+      "options": [
+        "ved at stå op",
+        "for at stå op",
+        "at stå op",
+        "stå op"
+      ],
+      "correct": "at stå op",
+      "accepted_answers": [
+        "at stå op"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "boernene-elsker-at-lege-i-regnen",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du elsker det.",
+      "sentence": "Børnene elsker ___ i regnen.",
+      "options": [
+        "lege",
+        "at lege",
+        "ved at lege",
+        "for at lege"
+      ],
+      "correct": "at lege",
+      "accepted_answers": [
+        "at lege"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-hader-at-staa-op-tidligt",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du er ikke glad for det.",
+      "sentence": "Jeg hader ___ tidligt.",
+      "options": [
+        "at stå op",
+        "ved at stå op",
+        "stå op",
+        "for at stå op"
+      ],
+      "correct": "at stå op",
+      "accepted_answers": [
+        "at stå op"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-plejer-at-staa-op-klokken-seks",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det gør du hver dag.",
+      "sentence": "Jeg plejer ___ klokken seks.",
+      "options": [
+        "ved at stå op",
+        "stå op",
+        "for at stå op",
+        "at stå op"
+      ],
+      "correct": "at stå op",
+      "accepted_answers": [
+        "at stå op"
+      ],
+      "note": "\"Plejer\" kræver \"at\" + infinitiv."
+    },
+    {
+      "id": "det-lykkedes-mig-at-faa-billetter",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det lykkedes.",
+      "sentence": "Det lykkedes mig ___ billetter.",
+      "options": [
+        "få",
+        "ved at få",
+        "for at få",
+        "at få"
+      ],
+      "correct": "at få",
+      "accepted_answers": [
+        "at få"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-har-taenkt-mig-at-bestille-en-pizza",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er sulten.",
+      "sentence": "Jeg har tænkt mig ___ en pizza.",
+      "options": [
+        "bestille",
+        "at bestille",
+        "for at bestille",
+        "ved at bestille"
+      ],
+      "correct": "at bestille",
+      "accepted_answers": [
+        "at bestille"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\".",
+      "verify": true
+    },
+    {
+      "id": "vi-er-noedt-til-at-tage-af-sted-tidligt",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er nødt.",
+      "sentence": "Vi er nødt til ___ tidligt.",
+      "options": [
+        "ved at tage af sted",
+        "for at tage af sted",
+        "tage af sted",
+        "at tage af sted"
+      ],
+      "correct": "at tage af sted",
+      "accepted_answers": [
+        "at tage af sted"
+      ],
+      "note": "\"Være nødt til\" kræver \"til at\" + infinitiv."
+    },
+    {
+      "id": "han-tillod-os-at-gaa-tidligt",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du er uenig.",
+      "sentence": "Han tillod os ___ tidligt.",
+      "options": [
+        "for at gå",
+        "ved at gå",
+        "at gå",
+        "gå"
+      ],
+      "correct": "at gå",
+      "accepted_answers": [
+        "at gå"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "jeg-kan-ikke-forestille-mig-at-bo-uden-dig",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du elsker ham.",
+      "sentence": "Jeg kan ikke forestille mig ___ uden dig.",
+      "options": [
+        "bo",
+        "at bo",
+        "ved at bo",
+        "for at bo"
+      ],
+      "correct": "at bo",
+      "accepted_answers": [
+        "at bo"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "hun-gik-tidligt-hjemmefra-for-at-naa-toget",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Hun vil nå toget.",
+      "sentence": "Hun gik tidligt hjemmefra ___ toget.",
+      "options": [
+        "at nå",
+        "ved at nå",
+        "for at nå",
+        "til at nå"
+      ],
+      "correct": "for at nå",
+      "accepted_answers": [
+        "for at nå"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "han-tager-et-ekstra-job-for-at-koebe-en-bil",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Han vil købe en bil.",
+      "sentence": "Han tager et ekstra job ___ en bil.",
+      "options": [
+        "at købe",
+        "ved at købe",
+        "til at købe",
+        "for at købe"
+      ],
+      "correct": "for at købe",
+      "accepted_answers": [
+        "for at købe"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "jeg-laeser-aviser-for-at-laere-bedre-dansk",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil lære dansk.",
+      "sentence": "Jeg læser aviser ___ bedre dansk.",
+      "options": [
+        "at lære",
+        "for at lære",
+        "ved at lære",
+        "til at lære"
+      ],
+      "correct": "for at lære",
+      "accepted_answers": [
+        "for at lære"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "jeg-ringer-til-hende-for-at-bede-om-hjaelp",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du vil spørge om noget.",
+      "sentence": "Jeg ringer til hende ___ om hjælp.",
+      "options": [
+        "til at bede",
+        "ved at bede",
+        "at bede",
+        "for at bede"
+      ],
+      "correct": "for at bede",
+      "accepted_answers": [
+        "for at bede"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "jeg-tager-i-supermarkedet-for-at-koebe-maelk",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du skal købe mælk.",
+      "sentence": "Jeg tager i supermarkedet ___ mælk.",
+      "options": [
+        "til at købe",
+        "at købe",
+        "ved at købe",
+        "for at købe"
+      ],
+      "correct": "for at købe",
+      "accepted_answers": [
+        "for at købe"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "han-tager-medicin-for-at-blive-rask",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil blive rask.",
+      "sentence": "Han tager medicin ___ rask.",
+      "options": [
+        "for at blive",
+        "at blive",
+        "til at blive",
+        "ved at blive"
+      ],
+      "correct": "for at blive",
+      "accepted_answers": [
+        "for at blive"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "vi-koerer-til-jylland-for-at-besoege-vores-foraeldre",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du vil se dine forældre.",
+      "sentence": "Vi kører til Jylland ___ vores forældre.",
+      "options": [
+        "til at besøge",
+        "ved at besøge",
+        "for at besøge",
+        "at besøge"
+      ],
+      "correct": "for at besøge",
+      "accepted_answers": [
+        "for at besøge"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "hun-tager-briller-paa-for-at-se-bedre",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil se bedre.",
+      "sentence": "Hun tager briller på ___ bedre.",
+      "options": [
+        "ved at se",
+        "for at se",
+        "at se",
+        "til at se"
+      ],
+      "correct": "for at se",
+      "accepted_answers": [
+        "for at se"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "han-sagde-det-for-at-goere-indtryk-paa-hende",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil gøre indtryk.",
+      "sentence": "Han sagde det ___ indtryk på hende.",
+      "options": [
+        "at gøre",
+        "til at gøre",
+        "ved at gøre",
+        "for at gøre"
+      ],
+      "correct": "for at gøre",
+      "accepted_answers": [
+        "for at gøre"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "jeg-loeber-hver-dag-for-at-holde-mig-i-form",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du vil være i form.",
+      "sentence": "Jeg løber hver dag ___ i form.",
+      "options": [
+        "til at holde mig",
+        "for at holde mig",
+        "ved at holde mig",
+        "at holde mig"
+      ],
+      "correct": "for at holde mig",
+      "accepted_answers": [
+        "for at holde mig"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "vi-tog-tidligt-af-sted-for-at-undgaa-trafikken",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil undgå trafik.",
+      "sentence": "Vi tog tidligt af sted ___ trafikken.",
+      "options": [
+        "ved at undgå",
+        "for at undgå",
+        "til at undgå",
+        "at undgå"
+      ],
+      "correct": "for at undgå",
+      "accepted_answers": [
+        "for at undgå"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "hun-stillede-sig-i-koe-for-at-faa-en-plads",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil have en plads.",
+      "sentence": "Hun stillede sig i kø ___ en plads.",
+      "options": [
+        "ved at få",
+        "at få",
+        "for at få",
+        "til at få"
+      ],
+      "correct": "for at få",
+      "accepted_answers": [
+        "for at få"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "han-tog-til-berlin-for-at-laere-tysk",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil lære noget nyt.",
+      "sentence": "Han tog til Berlin ___ tysk.",
+      "options": [
+        "til at lære",
+        "at lære",
+        "ved at lære",
+        "for at lære"
+      ],
+      "correct": "for at lære",
+      "accepted_answers": [
+        "for at lære"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "hun-gik-i-butikken-for-at-koebe-broed",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil købe ind.",
+      "sentence": "Hun gik i butikken ___ brød.",
+      "options": [
+        "til at købe",
+        "for at købe",
+        "ved at købe",
+        "at købe"
+      ],
+      "correct": "for at købe",
+      "accepted_answers": [
+        "for at købe"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "han-arbejder-hver-weekend-for-at-tjene-flere-penge",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du vil have flere penge.",
+      "sentence": "Han arbejder hver weekend ___ flere penge.",
+      "options": [
+        "for at tjene",
+        "ved at tjene",
+        "til at tjene",
+        "at tjene"
+      ],
+      "correct": "for at tjene",
+      "accepted_answers": [
+        "for at tjene"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "de-arbejder-hele-natten-for-at-naa-deadlinen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil nå din deadline.",
+      "sentence": "De arbejder hele natten ___ deadlinen.",
+      "options": [
+        "at nå",
+        "for at nå",
+        "ved at nå",
+        "til at nå"
+      ],
+      "correct": "for at nå",
+      "accepted_answers": [
+        "for at nå"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "jeg-tog-til-festen-for-at-moede-nogle-nye-mennesker",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du vil lære nogen at kende.",
+      "sentence": "Jeg tog til festen ___ nogle nye mennesker.",
+      "options": [
+        "ved at møde",
+        "for at møde",
+        "at møde",
+        "til at møde"
+      ],
+      "correct": "for at møde",
+      "accepted_answers": [
+        "for at møde"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "jeg-skriver-til-dig-for-at-forklare-det-hele",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du vil forklare.",
+      "sentence": "Jeg skriver til dig ___ det hele.",
+      "options": [
+        "til at forklare",
+        "for at forklare",
+        "at forklare",
+        "ved at forklare"
+      ],
+      "correct": "for at forklare",
+      "accepted_answers": [
+        "for at forklare"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "hun-tjekkede-tallene-to-gange-for-at-undgaa-fejl",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du vil sikre dig.",
+      "sentence": "Hun tjekkede tallene to gange ___ fejl.",
+      "options": [
+        "til at undgå",
+        "ved at undgå",
+        "for at undgå",
+        "at undgå"
+      ],
+      "correct": "for at undgå",
+      "accepted_answers": [
+        "for at undgå"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "man-bliver-staerk-ved-at-traene-hver-dag",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du bliver stærk.",
+      "sentence": "Man bliver stærk ___ hver dag.",
+      "options": [
+        "for at træne",
+        "ved at træne",
+        "til at træne",
+        "at træne"
+      ],
+      "correct": "ved at træne",
+      "accepted_answers": [
+        "ved at træne"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "han-kom-til-skade-ved-at-falde-ned-ad-trappen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det var et uheld.",
+      "sentence": "Han kom til skade ___ ned ad trappen.",
+      "options": [
+        "for at falde",
+        "at falde",
+        "til at falde",
+        "ved at falde"
+      ],
+      "correct": "ved at falde",
+      "accepted_answers": [
+        "ved at falde"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "du-sparer-penge-ved-at-lave-mad-hjemme",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du sparer penge.",
+      "sentence": "Du sparer penge ___ mad hjemme.",
+      "options": [
+        "til at lave",
+        "at lave",
+        "ved at lave",
+        "for at lave"
+      ],
+      "correct": "ved at lave",
+      "accepted_answers": [
+        "ved at lave"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "hun-skar-sig-i-fingeren-ved-at-skaere-broed",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det var en ulykke.",
+      "sentence": "Hun skar sig i fingeren ___ brød.",
+      "options": [
+        "ved at skære",
+        "at skære",
+        "til at skære",
+        "for at skære"
+      ],
+      "correct": "ved at skære",
+      "accepted_answers": [
+        "ved at skære"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "man-bliver-klogere-ved-at-laese-meget",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du bliver klogere.",
+      "sentence": "Man bliver klogere ___ meget.",
+      "options": [
+        "at læse",
+        "ved at læse",
+        "til at læse",
+        "for at læse"
+      ],
+      "correct": "ved at læse",
+      "accepted_answers": [
+        "ved at læse"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "jeg-er-ved-at-lave-aftensmad-saa-du-kan-ikke-komme-ind",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er ved at ske.",
+      "sentence": "Jeg er ___ aftensmad, så du kan ikke komme ind i køkkenet.",
+      "options": [
+        "til at lave",
+        "for at lave",
+        "ved at lave",
+        "at lave"
+      ],
+      "correct": "ved at lave",
+      "accepted_answers": [
+        "ved at lave"
+      ],
+      "note": "\"Være ved at\" + infinitiv udtrykker, at noget er i gang eller lige ved at ske."
+    },
+    {
+      "id": "vi-er-ved-at-pakke-saa-vent-lidt",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det er ved at ske.",
+      "sentence": "Vi er ___ , så vent lidt.",
+      "options": [
+        "til at pakke",
+        "at pakke",
+        "for at pakke",
+        "ved at pakke"
+      ],
+      "correct": "ved at pakke",
+      "accepted_answers": [
+        "ved at pakke"
+      ],
+      "note": "\"Være ved at\" + infinitiv udtrykker, at noget er i gang eller lige ved at ske."
+    },
+    {
+      "id": "maden-er-ved-at-blive-faerdig",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er ved at ske.",
+      "sentence": "Maden er ___ færdig.",
+      "options": [
+        "til at blive",
+        "at blive",
+        "ved at blive",
+        "for at blive"
+      ],
+      "correct": "ved at blive",
+      "accepted_answers": [
+        "ved at blive"
+      ],
+      "note": "\"Være ved at\" + infinitiv udtrykker, at noget er i gang eller lige ved at ske."
+    },
+    {
+      "id": "jeg-var-ved-at-falde-i-soevn-da-telefonen-ringede",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er næsten sket.",
+      "sentence": "Jeg var ___ i søvn, da telefonen ringede.",
+      "options": [
+        "til at falde",
+        "ved at falde",
+        "for at falde",
+        "at falde"
+      ],
+      "correct": "ved at falde",
+      "accepted_answers": [
+        "ved at falde"
+      ],
+      "note": "\"Være ved at\" + infinitiv udtrykker, at noget er i gang eller lige ved at ske."
+    },
+    {
+      "id": "toget-er-ved-at-koere",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det er lige ved at ske.",
+      "sentence": "Toget er ___ .",
+      "options": [
+        "for at køre",
+        "til at køre",
+        "ved at køre",
+        "at køre"
+      ],
+      "correct": "ved at køre",
+      "accepted_answers": [
+        "ved at køre"
+      ],
+      "note": "\"Være ved at\" + infinitiv udtrykker, at noget er i gang eller lige ved at ske."
+    },
+    {
+      "id": "han-blev-beroemt-ved-at-vinde-de-olympiske-lege",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er en metode.",
+      "sentence": "Han blev berømt ___ de olympiske lege.",
+      "options": [
+        "til at vinde",
+        "at vinde",
+        "ved at vinde",
+        "for at vinde"
+      ],
+      "correct": "ved at vinde",
+      "accepted_answers": [
+        "ved at vinde"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "vi-loeste-problemet-ved-at-tale-med-kunderne",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du finder en løsning.",
+      "sentence": "Vi løste problemet ___ med kunderne.",
+      "options": [
+        "for at tale",
+        "til at tale",
+        "ved at tale",
+        "at tale"
+      ],
+      "correct": "ved at tale",
+      "accepted_answers": [
+        "ved at tale"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "man-forbedrer-sin-udtale-ved-at-laese-hoejt",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du forbedrer dig.",
+      "sentence": "Man forbedrer sin udtale ___ højt.",
+      "options": [
+        "ved at læse",
+        "for at læse",
+        "at læse",
+        "til at læse"
+      ],
+      "correct": "ved at læse",
+      "accepted_answers": [
+        "ved at læse"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "hun-tabte-sig-ved-at-gaa-hver-dag",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du taber dig.",
+      "sentence": "Hun tabte sig ___ hver dag.",
+      "options": [
+        "at gå",
+        "for at gå",
+        "ved at gå",
+        "til at gå"
+      ],
+      "correct": "ved at gå",
+      "accepted_answers": [
+        "ved at gå"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet.",
+      "verify": true
+    },
+    {
+      "id": "man-kan-spare-tid-ved-at-koere-sammen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er et trick.",
+      "sentence": "Man kan spare tid ___ sammen.",
+      "options": [
+        "at køre",
+        "til at køre",
+        "ved at køre",
+        "for at køre"
+      ],
+      "correct": "ved at køre",
+      "accepted_answers": [
+        "ved at køre"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet.",
+      "verify": true
+    },
+    {
+      "id": "hun-reddede-situationen-ved-at-forblive-rolig",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du løste det.",
+      "sentence": "Hun reddede situationen ___ rolig.",
+      "options": [
+        "ved at forblive",
+        "at forblive",
+        "til at forblive",
+        "for at forblive"
+      ],
+      "correct": "ved at forblive",
+      "accepted_answers": [
+        "ved at forblive"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "boernene-er-ved-at-falde-i-soevn-2",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det er ved at ske.",
+      "sentence": "Børnene er ___ i søvn.",
+      "options": [
+        "at falde",
+        "til at falde",
+        "ved at falde",
+        "for at falde"
+      ],
+      "correct": "ved at falde",
+      "accepted_answers": [
+        "ved at falde"
+      ],
+      "note": "\"Være ved at\" + infinitiv udtrykker, at noget er i gang eller lige ved at ske."
+    },
+    {
+      "id": "man-laerer-ved-at-begaa-fejl",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du lærer ved erfaring.",
+      "sentence": "Man lærer ___ fejl.",
+      "options": [
+        "til at begå",
+        "ved at begå",
+        "for at begå",
+        "at begå"
+      ],
+      "correct": "ved at begå",
+      "accepted_answers": [
+        "ved at begå"
+      ],
+      "note": "\"Ved at\" + infinitiv udtrykker måden eller midlet."
+    },
+    {
+      "id": "hun-er-god-til-at-synge",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du roser hende.",
+      "sentence": "Hun er god ___ .",
+      "options": [
+        "at synge",
+        "ved at synge",
+        "for at synge",
+        "til at synge"
+      ],
+      "correct": "til at synge",
+      "accepted_answers": [
+        "til at synge"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "jeg-har-ikke-tid-til-at-laese",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har travlt.",
+      "sentence": "Jeg har ikke tid ___ .",
+      "options": [
+        "at læse",
+        "til at læse",
+        "ved at læse",
+        "for at læse"
+      ],
+      "correct": "til at læse",
+      "accepted_answers": [
+        "til at læse"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "maskinen-bruges-til-at-skaere-broed",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er et redskab.",
+      "sentence": "Maskinen bruges ___ brød.",
+      "options": [
+        "for at skære",
+        "til at skære",
+        "ved at skære",
+        "at skære"
+      ],
+      "correct": "til at skære",
+      "accepted_answers": [
+        "til at skære"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "jeg-har-lyst-til-at-gaa-en-tur",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har lyst.",
+      "sentence": "Jeg har lyst ___ en tur.",
+      "options": [
+        "for at gå",
+        "at gå",
+        "til at gå",
+        "ved at gå"
+      ],
+      "correct": "til at gå",
+      "accepted_answers": [
+        "til at gå"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "hun-er-ikke-i-stand-til-at-loefte-tunge-ting",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er ikke i stand.",
+      "sentence": "Hun er ikke i stand ___ tunge ting.",
+      "options": [
+        "at løfte",
+        "til at løfte",
+        "for at løfte",
+        "ved at løfte"
+      ],
+      "correct": "til at løfte",
+      "accepted_answers": [
+        "til at løfte"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "vi-har-ikke-penge-til-at-koebe-en-ny-bil",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har ikke råd.",
+      "sentence": "Vi har ikke penge ___ en ny bil.",
+      "options": [
+        "til at købe",
+        "ved at købe",
+        "at købe",
+        "for at købe"
+      ],
+      "correct": "til at købe",
+      "accepted_answers": [
+        "til at købe"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "de-er-noedt-til-at-staa-op-tidligt",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har ikke noget valg.",
+      "sentence": "De er nødt ___ tidligt.",
+      "options": [
+        "for at stå op",
+        "at stå op",
+        "til at stå op",
+        "ved at stå op"
+      ],
+      "correct": "til at stå op",
+      "accepted_answers": [
+        "til at stå op"
+      ],
+      "note": "\"Være nødt til\" kræver \"til at\" + infinitiv."
+    },
+    {
+      "id": "det-er-svaert-at-laere-dansk",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det er svært.",
+      "sentence": "Det er svært ___ dansk.",
+      "options": [
+        "lære",
+        "at lære",
+        "til at lære",
+        "for at lære"
+      ],
+      "correct": "at lære",
+      "accepted_answers": [
+        "at lære"
+      ],
+      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv."
+    },
+    {
+      "id": "det-er-nemt-at-glemme-noeglen",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Det er nemt.",
+      "sentence": "Det er nemt ___ nøglen.",
+      "options": [
+        "til at glemme",
+        "glemme",
+        "at glemme",
+        "for at glemme"
+      ],
+      "correct": "at glemme",
+      "accepted_answers": [
+        "at glemme"
+      ],
+      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv."
+    },
+    {
+      "id": "det-er-dejligt-at-se-dig",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du er glad.",
+      "sentence": "Det er dejligt ___ dig.",
+      "options": [
+        "se",
+        "til at se",
+        "at se",
+        "for at se"
+      ],
+      "correct": "at se",
+      "accepted_answers": [
+        "at se"
+      ],
+      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv."
+    },
+    {
+      "id": "jeg-har-brug-for-at-hvile-mig-lidt",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har brug for noget.",
+      "sentence": "Jeg har brug ___ mig lidt.",
+      "options": [
+        "at hvile",
+        "for at hvile",
+        "til at hvile",
+        "ved at hvile"
+      ],
+      "correct": "for at hvile",
+      "accepted_answers": [
+        "for at hvile"
+      ],
+      "note": "\"Have brug for\" kræver \"for at\" + infinitiv."
+    },
+    {
+      "id": "jeg-er-glad-for-at-se-dig",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er glad.",
+      "sentence": "Jeg er glad ___ dig.",
+      "options": [
+        "for at se",
+        "ved at se",
+        "at se",
+        "til at se"
+      ],
+      "correct": "for at se",
+      "accepted_answers": [
+        "for at se"
+      ],
+      "note": "\"Glad for\" kræver \"for at\" + infinitiv."
+    },
+    {
+      "id": "han-er-stolt-af-at-vaere-dansker",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er stolt.",
+      "sentence": "Han er stolt ___ dansker.",
+      "options": [
+        "af at være",
+        "for at være",
+        "til at være",
+        "at være"
+      ],
+      "correct": "af at være",
+      "accepted_answers": [
+        "af at være"
+      ],
+      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv."
+    },
+    {
+      "id": "jeg-er-sikker-paa-at-klare-det",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du er sikker.",
+      "sentence": "Jeg er sikker ___ det.",
+      "options": [
+        "for at klare",
+        "til at klare",
+        "at klare",
+        "på at klare"
+      ],
+      "correct": "på at klare",
+      "accepted_answers": [
+        "på at klare"
+      ],
+      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv.",
+      "verify": true
+    },
+    {
+      "id": "vi-er-klar-til-at-starte",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er klar.",
+      "sentence": "Vi er klar ___ .",
+      "options": [
+        "for at starte",
+        "at starte",
+        "ved at starte",
+        "til at starte"
+      ],
+      "correct": "til at starte",
+      "accepted_answers": [
+        "til at starte"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "hun-er-begejstret-for-at-rejse",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du er begejstret.",
+      "sentence": "Hun er begejstret ___ .",
+      "options": [
+        "at rejse",
+        "for at rejse",
+        "ved at rejse",
+        "til at rejse"
+      ],
+      "correct": "for at rejse",
+      "accepted_answers": [
+        "for at rejse"
+      ],
+      "note": "\"Glad for\" kræver \"for at\" + infinitiv."
+    },
+    {
+      "id": "det-er-vigtigt-at-passe-paa-sig-selv",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Det er vigtigt.",
+      "sentence": "Det er vigtigt ___ sig selv.",
+      "options": [
+        "at passe på",
+        "til at passe på",
+        "for at passe på",
+        "passe på"
+      ],
+      "correct": "at passe på",
+      "accepted_answers": [
+        "at passe på"
+      ],
+      "note": "Efter adjektiver som svært, nemt og dejligt står \"at\" + infinitiv."
+    },
+    {
+      "id": "jeg-hoerte-hende-synge-i-brusebadet",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du hørte det.",
+      "sentence": "Jeg hørte hende ___ i brusebadet.",
+      "options": [
+        "at synge",
+        "for at synge",
+        "sunget",
+        "synge"
+      ],
+      "correct": "synge",
+      "accepted_answers": [
+        "synge"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "jeg-saa-ham-gaa-over-gaden",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du så det.",
+      "sentence": "Jeg så ham ___ over gaden.",
+      "options": [
+        "at gå",
+        "for at gå",
+        "gået",
+        "gå"
+      ],
+      "correct": "gå",
+      "accepted_answers": [
+        "gå"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "jeg-kunne-maerke-jorden-ryste",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du mærkede det.",
+      "sentence": "Jeg kunne mærke jorden ___ .",
+      "options": [
+        "rystet",
+        "ryste",
+        "for at ryste",
+        "at ryste"
+      ],
+      "correct": "ryste",
+      "accepted_answers": [
+        "ryste"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "vi-hoerte-boernene-lege-i-haven",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du hørte det.",
+      "sentence": "Vi hørte børnene ___ i haven.",
+      "options": [
+        "for at lege",
+        "leget",
+        "lege",
+        "at lege"
+      ],
+      "correct": "lege",
+      "accepted_answers": [
+        "lege"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "hun-saa-toget-koere",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du så det.",
+      "sentence": "Hun så toget ___ .",
+      "options": [
+        "kørt",
+        "køre",
+        "for at køre",
+        "at køre"
+      ],
+      "correct": "køre",
+      "accepted_answers": [
+        "køre"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "han-hoerte-nogen-banke-paa-doeren",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du hørte det.",
+      "sentence": "Han hørte nogen ___ på døren.",
+      "options": [
+        "for at banke",
+        "at banke",
+        "banket",
+        "banke"
+      ],
+      "correct": "banke",
+      "accepted_answers": [
+        "banke"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "jeg-foelte-mit-hjerte-slaa-hurtigere",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du følte det.",
+      "sentence": "Jeg følte mit hjerte ___ hurtigere.",
+      "options": [
+        "slået",
+        "slå",
+        "for at slå",
+        "at slå"
+      ],
+      "correct": "slå",
+      "accepted_answers": [
+        "slå"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge).",
+      "verify": true
+    },
+    {
+      "id": "jeg-saa-hende-vinke-til-sin-ven",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du så det.",
+      "sentence": "Jeg så hende ___ til sin ven.",
+      "options": [
+        "at vinke",
+        "for at vinke",
+        "vinket",
+        "vinke"
+      ],
+      "correct": "vinke",
+      "accepted_answers": [
+        "vinke"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "vi-saa-solen-gaa-ned-over-havet",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du overværede det.",
+      "sentence": "Vi så solen ___ over havet.",
+      "options": [
+        "for at gå ned",
+        "gå ned",
+        "at gå ned",
+        "gået ned"
+      ],
+      "correct": "gå ned",
+      "accepted_answers": [
+        "gå ned"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "hun-hoerte-ham-komme",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du hørte det.",
+      "sentence": "Hun hørte ham ___ .",
+      "options": [
+        "komme",
+        "at komme",
+        "for at komme",
+        "kommet"
+      ],
+      "correct": "komme",
+      "accepted_answers": [
+        "komme"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "jeg-saa-mange-mennesker-loebe-efter-bussen",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du lagde mærke til det.",
+      "sentence": "Jeg så mange mennesker ___ efter bussen.",
+      "options": [
+        "løbet",
+        "for at løbe",
+        "løbe",
+        "at løbe"
+      ],
+      "correct": "løbe",
+      "accepted_answers": [
+        "løbe"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "jeg-skal-have-bilen-repareret",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du fik en tjeneste.",
+      "sentence": "Jeg skal have bilen ___ .",
+      "options": [
+        "til at reparere",
+        "repareret",
+        "reparere",
+        "at reparere"
+      ],
+      "correct": "repareret",
+      "accepted_answers": [
+        "repareret"
+      ],
+      "note": "\"Få noget + participium\" bruges, når man lader andre gøre noget (Jeg fik bilen repareret)."
+    },
+    {
+      "id": "vi-fik-huset-malet-i-sommer",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du bestilte et job.",
+      "sentence": "Vi fik huset ___ i sommer.",
+      "options": [
+        "malet",
+        "male",
+        "at male",
+        "til at male"
+      ],
+      "correct": "malet",
+      "accepted_answers": [
+        "malet"
+      ],
+      "note": "\"Få noget + participium\" bruges, når man lader andre gøre noget (Jeg fik bilen repareret)."
+    },
+    {
+      "id": "jeg-fik-ham-til-at-tage-med",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du overtalte.",
+      "sentence": "Jeg fik ham ___ med.",
+      "options": [
+        "at tage",
+        "for at tage",
+        "til at tage",
+        "tage"
+      ],
+      "correct": "til at tage",
+      "accepted_answers": [
+        "til at tage"
+      ],
+      "note": "\"Få nogen til at\" + infinitiv betyder at overtale eller forårsage, at nogen gør noget."
+    },
+    {
+      "id": "hun-fik-mig-til-at-grine-hoejt",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Hun fik dig til noget.",
+      "sentence": "Hun fik mig ___ højt.",
+      "options": [
+        "at grine",
+        "til at grine",
+        "for at grine",
+        "grine"
+      ],
+      "correct": "til at grine",
+      "accepted_answers": [
+        "til at grine"
+      ],
+      "note": "\"Få nogen til at\" + infinitiv betyder at overtale eller forårsage, at nogen gør noget."
+    },
+    {
+      "id": "han-lod-mig-gaa",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Han tillod det.",
+      "sentence": "Han lod mig ___ .",
+      "options": [
+        "gå",
+        "for at gå",
+        "at gå",
+        "til at gå"
+      ],
+      "correct": "gå",
+      "accepted_answers": [
+        "gå"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\"."
+    },
+    {
+      "id": "jeg-lod-doeren-staa-aaben",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du lod det ske.",
+      "sentence": "Jeg lod døren ___ åben.",
+      "options": [
+        "til at stå",
+        "stå",
+        "for at stå",
+        "at stå"
+      ],
+      "correct": "stå",
+      "accepted_answers": [
+        "stå"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\"."
+    },
+    {
+      "id": "han-lod-os-vente-i-en-time",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du lod det ske.",
+      "sentence": "Han lod os ___ i en time.",
+      "options": [
+        "til at vente",
+        "for at vente",
+        "at vente",
+        "vente"
+      ],
+      "correct": "vente",
+      "accepted_answers": [
+        "vente"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\"."
+    },
+    {
+      "id": "hun-lod-sig-hjaelpe-af-sin-ven",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du fik noget gjort.",
+      "sentence": "Hun lod sig ___ af sin ven.",
+      "options": [
+        "at hjælpe",
+        "til at hjælpe",
+        "for at hjælpe",
+        "hjælpe"
+      ],
+      "correct": "hjælpe",
+      "accepted_answers": [
+        "hjælpe"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\".",
+      "verify": true
+    },
+    {
+      "id": "vi-skal-have-tapetet-sat-op",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du bestilte det.",
+      "sentence": "Vi skal have tapetet ___ .",
+      "options": [
+        "sætte op",
+        "sat op",
+        "til at sætte op",
+        "at sætte op"
+      ],
+      "correct": "sat op",
+      "accepted_answers": [
+        "sat op"
+      ],
+      "note": "\"Få noget + participium\" bruges, når man lader andre gøre noget (Jeg fik bilen repareret)."
+    },
+    {
+      "id": "han-lod-mig-forklare-hvad-der-var-sket",
+      "level": "C1",
+      "mode": "infinitive",
+      "context": "Du lod det ske.",
+      "sentence": "Han lod mig ___ , hvad der var sket.",
+      "options": [
+        "for at forklare",
+        "forklare",
+        "til at forklare",
+        "at forklare"
+      ],
+      "correct": "forklare",
+      "accepted_answers": [
+        "forklare"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\"."
+    },
+    {
+      "id": "jeg-fik-rapporten-afleveret-i-tide",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du fik det gjort.",
+      "sentence": "Jeg fik rapporten ___ i tide.",
+      "options": [
+        "afleveret",
+        "at aflevere",
+        "aflevere",
+        "til at aflevere"
+      ],
+      "correct": "afleveret",
+      "accepted_answers": [
+        "afleveret"
+      ],
+      "note": "\"Få noget + participium\" bruges, når man lader andre gøre noget (Jeg fik bilen repareret)."
+    },
+    {
+      "id": "vi-lod-hende-vaelge-selv",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du lod hende selv bestemme.",
+      "sentence": "Vi lod hende ___ selv.",
+      "options": [
+        "vælge",
+        "til at vælge",
+        "for at vælge",
+        "at vælge"
+      ],
+      "correct": "vælge",
+      "accepted_answers": [
+        "vælge"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\"."
+    },
+    {
+      "id": "det-lykkedes-mig-at-faa-ham-til-at-skifte-mening",
+      "level": "C1",
+      "mode": "infinitive",
+      "context": "Du overtalte.",
+      "sentence": "Det lykkedes mig at få ham ___ .",
+      "options": [
+        "til at skifte mening",
+        "skifte mening",
+        "at skifte mening",
+        "for at skifte mening"
+      ],
+      "correct": "til at skifte mening",
+      "accepted_answers": [
+        "til at skifte mening"
+      ],
+      "note": "\"Få nogen til at\" + infinitiv betyder at overtale eller forårsage, at nogen gør noget."
+    },
+    {
+      "id": "vi-har-faaet-vinduerne-pudset",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du bestilte det.",
+      "sentence": "Vi har fået vinduerne ___ .",
+      "options": [
+        "at pudse",
+        "pudse",
+        "til at pudse",
+        "pudset"
+      ],
+      "correct": "pudset",
+      "accepted_answers": [
+        "pudset"
+      ],
+      "note": "\"Få noget + participium\" bruges, når man lader andre gøre noget (Jeg fik bilen repareret)."
+    },
+    {
+      "id": "han-gik-uden-at-sige-farvel",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Han sagde ikke farvel.",
+      "sentence": "Han gik ___ farvel.",
+      "options": [
+        "for at sige",
+        "ved at sige",
+        "at sige",
+        "uden at sige"
+      ],
+      "correct": "uden at sige",
+      "accepted_answers": [
+        "uden at sige"
+      ],
+      "note": "\"Uden at\" + infinitiv betyder, at noget ikke sker samtidig."
+    },
+    {
+      "id": "i-stedet-for-at-ringe-sendte-hun-en-mail",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Hun ringede ikke; hun valgte en anden måde.",
+      "sentence": "___ , sendte hun en mail.",
+      "options": [
+        "Efter at ringe",
+        "I stedet for at ringe",
+        "Ved at ringe",
+        "For at ringe"
+      ],
+      "correct": "I stedet for at ringe",
+      "accepted_answers": [
+        "I stedet for at ringe"
+      ],
+      "note": "\"I stedet for at\" + infinitiv udtrykker et alternativ."
+    },
+    {
+      "id": "jeg-kom-ind-uden-at-banke-paa",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du var uopmærksom.",
+      "sentence": "Jeg kom ind ___ .",
+      "options": [
+        "uden at banke på",
+        "at banke på",
+        "ved at banke på",
+        "for at banke på"
+      ],
+      "correct": "uden at banke på",
+      "accepted_answers": [
+        "uden at banke på"
+      ],
+      "note": "\"Uden at\" + infinitiv betyder, at noget ikke sker samtidig."
+    },
+    {
+      "id": "han-klarede-det-selv-uden-at-bede-om-hjaelp",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Han tog ikke imod hjælp.",
+      "sentence": "Han klarede det selv ___ hjælp.",
+      "options": [
+        "uden at bede om",
+        "at bede om",
+        "ved at bede om",
+        "for at bede om"
+      ],
+      "correct": "uden at bede om",
+      "accepted_answers": [
+        "uden at bede om"
+      ],
+      "note": "\"Uden at\" + infinitiv betyder, at noget ikke sker samtidig."
+    },
+    {
+      "id": "lad-vaere-med-at-raabe",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du bad ham om at lade være.",
+      "sentence": "Lad ___ råbe!",
+      "options": [
+        "være at",
+        "være ved at",
+        "være for at",
+        "være med at"
+      ],
+      "correct": "være med at",
+      "accepted_answers": [
+        "være med at"
+      ],
+      "note": "\"Lade være med at\" og \"holde op med at\" kræver \"med at\" + infinitiv."
+    },
+    {
+      "id": "jeg-holdt-op-med-at-ryge-i-2018",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du var færdig.",
+      "sentence": "Jeg holdt ___ ryge i 2018.",
+      "options": [
+        "op med at",
+        "op ved at",
+        "op for at",
+        "op at"
+      ],
+      "correct": "op med at",
+      "accepted_answers": [
+        "op med at"
+      ],
+      "note": "\"Lade være med at\" og \"holde op med at\" kræver \"med at\" + infinitiv."
+    },
+    {
+      "id": "han-forlod-rummet-uden-at-sige-et-ord",
+      "level": "C1",
+      "mode": "infinitive",
+      "context": "Du forklarer en udeladelse.",
+      "sentence": "Han forlod rummet ___ et ord.",
+      "options": [
+        "for at sige",
+        "uden at sige",
+        "ved at sige",
+        "at sige"
+      ],
+      "correct": "uden at sige",
+      "accepted_answers": [
+        "uden at sige"
+      ],
+      "note": "\"Uden at\" + infinitiv betyder, at noget ikke sker samtidig."
+    },
+    {
+      "id": "min-bror-kan-ikke-svoemme",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du har ikke lært det.",
+      "sentence": "Min bror kan ikke ___ .",
+      "options": [
+        "til at svømme",
+        "at svømme",
+        "for at svømme",
+        "svømme"
+      ],
+      "correct": "svømme",
+      "accepted_answers": [
+        "svømme"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "jeg-vil-gerne-rejse-til-italien",
+      "level": "A2",
+      "mode": "infinitive",
+      "context": "Du planlægger en ferie.",
+      "sentence": "Jeg vil gerne ___ til Italien.",
+      "options": [
+        "til at rejse",
+        "rejse",
+        "at rejse",
+        "for at rejse"
+      ],
+      "correct": "rejse",
+      "accepted_answers": [
+        "rejse"
+      ],
+      "note": "Efter modalverber (kan, skal, vil, må, bør, burde, ...) står infinitiv uden \"at\"."
+    },
+    {
+      "id": "vi-overvejer-at-saelge-lejligheden",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du overvejer at flytte.",
+      "sentence": "Vi overvejer ___ lejligheden.",
+      "options": [
+        "sælge",
+        "at sælge",
+        "ved at sælge",
+        "for at sælge"
+      ],
+      "correct": "at sælge",
+      "accepted_answers": [
+        "at sælge"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "hun-er-begyndt-at-spille-tennis",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har fået en ny hobby.",
+      "sentence": "Hun er begyndt ___ tennis.",
+      "options": [
+        "ved at spille",
+        "spille",
+        "for at spille",
+        "at spille"
+      ],
+      "correct": "at spille",
+      "accepted_answers": [
+        "at spille"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "hun-indvilgede-i-at-tage-med-os",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Hun sagde ja til sidst.",
+      "sentence": "Hun indvilgede ___ med os.",
+      "options": [
+        "i at tage",
+        "at tage",
+        "for at tage",
+        "ved at tage"
+      ],
+      "correct": "i at tage",
+      "accepted_answers": [
+        "i at tage"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "vi-haaber-at-ses-hinanden-snart",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du venter på at mødes.",
+      "sentence": "Vi håber ___ hinanden snart.",
+      "options": [
+        "ses",
+        "for at ses",
+        "at ses",
+        "ved at ses"
+      ],
+      "correct": "at ses",
+      "accepted_answers": [
+        "at ses"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    },
+    {
+      "id": "han-tog-ud-for-at-faa-luft",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du har et formål.",
+      "sentence": "Han tog ud ___ luft.",
+      "options": [
+        "for at få",
+        "til at få",
+        "at få",
+        "ved at få"
+      ],
+      "correct": "for at få",
+      "accepted_answers": [
+        "for at få"
+      ],
+      "note": "\"For at\" + infinitiv udtrykker formål: hvorfor man gør noget."
+    },
+    {
+      "id": "hun-er-vant-til-at-arbejde-om-natten",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Det er hendes vane.",
+      "sentence": "Hun er vant ___ om natten.",
+      "options": [
+        "til at arbejde",
+        "for at arbejde",
+        "ved at arbejde",
+        "at arbejde"
+      ],
+      "correct": "til at arbejde",
+      "accepted_answers": [
+        "til at arbejde"
+      ],
+      "note": "\"Til at\" + infinitiv bruges efter fx god til, tid til, lyst til og om redskabets formål."
+    },
+    {
+      "id": "hun-forlod-butikken-uden-at-koebe-noget",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Hun fandt ikke det, hun ville have.",
+      "sentence": "Hun forlod butikken ___ noget.",
+      "options": [
+        "for at købe",
+        "at købe",
+        "uden at købe",
+        "ved at købe"
+      ],
+      "correct": "uden at købe",
+      "accepted_answers": [
+        "uden at købe"
+      ],
+      "note": "\"Uden at\" + infinitiv betyder, at noget ikke sker samtidig."
+    },
+    {
+      "id": "jeg-hoerte-telefonen-ringe",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du hørte det.",
+      "sentence": "Jeg hørte telefonen ___ .",
+      "options": [
+        "at ringe",
+        "ringet",
+        "ringe",
+        "for at ringe"
+      ],
+      "correct": "ringe",
+      "accepted_answers": [
+        "ringe"
+      ],
+      "note": "Efter se, høre og føle står infinitiv uden \"at\" (Jeg hørte hende synge)."
+    },
+    {
+      "id": "han-lod-hunden-komme-ind",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du lod det ske.",
+      "sentence": "Han lod hunden ___ ind.",
+      "options": [
+        "til at komme",
+        "komme",
+        "for at komme",
+        "at komme"
+      ],
+      "correct": "komme",
+      "accepted_answers": [
+        "komme"
+      ],
+      "note": "\"Lade\" + objekt + infinitiv står uden \"at\"."
+    },
+    {
+      "id": "jeg-fik-haaret-klippet-i-gaar",
+      "level": "B2",
+      "mode": "infinitive",
+      "context": "Du bestilte det.",
+      "sentence": "Jeg fik håret ___ i går.",
+      "options": [
+        "at klippe",
+        "til at klippe",
+        "klippet",
+        "klippe"
+      ],
+      "correct": "klippet",
+      "accepted_answers": [
+        "klippet"
+      ],
+      "note": "\"Få noget + participium\" bruges, når man lader andre gøre noget (Jeg fik bilen repareret)."
+    },
+    {
+      "id": "hun-lovede-at-komme-hjem-tidligt",
+      "level": "B1",
+      "mode": "infinitive",
+      "context": "Du lover.",
+      "sentence": "Hun lovede ___ hjem tidligt.",
+      "options": [
+        "at komme",
+        "komme",
+        "for at komme",
+        "ved at komme"
+      ],
+      "correct": "at komme",
+      "accepted_answers": [
+        "at komme"
+      ],
+      "note": "Efter mange almindelige verber (prøve, håbe, begynde, glemme, love, ...) står infinitiv med \"at\"."
+    }
   ]
 };
