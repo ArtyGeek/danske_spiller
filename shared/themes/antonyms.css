@@ -69,9 +69,19 @@ html.sd-page .mode-btn {
 }
 html.sd-page .mode-btn:hover { transform: translate(-4px, -4px); box-shadow: var(--sd-box), 12px 12px 0 0 var(--sd-ink); background: var(--sd-cream); color: #101010; }
 html.sd-page .mode-btn:active { transform: translate(2px, 2px); box-shadow: var(--sd-box), 4px 4px 0 0 var(--sd-ink); }
-html.sd-page .mode-btn .emoji { font-size: 0; line-height: 0; min-height: 64px; display: flex; align-items: flex-end; }
+html.sd-page .mode-btn .emoji { font-size: 0; line-height: 0; min-height: 64px; display: flex; align-items: flex-start; }
 html.sd-page .mode-btn .t { font-family: var(--sd-font-display); font-size: 18px; text-transform: uppercase; letter-spacing: 0; line-height: 1.2; }
 html.sd-page .mode-btn .d { font-family: var(--sd-font-body); font-size: 14px; color: inherit; opacity: .85; line-height: 1.4; }
+/* clickable cue: orange "Spil" tab at the foot of each game card */
+html.sd-page .mode-btn::after {
+  content: "Spil \2192"; align-self: flex-start; margin-top: auto; padding: 4px 10px;
+  background: var(--sd-orange); color: #101010; font-family: var(--sd-font-display); font-size: 14px; text-transform: uppercase; letter-spacing: .04em; box-shadow: var(--sd-box);
+}
+/* games first: tighter intro + cards so the grid sits above the fold on desktop */
+@media (min-width: 821px) {
+  html.sd-page .mode-btn .emoji { min-height: 40px; }
+  html.sd-page .modes { gap: 12px; }
+}
 html.sd-page .stats-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 html.sd-page .stat { margin: 4px; border: 0; border-radius: 0; background: var(--sd-panel); box-shadow: var(--sd-box), var(--sd-drop); padding: 12px 14px; }
 html.sd-page .stat .n { font-family: var(--sd-font-body); font-weight: 700; font-size: 28px; line-height: 1.2; }
