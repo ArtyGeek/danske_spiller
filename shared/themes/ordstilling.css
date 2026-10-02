@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Magenta #E65CE6 (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #E65CE6;
+  --sd-orange: #E65CE6; --sd-primary: #E65CE6;
+  --sd-cream: #F2AEF2; --sd-amber: #EC85EC;
+  --sd-bg: #EC80EC; --sd-bg-2: #EE93EE;
+  --sd-panel: #FDF0FD; --sd-panel-2: #F8D5F8;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #E65CE6; --sd-line: #E65CE6; --sd-focus: #F2AEF2;
+  --sd-bg: #1F151F; --sd-bg-2: #251825;
+  --sd-panel: #2E1B2E; --sd-panel-2: #432243; --sd-grid: rgba(230,92,230,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #E65CE6; --sd-line: #E65CE6; --sd-focus: #F2AEF2;
+  --sd-bg: #1F151F; --sd-bg-2: #251825;
+  --sd-panel: #2E1B2E; --sd-panel-2: #432243; --sd-grid: rgba(230,92,230,.16);
+} }
 /* Sjovt Dansk theme — ORDSTILLING (game-id: ordstilling) */
 html.sd-page { --ink: #101010; --paper: var(--sd-panel); --paper2: var(--sd-panel-2); --muted: var(--sd-text-soft); --line: var(--sd-text); }
 html.sd-page, html.sd-page body { height: auto; }
@@ -36,7 +54,7 @@ html.sd-page .tier-pill {
   font-family: var(--sd-font-body); font-weight: 700; font-size: 13px; letter-spacing: 0; border: 0; border-radius: 0; padding: 4px 10px; margin: 2px;
   background: var(--sd-ink); color: var(--sd-cream);
 }
-html.sd-page .t-a1 { background: #148A3C; color: #fff; }
+html.sd-page .t-a1 { background: #0F7A33; color: #fff; }
 html.sd-page .t-a2 { background: #2B3FD6; color: #fff; }
 html.sd-page .t-b1 { background: var(--sd-amber); color: #101010; }
 html.sd-page .t-b2 { background: #D4145A; color: #fff; }
@@ -65,7 +83,7 @@ html.sd-page .casebtn.done .num { background: var(--sd-green); color: #fff; }
 html.sd-page .casebtn .ct { font-family: var(--sd-font-display); font-weight: 700; font-size: 18px; line-height: 1.25; text-transform: uppercase; letter-spacing: .02em; padding-right: 44px; }
 html.sd-page .casebtn .cf { font-family: var(--sd-font-body); font-size: 14px; color: #3A3326; font-weight: 400; margin-top: 4px; }
 html.sd-page .casebtn .lvl { top: 8px; right: 8px; border-radius: 0; font-family: var(--sd-font-body); font-weight: 700; font-size: 12px; letter-spacing: 0; padding: 2px 6px; }
-html.sd-page .lb-a1 { background: #148A3C; color: #fff; } html.sd-page .lb-a2 { background: #2B3FD6; color: #fff; }
+html.sd-page .lb-a1 { background: #0F7A33; color: #fff; } html.sd-page .lb-a2 { background: #2B3FD6; color: #fff; }
 html.sd-page .lb-b1 { background: var(--sd-amber); color: #101010; } html.sd-page .lb-b2 { background: #D4145A; color: #fff; }
 html.sd-page .lock { font-family: var(--sd-font-display); font-weight: 700; font-size: 13px; letter-spacing: .06em; opacity: 1; color: #4a4434; }
 html.sd-page .stamp {
@@ -158,7 +176,7 @@ html.sd-page .btn.check { background: var(--sd-orange); }
 html.sd-page .btn.clear { background: var(--sd-cream); }
 html.sd-page .btn.next { background: var(--sd-orange); width: calc(100% - 8px); }
 html.sd-page .btn:hover:not(:disabled) { background: var(--sd-white); }
-html.sd-page .btn:disabled { filter: none; background: #CFC6AA; color: #5b5646; box-shadow: var(--sd-box), 0 8px 0 -4px #5b5646; }
+html.sd-page .btn:disabled { filter: none; background: #CFC6AA; color: #403B2C; box-shadow: var(--sd-box), 0 8px 0 -4px #5b5646; }
 
 /* explanation */
 html.sd-page .explain { transition: none; margin: 20px 4px 4px; overflow: visible; }

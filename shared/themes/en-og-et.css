@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Græsgrøn #3FD35F (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #3FD35F;
+  --sd-orange: #3FD35F; --sd-primary: #3FD35F;
+  --sd-cream: #9FE9AF; --sd-amber: #6FDE87;
+  --sd-bg: #69DD82; --sd-bg-2: #80E295;
+  --sd-panel: #EEFBF1; --sd-panel-2: #CDF4D5;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #3FD35F; --sd-line: #3FD35F; --sd-focus: #9FE9AF;
+  --sd-bg: #131E16; --sd-bg-2: #152418;
+  --sd-panel: #172B1B; --sd-panel-2: #1B3F23; --sd-grid: rgba(63,211,95,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #3FD35F; --sd-line: #3FD35F; --sd-focus: #9FE9AF;
+  --sd-bg: #131E16; --sd-bg-2: #152418;
+  --sd-panel: #172B1B; --sd-panel-2: #1B3F23; --sd-grid: rgba(63,211,95,.16);
+} }
 /* Sjovt Dansk theme — En og et (game-id: en-og-et) */
 html.sd-page {
   --ink: var(--sd-text); --parch: var(--sd-panel); --parch-2: var(--sd-panel-2);

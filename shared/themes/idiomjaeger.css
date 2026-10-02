@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Havgrøn #26D9A6 (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #26D9A6;
+  --sd-orange: #26D9A6; --sd-primary: #26D9A6;
+  --sd-cream: #92ECD2; --sd-amber: #5CE2BC;
+  --sd-bg: #56E1BA; --sd-bg-2: #70E6C4;
+  --sd-panel: #EBFCF7; --sd-panel-2: #C7F5E8;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #26D9A6; --sd-line: #26D9A6; --sd-focus: #92ECD2;
+  --sd-bg: #121E1A; --sd-bg-2: #12241F;
+  --sd-panel: #132C25; --sd-panel-2: #154034; --sd-grid: rgba(38,217,166,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #26D9A6; --sd-line: #26D9A6; --sd-focus: #92ECD2;
+  --sd-bg: #121E1A; --sd-bg-2: #12241F;
+  --sd-panel: #132C25; --sd-panel-2: #154034; --sd-grid: rgba(38,217,166,.16);
+} }
 /* =============================================================================
    Sjovt Dansk theme — Idiomjæger  (game-id: idiomjaeger)
    Loaded AFTER the game's own <style> + shared/sjovt.css. Pixel-arcade reskin.

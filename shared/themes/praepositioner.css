@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Isblå #2ED0EE (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #2ED0EE;
+  --sd-orange: #2ED0EE; --sd-primary: #2ED0EE;
+  --sd-cream: #96E8F6; --sd-amber: #62DCF2;
+  --sd-bg: #5CDAF2; --sd-bg-2: #75E0F4;
+  --sd-panel: #ECFBFD; --sd-panel-2: #C9F3FB;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #2ED0EE; --sd-line: #2ED0EE; --sd-focus: #96E8F6;
+  --sd-bg: #121D20; --sd-bg-2: #132326;
+  --sd-panel: #142B2F; --sd-panel-2: #173E45; --sd-grid: rgba(46,208,238,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #2ED0EE; --sd-line: #2ED0EE; --sd-focus: #96E8F6;
+  --sd-bg: #121D20; --sd-bg-2: #132326;
+  --sd-panel: #142B2F; --sd-panel-2: #173E45; --sd-grid: rgba(46,208,238,.16);
+} }
 /* Sjovt Dansk theme - Praepositions-Mester (game-id: praepositioner)
    Loaded AFTER shared/sjovt.css. Maps the game's own variables onto --sd-* tokens
    and restyles every component. No radius, no soft shadows, steps() animations. */

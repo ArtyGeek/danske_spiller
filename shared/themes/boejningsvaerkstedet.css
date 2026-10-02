@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Slikpink #FF7BC0 (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #FF7BC0;
+  --sd-orange: #FF7BC0; --sd-primary: #FF7BC0;
+  --sd-cream: #FFBDE0; --sd-amber: #FF9CD0;
+  --sd-bg: #FF98CE; --sd-bg-2: #FFA8D5;
+  --sd-panel: #FFF3F9; --sd-panel-2: #FFDDEF;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #FF7BC0; --sd-line: #FF7BC0; --sd-focus: #FFBDE0;
+  --sd-bg: #21171C; --sd-bg-2: #281B22;
+  --sd-panel: #311F29; --sd-panel-2: #492A3A; --sd-grid: rgba(255,123,192,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #FF7BC0; --sd-line: #FF7BC0; --sd-focus: #FFBDE0;
+  --sd-bg: #21171C; --sd-bg-2: #281B22;
+  --sd-panel: #311F29; --sd-panel-2: #492A3A; --sd-grid: rgba(255,123,192,.16);
+} }
 /* Sjovt Dansk theme — Bøjningsværkstedet. Loaded after the game's inline <style> and sjovt.css. */
 html.sd-page {
   --bg: var(--sd-bg); --panel: var(--sd-panel); --panel-2: var(--sd-panel-2); --text: var(--sd-text); --muted: var(--sd-text-soft);

@@ -13,35 +13,49 @@
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
 
   /* top bar */
-  header.site { background: var(--sd-ink); border-bottom: 4px solid var(--sd-orange); position: sticky; top: 0; z-index: 50; }
-  .topbar { display: flex; align-items: center; gap: 12px; min-height: 64px; }
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--sd-cream); min-height: 48px; }
-  .logo .wm { font-family: var(--sd-font-logo); font-size: 14px; line-height: 1.3; }
-  .logo .wm b { font-weight: 400; color: var(--sd-orange); }
-  .logo .dom { display: block; font-family: var(--sd-font-body); font-size: 12px; color: var(--sd-cream); opacity: .85; margin-top: 4px; }
-  .spacer { flex: 1; }
   .theme-btn { min-width: 48px; min-height: 48px; padding: 0 12px; background: var(--sd-cream); color: #101010; border: 0; font-family: var(--sd-font-display); font-weight: 700; font-size: 16px; cursor: pointer;
     box-shadow: 0 -4px 0 #FFC25A, 0 4px 0 #FFC25A, -4px 0 0 #FFC25A, 4px 0 0 #FFC25A; margin: 4px; }
   .theme-btn:hover { background: #fff; }
   .theme-btn:active { transform: translateY(2px); }
+  .hero .theme-btn { position: absolute; top: 24px; right: 28px; z-index: 5; margin: 4px; }
 
   /* hero */
   .hero { margin: 32px 4px 16px; background: var(--sd-orange); color: #101010; box-shadow: var(--sd-box), var(--sd-drop); position: relative; overflow: hidden; }
-  .hero-in { padding: 32px 28px 152px; position: relative; z-index: 2; max-width: 760px; }
-  .hero .kicker { display: inline-block; background: var(--sd-ink); color: var(--sd-cream); font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; padding: 6px 10px; letter-spacing: .04em; margin-bottom: 16px; }
-  .hero h1 { margin: 0 0 16px; font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(34px, 8vw, 64px); line-height: 1.05; letter-spacing: .01em; }
-  .hero h1 em { font-style: normal; background: var(--sd-ink); color: var(--sd-cream); padding: 0 .18em; display: inline-block; }
-  .hero p { margin: 0 0 24px; font-size: 17px; max-width: 54ch; font-weight: 700; }
-  .hero-scene { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; z-index: 1; }
-  .hero-scene .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 24px; background: var(--sd-ink);
-    background-image: repeating-linear-gradient(90deg, #101010 0 16px, #2a2a2a 16px 32px); border-top: 4px solid var(--sd-cream); }
-  .hero-scene .actor { position: absolute; bottom: 24px; }
-  .a-mill  { right: 6%; } .a-bike { right: 22%; } .a-flag { right: 36%; bottom: 24px; } .a-snegl { right: 48%; }
-  .a-polle { left: 0; animation: walk 22s steps(44) infinite alternate; }
-  @keyframes walk { from { left: 2%; } to { left: calc(100% - 140px); } }
-  .a-polle > span { display: block; animation: sd-hop .7s steps(4) infinite; }
-  .cloud { position: absolute; top: 18px; opacity: .9; }
-  .c1 { right: 14%; } .c2 { right: 3%; top: 52px; }
+  .hero-in { padding: 40px 28px; position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px 32px; align-items: center; }
+  .hero h1 { margin: 0 0 24px; font-family: var(--sd-font-logo); font-weight: 400; text-transform: uppercase; font-size: clamp(44px, 10vw, 104px); line-height: 1.12; letter-spacing: 0; text-shadow: .06em .06em 0 var(--sd-cream); }
+  .hero h1 span { display: block; }
+  .hero h1 em { font-style: normal; display: inline-block; margin-top: .22em; font-size: .3em; line-height: 1.5; background: var(--sd-ink); color: var(--sd-cream); padding: .3em .6em; text-shadow: none; }
+  .hero p { margin: 0 0 28px; font-size: 19px; max-width: 46ch; font-weight: 700; }
+
+  /* pixel Game Boy — body is an SVG on a 64×104 grid, screen is HTML so real sprites can animate inside */
+  .gb-wrap { display: grid; place-items: center; --u: 5px; }
+  .gb { position: relative; width: calc(64 * var(--u)); height: calc(104 * var(--u)); animation: gb-float 2.4s steps(4) infinite; filter: drop-shadow(calc(var(--u) * 2) calc(var(--u) * 2) 0 rgba(16,16,16,.45)); }
+  .gb > svg { position: absolute; inset: 0; width: 100%; height: 100%; shape-rendering: crispEdges; }
+  .gb .btn-a, .gb .btn-b { animation: gb-press 2.4s steps(1) infinite; }
+  .gb .btn-b { animation-delay: 1.2s; }
+  .gb .dpad-r { animation: gb-dpad 2.4s steps(1) infinite; }
+  .gb .led { animation: sd-blink 1.2s steps(1) infinite; }
+  .gb-screen { position: absolute; left: calc(14 * var(--u)); top: calc(14 * var(--u)); width: calc(36 * var(--u)); height: calc(30 * var(--u)); overflow: hidden; background: #8FD3FF; font-family: var(--sd-font-logo); color: #101010; }
+  .gb-screen::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(16,16,16,.10) 0 1px, transparent 1px 3px); }
+  .gb-hud { position: absolute; top: 4px; left: 6px; right: 6px; display: flex; justify-content: space-between; font-size: 8px; z-index: 3; }
+  .gb-cloud { position: absolute; top: 22px; left: 100%; width: 8px; height: 8px; background: #fff; box-shadow: 8px 0 #fff, 16px 0 #fff, 24px 0 #fff, 8px -8px #fff, 16px -8px #fff, 0 8px #fff, 8px 8px #fff, 16px 8px #fff, 24px 8px #fff; animation: gb-cloud 9s linear infinite; }
+  .gb-cloud.c2 { top: 48px; transform: scale(.7); animation-duration: 14s; animation-delay: -6s; }
+  .gb-ground { position: absolute; left: 0; right: 0; bottom: 0; height: 24%; background-color: #3FA34D; border-top: 4px solid #101010;
+    background-image: linear-gradient(90deg, #2d7a38 0 8px, transparent 8px 16px), linear-gradient(#2d7a38 0 4px, transparent 4px); background-size: 32px 100%, 100% 12px; background-position: 0 0, 0 4px; animation: gb-ground .8s steps(4) infinite; }
+  .gb-hero { position: absolute; left: 22%; bottom: calc(24% - 2px); animation: gb-hop 1.2s steps(6) infinite; }
+  .gb-shadow { position: absolute; left: calc(22% + 8px); bottom: calc(24% - 6px); width: 48px; height: 4px; background: rgba(16,16,16,.35); animation: gb-shad 1.2s steps(6) infinite; }
+  .gb-word { position: absolute; left: 46%; bottom: calc(24% + 52px); background: #fff; border: 3px solid #101010; padding: 4px 6px; font-size: 9px; line-height: 1; white-space: nowrap; opacity: 0; animation: gb-word 3.6s steps(1) infinite; z-index: 2; }
+  .gb-word::after { content: ""; position: absolute; left: -9px; bottom: -3px; width: 6px; height: 6px; background: #fff; border-left: 3px solid #101010; border-bottom: 3px solid #101010; }
+  .gb-word:nth-of-type(4) { animation-delay: 1.2s; } .gb-word:nth-of-type(5) { animation-delay: 2.4s; }
+  .gb-start { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; font-size: 7px; color: #fff; z-index: 3; animation: sd-blink 1s steps(1) infinite; }
+  @keyframes gb-float  { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+  @keyframes gb-hop    { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-28px) } }
+  @keyframes gb-shad   { 0%,100% { transform: scaleX(1) } 50% { transform: scaleX(.6) } }
+  @keyframes gb-ground { to { background-position: -32px 0, 0 4px; } }
+  @keyframes gb-cloud  { from { transform: translateX(0) } to { transform: translateX(-260px) } }
+  @keyframes gb-word   { 0%,32% { opacity: 1 } 33%,100% { opacity: 0 } }
+  @keyframes gb-press  { 0%,40% { transform: translateY(0) } 45%,60% { transform: translateY(1px) } 61%,100% { transform: translateY(0) } }
+  @keyframes gb-dpad   { 0%,70% { opacity: 1 } 75%,85% { opacity: .55 } 86%,100% { opacity: 1 } }
 
   /* search */
   .controls { margin: 40px 4px 0; display: flex; gap: 16px; align-items: end; flex-wrap: wrap; }
@@ -53,9 +67,10 @@
   /* games grid — beige-force style cells: sprite on top, label underneath */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 28px; margin: 28px 4px 8px; }
   .card { display: flex; flex-direction: column; gap: 12px; padding: 0; text-decoration: none; color: var(--sd-text); margin: 4px; overflow: hidden; }
-  .card .stage { height: 148px; background: var(--sd-mustard); display: grid; place-items: center; border-bottom: 4px solid var(--sd-ink);
+  .card .stage { height: 148px; background-color: var(--gc-l, #E1AD12); display: grid; place-items: center; border-bottom: 4px solid var(--sd-ink);
     background-image: linear-gradient(rgba(16,16,16,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(16,16,16,.14) 1px, transparent 1px); background-size: 16px 16px; position: relative; }
-  :root[data-theme="dark"] .card .stage { background-color: #26200f; border-bottom-color: #E1AD12; }
+  :root[data-theme="dark"] .card .stage { background-color: var(--gc-d, #26200f); border-bottom-color: var(--gc, #E1AD12); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .card .stage { background-color: var(--gc-d, #26200f); border-bottom-color: var(--gc, #E1AD12); } }
   .card .stage .sd-sprite { transition: transform .12s steps(2); }
   .card:hover .stage .sd-sprite, .card:focus-visible .stage .sd-sprite { animation: sd-hop .5s steps(4) infinite; }
   .card .lvl { position: absolute; top: 10px; right: 10px; }
@@ -74,44 +89,68 @@
   footer.site b i { font-style: normal; color: var(--sd-orange); }
 
   @media (max-width: 560px) {
-    .hero-in { padding: 24px 18px 148px; }
-    .logo .wm { font-size: 12px; }
-    .a-bike, .a-snegl, .c2 { display: none; }
-    .a-flag { right: 6%; } .a-mill { right: 26%; }
+    .hero-in { padding: 24px 18px 32px; }
+    .gb-wrap { --u: 4px; }
     .count { margin-left: 4px; }
   }
-  @media (prefers-reduced-motion: reduce) { .a-polle { animation: none; left: 8%; } .a-polle > span { animation: none; } .card:hover .stage .sd-sprite { animation: none; } }
+  @media (max-width: 860px) { .hero-in { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) {
+    .card:hover .stage .sd-sprite { animation: none; }
+    .gb, .gb *, .gb-screen * { animation: none !important; }
+    .gb-word:nth-of-type(3) { opacity: 1; }
+  }
 </style>
 </head>
 <body data-sd-home>
-  <header class="site">
-    <div class="wrap topbar">
-      <a class="logo" href="./" aria-label="Sjovt Dansk — forside" data-sd-nofx>
-        <span data-sd-sprite="polle" data-scale="3" aria-hidden="true"></span>
-        <span><span class="wm">SJOVT <b>DANSK</b></span><span class="dom">sjovtdansk.dk</span></span>
-      </a>
-      <span class="spacer"></span>
-      <button class="theme-btn" id="themeBtn" title="Skift mellem lys og mørk" aria-label="Skift mellem lys og mørk tilstand" aria-pressed="false">MØRK</button>
-    </div>
-  </header>
-
   <main class="wrap" id="main">
     <section class="hero" aria-labelledby="h1">
+      <button class="theme-btn" id="themeBtn" title="Skift mellem lys og mørk" aria-label="Skift mellem lys og mørk tilstand" aria-pressed="false">MØRK</button>
       <div class="hero-in">
-        <span class="kicker">12 SPIL · A1–C1</span>
-        <h1 id="h1">Lær dansk <em>ved at spille</em></h1>
-        <p>Ordforråd, grammatik og vendinger i små, hurtige spil. Vælg et spil, tryk på knappen — og kom i gang på under ét sekund.</p>
-        <a class="sd-btn sd-btn--ink sd-btn--lg" href="#spil" data-sd-nofx>Vælg spil ▼</a>
-      </div>
-      <div class="hero-scene" aria-hidden="true">
-        <span class="cloud c1" data-sd-sprite="stjerne" data-scale="4"></span>
-        <span class="cloud c2" data-sd-sprite="hjerte" data-scale="3"></span>
-        <span class="actor a-mill"  data-sd-sprite="molle" data-scale="5"></span>
-        <span class="actor a-bike"  data-sd-sprite="cykel" data-scale="5"></span>
-        <span class="actor a-flag"  data-sd-sprite="flag"  data-scale="4"></span>
-        <span class="actor a-snegl" data-sd-sprite="snegl" data-scale="4"></span>
-        <span class="actor a-polle"><span data-sd-sprite="polle" data-scale="6"></span></span>
-        <span class="ground"></span>
+        <div class="hero-text">
+          <h1 id="h1"><span>Sjovt</span><span>Dansk</span><em>ved at spille</em></h1>
+          <p>Ordforråd, grammatik og vendinger i små, hurtige spil. Vælg et spil, tryk på knappen — og kom i gang på under ét sekund.</p>
+          <a class="sd-btn sd-btn--ink sd-btn--lg" href="#spil" data-sd-nofx>Vælg spil ▼</a>
+        </div>
+        <div class="gb-wrap" aria-hidden="true">
+          <div class="gb">
+            <svg viewBox="0 0 64 104" xmlns="http://www.w3.org/2000/svg">
+              <!-- shell -->
+              <polygon fill="#101010" points="0,2 2,2 2,0 62,0 62,2 64,2 64,90 62,90 62,94 60,94 60,98 58,98 58,100 54,100 54,102 50,102 50,104 2,104 2,102 0,102"/>
+              <polygon fill="#D9D9D9" points="2,4 4,4 4,2 60,2 60,4 62,4 62,88 60,88 60,92 58,92 58,96 56,96 56,98 52,98 52,100 48,100 48,102 4,102 4,100 2,100"/>
+              <rect x="2" y="4" width="2" height="96" fill="#F4F4F4"/><rect x="4" y="2" width="56" height="2" fill="#F4F4F4"/>
+              <!-- screen bezel -->
+              <rect x="6" y="8" width="52" height="42" fill="#101010"/>
+              <rect x="8" y="10" width="48" height="38" fill="#5E5E5E"/>
+              <rect x="12" y="12" width="40" height="34" fill="#101010"/>
+              <rect x="10" y="18" width="2" height="22" fill="#F94F37"/><rect x="10" y="22" width="2" height="2" fill="#2B3FD6"/>
+              <rect x="9" y="12" width="2" height="2" class="led" fill="#F94F37"/>
+              <!-- d-pad -->
+              <rect x="6" y="66" width="20" height="8" fill="#101010"/><rect x="12" y="60" width="8" height="20" fill="#101010"/>
+              <rect x="8" y="68" width="16" height="4" fill="#5E5E5E"/><rect x="14" y="62" width="4" height="16" fill="#5E5E5E"/>
+              <rect class="dpad-r" x="20" y="68" width="4" height="4" fill="#8E8E8E"/>
+              <rect x="14" y="68" width="4" height="4" fill="#101010"/>
+              <!-- A / B -->
+              <g class="btn-b"><rect x="34" y="70" width="10" height="10" fill="#101010"/><rect x="32" y="72" width="14" height="6" fill="#101010"/><rect x="35" y="71" width="8" height="8" fill="#D7263D"/><rect x="36" y="72" width="3" height="3" fill="#F94F37"/></g>
+              <g class="btn-a"><rect x="48" y="64" width="10" height="10" fill="#101010"/><rect x="46" y="66" width="14" height="6" fill="#101010"/><rect x="49" y="65" width="8" height="8" fill="#D7263D"/><rect x="50" y="66" width="3" height="3" fill="#F94F37"/></g>
+              <text x="35" y="86" font-family="SD Pixel, monospace" font-size="3" fill="#1B2A9A">B</text>
+              <text x="51" y="80" font-family="SD Pixel, monospace" font-size="3" fill="#1B2A9A">A</text>
+              <!-- select / start -->
+              <rect x="16" y="90" width="9" height="3" fill="#101010"/><rect x="17" y="91" width="7" height="1" fill="#8E8E8E"/>
+              <rect x="29" y="90" width="9" height="3" fill="#101010"/><rect x="30" y="91" width="7" height="1" fill="#8E8E8E"/>
+              <!-- speaker -->
+              <rect x="44" y="90" width="2" height="6" fill="#8E8E8E"/><rect x="48" y="88" width="2" height="8" fill="#8E8E8E"/><rect x="52" y="86" width="2" height="8" fill="#8E8E8E"/>
+            </svg>
+            <div class="gb-screen">
+              <div class="gb-hud"><span>ORD 07</span><span>A1</span></div>
+              <span class="gb-cloud"></span><span class="gb-cloud c2"></span>
+              <span class="gb-word">HEJ!</span><span class="gb-word">TAK!</span><span class="gb-word">GODDAG</span>
+              <span class="gb-shadow"></span>
+              <span class="gb-hero" data-sd-sprite="polle" data-scale="4"></span>
+              <div class="gb-ground"></div>
+              <div class="gb-start">TRYK START</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -147,29 +186,29 @@
    =========================================================================== */
 const games = [
   { title: "Danske Antonymer", description: "Øv modsætningsord med quiz og par-spil.", level: "B1–B2", type: "Ordforråd",
-    url: "./danish-antonyms-game.html", sprite: "modsat" },
+    url: "./danish-antonyms-game.html", sprite: "modsat", color: "#FF4D5E", bg: "#FF7481", dark: "#451D21" },
   { title: "Verb-glosekort", description: "Vend kortene og lær danske verbers former.", level: "A2–B1", type: "Verber",
-    url: "./danish_flashcards/danish_flashcards_game/index.html", sprite: "kort" },
+    url: "./danish_flashcards/danish_flashcards_game/index.html", sprite: "kort", color: "#FFDF2E", bg: "#FFE65C", dark: "#453E17" },
   { title: "Magiske Verber", description: "Træn bøjning af verber i alle tider.", level: "A2–B1", type: "Verber",
-    url: "./magiske_verber.html", sprite: "tryllestav" },
+    url: "./magiske_verber.html", sprite: "tryllestav", color: "#B66BFF", bg: "#C68CFF", dark: "#352445" },
   { title: "Præpositions-Mester", description: "Slå de drilske småord: i, på, til, af …", level: "A2–B1", type: "Grammatik",
-    url: "./dansk-praepositioner.html", sprite: "pin" },
+    url: "./dansk-praepositioner.html", sprite: "pin", color: "#2ED0EE", bg: "#5CDAF2", dark: "#173A41" },
   { title: "Dansk Mester", description: "Lær hverdagsvendinger — fra hilsner til småsnak.", level: "A1–A2", type: "Vendinger",
-    url: "./danske-phraser/dansk-mester.html", sprite: "snak" },
+    url: "./danske-phraser/dansk-mester.html", sprite: "snak", color: "#FF8226", bg: "#FF9E56", dark: "#452915" },
   { title: "En/Et-træner", description: "Stop med at gætte: lær hvilke ord der er en- og et-ord.", level: "A1–A2", type: "Grammatik",
-    url: "./en%20og%20et/index.html", sprite: "terning" },
+    url: "./en%20og%20et/index.html", sprite: "terning", color: "#3FD35F", bg: "#69DD82", dark: "#1A3B21" },
   { title: "Konjunktion Crush", description: "Bind sætninger sammen med de rigtige konjunktioner.", level: "B1", type: "Grammatik",
-    url: "./konjunktioner/konjunktioner.html", sprite: "slik" },
+    url: "./konjunktioner/konjunktioner.html", sprite: "slik", color: "#8E8CFF", bg: "#A7A5FF", dark: "#2C2B45" },
   { title: "Ordstillingsdetektiven", description: "Knæk V2-reglen ved at sætte rodede sætninger i orden.", level: "B1–B2", type: "Grammatik",
-    url: "./ordstilling-detektiv/index.html", sprite: "lup" },
+    url: "./ordstilling-detektiv/index.html", sprite: "lup", color: "#E65CE6", bg: "#EC80EC", dark: "#3F213F" },
   { title: "Forbindeord", description: "Gitterpuslespil: forbind ordene mod uret.", level: "B1", type: "Ordforråd",
-    url: "./forbindenor/Forbindenor.html", sprite: "net" },
+    url: "./forbindenor/Forbindenor.html", sprite: "net", color: "#A8E02E", bg: "#BBE75C", dark: "#313E17" },
   { title: "Idiomjægeren", description: "Jagt på danske idiomer — og hvad de egentlig betyder.", level: "B2", type: "Vendinger",
-    url: "./idiomjaeger.html", sprite: "kiste" },
+    url: "./idiomjaeger.html", sprite: "kiste", color: "#26D9A6", bg: "#56E1BA", dark: "#153C31" },
   { title: "Bøjningsværkstedet", description: "Bøj hele navneleddet: flertal, bestemthed, tillægsord og komparation.", level: "A1–B2", type: "Grammatik",
-    url: "./boejningsvaerkstedet/index.html", sprite: "tandhjul" },
+    url: "./boejningsvaerkstedet/index.html", sprite: "tandhjul", color: "#FF7BC0", bg: "#FF98CE", dark: "#452837" },
   { title: "Adverbier & Konnektorer", description: "Byg danske sætninger med adverbier og bindeord.", level: "B1–B2", type: "Grammatik",
-    url: "./adverbs.html", sprite: "ur" }
+    url: "./adverbs.html", sprite: "ur", color: "#4C93FF", bg: "#73ABFF", dark: "#1D2D45" }
 ];
 
 const $ = (s) => document.querySelector(s);
@@ -178,7 +217,7 @@ let searchTerm = "";
 
 function cardHTML(g) {
   return `
-    <a class="sd-card card" href="${g.url}" aria-label="Åbn ${esc(g.title)}">
+    <a class="sd-card card" style="--gc:${g.color};--gc-l:${g.bg};--gc-d:${g.dark}" href="${g.url}" aria-label="Åbn ${esc(g.title)}">
       <div class="stage">
         <span class="sd-badge sd-badge--cream lvl">${esc(g.level)}</span>
         ${Sjovt.spriteSVG(g.sprite, 7).replace("<svg", '<svg class="spr"')}

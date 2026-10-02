@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Himmelblå #4C93FF (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #4C93FF;
+  --sd-orange: #4C93FF; --sd-primary: #4C93FF;
+  --sd-cream: #A6C9FF; --sd-amber: #79AEFF;
+  --sd-bg: #73ABFF; --sd-bg-2: #89B8FF;
+  --sd-panel: #EFF5FF; --sd-panel-2: #D0E3FF;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #4C93FF; --sd-line: #4C93FF; --sd-focus: #A6C9FF;
+  --sd-bg: #141921; --sd-bg-2: #161D28;
+  --sd-panel: #182231; --sd-panel-2: #1E2F49; --sd-grid: rgba(76,147,255,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #4C93FF; --sd-line: #4C93FF; --sd-focus: #A6C9FF;
+  --sd-bg: #141921; --sd-bg-2: #161D28;
+  --sd-panel: #182231; --sd-panel-2: #1E2F49; --sd-grid: rgba(76,147,255,.16);
+} }
 /* Sjovt Dansk theme — adverbs.html (game-id: adverbs) */
 
 html.sd-page body, html.sd-page body.dark, html.sd-page body:not(.dark) {

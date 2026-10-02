@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Koralrød #FF4D5E (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #FF4D5E;
+  --sd-orange: #FF4D5E; --sd-primary: #FF4D5E;
+  --sd-cream: #FFA6AE; --sd-amber: #FF7A86;
+  --sd-bg: #FF7481; --sd-bg-2: #FF8A95;
+  --sd-panel: #FFEFF1; --sd-panel-2: #FFD1D5;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #FF4D5E; --sd-line: #FF4D5E; --sd-focus: #FFA6AE;
+  --sd-bg: #211415; --sd-bg-2: #281618;
+  --sd-panel: #31191B; --sd-panel-2: #491F23; --sd-grid: rgba(255,77,94,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #FF4D5E; --sd-line: #FF4D5E; --sd-focus: #FFA6AE;
+  --sd-bg: #211415; --sd-bg-2: #281618;
+  --sd-panel: #31191B; --sd-panel-2: #491F23; --sd-grid: rgba(255,77,94,.16);
+} }
 /* Sjovt Dansk theme — danish-antonyms-game.html (game-id: antonyms) */
 
 html.sd-page {

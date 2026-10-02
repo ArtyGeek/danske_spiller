@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Lavendel #8E8CFF (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #8E8CFF;
+  --sd-orange: #8E8CFF; --sd-primary: #8E8CFF;
+  --sd-cream: #C6C6FF; --sd-amber: #AAA9FF;
+  --sd-bg: #A7A5FF; --sd-bg-2: #B4B3FF;
+  --sd-panel: #F5F5FF; --sd-panel-2: #E2E1FF;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #8E8CFF; --sd-line: #8E8CFF; --sd-focus: #C6C6FF;
+  --sd-bg: #191921; --sd-bg-2: #1D1C28;
+  --sd-panel: #222131; --sd-panel-2: #2E2E49; --sd-grid: rgba(142,140,255,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #8E8CFF; --sd-line: #8E8CFF; --sd-focus: #C6C6FF;
+  --sd-bg: #191921; --sd-bg-2: #1D1C28;
+  --sd-panel: #222131; --sd-panel-2: #2E2E49; --sd-grid: rgba(142,140,255,.16);
+} }
 /* Sjovt Dansk theme — Konjunktion Crush (game-id: konjunktioner) */
 html.sd-page {
   --c-pink: var(--sd-orange); --c-purple: var(--sd-blue); --c-blue: var(--sd-blue);
@@ -37,12 +55,12 @@ html.sd-page .pfill { border-radius: 0; background: repeating-linear-gradient(90
 html.sd-page .chip { border-radius: 0; font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; padding: 4px 10px; background: var(--sd-ink) !important; color: var(--sd-cream); text-transform: uppercase; letter-spacing: .02em; }
 html.sd-page .chip.hoved { background: var(--sd-orange) !important; color: #101010; }
 html.sd-page .chip.led { background: var(--sd-blue) !important; color: #fff; }
-html.sd-page .chip.hv { background: var(--sd-green) !important; color: #fff; }
+html.sd-page .chip.hv { background: #0F7A33 !important; color: #fff; }
 html.sd-page .review-badge { border-radius: 0; background: var(--sd-ink); color: var(--sd-cream); box-shadow: none; font-family: var(--sd-font-body); font-size: 14px; }
 
 /* sentence */
 html.sd-page .sentence { font-family: var(--sd-font-body); font-weight: 700; font-size: clamp(18px, 4.6vw, 24px); line-height: 1.6; overflow-wrap: anywhere; hyphens: auto; }
-html.sd-page .blank { border-bottom: 4px dashed var(--sd-blue); color: var(--sd-blue); font-weight: 700; padding: 0 4px; }
+html.sd-page .blank { border-bottom: 4px dashed var(--sd-primary); color: var(--sd-text); font-weight: 700; padding: 0 4px; }
 html.sd-page .blank.filled { border-bottom-style: solid; }
 html.sd-page .speaker {
   width: 48px; height: 48px; border-radius: 0; background: var(--sd-cream); color: #101010; margin: 4px; font-family: var(--sd-font-display); font-size: 22px; font-weight: 700;

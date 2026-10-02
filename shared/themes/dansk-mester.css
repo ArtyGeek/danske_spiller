@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Mandarin #FF8226 (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #FF8226;
+  --sd-orange: #FF8226; --sd-primary: #FF8226;
+  --sd-cream: #FFC092; --sd-amber: #FFA15C;
+  --sd-bg: #FF9E56; --sd-bg-2: #FFAC70;
+  --sd-panel: #FFF4EB; --sd-panel-2: #FFDEC7;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #FF8226; --sd-line: #FF8226; --sd-focus: #FFC092;
+  --sd-bg: #211812; --sd-bg-2: #281B12;
+  --sd-panel: #312013; --sd-panel-2: #492B15; --sd-grid: rgba(255,130,38,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #FF8226; --sd-line: #FF8226; --sd-focus: #FFC092;
+  --sd-bg: #211812; --sd-bg-2: #281B12;
+  --sd-panel: #312013; --sd-panel-2: #492B15; --sd-grid: rgba(255,130,38,.16);
+} }
 /* =============================================================================
    Sjovt Dansk theme — Dansk Mester  (game-id: dansk-mester)
    Loaded AFTER the game's own <style> + shared/sjovt.css. Pixel-arcade reskin.

@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Trylle-lilla #B66BFF (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #B66BFF;
+  --sd-orange: #B66BFF; --sd-primary: #B66BFF;
+  --sd-cream: #DAB5FF; --sd-amber: #C890FF;
+  --sd-bg: #C68CFF; --sd-bg-2: #CF9DFF;
+  --sd-panel: #F8F2FF; --sd-panel-2: #ECD9FF;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #B66BFF; --sd-line: #B66BFF; --sd-focus: #DAB5FF;
+  --sd-bg: #1C1621; --sd-bg-2: #211928;
+  --sd-panel: #271D31; --sd-panel-2: #382649; --sd-grid: rgba(182,107,255,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #B66BFF; --sd-line: #B66BFF; --sd-focus: #DAB5FF;
+  --sd-bg: #1C1621; --sd-bg-2: #211928;
+  --sd-panel: #271D31; --sd-panel-2: #382649; --sd-grid: rgba(182,107,255,.16);
+} }
 /* Sjovt Dansk theme - Magiske Verber (game-id: magiske-verber)
    Loaded AFTER shared/sjovt.css and the game's own <style>. Replaces the castle/gold look with the
    mustard pixel-arcade identity. No radius, no blur, no gradients except pixel stripes, steps() motion. */

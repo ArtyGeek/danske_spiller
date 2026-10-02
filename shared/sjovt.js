@@ -338,7 +338,19 @@
       "..KSSSSSSK..",
       ".KKKKKKKKKK.",
       "KRRRRRRRRRRK",
-      ".KKKKKKKKKK."]
+      ".KKKKKKKKKK."],
+    // Bog — open schoolbook (home header logo)
+    bog: [
+      ".KKKKKK..KKKKKK.",
+      "KWWWWWWKKWWWWWWK",
+      "KWKKKKWKKWKKKKWK",
+      "KWWWWWWKKWWWWWWK",
+      "KWKKKKWKKWOOOOWK",
+      "KWWWWWWKKWWWWWWK",
+      "KWKKKKWKKWKKKKWK",
+      "KWWWWWWKKWWWWWWK",
+      "KLLLLLLLLLLLLLLK",
+      ".KKKKKKKKKKKKKK."]
   };
   // Dannebrog — generated (red field, white Nordic cross)
   (function () {

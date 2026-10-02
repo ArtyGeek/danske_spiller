@@ -1,3 +1,21 @@
+/* ---- GAME COLOUR: Limegrøn #A8E02E (set once as --game; every accent below derives from the --gc-* values) ---- */
+html.sd-page {
+  --game: #A8E02E;
+  --sd-orange: #A8E02E; --sd-primary: #A8E02E;
+  --sd-cream: #D4F096; --sd-amber: #BEE862;
+  --sd-bg: #BBE75C; --sd-bg-2: #C6EB75;
+  --sd-panel: #F7FCEC; --sd-panel-2: #E8F7C9;
+}
+html.sd-page:root[data-theme="dark"] {
+  --sd-primary: #A8E02E; --sd-line: #A8E02E; --sd-focus: #D4F096;
+  --sd-bg: #1B1F12; --sd-bg-2: #1F2513;
+  --sd-panel: #252D14; --sd-panel-2: #344217; --sd-grid: rgba(168,224,46,.16);
+}
+@media (prefers-color-scheme: dark) { html.sd-page:root:not([data-theme="light"]) {
+  --sd-primary: #A8E02E; --sd-line: #A8E02E; --sd-focus: #D4F096;
+  --sd-bg: #1B1F12; --sd-bg-2: #1F2513;
+  --sd-panel: #252D14; --sd-panel-2: #344217; --sd-grid: rgba(168,224,46,.16);
+} }
 /* Sjovt Dansk theme — FORBINDEORD (game-id: forbindeord) */
 html.sd-page {
   --bg: var(--sd-bg); --bg2: var(--sd-bg-2); --grid: var(--sd-grid);
@@ -20,7 +38,7 @@ html.sd-page h1 {
   font-size: clamp(28px, 8vw, 48px); line-height: 1.1; margin: 0; text-align: left;
   color: var(--sd-text); text-shadow: 3px 3px 0 var(--sd-cream); overflow-wrap: anywhere;
 }
-html.sd-page h1 .o { color: var(--sd-orange); text-shadow: 3px 3px 0 #101010; }
+html.sd-page h1 .o { color: var(--sd-text); text-shadow: 3px 3px 0 var(--sd-primary); }
 html.sd-page .sub { text-align: left; color: var(--sd-text); font-family: var(--sd-font-display); letter-spacing: .06em; font-size: 15px; margin: 4px 0 0; }
 html.sd-page .hero .sd-sprite { flex: none; }
 @media (max-width: 420px) { html.sd-page .hero .sd-sprite svg { width: 64px; height: 64px; } html.sd-page .hero { gap: 12px; } }
@@ -61,7 +79,7 @@ html.sd-page .speaker:active { transform: translate(2px, 2px); box-shadow: var(-
 html.sd-page .blank {
   min-width: 96px; border-bottom: 4px solid var(--sd-orange); color: var(--sd-text); font-weight: 700; animation: none; background: var(--sd-panel-2);
 }
-html.sd-page .blank.filled { border-bottom-color: var(--sd-ok); color: var(--sd-ok); text-shadow: none; background: var(--sd-ok-bg); }
+html.sd-page .blank.filled { border-bottom-color: var(--sd-ok); color: #0B5F27; text-shadow: none; background: var(--sd-ok-bg); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .blank.filled { color: #5FD47E; } }
 
 /* options */
