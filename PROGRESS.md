@@ -189,6 +189,13 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
   title: "seo agent: finalise head copy, JSON-LD and sitemap.xml entry for pronomenmysteriet/index.html"
   acceptance: "head copy + JSON-LD present; sitemap.xml lists the page"
 
+- id: verbs-aux-har-er
+  type: data
+  status: todo
+  priority: P2
+  title: "verbs.js perfect_auxiliary has a single value; gå/løbe/falde/flyve/springe/ride… take 'har' in activity senses (har gået i skole, har løbet en tur). Needs a schema decision (optional second auxiliary value) before change"
+  acceptance: "decision recorded in specs/prd by the user, then data + consumers updated; tidsmaskinen/data.js already uses literals"
+
 ---
 
 ## Blocked
@@ -196,6 +203,7 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 ---
 
 ## Completed
+- fix-verbs-imperative / verbs.js doubled-consonant imperatives (snak, spil, luk…) / 2026-10-03 / 2937b84
 - pronomen-game / Pronomenmysteriet game, 6 modes + courtroom theme / 2026-10-03 / 08cf0da
   notes: "PASS WITH ISSUES accepted by PM; SEO head copy + sitemap entry still to do (seo agent)"
 - pronomen-data / Pronomenmysteriet data.js, 760 items / 2026-10-02 / a5eceb1
