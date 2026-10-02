@@ -1,0 +1,2 @@
+- [Harness contrast vs color-mix](harness-color-mix-contrast.md) — use hex not color-mix; play selectors per game; shots dir trap
+- [Theme token specificity](theme-token-specificity.md) — override --sd-* in light and both dark selectors

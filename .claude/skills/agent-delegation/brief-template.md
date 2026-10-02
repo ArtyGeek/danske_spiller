@@ -32,6 +32,9 @@
 ## Stop and ask if
 - <spec conflict | needs shared change | unsure Danish → mark `verify: true`>
 
+## Retry cap
+- Same failing check: max 3 attempts (seo 2), each with a different hypothesis. Then stop and report `BLOCKED`: attempts, verbatim last error, best diagnosis, suggested next step.
+
 ## Report back (≤ 15 lines)
 Status: DONE | PARTIAL | BLOCKED · Head sha · Files changed (count + list) · Commands run → result ·
 Screenshots viewed (paths) · NOT VERIFIED (with reason) · Requests · Lessons: <n new/updated>

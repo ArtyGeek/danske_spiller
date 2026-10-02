@@ -1,6 +1,6 @@
 ---
 name: work-summarization
-description: How the coordinator (product-manager) verifies agent reports and turns them into a short, honest summary — evidence ledger, status vocabulary, conflict handling, spot-check procedure, and the end-of-task and end-of-session report formats. Use whenever an agent returns, before marking any task done, and when writing the closing summary for the user.
+description: Use when an agent report arrives, before marking any task done or PASS, when several reports disagree, and when writing a task or session summary for the user.
 ---
 
 # Verifying and summarising agent work

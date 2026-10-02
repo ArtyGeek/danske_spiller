@@ -1,6 +1,6 @@
 ---
 name: game-ui-verification
-description: How to verify a Danish grammar game in a real headless browser — the shared tests/ harness, viewport matrix, what the smoke script covers and what it cannot. Use before reporting any game, theme or UI task as done, and when writing game-specific tests.
+description: Use before reporting any game, theme, sprite or page-layout task as done, when a UI change needs real-browser evidence (console errors, 360 px overflow, dark mode, file://), and when writing a game-specific test in tests/.
 ---
 
 # Verifying a game UI

@@ -1,11 +1,22 @@
 ---
 name: pixel-art-icon-designer
-description: Design pixel art icons, sprites, badges, favicons and small game assets (8x8 to 64x64) by drawing them as text grids and rendering to crisp PNGs, then checking them visually and iterating. Use whenever the user asks for a pixel art icon, sprite, emoji, item/inventory icon, avatar, badge, favicon, tile, or "8-bit / 16-bit / retro" graphic, or wants to redraw or recolor an existing pixel icon, even if they never say "pixel art".
+description: Use when asked for a pixel art icon, sprite, badge, favicon, avatar, tile or "8-bit / 16-bit / retro" graphic, or to redraw or recolor an existing pixel icon, even if "pixel art" is never said. In danske_spiller, also whenever a game needs a new or changed Sjovt sprite.
 ---
 
 # Pixel Art Icon Designer
 
 You draw pixel art as a character grid (one character = one pixel), render it with the bundled script, look at the PNG, and fix what looks wrong. Looking at the render is the point: grids that seem fine as text often read badly as images.
+
+## In danske_spiller (overrides the defaults below)
+
+Sprites are not free-form assets here: they are 16x16 grids in `SPR` inside `shared/sjovt.js`, drawn with the frozen `PAL` letters (`K` #101010 outline, `W O Y C A B R T G L P S`) and rendered by `Sjovt.spriteSVG`. `.` is transparent.
+
+- **Palette and outline:** use only `PAL` letters, and `K` black as the outline. Ignore the "tinted outline" and "4-8 own colours" advice.
+- **Size:** 16x16 unless the brief says otherwise. Every row exactly 16 characters.
+- **Preview:** write a spec whose palette lines map each `PAL` letter to its hex, render to the scratchpad directory (not `/tmp`), then Read the PNG.
+- **Ship:** paste the grid rows into `SPR` (adding the entry is the one allowed `sjovt.js` edit for a sprite task), list the name in `docs/sjovt-sprites.html`, and run the `game-ui-verification` skill on a page that uses it.
+- **Identity:** one unique sprite per game; the Pølle mascot appears only in brand chrome (bar, preloader). Restraint: a scene needs few, well-spaced props and at most one animated element.
+- Scale in the page with `data-scale` (integer) — never CSS-resize.
 
 ## Workflow
 

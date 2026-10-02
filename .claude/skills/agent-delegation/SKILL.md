@@ -1,6 +1,6 @@
 ---
 name: agent-delegation
-description: How the coordinator (product-manager) hands work to coder, designer, tester and releaser agents — choosing the right agent, sizing tasks, parallelising safely, writing a self-contained brief, setting acceptance and escalation rules. Use before every Agent dispatch, when splitting a task, and when re-dispatching after a failure.
+description: Use when the product-manager is about to dispatch coder, designer, tester or releaser, is splitting a task, is deciding whether agents can run in parallel, or is re-dispatching after a failed or incomplete report.
 ---
 
 # Delegating to agents
@@ -43,6 +43,8 @@ Style: imperative, specific, no filler, no pasted file dumps. Name numbers, path
 
 ## 6. Re-dispatching after a failure
 Never resend the same brief. New brief = original acceptance + the **failure list verbatim** (evidence, not paraphrase) + what was tried + what to change. Same agent, same branch. After round 2, or the same root cause three times, stop: mark `blocked` with evidence and escalate — it is a spec or brief problem.
+
+**Limits (single source; agent files and `product-manager.md` mirror these):** per task max 2 rework rounds and 4 dispatches; per worker, per failing check, max 3 attempts (seo: 2), each with a different hypothesis; tester re-runs a failure once; releaser retries a push once, merge/validation failures 0. Any agent that hits its cap stops and returns a **Blocked report**: `Task · Attempts (what, in order) · Last error/evidence (verbatim) · Best diagnosis · Suggested next step`. Never loosen acceptance or widen scope to escape a cap.
 
 ## 7. Anti-patterns
 - "Fix the styling" / "make it better" — no acceptance, no end.
