@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forklaring - demo</title>
+<link rel="stylesheet" href="explainer.css">
+<style>
+  /* ------------------------------------------------------------------
+     MONITOR FRAME: monitor.svg (generated from monitor.txt, 48x40 px grid).
+     Screen rect (from monitor.meta.json {x:6,y:5,w:36,h:24} of 48x40) as % of the box.
+     file:// cannot read the .json, so if the monitor art changes: re-run the
+     txt->svg conversion and copy the new screen rect into the --scr-* vars + --mon-aspect.
+     ------------------------------------------------------------------ */
+  :root {
+    --scr-x: 12.5%; --scr-y: 12.5%; --scr-w: 75%; --scr-h: 60%;
+    --mon-aspect: 48 / 40;
+    --page-bg: #E1AD12; --page-text: #101010;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --page-bg: #1B1D2B; --page-text: #FFF4D6; } }
+  :root[data-theme="dark"] { --page-bg: #1B1D2B; --page-text: #FFF4D6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page-bg); color: var(--page-text); font-family: "XP Mono", ui-monospace, Consolas, monospace; min-height: 100vh; }
+  main { max-width: 760px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 16px; margin: 4px 0 12px; text-align: center; }
+  .monitor { position: relative; width: 100%; aspect-ratio: var(--mon-aspect); }
+  .monitor-frame { position: absolute; inset: 0; background: url("monitor.svg") center / 100% 100% no-repeat; image-rendering: pixelated; z-index: 2; pointer-events: none; }
+  .monitor-screen { position: absolute; left: var(--scr-x); top: var(--scr-y); width: var(--scr-w); height: var(--scr-h); background: #1B2A9A; overflow: hidden; z-index: 1; }
+  .monitor-screen > #explainer { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .monitor-screen::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3;
+    background: repeating-linear-gradient(to bottom, rgba(0,0,0,.06) 0 1px, transparent 1px 3px); }
+  #controls { margin-top: 18px; }
+  .monitor-screen > #explainer { min-height: 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Grammatik-forklaring</h1>
+  <div class="monitor" role="group" aria-label="Skærm med forklaring">
+    <div class="monitor-frame"></div>
+    <div class="monitor-screen"><div id="explainer"></div></div>
+  </div>
+  <div id="controls"></div>
+</main>
+
+<!-- swap the scene file to preview another scene; ?manual=1 / ?tts=1 / ?speed=2 also work -->
+<script>
+  /* ?scene=../examples/en-et.scene.js picks another scene (plain <script>, no fetch). Default: the test scene. */
+  (function () {
+    var f = new URLSearchParams(location.search).get("scene") || "_test.scene.js";
+    if (!/^[\w.\/-]+\.scene\.js$/.test(f)) f = "_test.scene.js";
+    document.write('<script src="' + f + '"><\/script>');
+  })();
+</script>
+<script src="explainer.js"></script>
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    window.explainerPlayer = Explainer.mount(document.getElementById("explainer"), window.EXPLAINER_SCENE, {
+      controls: document.getElementById("controls"),
+      manual: q.get("manual") === "1",
+      tts: q.get("tts") === "1",
+      speed: parseFloat(q.get("speed")) || 1,
+      loop: q.get("loop") !== "0"
+    });
+  })();
+</script>
+</body>
+</html>

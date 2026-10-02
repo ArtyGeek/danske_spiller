@@ -1,0 +1,50 @@
+# Retro CRT monitor + keyboard, 48x40. SCREEN: z pixels = x6..41, y5..28 (36x24). Palette = Sjovt PAL (z = PAL N).
+. = transparent
+K = #101010
+W = #FFFFFF
+F = #D9D9D9
+S = #8E8E8E
+J = #5E5E5E
+G = #148A3C
+z = #1B2A9A
+---
+................................................
+..KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK..
+..KWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWFK..
+..KWFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFSK..
+..KWFKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzKFSK..
+..KWFKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKFSK..
+..KWSSSSJSJSJSJSSSSSSSSSSSSSSSSSSSJJSSGGSSSSSK..
+..KFSSSSJSJSJSJSSSSSSSSSSSSSSSSSSSJJSSGGSSSSSK..
+..KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK..
+...................KSSSSSSSSK...................
+..............KWWFFFFFFFFFFFFFFFFK..............
+.............KKKKKKKKKKKKKKKKKKKKKK.............
+................................................
+.....KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK.....
+.....KFFFSFFSFWWWWWWWWWWWWWWWWWWWWFFSFFSFFK.....
+.....KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK.....
