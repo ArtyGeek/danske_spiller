@@ -1,0 +1,1 @@
+- [Bulk data authoring pattern](feedback_bulk_data_authoring.md) — pipe-line source + build script; ambiguity traps for pronoun items

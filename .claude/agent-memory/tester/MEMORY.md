@@ -1,0 +1,1 @@
+- [validate.js scope](validate-js-scope.md) — validate.js ignores game data.js; write own checks, scan for two-valid-answer option sets
