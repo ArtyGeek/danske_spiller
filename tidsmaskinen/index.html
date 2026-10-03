@@ -603,6 +603,8 @@
     return modelFrom(r, P, P.display, VOICE_ZONES);
   };
   TL_MODELS.imperative = function(item, P){
+    // the answer is not an imperative form for particles/"tak" (lowercase) and for the polite question "Vil du ..."
+    if (/^[a-zæøå]/.test(P.display) || /^vil /i.test(P.display)) return simpleModel([], 'Konstruktion: ' + P.display, null, [{ k:'imp', name:'Bydeform', col:'present' }]);
     return simpleModel(['imp'], 'Aktivt: bydeform (du henvender dig direkte)', P.display, [{ k:'imp', name:'Bydeform', col:'present' }]);
   };
 
