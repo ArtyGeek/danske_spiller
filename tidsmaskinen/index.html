@@ -224,7 +224,11 @@
     preterite_vs_perfect: { href:'../magiske_verber.html',            text:'Træn verbernes former → Magiske verber' },
     pluperfect:           { href:'../magiske_verber.html',            text:'Træn verbernes former → Magiske verber' },
     future:               { href:'../ordstilling-detektiv/index.html', text:'Træn ordstilling → Ordstillingsdetektiven' },
-    modal:                { href:'../ordstilling-detektiv/index.html', text:'Træn ordstilling → Ordstillingsdetektiven' }
+    modal:                { href:'../ordstilling-detektiv/index.html', text:'Træn ordstilling → Ordstillingsdetektiven' },
+    conditional:          { href:'../konjunktioner/konjunktioner.html', text:'Træn bindeord → Konjunktion Crush' },
+    infinitive:           { href:'../ordstilling-detektiv/index.html', text:'Træn ordstilling → Ordstillingsdetektiven' },
+    passive:              { href:'../ordstilling-detektiv/index.html', text:'Træn ordstilling → Ordstillingsdetektiven' },
+    imperative:           { href:'../magiske_verber.html',            text:'Træn verbernes former → Magiske verber' }
   };
   var CROSS_DEFAULT = CROSS.present_vs_preterite;
 
@@ -325,6 +329,14 @@
   function effMode(item){ return item.mode || state.mode; }
   function srsKey(item){ return GAME_ID + ':' + effMode(item) + ':' + item.id; }
   function filled(item, word){ return String(item.sentence).replace(/_{2,}/, word); }
+  // full sentence for an item: single blank, or one word per slot for conditionals
+  function fullText(item, P){
+    if (P && P.slots){
+      var i = 0;
+      return String(item.sentence).replace(/_{2,}/g, function(){ var d = P.slots[i] ? P.slots[i].display : '___'; i++; return d; });
+    }
+    return filled(item, P.display);
+  }
   function timedUnlocked(){ return (prefs.get('totalCorrect') || 0) >= TIMED_UNLOCK; }
   function poolFor(modeKey, levels){
     var all = Array.isArray(DATA[modeKey]) ? DATA[modeKey] : [];
@@ -367,6 +379,32 @@
     return 'nutid';
   }
 
+  function condClass(P){
+    var cls = 'open';
+    P.slots.forEach(function(sl){
+      var d = norm(sl.display);
+      if (tenseClass(d) === 'pluperfect' || /(^| )(have|været)( |$)/.test(d)) cls = 'counterfactual';
+      else if (cls !== 'counterfactual' && tenseClass(d) === 'past') cls = 'hypothetical';
+    });
+    return cls;
+  }
+  function infClass(answer){
+    var a = norm(answer), f = a.split(' ')[0];
+    if (/^for at( |$)/.test(a)) return 'for-at';
+    if (/^ved at( |$)/.test(a)) return 'ved-at';
+    if (/^til at( |$)/.test(a)) return 'til-at';
+    if (/^at( |$)/.test(a)) return 'at';
+    if (/ at( |$)/.test(a) || /t$/.test(f)) return 'andre';
+    return 'ingen-at';
+  }
+  function voiceClass(answer){
+    var w = norm(answer).split(' '), f = w[0];
+    if (w.length > 1 && /^(bliver|blev|blive|bliv|er|var)$/.test(f) && w.slice(1).some(function(t){ return /^(blevet|blive)$/.test(t); })) return 'blive';
+    if (/^(bliver|blev)$/.test(f) && w.length > 1) return 'blive';
+    if (/^(er|var)$/.test(f) && w.length > 1) return 'tilstand';
+    if (w.some(function(t){ return t.length > 2 && /s$/.test(t) && !/ss$/.test(t); })) return 's-passiv';
+    return 'aktiv';
+  }
   // pattern key: pattern:tidsmaskinen:<type>:<a>:<b>
   function patternKey(item){
     var mode = effMode(item), m = MODE_BY_KEY[mode];
@@ -384,6 +422,14 @@
       a = futureConstruction(P.display); b = 'choice';
     } else if (mode === 'modal'){
       a = slug(P.display) || 'modal'; b = 'meaning';
+    } else if (mode === 'conditional'){
+      a = condClass(P); b = 'tense-consistency';
+    } else if (mode === 'infinitive'){
+      a = infClass(P.display); b = 'construction';
+    } else if (mode === 'passive'){
+      a = voiceClass(P.display); b = 'voice-choice';
+    } else if (mode === 'imperative'){
+      a = /^(lad|hold) /i.test(P.display) ? 'forbud' : (/\bikke\b/i.test(item.sentence) ? 'negativ' : 'form'); b = 'imperative';
     } else {
       a = slug(P.display) || 'answer'; b = 'choice';
     }
@@ -394,6 +440,15 @@
   // MC modes: options + correct. Future: first accepted answer + distractors.
   // accepted_answers that are not displayed are equivalents; they are graded correct but never rendered as options.
   function prep(item){
+    if (Array.isArray(item.slots)){
+      var slotInfo = item.slots.map(function(sl){
+        var acc = (sl.accepted_answers || []).slice();
+        var dist = (sl.distractors || []).filter(function(d){ return !acc.some(function(a){ return norm(a) === norm(d); }); });
+        return { accepted: acc, display: acc[0], options: [acc[0]].concat(dist), extra: acc.slice(1) };
+      });
+      return { slots: slotInfo, display: slotInfo.map(function(x){ return x.display; }).join(' / '), accepted: [], options: [], extra: [],
+        isCorrect: function(){ return false; } };
+    }
     var acc = (item.accepted_answers || []).slice();
     if (item.correct && acc.map(norm).indexOf(norm(item.correct)) === -1) acc.unshift(item.correct);
     var display, options;
@@ -448,8 +503,8 @@
       aria:'To hændelser i fortiden. Først: ' + t.start + '. Så: ' + t.end + '.'
     };
   };
-  function simpleModel(zones, caption, label){
-    return { cards:[], bar:null, lit:zones, caption:caption, aria:'', resultCard:label };
+  function simpleModel(zones, caption, label, zonesDef){
+    return { cards:[], bar:null, lit:zones, caption:caption, aria:'', resultCard:label, zonesDef:zonesDef };
   }
   TL_MODELS.present_vs_preterite = function(item, P){
     var c = tenseClass(P.display);
@@ -468,22 +523,53 @@
     return simpleModel(['present'], 'Aktivt: Nu', P.display);
   };
 
+  TL_MODELS.conditional = function(item, P){
+    var c = condClass(P), txt = fullText(item, P);
+    if (c === 'counterfactual') return simpleModel(['past'], 'Aktivt: Datid (det skete ikke, kontrafaktisk)', txt);
+    if (c === 'hypothetical') return simpleModel(['present'], 'Aktivt: Nu (tænkt situation, datidsform)', txt);
+    return simpleModel(['present', 'future'], 'Aktivt: Nu og Fremtid (åben betingelse)', txt);
+  };
+  var INF_ZONES = [
+    { k:'ingen-at', name:'Ingen at', col:'past' }, { k:'at', name:'At', col:'present' }, { k:'for-at', name:'For at', col:'future' },
+    { k:'ved-at', name:'Ved at', col:'past' }, { k:'til-at', name:'Til at', col:'present' }, { k:'andre', name:'Andre', col:'future' }
+  ];
+  var INF_CAP = { 'ingen-at':'Aktivt: infinitiv uden at', 'andre':'Aktivt: anden konstruktion', 'at':'Aktivt: at + infinitiv', 'for-at':'Aktivt: for at (formål)', 'ved-at':'Aktivt: ved at (måde)', 'til-at':'Aktivt: til at' };
+  TL_MODELS.infinitive = function(item, P){
+    var c = infClass(P.display);
+    return simpleModel([c], INF_CAP[c], P.display, INF_ZONES);
+  };
+  var VOICE_ZONES = [
+    { k:'aktiv', name:'Aktiv', col:'past' }, { k:'s-passiv', name:'S-passiv', col:'present' },
+    { k:'blive', name:'Blive', col:'future' }, { k:'tilstand', name:'Tilstand', col:'past' }
+  ];
+  var VOICE_CAP = { 'aktiv':'Aktivt: aktiv (nogen gør noget)', 's-passiv':'Aktivt: s-passiv (handlingen i fokus)', 'blive':'Aktivt: blive-passiv (handlingen sker)', 'tilstand':'Aktivt: tilstand (resultat med være)' };
+  TL_MODELS.passive = function(item, P){
+    var c = voiceClass(P.display);
+    return simpleModel([c], VOICE_CAP[c], P.display, VOICE_ZONES);
+  };
+  TL_MODELS.imperative = function(item, P){
+    return simpleModel(['imp'], 'Aktivt: bydeform (du henvender dig direkte)', P.display, [{ k:'imp', name:'Bydeform', col:'present' }]);
+  };
+
   function buildTimeline(item, P, host){
     var mode = effMode(item);
     var model = (TL_MODELS[mode] || TL_MODELS.present_vs_preterite)(item, P);
     var root = document.createElement('div');
     root.className = 'tl';
     root.setAttribute('role', 'img');
-    var baseAria = 'Tidslinje med datid, nu og fremtid.' + (model.aria ? ' ' + model.aria : '');
+    var baseAria = (model.zonesDef ? 'Oversigt: ' + model.zonesDef.map(function(z){ return z.name; }).join(', ') + '.' : 'Tidslinje med datid, nu og fremtid.') + (model.aria ? ' ' + model.aria : '');
     root.setAttribute('aria-label', baseAria);
 
     var zonesEl = document.createElement('div');
     zonesEl.className = 'tl-zones';
+    var ZD = model.zonesDef || ZONES;
+    var cols = model.zonesDef ? 'repeat(' + (ZD.length <= 3 ? ZD.length : (ZD.length === 4 ? 2 : 3)) + ',1fr)' : '';
+    if (cols) zonesEl.style.gridTemplateColumns = cols;
     var zoneNodes = {}, cardHosts = {};
-    ZONES.forEach(function(z){
+    ZD.forEach(function(z){
       var d = document.createElement('div');
       d.className = 'tl-zone';
-      d.setAttribute('data-z', z.k);
+      d.setAttribute('data-z', z.col || z.k);
       var n = document.createElement('div');
       n.className = 'tl-zname';
       n.textContent = z.name;
@@ -511,8 +597,9 @@
     var axis = document.createElement('div');
     axis.className = 'tl-axis' + (model.bar && model.bar.kind === 'ongoing' ? ' ongoing' : '');
     axis.setAttribute('aria-hidden', 'true');
+    if (model.zonesDef) axis.style.display = 'none';
     var segs = {};
-    ZONES.forEach(function(z){
+    ZD.forEach(function(z){
       var s = document.createElement('div');
       s.className = 'tl-seg';
       axis.appendChild(s);
@@ -788,11 +875,12 @@
     target.className = 'target';
     var sent = document.createElement('div');
     sent.className = 'sentence';
-    var blank = null;
+    var blank = null, blanks = [];
     String(item.sentence).split(/_{2,}/).forEach(function(seg, i, arr){
       sent.appendChild(document.createTextNode(seg));
       if (i < arr.length - 1){
         blank = document.createElement('span');
+        blanks.push(blank);
         blank.className = 'blank';
         blank.textContent = '?';
         blank.setAttribute('aria-label', 'tomt felt');
@@ -803,7 +891,7 @@
     var promptText = ((item.context || '') + ' ' + String(item.sentence).replace(/_{2,}/g, '…')).trim();
     DC.ui.ttsButton(promptText, target);
     wrap.appendChild(target);
-    return { timeline: tl, blank: blank, sentenceEl: sent, target: target };
+    return { timeline: tl, blank: blank, blanks: blanks, sentenceEl: sent, target: target };
   }
 
   // wrong / timeout feedback: correct answer + exactly one note + replay + Videre
@@ -817,8 +905,12 @@
       slip.appendChild(t);
     }
     var sol = document.createElement('div');
-    sol.innerHTML = 'Rigtigt svar: <span class="sol">' + esc(P.display) + '</span>' +
-      (P.extra.length ? ' · også: ' + esc(P.extra.join(', ')) : '');
+    if (P.slots){
+      sol.innerHTML = 'Rigtigt svar: <span class="sol">' + P.slots.map(function(x){ return esc(x.display) + (x.extra.length ? ' (også: ' + esc(x.extra.join(', ')) + ')' : ''); }).join(', ') + '</span>';
+    } else {
+      sol.innerHTML = 'Rigtigt svar: <span class="sol">' + esc(P.display) + '</span>' +
+        (P.extra.length ? ' · også: ' + esc(P.extra.join(', ')) : '');
+    }
     slip.appendChild(sol);
     if (item.note){
       var note = document.createElement('div');
@@ -853,11 +945,40 @@
     if (fn) document.addEventListener('keydown', fn);
   }
 
-  // ---- multiple-choice renderer (modes 1-5; mode 3 adds the build step) ----
+  // result: 'right' | 'wrong' | 'timeout' (shared by all renderers)
+  function concludeItem(c, result){
+    var item = c.item, P = c.P;
+    stopTimer();
+    el.timer.classList.add('hidden');
+    var full = fullText(item, P);
+    if (result === 'timeout'){
+      state.unanswered.push(item);
+      c.pr.timeline.activate();
+      SOUND.wrong();
+      DC.ui.announce('Tiden er gået. Rigtigt svar: ' + P.display + '. ' + (item.note || ''));
+      buildSlip(c.slip, item, P, full, true);
+      return;
+    }
+    var correct = result === 'right';
+    recordAnswer(item, correct);
+    if (correct){
+      SOUND.correct();
+      sdFx(true, c.wrap);
+      if (!DC.ui.motion.isReduced()) c.wrap.classList.add('press');
+      DC.ui.announce('Rigtigt.');
+      advanceTimer = setTimeout(advance, 800);
+    } else {
+      SOUND.wrong();
+      DC.ui.announce('Forkert. Rigtigt svar: ' + P.display + '. ' + (item.note || ''));
+      buildSlip(c.slip, item, P, full, false);
+    }
+  }
+
+  // ---- multiple-choice renderer (modes 1-5, 7-9; mode 3 adds the build step) ----
   function needsBuild(item, P){
     if (effMode(item) !== 'pluperfect') return false;
     if (state.idx < BUILD_FROM_INDEX) return false;
-    return filled(item, P.display).split(/\s+/).length <= BUILD_MAX_WORDS;
+    return fullText(item, P).split(/\s+/).length <= BUILD_MAX_WORDS;
   }
 
   function renderMC(item){
@@ -893,33 +1014,8 @@
       opts.appendChild(b);
     });
 
-    function conclude(result, shownText){
-      // result: 'right' | 'wrong' | 'timeout'
-      stopTimer();
-      el.timer.classList.add('hidden');
-      var full = filled(item, P.display);
-      if (result === 'timeout'){
-        state.unanswered.push(item);
-        pr.timeline.activate();
-        SOUND.wrong();
-        DC.ui.announce('Tiden er gået. Rigtigt svar: ' + P.display + '. ' + (item.note || ''));
-        buildSlip(slip, item, P, full, true);
-        return;
-      }
-      var correct = result === 'right';
-      recordAnswer(item, correct);
-      if (correct){
-        SOUND.correct();
-        sdFx(true, wrap);
-        if (!DC.ui.motion.isReduced()) wrap.classList.add('press');
-        DC.ui.announce('Rigtigt.');
-        advanceTimer = setTimeout(advance, 800);
-      } else {
-        SOUND.wrong();
-        DC.ui.announce('Forkert. Rigtigt svar: ' + P.display + '. ' + (item.note || ''));
-        buildSlip(slip, item, P, full, false);
-      }
-    }
+    var ctx = { item: item, P: P, wrap: wrap, slip: slip, pr: pr };
+    function conclude(result){ concludeItem(ctx, result); }
 
     function lockOptions(chosenBtn, correct){
       buttons.forEach(function(b){
@@ -1062,7 +1158,95 @@
     if (buttons[0]) buttons[0].focus();
   }
 
-  ['present_vs_preterite','preterite_vs_perfect','pluperfect','future','modal'].forEach(function(k){ RENDERERS[k] = renderMC; });
+  // ---- slots renderer (mode 6): one option group per blank, answered in sequence ----
+  function renderConditional(item){
+    var P = prep(item);
+    var wrap = document.createElement('div');
+    wrap.setAttribute('role', 'group');
+    wrap.setAttribute('aria-label', 'Opgave');
+    var pr = buildPrompt(item, P, wrap);
+    var opts = document.createElement('div');
+    opts.className = 'options';
+    opts.setAttribute('role', 'group');
+    wrap.appendChild(opts);
+    var slip = document.createElement('div');
+    wrap.appendChild(slip);
+    el.itemHost.innerHTML = '';
+    el.itemHost.appendChild(wrap);
+    var ctx = { item: item, P: P, wrap: wrap, slip: slip, pr: pr };
+    var si = 0, answered = false, buttons = [], n = P.slots.length;
+
+    function fillBlank(i, text, ok){
+      var b = pr.blanks[i];
+      if (!b) return;
+      b.textContent = text;
+      b.removeAttribute('aria-label');
+      b.classList.add(ok ? 'done-correct' : 'done-wrong');
+    }
+    function showSlot(){
+      var S = P.slots[si];
+      opts.innerHTML = '';
+      buttons = [];
+      opts.setAttribute('aria-label', n > 1 ? 'Svarmuligheder, felt ' + (si + 1) + ' af ' + n : 'Svarmuligheder');
+      pr.blanks.forEach(function(b, i){ b.style.borderBottomStyle = i === si ? 'dashed' : ''; });
+      shuffle(S.options.slice()).forEach(function(text, i){
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'opt';
+        b.setAttribute('data-value', text);
+        b.innerHTML = '<span class="onum" aria-hidden="true">' + (i + 1) + '</span><span class="otxt">' + esc(text) + '</span>';
+        b.addEventListener('click', function(){ choose(b); });
+        buttons.push(b);
+        opts.appendChild(b);
+      });
+      answered = false;
+      setKeyHandler(function(e){
+        if (answered || e.ctrlKey || e.metaKey || e.altKey) return;
+        var k = parseInt(e.key, 10);
+        if (k >= 1 && k <= buttons.length){ e.preventDefault(); choose(buttons[k - 1]); }
+      });
+      if (buttons[0]) buttons[0].focus();
+    }
+    function choose(btn){
+      if (answered) return;
+      answered = true;
+      setKeyHandler(null);
+      var S = P.slots[si];
+      var text = btn.getAttribute('data-value');
+      var ok = S.accepted.some(function(a){ return norm(a) === norm(text); });
+      buttons.forEach(function(b){
+        b.disabled = true;
+        if (b === btn) b.classList.add(ok ? 'chosen-correct' : 'chosen-wrong');
+        else if (!ok && norm(b.getAttribute('data-value')) === norm(S.display)) b.classList.add('reveal-correct');
+      });
+      fillBlank(si, ok ? text : S.display, ok);
+      if (!ok){
+        stopTimer();
+        for (var j = si + 1; j < n; j++) fillBlank(j, P.slots[j].display, false);
+        pr.timeline.activate();
+        concludeItem(ctx, 'wrong');
+      } else if (si < n - 1){
+        si++;
+        advanceTimer = setTimeout(function(){ advanceTimer = null; showSlot(); }, 450);
+      } else {
+        stopTimer();
+        pr.timeline.activate();
+        concludeItem(ctx, 'right');
+      }
+    }
+    showSlot();
+    startTimer(TIME_PER_ITEM + 10 * (n - 1), function(){
+      if (advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
+      answered = true;
+      setKeyHandler(null);
+      buttons.forEach(function(b){ b.disabled = true; });
+      for (var j = si; j < n; j++) fillBlank(j, P.slots[j].display, false);
+      concludeItem(ctx, 'timeout');
+    });
+  }
+
+  ['present_vs_preterite','preterite_vs_perfect','pluperfect','future','modal','infinitive','passive','imperative'].forEach(function(k){ RENDERERS[k] = renderMC; });
+  RENDERERS.conditional = renderConditional;
   RENDERERS._default = renderMC;
 
   // ---- summary ----
@@ -1099,7 +1283,7 @@
       ul.className = 'weak-list';
       weak.forEach(function(item){
         var li = document.createElement('li');
-        li.textContent = filled(item, prep(item).display);
+        li.textContent = fullText(item, prep(item));
         ul.appendChild(li);
       });
       el.sumHost.appendChild(ul);
