@@ -161,13 +161,13 @@
 
   <main id="start-screen" class="card">
     <h1 class="title"><span data-sd-sprite="ur" data-scale="5" aria-hidden="true"></span>Tidsmaskinen</h1>
+    <button class="primary" id="btn-play" type="button">Spil</button>
     <div class="group-label" id="lbl-mode">Tilstand</div>
     <div class="modes" id="mode-list" role="group" aria-labelledby="lbl-mode"></div>
     <div class="group-label" id="lbl-level">Niveau</div>
     <div class="chips" id="level-list" role="group" aria-labelledby="lbl-level"></div>
     <div class="group-label" id="lbl-pace">Tempo</div>
     <div class="chips" id="pace-list" role="group" aria-labelledby="lbl-pace"></div>
-    <button class="primary" id="btn-play" type="button">Spil</button>
   </main>
 
   <main id="play-screen" class="card hidden">
@@ -473,7 +473,6 @@
   var ZONE_NAME = { past:'Datid', present:'Nu', future:'Fremtid' };
   var CLASS_ZONES = { present:['present'], past:['past'], perfect:['past','present'], pluperfect:['past'], future:['future'] };
   var TL_MODELS = {};
-  var FUTURE_CUE = /i morgen|næste (uge|måned|år|weekend)|på (mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag)|planlagt|køreplan|snart|nu til sommer/i;
 
   TL_MODELS.preterite_vs_perfect = function(item, P){
     var t = item.timeline;
@@ -506,46 +505,102 @@
   function simpleModel(zones, caption, label, zonesDef){
     return { cards:[], bar:null, lit:zones, caption:caption, aria:'', resultCard:label, zonesDef:zonesDef };
   }
-  TL_MODELS.present_vs_preterite = function(item, P){
-    var c = tenseClass(P.display);
-    var zones = CLASS_ZONES[c] || ['present'];
-    var fut = c === 'present' && FUTURE_CUE.test((item.sentence || '') + ' ' + (item.context || ''));
-    if (fut) return simpleModel(['future'], 'Aktivt: Fremtid (nutid bruges om det planlagte)', P.display);
-    var hist = c === 'present' && /nutid|historie|historisk|overskrift/i.test(item.context || '');
-    return simpleModel(zones, 'Aktivt: ' + zones.map(function(z){ return ZONE_NAME[z]; }).join(' og ') + (hist ? ' (nutid bruges om fortiden)' : ''), P.display);
-  };
-  TL_MODELS.future = function(item, P){
-    return simpleModel(['future'], 'Aktivt: Fremtid', P.display);
-  };
+  // Conservative derivation: a zone / specific caption is shown ONLY when the item's own note states the meaning
+  // (the data has no meaning field). Anything not covered by a rule gets a neutral state: no zone lit,
+  // caption "Konstruktion: <svar>". Never a guess from the verb form.
+  function byNote(item, rules){
+    var n = item.note || '';
+    for (var i = 0; i < rules.length; i++) if (n.indexOf(rules[i][0]) === 0) return rules[i][1];
+    return null;
+  }
+  function modelFrom(rule, P, label, zonesDef){
+    if (!rule || !rule.lit || !rule.lit.length) return simpleModel([], (rule && rule.cap) || ('Konstruktion: ' + P.display), null, zonesDef);
+    return simpleModel(rule.lit, 'Aktivt: ' + rule.cap, label, zonesDef);
+  }
+  var R_PAST = { lit:['past'], cap:'Datid' }, R_NOW = { lit:['present'], cap:'Nu' }, R_FUT = { lit:['future'], cap:'Fremtid' };
+  var M1_RULES = [
+    ['Planlagte begivenheder i fremtiden', { lit:['future'], cap:'Fremtid (nutid bruges om det planlagte)' }],
+    ['Tidsudtryk som', R_PAST], ['En afsluttet handling', R_PAST], ['I en fortælling om afsluttede', R_PAST], ['Vaner, der hørte til en afsluttet', R_PAST],
+    ['Det, der foregår nu', R_NOW], ['Vaner, der stadig gælder', R_NOW], ['Når noget gælder stadig', R_NOW],
+    ['Generelle sandheder', { lit:['present'], cap:'Nu (gælder altid)' }],
+    ['Nutid kan bruges til at gøre en historisk', { lit:[], cap:'Nutid bruges om fortiden' }]
+  ];
+  TL_MODELS.present_vs_preterite = function(item, P){ return modelFrom(byNote(item, M1_RULES), P, P.display); };
+  var M4_RULES = [
+    ['Faste planer', R_FUT], ['Kommer til at bruges', R_FUT], ['Skal udtrykker en aftale', R_FUT], ['Bliver bruges om tilstande, der indtræder i fremtiden', R_FUT],
+    ['Har tænkt mig at', R_FUT], ['Planlagte fremtidige', R_FUT]
+  ];
+  TL_MODELS.future = function(item, P){ return modelFrom(byNote(item, M4_RULES), P, P.display); };
   TL_MODELS.modal = function(item, P){
-    var f = norm(P.display).split(' ')[0];
-    if (PAST_MODALS[f]) return simpleModel(['past'], 'Aktivt: Datid (datidsform)', P.display);
-    return simpleModel(['present'], 'Aktivt: Nu', P.display);
+    // only when the note itself says the meaning is about the past
+    return modelFrom(/fortiden/.test(item.note || '') ? R_PAST : null, P, P.display);
   };
-
-  TL_MODELS.conditional = function(item, P){
-    var c = condClass(P), txt = fullText(item, P);
-    if (c === 'counterfactual') return simpleModel(['past'], 'Aktivt: Datid (det skete ikke, kontrafaktisk)', txt);
-    if (c === 'hypothetical') return simpleModel(['present'], 'Aktivt: Nu (tænkt situation, datidsform)', txt);
-    return simpleModel(['present', 'future'], 'Aktivt: Nu og Fremtid (åben betingelse)', txt);
-  };
+  var M6_RULES = [
+    ['Åbne betingelser', { lit:['present', 'future'], cap:'Nu og Fremtid (åben betingelse)' }],
+    ['Efter ville i hovedsætningen står hvis-sætningen i datid', { lit:['present'], cap:'Nu (tænkt situation)' }],
+    ['Når hvis-sætningen står i datid', { lit:['present'], cap:'Nu (tænkt situation)' }],
+    ['Hypotetisk nutid', { lit:['present'], cap:'Nu (tænkt situation)' }],
+    ['Noget, der ikke skete i fortiden', { lit:['past'], cap:'Datid (det skete ikke)' }],
+    ['Følgen af en betingelse, der ikke blev opfyldt i fortiden', { lit:['past'], cap:'Datid (det skete ikke)' }],
+    ['Kontrafaktisk fortid', { lit:['past'], cap:'Datid (det skete ikke)' }],
+    ['Når betingelsen hører til fortiden, men følgen gælder nu', { lit:['past', 'present'], cap:'Datid og Nu (betingelse i fortiden, følge nu)' }]
+  ];
+  TL_MODELS.conditional = function(item, P){ return modelFrom(byNote(item, M6_RULES), P, fullText(item, P)); };
   var INF_ZONES = [
     { k:'ingen-at', name:'Ingen at', col:'past' }, { k:'at', name:'At', col:'present' }, { k:'for-at', name:'For at', col:'future' },
     { k:'ved-at', name:'Ved at', col:'past' }, { k:'til-at', name:'Til at', col:'present' }, { k:'andre', name:'Andre', col:'future' }
   ];
-  var INF_CAP = { 'ingen-at':'Aktivt: infinitiv uden at', 'andre':'Aktivt: anden konstruktion', 'at':'Aktivt: at + infinitiv', 'for-at':'Aktivt: for at (formål)', 'ved-at':'Aktivt: ved at (måde)', 'til-at':'Aktivt: til at' };
+  var M7_RULES = [
+    ['"For at" + infinitiv udtrykker formål', { lit:['for-at'], cap:'for at' }],
+    ['"Ved at" + infinitiv udtrykker måden', { lit:['ved-at'], cap:'ved at' }],
+    ['"Til at" + infinitiv bruges', { lit:['til-at'], cap:'til at' }],
+    ['Efter modalverber', { lit:['ingen-at'], cap:'infinitiv uden at' }],
+    ['Efter se, høre og føle', { lit:['ingen-at'], cap:'infinitiv uden at' }],
+    ['"Lade" + objekt', { lit:['ingen-at'], cap:'infinitiv uden at' }],
+    ['Efter mange almindelige verber', { lit:['at'], cap:'at + infinitiv' }],
+    ['Efter adjektiver som', { lit:['at'], cap:'at + infinitiv' }],
+    ['"Plejer" kræver', { lit:['at'], cap:'at + infinitiv' }],
+    ['"Uden at"', { lit:['andre'], cap:'uden at' }],
+    ['"Være ved at"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"Få noget + participium"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"Få nogen til at"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"Være nødt til"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"Lade være med at"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"Have brug for"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"Glad for"', { lit:['andre'], cap:'fast forbindelse' }],
+    ['Stolt kræver', { lit:['andre'], cap:'fast forbindelse' }],
+    ['Sikker kræver', { lit:['andre'], cap:'fast forbindelse' }],
+    ['Begejstret kræver', { lit:['andre'], cap:'fast forbindelse' }],
+    ['"I stedet for at"', { lit:['andre'], cap:'fast forbindelse' }]
+  ];
   TL_MODELS.infinitive = function(item, P){
-    var c = infClass(P.display);
-    return simpleModel([c], INF_CAP[c], P.display, INF_ZONES);
+    var r = byNote(item, M7_RULES);
+    // a form-specific cell is lit only when the answer really has that form
+    if (r && r.lit[0] !== 'andre' && r.lit[0] !== infClass(P.display)) r = null;
+    return modelFrom(r, P, P.display, INF_ZONES);
   };
   var VOICE_ZONES = [
     { k:'aktiv', name:'Aktiv', col:'past' }, { k:'s-passiv', name:'S-passiv', col:'present' },
     { k:'blive', name:'Blive', col:'future' }, { k:'tilstand', name:'Tilstand', col:'past' }
   ];
-  var VOICE_CAP = { 'aktiv':'Aktivt: aktiv (nogen gør noget)', 's-passiv':'Aktivt: s-passiv (handlingen i fokus)', 'blive':'Aktivt: blive-passiv (handlingen sker)', 'tilstand':'Aktivt: tilstand (resultat med være)' };
+  var M8_RULES = [
+    ['Blev + participium', { lit:['blive'], cap:'blive-passiv' }], ['Bliver + participium', { lit:['blive'], cap:'blive-passiv' }],
+    ['Er blevet + participium', { lit:['blive'], cap:'blive-passiv' }],
+    ['Er + participium', { lit:['tilstand'], cap:'tilstand (resultat)' }], ['Var + participium', { lit:['tilstand'], cap:'tilstand (resultat)' }],
+    ['S-passiv passer til', { lit:['s-passiv'], cap:'s-passiv' }], ['Passiv i modalkonstruktion', { lit:['s-passiv'], cap:'s-passiv' }],
+    ['S-passiv bruges i upersonlig', { lit:['s-passiv'], cap:'s-passiv' }],
+    ['S-former kan udtrykke', { lit:[], suffix:'s-form' }],
+    ['Når subjektet selv udfører', { lit:['aktiv'], cap:'aktiv' }],
+    ['Nogle verber har s-form', { lit:[], suffix:'ikke passiv' }]
+  ];
   TL_MODELS.passive = function(item, P){
-    var c = voiceClass(P.display);
-    return simpleModel([c], VOICE_CAP[c], P.display, VOICE_ZONES);
+    var r = byNote(item, M8_RULES);
+    if (!r && /^I upersonlig passiv/.test(item.note || '')){
+      var c = voiceClass(P.display);
+      if (c === 'blive' || c === 's-passiv') r = { lit:[c], cap: c === 'blive' ? 'blive-passiv' : 's-passiv' };
+    }
+    if (r && !r.lit.length) r = { lit:[], cap:'Konstruktion: ' + P.display + ' (' + r.suffix + ')' };
+    return modelFrom(r, P, P.display, VOICE_ZONES);
   };
   TL_MODELS.imperative = function(item, P){
     return simpleModel(['imp'], 'Aktivt: bydeform (du henvender dig direkte)', P.display, [{ k:'imp', name:'Bydeform', col:'present' }]);
@@ -628,7 +683,7 @@
           });
         }
         cardNodes.forEach(function(cn){ if (cn.c.first) cn.node.classList.add('active'); });
-        if (model.resultCard){
+        if (model.resultCard && model.lit.length){
           var card = addCard({ z:model.lit[model.lit.length - 1], role:'Svar', label:model.resultCard }, !reduced);
           card.classList.add('active');
         }
@@ -834,6 +889,8 @@
     SOUND.roundComplete();
     renderSummary();
     show('summary');
+    var again = el.sumHost.querySelector('.primary');
+    if (again) again.focus();
   }
 
   function recordAnswer(item, correct){
@@ -1326,7 +1383,6 @@
     home.addEventListener('click', showStart);
     actions.appendChild(home);
     el.sumHost.appendChild(actions);
-    again.focus();
 
     var S = window.Sjovt;
     if (S && state.correct > 0 && S.fx && S.fx.celebrate) S.fx.celebrate();
