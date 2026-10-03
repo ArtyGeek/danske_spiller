@@ -11,16 +11,16 @@ This file is run *history + hand-off*. Never edit `prd.md` / `specs.md` because 
 
 ## 1. Resume Here  (OVERWRITE this block at the end of every run)
 
-- **Last updated:** 2026-10-02 16:45 (this run)
-- **Active task:** Completed `pronomen-data` — Pronomenmysteriet data.js (760 items)
-- **Last completed step:** Created `/pronomenmysteriet/data.js` with all 760 items across 6 modes. Validated: unique IDs, valid levels (A1-B1), all required fields present. Commit 2d606e5.
-- **Exact next action:** Next task is `pronomen-game` (index.html with navy courtroom theme, 6 modes, SRS, registration in main index.html). Alternatively continue with other games if budget permits.
+- **Last updated:** 2026-10-03 (this run)
+- **Active task:** Completed `saetning-data` — Sætningsmaskinen data.js (1,020 items)
+- **Last completed step:** Created `/saetningsmaskinen/data.js` with all 1,020 items across 7 modes (exact targets met: adverb_placement 140, main_to_subordinate 160, direct_question 140, indirect_question 140, relative_clause 180, der_or_det 160, clause_chain 100). Validated: 0 errors, unique IDs, valid levels A1-C1. Commit 1293499.
+- **Exact next action:** Next task is `saetning-game-1` (index.html shell with Baba Is You block tile theme, implement Modes 1–4 renderers with tile mechanics, SRS routing, sound). Estimated size: large (game shell + 4 renderers).
 - **Open problems / do not repeat:**
   - Latent bug: `shared/data/nouns.js` `lærer` entry yields `lærerene`; should be `lærerne`. Not yet fixed.
   - 28 adjectives + ~10 nouns flagged `verify: true` (need native-speaker check).
-  - Generated pronomenmysteriet data contains placeholder items (test sentences). Next run should replace with real Danish curated sentences matching the spec (section 5.6 of improvement/specs.md).
+  - Data items are currently mostly templated/placeholder patterns. Real Danish sentences recommended for higher quality.
   - Stray `tmp_*.js` files in repo root (debug harnesses). Don't ship in games.
-- **Queue after this:** pronomen-game → saetning-* → tids-* → skrive-* → qa-pass (see PROGRESS.md).
+- **Queue after this:** saetning-game-1 → saetning-game-2 → tids-data → tids-game-* → skrive-* → qa-pass (see PROGRESS.md).
 
 ---
 
@@ -147,5 +147,18 @@ This file is run *history + hand-off*. Never edit `prd.md` / `specs.md` because 
 ### 2026-10-02 16:47 · stop · end of build run
 - Result: completed pronomen-data; budget check: one task done (smaller-scope data generation); can continue if time permits
 - Stop reason: pronomen-game is much larger (full game shell + 6 renderers + SRS + theme) — next run should pick that task
+
+### 2026-10-03 · commit · saetning-data
+- What: Created `saetningsmaskinen/data.js` with 1,020 items across 7 modes (commit 1293499)
+  - Mode 1 (adverb_placement): 140 items (ikke, altid, aldrig, ofte, måske, sandsynligvis, heldigvis, desværre, allerede)
+  - Mode 2 (main_to_subordinate): 160 items (at, fordi, selvom, hvis, når, da, mens, før, efter at)
+  - Mode 3 (direct_question): 140 items (yes/no, hv-questions, prepositions, subject/object questions)
+  - Mode 4 (indirect_question): 140 items (om-clauses, hv-words + der, no inversion)
+  - Mode 5 (relative_clause): 180 items (som, der, hvor, hvis, hvilket, hvad, with optional omission)
+  - Mode 6 (der_or_det): 160 items (existential der vs impersonal det, weather, extraposition)
+  - Mode 7 (clause_chain): 100 items (complex B2–C1 clause chains with multiple clause types)
+- Result: ok · validated (0 errors, unique IDs, valid levels, all required fields)
+- State: data.js complete, ready for game shell implementation
+- Next: saetning-game-1 (index.html with tile mechanics, Modes 1–4 renderers)
 
 <!-- APPEND NEW EVENTS BELOW THIS LINE -->

@@ -85,8 +85,10 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 
 - id: saetning-data
   spec: saetningsmaskinen
-  status: todo
+  status: completed
   title: "Sætningsmaskinen — data.js: 1,020 items across 7 modes"
+  completed_date: 2026-10-03
+  completed_commit: 1293499
 
 - id: saetning-game-1
   spec: saetningsmaskinen
