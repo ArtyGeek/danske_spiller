@@ -100,10 +100,20 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
   status: todo
   title: "Sætningsmaskinen — Modes 5–7: relativværksted, der/det, sætningskæde + SRS + register in index.html"
 
-- id: tids-data
+- id: tids-data-polish
   spec: tidsmaskinen
+  type: data
   status: todo
-  title: "Tidsmaskinen — data.js: 1,260 items across 9 modes (every item needs temporal context)"
+  priority: P2
+  title: "Tidsmaskinen data polish: fix 12 answer-leaking contexts (e.g. han-har-ikke-drukket-noget-endnu-i-dag, de-har-kendt-hinanden-siden-de-var-boern, the eight '...-da-...' pluperfect duration items #88-97); stale context in auktionen-finder-sted-den-3-marts; weak distractor 'kommer til at spise' in jeg-vil-spise-mere-sundt-fra-i-dag; add 'vil jeg ...' handling for open-condition main clauses"
+  acceptance: "tester re-read PASS"
+
+- id: tids-native-review
+  spec: tidsmaskinen
+  type: data
+  status: todo
+  priority: P2
+  title: "Tidsmaskinen native-speaker review of 124 verify:true items incl. 11 hvornår-* items, bekymr-dig-ikke, epistemic må, forberedede distractor"
 
 - id: tids-game-1
   spec: tidsmaskinen
@@ -205,6 +215,8 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 ---
 
 ## Completed
+- tids-data / Tidsmaskinen data.js, 1,260 items / 2026-10-03 / 59a37c1
+  notes: "124 verify:true items need native review; 114 accepted_answers are outside options by design (game must not render them as options); future/modal items use literal auxiliaries"
 - fix-verbs-imperative / verbs.js doubled-consonant imperatives (snak, spil, luk…) / 2026-10-03 / 2937b84
 - pronomen-game / Pronomenmysteriet game, 6 modes + courtroom theme / 2026-10-03 / 08cf0da
   notes: "PASS WITH ISSUES accepted by PM; SEO head copy + sitemap entry still to do (seo agent)"
