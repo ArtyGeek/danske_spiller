@@ -289,7 +289,6 @@ function renderGames() {
   const list = games.filter(g => !term || (g.title + " " + g.description + " " + g.type).toLowerCase().includes(term));
   $("#games").innerHTML = list.map(cardHTML).join("");
   document.querySelectorAll("#games .stage > svg").forEach(s => { const w = document.createElement("span"); w.className = "sd-sprite"; s.replaceWith(w); w.appendChild(s); });
-  $("#allCount").textContent = list.length + (list.length === 1 ? " spil" : " spil");
   $("#empty").hidden = list.length !== 0;
 }
 $("#search").addEventListener("input", (e) => { searchTerm = e.target.value; renderGames(); });
