@@ -564,7 +564,41 @@
       "................KELLLLLLLLLLLLNK",
       "................KELLLLLLLLLLLLNK",
       "................KNNNNNNNNNNNNNNK",
-      ".................KKKKKKKKKKKKKK."]
+      ".................KKKKKKKKKKKKKK."],
+    // Tidsmaskinen — gold star with eyes (card icon; the small reward star stays "stjerne")
+    tidsstjerne: [
+      "................................",
+      "................................",
+      "...............KK...............",
+      "..............KYMK..............",
+      "..............KYMK..............",
+      ".............KPWYMK.............",
+      ".............KPWYMK.............",
+      "............KPWCCYMK............",
+      "............KPCCCYMK............",
+      "...........KPCCCCCYMK...........",
+      "........KKKKPCCCCCYMKKKK........",
+      ".KKKKKKKPPPPCCCCCCCCPPYMKKKKKKK.",
+      "KMYPPPPPCCCCCCCCCCCCCCCCPPPPPYMK",
+      ".KMYCWWWCCCCCCCCCCCCCCCCCCCCYMK.",
+      "..KMYYCCCCCCKKCCCCKKCCCCCCYYMK..",
+      "...KMMYCCCCCKKCCCCKKCCCCCYMMK...",
+      "....KKMYCCCCKKCCCCKKCCCCYMKK....",
+      "......KMYCCCKKCCCCKKCCCYMK......",
+      ".......KMCCCKKCCCCKKCCYMK.......",
+      "........KPCCCCCCCCCCCYMK........",
+      "........KPCCCCCCCCCCCYMK........",
+      ".......KPCWCCCCCCCCCCCYMK.......",
+      ".......KPCWCCCCCCCCCCCYMK.......",
+      ".......KPCCCCCCYYCCCCCYMK.......",
+      ".......KPCCCCYYMMYYCCCYMK.......",
+      ".......KPCCYYMMKKMMYYCYMK.......",
+      "......KPCYYMMKK..KKMMYYYMK......",
+      "......KYYMMKK......KKMMYMK......",
+      "......KMMKK..........KKMMK......",
+      ".......KK..............KK.......",
+      "................................",
+      "................................"]
   };
   // Dannebrog — generated (red field, white Nordic cross)
   (function () {
