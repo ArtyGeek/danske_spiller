@@ -1,1 +1,4 @@
+- [Windows scratch imports](windows-scratch-script-imports.md) — import harness via file:/// URL; unseen items count as SRS-due
 - [validate.js scope](validate-js-scope.md) — validate.js ignores game data.js; write own checks, scan for two-valid-answer option sets
+- [Time-anchor defects in tense data](data-audit-future-passive-time-anchor.md) — topic-only contexts, generator fallback forms, dropped subjects
+- [Absolute tense rules](danish-tense-absolute-rules-risk.md) — hvornår/reported-speech/vil-gerne clusters: native check, name the cluster

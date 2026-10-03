@@ -1,1 +1,5 @@
 - [Bulk data authoring pattern](feedback_bulk_data_authoring.md) — pipe-line source + build script; ambiguity traps for pronoun items
+- [Game test harness from worktree](reference_game_test_harness.md) — run smoke/puppeteer from main tests/; srs key location; uppercase CSS gotcha
+- [verbs.js pitfalls](reference_verbs_js_pitfalls.md) — wrong imperatives (lukk, spill...) and er-aux for gå/løbe; use literals
+- [Filled-sentence checks](feedback_filled_sentence_checks.md) — audit cloze items with verb-phrase blanks: doubled adverbs, order, second-correct traps
+- [Bash tool quirks](reference_bash_tool_quirks.md) — use Write tool for scripts/data; heredoc/backslash and sampler-hang pitfalls
