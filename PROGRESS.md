@@ -115,15 +115,27 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
   priority: P2
   title: "Tidsmaskinen native-speaker review of 124 verify:true items incl. 11 hvornår-* items, bekymr-dig-ikke, epistemic må, forberedede distractor"
 
-- id: tids-game-1
-  spec: tidsmaskinen
+- id: seo-tidsmaskinen
+  type: chore
   status: todo
-  title: "Tidsmaskinen — index.html: timeline theme, Træning/Timed toggle, Modes 1–5"
+  priority: P2
+  title: "seo agent: finalise head copy, JSON-LD and sitemap entry for tidsmaskinen/index.html"
+  acceptance: "head copy + JSON-LD present; sitemap.xml lists the page"
 
-- id: tids-game-2
+- id: tids-ux-polish
   spec: tidsmaskinen
+  type: code
   status: todo
-  title: "Tidsmaskinen — Modes 6–9: conditionals, infinitives, passive, imperatives + SRS + register in index.html"
+  priority: P2
+  title: "Tidsmaskinen UX polish: red ✗ on correct answer in blank on wrong/timeout; first-option focus scrolls timeline under sticky bar at 360 px; distinguish mode 6 blanks; caption font size >= comfortable; swap duplicate 'ur' sprite (shared with Adverbier card)"
+  acceptance: "tester re-run PASS"
+
+- id: tids-caption-review
+  spec: tidsmaskinen
+  type: data
+  status: todo
+  priority: P2
+  title: "Tidsmaskinen native review of the note-to-zone caption table and the 124 verify:true items"
 
 - id: skrive-data
   spec: skrivekontrollen
@@ -215,6 +227,10 @@ Sound `sequence(steps)`: `[{ type, frequency, duration, gain, delay? }]` — ini
 ---
 
 ## Completed
+- tids-game-1 / Tidsmaskinen shell + modes 1–5 + Med tid / 2026-10-03 / b15b125
+  notes: "zones/captions conservative: lit only when the item note states the meaning, else neutral 'Konstruktion: <svar>'; SEO head + sitemap entry + native caption review still to do"
+- tids-game-2 / Tidsmaskinen modes 6–9 + timeline theme / 2026-10-03 / b15b125
+  notes: "zones/captions conservative: lit only when the item note states the meaning, else neutral 'Konstruktion: <svar>'; SEO head + sitemap entry + native caption review still to do"
 - tids-data / Tidsmaskinen data.js, 1,260 items / 2026-10-03 / 59a37c1
   notes: "124 verify:true items need native review; 114 accepted_answers are outside options by design (game must not render them as options); future/modal items use literal auxiliaries"
 - fix-verbs-imperative / verbs.js doubled-consonant imperatives (snak, spil, luk…) / 2026-10-03 / 2937b84
