@@ -2,4 +2,5 @@
 - [Game test harness from worktree](reference_game_test_harness.md) — run smoke/puppeteer from main tests/; srs key location; uppercase CSS gotcha
 - [verbs.js pitfalls](reference_verbs_js_pitfalls.md) — wrong imperatives (lukk, spill...) and er-aux for gå/løbe; use literals
 - [Filled-sentence checks](feedback_filled_sentence_checks.md) — audit cloze items with verb-phrase blanks: doubled adverbs, order, second-correct traps
+- [tids-data shape](reference_tids_data_shape.md) — no C1 items, accepted-only equivalents, timeline semantics, capitalised modals
 - [Bash tool quirks](reference_bash_tool_quirks.md) — use Write tool for scripts/data; heredoc/backslash and sampler-hang pitfalls

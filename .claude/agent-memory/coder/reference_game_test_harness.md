@@ -9,4 +9,4 @@ Worktrees have no tests/node_modules. Run from the MAIN repo `tests/` dir: `node
 
 **Why:** the harness resolves puppeteer-core from its own dir; scratchpad scripts cannot resolve it otherwise.
 
-**How to apply:** SRS state is in localStorage `srs:<game-id>` (items/patterns). Sjovt CSS uppercases button text, so `innerText` regexes for "Spil igen" must be case-insensitive. A per-game theme must keep light-mode `--sd-bg` light, or smoke's contrast check fails on the dark `--sd-text` brand text.
+**How to apply:** file:// localStorage is shared by all pages in one browser, so `localStorage.clear()` then `page.reload()` at the start of each scenario (a first scripted click once appeared to be swallowed without the reload). Root `index.html` pageerror "Cannot set properties of null (setting 'textContent')" is pre-existing on master; smoke.mjs on the root page is not meaningful. SRS state is in localStorage `srs:<game-id>` (items/patterns). Sjovt CSS uppercases button text, so `innerText` regexes for "Spil igen" must be case-insensitive. A per-game theme must keep light-mode `--sd-bg` light, or smoke's contrast check fails on the dark `--sd-text` brand text.

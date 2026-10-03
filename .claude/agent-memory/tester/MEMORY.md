@@ -2,3 +2,6 @@
 - [validate.js scope](validate-js-scope.md) — validate.js ignores game data.js; write own checks, scan for two-valid-answer option sets
 - [Time-anchor defects in tense data](data-audit-future-passive-time-anchor.md) — topic-only contexts, generator fallback forms, dropped subjects
 - [Absolute tense rules](danish-tense-absolute-rules-risk.md) — hvornår/reported-speech/vil-gerne clusters: native check, name the cluster
+- [Click hits sticky bar](puppeteer-click-hits-sticky-bar.md) — scrollTo(0,0) before header/mode clicks or they silently miss
+- [Derived captions audit](derived-captions-audit-whole-dataset.md) — rerun regex classifiers over ALL items; sampling missed ~100 wrong captions
+- [replace() $$ trap](node-replace-dollar-collapse.md) — splice code with function replacer; `$$` collapses, `node -e` eats backslashes
