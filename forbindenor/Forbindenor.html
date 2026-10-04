@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://sjovtdansk.dk/forbindenor/Forbindenor.html" />
 <meta property="og:locale" content="da_DK" />
 <link rel="canonical" href="https://sjovtdansk.dk/forbindenor/Forbindenor.html" />
+<script src="../shared/dansk-speech.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -659,7 +660,7 @@ function refreshVoices(){
   voices = speechSynthesis.getVoices();
 }
 function danishVoice(){
-  return voices.find(v=>/da(-|_)?DK/i.test(v.lang)) || voices.find(v=>/^da/i.test(v.lang)) || null;
+  return (window.DanskSpeech&&DanskSpeech.pickVoice(voices))||voices.find(v=>/da(-|_)?DK/i.test(v.lang)) || voices.find(v=>/^da/i.test(v.lang)) || null;
 }
 if('speechSynthesis' in window){
   speechSynthesis.onvoiceschanged = refreshVoices;
@@ -669,7 +670,7 @@ function speak(text){
   if(!('speechSynthesis' in window) || !text) return;
   try{
     speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
+    const u = new SpeechSynthesisUtterance(window.DanskSpeech?DanskSpeech.normalize(text):text);
     u.lang = "da-DK";
     const v = danishVoice();
     if(v) u.voice = v;

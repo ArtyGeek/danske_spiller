@@ -1,0 +1,964 @@
+[
+{
+"id": "EV01",
+"cat": "everyday",
+"text": "Hej, hvordan går det?",
+"spoken": "=",
+"ipa": "hɑjˀ voˈdan ˈɡɒːˀ de",
+"ipa_conf": "verify",
+"level": "A",
+"err": "hv- read as [hv]; 'går' with consonantal r; 'det' with final [t]"
+},
+{
+"id": "EV02",
+"cat": "everyday",
+"text": "Tak for mad.",
+"spoken": "=",
+"ipa": "ˈtɑk fʌ ˈmæð̞",
+"ipa_conf": "high",
+"level": "A",
+"err": "'mad' with stop [d]; 'for' as full [fɔr]"
+},
+{
+"id": "EV03",
+"cat": "everyday",
+"text": "Vi ses i morgen.",
+"spoken": "=",
+"ipa": "vi ˈseːˀs i ˈmɒːn",
+"ipa_conf": "high",
+"level": "A",
+"err": "spelling pronunciation [ˈmɔrɡən]"
+},
+{
+"id": "EV04",
+"cat": "everyday",
+"text": "Kan du hjælpe mig?",
+"spoken": "=",
+"ipa": "kan du ˈjɛlbə mɑj",
+"ipa_conf": "high",
+"level": "A",
+"err": "'hj' as [hj]; 'mig' as [mɪɡ]"
+},
+{
+"id": "VO01",
+"cat": "vowels",
+"text": "Rød grød med fløde.",
+"spoken": "=",
+"ipa": "ˈʁœð̞ ˈɡʁœð̞ mɛ ˈfløːð̞ə",
+"ipa_conf": "high",
+"level": "A",
+"err": "ø unrounded/backed; d as stop; tongue-tip r"
+},
+{
+"id": "VO02",
+"cat": "vowels",
+"text": "år",
+"spoken": "=",
+"ipa": "ˈɒːˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "å as English /ɔː/ + consonantal r"
+},
+{
+"id": "VO03",
+"cat": "vowels",
+"text": "øje",
+"spoken": "=",
+"ipa": "ˈʌjə",
+"ipa_conf": "high",
+"level": "A",
+"err": "spelling pronunciation with full final e"
+},
+{
+"id": "VO04",
+"cat": "vowels",
+"text": "syv",
+"spoken": "=",
+"ipa": "ˈsywˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "y as [i]/[u]; final v as fricative [v]"
+},
+{
+"id": "VO05",
+"cat": "vowels",
+"text": "dag",
+"spoken": "=",
+"ipa": "ˈdæˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "final g pronounced; a as back [ɑ]"
+},
+{
+"id": "VO06",
+"cat": "vowels",
+"text": "Pigen spiser kage.",
+"spoken": "=",
+"ipa": "ˈpiːən ˈsbiːsɐ ˈkæːjə",
+"ipa_conf": "verify",
+"level": "A",
+"err": "g as [ɡ]; '-er' as [ɛr]"
+},
+{
+"id": "MP01",
+"cat": "minimal pairs",
+"text": "hun",
+"text_b": "hund",
+"spoken": "=",
+"ipa": "hun",
+"ipa_b": "hunˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "identical (no stød contrast); d pronounced in 'hund'"
+},
+{
+"id": "MP02",
+"cat": "minimal pairs",
+"text": "mor",
+"text_b": "mord",
+"spoken": "=",
+"ipa": "ˈmoɐ̯",
+"ipa_b": "ˈmoɐ̯ˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "final [rd]; consonantal r; no stød in 'mord'"
+},
+{
+"id": "MP03",
+"cat": "minimal pairs",
+"text": "man",
+"text_b": "mand",
+"spoken": "=",
+"ipa": "man",
+"ipa_b": "manˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "identical, or [mand] with d"
+},
+{
+"id": "MP04",
+"cat": "minimal pairs",
+"text": "ven",
+"text_b": "vend",
+"spoken": "=",
+"ipa": "vɛn",
+"ipa_b": "vɛnˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "identical; d pronounced"
+},
+{
+"id": "MP05",
+"cat": "minimal pairs",
+"text": "bønner",
+"text_b": "bønder",
+"spoken": "=",
+"ipa": "ˈbønɐ",
+"ipa_b": "ˈbønˀɐ",
+"ipa_conf": "high",
+"level": "A",
+"err": "d pronounced in 'bønder'; '-er' as [ɛr]"
+},
+{
+"id": "MP06",
+"cat": "minimal pairs",
+"text": "Hun er en god læser.",
+"text_b": "Hun læser en bog.",
+"spoken": "=",
+"ipa": "ˈlɛːsɐ (noun)",
+"ipa_b": "ˈlɛːˀsɐ (verb)",
+"ipa_conf": "high",
+"level": "A",
+"info": true,
+"err": "homograph: needs part-of-speech context, most voices fail"
+},
+{
+"id": "MP07",
+"cat": "minimal pairs",
+"text": "Tanken er tom.",
+"text_b": "Tanken er god.",
+"spoken": "=",
+"ipa": "ˈtɑŋˀkən (fuel tank)",
+"ipa_b": "ˈtɑŋkən (thought)",
+"ipa_conf": "high",
+"level": "A",
+"info": true,
+"err": "homograph; cannot be resolved from spelling"
+},
+{
+"id": "MP08",
+"cat": "minimal pairs",
+"text": "vise",
+"text_b": "visse",
+"spoken": "=",
+"ipa": "ˈviːsə",
+"ipa_b": "ˈvisə",
+"ipa_conf": "high",
+"level": "A",
+"err": "no vowel-length contrast"
+},
+{
+"id": "SD01",
+"cat": "soft d",
+"text": "gade",
+"spoken": "=",
+"ipa": "ˈɡæːð̞ə",
+"ipa_conf": "high",
+"level": "A",
+"err": "stop [d], or English [ð] that is too fricative"
+},
+{
+"id": "SD02",
+"cat": "soft d",
+"text": "hånd",
+"spoken": "=",
+"ipa": "ˈhʌnˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "final d pronounced; å as [oː]"
+},
+{
+"id": "SD03",
+"cat": "soft d",
+"text": "kold",
+"spoken": "=",
+"ipa": "ˈkʌlˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "[kold] with d and [o]"
+},
+{
+"id": "SD04",
+"cat": "soft d",
+"text": "bord",
+"spoken": "=",
+"ipa": "ˈboɐ̯ˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "[bord] with r and d"
+},
+{
+"id": "SD05",
+"cat": "soft d",
+"text": "Jeg spiste brød med smør.",
+"spoken": "=",
+"ipa": "jɑ ˈsbisdə ˈbʁœð̞ mɛ ˈsmœɐ̯ˀ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'brød' with stop d; 'med' as [mɛd]"
+},
+{
+"id": "ST01",
+"cat": "stød",
+"text": "Bilen kører på vejen.",
+"spoken": "=",
+"ipa": "ˈbiˀlən ˈkøːɐ pɔ ˈvɑjˀən",
+"ipa_conf": "verify",
+"level": "A",
+"err": "no stød; 'kører' with [r]; 'vejen' as [ˈvejen]"
+},
+{
+"id": "ST02",
+"cat": "stød",
+"text": "stol",
+"spoken": "=",
+"ipa": "ˈsdoˀl",
+"ipa_conf": "high",
+"level": "A",
+"err": "aspirated English [st]; no stød"
+},
+{
+"id": "ST03",
+"cat": "stød",
+"text": "Huset er stort.",
+"spoken": "=",
+"ipa": "ˈhuːˀsəð̞ ɐ ˈsdoɐ̯ˀd",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'huset' with final [t]"
+},
+{
+"id": "ST04",
+"cat": "stød",
+"text": "Hun har en hund.",
+"spoken": "=",
+"ipa": "hun hɑ en ˈhunˀ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'hun' and 'hund' sound the same in context"
+},
+{
+"id": "RE01",
+"cat": "r-environments",
+"text": "ringe",
+"spoken": "=",
+"ipa": "ˈʁeŋə",
+"ipa_conf": "high",
+"level": "A",
+"err": "trilled/alveolar r; i not lowered to [e]"
+},
+{
+"id": "RE02",
+"cat": "r-environments",
+"text": "kirke",
+"spoken": "=",
+"ipa": "ˈkiɐ̯ɡə",
+"ipa_conf": "verify",
+"level": "A",
+"err": "consonantal r before k"
+},
+{
+"id": "RE03",
+"cat": "r-environments",
+"text": "fire",
+"spoken": "=",
+"ipa": "ˈfiːɐ",
+"ipa_conf": "high",
+"level": "A",
+"err": "[ˈfiːre] with full e"
+},
+{
+"id": "RE04",
+"cat": "r-environments",
+"text": "farve",
+"spoken": "=",
+"ipa": "ˈfɑːvə",
+"ipa_conf": "high",
+"level": "A",
+"err": "[farve] with r; a not backed"
+},
+{
+"id": "RE05",
+"cat": "r-environments",
+"text": "vejr",
+"spoken": "=",
+"ipa": "ˈvɛɐ̯ˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "j pronounced ('vej-er')"
+},
+{
+"id": "RD01",
+"cat": "reductions",
+"text": "Det ved jeg ikke.",
+"spoken": "=",
+"ipa": "de ˈveˀð̞ jɑ ˈeɡə",
+"ipa_conf": "verify",
+"level": "A",
+"err": "each word in citation form; 'ikke' as [ˈɪke]"
+},
+{
+"id": "RD02",
+"cat": "reductions",
+"text": "selvfølgelig",
+"spoken": "=",
+"ipa": "sɛlˈføljəli",
+"ipa_conf": "high",
+"level": "A",
+"err": "v and final g pronounced"
+},
+{
+"id": "RD03",
+"cat": "reductions",
+"text": "billig",
+"spoken": "=",
+"ipa": "ˈbili",
+"ipa_conf": "high",
+"level": "A",
+"err": "final g pronounced"
+},
+{
+"id": "RD04",
+"cat": "reductions",
+"text": "meget",
+"text_b": "noget",
+"spoken": "=",
+"ipa": "ˈmɑːəð̞",
+"ipa_b": "ˈnoːəð̞",
+"ipa_conf": "high",
+"level": "A",
+"err": "g pronounced; final [t]. Colloquial [ˈmɑjð̞]/[ˈnɔːð̞] also acceptable"
+},
+{
+"id": "RD05",
+"cat": "reductions",
+"text": "Hun sagde nej.",
+"spoken": "=",
+"ipa": "hun ˈsɛː ˈnɑjˀ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'sagde' as [ˈsaɡdə]"
+},
+{
+"id": "CO01",
+"cat": "compounds",
+"text": "sygehus",
+"spoken": "=",
+"ipa": "ˈsyːəˌhuːˀs",
+"ipa_conf": "verify",
+"level": "A",
+"err": "main stress on 'hus'; g pronounced"
+},
+{
+"id": "CO02",
+"cat": "compounds",
+"text": "fodboldbane",
+"spoken": "=",
+"ipa": "ˈfoð̞bʌldˌbæːnə",
+"ipa_conf": "verify",
+"level": "A",
+"err": "equal stress on all parts; 'fod' with stop d"
+},
+{
+"id": "CO03",
+"cat": "compounds",
+"text": "rundstykke",
+"spoken": "=",
+"ipa": "ˈʁɔnˌsdøɡə",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'rund' with d; stress on 'stykke'"
+},
+{
+"id": "CO04",
+"cat": "compounds",
+"text": "Jeg drikker kaffe.",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": "verify",
+"level": "A",
+"err": "verb stressed, 'kaffe' not accented"
+},
+{
+"id": "QU01",
+"cat": "questions",
+"text": "Kommer du i aften?",
+"spoken": "=",
+"ipa": "ˈkʌmɐ du i ˈɑftən",
+"ipa_conf": "verify",
+"level": "A",
+"err": "steep English-style rise"
+},
+{
+"id": "QU02",
+"cat": "questions",
+"text": "Du kommer i aften?",
+"text_b": "Du kommer i aften.",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": null,
+"level": "A",
+"err": "same contour for both: declarative question not marked"
+},
+{
+"id": "QU03",
+"cat": "questions",
+"text": "Hvad koster det?",
+"spoken": "=",
+"ipa": "va ˈkʌsdɐ de",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'hvad' with [hv]/[d]"
+},
+{
+"id": "QU04",
+"cat": "questions",
+"text": "Det er rigtigt, ikke?",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": "verify",
+"level": "A",
+"err": "tag 'ikke' as separate stressed [ˈɪke]"
+},
+{
+"id": "SM01",
+"cat": "statements",
+"text": "Jeg bor i København.",
+"spoken": "=",
+"ipa": "jɑ ˈboɐ̯ˀ i købənˈhɑwˀn",
+"ipa_conf": "verify",
+"level": "A",
+"err": "stress on 'Kø-'; v pronounced in 'havn'"
+},
+{
+"id": "SM02",
+"cat": "statements",
+"text": "Butikken lukker kl. 18.",
+"spoken": "Butikken lukker klokken atten.",
+"level": "TA",
+"err": "'kl.' read as letters; '18.' read as ordinal"
+},
+{
+"id": "SM03",
+"cat": "statements",
+"text": "Vi skal bl.a. købe mælk, brød, æg osv.",
+"spoken": "Vi skal blandt andet købe mælk, brød, æg og så videre.",
+"level": "T",
+"err": "abbreviations spelled letter by letter"
+},
+{
+"id": "NU01",
+"cat": "numbers",
+"text": "Hun er 50 år.",
+"spoken": "Hun er halvtreds år.",
+"ipa": "halˈtʁɛs",
+"ipa_conf": "high",
+"level": "TA",
+"err": "English 'fifty'; l and v pronounced"
+},
+{
+"id": "NU02",
+"cat": "numbers",
+"text": "60",
+"spoken": "tres",
+"ipa": "ˈtʁɛs",
+"ipa_conf": "high",
+"level": "TA",
+"err": "'seksti'"
+},
+{
+"id": "NU03",
+"cat": "numbers",
+"text": "70",
+"spoken": "halvfjerds",
+"ipa": "halˈfjɛɐ̯s",
+"ipa_conf": "verify",
+"level": "TA",
+"err": "'syvti'; v/d pronounced"
+},
+{
+"id": "NU04",
+"cat": "numbers",
+"text": "Han fylder 80.",
+"spoken": "Han fylder firs.",
+"ipa": "ˈfiɐ̯ˀs",
+"ipa_conf": "verify",
+"level": "TA",
+"err": "'80.' read as ordinal; 'otti'"
+},
+{
+"id": "NU05",
+"cat": "numbers",
+"text": "90",
+"spoken": "halvfems",
+"ipa": "halˈfɛmˀs",
+"ipa_conf": "verify",
+"level": "TA",
+"err": "'niti'"
+},
+{
+"id": "NU06",
+"cat": "numbers",
+"text": "75",
+"spoken": "femoghalvfjerds",
+"level": "TA",
+"err": "tens before units; English"
+},
+{
+"id": "NU07",
+"cat": "numbers",
+"text": "1.234",
+"spoken": "et tusind to hundrede og fireogtredive",
+"level": "T",
+"err": "'.' parsed as decimal point"
+},
+{
+"id": "NU08",
+"cat": "numbers",
+"text": "3,5 kg",
+"spoken": "tre komma fem kilo",
+"level": "T",
+"err": "en-US parse"
+},
+{
+"id": "NU09",
+"cat": "numbers",
+"text": "Det er hans 3. forsøg.",
+"spoken": "Det er hans tredje forsøg.",
+"level": "T",
+"err": "cardinal 'tre' + sentence break"
+},
+{
+"id": "NU10",
+"cat": "numbers",
+"text": "Prisen er ca. 200 kr.",
+"spoken": "Prisen er cirka to hundrede kroner.",
+"level": "T",
+"err": "'ca.'/'kr.' spelled out letter by letter"
+},
+{
+"id": "NU11",
+"cat": "numbers",
+"text": "Ring på 12 34 56 78.",
+"spoken": "Ring på tolv fireogtredive seksoghalvtreds otteoghalvfjerds.",
+"level": "T",
+"err": "read as one large number, or digit by digit"
+},
+{
+"id": "DA01",
+"cat": "dates",
+"text": "Juleaften er den 24. december.",
+"spoken": "Juleaften er den fireogtyvende december.",
+"level": "TA",
+"err": "cardinal 'fireogtyve'"
+},
+{
+"id": "DA02",
+"cat": "dates",
+"text": "Vi holder fri 1/5.",
+"spoken": "Vi holder fri første maj.",
+"level": "T",
+"err": "US month/day order or 'en femtedel'"
+},
+{
+"id": "DA03",
+"cat": "dates",
+"text": "03.10.2026",
+"spoken": "den tredje oktober totusind og seksogtyve",
+"level": "T",
+"err": "read as a decimal number; month/day swapped"
+},
+{
+"id": "DA04",
+"cat": "dates",
+"text": "Han blev født i 1999.",
+"spoken": "Han blev født i nitten hundrede og nioghalvfems.",
+"level": "T",
+"err": "'et tusind ni hundrede ...' instead of year style"
+},
+{
+"id": "DA05",
+"cat": "dates",
+"text": "mandag d. 3. okt.",
+"spoken": "mandag den tredje oktober",
+"level": "T",
+"err": "'d.' read as letter 'de'"
+},
+{
+"id": "NA01",
+"cat": "names",
+"text": "Aarhus",
+"spoken": "=",
+"ipa": "ˈɒːhuːˀs",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'Aa' read as two a's / English 'Ar-hus'"
+},
+{
+"id": "NA02",
+"cat": "names",
+"text": "Helsingør",
+"spoken": "=",
+"ipa": "hɛlseŋˈøɐ̯ˀ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "stress on first syllable"
+},
+{
+"id": "NA03",
+"cat": "names",
+"text": "Søren Kierkegaard",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": "verify",
+"level": "A",
+"err": "English [ˈkɪəkəɡɑːd]"
+},
+{
+"id": "NA04",
+"cat": "names",
+"text": "Odense",
+"spoken": "=",
+"ipa": "ˈoːð̞ənsə",
+"ipa_conf": "high",
+"level": "A",
+"err": "[oˈdɛnse] with stop d, stress on second syllable"
+},
+{
+"id": "NA05",
+"cat": "names",
+"text": "Danmark",
+"spoken": "=",
+"ipa": "ˈdænmɑɡ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "English 'Denmark'"
+},
+{
+"id": "LO01",
+"cat": "loans",
+"text": "chauffør",
+"spoken": "=",
+"ipa": "ɕoˈføɐ̯ˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "English 'chauffeur'"
+},
+{
+"id": "LO02",
+"cat": "loans",
+"text": "station",
+"spoken": "=",
+"ipa": "sdaˈɕoˀn",
+"ipa_conf": "high",
+"level": "A",
+"err": "English [ˈsteɪʃən]"
+},
+{
+"id": "LO03",
+"cat": "loans",
+"text": "restaurant",
+"spoken": "=",
+"ipa": "ʁɛsdoˈʁɑŋ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "English with final t"
+},
+{
+"id": "LO04",
+"cat": "loans",
+"text": "computer",
+"spoken": "=",
+"ipa": "kʌmˈpjuːdɐ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "American flap + [ɚ]"
+},
+{
+"id": "SJ01",
+"cat": "sk/sj/kj",
+"text": "sjov",
+"spoken": "=",
+"ipa": "ˈɕʌwˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "[sj] split; final [v]"
+},
+{
+"id": "SJ02",
+"cat": "sk/sj/kj",
+"text": "kjole",
+"spoken": "=",
+"ipa": "ˈkjoːlə",
+"ipa_conf": "high",
+"level": "A",
+"err": "[tʃ]/[ç] (Swedish/Norwegian-style)"
+},
+{
+"id": "SJ03",
+"cat": "sk/sj/kj",
+"text": "ski",
+"spoken": "=",
+"ipa": "ˈsɡiːˀ",
+"ipa_conf": "high",
+"level": "A",
+"err": "[ʃiː] (Norwegian/Swedish-style)"
+},
+{
+"id": "SJ04",
+"cat": "sk/sj/kj",
+"text": "tjener",
+"spoken": "=",
+"ipa": "ˈtɕɛːnɐ",
+"ipa_conf": "verify",
+"level": "A",
+"err": "[tj] split; '-er' as [ɛr]"
+},
+{
+"id": "FC01",
+"cat": "fast speech",
+"text": "Hvad så, skal vi ik' ta' en kop kaffe?",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": "verify",
+"level": "TA",
+"err": "normaliser 'fixes' ik'/ta' or voice reads apostrophe aloud"
+},
+{
+"id": "FC02",
+"cat": "fast speech",
+"text": "Det ved jeg sgu ikke.",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": "verify",
+"level": "A",
+"err": "'sgu' spelled letter by letter"
+},
+{
+"id": "FC03",
+"cat": "fast speech",
+"text": "Nå, men så ses vi.",
+"spoken": "=",
+"ipa": "ˈnɔ mɛn sʌ ˈseːˀs vi",
+"ipa_conf": "verify",
+"level": "A",
+"err": "'nå' as English 'no'; long pause after comma"
+},
+{
+"id": "LS01",
+"cat": "long sentences",
+"text": "I weekenden tog vi toget til Aarhus, hvor vi spiste frokost hos min mormor.",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": null,
+"level": "A",
+"err": "flat word-by-word prosody; 'tog' with [ɡ]"
+},
+{
+"id": "LS02",
+"cat": "long sentences",
+"text": "Hvis det regner i morgen, bliver vi hjemme og hygger os med en god bog.",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": null,
+"level": "A",
+"err": "'bliver' as [ˈbliːvɐ]; 'god' with stop d"
+},
+{
+"id": "LS03",
+"cat": "long sentences",
+"text": "Min bror arbejder som tømrer i Odense, men han flytter snart til København.",
+"spoken": "=",
+"ipa": null,
+"ipa_conf": null,
+"level": "A",
+"err": "consonantal r in 'bror'/'tømrer'; name stress wrong"
+},
+{
+"id": "LS04",
+"cat": "long sentences",
+"text": "Den 1. maj holder mange fri, men de fleste butikker har som regel åbent til kl. 17.",
+"spoken": "Den første maj holder mange fri, men de fleste butikker har som regel åbent til klokken sytten.",
+"level": "TA",
+"err": "'1.' read as cardinal; sentence breaks at abbreviation dots"
+},
+{
+"id": "TI01",
+"cat": "times",
+"text": "Vi kom kl. 17.30.",
+"spoken": "Vi kom klokken sytten tredive.",
+"level": "T",
+"err": "'kl' read as letters; '17.30' as decimal"
+},
+{
+"id": "TI02",
+"cat": "times",
+"text": "Du kom kl. 1.",
+"spoken": "Du kom klokken et.",
+"level": "T",
+"err": "'klokken en' (wrong form)"
+},
+{
+"id": "TI03",
+"cat": "times",
+"text": "Mødet er kl. 8.05.",
+"spoken": "Mødet er klokken otte nul fem.",
+"level": "T",
+"err": "'otte fem' loses the zero"
+},
+{
+"id": "AB01",
+"cat": "abbreviations",
+"text": "Fx en bil, et hus, dvs. noget stort.",
+"spoken": "For eksempel en bil, et hus, det vil sige noget stort.",
+"level": "T",
+"err": "letters read out"
+},
+{
+"id": "AB02",
+"cat": "abbreviations",
+"text": "Tlf. nr. 12 34 56 78, evt. pga. aftale.",
+"spoken": "Telefon nummer tolv fireogtredive seksoghalvtreds otteoghalvfjerds, eventuelt på grund af aftale.",
+"level": "T",
+"err": "letters read out; number read as digits"
+},
+{
+"id": "SY01",
+"cat": "symbols",
+"text": "en bil → bilen",
+"spoken": "en bil bliver til bilen",
+"level": "T",
+"err": "arrow read as 'minus greater' or skipped"
+},
+{
+"id": "SY02",
+"cat": "symbols",
+"text": "kan/skal/vil + verbum",
+"spoken": "kan eller skal eller vil plus verbum",
+"level": "T",
+"err": "slashes/plus read inconsistently"
+},
+{
+"id": "SY03",
+"cat": "symbols",
+"text": "Brug og/eller her",
+"spoken": "Brug og eller her",
+"level": "T",
+"err": "'og eller eller' (double)"
+},
+{
+"id": "BL01",
+"cat": "blanks",
+"text": "Filmen ___ allerede, da vi kom.",
+"spoken": "Filmen, allerede, da vi kom.",
+"level": "T",
+"err": "'underscore underscore' voiced, or no pause cue"
+},
+{
+"id": "BL02",
+"cat": "blanks",
+"text": "___ dine hænder, før vi spiser.",
+"spoken": "dine hænder, før vi spiser.",
+"level": "T",
+"err": "leading blank voiced"
+},
+{
+"id": "EE01",
+"cat": "en/et",
+"text": "1 hus",
+"spoken": "en hus",
+"level": "T",
+"err": "KNOWN LIMITATION (known-case): should be 'et hus'; write the number in words for neuter nouns",
+"known_case": true
+},
+{
+"id": "NG01",
+"cat": "negative",
+"text": "Svar 12. han kom",
+"spoken": "Svar tolv. han kom",
+"level": "T",
+"err": "ordinal misfire on ordinary text"
+},
+{
+"id": "NG02",
+"cat": "negative",
+"text": "Åbent 24/7 hele ugen",
+"spoken": "Åbent fireogtyve syv hele ugen",
+"level": "T",
+"err": "read as a date"
+},
+{
+"id": "NG03",
+"cat": "negative",
+"text": "1/5 af eleverne",
+"spoken": "en femtedel af eleverne",
+"level": "T",
+"err": "read as a date (første maj)"
+},
+{
+"id": "NG04",
+"cat": "negative",
+"text": "Ring 12 05 67 89",
+"spoken": "Ring tolv nul fem syvogtres niogfirs",
+"level": "T",
+"err": "leading zero lost"
+},
+{
+"id": "NG05",
+"cat": "negative",
+"text": "Hvad så, skal vi ik' ta' en kop kaffe?",
+"spoken": "=",
+"level": "TA",
+"err": "apostrophe forms must stay as written"
+}
+]
