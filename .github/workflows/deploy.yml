@@ -1,0 +1,86 @@
+name: Deploy to Simply.com
+
+# Production deploys happen ONLY from a push to master (the repo's default branch) or a manual run
+# of this workflow on master. Pull requests and feature branches never trigger or reach deploy.
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: show what would change, upload nothing"
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # No npm dependencies are needed for these checks (the site is plain static HTML/JS).
+      - name: Validate datasets
+        run: node shared/validate.js
+
+      - name: Speech normaliser tests
+        run: node tests/speech.test.cjs
+
+      - name: Syntax-check JavaScript
+        run: |
+          set -euo pipefail
+          git ls-files -z -- 'shared/*.js' '*/data.js' 'danish_flashcards/**/*.js' | xargs -0 -n1 node --check
+
+      - name: Build production output
+        run: scripts/build-dist.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: |
+            dist
+            dist.manifest
+          include-hidden-files: false
+          retention-days: 7
+
+  deploy:
+    needs: test-and-build
+    if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4   # for scripts/ only
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+
+      - name: Deploy over SSH
+        env:
+          SIMPLY_HOST: ${{ secrets.SIMPLY_HOST }}
+          SIMPLY_USER: ${{ secrets.SIMPLY_USER }}
+          SIMPLY_PORT: ${{ secrets.SIMPLY_PORT }}
+          SIMPLY_REMOTE_PATH: ${{ secrets.SIMPLY_REMOTE_PATH }}
+          SIMPLY_SSH_KEY: ${{ secrets.SIMPLY_SSH_KEY }}
+          SIMPLY_KNOWN_HOSTS: ${{ secrets.SIMPLY_KNOWN_HOSTS }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          umask 077
+          KEYDIR=$(mktemp -d)
+          trap 'rm -rf "$KEYDIR"' EXIT
+          printf '%s\n' "$SIMPLY_SSH_KEY" > "$KEYDIR/id"
+          printf '%s\n' "$SIMPLY_KNOWN_HOSTS" > "$KEYDIR/known_hosts"
+          export SSH_KEY_FILE="$KEYDIR/id" KNOWN_HOSTS_FILE="$KEYDIR/known_hosts"
+          scripts/deploy.sh
