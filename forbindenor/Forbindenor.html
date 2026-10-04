@@ -111,17 +111,6 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
   color:#eafdff}
 .sentence-row{display:flex;align-items:flex-start;gap:10px;margin:6px 0 4px}
 .sentence-row .sentence{margin:0;flex:1}
-.speaker{width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center;
-  font-size:1rem;flex:none;cursor:pointer;border:1px solid var(--cyan-dim);
-  background:var(--panel);color:var(--cyan);margin-top:.15em;
-  box-shadow:0 0 10px rgba(55,226,255,.15);transition:transform .08s,box-shadow .15s,border-color .15s}
-.speaker:hover{border-color:var(--cyan);box-shadow:0 0 16px rgba(55,226,255,.35)}
-.speaker:active{transform:scale(.92)}
-.blank{display:inline-block;min-width:90px;border-bottom:2px solid var(--orange);
-  color:var(--orange);text-align:center;padding:0 8px;animation:pulse 1.3s ease-in-out infinite;
-  font-weight:bold}
-.blank.filled{animation:none;border-bottom-color:var(--cyan);color:var(--cyan);
-  text-shadow:0 0 8px var(--cyan)}
 @keyframes pulse{50%{opacity:.35}}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 @media(max-width:430px){.opts{grid-template-columns:1fr}}
@@ -205,6 +194,8 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
 <link rel="stylesheet" href="../shared/sjovt.css">
 <script src="../shared/sjovt.js"></script>
 <link rel="stylesheet" href="../shared/themes/forbindeord.css">
+<link rel="stylesheet" href="../shared/tts-button.css">
+<link rel="stylesheet" href="../shared/sd-extras.css">
 <link rel="stylesheet" href="../shared/explainer/modal.css">
 <script src="../shared/explainer/modal.js"></script>
 </head>
@@ -224,10 +215,10 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
   <div class="weak-banner" id="weakBanner">
     <b>SVAGE ORD</b>
     <span id="weakCount"></span>
-    <button class="back-btn" id="backBtn" type="button">Tilbage til normalt spil ✕</button>
+    <button class="back-btn" id="backBtn" type="button">← Tilbage til normalt spil</button>
   </div>
   <div class="panel" id="game">
-    <div class="cat"><span id="cat">&mdash;</span></div>
+    <div class="cat"><span id="cat" class="sd-badge sd-badge--panel">&mdash;</span></div>
     <div class="sentence-row">
       <p class="sentence" id="sentence"></p>
       <div id="speakerSlot"></div>
@@ -679,9 +670,9 @@ function speak(text){
 }
 function speakerBtn(text, cls){
   const b = document.createElement("button");
-  b.className = "speaker " + (cls||"");
+  b.className = "dc-tts-button " + (cls||"");
   b.type = "button";
-  b.textContent = "♪"; b.title = "Lyt";
+  b.title = "Lyt";
   b.setAttribute("aria-label","Lyt til sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
@@ -887,7 +878,7 @@ function render(noFocus){
   const order = state.weakMode ? state.weakOrder : state.order;
   const rec=pool[order[state.i]];
   $('cat').textContent=rec.cat;
-  $('sentence').innerHTML=esc(rec.da).replace('{}','<span class="blank" id="bk">_____</span>');
+  $('sentence').innerHTML=esc(rec.da).replace('{}','<span class="sd-gap blank" id="bk" role="img" aria-label="mellemrum"></span>');
   const fullSentence=rec.da.replace('{}',rec.initial?cap(rec.ans):rec.ans);
   const slot=$('speakerSlot'); slot.innerHTML='';
   slot.appendChild(speakerBtn(fullSentence));
@@ -928,7 +919,7 @@ function showAnswered(rec,w){
     if(o.textContent===rec.ans) o.classList.add('correct');
     else if(o.textContent===w) o.classList.add('wrong');
   });
-  bk.textContent=rec.initial?cap(rec.ans):rec.ans; bk.classList.add('filled');
+  bk.textContent=rec.initial?cap(rec.ans):rec.ans; bk.removeAttribute('role'); bk.removeAttribute('aria-label'); bk.classList.add('filled','is-filled','is-ok');
   $('reveal').classList.add('show');
   if(state.lives<=0){ $('next').textContent='Se resultat »'; }
   $('next').classList.add('show');
@@ -942,7 +933,7 @@ function choose(btn,w,rec){
     o.disabled=true;
     if(o.textContent===rec.ans) o.classList.add('correct');
   });
-  bk.textContent=disp; bk.classList.add('filled');
+  bk.textContent=disp; bk.removeAttribute('role'); bk.removeAttribute('aria-label'); bk.classList.add('filled','is-filled','is-ok');
   const isCorrect = w===rec.ans;
   if(isCorrect){
     btn.classList.add('correct'); Sjovt.fx.correct(btn);

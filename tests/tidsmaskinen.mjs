@@ -301,7 +301,7 @@ try {
     note('correct animation class (press) present', `${pressed}/${rights.length}`);
     rec('correct: positive animation class + sound (oscillators)', pressed >= rights.length * 0.95 && all.every(r => r.osc > 0), `press=${pressed}/${rights.length}`);
     const wrongs = all.filter(r => r.expect === 'wrong' && r.slip);
-    const badSlip = wrongs.filter(r => r.slip.notes !== 1 || !/Rigtigt svar:/.test(r.slip.text) || r.slip.tts !== 1 || !r.slip.btns.some(b => /Videre/.test(b)) || !r.slip.btns.some(b => /Afspil igen/.test(b)) || !r.slip.text.includes(r.note) || !r.dispAnswer.every(d => r.slip.text.includes(d)) || r.slip.focus !== 'Videre');
+    const badSlip = wrongs.filter(r => r.slip.notes !== 1 || !/Rigtigt svar:/.test(r.slip.text) || r.slip.tts !== 1 || !r.slip.btns.some(b => /Videre/.test(b)) || !r.slip.btns.some(b => /Lyt/.test(b)) || !r.slip.text.includes(r.note) || !r.dispAnswer.every(d => r.slip.text.includes(d)) || r.slip.focus !== 'Videre');
     rec('wrong: correct answer + exactly one note + replay + Videre (focused)', wrongs.length > 0 && badSlip.length === 0, `n=${wrongs.length} bad=${badSlip.length} ${badSlip.slice(0, 2).map(r => r.id + ':' + JSON.stringify(r.slip)).join(' || ')}`);
     const waited = wrongs.filter(r => r.stillWaiting !== undefined);
     rec('wrong: waits for input (no auto-advance after 1.6 s)', waited.length > 0 && waited.every(r => r.stillWaiting), `checked=${waited.length}`);

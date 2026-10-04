@@ -258,10 +258,9 @@ function speak(text){
 }
 function speakerBtn(text, cls){
     const b = document.createElement("button");
-    b.className = "speaker " + (cls||"");
+    b.className = "dc-tts-button " + (cls||"");
     b.type = "button";
-    b.textContent = "▶";
-    b.setAttribute("aria-label","Udtal");
+    b.setAttribute("aria-label","Lyt");
     b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
     return b;
 }

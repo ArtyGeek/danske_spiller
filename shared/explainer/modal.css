@@ -8,6 +8,7 @@ html.xpm-open { overflow: hidden; }
   box-shadow: 0 0 0 3px var(--sd-ink, #101010); transition: background-color .12s var(--sd-ease, steps(2, end)); }
 .xpm-btn:hover { background: var(--sd-cream, #FFC25A); }
 .xpm-btn:focus-visible { outline: 3px solid var(--sd-focus, #FFFFFF); outline-offset: 2px; }
+.xpm-btn .xpm-ico { flex: none; width: 8px; height: 14px; display: block; shape-rendering: crispEdges; }
 .xpm-btn-float { position: fixed; right: 12px; bottom: 12px; z-index: 950; }
 .xpm-btn .xpm-btn-s { display: none; }
 @media (max-width: 420px) {

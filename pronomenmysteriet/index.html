@@ -111,6 +111,8 @@
 <link rel="stylesheet" href="../shared/sjovt.css">
 <script src="../shared/sjovt.js"></script>
 <link rel="stylesheet" href="../shared/themes/pronomenmysteriet.css">
+<link rel="stylesheet" href="../shared/tts-button.css">
+<link rel="stylesheet" href="../shared/sd-extras.css">
 <link rel="stylesheet" href="../shared/explainer/modal.css"><script src="../shared/explainer/modal.js"></script>
 </head>
 <body>
@@ -341,7 +343,8 @@
     clearPending();
     buildStartControls();
     show('start');
-    document.getElementById('btn-play').focus();
+    window.scrollTo(0, 0);
+    document.getElementById('btn-play').focus({ preventScroll: true });
   }
 
   // ---- round lifecycle ----
@@ -378,7 +381,7 @@
     box.className = 'empty-state';
     box.innerHTML = '<p>Der er ingen opgaver til dette valg. Vælg et andet niveau.</p>';
     var back = document.createElement('button');
-    back.className = 'btn accent'; back.type = 'button'; back.textContent = 'Tilbage';
+    back.className = 'btn accent'; back.type = 'button'; back.textContent = '← TILBAGE';
     back.addEventListener('click', showStart);
     box.appendChild(back);
     el.itemHost.appendChild(box);
@@ -467,8 +470,9 @@
       sent.appendChild(document.createTextNode(seg));
       if (i < arr.length - 1){
         blank = document.createElement('span');
-        blank.className = 'blank';
+        blank.className = 'sd-gap';
         blank.textContent = '?';
+        blank.setAttribute('role', 'img');
         blank.setAttribute('aria-label', 'tomt felt');
         sent.appendChild(blank);
       }
@@ -524,7 +528,8 @@
       if (blank){
         blank.textContent = item.correct;
         blank.removeAttribute('aria-label');
-        blank.classList.add(correct ? 'done-correct' : 'done-wrong');
+        blank.removeAttribute('role');
+        blank.classList.add('is-filled', correct ? 'is-ok' : 'is-bad', correct ? 'done-correct' : 'done-wrong');
       }
       recordAnswer(item, correct);
       btn.focus({ preventScroll: true });

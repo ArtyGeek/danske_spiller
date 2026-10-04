@@ -200,18 +200,8 @@ h1{
 .q-chain{font-family:var(--heading);letter-spacing:1px}
 .q-chain .blank{color:var(--gold2)}
 
-/* speaker / pronounce button */
+/* TTS button: shared/tts-button.css */
 .q-prompt-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-.speaker{
-  width:40px;height:40px;border-radius:50%;flex:none;
-  background:linear-gradient(180deg, rgba(28,35,72,.85), rgba(18,22,44,.9));
-  border:1px solid rgba(212,175,55,.45);color:var(--gold2);
-  display:inline-grid;place-items:center;font-size:1.1rem;cursor:pointer;
-  box-shadow:0 4px 14px rgba(0,0,0,.4);transition:transform .1s ease, border-color .15s ease;
-}
-.speaker:hover{border-color:var(--amber)}
-.speaker:active{transform:scale(.92)}
-.speaker.sm{width:30px;height:30px;font-size:.85rem}
 
 .options{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
 .opt{
@@ -266,6 +256,8 @@ h1{
 <link rel="stylesheet" href="shared/sjovt.css">
 <script src="shared/sjovt.js"></script>
 <link rel="stylesheet" href="shared/themes/magiske-verber.css">
+<link rel="stylesheet" href="shared/tts-button.css">
+<link rel="stylesheet" href="shared/sd-extras.css">
 <link rel="stylesheet" href="shared/explainer/modal.css"><script src="shared/explainer/modal.js"></script>
 </head>
 <body>
@@ -291,7 +283,7 @@ h1{
 
   <!-- DIFFICULTY -->
   <div id="screen-diff" class="panel hidden">
-    <button type="button" class="back-link" onclick="goMenu()">‹ Tilbage til hovedmenu</button>
+    <button type="button" class="back-link" onclick="goMenu()">← TILBAGE</button>
     <h2 class="center title" id="diffTitle" style="color:var(--gold2)"></h2>
     <p class="center" style="color:var(--muted);margin:.2em 0 0" id="diffDesc"></p>
     <div class="diff-grid" id="diffGrid"></div>
@@ -300,7 +292,7 @@ h1{
 
   <!-- GAME -->
   <div id="screen-game" class="panel hidden">
-    <button type="button" class="back-link" onclick="quitGame()">‹ Forlad spil</button>
+    <button type="button" class="back-link" onclick="quitGame()">✕ Forlad spil</button>
     <div class="hud">
       <span class="chip" id="hudGame"></span>
       <span class="chip" id="hudProgress"></span>
@@ -335,7 +327,7 @@ h1{
 
   <!-- STATS -->
   <div id="screen-stats" class="panel hidden">
-    <button type="button" class="back-link" onclick="goMenu()">‹ Tilbage til hovedmenu</button>
+    <button type="button" class="back-link" onclick="goMenu()">← TILBAGE</button>
     <h2 class="center title" style="color:var(--gold2)">Din Tryllebog</h2>
     <div class="stat-grid">
       <div class="stat"><div class="sv" id="stAcc">0%</div><div class="sl">Samlet træfsikkerhed</div></div>
@@ -603,7 +595,7 @@ function buildOptions(correct, verbKey, exclude){
 
 const TENSE_NAME = {nutid:'Nutid', datid:'Datid', forn:'Førnutid'};
 const fill = (tpl, form) => tpl.replace('[v]', form);
-const blankHtml = (tpl) => tpl.replace('[v]', '<span class="blank">_____</span>');
+const blankHtml = (tpl) => tpl.replace('[v]', '<span class="sd-gap" role="img" aria-label="mellemrum"></span>');
 
 /* ---------- QUESTION POOL GENERATION ---------- */
 const QUESTIONS = [];
@@ -708,7 +700,7 @@ Object.keys(V).forEach(inf=>{
     const o = buildOptions(v.pa, inf);
     addQ({game:'irregular',lvl:useLvl,verb:inf,
       instruction:'Udfyld kæden. Hvad er DATID?',
-      prompt:`<span class="q-chain">${inf} → ${v.pr} → <span class="blank">_____</span> → ${v.pp}</span>`,
+      prompt:`<span class="q-chain">${inf} → ${v.pr} → <span class="sd-gap" role="img" aria-label="mellemrum"></span> → ${v.pp}</span>`,
       options:o.options,correct:o.correctIndex,
       explanation:`Bøjning: ${inf} → ${v.pr} → ${v.pa} → ${v.pp}. Et uregelmæssigt verbum.`,
       en:V[inf].en, speak:`${inf}, ${v.pr}, ${v.pa}, ${v.pp}`});
@@ -718,7 +710,7 @@ Object.keys(V).forEach(inf=>{
     const o = buildOptions(v.pp, inf);
     addQ({game:'irregular',lvl:useLvl,verb:inf,
       instruction:'Udfyld kæden. Hvad er TILLÆGSFORMEN (førnutid)?',
-      prompt:`<span class="q-chain">${inf} → ${v.pr} → ${v.pa} → <span class="blank">_____</span></span>`,
+      prompt:`<span class="q-chain">${inf} → ${v.pr} → ${v.pa} → <span class="sd-gap" role="img" aria-label="mellemrum"></span></span>`,
       options:o.options,correct:o.correctIndex,
       explanation:`Bøjning: ${inf} → ${v.pr} → ${v.pa} → ${v.pp}. Bruges som "${v.aux} ${v.pp}".`,
       en:V[inf].en, speak:`${inf}, ${v.pr}, ${v.pa}, ${v.pp}`});
@@ -726,7 +718,7 @@ Object.keys(V).forEach(inf=>{
 });
 
 /* ---------- GAME METADATA ---------- */
-const GAME_SPR = {arena:'hat',timemachine:'snegl',perfect:'cykel',irregular:'hjerte',repair:'molle',detective:'flag',speed:'stjerne',mixed:'pokal'};
+const GAME_SPR = {arena:'bog',timemachine:'tidsstjerne',perfect:'ur',irregular:'kort',repair:'tandhjul',detective:'pin',speed:'tryllestav',mixed:'terning'};
 const GAMES = {
   arena:       {n:'Verbumarenaen', h:'Verbum&shy;arenaen',    ico:'⚔️', d:'Vælg den rigtige verbumform i sætningen.'},
   timemachine: {n:'Tidsmaskinen',ico:'⏳', d:'Sætningen skifter tid — vælg den rigtige form.'},
@@ -738,7 +730,7 @@ const GAMES = {
   mixed:       {n:'Blandet repetition',   ico:'🎲', d:'Tilfældige spørgsmål fra alle spil og tider.'}
 };
 const GAME_ORDER = ['arena','timemachine','perfect','irregular','repair','detective','speed','mixed'];
-const DIFF_SPR = {easy:'snegl',medium:'cykel',hard:'molle'};
+const DIFF_STARS = {easy:1,medium:2,hard:3}; /* difficulty = 1/2/3 stars (one sprite, one density) */
 const DIFFS = {
   easy:  {n:'Nem',    lvl:1, sym:'🪶', label:'A2'},
   medium:{n:'Mellem', lvl:2, sym:'🔮', label:'A2 / B1'},
@@ -764,6 +756,7 @@ let S = null; // current round
 
 /* ---------- DOM helpers ---------- */
 const $ = id => document.getElementById(id);
+function stars(dk,sc){ let h=""; for(let i=0;i<DIFF_STARS[dk];i++) h+=spr('stjerne',sc); return h; }
 function spr(n,sc,cls){ return window.Sjovt?'<span class="sd-sprite '+(cls||"")+'">'+Sjovt.spriteSVG(n,sc||3)+'</span>':""; }
 /* US-031: after a screen change focus lands on the first sensible control (set after the screen is visible).
    'game' is handled by renderQuestion (first option). The first paint does not steal focus. */
@@ -810,10 +803,9 @@ function speak(text){
 }
 function speakerBtn(text, cls){
   const b = document.createElement('button');
-  b.className = 'speaker ' + (cls||'');
+  b.className = 'dc-tts-button ' + (cls||'');
   b.type = 'button';
-  b.textContent = '▶';
-  b.setAttribute('aria-label','Udtal sætningen');
+  b.setAttribute('aria-label','Lyt');
   b.addEventListener('click', e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -825,7 +817,7 @@ function buildMenu(){
     const g = GAMES[key];
     const done = P.completed[key] ? ' ✓' : '';
     const card = document.createElement('div');
-    card.className='game-card';
+    card.className='game-card sd-surface';
     card.setAttribute('role','button'); card.tabIndex=0;
     card.onclick=()=>openDiff(key);
     card.innerHTML=`<div class="ico">${spr(GAME_SPR[key],4)}</div><div><div class="gc-t">${g.h||g.n}${done?'<span class="gc-done">'+done+'</span>':''}</div><div class="gc-d">${g.d}</div></div>`;
@@ -856,10 +848,10 @@ function openDiff(gameKey){
   Object.keys(DIFFS).forEach(dk=>{
     const d = DIFFS[dk];
     const el = document.createElement('div');
-    el.className='diff'+(selectedDiff===dk?' active':'');
+    el.className='diff sd-surface'+(selectedDiff===dk?' active':'');
     el.setAttribute('role','button'); el.tabIndex=0; el.setAttribute('aria-pressed',selectedDiff===dk?'true':'false');
     el.onclick=()=>{ selectedDiff=dk; document.querySelectorAll('.diff').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false');}); el.classList.add('active'); el.setAttribute('aria-pressed','true'); };
-    el.innerHTML=`<div class="ds">${spr(DIFF_SPR[dk],4)}</div><div class="dn">${d.n}</div><div class="dl">${d.label}</div>`;
+    el.innerHTML=`<div class="ds">${stars(dk,4)}</div><div class="dn">${d.n}</div><div class="dl">${d.label}</div>`;
     grid.appendChild(el);
   });
   showScreen('diff');
@@ -1048,11 +1040,11 @@ function endRound(){
   $('resTitle').textContent = S.review ? 'Gennemgangen er færdig!' : (S.speed? 'Tiden er gået!':'Runden er færdig!');
   // badges
   const badges=[];
-  if(acc===100 && S.answered>=5) badges.push('★ Perfekt runde');
-  if(S.bestStreak>=8) badges.push('★ Serie på '+S.bestStreak);
-  if(S.speed) badges.push('★ '+S.correct+' på 60 sek');
-  if(acc>=80) badges.push('★ Troldmandsniveau');
-  $('resBadges').innerHTML = badges.map(b=>`<span class="badge">${b}</span>`).join('');
+  if(acc===100 && S.answered>=5) badges.push(spr('stjerne',2)+' Perfekt runde');
+  if(S.bestStreak>=8) badges.push(spr('stjerne',2)+' Serie på '+S.bestStreak);
+  if(S.speed) badges.push(spr('stjerne',2)+' '+S.correct+' på 60 sek');
+  if(acc>=80) badges.push(spr('pokal',2)+' Troldmandsniveau');
+  $('resBadges').innerHTML = badges.map(b=>`<span class="sd-badge sd-badge--panel badge">${b}</span>`).join('');
   updateMenuBar();
   showScreen('result');
   if(window.Sjovt) Sjovt.fx.celebrate();
@@ -1085,7 +1077,7 @@ function showStats(){
   const mb=$('masteryBox'); mb.innerHTML='';
   ['easy','medium','hard'].forEach(dk=>{
     const d=P.perDiff[dk]; const pct=d.t?Math.round(d.c/d.t*100):0;
-    mb.innerHTML+=`<div class="mastery-row"><span class="ml">${spr(DIFF_SPR[dk],2)} ${DIFFS[dk].n}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="mp">${pct}%</span></div>`;
+    mb.innerHTML+=`<div class="mastery-row"><span class="ml">${stars(dk,2)} ${DIFFS[dk].n}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="mp">${pct}%</span></div>`;
   });
   // weakest / strongest verbs
   const arr = Object.keys(P.perVerb).map(k=>{

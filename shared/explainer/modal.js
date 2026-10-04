@@ -202,11 +202,14 @@
   }
 
   /* ---- entry button ---- */
+  /* pixel play triangle (4x7 grid, 2px per pixel): drawn as SVG so it never depends on font coverage of U+25B6 */
+  var PLAY_ICO = '<svg class="xpm-ico" viewBox="0 0 4 7" width="8" height="14" aria-hidden="true" focusable="false" shape-rendering="crispEdges" fill="currentColor">' +
+    '<rect x="0" y="0" width="1" height="1"/><rect x="0" y="1" width="2" height="1"/><rect x="0" y="2" width="3" height="1"/><rect x="0" y="3" width="4" height="1"/><rect x="0" y="4" width="3" height="1"/><rect x="0" y="5" width="2" height="1"/><rect x="0" y="6" width="1" height="1"/></svg>';
   function addButton() {
     var ids = parseIds(root.getAttribute("data-explainer"));
     if (!ids.length || doc.querySelector(".xpm-btn")) return;
     var btn = el("button", "xpm-btn"); btn.type = "button";
-    btn.innerHTML = '<span aria-hidden="true">&#9654;</span> <span class="xpm-btn-t">FORKLARING</span><span class="xpm-btn-s">HJÆLP</span>';
+    btn.innerHTML = PLAY_ICO + ' <span class="xpm-btn-t">FORKLARING</span><span class="xpm-btn-s">HJÆLP</span>';
     btn.setAttribute("aria-label", "Hjælp: se en forklaring");
     btn.addEventListener("click", function () { open(ids, btn); });
     var bar = doc.querySelector(".sd-bar");

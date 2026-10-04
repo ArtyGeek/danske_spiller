@@ -120,20 +120,6 @@ h1{
   display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
 }
 .sentence-text{flex:1 1 auto}
-.blank{
-  display:inline-block;min-width:64px;border-bottom:4px dotted var(--c-purple);
-  margin:0 4px;color:var(--c-purple);font-weight:800;
-}
-.blank.filled{border-bottom-style:solid}
-.speaker{
-  width:38px;height:38px;border-radius:50%;display:inline-grid;place-items:center;
-  font-size:1rem;flex:none;cursor:pointer;border:none;
-  background:linear-gradient(160deg,var(--c-teal2),var(--c-teal));
-  box-shadow:0 4px 0 #129b8d, inset 0 2px 4px rgba(255,255,255,.5);
-  transition:transform .08s, box-shadow .08s;
-}
-.speaker:active{transform:scale(.92) translateY(2px);box-shadow:0 2px 0 #129b8d}
-
 /* candy answer grid */
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .candy{
@@ -234,6 +220,8 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
 </style>
 <link rel="stylesheet" href="../shared/sjovt.css">
 <link rel="stylesheet" href="../shared/themes/konjunktioner.css">
+<link rel="stylesheet" href="../shared/tts-button.css">
+<link rel="stylesheet" href="../shared/sd-extras.css">
 <link rel="stylesheet" href="../shared/explainer/modal.css">
 <script src="../shared/explainer/modal.js"></script>
 </head>
@@ -275,12 +263,12 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
     <p>Udfyld hullet i sætningen med den rigtige <b>konjunktion</b>. Svar rigtigt for at opbygge en serie og få point — og læs reglen efter hvert svar.</p>
     <p>Du har <b>5 liv</b> <span data-sd-sprite="hjerte" data-scale="2"></span>. Klar?</p>
     <div class="legend">
-      <span style="background:linear-gradient(135deg,#ff595e,#ff9f1c)">Hovedsætning</span>
-      <span style="background:linear-gradient(135deg,#9b5de5,#3a86ff)">Bisætning</span>
-      <span style="background:linear-gradient(135deg,#19c3b2,#52d869)">Hv-ord</span>
+      <span class="sd-badge sd-badge--panel">Hovedsætning</span>
+      <span class="sd-badge sd-badge--panel">Bisætning</span>
+      <span class="sd-badge sd-badge--panel">Hv-ord</span>
     </div>
     <label class="flt" for="lvlSelect">Niveau
-      <select id="lvlSelect">
+      <select id="lvlSelect" class="sd-select">
         <option value="all">Alle niveauer</option>
       </select>
     </label>
@@ -731,10 +719,9 @@ function speak(text){
 }
 function speakerBtn(text, cls){
   const b = document.createElement("button");
-  b.className = "speaker " + (cls||"");
+  b.className = "dc-tts-button " + (cls||"");
   b.type = "button";
-  b.textContent = "♪";
-  b.setAttribute("aria-label","Udtal sætningen");
+  b.setAttribute("aria-label","Lyt til sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -799,11 +786,11 @@ function renderQuestion(q){
   $('next').classList.add('hidden');
 
   const chip=$('chip');
-  chip.className='chip '+q.cat;
+  chip.className='chip sd-badge sd-badge--panel '+q.cat;
   chip.textContent=catName[q.cat];
 
   const parts = q.text.split('___');
-  $('sentence').innerHTML = '<span class="sentence-text">' + parts[0] + '<span class="blank" id="blank">?</span>' + (parts[1]||'') + '</span>';
+  $('sentence').innerHTML = '<span class="sentence-text">' + parts[0] + '<span class="sd-gap" id="blank" role="img" aria-label="mellemrum"></span>' + (parts[1]||'') + '</span>';
   $('sentence').appendChild(speakerBtn(q.text.replace('___', q.answer), 'sentence-speaker'));
 
   const opts = shuffle([q.answer, ...q.distractors]);
@@ -870,7 +857,7 @@ function choose(btn,word){
 
   const blank=$('blank');
   blank.textContent=current.answer;
-  blank.classList.add('filled');
+  blank.classList.add('filled','is-filled'); blank.removeAttribute('role'); blank.removeAttribute('aria-label');
 
   if(correct){
     btn.classList.add('correct');
@@ -884,16 +871,14 @@ function choose(btn,word){
       burstAt(btn,true);
       if(streak>=3) showCombo('SERIE x'+mult+'! +'+gain);
     }
-    blank.style.color='var(--c-green)';
-    blank.style.borderColor='var(--c-green)';
+    blank.classList.add('is-ok');
   } else {
     btn.classList.add('wrong');
     if(window.Sjovt) Sjovt.fx.wrong(btn);
     // highlight the real answer
     const ans=buttons.find(b=>b.textContent===current.answer);
     if(ans){ans.classList.remove('dim');ans.classList.add('correct');}
-    blank.style.color='var(--c-red)';
-    blank.style.borderColor='var(--c-red)';
+    blank.classList.add('is-bad');
     if(!inReview){
       streak=0;
       lives--;

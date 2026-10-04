@@ -195,12 +195,6 @@
   .prompt .word{font-size:2.4rem;font-weight:800;margin:6px 0;display:inline-flex;align-items:center;gap:10px}
   .prompt .sub{color:var(--muted);font-weight:600}
 
-  .speaker{
-    width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);
-    display:inline-grid;place-items:center;font-size:1.1rem;box-shadow:var(--shadow);flex:none;
-  }
-  .speaker.sm{width:30px;height:30px;font-size:.9rem}
-  .speaker:active{transform:scale(.92)}
 
   .options{display:grid;gap:12px;margin-top:16px}
   .options.two{grid-template-columns:1fr 1fr}
@@ -299,6 +293,7 @@
 <link rel="stylesheet" href="shared/sjovt.css">
 <script src="shared/sjovt.js"></script>
 <link rel="stylesheet" href="shared/themes/antonyms.css">
+<link rel="stylesheet" href="shared/tts-button.css">
 </head>
 <body>
 
@@ -316,8 +311,8 @@
     <div class="hud">
       <span class="chip level"><span class="ic" data-sd-sprite="pokal" data-scale="2" aria-hidden="true"></span><span id="hudLevel">Niv. 1</span></span>
       <span class="chip xp"><span class="ic" data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span><span id="hudXP">0 XP</span></span>
-      <span class="chip streak"><span class="ic" data-sd-sprite="hjerte" data-scale="2" aria-hidden="true"></span><span id="hudStreak">0</span></span>
-      <span class="chip acc"><span class="ic" data-sd-sprite="flag" data-scale="1" aria-hidden="true"></span><span id="hudAcc">0%</span></span>
+      <span class="chip streak"><span class="ic" data-sd-sprite="molle" data-scale="2" aria-hidden="true"></span><span id="hudStreak">0</span></span>
+      <span class="chip acc"><span id="hudAcc">0%</span></span>
     </div>
     <div class="xpbar"><i id="xpFill"></i></div>
   </header>
@@ -346,7 +341,7 @@
 
   <!-- ===================== CATEGORY PICKER ===================== -->
   <section id="screen-category" class="screen hidden">
-    <button type="button" class="back-link" data-back>← Tilbage</button>
+    <button type="button" class="back-link" data-back>← TILBAGE</button>
     <div class="card">
       <h2 class="section-title first">Øv efter emne</h2>
       <div class="pills" id="categoryPills"></div>
@@ -356,7 +351,7 @@
 
   <!-- ===================== DIFFICULTY PICKER ===================== -->
   <section id="screen-difficulty" class="screen hidden">
-    <button type="button" class="back-link" data-back>← Tilbage</button>
+    <button type="button" class="back-link" data-back>← TILBAGE</button>
     <div class="card">
       <h2 class="section-title first">Øv efter sværhedsgrad</h2>
       <div class="pills" id="difficultyPills"></div>
@@ -394,7 +389,7 @@
 
   <!-- ===================== REVIEW SCREEN ===================== -->
   <section id="screen-review" class="screen hidden">
-    <button type="button" class="back-link" data-back>← Tilbage</button>
+    <button type="button" class="back-link" data-back>← TILBAGE</button>
     <div class="card">
       <div class="row between">
         <h2 class="section-title first" style="margin:0">Gennemgang og fejl</h2>
@@ -409,7 +404,7 @@
 
   <!-- ===================== SETTINGS SCREEN ===================== -->
   <section id="screen-settings" class="screen hidden">
-    <button type="button" class="back-link" data-back>← Tilbage</button>
+    <button type="button" class="back-link" data-back>← TILBAGE</button>
     <div class="card">
       <h2 class="section-title first">Indstillinger</h2>
       <div class="toggle-row">
@@ -934,10 +929,9 @@ function speak(text){
 /* small speaker button markup helper */
 function speakerBtn(text, cls){
   const b = document.createElement("button");
-  b.className = "speaker " + (cls||"");
+  b.className = "dc-tts-button" + (cls==="sm" ? " dc-tts-button--sm" : "");
   b.type = "button";
-  b.innerHTML = '<svg viewBox="0 0 8 8" width="16" height="16" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 3h2V2h1V1h1v6H3V6H2V5H0zM5 2h1v1H5zM6 3h1v2H6zM5 5h1v1H5z"/></svg>';
-  b.setAttribute("aria-label","Udtal");
+  b.setAttribute("aria-label","Lyt");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -1425,14 +1419,14 @@ function showSummary(isSpeed){
    13) MODE MENU (dashboard)
    ============================================================ */
 const MODES = [
-  {id:"choice",   emoji:"modsat", t:"Vælg modsætningen",   d:"Find det modsatte blandt fire ord"},
-  {id:"match",    emoji:"snegl", t:"Find par",       d:"Forbind ordene med deres modsætninger"},
-  {id:"reverse",  emoji:"molle", t:"Omvendt oversættelse",d:"Fra engelsk betydning til dansk par"},
-  {id:"missing",  emoji:"cykel", t:"Det manglende ord",   d:"Skriv det modsatte ord"},
-  {id:"speed",    emoji:"stjerne", t:"Hurtigrunde",        d:"Så mange du kan nå på 60 sekunder"},
-  {id:"review",   emoji:"hjerte", t:"Gentag fejlene",   d:"Øv de par, du har svaret forkert på"},
-  {id:"category", emoji:"pokal", t:"Øv efter emne", d:"Fokuser på ét emne"},
-  {id:"difficulty",emoji:"hat",t:"Øv efter sværhedsgrad",d:"Let, middel, svær eller blandet"}
+  {id:"choice",   emoji:"bog", t:"Vælg modsætningen",   d:"Find det modsatte blandt fire ord"},
+  {id:"match",    emoji:"net", t:"Find par",       d:"Forbind ordene med deres modsætninger"},
+  {id:"reverse",  emoji:"modsat", t:"Omvendt oversættelse",d:"Fra engelsk betydning til dansk par"},
+  {id:"missing",  emoji:"snak", t:"Det manglende ord",   d:"Skriv det modsatte ord"},
+  {id:"speed",    emoji:"tryllestav", t:"Hurtigrunde",        d:"Så mange du kan nå på 60 sekunder"},
+  {id:"review",   emoji:"lup", t:"Gentag fejlene",   d:"Øv de par, du har svaret forkert på"},
+  {id:"category", emoji:"kiste", t:"Øv efter emne", d:"Fokuser på ét emne"},
+  {id:"difficulty",emoji:"stjerne",t:"Øv efter sværhedsgrad",d:"Let, middel, svær eller blandet"}
 ];
 function buildModeMenu(){
   const grid = $("#modeGrid");

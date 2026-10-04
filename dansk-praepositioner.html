@@ -134,23 +134,15 @@ body{
 
 /* Exercise */
 .exhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:8px}
-.badge{background:var(--blue);color:#fff;font-size:.72rem;font-weight:bold;padding:5px 11px;border-radius:20px}
-.badge.theme{background:var(--yellow);color:#5a4500}
 .qcount{font-size:.8rem;color:var(--ink-soft);font-weight:bold}
 .prompt{font-size:.82rem;color:var(--ink-soft);margin:10px 0 4px;font-weight:bold}
 .sentence{font-size:1.5rem;line-height:1.5;margin:12px 0 6px;font-weight:bold}
-.sentence .blank{display:inline-block;min-width:74px;border-bottom:4px dotted var(--blue);text-align:center;color:var(--blue);padding:0 6px}
-.sentence .filled{color:var(--green)}
 .sentence .word{cursor:pointer;border-radius:6px;padding:1px 4px;transition:background .15s}
 .sentence .word:hover{background:#ffe9a8}
 .sentence .word.sel{background:var(--yellow);color:#5a4500}
 
-/* speaker / TTS button */
 .sentwrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .sentwrap .sentence{margin:0;flex:1;min-width:0}
-.speaker{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);display:inline-grid;place-items:center;font-size:1.1rem;box-shadow:var(--shadow);flex:none;cursor:pointer;font-family:inherit;}
-.speaker.sm{width:30px;height:30px;font-size:.9rem}
-.speaker:active{transform:scale(.92)}
 
 .opts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
 .opt{
@@ -255,6 +247,8 @@ footer{text-align:center;color:rgba(255,255,255,.85);font-size:.72rem;margin-top
 <link rel="stylesheet" href="shared/sjovt.css">
 <script src="shared/sjovt.js"></script>
 <link rel="stylesheet" href="shared/themes/praepositioner.css">
+<link rel="stylesheet" href="shared/tts-button.css">
+<link rel="stylesheet" href="shared/sd-extras.css">
 <link rel="stylesheet" href="shared/explainer/modal.css"><script src="shared/explainer/modal.js"></script>
 </head>
 <body>
@@ -280,7 +274,7 @@ footer{text-align:center;color:rgba(255,255,255,.85);font-size:.72rem;margin-top
       <div class="section-title" style="color:var(--ink);margin-top:0">Vælg en øvelse</div>
       <div style="margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <label for="lvlSel" style="font-weight:bold;font-size:.9rem;color:var(--ink-soft)">CEFR-niveau:</label>
-        <select id="lvlSel" style="font-size:.9rem;font-family:inherit;padding:7px 12px;border:2px solid var(--line);border-radius:10px;color:var(--ink);background:#fff;cursor:pointer">
+        <select id="lvlSel" class="sd-select">
           <option value="">Alle niveauer</option>
           <option value="A1">A1 – Begynder</option>
           <option value="A2">A2 – Grundlæggende</option>
@@ -787,10 +781,9 @@ function speak(text){
 }
 function speakerBtn(text, cls){
   const b = document.createElement("button");
-  b.className = "speaker " + (cls||"");
+  b.className = "dc-tts-button" + (cls==="sm" ? " dc-tts-button--sm" : "");
   b.type = "button";
-  b.textContent = "▶";
-  b.setAttribute("aria-label","Udtal sætningen");
+  b.setAttribute("aria-label","Lyt til sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -860,16 +853,16 @@ const MODES=[
   {id:"review", t:"Gentag fejl", d:"Træn dine fejl", e:"🔁", c:"c-slate"},
   {id:"stats", t:"Stati&shy;stik", d:"Se din fremgang", e:"📊", c:"c-gold"}
 ];
-const MODE_SPR={fill:"pin",mc:"stjerne",drag:"cykel",mistake:"hat",correct:"snegl",trans:"flag",pairs:"hjerte",speed:"molle",review:"snegl",stats:"pokal"};
+const MODE_SPR={fill:"snak",mc:"bog",drag:"tandhjul",mistake:"pin",correct:"ur",trans:"modsat",pairs:"slik",speed:"tryllestav",review:"lup",stats:"pokal"};
 function renderMenu(){
   const g=document.getElementById("menuGrid");
   g.innerHTML="";
   MODES.forEach(m=>{
     const b=document.createElement("button");
-    b.className="mode-btn "+m.c;
+    b.className="mode-btn sd-surface "+m.c;
     let extra="";
     if(m.id==="review"){ extra=' <span style="font-size:.7rem;background:rgba(0,0,0,.18);padding:1px 7px;border-radius:10px">'+prog.reviewQ.length+'</span>'; }
-    b.innerHTML='<span class="emoji">'+spr(MODE_SPR[m.id],4)+'</span><span class="t">'+m.t+extra+'</span><span class="d">'+m.d+'</span>';
+    b.innerHTML='<span class="emoji">'+spr(MODE_SPR[m.id],m.id==="stats"?2:4)+'</span><span class="t">'+m.t+extra+'</span><span class="d">'+m.d+'</span>';
     b.onclick=()=>{ if(m.id==="stats") openStats(); else startMode(m.id); };
     g.appendChild(b);
   });
@@ -893,12 +886,12 @@ function exShell(modeLabel, theme, bodyHtml){
   elEx.innerHTML=
     '<div class="card">'+
       '<div class="backrow">'+
-        '<button class="topbtn" onclick="goMenu()">‹ Menu</button>'+
+        '<button class="topbtn" onclick="goMenu()">← Tilbage</button>'+
         '<span class="qcount">Spørgsmål '+session.n+'</span>'+
       '</div>'+
       '<div class="exhead" style="margin-top:12px">'+
-        '<span class="badge">'+noEmoji(modeLabel)+'</span>'+
-        (theme?'<span class="badge theme">'+theme+'</span>':'')+
+        '<span class="sd-badge sd-badge--panel">'+noEmoji(modeLabel)+'</span>'+
+        (theme?'<span class="sd-badge sd-badge--panel">'+theme+'</span>':'')+
       '</div>'+
       bodyHtml+
       '<div class="fb" id="fb"></div>'+
@@ -956,7 +949,7 @@ function startMode(id){
 function nextFill(item){
   session.n++;
   item = item || randItem();
-  const html = blankSentence(item).replace("@@@",'<span class="blank">?</span>');
+  const html = blankSentence(item).replace("@@@",'<span class="sd-gap"></span>');
   exShell("✏️ Udfyld hullet", item.theme,
     '<p class="prompt">Skriv den præposition, der mangler:</p>'+
     '<div class="sentwrap"><div class="sentence">'+html+'</div></div>'+
@@ -969,8 +962,7 @@ function nextFill(item){
     const val=inp.value.trim().toLowerCase();
     if(!val) return;
     const ok = val===item.a;
-    document.querySelector(".blank").textContent=item.a;
-    document.querySelector(".blank").classList.toggle("filled",ok);
+    const g=document.querySelector(".sd-gap"); g.textContent=item.a; g.classList.add("is-filled"); g.classList.toggle("is-ok",ok); g.classList.toggle("is-bad",!ok);
     record(item.a,ok);
     if(ok){ const r=inp.getBoundingClientRect(); burst(r.left+r.width/2,r.top); if(prog.streak%5===0&&prog.streak)streakPop(prog.streak);}
     else addReview(item);
@@ -991,7 +983,7 @@ function nextMC(item){
   session.n++;
   item=item||randItem();
   const opts=shuffle([item.a].concat(distractorsFor(item.a,3,item)));
-  const html=blankSentence(item).replace("@@@",'<span class="blank" id="mcBlank">?</span>');
+  const html=blankSentence(item).replace("@@@",'<span class="sd-gap" id="mcBlank"></span>');
   exShell("🎯 Flervalg", item.theme,
     '<p class="prompt">Vælg den rigtige præposition:</p>'+
     '<div class="sentwrap"><div class="sentence">'+html+'</div></div>'+
@@ -1007,8 +999,7 @@ function nextMC(item){
       b.classList.remove("dim");
       b.classList.add(ok?"correct":"wrong");
       if(!ok){ document.querySelectorAll("#mcOpts .opt").forEach(x=>{ if(x.textContent.endsWith(") "+item.a)){x.classList.remove("dim");x.classList.add("correct");} }); addReview(item); }
-      document.getElementById("mcBlank").textContent=item.a;
-      document.getElementById("mcBlank").classList.toggle("filled",ok);
+      {const g=document.getElementById("mcBlank"); g.textContent=item.a; g.classList.add("is-filled"); g.classList.toggle("is-ok",ok); g.classList.toggle("is-bad",!ok);}
       record(item.a,ok);
       if(ok){ burst(e.clientX,e.clientY); if(prog.streak%5===0&&prog.streak)streakPop(prog.streak); }
       showFB(ok,item,item.a);
@@ -1192,7 +1183,7 @@ function nextTrans(){
 let curPair=null;
 function startPairs(){
   // choose a pair group
-  elEx.innerHTML='<div class="card"><div class="backrow"><button class="topbtn" onclick="goMenu()">‹ Menu</button>'+
+  elEx.innerHTML='<div class="card"><div class="backrow"><button class="topbtn" onclick="goMenu()">← Tilbage</button>'+
     '<span class="qcount">Forvekslingspar</span></div>'+
     '<p class="prompt" style="margin-top:14px">Vælg et par, du vil træne:</p>'+
     '<div class="menu-grid" id="pairGrid" style="margin-top:8px"></div></div>';
@@ -1212,7 +1203,7 @@ function nextPair(){
   const item=randItem(it=> (it.a===p.a || it.a===p.b) && (it.pair===p.key || (it.a===p.a && it.pair && it.pair.indexOf(p.a)>=0)) );
   // ensure options are exactly the two confusable prepositions
   const opts=shuffle([p.a,p.b]);
-  const html=blankSentence(item).replace("@@@",'<span class="blank" id="prBlank">?</span>');
+  const html=blankSentence(item).replace("@@@",'<span class="sd-gap" id="prBlank"></span>');
   exShell("⚖️ "+p.label, item.theme,
     '<p class="prompt">Hvilken passer her?</p>'+
     '<div class="sentwrap"><div class="sentence">'+html+'</div></div>'+
@@ -1226,8 +1217,7 @@ function nextPair(){
       document.querySelectorAll("#prOpts .opt").forEach(x=>{x.classList.add("dim");x.onclick=null;});
       b.classList.remove("dim");b.classList.add(ok?"correct":"wrong");
       if(!ok){ document.querySelectorAll("#prOpts .opt").forEach(x=>{ if(x.textContent===item.a){x.classList.remove("dim");x.classList.add("correct");} }); addReview(item);}
-      document.getElementById("prBlank").textContent=item.a;
-      document.getElementById("prBlank").classList.toggle("filled",ok);
+      {const g=document.getElementById("prBlank"); g.textContent=item.a; g.classList.add("is-filled"); g.classList.toggle("is-ok",ok); g.classList.toggle("is-bad",!ok);}
       record(item.a,ok);
       if(ok){ burst(e.clientX,e.clientY); if(prog.streak%5===0&&prog.streak)streakPop(prog.streak); }
       showFB(ok,item,item.a);
@@ -1268,10 +1258,10 @@ document.addEventListener("explainer:close",()=>{
 function speedTick(first){
   const item=randItem();
   const opts=shuffle([item.a].concat(distractorsFor(item.a,3,item)));
-  const html=blankSentence(item).replace("@@@",'<span class="blank">?</span>');
+  const html=blankSentence(item).replace("@@@",'<span class="sd-gap"></span>');
   elEx.innerHTML=
     '<div class="card">'+
-    '<div class="backrow"><button class="topbtn" onclick="goMenu()">‹ Menu</button>'+
+    '<div class="backrow"><button class="topbtn" onclick="goMenu()">← Tilbage</button>'+
     '<span class="qcount">Lynrunde</span></div>'+
     '<div class="timer'+(speedLeft<=10?' warn':'')+'" id="spTimer">'+speedLeft+'s</div>'+
     '<div class="scoreline">Point: '+speedScore+' &nbsp;·&nbsp; ✓ '+speedHits+' &nbsp; ✗ '+speedMiss+'</div>'+
@@ -1330,7 +1320,7 @@ function nextReview(){
   session.n++;
   const item=prog.reviewQ[0];
   const opts=shuffle([item.a].concat(distractorsFor(item.a,3,item)));
-  const html=blankSentence(item).replace("@@@",'<span class="blank" id="rvBlank">?</span>');
+  const html=blankSentence(item).replace("@@@",'<span class="sd-gap" id="rvBlank"></span>');
   exShell("🔁 Gentag fejl", item.theme,
     '<p class="prompt">Du svarede forkert sidst – prøv igen ('+prog.reviewQ.length+' tilbage):</p>'+
     '<div class="sentwrap"><div class="sentence">'+html+'</div></div>'+
@@ -1344,8 +1334,7 @@ function nextReview(){
       document.querySelectorAll("#rvOpts .opt").forEach(x=>{x.classList.add("dim");x.onclick=null;});
       b.classList.remove("dim");b.classList.add(ok?"correct":"wrong");
       if(!ok) document.querySelectorAll("#rvOpts .opt").forEach(x=>{ if(x.textContent===item.a){x.classList.remove("dim");x.classList.add("correct");} });
-      document.getElementById("rvBlank").textContent=item.a;
-      document.getElementById("rvBlank").classList.toggle("filled",ok);
+      {const g=document.getElementById("rvBlank"); g.textContent=item.a; g.classList.add("is-filled"); g.classList.toggle("is-ok",ok); g.classList.toggle("is-bad",!ok);}
       record(item.a,ok);
       if(ok){ clearReviewItem(item.text); burst(e.clientX,e.clientY); }
       else { prog.reviewQ.push(prog.reviewQ.shift()); saveProg(); } // move to back, try later
@@ -1389,7 +1378,7 @@ function renderStats(){
 
   elStats.innerHTML=
     '<div class="card">'+
-    '<div class="backrow"><button class="topbtn" onclick="goMenu()">‹ Menu</button>'+
+    '<div class="backrow"><button class="topbtn" onclick="goMenu()">← Tilbage</button>'+
     '<span class="qcount">Statistik</span></div>'+
     '<div class="statgrid" style="margin-top:14px">'+
     '<div class="stat"><div class="n">'+acc+'%</div><div class="l">Nøjagtighed</div></div>'+

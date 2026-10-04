@@ -24,7 +24,7 @@ async function lookup(page) {
   // find item data for the currently shown item
   return page.evaluate(() => {
     const sent = [...document.querySelectorAll('#item-host .sentence')][0];
-    const blank = sent.querySelector('.blank');
+    const blank = sent.querySelector('.sd-gap');
     const text = sent.textContent;
     const all = [].concat(...Object.values(window.PRONOMEN_DATA));
     const ctx = [...document.querySelectorAll('#item-host .evidence li')].map(l => l.textContent);

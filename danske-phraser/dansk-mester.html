@@ -205,11 +205,6 @@ body{
 .opt.wrong{border-color:var(--red);background:rgba(227,85,106,.16);animation:shake .35s}
 .opt:disabled{cursor:default}
 
-/* speaker / pronounce button */
-.speaker{width:40px;height:40px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:inline-grid;place-items:center;font-size:1.1rem;box-shadow:var(--shadow);flex:none;cursor:pointer;color:var(--text);margin-top:12px}
-.speaker.sm{width:32px;height:32px;font-size:.9rem;margin-top:0}
-.speaker:hover{border-color:var(--accent)}
-.speaker:active{transform:scale(.92)}
 
 /* feedback banner */
 .feedback{margin-top:16px;text-align:center;min-height:30px;font-weight:900;font-size:1.15rem}
@@ -324,6 +319,8 @@ body{
 <link rel="stylesheet" href="../shared/sjovt.css">
 <script src="../shared/sjovt.js"></script>
 <link rel="stylesheet" href="../shared/themes/dansk-mester.css">
+<link rel="stylesheet" href="../shared/tts-button.css">
+<link rel="stylesheet" href="../shared/sd-extras.css">
 </head>
 <body>
 <div id="toast" role="status" aria-live="polite"></div>
@@ -732,10 +729,9 @@ function speak(text){
 /* small speaker button helper */
 function speakerBtn(text,cls){
   const b=document.createElement("button");
-  b.className="speaker "+(cls||"");
+  b.className="dc-tts-button "+(cls||"");
   b.type="button";
-  b.textContent="🔊";
-  b.setAttribute("aria-label","Udtal");
+  b.setAttribute("aria-label","Lyt");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -754,7 +750,7 @@ function filterItems(items){
 
 function topbar(){
   return `<div class="topbar">
-    <div class="brand"><span data-sd-sprite="flag" data-scale="3" aria-hidden="true"></span> Dansk Mester</div>
+    <div class="brand"><span data-sd-sprite="snak" data-scale="3" aria-hidden="true"></span> Dansk Mester</div>
     <div class="spacer"></div>
     <div class="stat-chip xp" role="img" aria-label="XP: ${P.xp}"><span class="ico" data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span><span aria-hidden="true">${P.xp}</span></div>
     <div class="stat-chip streak" role="img" aria-label="Dage i træk: ${P.currentStreak}"><span class="ico" data-sd-sprite="molle" data-scale="2" aria-hidden="true"></span><span aria-hidden="true">${P.currentStreak}</span></div>
@@ -762,7 +758,7 @@ function topbar(){
 }
 function bottomnav(active){
   const b=(n,ico,lbl)=>`<button class="navbtn ${active===n?'active':''}" onclick="go('${n}')"><span class="nico" data-sd-sprite="${ico}" data-scale="2" aria-hidden="true"></span>${lbl}</button>`;
-  return `<div class="bottomnav">${b('home','snak','Hjem')}${b('stats','pokal','Statistik')}${b('badges','stjerne','Emblemer')}</div>`;
+  return `<div class="bottomnav">${b('home','polle','Hjem')}${b('stats','pokal','Statistik')}${b('badges','stjerne','Emblemer')}</div>`;
 }
 
 function render(){
@@ -786,7 +782,7 @@ function screenHome(){
     const d=DATA[key], m=pathMastery(key), learned=pathLearned(key), tot=pathTotal(key);
     return `<div class="path-card ${key}" onclick="go('path',{path:'${key}'})">
       <div class="glow"></div>
-      <div class="pico" data-sd-sprite="${key==='verbs'?'cykel':'snegl'}" data-scale="5" aria-hidden="true"></div>
+      <div class="pico" data-sd-sprite="${key==='verbs'?'kort':'snak'}" data-scale="5" aria-hidden="true"></div>
       <h3>${d.label}</h3>
       <p>${d.blurb} • ${tot} udtryk</p>
       <div style="display:flex;align-items:center;gap:10px;margin-top:16px">
@@ -799,12 +795,12 @@ function screenHome(){
   if(P.last.path!=null){
     const d=DATA[P.last.path], c=d.categories[P.last.cat];
     cont=`<div class="card" style="margin-bottom:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-      <div data-sd-sprite="flag" data-scale="3" aria-hidden="true"></div>
+      <div data-sd-sprite="snak" data-scale="3" aria-hidden="true"></div>
       <div style="flex:1;min-width:140px">
         <div style="font-weight:900">Fortsæt, hvor du slap</div>
         <div class="muted" style="font-size:.9rem">${d.label} — ${c?c.name:''}</div>
       </div>
-      <button class="btn small" onclick="go('modes',{path:'${P.last.path}',ci:${P.last.cat}})">Fortsæt ▸</button>
+      <button class="btn small" onclick="go('modes',{path:'${P.last.path}',ci:${P.last.cat}})">Fortsæt →</button>
     </div>`;
   }
   return `<div class="dm-welcome"><span data-sd-sprite="snak" data-scale="6" class="sd-bob" aria-hidden="true"></span><div class="h1">Hej! Er du klar til at lære dansk?</div></div>
@@ -844,16 +840,16 @@ function screenPath(path){
     </div>`;
   }).join("");
   const cefrOpts=["all","A1","A2","B1","B2","C1"].map(v=>`<option value="${v}" ${cefrFilter===v?"selected":""}>${v==="all"?"Alle niveauer":v}</option>`).join("");
-  return `<div class="back" onclick="go('home')">‹ Tilbage</div>
+  return `<div class="back" onclick="go('home')">← Tilbage</div>
     <div class="h1">${d.icon} ${d.label}</div>
     <p class="sub">Samlet beherskelse: ${pathMastery(path)} % – nye kategorier låses op ved 80 %.</p>
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
       <label style="font-weight:800;font-size:.9rem;color:var(--muted)">CEFR-niveau:</label>
-      <select onchange="setCefrFilter(this.value)" style="background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-family:inherit;font-weight:800;font-size:.9rem;cursor:pointer">${cefrOpts}</select>
+      <select class="sd-select" aria-label="CEFR-niveau" onchange="setCefrFilter(this.value)">${cefrOpts}</select>
       ${cefrFilter!=="all"?`<span style="font-size:.82rem;color:var(--muted);font-weight:600">Viser kun niveau ${cefrFilter}</span>`:""}
     </div>
     <div class="btn-row" style="margin-bottom:16px">
-      <button class="btn small" onclick="go('modes',{path:'${path}',ci:0})">▶ Start med kategori 1</button>
+      <button class="btn small" onclick="go('modes',{path:'${path}',ci:0})">Start med kategori 1</button>
       <button class="btn secondary small" onclick="go('quiz',{cfg:{mode:'mc',pool:shuffle(filteredItems('${path}')).slice(0,15),title:'${d.label} — blandet',isMixed:true,ret:{name:'path',path:'${path}'}}})">🎲 Blandet repetition</button>
     </div>
     ${cats}`;
@@ -862,7 +858,7 @@ function screenPath(path){
 /* =========================================================
    MODES for a category
 ========================================================= */
-const MODE_SPR={mc:'stjerne',flash:'snegl',match:'hjerte',timed:'cykel',mixed:'molle',sr:'pokal',weak:'hat'};
+const MODE_SPR={mc:'bog',flash:'kort',match:'net',timed:'tryllestav',mixed:'terning',sr:'kiste',weak:'lup'};
 function screenModes(path,ci){
   P.last={path,cat:ci}; save();
   const d=DATA[path], c=d.categories[ci];
@@ -878,7 +874,7 @@ function screenModes(path,ci){
   const cells=modes.map(m=>`<div class="mode" onclick="launchMode('${path}',${ci},'${m.id}')">
       <div class="mico" data-sd-sprite="${MODE_SPR[m.id]||'stjerne'}" data-scale="4" aria-hidden="true"></div><div class="mname">${m.name}</div><div class="mdesc">${m.desc}</div>
     </div>`).join("");
-  return `<div class="back" onclick="go('path',{path:'${path}'})">‹ ${d.label}</div>
+  return `<div class="back" onclick="go('path',{path:'${path}'})">← Tilbage</div>
     <div class="h1">${c.icon} ${c.name}</div>
     <p class="sub">${c.items.length} udtryk • fremgang ${catProgress(path,ci)} % • vælg en spiltype</p>
     <div class="mode-grid">${cells}</div>`;
@@ -927,7 +923,7 @@ function startGame(cfg){
 }
 function gameHead(extra){
   const prog=Math.round(G.idx/ (G.cfg.pool.length||1) *100);
-  return `<div class="back" onclick="quitGame()">‹ Afslut</div>
+  return `<div class="back" onclick="quitGame()">✕ Afslut</div>
     <div class="quiz-head">
       ${bar(prog)}
       ${extra||''}
@@ -1044,7 +1040,7 @@ function renderFlash(){
      </div>`;
   const frontFace=$("#flash .face.front");
   if(frontFace){
-    const sb=speakerBtn(q.it.da,"sm");
+    const sb=speakerBtn(q.it.da);
     sb.style.position="absolute";
     sb.style.top="14px";
     sb.style.right="14px";
@@ -1070,7 +1066,7 @@ function renderMatch(){
   const right=shuffle(round.map(x=>({txt:x.it.en,key:x.it.da,x})));
   const cell=(item,side)=>`<button class="match-cell" data-key="${esc(item.key)}" data-side="${side}" onclick="pickMatch(this)">${esc(item.txt)}</button>`;
   const wrap=$("#gamewrap");
-  wrap.innerHTML=`<div class="back" onclick="quitGame()">‹ Afslut</div>
+  wrap.innerHTML=`<div class="back" onclick="quitGame()">✕ Afslut</div>
     <div class="h1" style="font-size:1.3rem">🧲 Find par</div>
     <p class="sub">${cfg.title} – tryk på et dansk udtryk og derefter på den engelske betydning.</p>
     <div class="match-grid">
@@ -1085,7 +1081,7 @@ function renderMatch(){
     holder.style.position="relative";
     btn.parentNode.insertBefore(holder,btn);
     holder.appendChild(btn);
-    const sb=speakerBtn(left[i].txt,"sm");
+    const sb=speakerBtn(left[i].txt);
     sb.style.position="absolute";
     sb.style.top="4px";
     sb.style.right="4px";
@@ -1126,7 +1122,7 @@ function pickMatch(btn){
     if(fbm&&daItem){
       fbm.className="feedback bad";
       fbm.innerHTML=`<div>Rigtigt par: <strong>${esc(daItem.it.da)}</strong> = <strong>${esc(daItem.it.en)}</strong></div>`;
-      fbm.appendChild(speakerBtn(daItem.it.da,"sm"));
+      fbm.appendChild(speakerBtn(daItem.it.da));
     }
     if(G._miss)clearTimeout(G._miss);
     G._miss=setTimeout(()=>{G._miss=null;a.classList.remove("miss","sel");b.classList.remove("miss");},400);
@@ -1258,7 +1254,7 @@ function resetAll(){ if(confirm("Vil du nulstille alle fremskridt, al XP og alle
 /* =========================================================
    BADGES
 ========================================================= */
-const BADGE_SPR=['stjerne','pokal','hjerte','snegl','molle','cykel','hat','flag','snak'];
+const BADGE_SPR=['pokal','stjerne'];
 function screenBadges(){
   const cells=ACHS.map(a=>{const un=P.badges.includes(a.id);
     return `<div class="ach ${un?'un':''}"><div class="aico" data-sd-sprite="${BADGE_SPR[ACHS.indexOf(a)%BADGE_SPR.length]}" data-scale="4" aria-hidden="true"></div><div class="aname">${a.name}</div></div>`;}).join("");

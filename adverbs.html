@@ -7,8 +7,11 @@
   external libraries or backend services are required.  Progress is
   stored in the browser’s localStorage so returning players can pick
   up where they left off.  A sample dataset is built into the script
-  so the game works immediately; learners can also paste CSV data
-  exported from the supplied Excel sheet to load all ~500 sentences.
+  so the game works immediately; the built-in dataset currently has
+  only 10 entries (it is not the ~500-sentence list of the original
+  plan). Learners can also paste CSV data to load a larger list.
+  Topic zones (Tid, Sted, Måde, Frekvens, Bindeord) are shown on the
+  map only while they have at least one entry in the active dataset.
 
   CSV import instructions:
   - Click the “Import Data” button in the header.  Paste your CSV
@@ -356,6 +359,8 @@
   <script src="shared/dansk-speech.js"></script>
   <script src="shared/dansk-core.js"></script>
   <link rel="stylesheet" href="shared/themes/adverbs.css">
+  <link rel="stylesheet" href="shared/tts-button.css">
+  <link rel="stylesheet" href="shared/sd-extras.css">
   <link rel="stylesheet" href="shared/explainer/modal.css">
   <script src="shared/explainer/modal.js"></script>
 </head>
@@ -689,6 +694,9 @@
       const map = document.getElementById("map");
       map.innerHTML = "";
       zones.forEach((zone) => {
+        // Never offer a topic without entries; it reappears once the data has some.
+        // (Unlock level below still uses the zone's position in the full list.)
+        if (!dataset.some(zone.filter)) return;
         const btn = document.createElement("button");
         btn.textContent = zone.name;
         btn.dataset.zone = zone.id;
@@ -745,6 +753,20 @@
         if (v && !seen.has(v) && out.length < n) { seen.add(v); out.push(v); }
       });
       return out;
+    }
+
+    // Render the blank ("______") as a shared .sd-gap placeholder
+    function appendGapText(p, sentence) {
+      sentence.split("______").forEach((part, i) => {
+        if (i > 0) {
+          const g = document.createElement("span");
+          g.className = "sd-gap";
+          g.setAttribute("role", "img");
+          g.setAttribute("aria-label", "mellemrum");
+          p.appendChild(g);
+        }
+        if (part) p.appendChild(document.createTextNode(part));
+      });
     }
 
     function addTts(container, text) {
@@ -948,7 +970,7 @@
     function renderGapQuestion(content, optionsDiv) {
       const gapSentence = blankWord(currentEntry.sentence_da, currentEntry.word);
       const p = document.createElement("p");
-      p.appendChild(document.createTextNode(gapSentence));
+      appendGapText(p, gapSentence);
       const row = document.createElement("span");
       row.className = "tts-row";
       p.appendChild(row);
@@ -1093,7 +1115,7 @@
       // The target word is always blanked so the prompt never contains the answer
       const gapSentence = blankWord(currentEntry.sentence_da, currentEntry.word);
       const p = document.createElement("p");
-      p.appendChild(document.createTextNode(gapSentence));
+      appendGapText(p, gapSentence);
       const row = document.createElement("span");
       row.className = "tts-row";
       p.appendChild(row);
@@ -1364,7 +1386,8 @@
       const back = document.createElement("button");
       back.type = "button";
       back.id = "backToPracticeBtn";
-      back.textContent = "Tilbage til øvelserne";
+      back.textContent = "← Tilbage";
+      back.title = "Tilbage til øvelserne";
       back.addEventListener("click", () => startZone(currentZone || zones[0]));
       game.appendChild(document.createElement("div")).appendChild(back);
       if (window.Sjovt) { Sjovt.hydrate(); Sjovt.fx.celebrate(); }
@@ -1397,7 +1420,7 @@
       updateDashboard();
       populateMap();
       // Start with a random zone/mode
-      startZone(zones[0]);
+      startZone(zones.find((z) => dataset.some(z.filter)) || zones[0]);
       // Dark mode toggle
       const darkToggle = document.getElementById("darkToggle");
       let darkPref = null;

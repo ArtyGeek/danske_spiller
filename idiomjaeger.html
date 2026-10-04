@@ -287,20 +287,12 @@ label.flt{display:flex;flex-direction:column;gap:3px;font-size:.78rem;font-weigh
 .dsg-home{position:fixed;top:14px;right:14px;z-index:999999;display:inline-flex;align-items:center;gap:6px;background:rgba(20,20,30,.62);color:#fff;text-decoration:none;font:700 .85rem 'Segoe UI',system-ui,sans-serif;padding:9px 16px;border-radius:999px;backdrop-filter:blur(4px);box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
 .dsg-home:hover{transform:translateY(-2px);background:rgba(20,20,30,.8)}
 
-.speaker{
-  width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;
-  font-size:.9rem;flex:none;cursor:pointer;vertical-align:middle;margin-left:6px;
-  border:2px solid #7a5b2a;background:linear-gradient(180deg,#fff6e0,var(--parchment-dark));
-  color:var(--ink);box-shadow:0 2px 0 #7a5b2a,0 3px 6px var(--shadow);
-  transition:transform .08s,box-shadow .12s;padding:0;line-height:1;
-}
-.speaker:hover{transform:translateY(-1px);}
-.speaker:active{transform:scale(.92);box-shadow:0 1px 0 #7a5b2a;}
-.speaker.small{width:26px;height:26px;font-size:.75rem;margin-left:4px;}
 </style>
 <link rel="stylesheet" href="shared/sjovt.css">
 <script src="shared/sjovt.js"></script>
 <link rel="stylesheet" href="shared/themes/idiomjaeger.css">
+<link rel="stylesheet" href="shared/tts-button.css">
+<link rel="stylesheet" href="shared/sd-extras.css">
 </head>
 <body>
 <div class="wrap">
@@ -604,7 +596,8 @@ function pix(n,sc){return window.Sjovt?Sjovt.spriteSVG(n,sc||2):'';}
 const MOTIVATE=["Flot fundet!","Skat fundet!","Idiom afsløret!","Fremragende arbejde!","Modersmålsniveau!","Bliv ved med at jage!","Stort fund!"];
 function motivate(){return MOTIVATE[Math.floor(Math.random()*MOTIVATE.length)];}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
-function lvlBadge(l){return`<span class="lvl-badge lvl-${l}">${l}</span>`;}
+function lvlBadge(l){return`<span class="lvl-badge sd-badge sd-badge--panel lvl-${l}">${l}</span>`;}
+function gapHTML(t){return esc(t).replace(/_____/g,'<span class="sd-gap" role="img" aria-label="mellemrum"></span>');}
 function catTag(c){return`<span class="tag cat">${esc(catDa(c))}</span>`;}
 
 /* ============================================================
@@ -642,7 +635,7 @@ function speak(text){
 function speakerBtn(text,cls){
   const id='spk'+(_spkSeq++);
   _spkMap[id]=text;
-  return `<button type="button" class="speaker ${cls||''}" data-spk="${id}" aria-label="Udtal" onclick="event.stopPropagation();speak(_spkMap['${id}'])"></button>`;
+  return `<button type="button" class="dc-tts-button${cls==='sm'?' dc-tts-button--sm':''}" data-spk="${id}" aria-label="Lyt" onclick="event.stopPropagation();speak(_spkMap['${id}'])"></button>`;
 }
 let _spkSeq=0;
 let _spkMap={};
@@ -652,21 +645,21 @@ function toast(msg){const t=document.getElementById('toast');t.innerHTML=msg;t.c
 function burst(x,y,colors){colors=colors||['#f0c14b','#c8941f','#3f8f4a','#fff'];for(let i=0;i<14;i++){const p=document.createElement('div');p.className='particle';const ang=Math.random()*Math.PI*2,dist=40+Math.random()*70;p.style.cssText=`left:${x}px;top:${y}px;background:${colors[i%colors.length]};--dx:${Math.cos(ang)*dist}px;--dy:${Math.sin(ang)*dist}px`;document.body.appendChild(p);p.addEventListener('animationend',()=>p.remove());}}
 function burstAt(el){if(!el)return;const r=el.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2);}
 
-function topbar(extra){return`<div class="topbar"><button class="btn small ghost" onclick="goMenu()">⟵ Jagtmenu</button><div class="coins"><span data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span> <span id="coinNum">${S.coins}</span> guld</div></div>${extra||''}`;}
+function topbar(extra){return`<div class="topbar"><button class="btn small ghost" onclick="goMenu()">← TILBAGE</button><div class="coins"><span data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span> <span id="coinNum">${S.coins}</span> guld</div></div>${extra||''}`;}
 
 /* ============================================================
    ACHIEVEMENTS
    ============================================================ */
 const ACHS=[
   {id:'first',ico:'stjerne',t:'Første idiom',d:'Svar rigtigt på dit første idiom',test:()=>S.totalCorrect>=1},
-  {id:'m25',ico:'kort',t:'25 idiomer lært',d:'Mestr 25 idiomer',test:()=>masteredCount()>=25},
-  {id:'m50',ico:'kiste',t:'50 idiomer lært',d:'Mestr 50 idiomer',test:()=>masteredCount()>=50},
+  {id:'m25',ico:'stjerne',t:'25 idiomer lært',d:'Mestr 25 idiomer',test:()=>masteredCount()>=25},
+  {id:'m50',ico:'stjerne',t:'50 idiomer lært',d:'Mestr 50 idiomer',test:()=>masteredCount()>=50},
   {id:'m100',ico:'pokal',t:'100 idiomer lært',d:'Mestr 100 idiomer',test:()=>masteredCount()>=100},
-  {id:'explorer',ico:'lup',t:'Idiomopdager',d:'Mød mindst 60 forskellige idiomer',test:()=>Object.keys(S.idiom).filter(k=>DATA_BY_ID[k]&&S.idiom[k]&&S.idiom[k].seen>0).length>=60},
-  {id:'streak',ico:'molle',t:'På Jagt',d:'Opnå en serie på 15 i træk',test:()=>S.longest>=15},
-  {id:'ctx',ico:'pin',t:'Kontekstmesteren',d:'Gennemfør Kontekstmesteren',test:()=>S.ctxWin},
-  {id:'native',ico:'bog',t:'Modersmålstaleren',d:'Bestå Modersmålstaleren',test:()=>S.natWin},
-  {id:'expert',ico:'flag',t:'Ekspert i danske udtryk',d:'Mestr alle de typisk danske idiomer',test:()=>DATA.filter(d=>d.c==='Very Danish Expressions').every(d=>isMastered(d.id))},
+  {id:'explorer',ico:'stjerne',t:'Idiomopdager',d:'Mød mindst 60 forskellige idiomer',test:()=>Object.keys(S.idiom).filter(k=>DATA_BY_ID[k]&&S.idiom[k]&&S.idiom[k].seen>0).length>=60},
+  {id:'streak',ico:'pokal',t:'På Jagt',d:'Opnå en serie på 15 i træk',test:()=>S.longest>=15},
+  {id:'ctx',ico:'pokal',t:'Kontekstmesteren',d:'Gennemfør Kontekstmesteren',test:()=>S.ctxWin},
+  {id:'native',ico:'pokal',t:'Modersmålstaleren',d:'Bestå Modersmålstaleren',test:()=>S.natWin},
+  {id:'expert',ico:'pokal',t:'Ekspert i danske udtryk',d:'Mestr alle de typisk danske idiomer',test:()=>DATA.filter(d=>d.c==='Very Danish Expressions').every(d=>isMastered(d.id))},
 ];
 function checkAchievements(){let unlocked=[];ACHS.forEach(a=>{if(!S.ach.includes(a.id)&&a.test()){S.ach.push(a.id);unlocked.push(a);}});if(unlocked.length){setTimeout(()=>toast(`Badge låst op: ${unlocked[0].t}`),700);}}
 
@@ -682,15 +675,15 @@ function renderMenu(){
     <h2 class="section-title">Vælg din jagt</h2>
     <div class="progress-line">Mestrede skatte: <b>${masteredCount()}</b> / ${DATA.length} · Nøjagtighed: <b>${accuracy()}%</b> · Serie: <b>${S.streak}</b> <span class="ij-streak">${pix('molle',2)}</span></div>
     <div class="row mb" style="gap:10px">
-      <label class="flt">Niveau<select id="fPlayLvl" onchange="setPlayLevel(this.value)">${['all',...LEVELS].map(l=>`<option value="${l}" ${PLAY_LVL===l?'selected':''}>${l==='all'?'Alle niveauer':l}</option>`).join('')}</select></label>
+      <label class="flt">Niveau<select class="sd-select" id="fPlayLvl" onchange="setPlayLevel(this.value)">${['all',...LEVELS].map(l=>`<option value="${l}" ${PLAY_LVL===l?'selected':''}>${l==='all'?'Alle niveauer':l}</option>`).join('')}</select></label>
     </div>
     <div class="menu-grid">
-      <button class="btn primary" onclick="renderLearn()"><span class="ico" data-sd-sprite="molle" data-scale="4" aria-hidden="true"></span>Lærings-tilstand<span class="sub">Bladr og studér</span></button>
-      <button class="btn" onclick="renderPractice()"><span class="ico" data-sd-sprite="stjerne" data-scale="4" aria-hidden="true"></span>Øve-tilstand<span class="sub">Bland alle spiltyper</span></button>
-      <button class="btn" onclick="renderGames()"><span class="ico" data-sd-sprite="cykel" data-scale="4" aria-hidden="true"></span>Spil<span class="sub">13 spiltyper</span></button>
-      <button class="btn" onclick="startWeak()"><span class="ico" data-sd-sprite="hjerte" data-scale="4" aria-hidden="true"></span>Svage Idiomer<span class="sub">${weakIdioms().length} til repetition</span></button>
-      <button class="btn" onclick="renderStats()"><span class="ico" data-sd-sprite="pokal" data-scale="4" aria-hidden="true"></span>Statistik<span class="sub">Din fremgang</span></button>
-      <button class="btn" onclick="renderDict()"><span class="ico" data-sd-sprite="hat" data-scale="4" aria-hidden="true"></span>Idiom-ordbog<span class="sub">Alle ${DATA.length} idiomer</span></button>
+      <button class="btn primary" onclick="renderLearn()"><span class="ico" data-sd-sprite="kort" data-scale="4" aria-hidden="true"></span>Lærings-tilstand<span class="sub">Bladr og studér</span></button>
+      <button class="btn" onclick="renderPractice()"><span class="ico" data-sd-sprite="terning" data-scale="4" aria-hidden="true"></span>Øve-tilstand<span class="sub">Bland alle spiltyper</span></button>
+      <button class="btn" onclick="renderGames()"><span class="ico" data-sd-sprite="tandhjul" data-scale="4" aria-hidden="true"></span>Spil<span class="sub">13 spiltyper</span></button>
+      <button class="btn" onclick="startWeak()"><span class="ico" data-sd-sprite="lup" data-scale="4" aria-hidden="true"></span>Svage Idiomer<span class="sub">${weakIdioms().length} til repetition</span></button>
+      <button class="btn" onclick="renderStats()"><span class="ico" data-sd-sprite="pokal" data-scale="2" aria-hidden="true"></span>Statistik<span class="sub">Din fremgang</span></button>
+      <button class="btn" onclick="renderDict()"><span class="ico" data-sd-sprite="kiste" data-scale="4" aria-hidden="true"></span>Idiom-ordbog<span class="sub">Alle ${DATA.length} idiomer</span></button>
     </div>
     <div class="center mt"><button class="btn small ghost" onclick="renderAch()">Badges (${S.ach.length}/${ACHS.length})</button></div>
   </div>`;
@@ -706,9 +699,9 @@ function levelPool(){return PLAY_LVL==='all'?DATA:DATA.filter(d=>d.l===PLAY_LVL)
 function setPlayLevel(v){PLAY_LVL=v;renderMenu();}
 function filterControls(onChange){
   return`<div class="row mb" style="gap:10px">
-    <label class="flt">Kategori<select id="fCat">${['all',...CATS].map(c=>`<option value="${c}" ${FILT.cat===c?'selected':''}>${c==='all'?'Alle':catDa(c)}</option>`).join('')}</select></label>
-    <label class="flt">Niveau<select id="fLvl">${['all','A2','B1','B2','C1'].map(l=>`<option value="${l}" ${FILT.lvl===l?'selected':''}>${l==='all'?'Alle':l}</option>`).join('')}</select></label>
-    <label class="flt">Status<select id="fMast">
+    <label class="flt">Kategori<select class="sd-select" id="fCat">${['all',...CATS].map(c=>`<option value="${c}" ${FILT.cat===c?'selected':''}>${c==='all'?'Alle':catDa(c)}</option>`).join('')}</select></label>
+    <label class="flt">Niveau<select class="sd-select" id="fLvl">${['all','A2','B1','B2','C1'].map(l=>`<option value="${l}" ${FILT.lvl===l?'selected':''}>${l==='all'?'Alle':l}</option>`).join('')}</select></label>
+    <label class="flt">Status<select class="sd-select" id="fMast">
       <option value="all" ${FILT.mast==='all'?'selected':''}>Alle</option>
       <option value="yes" ${FILT.mast==='yes'?'selected':''}>Mestrede</option>
       <option value="no" ${FILT.mast==='no'?'selected':''}>Ikke mestrede</option>
@@ -738,11 +731,11 @@ function relatedFor(idiom){return DATA.filter(d=>d.c===idiom.c&&d.id!==idiom.id)
 function idiomCardHTML(d,full){
   const rel=full?relatedFor(d):[];
   return`<div class="idiom-card">
-    <h3>${isMastered(d.id)?'<span class="mastered-dot">★</span> ':''}${esc(d.d)}${speakerBtn(d.d)}</h3>
+    <h3>${isMastered(d.id)?'<span class="mastered-dot">★</span> ':''}${esc(d.d)}${speakerBtn(d.d,'sm')}</h3>
     <div>${catTag(d.c)} ${lvlBadge(d.l)}</div>
     <div class="meaning">${esc(d.m)}</div>
     <div style="font-size:.88rem">${esc(d.x)}</div>
-    <div class="ex">"${esc(d.e)}"${speakerBtn(d.e)}</div>
+    <div class="ex">"${esc(d.e)}"${speakerBtn(d.e,'sm')}</div>
     <div class="tr">→ ${esc(d.t)}</div>
     ${full&&rel.length?`<div class="related"><b>Beslægtede:</b> ${rel.map(r=>esc(r.d)).join(' · ')}</div>`:''}
   </div>`;
@@ -852,7 +845,7 @@ function answer(idx,btn){
   if(correct){fb.textContent=motivate()+' +10 guld';fb.className='feedback good';burstAt(btn);}
   else{fb.textContent='Ikke helt — '+esc(d.d);fb.className='feedback bad';}
   if(_justMastered===q.id){toast('Skat låst op! "'+esc(d.d)+'" mestret!');_justMastered=null;}
-  document.getElementById('explainSlot').innerHTML=`<div class="explain"><b>${esc(d.d)}</b>${speakerBtn(d.d)} — ${esc(d.m)}<br>${esc(d.x)}<br><i>"${esc(d.e)}"</i>${speakerBtn(d.e)} → ${esc(d.t)}</div>`;
+  document.getElementById('explainSlot').innerHTML=`<div class="explain"><b>${esc(d.d)}</b>${speakerBtn(d.d,'sm')} — ${esc(d.m)}<br>${esc(d.x)}<br><i>"${esc(d.e)}"</i>${speakerBtn(d.e,'sm')} → ${esc(d.t)}</div>`;
   if(correct)Q.score++;
   if(Q.cfg.lives){if(!correct){Q.lives--;if(Q.lives<=0){document.getElementById('nextWrap').classList.remove('hidden');document.getElementById('nextBtn').textContent='Se resultat ⟶';document.getElementById('nextBtn').onclick=endQuiz;return;}}}
   document.getElementById('nextWrap').classList.remove('hidden');
@@ -918,7 +911,7 @@ function checkText(){
   if(correct){fb.textContent=motivate()+' +10 guld';fb.className='feedback good';burstAt(document.getElementById('txtGo'));T.score++;}
   else{fb.textContent='Det rigtige ord var: "'+esc(q.answer)+'"';fb.className='feedback bad';}
   if(_justMastered===q.id){toast('Skat låst op! "'+esc(d.d)+'" mestret!');_justMastered=null;}
-  document.getElementById('explainSlot').innerHTML=`<div class="explain"><b>${esc(d.d)}</b>${speakerBtn(d.d)} — ${esc(d.m)}<br><i>"${esc(d.e)}"</i>${speakerBtn(d.e)} → ${esc(d.t)}</div>`;
+  document.getElementById('explainSlot').innerHTML=`<div class="explain"><b>${esc(d.d)}</b>${speakerBtn(d.d,'sm')} — ${esc(d.m)}<br><i>"${esc(d.e)}"</i>${speakerBtn(d.e,'sm')} → ${esc(d.t)}</div>`;
   document.getElementById('nextWrap').classList.remove('hidden');
   T.answered=false;
 }
@@ -949,7 +942,7 @@ function renderMemory(){
     <h2 class="section-title">Idiom Memory</h2>
     <div class="progress-line">Par fundet: <b>${MEM.matched}</b>/6 · Træk: ${MEM.moves}</div>
     <div class="mem-grid" id="memGrid">
-      ${MEM.cards.map((c,i)=>`<div class="mem-card${c.matched?' matched':''}${MEM.flipped.includes(i)?' flipped':''}" data-i="${i}"><span class="back" data-sd-sprite="stjerne" data-scale="3" aria-hidden="true"></span><span class="face">${esc(c.text)}${c.kind==='d'?speakerBtn(c.text,'small'):''}</span></div>`).join('')}
+      ${MEM.cards.map((c,i)=>`<div class="mem-card${c.matched?' matched':''}${MEM.flipped.includes(i)?' flipped':''}" data-i="${i}"><span class="back" data-sd-sprite="stjerne" data-scale="3" aria-hidden="true"></span><span class="face">${esc(c.text)}${c.kind==='d'?speakerBtn(c.text):''}</span></div>`).join('')}
     </div>
     <div class="scrollnote">Vend to kort og find idiom + betydning.</div></div>`;
   document.querySelectorAll('#memGrid .mem-card').forEach(el=>el.onclick=()=>memFlip(parseInt(el.dataset.i)));
@@ -993,7 +986,7 @@ function renderMatch(){
     <h2 class="section-title">Find par</h2>
     <div class="progress-line">Forbundet: <b>${MP.done}</b>/5 — tryk et idiom og dets betydning</div>
     <div class="match-cols">
-      <div class="match-col" id="colL">${MP.left.map(d=>`<div class="match-item" data-id="${d.id}" data-side="L">${esc(d.d)}${speakerBtn(d.d,'small')}</div>`).join('')}</div>
+      <div class="match-col" id="colL">${MP.left.map(d=>`<div class="match-item" data-id="${d.id}" data-side="L">${esc(d.d)}${speakerBtn(d.d)}</div>`).join('')}</div>
       <div class="match-col" id="colR">${MP.right.map(d=>`<div class="match-item" data-id="${d.id}" data-side="R">${esc(d.m)}</div>`).join('')}</div>
     </div></div>`;
   document.querySelectorAll('.match-item').forEach(el=>el.onclick=()=>matchClick(el));
@@ -1044,10 +1037,10 @@ function launchGame(id){
     case'exampleDetective':return startQuiz({gid:id,title:'Eksempeldetektiven',pool:levelPool(),build:bExampleDetective,total:10});
     case'fillMissing':return startText({gid:id,title:'Udfyld hullet',pool:levelPool(),total:8,
       canUse:d=>!!blankWord(d.e,d.k),
-      make:d=>({id:d.id,answer:d.k,promptHTML:`<div style="font-size:1.05rem">${esc(blankWord(d.e,d.k))}<span class="q-sub">Udfyld det manglende ord (${d.m})</span></div>`})});
+      make:d=>({id:d.id,answer:d.k,promptHTML:`<div style="font-size:1.05rem">${gapHTML(blankWord(d.e,d.k))}<span class="q-sub">Udfyld det manglende ord (${d.m})</span></div>`})});
     case'complete':return startText({gid:id,title:'Fuldfør udtrykket',pool:levelPool(),total:8,
       canUse:d=>d.d.trim().split(/\s+/).length>=2,
-      make:d=>{const w=lastWord(d.d);const shown=d.d.replace(new RegExp(escRe(w)+'[\\s!?.]*$'),'_____');return{id:d.id,answer:w,promptHTML:`<div>${esc(shown)}<span class="q-sub">Fuldfør udtrykket — betyder: ${esc(d.m)}</span></div>`};}});
+      make:d=>{const w=lastWord(d.d);const shown=d.d.replace(new RegExp(escRe(w)+'[\\s!?.]*$'),'_____');return{id:d.id,answer:w,promptHTML:`<div>${gapHTML(shown)}<span class="q-sub">Fuldfør udtrykket — betyder: ${esc(d.m)}</span></div>`};}});
     case'memory':return startMemory(levelPool());
     case'match':return startMatch(levelPool());
     case'category':return renderCategoryPick();

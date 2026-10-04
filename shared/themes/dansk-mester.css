@@ -107,11 +107,7 @@ html.sd-page .path-card .pico { font-size: 0; margin-bottom: 4px; min-height: 48
 html.sd-page .path-card h3 { font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: 24px; margin: 8px 0 6px; }
 html.sd-page .path-card p { color: var(--sd-text-soft); font-weight: 400; font-size: 15px !important; }
 html.sd-page .path-grid { gap: 20px; }
-html.sd-page .path-card.verbs { background: var(--sd-cream); color: #101010; }
-html.sd-page .path-card.verbs p, html.sd-page .path-card.verbs .pct { color: #3A3326; }
-:root[data-theme="dark"] .path-card.verbs { background: var(--sd-panel); color: var(--sd-text); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .path-card.verbs { background: var(--sd-panel); color: var(--sd-text); } :root:not([data-theme="light"]) .path-card.verbs p, :root:not([data-theme="light"]) .path-card.verbs .pct { color: var(--sd-text-soft); } }
-:root[data-theme="dark"] .path-card.verbs p, :root[data-theme="dark"] .path-card.verbs .pct { color: var(--sd-text-soft); }
+html.sd-page .path-card.verbs { background: var(--sd-panel); color: var(--sd-text); border-top: 8px solid var(--sd-orange); }
 
 /* progress bars: pixel stripes */
 html.sd-page .bar { height: 16px; border: 0; border-radius: 0; background: var(--sd-panel-2); box-shadow: var(--sd-box); margin: 4px; }
@@ -139,8 +135,8 @@ html.sd-page .mode .mname { max-width: 100%; overflow-wrap: anywhere; hyphens: a
 html.sd-page .mode .mdesc { color: var(--sd-text-soft); font-size: 14px; font-weight: 400; line-height: 1.35; }
 
 /* CEFR select */
-html.sd-page select {
-  background: var(--sd-white) !important; color: #101010 !important; border: 0 !important; border-radius: 0 !important; min-height: 48px; padding: 8px 12px !important; margin: 4px;
+html.sd-page select.sd-select {
+  border: 0 !important; border-radius: 0 !important; margin: 4px;
   font-family: var(--sd-font-body) !important; font-weight: 700 !important; font-size: 16px !important; box-shadow: var(--sd-box), inset 4px 4px 0 rgba(16,16,16,.12);
 }
 html.sd-page label { font-family: var(--sd-font-display); font-weight: 700 !important; font-size: 15px !important; color: var(--sd-text) !important; text-transform: uppercase; letter-spacing: .03em; }
@@ -198,14 +194,6 @@ html.sd-page .feedback.bad::before  { content: "✗"; background: var(--sd-bad);
 html.sd-page .feedback .muted, html.sd-page .feedback [style*="color:var(--muted)"] { color: var(--sd-text-soft) !important; font-size: 14px !important; font-weight: 400 !important; }
 html.sd-page .feedback [style*="font-size:.82rem"] { font-size: 14px !important; }
 
-/* speaker */
-html.sd-page .speaker {
-  width: 44px; height: 44px; border-radius: 0; margin-top: 12px; border: 0; background: var(--sd-cream); color: #101010; font-size: 0; box-shadow: var(--sd-box), 0 6px 0 -4px var(--sd-ink); padding: 0;
-}
-html.sd-page .speaker::before { content: "♪"; font-family: var(--sd-font-display); font-weight: 700; font-size: 22px; }
-html.sd-page .speaker:hover { border: 0; background: var(--sd-orange); }
-html.sd-page .speaker.sm { width: 44px; height: 44px; margin-top: 0; font-size: 0; }
-
 /* ------------------------------------------------------------ flash cards */
 html.sd-page .flash-wrap { margin: 12px 4px 24px; }
 html.sd-page .flash { height: 240px; transition: transform .4s steps(5); }
@@ -218,14 +206,14 @@ html.sd-page .face .lbl { font-family: var(--sd-font-display); font-weight: 700;
 html.sd-page .face.back .lbl, html.sd-page .face.back .hint { color: #3A3326; }
 html.sd-page .face .ftext { font-family: var(--sd-font-body); font-weight: 700; font-size: 30px; overflow-wrap: anywhere; hyphens: auto; }
 html.sd-page .face .hint { font-family: var(--sd-font-body); font-weight: 400; font-size: 14px; color: var(--sd-text-soft); }
-html.sd-page .flash .face.front .speaker { right: 8px !important; top: 8px !important; }
+html.sd-page .flash .face.front .dc-tts-button { right: 8px !important; top: 8px !important; margin: 0; }
 
 /* ------------------------------------------------------------ match pairs */
 html.sd-page .match-grid { gap: 16px; margin: 12px 0; }
 html.sd-page #matchLeft > div { margin: 0 4px 16px; }
 html.sd-page .match-grid > div:not(#matchLeft) > .match-cell { margin: 0 4px 16px; width: calc(100% - 8px); }
 html.sd-page #matchLeft .match-cell { width: 100%; padding-right: 56px; margin: 0; }
-html.sd-page #matchLeft .speaker { top: 50% !important; right: 6px !important; transform: translateY(-50%); }
+html.sd-page #matchLeft .dc-tts-button { top: 50% !important; right: 6px !important; margin: 0; transform: translateY(-50%); }
 html.sd-page .match-cell {
   --_bg: var(--sd-panel-2); background: var(--_bg); color: var(--sd-text); border: 0 !important; border-radius: 0; min-height: 64px; padding: 10px 12px;
   font-family: var(--sd-font-body); font-weight: 700; font-size: 15px; line-height: 1.35; overflow-wrap: anywhere; hyphens: auto;

@@ -176,15 +176,6 @@
 
   /* speaker / pronunciation button */
   .word-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-  .speaker{
-    width:38px;height:38px;border-radius:50%;display:inline-grid;place-items:center;
-    font-size:1rem;flex:none;cursor:pointer;
-    background:linear-gradient(180deg,#fff8e8,#efe1bf);border:1.5px solid var(--gold);
-    color:var(--ink);transition:transform .12s,box-shadow .15s;
-  }
-  .speaker:hover{box-shadow:0 4px 10px rgba(40,20,10,.25)}
-  .speaker:active{transform:scale(.92)}
-  .speaker.speaker-sm{width:30px;height:30px;font-size:.85rem;margin-left:6px;vertical-align:middle}
 
   .buttons{display:flex;gap:14px;margin:8px 0 16px}
   .btn-big{
@@ -284,12 +275,14 @@
 </style>
 <link rel="stylesheet" href="../shared/sjovt.css">
 <link rel="stylesheet" href="../shared/themes/en-og-et.css">
+<link rel="stylesheet" href="../shared/tts-button.css">
+<link rel="stylesheet" href="../shared/sd-extras.css">
 <link rel="stylesheet" href="../shared/explainer/modal.css">
 <script src="../shared/explainer/modal.js"></script>
 </head>
 <body>
 <div class="book">
-  <button class="home-btn" id="homeBtn">← Tilbage</button>
+  <button class="home-btn" id="homeBtn">← TILBAGE</button>
   <header>
     <div class="eyebrow">Velkommen til</div>
     <h1>Ordenes Vidunderland</h1>
@@ -306,11 +299,11 @@
           <span><h3>En eller et?</h3><p>Larvens evige spørgsmål – vælg artiklen</p></span>
         </button>
         <button class="mode-card" data-mode="definite">
-          <span class="emblem"><span data-sd-sprite="bog" data-scale="4"></span></span>
+          <span class="emblem"><span data-sd-sprite="pin" data-scale="4"></span></span>
           <span><h3>Bestemt form</h3><p>en bil → <em>bilen</em>, et hus → <em>huset</em></p></span>
         </button>
         <button class="mode-card" data-mode="plural">
-          <span class="emblem"><span data-sd-sprite="kiste" data-scale="4"></span></span>
+          <span class="emblem"><span data-sd-sprite="kort" data-scale="4"></span></span>
           <span><h3>Flertal</h3><p>en bil → <em>biler</em>, et hus → <em>huse</em></p></span>
         </button>
         <button class="mode-card" data-mode="sentence">
@@ -326,7 +319,7 @@
           <span><h3>Tvillingordene</h3><p>100 synonymer · <em>glad = lykkelig</em></p></span>
         </button>
         <button class="mode-card" data-mode="speed">
-          <span class="emblem"><span data-sd-sprite="ur" data-scale="4"></span></span>
+          <span class="emblem"><span data-sd-sprite="tryllestav" data-scale="4"></span></span>
           <span><h3>Den Hvide Kanins ræs</h3><p>"Jeg kommer for sent!" – en/et på 60 sek.</p></span>
         </button>
         <button class="mode-card" id="weakCard" data-mode="weak">
@@ -350,15 +343,15 @@
     <section id="submenu" class="hidden">
       <div class="submenu">
         <button class="mode-card" data-style="mc">
-          <span class="emblem"><span data-sd-sprite="pokal" data-scale="4"></span></span>
+          <span class="emblem"><span data-sd-sprite="bog" data-scale="4"></span></span>
           <span><h3>Quiz</h3><p>Vælg det rigtige ord mellem fire</p></span>
         </button>
         <button class="mode-card" data-style="flash">
-          <span class="emblem"><span data-sd-sprite="kort" data-scale="4"></span></span>
+          <span class="emblem"><span data-sd-sprite="terning" data-scale="4"></span></span>
           <span><h3>Vendekort</h3><p>Vend kortet og se parret</p></span>
         </button>
         <button class="mode-card" data-style="match">
-          <span class="emblem"><span data-sd-sprite="tandhjul" data-scale="4"></span></span>
+          <span class="emblem"><span data-sd-sprite="net" data-scale="4"></span></span>
           <span><h3>Find par</h3><p>Find ordenes par</p></span>
         </button>
       </div>
@@ -563,7 +556,7 @@ const DATA=[
   {w:"måltid",a:"et",d:"måltidet",p:"måltider",cefr:"B1",note:"Det hedder »et måltid«. Der er ingen sikker regel for mad og drikke – lær ordet sammen med artiklen."},
   /* --- DRINKS --- */
   {w:"vin",a:"en",d:"vinen",p:"vine",cefr:"A2",note:"Det hedder »en vin«. De fleste madvarer og drikkevarer er en-ord."},
-  {w:"øl",a:"en",d:"øllen",p:"øl",cefr:"A2",note:"Bestemt form: øllen. (Både en øl og et øl bruges.)"},
+  {w:"øl",a:"en",d:"øllen",a2:"et",d2:"ølet",p:"øl",cefr:"A2",note:"Både en øl og et øl bruges. Bestemt form: øllen / ølet."},
   {w:"kaffe",a:"en",d:"kaffen",p:null,cefr:"A1",note:"Det hedder »en kaffe«. De fleste madvarer og drikkevarer er en-ord."},
   {w:"mælk",a:"en",d:"mælken",p:null,cefr:"A1",note:"»Mælk« er et en-ord: mælken. Man siger oftest bare »mælk« eller »noget mælk«. De fleste madvarer og drikkevarer er en-ord."},
   {w:"vand",a:"et",d:"vandet",p:null,cefr:"A1",note:"»Vand« er et et-ord: vandet – det er en af de vigtige undtagelser blandt drikkevarer. Man siger oftest »et glas vand«."},
@@ -876,10 +869,10 @@ function speak(text){
 }
 function speakerBtn(text, cls){
   const b = document.createElement("button");
-  b.className = "speaker " + (cls||"");
+  b.className = "dc-tts-button " + (cls||"");
   b.type = "button";
-  b.textContent = "♪";
-  b.setAttribute("aria-label","Udtal ordet");
+  b.setAttribute("aria-label","Lyt");
+  b.title = "Lyt";
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -1000,6 +993,10 @@ let timer=null, timeLeft=0, speedCorrect=0;
 let matchSel=null, matchDone=0, matchTotal=0, matchBatch=[];
 
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+// Words that accept two genders carry an optional a2 (second article) and d2 (its definite form), e.g. øl: en/et.
+function artLabel(it){return it.a2?it.a+"/"+it.a2:it.a;}
+function artOk(it,sel){return sel===it.a||(!!it.a2&&sel===it.a2);}
+function defTargets(it){return it.d2?[it.d,it.d2]:[it.d];}
 function pick(a){return a[Math.floor(Math.random()*a.length)];}
 function norm(s){return s.trim().toLowerCase().replace(/\s+/g," ");}
 const praise=["Storartet!","Pragtfuldt!","Vidunderligt!","Helt rigtigt!","Fortræffeligt!","Bravo!","Sådan!"];
@@ -1115,17 +1112,17 @@ function showQuestion(){
     setWordSpeaker(null); // article not revealed yet — avoid giving away the answer
   }else if(mode==="definite"){
     hintEl.innerHTML="Skriv i <b>bestemt form</b> (ental)";
-    wordEl.innerHTML='<span class="art">'+item.a+'</span> '+item.w;
+    wordEl.innerHTML='<span class="art">'+artLabel(item)+'</span> '+item.w;
     setWordSpeaker(item.a+" "+item.w);
     resetInput();
   }else if(mode==="plural"){
     hintEl.innerHTML="Skriv i <b>flertal</b> (ubestemt)";
-    wordEl.innerHTML='<span class="art">'+item.a+'</span> '+item.w;
+    wordEl.innerHTML='<span class="art">'+artLabel(item)+'</span> '+item.w;
     setWordSpeaker(item.a+" "+item.w);
     resetInput();
   }else if(mode==="sentence"){
     hintEl.innerHTML="Udfyld: <b>"+item.form+"</b> af <em>"+item.lemma+"</em>";
-    wordEl.innerHTML=item.s.replace("___",'<span class="gap">_____</span>');
+    wordEl.innerHTML=item.s.replace("___",'<span class="sd-gap" role="img" aria-label="mellemrum"></span>');
     wordEl.classList.add("is-sentence");
     setWordSpeaker(null); // sentence has a gap — speak the full answer sentence once revealed
     resetInput();
@@ -1135,8 +1132,8 @@ function resetInput(){answerInput.value="";answerInput.disabled=false;submitBtn.
 
 function answerArticle(sel){
   if(answered)return;answered=true;
-  const ok=sel===current.a;
-  register(ok,current.a+" "+current.w);
+  const ok=artOk(current,sel);
+  register(ok,artLabel(current)+" "+current.w);
   if(window.Sjovt) (ok?Sjovt.fx.correct:Sjovt.fx.wrong)(sel==="en"?btnEn:btnEt);
   setWordSpeaker(current.a+" "+current.w); // reveal pronunciation now that the article is known
   btnEn.disabled=true;btnEt.disabled=true;
@@ -1147,10 +1144,11 @@ function submitTyped(){
   if(answered)return;
   const val=norm(answerInput.value);if(!val)return;answered=true;
   let target,full;
-  if(mode==="definite"){target=current.d;full=current.a+" "+current.w+" → "+current.d;}
-  else if(mode==="plural"){target=current.p;full=current.a+" "+current.w+" → "+current.p;}
+  let targets;
+  if(mode==="definite"){targets=defTargets(current);target=targets.join(" / ");full=artLabel(current)+" "+current.w+" → "+target;}
+  else if(mode==="plural"){target=current.p;full=artLabel(current)+" "+current.w+" → "+current.p;}
   else{target=current.answer;full=current.answer+(current.en?'  ('+current.en+')':'');}
-  const ok=norm(target)===val;
+  const ok=(targets||[target]).some(t=>norm(t)===val);
   register(ok,target,full);
   if(window.Sjovt) (ok?Sjovt.fx.correct:Sjovt.fx.wrong)(ok?submitBtn:answerInput);
   if(mode==="sentence") setWordSpeaker(current.s.replace("___",current.answer)); // speak the completed sentence

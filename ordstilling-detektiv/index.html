@@ -243,14 +243,6 @@ body{
 .explain.bad .verdict{color:var(--red2)}
 .explain .sol{font-family:'Special Elite',monospace;font-size:17px;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .explain .tr{font-size:13px;color:#5a4830;font-style:italic;margin-bottom:9px}
-.speaker{
-  width:34px;height:34px;border-radius:50%;display:inline-grid;place-items:center;
-  font-size:1rem;flex:none;cursor:pointer;border:1.5px solid #7a6030;
-  background:linear-gradient(180deg,#fffaf0,#efe0bf);box-shadow:0 3px 0 #b59a64;
-  transition:transform .07s, box-shadow .07s;
-}
-.speaker:hover{transform:translateY(-1px)}
-.speaker:active{transform:translateY(2px) scale(.96);box-shadow:0 1px 0 #b59a64}
 .explain .why{font-size:13px;line-height:1.55;color:#3a2c18}
 .explain .why b{color:var(--red2)}
 
@@ -282,6 +274,8 @@ body{
 <link rel="stylesheet" href="../shared/sjovt.css">
 <script src="../shared/sjovt.js"></script>
 <link rel="stylesheet" href="../shared/themes/ordstilling.css">
+<link rel="stylesheet" href="../shared/tts-button.css">
+<link rel="stylesheet" href="../shared/sd-extras.css">
 <link rel="stylesheet" href="../shared/explainer/modal.css">
 <script src="../shared/explainer/modal.js"></script>
 </head>
@@ -290,17 +284,17 @@ body{
   <div class="masthead">
     <div class="mast-row"><span data-sd-sprite="lup" data-scale="6" class="sd-bob" aria-hidden="true"></span><h1>Ordstillings&shy;detektiven</h1></div>
     <div class="tag">Ordstillings&shy;detektiven — 12 sager · A1 → B2</div>
-    <div class="rank" id="rankBadge">Rang: Detektivelev</div>
+    <div class="rank sd-badge sd-badge--panel" id="rankBadge">Rang: Detektivelev</div>
   </div>
 
   <!-- ================= MAP ================= -->
   <div class="card" id="mapScreen">
     <p class="intro-line">SAGSMAPPER — POLITIETS GRAMMATIKAFDELING</p>
     <div class="tiers">
-      <span class="tier-pill t-a1">A1 · Sag 1–3</span>
-      <span class="tier-pill t-a2">A2 · Sag 4–6</span>
-      <span class="tier-pill t-b1">B1 · Sag 7–10</span>
-      <span class="tier-pill t-b2">B2 · Sag 11–12</span>
+      <span class="tier-pill sd-badge sd-badge--panel">A1 · Sag 1–3</span>
+      <span class="tier-pill sd-badge sd-badge--panel">A2 · Sag 4–6</span>
+      <span class="tier-pill sd-badge sd-badge--panel">B1 · Sag 7–10</span>
+      <span class="tier-pill sd-badge sd-badge--panel">B2 · Sag 11–12</span>
     </div>
     <div class="lvlfilter" id="lvlFilter"></div>
     <div class="map" id="mapGrid"></div>
@@ -313,7 +307,7 @@ body{
   <!-- ================= PLAY ================= -->
   <div class="card hidden" id="playScreen">
     <div class="topbar">
-      <button class="back" id="backBtn">‹ Sagskort</button>
+      <button class="back" id="backBtn" aria-label="Tilbage til sagskort">← TILBAGE</button>
       <span class="timer hidden" id="timer">0:00</span>
       <div class="hud">
         <div class="stat"><div class="l">Point</div><div class="v" id="scoreV">0</div></div>
@@ -805,9 +799,9 @@ function speak(text){
 }
 function speakerBtn(text, cls){
   const b = document.createElement("button");
-  b.className = "speaker " + (cls||"");
+  b.className = "dc-tts-button " + (cls||"");
   b.type = "button";
-  b.textContent = "♪"; b.title = "Lyt";
+  b.title = "Lyt til sætningen";
   b.setAttribute("aria-label","Lyt til sætningen");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
@@ -851,7 +845,7 @@ function renderMap(){
     b.disabled=!unlocked;
     b.innerHTML=
       `<span class="num">${done?"✓":c.n}</span>`+
-      `<span class="lvl ${c.lvl}">${c.cefr}</span>`+
+      `<span class="lvl sd-badge sd-badge--panel">${c.cefr}</span>`+
       `<span class="ct">${c.title}</span>`+
       `<span class="cf">${c.focus}</span>`+
       (done?`<span class="stamp">Løst</span>`:"")+
@@ -865,7 +859,7 @@ function renderMap(){
   const fUnlocked=allSolved();
   f.className="casebtn final-card"+(fUnlocked?"":" locked");
   f.disabled=!fUnlocked;
-  f.innerHTML=`<span class="lvl lb-b2">FINALE</span>`+
+  f.innerHTML=`<span class="lvl sd-badge sd-badge--panel">FINALE</span>`+
     `<span class="ct">Den afsluttende efterforskning</span>`+
     `<span class="cf">100 blandede spørgsmål · tilpasser sig · på tid · alle emner</span>`+
     (fUnlocked?(prog.finalBest?`<div class="best" style="position:static;margin-top:6px">bedst ${prog.finalBest} %</div>`:""):`<span class="lock" style="position:static;display:block;margin-top:6px">Løs alle 12 sager for at låse op</span>`);
@@ -904,7 +898,7 @@ function startWeak(){
   $("caseHead").innerHTML=
     `<div class="file">ØVETILSTAND · ALLE NIVEAUER</div>`+
     `<h2>Svage sætninger</h2>`+
-    `<details class="storybox" open><summary>Sagens baggrund</summary><div class="story">Gennemgå de sætninger, du har haft svært ved. Hvert rigtigt svar gør puljen mindre – den skrumper, efterhånden som du øver dig.</div></details>`+
+    `<details class="storybox"><summary><span class="sb-closed">Læs sagen</span><span class="sb-open">Skjul sagen</span></summary><div class="story">Gennemgå de sætninger, du har haft svært ved. Hvert rigtigt svar gør puljen mindre – den skrumper, efterhånden som du øver dig.</div></details>`+
     `<div class="focus">${q.length} sætning${q.length===1?"":"er"} i puljen</div>`;
   show("play"); renderHUD(); loadQuestion();
 }
@@ -932,7 +926,7 @@ function startCase(n){
   $("caseHead").innerHTML=
     `<div class="file">SAGSMAPPE #${String(n).padStart(2,"0")} · ${c.cefr}</div>`+
     `<h2>${c.title}</h2>`+
-    `<details class="storybox" open><summary>Sagens baggrund</summary><div class="story">${c.story}</div></details>`+
+    `<details class="storybox"><summary><span class="sb-closed">Læs sagen</span><span class="sb-open">Skjul sagen</span></summary><div class="story">${c.story}</div></details>`+
     `<div class="focus">Fokus: ${c.focus}</div>`;
   show("play"); renderHUD(); loadQuestion();
 }
@@ -953,7 +947,7 @@ function startFinal(){
   $("caseHead").innerHTML=
     `<div class="file">SÆRLIG SAGSMAPPE · ALLE NIVEAUER</div>`+
     `<h2>Den afsluttende efterforskning</h2>`+
-    `<details class="storybox" open><summary>Sagens baggrund</summary><div class="story">100 blandede udsagn fra alle sagerne. Sværhedsgraden stiger, dine svage punkter dukker oftere op, og uret tikker. Bevis, at du er mesterdetektiven.</div></details>`+
+    `<details class="storybox"><summary><span class="sb-closed">Læs sagen</span><span class="sb-open">Skjul sagen</span></summary><div class="story">100 blandede udsagn fra alle sagerne. Sværhedsgraden stiger, dine svage punkter dukker oftere op, og uret tikker. Bevis, at du er mesterdetektiven.</div></details>`+
     `<div class="focus">Tilpasser sig · På tid · A1 → B2</div>`;
   show("play"); renderHUD(); startTimer(); loadQuestion();
 }
@@ -1009,8 +1003,9 @@ function loadQuestion(){
   $("clearBtn").classList.remove("hidden");
   renderHUD();
   const sb=document.querySelector("#caseHead .storybox");
-  if(sb) sb.open=(G.i===0);
-  if(G.i>0) keepAnswerInView();
+  /* D-ORD: story collapsed by default on every statement incl. the 1st; the learner's choice sticks until the case ends */
+  if(sb){ sb.open=!!G.storyOpen; sb.ontoggle=()=>{ if(G) G.storyOpen=sb.open; }; }
+  keepAnswerInView(G.i===0);
   focusFirstTile();
 }
 
@@ -1021,10 +1016,13 @@ function focusFirstTile(){
 }
 
 /* Keep tiles + UNDERSØG reachable (US-013). Scroll is instant (no smooth), so it is also reduced-motion safe. */
-function keepAnswerInView(){
+function keepAnswerInView(first){
   const q=$("qArea"), chk=$("checkBtn");
   if(!q||!chk) return;
   q.style.scrollMarginTop="64px";
+  /* D-ORD: on the 1st statement bring the whole case card (HUD, header, prompt) to the top first; the checks below then fall back to #qArea if it does not fit */
+  const ps=$("playScreen");
+  if(first&&ps){ ps.style.scrollMarginTop="64px"; try{ ps.scrollIntoView({block:"start",behavior:"auto"}); }catch(e){ ps.scrollIntoView(true); } }
   const r=chk.getBoundingClientRect();
   const pr=($("promptLbl")||q).getBoundingClientRect();
   /* also scroll when the prompt/English line is above or under the 56px MENU bar */
@@ -1153,7 +1151,7 @@ function finishSession(){
         : `Fremragende! Du har ryddet alle svage sætninger fra puljen.`}</p>`+
       `<div class="controls" style="margin-top:16px">
          <button class="btn clear" id="againBtn">Øv igen</button>
-         <button class="btn check" id="mapBtn2">Tilbage til kortvalg ▸</button>
+         <button class="btn check" id="mapBtn2" aria-label="Tilbage til sagskort">← TILBAGE</button>
        </div>`;
     $("againBtn").onclick=()=>startWeak();
     try{ $("againBtn").focus({preventScroll:true}); }catch(e){}
@@ -1167,7 +1165,7 @@ function finishSession(){
     }
     const next=CASES.find(x=>x.n===G.caseN+1);
     area.innerHTML=
-      `<div class="res-sprites" aria-hidden="true">${passed?'<span data-sd-sprite="pokal" data-scale="6"></span>':''}<span data-sd-sprite="lup" data-scale="6" class="${passed?'sd-hop':'sd-wig'}"></span>${passed?'<span data-sd-sprite="stjerne" data-scale="6"></span>':''}</div>`+
+      `<div class="res-sprites" aria-hidden="true">${passed?'<span data-sd-sprite="pokal" data-scale="3"></span>':''}<span data-sd-sprite="lup" data-scale="6" class="${passed?'sd-hop':'sd-wig'}"></span>${passed?'<span data-sd-sprite="stjerne" data-scale="3"></span>':''}</div>`+
       (passed?`<div class="bigstamp">LØST</div>`:`<div class="bigstamp" style="color:#8a6a30;border-color:#8a6a30;transform:rotate(-4deg)">GENÅBN</div>`)+
       `<h2>${G.c.title}</h2>`+
       `<div class="score">${G.correct} / ${G.total} rigtige · ${pct} %</div>`+
@@ -1176,7 +1174,7 @@ function finishSession(){
         : `Du løb tør for spor. Du skal have mindst 60 % rigtige (og beholde et liv) for at stemple sagen som <b>løst</b>. Prøv igen – ordene bliver blandet forfra hver gang.`}</p>`+
       `<div class="controls" style="margin-top:16px">
          <button class="btn clear" id="againBtn">Prøv sagen igen</button>
-         <button class="btn check" id="mapBtn2">Sagskort ▸</button>
+         <button class="btn check" id="mapBtn2" aria-label="Tilbage til sagskort">← TILBAGE</button>
        </div>`;
     $("againBtn").onclick=()=>startCase(G.caseN);
     try{ $("againBtn").focus({preventScroll:true}); }catch(e){}
@@ -1186,14 +1184,14 @@ function finishSession(){
     const m=Math.floor(G.time/60),s=G.time%60;
     const title = pct>=90?"MESTERDETEKTIV":pct>=70?"Skarp efterforsker":pct>=50?"Dygtig opklarer":"Fortsæt efterforskningen";
     area.innerHTML=
-      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="pokal" data-scale="6"></span><span data-sd-sprite="lup" data-scale="6" class="sd-hop"></span></div>`+
+      `<div class="res-sprites" aria-hidden="true"><span data-sd-sprite="pokal" data-scale="3"></span><span data-sd-sprite="lup" data-scale="6" class="sd-hop"></span></div>`+
       `<div class="bigstamp" style="${pct>=90?'':'color:#8a6a30;border-color:#8a6a30'}">${pct>=90?'MESTER':'SAG'}</div>`+
       `<h2>${title}</h2>`+
       `<div class="score">${G.correct} / ${G.total} · ${pct} %</div>`+
       `<p>Tid: <b>${m}:${String(s).padStart(2,"0")}</b> · Point: <b>${G.score}</b>${pct>=90?"<br>Du har styr på dansk ordstilling fra A1 til B2.":"<br>De punkter, du fejlede, dukker oftere op næste gang."}</p>`+
       `<div class="controls" style="margin-top:16px">
          <button class="btn clear" id="againBtn">Kør igen</button>
-         <button class="btn check" id="mapBtn2">Sagskort ▸</button>
+         <button class="btn check" id="mapBtn2" aria-label="Tilbage til sagskort">← TILBAGE</button>
        </div>`;
     $("againBtn").onclick=()=>startFinal();
     try{ $("againBtn").focus({preventScroll:true}); }catch(e){}
