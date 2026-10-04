@@ -34,3 +34,15 @@ Write `stories/implementation/US-XXX.md` (one per story; if a story has several 
 9. Acceptance-criteria table: every criterion from the story copied verbatim with PASS / FAIL / NOT VERIFIED (criteria needing native sign-off or owner approval = NOT VERIFIED)
 
 Finish with a short summary message (stories, status, key test results, anything blocked).
+
+---
+
+## Batch 4 addendum (P2/P3 polish)
+
+- **Earlier batches are already in the working tree and committed on branch `qa-implementation`.** Read `git log`/`git diff HEAD~0` and the earlier reports for your files; do not revert, restyle or re-do them (Batch 1–3 additions you must keep intact include: localStorage guards, TTS buttons, weak-word streak fields, `explainer:open/close` listener blocks, `data-explainer` lines, Danish content corrections, the US-002 distractor block in `Forbindenor.html`).
+- **Cross-game stories are split into per-owner slices.** Do ONLY the slice for the game(s) you own, as named in your assignment. Read the whole story for context (the other games' parts belong to other workers running concurrently).
+- **Report files:** for a story that has several owners (US-028, 030, 031, 033, 034, 037, 041, 042, 050) write your report to your OWN file `stories/implementation/US-XXX-<OWNER>.md` (e.g. `US-037-W-DM.md`), never to a shared `US-XXX.md`, so parallel workers cannot overwrite each other. For stories with a single owner write `stories/implementation/US-XXX.md` as before. Same standard sections + criteria table (criteria that concern your slice; mark criteria that concern other games as "other owner").
+- **Order of work:** P2 stories first, then P3 stories, each in dependency order (the story's Dependencies field).
+- **Frozen files stay frozen:** `shared/sjovt.css`, `shared/sjovt.js`, portal `index.html`, `prd.md`, `specs.md`, `CLAUDE.md`. If a story slice cannot be done without editing them (e.g. a new sprite in `sjovt.js`, confetti layering in `Sjovt.fx`, the portal slice of US-050), do NOT do it: write `Status: BLOCKED` with the exact reason and what owner approval is needed, and move on. Reuse existing sprites/helpers where the story allows. Don't edit `shared/dansk-core.js` / `shared/dansk-speech.js` either (shared by many games): report a shared dependency instead.
+- **Never run `git add`, `git commit`, `taskkill`, or anything that kills other processes** (two earlier incidents: `taskkill //IM node.exe`). If your own test hangs, kill only its PID.
+- Tests that write dump files into the repo (`tests/tidsmaskinen.mjs`, `tests/pronomenmysteriet.mjs`, smoke with `--shots`) must be run with output redirected to your scratchpad, or the generated files deleted afterwards. `git status --short` at the end must show only your owned files + `stories/implementation/*.md`.
