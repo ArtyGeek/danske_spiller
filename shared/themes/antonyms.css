@@ -259,3 +259,6 @@ html.sd-page .brand > span:last-child, html.sd-page .mode-btn .t, html.sd-page .
 }
 html.sd-page .sd-conf { z-index: 0; }
 html.sd-page .summary { position: relative; z-index: 1; }
+/* US-037 retry: the entry animation's persistent fill-mode kept a stacking context on the screen, trapping .summary below the confetti */
+html.sd-page .screen.sd-enter { animation-fill-mode: none; }
+html.sd-page header.topbar { position: relative; z-index: 2; }

@@ -3103,8 +3103,8 @@ window.TIDS_DATA = {
       "options": [
         "flyttede",
         "flytter",
-        "er flyttet",
-        "var flyttet"
+        "flyttet",
+        "skal flytte"
       ],
       "correct": "flyttede",
       "accepted_answers": [
@@ -5552,7 +5552,7 @@ window.TIDS_DATA = {
       "sentence": "For et halvt år siden ___ de til København.",
       "options": [
         "flytter",
-        "er flyttet",
+        "flyttet",
         "flyttede"
       ],
       "correct": "flyttede",
@@ -7150,7 +7150,7 @@ window.TIDS_DATA = {
       "context": "Du refererer, hvad hun fortalte i går.",
       "sentence": "Hun fortalte, at hun allerede ___ alt til festen.",
       "options": [
-        "forberedte",
+        "forberedt",
         "forbereder",
         "ville have forberedet",
         "havde forberedet"
@@ -9289,7 +9289,7 @@ window.TIDS_DATA = {
       "distractors": [
         "kommer til at flytte",
         "flyttede",
-        "er flyttet"
+        "flyttet"
       ],
       "note": "Vil udtrykker egen vilje eller beslutning."
     },
@@ -15024,7 +15024,7 @@ window.TIDS_DATA = {
           "distractors": [
             "bor",
             "har boet",
-            "ville bo"
+            "boet"
           ]
         }
       ],
@@ -15207,7 +15207,7 @@ window.TIDS_DATA = {
           "distractors": [
             "cykler",
             "har cyklet",
-            "ville cykle"
+            "cyklet"
           ]
         }
       ],
@@ -15388,7 +15388,7 @@ window.TIDS_DATA = {
           "distractors": [
             "regner",
             "har regnet",
-            "ville regne"
+            "regnet"
           ]
         }
       ],
@@ -15468,7 +15468,7 @@ window.TIDS_DATA = {
           "distractors": [
             "bor",
             "har boet",
-            "ville bo"
+            "boet"
           ]
         }
       ],

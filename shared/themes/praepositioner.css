@@ -75,7 +75,8 @@ html.sd-page #lvlSel {
 html.sd-page label[for="lvlSel"] { font-family: var(--sd-font-body); font-weight: 700; font-size: 16px !important; text-transform: uppercase; color: var(--sd-text) !important; }
 
 /* mode grid */
-html.sd-page .menu-grid { gap: 20px; padding: 4px; }
+html.sd-page .menu-grid { gap: 20px; padding: 4px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+html.sd-page .mode-btn, html.sd-page .dex h1 { min-width: 0; }
 html.sd-page .mode-btn {
   min-height: 132px; padding: 14px 12px; color: #101010; background: var(--sd-cream); position: relative; overflow: visible;
   box-shadow: var(--sd-box), var(--sd-bevel), 8px 8px 0 0 var(--sd-ink); margin: 4px;
@@ -247,6 +248,7 @@ html[data-sd-motion="off"].sd-page .particle { visibility: hidden; animation: sd
   html.sd-page .menu-grid { gap: 14px; }
   html.sd-page .mode-btn .t { font-size: 16px; }
 }
+@media (max-width: 359px) { html.sd-page .dex h1, html.sd-page .mode-btn { overflow-wrap: anywhere; } }
 
 /* Pixelify bold closes the gap in C (reads as O): use a lighter weight for display labels */
 html.sd-page :is(.mode-btn .t, .btn, .topbtn, .section-title, .dex h1, .fb .big, .speaker, .chip, .streakpop, h2) { font-weight: 700; }

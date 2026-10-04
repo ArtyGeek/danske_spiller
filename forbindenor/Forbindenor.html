@@ -909,7 +909,7 @@ function render(noFocus){
   const total = order.length;
   $('bar').style.width=(state.i/total*100)+'%';
   $('count').textContent='Sekvens '+(state.i+1)+' / '+total+(state.weakMode?' · Svage ord':'');
-  saveRun(opts,null);
+  saveRun(opts,(resume && !state.weakMode)?resume.pick:null);   // keep the stored answer when re-rendering a restored answered item
   if(resume && resume.pick!==null && !state.weakMode){ showAnswered(rec,resume.pick); }
   else if(!noFocus){ focusEl(box.querySelector('.opt')); }   // US-031: focus the first option
 }
