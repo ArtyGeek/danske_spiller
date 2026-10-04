@@ -11,16 +11,15 @@ This file is run *history + hand-off*. Never edit `prd.md` / `specs.md` because 
 
 ## 1. Resume Here  (OVERWRITE this block at the end of every run)
 
-- **Last updated:** 2026-10-03 (this run)
-- **Active task:** Completed `saetning-data` — Sætningsmaskinen data.js (1,020 items)
-- **Last completed step:** Created `/saetningsmaskinen/data.js` with all 1,020 items across 7 modes (exact targets met: adverb_placement 140, main_to_subordinate 160, direct_question 140, indirect_question 140, relative_clause 180, der_or_det 160, clause_chain 100). Validated: 0 errors, unique IDs, valid levels A1-C1. Commit 1293499.
-- **Exact next action:** Next task is `saetning-game-1` (index.html shell with Baba Is You block tile theme, implement Modes 1–4 renderers with tile mechanics, SRS routing, sound). Estimated size: large (game shell + 4 renderers).
+- **Last updated:** 2026-10-04 (this run)
+- **Active task:** Verified and marked completed `boejning-data` — Bøjningsværkstedet data.js (3,273 items, all 6 modes)
+- **Last completed step:** Verified that boejningsvaerkstedet/data.js has all 6 modes fully populated and exceeds prd § 2.4 targets. Ran validation: 3,273 total items, 0 errors, 0 warnings. Updated PROGRESS.md to mark boejning-data as completed with commit 252f0c3. Updated SCRATCHPAD.md with completion event.
+- **Exact next action:** Next task is `saetning-game-1` (index.html shell with Baba Is You block tile theme, implement Modes 1–4 renderers with tile mechanics, SRS routing, sound). saetning-data is already completed (1,020 items). Estimated size: large (game shell + 4 mode renderers + integration).
 - **Open problems / do not repeat:**
-  - Latent bug: `shared/data/nouns.js` `lærer` entry yields `lærerene`; should be `lærerne`. Not yet fixed.
-  - 28 adjectives + ~10 nouns flagged `verify: true` (need native-speaker check).
-  - Data items are currently mostly templated/placeholder patterns. Real Danish sentences recommended for higher quality.
-  - Stray `tmp_*.js` files in repo root (debug harnesses). Don't ship in games.
-- **Queue after this:** saetning-game-1 → saetning-game-2 → tids-data → tids-game-* → skrive-* → qa-pass (see PROGRESS.md).
+  - Latent bug: `shared/data/nouns.js` `lærer` entry yields `lærerene`; should be `lærerne`. Not yet fixed (low priority).
+  - 28 adjectives flagged `verify: true` in adjectives.js (native-speaker review still pending).
+  - Stray `tmp_*.js` files in repo root (debug harnesses). Clean up before final commit.
+- **Queue after this:** saetning-game-1 → saetning-game-2 → tids-data-polish → tids-native-review → seo-tidsmaskinen → tids-ux-polish → tids-caption-review → skrive-* tasks → qa-pass (see PROGRESS.md).
 
 ---
 
@@ -160,5 +159,19 @@ This file is run *history + hand-off*. Never edit `prd.md` / `specs.md` because 
 - Result: ok · validated (0 errors, unique IDs, valid levels, all required fields)
 - State: data.js complete, ready for game shell implementation
 - Next: saetning-game-1 (index.html with tile mechanics, Modes 1–4 renderers)
+
+### 2026-10-04 10:30 · verify · boejning-data
+- What: Verified boejningsvaerkstedet/data.js is complete with all 6 modes fully populated and validated. Checked dataset counts against prd § 2.4 targets.
+- Result: ok · verified complete
+- State: 
+  - Mode 1 (fire_former): 1,300/900 ✓
+  - Mode 2 (byg_navneordet): 570/500 ✓
+  - Mode 3 (adjektivvaerkstedet): 746/400 ✓
+  - Mode 4 (sammenligningspressen): 186/180 ✓
+  - Mode 5 (bestemt_ubestemt): 250/250 ✓
+  - Mode 6 (maengdevaerkstedet): 221/220 ✓
+  - Total: 3,273 items (target 2,450), all validated zero errors/warnings
+  - Game shell (boejning-shell) + renderers (boejning-modes-1-3, boejning-modes-4-6) already implemented
+- Next: Mark boejning-data as completed in PROGRESS.md; move to next task (saetning-game-1)
 
 <!-- APPEND NEW EVENTS BELOW THIS LINE -->
