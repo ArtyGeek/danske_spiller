@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da" data-explainer="navneord-former,tillaegsord-form">
+<html lang="da" data-explainer="navneord-former,tillaegsord-form,gradboejning,gradboejning-mere-mest,maengdeord">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1149,7 +1149,9 @@
 
       var buttons = [];
       var answered = false;
-      item.options.forEach(function(optText, i){
+      // Shuffle per presentation; choose()/number keys use this displayed order.
+      var shownOptions = shuffle((item.options || []).slice());
+      shownOptions.forEach(function(optText, i){
         var b = document.createElement('button');
         b.type = 'button'; b.className = 'opt';
         b.innerHTML = '<span class="onum">' + (i + 1) + '</span>' +
@@ -1162,12 +1164,12 @@
         if (answered) return;
         answered = true;
         clearKeyHandler();
-        var chosen = item.options[i];
+        var chosen = shownOptions[i];
         var correct = DC.diff.normalize(chosen) === DC.diff.normalize(item.correct);
         buttons.forEach(function(b, j){
           b.disabled = true;
           if (j === i) b.classList.add(correct ? 'chosen-correct' : 'chosen-wrong');
-          if (!correct && DC.diff.normalize(item.options[j]) === DC.diff.normalize(item.correct)){
+          if (!correct && DC.diff.normalize(shownOptions[j]) === DC.diff.normalize(item.correct)){
             b.classList.add('reveal-correct');
           }
         });

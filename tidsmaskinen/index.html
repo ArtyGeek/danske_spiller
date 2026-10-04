@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da" data-explainer="tider-nutid-datid,foernutid-har,datid-foernutid,modalverber">
+<html lang="da" data-explainer="tider-nutid-datid,foernutid-har,datid-foernutid,modalverber,pluskvamperfektum,fremtid,hvis-betingelse,at-infinitiv,passiv,imperativ">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -815,6 +815,22 @@
     tick();
     if (timerId === null && onExpire) timerId = setInterval(tick, 250);
   }
+  // explainer modal: hold the countdown while it is open (the deadline is pushed forward until it closes)
+  var xpHold = null;
+  document.addEventListener('explainer:open', function(){
+    if (timerId === null || xpHold) return;
+    var held = timerId, left = Math.max(0, deadline - Date.now());
+    xpHold = { id: held, left: left, iv: setInterval(function(){
+      if (timerId !== held){ clearInterval(xpHold.iv); xpHold = null; return; }
+      deadline = Date.now() + left + 60;
+    }, 40) };
+    deadline = Date.now() + left + 60;
+  });
+  document.addEventListener('explainer:close', function(){
+    if (!xpHold) return;
+    var h = xpHold; xpHold = null; clearInterval(h.iv);
+    if (timerId === h.id) deadline = Date.now() + h.left;
+  });
   function clearPending(){
     if (advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
     if (activeKeyHandler){ document.removeEventListener('keydown', activeKeyHandler); activeKeyHandler = null; }

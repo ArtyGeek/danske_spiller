@@ -235,3 +235,7 @@ html.sd-page .controls .btn.clear { flex: 1 1 120px; }
 @media (max-width: 420px) { html.sd-page .btn { font-size: 16px; padding: 12px 10px; } }
 html.sd-page .casebtn:disabled:not(.final-card) { padding-bottom: 36px; }
 html.sd-page .lock { font-family: var(--sd-font-body); font-weight: 700; font-size: 12px; letter-spacing: .04em; }
+
+/* US-013: collapsible case story so tiles + UNDERSØG stay above the fold from statement 2 on */
+html.sd-page .storybox > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-family: var(--sd-font-display); font-weight: 700; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; color: var(--sd-text); }
+html.sd-page .storybox[open] > summary { margin-bottom: 4px; }

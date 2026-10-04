@@ -299,7 +299,7 @@ body {
 .action-buttons button.right { background: linear-gradient(180deg, var(--wl-green-light), var(--wl-green)); }
 .action-buttons button.right:hover { background: linear-gradient(180deg, #93e96c, var(--wl-green)); }
 
-.restart { margin-top: .4rem; }
+.restart { margin-top: 2rem; }
 
 .restart button {
   padding: .5rem 1.1rem;

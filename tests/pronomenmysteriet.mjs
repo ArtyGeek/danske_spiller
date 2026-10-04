@@ -2,6 +2,7 @@
 //   cd <worktree> && SHOT_ROOT=<main>/docs/redesign/screenshots node <main>/tests/pronomenmysteriet.mjs [--shots]
 import { launch, openGame, sleep, hasHorizontalOverflow, smallTapTargets, shot } from './lib/harness.mjs';
 import fs from 'node:fs';
+import { spawnSync } from 'node:child_process';
 
 const FILE = 'pronomenmysteriet/index.html';
 const SHOTS = process.argv.includes('--shots');
@@ -10,6 +11,12 @@ const POOLS = [120,120,180,100,140,100];
 const results = [];
 const rec = (name, ok, ev) => { results.push({ name, ok, ev }); console.log((ok ? 'PASS ' : 'FAIL ') + name + (ev ? '  :: ' + ev : '')); };
 const shownItems = {}; // mode -> [{ctx,sentence,options,gloss,wrong?:{...}}]
+
+// US-001 data guard: placeholder text / unknown mode keys fail the run. PM_DATA_FILE overrides the data path (for guard self-tests).
+{
+  const g = spawnSync(process.execPath, [new URL('./pronomen-data-guard.mjs', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'), ...(process.env.PM_DATA_FILE ? [process.env.PM_DATA_FILE] : [])], { encoding: 'utf8' });
+  rec('data guard: no placeholder text / unknown mode keys', g.status === 0, ((g.stdout || '') + (g.stderr || '')).trim().split(/\r?\n/).slice(0, 4).join(' | '));
+}
 
 const browser = await launch();
 

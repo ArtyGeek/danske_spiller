@@ -129,6 +129,8 @@ html.sd-page .restart button:hover, html.sd-page .review-mistakes-btn:not(:disab
 html.sd-page .review-mistakes-btn { background: var(--sd-bad-bg); color: var(--sd-text); }
 html.sd-page .review-mistakes-btn:disabled { opacity: 1; background: #CFC6AA; color: #403B2C; box-shadow: var(--sd-box); }
 html.sd-page .restart, html.sd-page .review-mistakes-wrap { text-align: center; margin-top: 4px; }
+/* US-011: keep the destructive reset well clear of the answer buttons (>= 24 px extra) */
+html.sd-page .restart { margin-top: 32px; }
 
 @media (max-width: 760px) {
   html.sd-page .app-container { flex-direction: column; align-items: stretch; padding: var(--sd-3); gap: var(--sd-4); }

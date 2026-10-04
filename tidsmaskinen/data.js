@@ -556,7 +556,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Det er afsluttet.",
-      "sentence": "I morges ___ jeg tidligt og tog toget klokken seks.",
+      "sentence": "I morges ___ jeg tidligt op og tog toget klokken seks.",
       "options": [
         "havde stået",
         "står",
@@ -1202,7 +1202,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "present_vs_preterite",
       "context": "Sådan er det nu for tiden.",
-      "sentence": "Nu for tiden ___ jeg ofte tidligt, fordi jeg vil løbe om morgenen.",
+      "sentence": "Nu for tiden ___ jeg ofte tidligt op, fordi jeg vil løbe om morgenen.",
       "options": [
         "havde stået",
         "står",
@@ -4245,7 +4245,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det er sket tidligere i dag.",
-      "sentence": "Jeg ___ allerede morgenmad.",
+      "sentence": "Jeg ___ morgenmad allerede.",
       "options": [
         "spiser",
         "havde spist",
@@ -4452,7 +4452,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det er allerede klaret.",
-      "sentence": "Vi ___ allerede alt, så I kan bare komme.",
+      "sentence": "Vi ___ alt allerede, så I kan bare komme.",
       "options": [
         "har ordnet",
         "ordner",
@@ -4499,7 +4499,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Maden er færdig.",
-      "sentence": "Jeg ___ allerede maden, så vi kan spise nu.",
+      "sentence": "Jeg ___ maden allerede, så vi kan spise nu.",
       "options": [
         "har lavet",
         "laver",
@@ -4545,7 +4545,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det er sket tidligere i dag.",
-      "sentence": "Hun ___ allerede tre gange i dag, men han tager den ikke.",
+      "sentence": "Hun ___ tre gange i dag allerede, men han tager den ikke.",
       "options": [
         "havde ringet",
         "ringede",
@@ -4568,7 +4568,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Tre møder er allerede afholdt denne uge.",
-      "sentence": "Vi ___ allerede tre møder i denne uge.",
+      "sentence": "Vi ___ tre møder i denne uge allerede.",
       "options": [
         "havde haft",
         "har haft",
@@ -4591,7 +4591,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det er stadig i dag, og du tæller indtil nu.",
-      "sentence": "Jeg ___ allerede tre kopper kaffe i dag.",
+      "sentence": "Jeg ___ tre kopper kaffe i dag allerede.",
       "options": [
         "drikker",
         "drak",
@@ -4614,7 +4614,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Året er ikke slut, og du tæller indtil nu.",
-      "sentence": "Vi ___ allerede to gange i Spanien i år.",
+      "sentence": "Vi ___ to gange i Spanien i år allerede.",
       "options": [
         "havde været",
         "har været",
@@ -4683,7 +4683,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om alt, der er sket indtil nu i denne uge.",
-      "sentence": "Der ___ allerede mange problemer i denne uge.",
+      "sentence": "Der ___ mange problemer i denne uge allerede.",
       "options": [
         "havde været",
         "har været",
@@ -4753,7 +4753,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det gælder fra sæsonens start og frem til nu.",
-      "sentence": "Holdet ___ hidtil alle kampe.",
+      "sentence": "Holdet ___ alle kampe hidtil.",
       "options": [
         "vinder",
         "har vundet",
@@ -6245,7 +6245,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Jeg gik hjem kl. 17. Du kom kl. 18.",
-      "sentence": "Jeg ___ allerede hjem, da du kom.",
+      "sentence": "Jeg ___ hjem allerede, da du kom.",
       "options": [
         "var gået",
         "er gået",
@@ -6337,7 +6337,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Chefen aflyste mødet mandag. Vi mødte op tirsdag.",
-      "sentence": "Chefen ___ allerede mødet, da vi mødte op.",
+      "sentence": "Chefen ___ mødet allerede, da vi mødte op.",
       "options": [
         "aflyser",
         "har aflyst",
@@ -6360,7 +6360,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Jeg handlede kl. 15. Du ringede kl. 16.",
-      "sentence": "Jeg ___ allerede i supermarkedet, da du ringede.",
+      "sentence": "Jeg ___ i supermarkedet allerede, da du ringede.",
       "options": [
         "handler",
         "handlede",
@@ -6383,7 +6383,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Hun skrev rapporten i marts. Chefen bad om den i april.",
-      "sentence": "Hun ___ allerede rapporten, da chefen bad om den.",
+      "sentence": "Hun ___ rapporten allerede, da chefen bad om den.",
       "options": [
         "havde skrevet",
         "skrev",
@@ -6429,7 +6429,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Du sendte svaret i går. Hun spurgte i dag.",
-      "sentence": "Jeg ___ allerede svaret, da hun spurgte.",
+      "sentence": "Jeg ___ svaret allerede, da hun spurgte.",
       "options": [
         "sender",
         "har sendt",
@@ -6452,7 +6452,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Han fik visum i maj. I juni skulle han rejse.",
-      "sentence": "Han ___ allerede visum, da han skulle rejse.",
+      "sentence": "Han ___ visum allerede, da han skulle rejse.",
       "options": [
         "har fået",
         "havde fået",
@@ -6475,7 +6475,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Min mor ringede kl. 10. Jeg vågnede kl. 11.",
-      "sentence": "Min mor ___ allerede to gange, da jeg vågnede.",
+      "sentence": "Min mor ___ to gange allerede, da jeg vågnede.",
       "options": [
         "har ringet",
         "ringede",
@@ -6521,7 +6521,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Hun betalte regningen i sidste uge. Rykkeren kom i dag.",
-      "sentence": "Hun ___ allerede regningen, da rykkeren kom.",
+      "sentence": "Hun ___ regningen allerede, da rykkeren kom.",
       "options": [
         "betaler",
         "betalte",
@@ -6544,7 +6544,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Jeg læste bogen i sommer. Min ven begyndte på den i efteråret.",
-      "sentence": "Jeg ___ allerede bogen, da min ven begyndte på den.",
+      "sentence": "Jeg ___ bogen allerede, da min ven begyndte på den.",
       "options": [
         "læser",
         "læste",
@@ -6566,8 +6566,8 @@ window.TIDS_DATA = {
       "id": "han-havde-glemt-allerede-at-ringe-da-chefen-spurgte",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Han glemte at ringe mandag. Chefen spurgte tirsdag.",
-      "sentence": "Han ___ allerede at ringe, da chefen spurgte.",
+      "context": "Han glemte opgaven mandag. Chefen spurgte tirsdag.",
+      "sentence": "Han ___ opgaven allerede, da chefen spurgte.",
       "options": [
         "har glemt",
         "glemmer",
@@ -6599,7 +6599,8 @@ window.TIDS_DATA = {
       ],
       "correct": "havde vidst",
       "accepted_answers": [
-        "havde vidst"
+        "havde vidst",
+        "vidste"
       ],
       "timeline": {
         "start": "vi ved det",
@@ -6613,7 +6614,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Børnene gik i seng kl. 20. Vi kom hjem kl. 22.",
-      "sentence": "Børnene ___ for længst i seng, da vi kom hjem.",
+      "sentence": "Børnene ___ i seng for længst, da vi kom hjem.",
       "options": [
         "går",
         "er gået",
@@ -6636,7 +6637,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "pluperfect",
       "context": "Hun solgte huset i maj. Han ville købe det i juni.",
-      "sentence": "Hun ___ for længst huset, da han ville købe det.",
+      "sentence": "Hun ___ huset for længst, da han ville købe det.",
       "options": [
         "sælger",
         "har solgt",
@@ -6706,7 +6707,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "pluperfect",
       "context": "Jeg spiste kl. 12. Min ven kom kl. 13.",
-      "sentence": "Jeg ___ allerede frokost, da min ven kom.",
+      "sentence": "Jeg ___ frokost allerede, da min ven kom.",
       "options": [
         "har spist",
         "havde spist",
@@ -6729,7 +6730,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "pluperfect",
       "context": "Hun fandt nøglen kl. 8. Han ledte efter den kl. 9.",
-      "sentence": "Hun ___ allerede nøglen, da han ledte efter den.",
+      "sentence": "Hun ___ nøglen allerede, da han ledte efter den.",
       "options": [
         "finder",
         "fandt",
@@ -6843,7 +6844,7 @@ window.TIDS_DATA = {
       "id": "da-hun-kom-hjem-havde-boernene-allerede-sovet-i-to-timer",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Hun kom hjem kl. 22. Børnene sov siden kl. 20.",
+      "context": "Hun kom hjem kl. 22. Børnene sov fra kl. 20.",
       "sentence": "Da hun kom hjem, ___ børnene allerede sovet i to timer.",
       "options": [
         "var",
@@ -6890,7 +6891,7 @@ window.TIDS_DATA = {
       "id": "da-vi-kom-ud-havde-det-regnet-i-to-timer",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Vi kom ud kl. 22. Det regnede siden kl. 20.",
+      "context": "Vi kom ud kl. 22. Det regnede fra kl. 20.",
       "sentence": "Da vi kom ud, ___ det regnet i to timer.",
       "options": [
         "havde",
@@ -6983,7 +6984,7 @@ window.TIDS_DATA = {
       "id": "da-jeg-kom-havde-de-allerede-danset-i-en-time",
       "level": "A2",
       "mode": "pluperfect",
-      "context": "De dansede siden kl. 19. Jeg kom kl. 20.",
+      "context": "De dansede fra kl. 19. Jeg kom kl. 20.",
       "sentence": "Da jeg kom, ___ de allerede danset i en time.",
       "options": [
         "har",
@@ -7006,7 +7007,7 @@ window.TIDS_DATA = {
       "id": "da-du-kom-havde-vi-allerede-laest-en-time",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Vi læste siden kl. 9. Du kom kl. 10.",
+      "context": "Vi læste fra kl. 9. Du kom kl. 10.",
       "sentence": "Da du kom, ___ vi allerede læst en time.",
       "options": [
         "var",
@@ -20902,7 +20903,7 @@ window.TIDS_DATA = {
       "id": "hendes-bog-blev-oversat-til-tyve-sprog",
       "level": "B1",
       "mode": "passive",
-      "context": "Det er sket for mange år siden.",
+      "context": "Det skete for mange år siden.",
       "sentence": "Hendes bog ___ til tyve sprog.",
       "options": [
         "bliver oversat",
@@ -23101,7 +23102,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Kom"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "saet-dig-ned",
@@ -23227,7 +23228,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Vær"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "giv-mig-lige-den-bog",
@@ -23245,7 +23246,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Giv"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "hjaelp-mig-lige",
@@ -23569,7 +23570,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Tag"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "vaer-nu-venlig-mod-din-bror",
@@ -23587,7 +23588,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Vær"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "goer-det-med-det-samme",
@@ -23605,7 +23606,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Gør"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "bliv-ved-med-at-oeve-dig",
@@ -23623,7 +23624,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Bliv"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "sig-mig-hvad-du-hedder",
@@ -23641,7 +23642,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Sig"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "se-paa-tavlen",
@@ -23659,7 +23660,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Se"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "laan-mig-venligst-nogle-penge",
@@ -23695,7 +23696,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Bliv"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "tag-dine-sko-af-og-kom-ind",
@@ -23713,7 +23714,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Tag"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "lad-mig-ikke-i-stikken",
@@ -23731,7 +23732,7 @@ window.TIDS_DATA = {
       "accepted_answers": [
         "Lad"
       ],
-      "note": "Nogle ofte brugte verber har uregelmæssige imperativer: vær, gør, bliv, sig, giv, kom, tag."
+      "note": "Bydeform = navnemåde uden -e; dobbeltkonsonant forenkles (komme → kom)."
     },
     {
       "id": "roer-ikke",

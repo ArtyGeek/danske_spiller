@@ -576,7 +576,7 @@ const DATA=[
   {w:"måltid",a:"et",d:"måltidet",p:"måltider",cefr:"B1",note:"Det hedder »et måltid«. Der er ingen sikker regel for mad og drikke – lær ordet sammen med artiklen."},
   /* --- DRINKS --- */
   {w:"vin",a:"en",d:"vinen",p:"vine",cefr:"A2",note:"Det hedder »en vin«. De fleste madvarer og drikkevarer er en-ord."},
-  {w:"øl",a:"en",d:"øllen",p:"øl",cefr:"A2",note:"Det hedder »en øl«. Bestemt form: ølen."},
+  {w:"øl",a:"en",d:"øllen",p:"øl",cefr:"A2",note:"Bestemt form: øllen. (Både en øl og et øl bruges.)"},
   {w:"kaffe",a:"en",d:"kaffen",p:null,cefr:"A1",note:"Det hedder »en kaffe«. De fleste madvarer og drikkevarer er en-ord."},
   {w:"mælk",a:"en",d:"mælken",p:null,cefr:"A1",note:"Det hedder »en mælk«. De fleste madvarer og drikkevarer er en-ord."},
   {w:"vand",a:"et",d:"vandet",p:null,cefr:"A1",note:"»Vand« er et et-ord: »et vand« – det er en af de vigtige undtagelser blandt drikkevarer."},
@@ -912,9 +912,14 @@ function loadProgress(){
 function saveProgress(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(P)); }catch(e){} }
 
 /* --- Weak-word helpers --- */
+const WEAK_CLEAR_STREAK=2; // consecutive correct answers that clear a weak word
+function wordStreak(w){return (P.ws&&P.ws[w])||0;}
+function isCleared(noun){return wordStreak(noun.w)>=WEAK_CLEAR_STREAK;}
 function weakPool(){
-  // Return WORDS items where ANY perItem key matching *:word.w has c < t
+  // Return WORDS items where ANY perItem key matching *:word.w has c < t,
+  // unless the word has since been answered correctly WEAK_CLEAR_STREAK times in a row
   return WORDS.filter(noun=>{
+    if(isCleared(noun))return false;
     for(const key in P.perItem){
       // noun-mode keys are formatted as "mode:word"
       if(key.endsWith(":"+noun.w)){
@@ -951,8 +956,12 @@ function itemKeyFor(m,item){
   if(item.a&&item.b)return (category||"pair")+":"+item.a+"/"+item.b; // opposites/synonyms pair
   return null;
 }
-function recordAnswer(itemKey,ok){
+function recordAnswer(itemKey,ok,word){
   P.total++; if(ok)P.correct++;
+  if(word){ // consecutive-correct streak per word (US-012); older saves have no ws field
+    if(!P.ws)P.ws={};
+    P.ws[word]=ok?(P.ws[word]||0)+1:0;
+  }
   if(itemKey){
     if(!P.perItem[itemKey])P.perItem[itemKey]={t:0,c:0};
     P.perItem[itemKey].t++; if(ok)P.perItem[itemKey].c++;
@@ -1078,6 +1087,13 @@ function startTimer(){
   },1000);
 }
 function stopTimer(){if(timer){clearInterval(timer);timer=null;}}
+/* explainer modal: freeze the speed-round countdown while it is open; resume only if this listener paused it and the round is still running */
+let xpPaused=false;
+document.addEventListener("explainer:open",()=>{if(timer){stopTimer();xpPaused=true;}});
+document.addEventListener("explainer:close",()=>{
+  if(!xpPaused)return;xpPaused=false;
+  if(!timer&&mode==="speed"&&timeLeft>0&&!sections.game.classList.contains("hidden"))startTimer();
+});
 
 function updateStats(){
   if(mode==="speed")scorePill.textContent="Rigtige: "+speedCorrect;
@@ -1160,7 +1176,7 @@ function register(ok,answerTxt,full){
     const noteHTML=(current&&current.note)?'<small>'+current.note+'</small>':'';
     messageEl.innerHTML=pick(consol)+" Det rigtige svar: <b>"+(full||answerTxt)+"</b>."+noteHTML;
   }
-  recordAnswer(itemKeyFor(mode,current), ok);
+  recordAnswer(itemKeyFor(mode,current), ok, mode!=="sentence"&&current?current.w:null);
   updateStats();
 }
 
@@ -1343,7 +1359,7 @@ function finishRound(){
     // count how many words in the played queue are now fully cleared (c === t for all their keys)
     const cleared=queue.filter(noun=>{
       const keys=Object.keys(P.perItem).filter(k=>k.endsWith(":"+noun.w));
-      return keys.length>0&&keys.every(k=>P.perItem[k].c>=P.perItem[k].t);
+      return isCleared(noun)||(keys.length>0&&keys.every(k=>P.perItem[k].c>=P.perItem[k].t));
     }).length;
     refreshWeakCard();
     showEnd(pct,correct+" / "+total+" rigtige",
