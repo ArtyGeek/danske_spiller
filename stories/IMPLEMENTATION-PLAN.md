@@ -155,3 +155,19 @@ Every dispatch states: assigned story IDs and exact slices; expected files; file
 | B3 | ENVIRONMENT ISSUE (2nd): V-EXPL ran `taskkill` on node.exe/msedge.exe to clear its own hung runs | No other worker was active at that time; logged |
 | PR | Draft PR TarasNS/danske_spiller#3 opened from qa-implementation (3 commits) at the user's request; follow-up commit adds verification records + verify flag | Batch 4 not started |
 | B4 | User approved continuing with Batch 4 (P2/P3, per-game owners; blocked/owner-approval slices NOT done: US-026, 027, 029, 038, 039, 040, 052, 053, US-050 portal slice; frozen files untouched). Slice reports go to `stories/implementation/US-XXX-<OWNER>.md` for multi-owner stories. Nothing is pushed to the open draft PR until the user asks | Dispatch 15 workers |
+
+## Batch 5: unblocked slices of US-029, US-038, US-039 (user-requested)
+
+The user asked for the parts of these three stories that do **not** need the frozen files (`shared/sjovt.css`, `shared/sjovt.js`, portal `index.html`) and said to continue with the others afterwards. Status of those stories changes from BLOCKED to PARTIAL: only the slices below; the remainder stays BLOCKED.
+
+Start condition: wait until regression testers R1-R3 finish (they read the committed tree; edits in the middle would invalidate their results). Order: 5a shared pieces (one worker, sequential) -> verify -> 5b per-game slices in parallel (disjoint files, one owner per game file) -> verify -> targeted regression of every touched game -> final result report.
+
+| Slice | Story | In scope (no frozen file) | Stays BLOCKED |
+|---|---|---|---|
+| 5a-1 | US-029 | NEW `shared/tts-button.css` (one pixel-speaker, 48x48 framed `.dc-tts-button`, focus ring, small variant) and the minimal edit of `shared/dansk-core.js` `ui.ttsButton` (aria-label "Lyt"); this is the story's own alternative to frozen `sjovt.*` | nothing of the story beyond games' adoption (5b) |
+| 5a-2 | US-039 | NEW `shared/sd-extras.css` hosting `.sd-gap` (one gap placeholder), `.sd-badge` (neutral level badges, green/red reserved for feedback), select reset with pixel chevron, small inline-TTS variant; explainer ▶ glyph in `shared/explainer/*` replaced by a pixel triangle (QA-063 explainer part) | bar arrow `←` (in `sjovt.js`), portal ▼, portal radius/theme button (`index.html`), grid/bar-height token (QA-071, `sjovt.css`), shared results component across 5 games (QA-067: needs a design decision and frozen help), arrow glyph coverage in `sjovt.css` |
+| 5b-1 | US-029 | every game swaps its TTS button (♪, ▶, pixel speaker, none) for `.dc-tts-button` with aria-label "Lyt"; ▶ stays reserved for the explainer (also the Glosekort current-card ▶ marker) | |
+| 5b-2 | US-038 | identity sprites: Tidsmaskinen header `tidsstjerne`; Bøjningsværkstedet keeps one title with `tandhjul`; Dansk Mester header `snak`; documented semantic icon map (new doc `docs/redesign/icon-map.md`) applied to mode menus using existing sprites, one pixel density per row | redrawing the 9 generic sprites (`sjovt.js`) |
+| 5b-3 | US-039 | per game: gap placeholder, `.sd-badge` level badges, select chevron, dark-surface rule in 4 outlier games, Idiomjæger inline TTS small variant, in-game back control wording ("← TILBAGE"; ✕ only to quit a round) | frozen parts listed above |
+
+Owners (same file ownership as before): W-SHARED (5a: new shared files, `shared/dansk-core.js`, `shared/explainer/*`); then W-PRON, W-TIDS, W-BOEJ, W-ADV, W-ANT, W-PREP, W-IDIOM, W-GLOSE, W-ENET, W-FORB, W-KONJ, W-ORD, W-DM, W-MV each for their game files and `shared/themes/<game>.css`. Frozen files remain untouched. Remaining BLOCKED stories after Batch 5: US-026, 027, 040, 052, 053 and the frozen remainders of 029/038/039.
