@@ -21,59 +21,59 @@
 
 | Story | Priority | Area | Games | Dependency | Status |
 |---|---|---|---|---|---|
-| US-001 | P0 | Language / Gameplay | Pronomenmysteriet (+ Portal fallback) | — | READY FOR DEVELOPMENT |
-| US-002 | P0 | Language | Forbindeord | Native sign-off | READY FOR DEVELOPMENT |
-| US-003 | P0 | Language | Tidsmaskinen | Native sign-off | READY FOR DEVELOPMENT |
-| US-004 | P1 | Gameplay | Adverbier, Antonymer, Præpositioner | — | READY FOR DEVELOPMENT |
-| US-005 | P1 | Gameplay | Adverbier | US-004 | READY FOR DEVELOPMENT |
-| US-006 | P1 | Gameplay | Adverbier | US-005 (same file) | READY FOR DEVELOPMENT |
-| US-007 | P1 | Language | Adverbier | US-005; native sign-off | READY FOR DEVELOPMENT |
-| US-008 | P1 | Gameplay | Idiomjæger | — | READY FOR DEVELOPMENT |
-| US-009 | P1 | Gameplay | Præpositioner | — | READY FOR DEVELOPMENT |
-| US-010 | P1 | Gameplay | Bøjningsværkstedet | — | READY FOR DEVELOPMENT |
-| US-011 | P1 | Gameplay / Mobile | Glosekort | — | READY FOR DEVELOPMENT |
-| US-012 | P1 | Gameplay | En/Et, Forbindeord | — | READY FOR DEVELOPMENT |
-| US-013 | P1 | UI / Mobile | Antonymer, Ordstillingsdetektiven, Præpositioner | — (coordinate with US-026) | READY FOR DEVELOPMENT |
-| US-014 | P1 | Language | Tidsmaskinen | US-003; native sign-off | READY FOR DEVELOPMENT |
-| US-015 | P1 | Language | Bøjningsværkstedet + `shared/data/adjectives.js`, `nouns.js` | US-010; native sign-off | READY FOR DEVELOPMENT |
-| US-016 | P1 | Language | Magiske Verber | Native sign-off | READY FOR DEVELOPMENT |
-| US-017 | P1 | Language | Glosekort | Native sign-off | READY FOR DEVELOPMENT |
-| US-018 | P1 | Language | Idiomjæger | Native sign-off | READY FOR DEVELOPMENT |
-| US-019 | P1 | Language | Præpositioner | US-009; native sign-off | READY FOR DEVELOPMENT |
-| US-020 | P1 | Language | Antonymer | Native sign-off | READY FOR DEVELOPMENT |
-| US-021 | P1 | Language | Dansk Mester | Native sign-off | READY FOR DEVELOPMENT |
-| US-022 | P1 | Language | Forbindeord, Konjunktioner | US-002; native sign-off | READY FOR DEVELOPMENT |
-| US-023 | P1 | Language / Gameplay | Ordstillingsdetektiven | Native sign-off | READY FOR DEVELOPMENT |
-| US-024 | P1 | Language | En/Et | Native sign-off | READY FOR DEVELOPMENT |
-| US-025 | P1 | Video | Tidsmaskinen, Pronomenmysteriet, Bøjningsværkstedet, Ordstillingsdetektiven | US-001 (Pronomenmysteriet part); native sign-off | READY FOR DEVELOPMENT |
-| US-026 | P2 | Cross-game | 11 legacy games | Owner decision on shared helper location | READY FOR DEVELOPMENT |
-| US-027 | P2 | Language / Cross-game | Idiomjæger, Adverbier, Glosekort | Owner decision (specs); native sign-off | READY FOR DEVELOPMENT |
-| US-028 | P2 | Cross-game | Dansk Mester, Ordstillingsdetektiven, Præpositioner, Antonymer, Glosekort, Forbindeord | — | READY FOR DEVELOPMENT |
-| US-029 | P2 | Visual / Cross-game | All 14 games | US-006; owner approval (frozen `sjovt.*`) | READY FOR DEVELOPMENT |
-| US-030 | P2 | Gameplay / Cross-game | Bøjningsværkstedet, Pronomenmysteriet, Tidsmaskinen, En/Et, Forbindeord | US-011 (pattern) | READY FOR DEVELOPMENT |
-| US-031 | P2 | UI / Cross-game | Antonymer, Magiske Verber, Bøjningsværkstedet, Pronomenmysteriet, Forbindeord, Ordstillingsdetektiven, Adverbier | US-013, US-026 (touch same handlers) | READY FOR DEVELOPMENT |
-| US-032 | P2 | Visual | En/Et | — | READY FOR DEVELOPMENT |
-| US-033 | P2 | Visual | Idiomjæger, Dansk Mester | Owner approval if new sprite added to `sjovt.js` | READY FOR DEVELOPMENT |
-| US-034 | P2 | Visual / Cross-game | Konjunktioner, En/Et | — | READY FOR DEVELOPMENT |
-| US-035 | P2 | Video / Language | Præpositioner, Magiske Verber, Konjunktioner, Adverbier, Pronomenmysteriet, explainer scenes | US-025; native sign-off | READY FOR DEVELOPMENT |
-| US-036 | P3 | Video / UI | 10 explainer games (`shared/explainer/*`) | — | READY FOR DEVELOPMENT |
-| US-037 | P3 | Mobile / UI | Dansk Mester, Præpositioner, Ordstillingsdetektiven, Antonymer, Magiske Verber, Bøjningsværkstedet, Pronomenmysteriet, Glosekort, Idiomjæger, Tidsmaskinen | — | READY FOR DEVELOPMENT |
-| US-038 | P3 | Visual | Shared sprites; Tidsmaskinen, Bøjningsværkstedet, Dansk Mester + mode menus | Owner approval (frozen `sjovt.js`) | READY FOR DEVELOPMENT |
-| US-039 | P3 | Visual / Cross-game | Shared chrome + several games + Portal | Owner approval (frozen `sjovt.css`/`sjovt.js`/`index.html`) | READY FOR DEVELOPMENT |
-| US-040 | P3 | Cross-game / UI | Portal + all games | Owner approval (frozen `index.html`, `sjovt.js`) | READY FOR DEVELOPMENT |
-| US-041 | P3 | Gameplay | Antonymer, Bøjningsværkstedet, Dansk Mester | — | READY FOR DEVELOPMENT |
-| US-042 | P3 | Gameplay | Bøjningsværkstedet, Pronomenmysteriet | US-001 | READY FOR DEVELOPMENT |
-| US-043 | P3 | Gameplay | Glosekort | US-011 | READY FOR DEVELOPMENT |
-| US-044 | P3 | Gameplay / Language | Præpositioner | US-019 | READY FOR DEVELOPMENT |
-| US-045 | P3 | Gameplay / Language | Antonymer | US-020 | READY FOR DEVELOPMENT |
-| US-046 | P3 | Gameplay / Language | Dansk Mester | US-021 | READY FOR DEVELOPMENT |
-| US-047 | P3 | Gameplay / Language | En/Et | US-024 | READY FOR DEVELOPMENT |
-| US-048 | P3 | Gameplay / Language | Forbindeord | US-022 | READY FOR DEVELOPMENT |
-| US-049 | P3 | Gameplay / Language | Konjunktioner | US-022 | READY FOR DEVELOPMENT |
-| US-050 | P3 | Language | Tidsmaskinen, Bøjningsværkstedet, Magiske Verber, Idiomjæger, Ordstillingsdetektiven, Portal | US-014/015/016/018/023; owner approval for `index.html` | READY FOR DEVELOPMENT |
-| US-051 | P3 | Language (latent data) | `shared/data/verbs.js`, `pronouns.js`, `clause-patterns.js`, `saetningsmaskinen/data.js` | Native sign-off | READY FOR DEVELOPMENT |
-| US-052 | P3 | UI / Visual | `pixel-animation.html` | Owner decision | READY FOR DEVELOPMENT |
-| US-053 | P3 | Cross-game (docs) | `docs/redesign/*`, `shared/explainer/modal.css`, `CLAUDE.md` | Owner approval (docs) | READY FOR DEVELOPMENT |
+| US-001 | P0 | Language / Gameplay | Pronomenmysteriet (+ Portal fallback) | — | IMPLEMENTED BUT NOT VERIFIED |
+| US-002 | P0 | Language | Forbindeord | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-003 | P0 | Language | Tidsmaskinen | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-004 | P1 | Gameplay | Adverbier, Antonymer, Præpositioner | — | VERIFIED |
+| US-005 | P1 | Gameplay | Adverbier | US-004 | VERIFIED |
+| US-006 | P1 | Gameplay | Adverbier | US-005 (same file) | VERIFIED |
+| US-007 | P1 | Language | Adverbier | US-005; native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-008 | P1 | Gameplay | Idiomjæger | — | VERIFIED |
+| US-009 | P1 | Gameplay | Præpositioner | — | VERIFIED |
+| US-010 | P1 | Gameplay | Bøjningsværkstedet | — | VERIFIED |
+| US-011 | P1 | Gameplay / Mobile | Glosekort | — | VERIFIED |
+| US-012 | P1 | Gameplay | En/Et, Forbindeord | — | VERIFIED |
+| US-013 | P1 | UI / Mobile | Antonymer, Ordstillingsdetektiven, Præpositioner | — (coordinate with US-026) | VERIFIED |
+| US-014 | P1 | Language | Tidsmaskinen | US-003; native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-015 | P1 | Language | Bøjningsværkstedet + `shared/data/adjectives.js`, `nouns.js` | US-010; native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-016 | P1 | Language | Magiske Verber | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-017 | P1 | Language | Glosekort | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-018 | P1 | Language | Idiomjæger | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-019 | P1 | Language | Præpositioner | US-009; native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-020 | P1 | Language | Antonymer | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-021 | P1 | Language | Dansk Mester | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-022 | P1 | Language | Forbindeord, Konjunktioner | US-002; native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-023 | P1 | Language / Gameplay | Ordstillingsdetektiven | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-024 | P1 | Language | En/Et | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-025 | P1 | Video | Tidsmaskinen, Pronomenmysteriet, Bøjningsværkstedet, Ordstillingsdetektiven | US-001 (Pronomenmysteriet part); native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-026 | P2 | Cross-game | 11 legacy games | Owner decision on shared helper location | BLOCKED |
+| US-027 | P2 | Language / Cross-game | Idiomjæger, Adverbier, Glosekort | Owner decision (specs); native sign-off | BLOCKED |
+| US-028 | P2 | Cross-game | Dansk Mester, Ordstillingsdetektiven, Præpositioner, Antonymer, Glosekort, Forbindeord | — | VERIFIED |
+| US-029 | P2 | Visual / Cross-game | All 14 games | US-006; owner approval (frozen `sjovt.*`) | IMPLEMENTED BUT NOT VERIFIED |
+| US-030 | P2 | Gameplay / Cross-game | Bøjningsværkstedet, Pronomenmysteriet, Tidsmaskinen, En/Et, Forbindeord | US-011 (pattern) | VERIFIED |
+| US-031 | P2 | UI / Cross-game | Antonymer, Magiske Verber, Bøjningsværkstedet, Pronomenmysteriet, Forbindeord, Ordstillingsdetektiven, Adverbier | US-013, US-026 (touch same handlers) | VERIFIED |
+| US-032 | P2 | Visual | En/Et | — | VERIFIED |
+| US-033 | P2 | Visual | Idiomjæger, Dansk Mester | Owner approval if new sprite added to `sjovt.js` | VERIFIED |
+| US-034 | P2 | Visual / Cross-game | Konjunktioner, En/Et | — | VERIFIED |
+| US-035 | P2 | Video / Language | Præpositioner, Magiske Verber, Konjunktioner, Adverbier, Pronomenmysteriet, explainer scenes | US-025; native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-036 | P3 | Video / UI | 10 explainer games (`shared/explainer/*`) | — | VERIFIED |
+| US-037 | P3 | Mobile / UI | Dansk Mester, Præpositioner, Ordstillingsdetektiven, Antonymer, Magiske Verber, Bøjningsværkstedet, Pronomenmysteriet, Glosekort, Idiomjæger, Tidsmaskinen | — | VERIFIED |
+| US-038 | P3 | Visual | Shared sprites; Tidsmaskinen, Bøjningsværkstedet, Dansk Mester + mode menus | Owner approval (frozen `sjovt.js`) | IMPLEMENTED BUT NOT VERIFIED (partial; frozen-file remainder BLOCKED) |
+| US-039 | P3 | Visual / Cross-game | Shared chrome + several games + Portal | Owner approval (frozen `sjovt.css`/`sjovt.js`/`index.html`) | IMPLEMENTED BUT NOT VERIFIED (partial; frozen-file remainder BLOCKED) |
+| US-040 | P3 | Cross-game / UI | Portal + all games | Owner approval (frozen `index.html`, `sjovt.js`) | BLOCKED |
+| US-041 | P3 | Gameplay | Antonymer, Bøjningsværkstedet, Dansk Mester | — | VERIFIED |
+| US-042 | P3 | Gameplay | Bøjningsværkstedet, Pronomenmysteriet | US-001 | VERIFIED |
+| US-043 | P3 | Gameplay | Glosekort | US-011 | VERIFIED |
+| US-044 | P3 | Gameplay / Language | Præpositioner | US-019 | IMPLEMENTED BUT NOT VERIFIED |
+| US-045 | P3 | Gameplay / Language | Antonymer | US-020 | IMPLEMENTED BUT NOT VERIFIED |
+| US-046 | P3 | Gameplay / Language | Dansk Mester | US-021 | IMPLEMENTED BUT NOT VERIFIED |
+| US-047 | P3 | Gameplay / Language | En/Et | US-024 | IMPLEMENTED BUT NOT VERIFIED |
+| US-048 | P3 | Gameplay / Language | Forbindeord | US-022 | VERIFIED |
+| US-049 | P3 | Gameplay / Language | Konjunktioner | US-022 | IMPLEMENTED BUT NOT VERIFIED |
+| US-050 | P3 | Language | Tidsmaskinen, Bøjningsværkstedet, Magiske Verber, Idiomjæger, Ordstillingsdetektiven, Portal | US-014/015/016/018/023; owner approval for `index.html` | IMPLEMENTED BUT NOT VERIFIED |
+| US-051 | P3 | Language (latent data) | `shared/data/verbs.js`, `pronouns.js`, `clause-patterns.js`, `saetningsmaskinen/data.js` | Native sign-off | IMPLEMENTED BUT NOT VERIFIED |
+| US-052 | P3 | UI / Visual | `pixel-animation.html` | Owner decision | BLOCKED |
+| US-053 | P3 | Cross-game (docs) | `docs/redesign/*`, `shared/explainer/modal.css`, `CLAUDE.md` | Owner approval (docs) | BLOCKED |
 
 **Counts:** 53 stories. P0: 3, P1: 22, P2: 10, P3: 18.
 
@@ -138,7 +138,7 @@ None. This unblocks US-025 (Pronomenmysteriet explainers), US-042 and the native
 **Validation:**  
 `node tests/pronomenmysteriet.mjs`; `cd tests && node smoke.mjs ../pronomenmysteriet/index.html`; play modes 1–6 manually at A2, B1 and B2.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -202,7 +202,7 @@ Native-speaker sign-off on the synonym groups. US-022 edits the same file, so do
 **Validation:**  
 Node script over `DATA` (extract it as the language worker did, see `scratchpad/qa-language/`); smoke; play 20 items manually.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -263,7 +263,7 @@ Native-speaker sign-off. US-014 edits the same file afterwards.
 **Validation:**  
 `node tests/tidsmaskinen.mjs`; smoke; play the pluperfect mode for 10 items.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -316,7 +316,7 @@ Grep each file for `localStorage` and wrap every occurrence. Keep the default st
 **Validation:**  
 `node smoke.mjs` for the 3 files. Manual run with `--disable-local-storage` or a DevTools override.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -385,7 +385,7 @@ US-004 (the game must boot when storage is blocked; tests use that path).
 **Validation:**  
 Smoke; scripted 14-answer run per zone; a full review run.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -439,7 +439,7 @@ US-005 (same file and same render functions; do it after or together). US-029 la
 **Validation:**  
 Smoke; a spy test for `speak` calls; manual listening check in a browser with a Danish voice (U-05).
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -497,7 +497,7 @@ Keep entry `id`s stable if progress is keyed by word. Check `progress.categorySt
 **Validation:**  
 Category-resolution script; smoke; manual play in each zone.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -549,7 +549,7 @@ None.
 **Validation:**  
 Smoke; a scripted level × game matrix (see `scratchpad/qa-gameplay/B/`).
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -597,7 +597,7 @@ Pass the filter into the fallback, or make `randItem` return null and let `nextP
 **Validation:**  
 Scripted matrix; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -647,7 +647,7 @@ Check whether modes 1–4 (typed or other UIs) share this render path, and only 
 **Validation:**  
 Scripted distribution check; smoke; keyboard-only round.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -696,7 +696,7 @@ Match the wording used by Magiske Verber's and Ordstillingsdetektiven's reset co
 **Validation:**  
 Smoke; dialog test; mobile screenshot.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -745,7 +745,7 @@ Keep the storage key names. Add fields and don't rename existing ones.
 **Validation:**  
 Scripted weak-round runs; reload persistence; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -798,7 +798,7 @@ Tidsmaskinen already scrolls and focuses after an answer; reuse its pattern.
 **Validation:**  
 `scratchpad/qa-ui/fold.mjs` re-run; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -852,7 +852,7 @@ Notes are shared by many items. Grep the exact note string and replace all occur
 **Validation:**  
 `node tests/tidsmaskinen.mjs`; grep for the old strings returns 0.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -922,7 +922,7 @@ US-010 (same game; shuffle first so M5/M6 data edits are tested in shuffled orde
 **Validation:**  
 Boot data.js in node with the shared data and dump the items (as the worker did); `node shared/validate.js`; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -973,7 +973,7 @@ The OK_MSGS/NO_MSGS praise text belongs to US-026; don't change it here.
 **Validation:**  
 Generator dump script; smoke; play each round game once.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1031,7 +1031,7 @@ Progress is keyed by index/infinitive. Check `saveProgress` and don't reorder th
 **Validation:**  
 Smoke; grep for the old strings returns 0.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1083,7 +1083,7 @@ Deleting an idiom orphans its stored stats; that is harmless, but don't crash on
 **Validation:**  
 Smoke; scripted run of 500 meaning questions with no synonym pair among the options.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1156,7 +1156,7 @@ US-009 (same file); native-speaker sign-off.
 **Validation:**  
 Item dump script; smoke; play "Find fejlen" ×20.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1223,7 +1223,7 @@ Build a `Map(word → Set(antonyms))` once at load.
 **Validation:**  
 Simulation script; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1277,7 +1277,7 @@ Check whether phrase stats are keyed by `da`. If so, don't change `da` strings.
 **Validation:**  
 Smoke; grep for the old notes returns 0.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1335,7 +1335,7 @@ Forbindeord answer keys are ASCII-folded (`ovenikoebet`) and mapped to display t
 **Validation:**  
 Smoke on both games; data dump.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1386,7 +1386,7 @@ Weak-mode and rank storage are keyed by case/statement. Keep them.
 **Validation:**  
 Smoke; solve one case with an alternative order (if option a is chosen).
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1433,7 +1433,7 @@ Native-speaker sign-off.
 **Validation:**  
 Smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1491,7 +1491,7 @@ US-001 (the Pronomenmysteriet scenes need real data to validate against); native
 **Validation:**  
 VID harness on the 4 games; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1567,7 +1567,7 @@ Owner decision on helper location. If the helper must live in `shared/sjovt.js`,
 **Validation:**  
 Per game: smoke, an auto-advance timing probe, a `speechSynthesis`/AudioContext spy, and a grep for the praise strings.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** BLOCKED
 
 ---
 
@@ -1620,7 +1620,7 @@ Large content task; split per game. Keep the English fields for the hint.
 **Validation:**  
 Smoke; spot review.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** BLOCKED
 
 ---
 
@@ -1680,7 +1680,7 @@ Theme CSS files (`shared/themes/*`) aren't frozen.
 **Validation:**  
 Grep; smoke per game.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -1733,7 +1733,7 @@ Theme files already restyle `.dc-tts-button::before`. Centralise the style there
 **Validation:**  
 Screenshots of each game's TTS button; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -1783,7 +1783,7 @@ US-011 (confirmation wording pattern).
 **Validation:**  
 Dialog test; reload after reset; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -1840,7 +1840,7 @@ Use `focus({preventScroll:true})` together with explicit `scrollIntoView` to avo
 **Validation:**  
 A Tab-walk script; a keyboard-only playthrough per game.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -1888,7 +1888,7 @@ New sprites in `shared/sjovt.js` need **owner approval** (frozen). Reusing exist
 **Validation:**  
 Screenshots light/dark at 390 and 1440; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -1941,7 +1941,7 @@ Also remove emoji from button labels ("Spil igen 🔁").
 **Validation:**  
 Screenshots of the badges, results and stats screens.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -1989,7 +1989,7 @@ Check the mobile media queries in the theme files that also set body padding.
 **Validation:**  
 `probe.cjs`; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2049,7 +2049,7 @@ Keep the scenes in sync with `.claude/skills/grammar-explainer-video/examples/` 
 **Validation:**  
 VID harness; screenshots.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2111,7 +2111,7 @@ None, although the explainer is shared by 10 games. `SKILL.md:49` documents "doe
 **Validation:**  
 VID harness; UI `modals.mjs`.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2169,7 +2169,7 @@ None. If confetti layering requires changing `Sjovt.fx.celebrate` in `shared/sjo
 **Validation:**  
 `scratchpad/qa-ui/survey.mjs` and `phr360.mjs` re-run; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2219,7 +2219,7 @@ Split into "identity sprites" (quick) and "redraw generic set" (art task).
 **Validation:**  
 Screenshots of mode menus and headers.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED (partial; frozen-file remainder BLOCKED)
 
 ---
 
@@ -2291,7 +2291,7 @@ Split into "frozen shared" and "per-game theme" PRs.
 **Validation:**  
 VIS `audit.cjs` re-run; screenshots.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED (partial; frozen-file remainder BLOCKED)
 
 ---
 
@@ -2345,7 +2345,7 @@ Theme and mute toggles sit in the shared `.sd-bar`, stored in one key (`sd:theme
 **Validation:**  
 Reload test; cross-page test; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** BLOCKED
 
 ---
 
@@ -2394,7 +2394,7 @@ None.
 **Validation:**  
 Repro scripts; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2442,7 +2442,7 @@ Port the Tidsmaskinen queue logic.
 **Validation:**  
 `node tests/pronomenmysteriet.mjs`; a scripted Bøjningsværkstedet round.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2491,7 +2491,7 @@ US-011 (same file).
 **Validation:**  
 Repro script; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2547,7 +2547,7 @@ US-019 (same file).
 **Validation:**  
 Smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2599,7 +2599,7 @@ US-020.
 **Validation:**  
 Smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2655,7 +2655,7 @@ US-021.
 **Validation:**  
 Smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2709,7 +2709,7 @@ US-024.
 **Validation:**  
 Smoke; keyboard test.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2763,7 +2763,7 @@ Add a new key for the run state. Don't change `LS_KEY`.
 **Validation:**  
 Reload test; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -2815,7 +2815,7 @@ US-022.
 **Validation:**  
 Keyboard test; smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2915,7 +2915,7 @@ Split into one PR per game.
 **Validation:**  
 Per-game smoke; validate.js.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -2989,7 +2989,7 @@ Native-speaker sign-off. This is a prerequisite for the `saetning-game-1/2` task
 **Validation:**  
 `node shared/validate.js`; a duplicate scan on Sætningsmaskinen.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** IMPLEMENTED BUT NOT VERIFIED
 
 ---
 
@@ -3040,7 +3040,7 @@ Owner decision.
 **Validation:**  
 Smoke (if kept).
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** BLOCKED
 
 ---
 
@@ -3090,7 +3090,7 @@ Docs only, apart from the CSS fallback line.
 **Validation:**  
 Review.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** BLOCKED
 
 ---
 
