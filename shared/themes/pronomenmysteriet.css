@@ -69,6 +69,12 @@ html.sd-page .mode-btn:hover { background: var(--sd-cream); color: #101010; }
 html.sd-page .mode-btn[aria-pressed="true"] { background: var(--sd-orange); color: #101010; box-shadow: var(--sd-box), var(--sd-bevel), 0 8px 0 -4px var(--sd-ink); border: 0; }
 html.sd-page .mode-btn[aria-pressed="true"] > span:last-child::after { content: " ✓"; }
 
+/* SPIL sits above the mode list in the markup so it is visible without scrolling (US-037) */
+html.sd-page #start-screen .primary { margin-top: var(--sd-3); margin-bottom: var(--sd-2); }
+/* confetti behind the page content instead of over the results numbers (US-037) */
+html.sd-page .shell { position: relative; z-index: 1; }
+html.sd-page .sd-conf { z-index: 0; }
+
 /* ---- primary / buttons */
 html.sd-page .primary {
   display: flex; align-items: center; justify-content: center; margin: var(--sd-5) var(--sd-bw) 0; width: calc(100% - 8px); min-height: 64px; border: 0; border-radius: 0; background: var(--sd-orange); color: #101010;
@@ -116,9 +122,10 @@ html.sd-page .opt {
   box-shadow: var(--sd-box), 0 8px 0 -4px var(--sd-ink); cursor: pointer; overflow-wrap: anywhere; width: calc(100% - 8px);
 }
 html.sd-page .opt .onum { width: 32px; height: 32px; border-radius: 0; background: var(--pm-navy); color: var(--pm-tab-fg); font-family: var(--sd-font-body); font-size: 16px; }
-html.sd-page .opt:hover:not(:disabled) { background: var(--sd-cream); color: #101010; }
-html.sd-page .opt:active:not(:disabled) { transform: translateY(2px); }
-html.sd-page .opt:disabled { opacity: 1; color: var(--sd-text); }
+html.sd-page .opt:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--sd-cream); color: #101010; }
+html.sd-page .opt:active:not(:disabled):not([aria-disabled="true"]) { transform: translateY(2px); }
+html.sd-page .opt:disabled, html.sd-page .opt[aria-disabled="true"] { opacity: 1; color: var(--sd-text); cursor: default; }
+html.sd-page .opt[aria-disabled="true"].chosen-correct:hover, html.sd-page .opt[aria-disabled="true"].reveal-correct:hover { color: var(--sd-text); }
 html.sd-page .opt.chosen-correct { background: var(--sd-ok-bg); border: 0; box-shadow: var(--sd-box-ok); }
 html.sd-page .opt.chosen-wrong { background: var(--sd-bad-bg); border: 0; box-shadow: var(--sd-box-bad); }
 html.sd-page .opt.reveal-correct { border: 0; box-shadow: var(--sd-box-ok); background: var(--sd-ok-bg); }

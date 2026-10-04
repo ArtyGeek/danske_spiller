@@ -197,6 +197,10 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
   font-family:'Share Tech Mono';font-size:.72rem;letter-spacing:.1em;padding:5px 10px;border-radius:4px;
   transition:border-color .15s,box-shadow .15s}
 .back-btn:hover{border-color:var(--cyan);box-shadow:0 0 10px rgba(55,226,255,.3)}
+.tools{text-align:center;margin-top:16px}
+.reset-btn{cursor:pointer;border:1px solid var(--cyan-dim);background:var(--panel);color:var(--muted);
+  font-family:'Share Tech Mono';font-size:.78rem;letter-spacing:.1em;padding:10px 16px;min-height:44px;min-width:44px;border-radius:4px}
+.reset-btn:hover{border-color:var(--orange);color:var(--orange)}
 </style>
 <link rel="stylesheet" href="../shared/sjovt.css">
 <script src="../shared/sjovt.js"></script>
@@ -223,7 +227,7 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
     <button class="back-btn" id="backBtn" type="button">Tilbage til normalt spil ✕</button>
   </div>
   <div class="panel" id="game">
-    <div class="cat"><span id="cat">&mdash;</span><span class="en" id="catEn"></span></div>
+    <div class="cat"><span id="cat">&mdash;</span></div>
     <div class="sentence-row">
       <p class="sentence" id="sentence"></p>
       <div id="speakerSlot"></div>
@@ -245,6 +249,7 @@ h1 .o{color:var(--orange);text-shadow:0 0 10px var(--orange-hot)}
     <p id="endMsg"></p>
     <button class="btn show" id="again" style="display:block">Spil igen</button>
   </div>
+  <div class="tools"><button class="reset-btn" id="resetBtn" type="button">Nulstil fremskridt</button></div>
   <div class="foot">359 sekvenser &middot; husk inversion</div>
 </div>
 <script>
@@ -311,9 +316,9 @@ s("Raekkefoelge","for det foerste","Jeg siger nej. {} har jeg ikke tid.","I'm sa
 s("Raekkefoelge","for det foerste","{} skal vi spare penge, og dernaest skal vi planlaegge.","Firstly we must save money, and next we must plan.","»For det første« åbner en nummereret række af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
 s("Raekkefoelge","for det foerste","{} er kvaliteten god, og for det andet er prisen lav.","Firstly the quality is good, and secondly the price is low.","»For det første« åbner en nummereret række af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
 s("Raekkefoelge","for det andet","For det foerste er den hurtig, og {} er den billig.","Firstly it's fast, and secondly it's cheap.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
-s("Raekkefoelge","for det andet","Jeg blev hjemme. {} var jeg syg.","I stayed home. Secondly, I was ill.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
-s("Raekkefoelge","for det andet","{} boer vi taenke paa miljoeet.","Secondly, we should think about the environment.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
-s("Raekkefoelge","for det andet","Pladsen er lille, og {} er den dyr.","The space is small, and secondly it's expensive.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
+s("Raekkefoelge","for det andet","Jeg blev hjemme. For det foerste var jeg syg, og {} havde jeg ingen energi.","I stayed home. Firstly I was ill, and secondly I had no energy.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
+s("Raekkefoelge","for det andet","For det foerste sparer vi penge, og {} boer vi taenke paa miljoeet.","Firstly we save money, and secondly we should think about the environment.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
+s("Raekkefoelge","for det andet","For det foerste er pladsen lille, og {} er den dyr.","Firstly the space is small, and secondly it's expensive.","»For det andet« er det næste punkt i rækken af argumenter. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
 s("Raekkefoelge","endelig","Vi pakkede, vi tjekkede ind, og {} lettede flyet.","We packed, we checked in, and finally the plane took off.","»Endelig« markerer det sidste led i en række. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
 s("Raekkefoelge","endelig","Foerst tre forretter, saa hovedretten, og {} desserten.","First three starters, then the main, and finally dessert.","»Endelig« markerer det sidste led i en række. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
 s("Raekkefoelge","endelig","{} vil jeg takke alle for hjaelpen.","Finally, I'd like to thank everyone for their help.","»Endelig« markerer det sidste led i en række. Står ordet først i sætningen, kommer verbet før grundleddet.","B1");
@@ -402,9 +407,9 @@ s("Forklaring","pga.","Vejen var lukket {} et uheld.","The road was closed becau
 s("Forklaring","pga.","Han var traet {} den lange rejse.","He was tired because of the long journey.","»Pga.« (på grund af) angiver årsagen med et navneled.","B2");
 s("Forklaring","pga.","Flyet blev forsinket {} taagen.","The plane was delayed because of the fog.","»Pga.« (på grund af) angiver årsagen med et navneled.","B2");
 // ---- KONSEKVENS ----
-s("Konsekvens","saa","Det regnede, {} vi blev hjemme.","It was raining, so we stayed home.","»Så« bruges i hverdagssproget om det, der sker efterfølgende (og om følgen af noget). Står ordet først i sætningen, kommer verbet før grundleddet.","A1");
-s("Konsekvens","saa","Han traenede haardt, {} han vandt.","He trained hard, so he won.","»Så« bruges i hverdagssproget om det, der sker efterfølgende (og om følgen af noget). Står ordet først i sætningen, kommer verbet før grundleddet.","A1");
-s("Konsekvens","saa","Vi var sultne, {} vi lavede mad.","We were hungry, so we cooked.","»Så« bruges i hverdagssproget om det, der sker efterfølgende (og om følgen af noget). Står ordet først i sætningen, kommer verbet før grundleddet.","A1");
+s("Konsekvens","saa","Det regnede, {} vi blev hjemme.","It was raining, so we stayed home.","»Så« angiver her følgen af det foregående og binder to hovedsætninger sammen uden omvendt ordstilling.","A1");
+s("Konsekvens","saa","Han traenede haardt, {} han vandt.","He trained hard, so he won.","»Så« angiver her følgen af det foregående og binder to hovedsætninger sammen uden omvendt ordstilling.","A1");
+s("Konsekvens","saa","Vi var sultne, {} vi lavede mad.","We were hungry, so we cooked.","»Så« angiver her følgen af det foregående og binder to hovedsætninger sammen uden omvendt ordstilling.","A1");
 s("Konsekvens","saa","Vejen var glat, {} koerte vi langsomt.","The road was slippery, so we drove slowly.","»Så« bruges i hverdagssproget om det, der sker efterfølgende (og om følgen af noget). Står ordet først i sætningen, kommer verbet før grundleddet.","A1");
 s("Konsekvens","derfor","Toget var aflyst, og {} koerte vi i bil.","The train was cancelled, so therefore we drove.","»Derfor« angiver følgen af det forrige. Står ordet først i sætningen, kommer verbet før grundleddet.","B2");
 s("Konsekvens","derfor","Hun var dygtig, og {} fik hun jobbet.","She was skilled, and therefore she got the job.","»Derfor« angiver følgen af det forrige. Står ordet først i sætningen, kommer verbet før grundleddet.","B2");
@@ -599,10 +604,10 @@ s("Holdning","sandsynligvis","Det bliver {} en god hoest i aar.","It'll most lik
 s("Holdning","sandsynligvis","Hun vinder {} valget.","She'll most likely win the election.","»Sandsynligvis« udtrykker, at noget er sandsynligt.","B2");
 s("Holdning","sandsynligvis","Vi flytter {} til sommer.","We'll most likely move in the summer.","»Sandsynligvis« udtrykker, at noget er sandsynligt.","B2");
 s("Holdning","sandsynligvis","Projektet bliver {} forlaenget.","The project will most likely be extended.","»Sandsynligvis« udtrykker, at noget er sandsynligt.","B2");
-s("Holdning","omsider","Efter en lang rejse var vi {} fremme.","After a long journey we finally arrived.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
-s("Holdning","omsider","Vi ventede i timevis, og {} kom svaret.","We waited for hours, and at last the answer came.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
-s("Holdning","omsider","{} forstod han, hvad der var sket.","At last he understood what had happened.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
-s("Holdning","omsider","Efter mange forsoeg lykkedes det {}.","After many attempts it finally succeeded.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
+s("Tid","omsider","Efter en lang rejse var vi {} fremme.","After a long journey we finally arrived.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
+s("Tid","omsider","Vi ventede i timevis, og {} kom svaret.","We waited for hours, and at last the answer came.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
+s("Tid","omsider","{} forstod han, hvad der var sket.","At last he understood what had happened.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
+s("Tid","omsider","Efter mange forsoeg lykkedes det {}.","After many attempts it finally succeeded.","»Omsider« udtrykker, at noget sker efter lang tids ventetid.","B2");
 // ---- OPSUMMERING ----
 s("Opsummering","alt i alt","Der var smaa fejl, men {} var dagen god.","There were small mistakes, but all in all the day was good.","»Alt i alt« opsummerer helheden. Står ordet først i sætningen, kommer verbet før grundleddet.","B2");
 s("Opsummering","alt i alt","{} var rejsen pengene vaerd.","All in all the trip was worth the money.","»Alt i alt« opsummerer helheden. Står ordet først i sætningen, kommer verbet før grundleddet.","B2");
@@ -633,14 +638,8 @@ function dk(t){
   for(const [a,b] of m){ t = t.split(a).join(b); }
   return t;
 }
-const CAT_EN = {
-  "Tid":"Time","Raekkefoelge":"Order / sequence","Tilfoejelse":"Addition / new info",
-  "Forklaring":"Explanation / cause","Konsekvens":"Consequence","Sammenligning":"Comparison",
-  "Modsaetning":"Contrast","Eksempel":"Example","Uddybning":"Clarification",
-  "Holdning":"Attitude / stance","Opsummering":"Summary / conclusion"
-};
 const records = DATA.map(([cat,ans,da,en,note,lvl])=>({
-  cat: dk(cat), catEn: CAT_EN[cat], ans: dk(ans), da: dk(da),
+  cat: dk(cat), ans: dk(ans), da: dk(da),
   en: en, note: dk(note), lvl: lvl, initial: da.indexOf("{}")===0
 }));
 const byCat = {};
@@ -713,6 +712,42 @@ let P = loadProgress();
 
 const state = {score:0,streak:0,lives:6,i:0,order:shuffle([...Array(records.length).keys()]),answered:false,
   weakMode:false,weakPool:[],weakOrder:[]};
+
+/* ---------- RUN STATE (US-048) ----------
+   Separate storage key (LS_KEY is untouched). Holds the position of the normal run so that a reload
+   resumes at the same item with the same score/streak/lives (incl. the shuffled option order and an
+   already-given answer). Weak mode is not persisted. Every access is guarded (storage may be blocked). */
+const RUN_KEY = 'forbindenor_run_v1';
+let restoredRun = null;                       // {opts, pick} when the page was resumed
+function runSig(){ let h=0; const s=records.map(r=>r.da).join('|'); for(let k=0;k<s.length;k++){ h=(h*31+s.charCodeAt(k))|0; } return records.length+':'+h; }
+function saveRun(opts,pick){
+  if(state.weakMode) return;
+  try{
+    localStorage.setItem(RUN_KEY, JSON.stringify({v:1, sig:runSig(), i:state.i, order:state.order,
+      score:state.score, streak:state.streak, lives:state.lives, opts:opts, pick:pick}));
+  }catch(e){}
+}
+function clearRun(){ try{ localStorage.removeItem(RUN_KEY); }catch(e){} }
+function loadRun(){
+  try{
+    const r = JSON.parse(localStorage.getItem(RUN_KEY));
+    const n = records.length;
+    if(!r || r.v!==1 || r.sig!==runSig()) return null;
+    const isInt = (x,lo,hi)=> typeof x==='number' && Math.floor(x)===x && x>=lo && x<=hi;
+    if(!Array.isArray(r.order) || r.order.length!==n || new Set(r.order).size!==n || !r.order.every(x=>isInt(x,0,n-1))) return null;
+    if(!isInt(r.i,0,n-1) || !isInt(r.score,0,1e9) || !isInt(r.streak,0,n) || !isInt(r.lives,0,6)) return null;
+    const rec = records[r.order[r.i]];
+    if(!Array.isArray(r.opts) || r.opts.length<2 || !r.opts.every(o=>typeof o==='string') || r.opts.indexOf(rec.ans)<0) return null;
+    if(r.pick!==null && (typeof r.pick!=='string' || r.opts.indexOf(r.pick)<0)) return null;
+    return r;
+  }catch(e){ return null; }
+}
+(function(){
+  const r = loadRun();
+  if(!r) return;
+  state.i=r.i; state.order=r.order; state.score=r.score; state.streak=r.streak; state.lives=r.lives;
+  restoredRun = {opts:r.opts, pick:r.pick};
+})();
 
 /* ---------- DISTRACTOR SAFETY (US-002, retry) ----------
    The English translation is hidden until the learner answers, so any distractor that makes a
@@ -833,7 +868,7 @@ function allowedPool(rec){
   const ia=ITEM_ADDKIND[rec.idx], ak=(ia&&ia.ans===rec.ans)?ia.kinds:null;
   const out=[];
   candidatePairs.forEach(c=>{
-    if(syn.has(c.ans) || WILDCARD.has(c.ans) || c.kind==="MOD" || c.cat===dk("Holdning")) return;
+    if(syn.has(c.ans) || WILDCARD.has(c.ans) || c.kind==="MOD" || c.cat===dk("Holdning") || c.ans===dk("omsider")) return;   // omsider moved Holdning->Tid (US-048): keep it answer-only as before
     if(synSet(c.ans).has(rec.ans)) return;
     if(!KIND_OK.has(kind+"|"+c.kind) && !(ak && ak.indexOf(c.kind)>=0) && !(ITEM_ONLY[rec.idx] && ITEM_ONLY[rec.idx].ans===rec.ans)) return;
     if(ex && ex.has(c.ans)) return;
@@ -846,18 +881,19 @@ function allowedPool(rec){
 function distractors(rec){
   return shuffle(allowedPool(rec).map(c=>c.ans)).slice(0,3);
 }
-function render(){
+function render(noFocus){
   state.answered=false;
   const pool = state.weakMode ? state.weakPool : records;
   const order = state.weakMode ? state.weakOrder : state.order;
   const rec=pool[order[state.i]];
   $('cat').textContent=rec.cat;
-  $('catEn').textContent='/ '+rec.catEn;
   $('sentence').innerHTML=esc(rec.da).replace('{}','<span class="blank" id="bk">_____</span>');
   const fullSentence=rec.da.replace('{}',rec.initial?cap(rec.ans):rec.ans);
   const slot=$('speakerSlot'); slot.innerHTML='';
   slot.appendChild(speakerBtn(fullSentence));
-  const opts=shuffle([rec.ans,...distractors(rec)]);
+  let opts;
+  const resume = restoredRun; restoredRun = null;     // only the first render after a reload
+  if(resume && !state.weakMode) opts = resume.opts; else opts=shuffle([rec.ans,...distractors(rec)]);
   const box=$('opts'); box.innerHTML='';
   opts.forEach(w=>{
     const b=document.createElement('button');
@@ -873,6 +909,29 @@ function render(){
   const total = order.length;
   $('bar').style.width=(state.i/total*100)+'%';
   $('count').textContent='Sekvens '+(state.i+1)+' / '+total+(state.weakMode?' · Svage ord':'');
+  saveRun(opts,null);
+  if(resume && resume.pick!==null && !state.weakMode){ showAnswered(rec,resume.pick); }
+  else if(!noFocus){ focusEl(box.querySelector('.opt')); }   // US-031: focus the first option
+}
+// US-031: move focus without scroll jumps, keep the target in view
+function focusEl(el){
+  if(!el) return;
+  try{ el.focus({preventScroll:true}); }catch(e){ el.focus(); }
+  try{ el.scrollIntoView({block:'nearest'}); }catch(e){}
+}
+// restore the visual state of an already answered item after a reload (no scoring / recording)
+function showAnswered(rec,w){
+  state.answered=true;
+  const bk=$('bk');
+  document.querySelectorAll('.opt').forEach(o=>{
+    o.disabled=true;
+    if(o.textContent===rec.ans) o.classList.add('correct');
+    else if(o.textContent===w) o.classList.add('wrong');
+  });
+  bk.textContent=rec.initial?cap(rec.ans):rec.ans; bk.classList.add('filled');
+  $('reveal').classList.add('show');
+  if(state.lives<=0){ $('next').textContent='Se resultat »'; }
+  $('next').classList.add('show');
 }
 function choose(btn,w,rec){
   if(state.answered) return;
@@ -889,7 +948,7 @@ function choose(btn,w,rec){
     btn.classList.add('correct'); Sjovt.fx.correct(btn);
     state.streak++; state.score+=100+Math.min(state.streak,10)*10;
     if(state.streak%5===0){
-      if(state.lives<6){ state.lives++; energyPopup('+1 ENERGY'); }
+      if(state.lives<6){ state.lives++; energyPopup('+1 ENERGI'); }
       else { energyPopup('ENERGI FULD'); }
     }
   }else{
@@ -901,6 +960,8 @@ function choose(btn,w,rec){
   $('reveal').classList.add('show');
   if(state.lives<=0){ $('next').textContent='Se resultat »'; }
   $('next').classList.add('show');
+  saveRun(Array.from(document.querySelectorAll('.opt')).map(o=>o.textContent), w);
+  focusEl($('next'));                                  // US-031: focus the Next button after an answer
 }
 function recordAnswer(rec,isCorrect){
   P.total++;
@@ -947,6 +1008,7 @@ $('next').onclick=()=>{
   render();
 };
 function end(win){
+  clearRun();
   $('game').style.display='none';
   $('end').classList.add('show');
   $('weakBanner').classList.remove('show');
@@ -955,8 +1017,9 @@ function end(win){
   $('endMsg').textContent=win
     ? 'Du gennemførte alle '+records.length+' sekvenser. Flot klaret!'
     : 'Energien er brugt op efter '+(state.i+1)+' sekvenser. Prøv igen!';
+  focusEl($('again'));                                 // US-031: focus after the screen is visible
 }
-$('again').onclick=()=>{
+function startOver(){
   state.score=0;state.streak=0;state.lives=6;state.i=0;
   state.order=shuffle([...Array(records.length).keys()]);
   state.weakMode=false; state.weakPool=[]; state.weakOrder=[];
@@ -965,6 +1028,18 @@ $('again').onclick=()=>{
   $('game').style.display='block';
   refreshWeakBtn();
   render();
+}
+$('again').onclick=startOver;
+
+/* ---------- RESET (US-030) ---------- */
+$('resetBtn').onclick=()=>{
+  if(!window.confirm('Vil du nulstille al fremskridt i Forbindeord? Point, rekord og svage ord slettes, og spillet starter forfra.')){
+    focusEl($('resetBtn')); return;
+  }
+  try{ localStorage.removeItem(LS_KEY); }catch(e){}
+  clearRun();
+  P = defaultProgress();
+  startOver();
 };
 
 /* ---------- WEAK MODE ---------- */
@@ -1005,7 +1080,7 @@ $('weakBtn').onclick=()=>{ if(!state.weakMode) enterWeakMode(); };
 $('backBtn').onclick=()=>exitWeakMode();
 
 refreshWeakBtn();
-render();
+render(true);
 Sjovt.watchScreens('#game');
 </script>
 </body>

@@ -223,3 +223,9 @@ html.sd-page .sum-actions { justify-content: center; gap: var(--sd-3); }
   html.sd-page .primary { font-size: 22px; }
 }
 @media (prefers-reduced-motion: reduce) { html.sd-page .progress > i { transition: none !important; } }
+
+/* US-037: keep SPIL reachable without scrolling (sticky to the viewport bottom while the start card is on screen) */
+html.sd-page #btn-play { position: sticky; bottom: 12px; z-index: 5; }
+/* US-030: reset control under SPIL */
+html.sd-page .reset-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sd-3); margin-top: var(--sd-5); }
+html.sd-page .reset-status { font-size: 16px; color: var(--sd-text); }

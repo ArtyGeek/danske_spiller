@@ -283,3 +283,13 @@ html.sd-page.ij-compact .wrap { padding-top: 12px; }
 /* dark world: black sprite outlines vanish on dark panels, so seat them on a cream tile */
 :root[data-theme="dark"] .menu-grid .ico.sd-sprite, :root[data-theme="dark"] .ij-hero .sd-sprite, :root[data-theme="dark"] header.app .compass.sd-sprite { background: var(--sd-cream); padding: 6px; box-shadow: var(--sd-box); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .menu-grid .ico.sd-sprite, :root:not([data-theme="light"]) .ij-hero .sd-sprite, :root:not([data-theme="light"]) header.app .compass.sd-sprite { background: var(--sd-cream); padding: 6px; box-shadow: var(--sd-box); } }
+
+/* US-033: pixel icons (sprites) instead of OS colour emoji */
+html.sd-page .badge .ico { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; font-size: 0; line-height: 0; background: var(--sd-cream); padding: 4px; box-shadow: var(--sd-box); }
+html.sd-page .ij-streak { display: inline-flex; vertical-align: middle; background: var(--sd-cream); padding: 2px; font-size: 0; line-height: 0; }
+
+/* US-037 (Idiomjæger slice): confetti sits behind the results text; headings wrap at word boundaries without clipping */
+html.sd-page .sd-conf { z-index: 1; }
+html.sd-page #app { position: relative; z-index: 2; }
+html.sd-page .section-title, html.sd-page .badge .t, html.sd-page .menu-grid .btn { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+html.sd-page .panel.center .row { flex-wrap: wrap; }

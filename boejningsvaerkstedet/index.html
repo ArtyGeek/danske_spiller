@@ -370,7 +370,7 @@
 
   <!-- ================= START SCREEN ================= -->
   <main id="start-screen" class="card">
-    <h1 class="title"><span data-sd-sprite="tandhjul" data-scale="5" class="sd-bob" aria-hidden="true"></span> Bøjningsværkstedet</h1>
+    <h1 class="title"><span data-sd-sprite="tandhjul" data-scale="5" class="sd-bob" aria-hidden="true"></span> Bøjnings&shy;værkstedet</h1>
     <p class="lede">Bøj hele navneordsgruppen — former, artikler, tillægsord og mængder.</p>
 
     <div class="group-label">Vælg værksted</div>
@@ -380,6 +380,10 @@
     <div class="chips" id="level-list" role="group" aria-label="Vælg niveau"></div>
 
     <button class="primary" id="btn-play" type="button">Spil</button>
+    <div class="reset-row">
+      <button class="btn" id="btn-reset" type="button">Nulstil fremskridt</button>
+      <span class="reset-status" id="reset-status" role="status"></span>
+    </div>
   </main>
 
   <!-- ================= PLAY SCREEN ================= -->
@@ -426,10 +430,10 @@
   var MODES = [
     { key:'fire_former',          num:1, name:'Fire former',            meta:'De fire navneordsformer' },
     { key:'byg_navneordet',       num:2, name:'Byg navneordet',         meta:'Byg hele navneordsgruppen' },
-    { key:'adjektivvaerkstedet',  num:3, name:'Adjektivværkstedet',     meta:'Tillægsordets bøjning' },
-    { key:'sammenligningspressen',num:4, name:'Sammenligningspressen',  meta:'Gradbøjning' },
+    { key:'adjektivvaerkstedet',  num:3, name:'Adjektiv&shy;værkstedet',     meta:'Tillægsordets bøjning' },
+    { key:'sammenligningspressen',num:4, name:'Sammenlignings&shy;pressen',  meta:'Gradbøjning' },
     { key:'bestemt_ubestemt',     num:5, name:'Bestemt eller ubestemt?',meta:'Bestemthed i kontekst' },
-    { key:'maengdevaerkstedet',   num:6, name:'Mængdeværkstedet',       meta:'Mængdeord' }
+    { key:'maengdevaerkstedet',   num:6, name:'Mængde&shy;værkstedet',       meta:'Mængdeord' }
   ];
 
   var FORM_META = {
@@ -511,6 +515,19 @@
     document.getElementById('btn-sound').textContent = DC.ui.sound.isEnabled() ? 'LYD' : 'LYD ✗';
   }
 
+  // US-030: reset only this game's SRS progress, after a Danish confirmation.
+  // Storage failures are swallowed by DC.store; confirm() failures count as "cancel".
+  document.getElementById('btn-reset').addEventListener('click', function(){
+    var ok = false;
+    try { ok = window.confirm('Vil du nulstille alle fremskridt i Bøjningsværkstedet? Det kan ikke fortrydes.'); } catch (err) { ok = false; }
+    if (!ok) return;
+    srsState.items = {};
+    srsState.patterns = {};
+    DC.store.remove('srs:' + GAME_ID);
+    document.getElementById('reset-status').textContent = 'Fremskridt nulstillet.';
+    DC.ui.announce('Fremskridt nulstillet.');
+  });
+
   document.getElementById('btn-play').addEventListener('click', startRound);
   document.getElementById('btn-back').addEventListener('click', showStart);
 
@@ -583,27 +600,32 @@
     el.summary.classList.toggle('hidden', which !== 'summary');
   }
   function showStart(){
-    clearKeyHandler();
+    clearPending();
     buildStartControls();
     show('start');
     document.getElementById('btn-play').focus();
   }
 
   // ---- round lifecycle ----
+  // US-042: queue = missed in the last round (SRS box 1, newest first), then due
+  // seen items, then unseen items, then not-yet-due items (soonest due first).
+  // SRS keys/state are untouched (item.id, DC.srs).
   function buildRound(pool){
-    // Prefer SRS-due items, then pad with the rest (shuffled) up to ROUND_SIZE.
-    var due = DC.srs.nextItems(srsState, shuffle(pool.slice()), ROUND_SIZE);
-    var chosen = due.slice();
-    if (chosen.length < ROUND_SIZE) {
-      var seen = {};
-      chosen.forEach(function(it){ seen[it.id] = true; });
-      var rest = shuffle(pool.filter(function(it){ return !seen[it.id]; }));
-      for (var i=0; i<rest.length && chosen.length<ROUND_SIZE; i++) chosen.push(rest[i]);
-    }
-    return chosen;
+    var missed = [], due = [], unseen = [], later = [];
+    shuffle(pool.slice()).forEach(function(it){
+      var e = srsState.items[it.id];
+      if (!e) unseen.push(it);
+      else if (e.box === 1) missed.push(it);
+      else if (DC.srs.isDue(srsState, it.id)) due.push(it);
+      else later.push(it);
+    });
+    missed.sort(function(a, b){ return (srsState.items[b.id].lastSeen || 0) - (srsState.items[a.id].lastSeen || 0); });
+    later.sort(function(a, b){ return srsState.items[a.id].dueAt - srsState.items[b.id].dueAt; });
+    return missed.concat(due, unseen, later).slice(0, ROUND_SIZE);
   }
 
   function startRound(){
+    clearPending();
     var pool = poolFor(state.mode, state.levels);
     if (!pool.length) {
       // No data for this mode/level yet — show a graceful empty state.
@@ -651,8 +673,20 @@
     if (activeKeyHandler){ document.removeEventListener('keydown', activeKeyHandler); activeKeyHandler = null; }
   }
 
-  function renderItem(){
+  // US-041: the 800 ms auto-advance after a correct answer is stored so that
+  // leaving the round (Escape, back, new round, summary) cancels it.
+  var advanceTimer = null;
+  function clearPending(){
+    if (advanceTimer){ window.clearTimeout(advanceTimer); advanceTimer = null; }
     clearKeyHandler();
+  }
+  function scheduleAdvance(){
+    if (advanceTimer) window.clearTimeout(advanceTimer);
+    advanceTimer = window.setTimeout(advance, 800);
+  }
+
+  function renderItem(){
+    clearPending();
     if (state.idx >= state.round.length) { finishRound(); return; }
     updateProgress();
     var item = state.round[state.idx];
@@ -663,15 +697,21 @@
   }
 
   function advance(){
+    advanceTimer = null;
+    if (el.play.classList.contains('hidden')) return;   // round already left
     state.idx++;
     renderItem();
   }
 
   function finishRound(){
+    clearPending();
     el.fill.style.width = '100%';
     SOUND.roundComplete();
     renderSummary();
     show('summary');
+    // US-031: focus only once the summary is visible (a hidden element cannot take focus).
+    var again = el.sumHost.querySelector('.primary');
+    if (again) again.focus();
   }
 
   // ---- answer bookkeeping (shared by all modes) ----
@@ -792,7 +832,7 @@
         if (!DC.ui.motion.isReduced()) table.classList.add('press');
         DC.ui.announce('Rigtigt.');
         buildSlip(slip, true, solution, item.note, null);
-        window.setTimeout(advance, 800);
+        scheduleAdvance();
       } else {
         SOUND.wrong();
         DC.ui.announce('Forkert. Rigtigt svar: ' + solution);
@@ -893,7 +933,7 @@
         if (!DC.ui.motion.isReduced()) frame.classList.add('press');
         DC.ui.announce('Rigtigt.');
         buildSlip(slip, true, solution, item.note, null);
-        window.setTimeout(advance, 800);
+        scheduleAdvance();
       } else {
         SOUND.wrong();
         DC.ui.announce('Forkert. Rigtigt svar: ' + solution);
@@ -996,7 +1036,7 @@
         if (!DC.ui.motion.isReduced()) bench.classList.add('press');
         DC.ui.announce('Rigtigt.');
         buildSlip(slip, true, solution, item.note, null);
-        window.setTimeout(advance, 800);
+        scheduleAdvance();
       } else {
         SOUND.wrong();
         DC.ui.announce('Forkert. Rigtigt svar: ' + solution);
@@ -1086,7 +1126,7 @@
         if (!DC.ui.motion.isReduced()) row.classList.add('press');
         DC.ui.announce('Rigtigt.');
         buildSlip(slip, true, solution, item.note, null);
-        window.setTimeout(advance, 800);
+        scheduleAdvance();
       } else {
         SOUND.wrong();
         DC.ui.announce('Forkert. Rigtigt svar: ' + solution);
@@ -1184,7 +1224,7 @@
           if (!DC.ui.motion.isReduced()) ctx.classList.add('press');
           DC.ui.announce('Rigtigt.');
           buildSlip(slip, true, item.correct, item.note, null);
-          window.setTimeout(advance, 800);
+          scheduleAdvance();
         } else {
           SOUND.wrong();
           DC.ui.announce('Forkert. Rigtigt svar: ' + item.correct);
@@ -1255,6 +1295,10 @@
     } else {
       slip.appendChild(actions);
       host.appendChild(slip);
+      // US-031: the answer controls are disabled now; keep focus inside the game
+      // (replay button) until the auto-advance renders the next item.
+      var keep = actions.querySelector('button');
+      if (keep) keep.focus();
     }
   }
 
@@ -1322,6 +1366,7 @@
         state.idx = 0;
         state.correct = 0;
         state.missed = [];
+        clearPending();
         show('play');
         renderItem();
       });
@@ -1336,7 +1381,6 @@
     actions.appendChild(home);
 
     el.sumHost.appendChild(actions);
-    again.focus();
     // celebration + mascot (visual only)
     var S = window.Sjovt;
     if (S){

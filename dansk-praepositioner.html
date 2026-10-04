@@ -263,7 +263,7 @@ footer{text-align:center;color:rgba(255,255,255,.85);font-size:.72rem;margin-top
   <div class="dex">
     <span class="dexlight sd-bob" data-sd-sprite="pin" data-scale="5" aria-hidden="true"></span>
     <div>
-      <h1>Præpositionsmester</h1>
+      <h1>Præpositions&shy;mester</h1>
       <p>Bliv god til de danske småord!</p>
     </div>
     <div class="minidots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
@@ -347,7 +347,7 @@ function gen(pattern, answer, fills, ex, theme, opts, lvl){
 gen("Jeg bor {a} {x}.","i",["København","Aarhus","Odense","Aalborg","Esbjerg","Randers","en lejlighed","et rækkehus","centrum","en lille by"],
   "Byer, lande og boliger tager 'i': man bor i en by eller i et hus.","Bolig",{err:"på",pair:"i|på"},"A1");
 gen("Vi mødes {a} {x}.","i",["kantinen","mødelokalet","biografen","kælderen","klasselokalet","svømmehallen"],
-  "Indvendigt i lukkede rum bruger man 'i': i kantinen, i biografen.","Arbejde",{err:"på",pair:"i|på",not:["ved"]},"A1");
+  "Inde i lukkede rum bruger man 'i': i kantinen, i biografen.","Arbejde",{err:"på",pair:"i|på",not:["ved"]},"A1");
 gen("Mødet ligger {a} {x}.","i",["januar","februar","marts","maj","august","oktober","december"],
   "Måneder og årstider tager 'i': i januar, i sommer.","Møder",{err:"på"},"A1");
 gen("Børnene går {a} {x}.","i",["skole","kirke","børnehave","biografen","byen","teatret"],
@@ -375,7 +375,7 @@ gen("Hun er {a} {x} i dag.","på",["vagt","ferie","barsel","kursus","besøg","ud
 gen("Skriv det venligst {a} {x}.","på",["listen","tavlen","papiret","computeren","telefonen"],
   "På en overflade eller skærm: på listen, på tavlen.","Møder",{err:"i"},"A2");
 gen("Vi bor {a} {x}.","på",["landet","femte sal","et hotel","en bondegård","Frederiksberg"],
-  "Særlige bolig-udtryk tager 'på': på landet, på femte sal, på hotel.","Bolig",{err:"i",pair:"i|på"},"B1");
+  "Særlige boligudtryk tager 'på': på landet, på femte sal, på hotel.","Bolig",{err:"i",pair:"i|på"},"B1");
 
 /* ---------- til ---------- */
 gen("Jeg skal {a} {x} i morgen.","til",["København","mødet","lægen","tandlægen","frisøren","stranden","fest","koncert"],
@@ -630,7 +630,7 @@ const TRANS = [
   ["Choose between tea and coffee.","Vælg mellem te og kaffe.","mellem","Valg mellem to ting tager 'mellem'."],
   ["I am going to the doctor.","Jeg skal til lægen.","til","Aftale/mål tager 'til'."],
   ["We were at my grandmother's.","Vi var hos min mormor.","hos","Hjemme hos en person tager 'hos'.",["Vi var hos min farmor.","Vi var hos min bedstemor."]],
-  ["He works for a big company.","Han arbejder for et stort firma.","for","I tjeneste af nogen tager 'for'."],
+  ["He works for a big company.","Han arbejder for et stort firma.","for","I nogens tjeneste tager 'for'."],
   ["The children go to school.","Børnene går i skole.","i","Fast udtryk: gå i skole."],
   ["I am on holiday.","Jeg er på ferie.","på","Fast udtryk: på ferie."],
   ["We look forward to the weekend.","Vi glæder os til weekenden.","til","'Glæde sig til' styrer 'til'."],
@@ -855,7 +855,7 @@ const MODES=[
   {id:"mistake", t:"Find fejlen", d:"Hvilket ord er forkert?", e:"🔍", c:"c-yellow"},
   {id:"correct", t:"Ret sætningen", d:"Skriv den korrekt", e:"📝", c:"c-purple"},
   {id:"trans", t:"Oversættelse", d:"Engelsk → dansk", e:"🌍", c:"c-teal"},
-  {id:"pairs", t:"Forvekslingspar", d:"i vs på, af vs fra ...", e:"⚖️", c:"c-orange"},
+  {id:"pairs", t:"Forvekslings&shy;par", d:"i vs på, af vs fra ...", e:"⚖️", c:"c-orange"},
   {id:"speed", t:"Lynrunde", d:"60 sekunder!", e:"⚡", c:"c-pink"},
   {id:"review", t:"Gentag fejl", d:"Træn dine fejl", e:"🔁", c:"c-slate"},
   {id:"stats", t:"Statistik", d:"Se din fremgang", e:"📊", c:"c-gold"}
@@ -992,7 +992,7 @@ function nextMC(item){
   item=item||randItem();
   const opts=shuffle([item.a].concat(distractorsFor(item.a,3,item)));
   const html=blankSentence(item).replace("@@@",'<span class="blank" id="mcBlank">?</span>');
-  exShell("🎯 Multiple choice", item.theme,
+  exShell("🎯 Flervalg", item.theme,
     '<p class="prompt">Vælg den rigtige præposition:</p>'+
     '<div class="sentwrap"><div class="sentence">'+html+'</div></div>'+
     '<div class="opts" id="mcOpts"></div>');
@@ -1284,7 +1284,7 @@ function speedTick(first){
     const b=document.createElement("button");b.className="opt";b.textContent=o;
     b.onclick=(e)=>{
       const ok=o===item.a;
-      if(ok){ speedScore+=10; speedHits++; prog.xp+=5; b.classList.add("correct"); burst(e.clientX,e.clientY); }
+      if(ok){ speedScore+=10; speedHits++;b.classList.add("correct"); burst(e.clientX,e.clientY); }
       else { speedMiss++; b.classList.add("wrong"); addReview(item);
         document.querySelectorAll("#spOpts .opt").forEach(x=>{ if(x.textContent===item.a) x.classList.add("correct"); }); }
       record(item.a,ok);

@@ -438,7 +438,7 @@ const V = {
 };
 
 /* ---------- SENTENCE ENTRIES ----------
-   v: verb key. lvl: 1=Easy(A1) 2=Medium(A2/B1) 3=Hard(B1/B2).
+   v: verb key. lvl: 1=Easy(A2) 2=Medium(A2/B1) 3=Hard(B1/B2).
    Use [v] as the placeholder for the verb form in each tense.
    present sentence starts with subject (verb mid, lowercase).
    past sentence starts with a time adverbial (V2 inversion).
@@ -641,7 +641,7 @@ ENTRIES.forEach(e=>{
   {
     const o = buildOptions(v.pa, inf, hasPastCue(e.d) ? null : [v.pr]);
     addQ({game:'timemachine',lvl:e.lvl,verb:inf,
-      instruction:'Tidsmaskinen flytter sætningen til I GÅR. Vælg den rigtige form.',
+      instruction:'Tidsmaskinen flytter sætningen til fortiden. Vælg den rigtige form.',
       prompt:`<span class="pre">Nutid: ${presText}</span>${blankHtml(e.d)}`,
       options:o.options,correct:o.correctIndex,
       explanation:`Når tiden flyttes til fortiden, bliver "${v.pr}" til datid "${v.pa}".`,
@@ -728,19 +728,19 @@ Object.keys(V).forEach(inf=>{
 /* ---------- GAME METADATA ---------- */
 const GAME_SPR = {arena:'hat',timemachine:'snegl',perfect:'cykel',irregular:'hjerte',repair:'molle',detective:'flag',speed:'stjerne',mixed:'pokal'};
 const GAMES = {
-  arena:       {n:'Verbalarenaen',     ico:'⚔️', d:'Vælg den rigtige verbumform i sætningen.'},
+  arena:       {n:'Verbumarenaen', h:'Verbum&shy;arenaen',    ico:'⚔️', d:'Vælg den rigtige verbumform i sætningen.'},
   timemachine: {n:'Tidsmaskinen',ico:'⏳', d:'Sætningen skifter tid — vælg den rigtige form.'},
-  perfect:     {n:'Førnutidsbyggeren',ico:'🏗️', d:'Byg førnutid med har/er + tillægsform.'},
-  irregular:   {n:'Laboratoriet for uregelmæssige verber',  ico:'🧪', d:'Træn de vigtige uregelmæssige verber.'},
-  repair:      {n:'Sætningsværkstedet',     ico:'🔧', d:'Find og ret den forkerte verbumform.'},
-  detective:   {n:'Verbumdetektiven',      ico:'🔍', d:'Læs sætningen og find tiden.'},
-  speed:       {n:'Hurtigduellen',     ico:'⚡', d:'Så mange spørgsmål som muligt på 60 sekunder.'},
+  perfect:     {n:'Førnutidsbyggeren', h:'Før&shy;nutids&shy;byggeren',ico:'🏗️', d:'Byg førnutid med har/er + tillægsform.'},
+  irregular:   {n:'Laboratoriet for uregelmæssige verber', h:'Laboratoriet for uregel&shy;mæssige verber',  ico:'🧪', d:'Træn de vigtige uregelmæssige verber.'},
+  repair:      {n:'Sætningsværkstedet', h:'Sætnings&shy;værk&shy;stedet',     ico:'🔧', d:'Find og ret den forkerte verbumform.'},
+  detective:   {n:'Verbumdetektiven', h:'Verbum&shy;detektiven',      ico:'🔍', d:'Læs sætningen og find tiden.'},
+  speed:       {n:'Hurtigduellen', h:'Hurtig&shy;duellen',     ico:'⚡', d:'Så mange spørgsmål som muligt på 60 sekunder.'},
   mixed:       {n:'Blandet repetition',   ico:'🎲', d:'Tilfældige spørgsmål fra alle spil og tider.'}
 };
 const GAME_ORDER = ['arena','timemachine','perfect','irregular','repair','detective','speed','mixed'];
 const DIFF_SPR = {easy:'snegl',medium:'cykel',hard:'molle'};
 const DIFFS = {
-  easy:  {n:'Nem',    lvl:1, sym:'🪶', label:'A1'},
+  easy:  {n:'Nem',    lvl:1, sym:'🪶', label:'A2'},
   medium:{n:'Mellem', lvl:2, sym:'🔮', label:'A2 / B1'},
   hard:  {n:'Svær',   lvl:3, sym:'🐉', label:'B1 / B2'}
 };
@@ -765,12 +765,21 @@ let S = null; // current round
 /* ---------- DOM helpers ---------- */
 const $ = id => document.getElementById(id);
 function spr(n,sc,cls){ return window.Sjovt?'<span class="sd-sprite '+(cls||"")+'">'+Sjovt.spriteSVG(n,sc||3)+'</span>':""; }
-function showScreen(name){
+/* US-031: after a screen change focus lands on the first sensible control (set after the screen is visible).
+   'game' is handled by renderQuestion (first option). The first paint does not steal focus. */
+const FOCUS_TARGET = {menu:'.game-card', diff:'.diff.active', result:'.btn.gold', stats:'.back-link'};
+function focusScreen(name){
+  const sel = FOCUS_TARGET[name]; if(!sel) return;
+  const el = $('screen-'+name).querySelector(sel);
+  if(el && !$('screen-'+name).classList.contains('hidden')) try{ el.focus({preventScroll:true}); }catch(e){}
+}
+function showScreen(name, noFocus){
   ['menu','diff','game','result','stats'].forEach(s=>$('screen-'+s).classList.add('hidden'));
   $('screen-'+name).classList.remove('hidden');
   $('screen-'+name).classList.remove('fadein'); void $('screen-'+name).offsetWidth; $('screen-'+name).classList.add('fadein');
   if(window.Sjovt) Sjovt.fx.enter($('screen-'+name));
   window.scrollTo({top:0,behavior:'smooth'});
+  if(!noFocus) focusScreen(name);
 }
 function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
 
@@ -819,7 +828,7 @@ function buildMenu(){
     card.className='game-card';
     card.setAttribute('role','button'); card.tabIndex=0;
     card.onclick=()=>openDiff(key);
-    card.innerHTML=`<div class="ico">${spr(GAME_SPR[key],4)}</div><div><div class="gc-t">${g.n}${done?'<span class="gc-done">'+done+'</span>':''}</div><div class="gc-d">${g.d}</div></div>`;
+    card.innerHTML=`<div class="ico">${spr(GAME_SPR[key],4)}</div><div><div class="gc-t">${g.h||g.n}${done?'<span class="gc-done">'+done+'</span>':''}</div><div class="gc-d">${g.d}</div></div>`;
     grid.appendChild(card);
   });
   updateMenuBar();
@@ -841,7 +850,7 @@ function openDiff(gameKey){
   pendingGame = gameKey;
   selectedDiff = selectedDiff || 'easy';
   const g = GAMES[gameKey];
-  $('diffTitle').innerHTML = spr(GAME_SPR[gameKey],4)+' <span></span>'; $('diffTitle').lastElementChild.textContent = g.n;
+  $('diffTitle').innerHTML = spr(GAME_SPR[gameKey],4)+' <span>'+(g.h||g.n)+'</span>';
   $('diffDesc').textContent = g.d;
   const grid = $('diffGrid'); grid.innerHTML='';
   Object.keys(DIFFS).forEach(dk=>{
@@ -945,6 +954,8 @@ function renderQuestion(){
     b.onclick=()=>answer(i,b);
     opts.appendChild(b);
   });
+  /* US-031: focus the first option after each render */
+  if(!$('screen-game').classList.contains('hidden')){ const f=opts.firstElementChild; if(f) try{ f.focus({preventScroll:true}); }catch(e){} }
 }
 
 /* ---------- ANSWER ---------- */
@@ -988,6 +999,8 @@ function answer(i, el){
     $('nextRow').classList.remove('hidden');
     const last = (S.idx >= S.queue.length-1);
     $('nextBtn').textContent = last ? 'Se resultat →' : 'Næste →';
+    /* US-031: focus moves to Næste so Enter advances (also after a mouse click on an option) */
+    try{ $('nextBtn').focus({preventScroll:true}); }catch(e){}
   }
 }
 
@@ -1109,7 +1122,7 @@ document.addEventListener('keydown',e=>{
 
 /* ---------- INIT ---------- */
 buildMenu();
-showScreen('menu');
+showScreen('menu', true);
 </script>
 </body>
 </html>

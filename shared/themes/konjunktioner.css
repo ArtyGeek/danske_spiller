@@ -24,10 +24,10 @@ html.sd-page {
 }
 html.sd-page, html.sd-page body { height: auto; }
 html.sd-page body {
-  display: block; min-height: calc(100dvh - var(--sd-bar-h)); padding: 20px 14px 40px;
+  display: block; min-height: calc(100dvh - var(--sd-bar-h)); padding: 0;
   font-family: var(--sd-font-body); overflow-x: hidden;
 }
-html.sd-page .wrap { margin: 0 auto; width: min(600px, 100%); }
+html.sd-page .wrap { margin: 0 auto; width: min(628px, 100%); padding: 20px 14px 40px; }
 html.sd-page .shell {
   background: var(--sd-panel); border-radius: 0; padding: 20px 20px 24px; margin: 4px;
   box-shadow: var(--sd-box), var(--sd-drop);
@@ -152,7 +152,7 @@ html.sd-page .particle { border-radius: 0; width: 10px; height: 10px; box-shadow
 @media (prefers-reduced-motion: reduce) { html.sd-page .combo.show { animation: none; opacity: 1; } html.sd-page .particle { display: none; } }
 
 @media (max-width: 480px) {
-  html.sd-page body { padding: 14px 8px 32px; }
+  html.sd-page .wrap { padding: 14px 8px 32px; }
   html.sd-page .shell { padding: 14px 12px 18px; }
   html.sd-page .hud { gap: 4px; }
   html.sd-page .stat .val { font-size: 20px; }

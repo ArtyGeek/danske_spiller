@@ -42,7 +42,7 @@ html.sd-page .dex {
   box-shadow: var(--sd-box), var(--sd-drop); padding: 14px 16px; gap: 16px;
 }
 html.sd-page .dexlight { width: auto; height: auto; background: none; border: 0; box-shadow: none; animation: none; display: inline-block; flex: none; }
-html.sd-page .dex h1 { font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(22px, 6vw, 32px); line-height: 1.1; letter-spacing: .01em; overflow-wrap: anywhere; }
+html.sd-page .dex h1 { font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(22px, 6vw, 32px); line-height: 1.1; letter-spacing: .01em; overflow-wrap: break-word; hyphens: manual; }
 html.sd-page .dex p { font-family: var(--sd-font-body); font-weight: 700; font-size: 14px; opacity: 1; margin-top: 6px; }
 html.sd-page .minidots { gap: 6px; flex: none; }
 html.sd-page .minidots span { width: 12px; height: 12px; border: 0; background: #101010; }
@@ -79,7 +79,7 @@ html.sd-page .menu-grid { gap: 20px; padding: 4px; }
 html.sd-page .mode-btn {
   min-height: 132px; padding: 14px 12px; color: #101010; background: var(--sd-cream); position: relative; overflow: visible;
   box-shadow: var(--sd-box), var(--sd-bevel), 8px 8px 0 0 var(--sd-ink); margin: 4px;
-  transition: transform .08s steps(2), box-shadow .08s steps(2); overflow-wrap: anywhere; hyphens: auto; display: block; width: calc(100% - 8px);
+  transition: transform .08s steps(2), box-shadow .08s steps(2); overflow-wrap: break-word; hyphens: manual; display: block; width: calc(100% - 8px);
 }
 html.sd-page .mode-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--sd-box), var(--sd-bevel), 10px 10px 0 0 var(--sd-ink); }
 html.sd-page .mode-btn:active { transform: translate(4px,4px); box-shadow: var(--sd-box), var(--sd-bevel), 2px 2px 0 0 var(--sd-ink); }

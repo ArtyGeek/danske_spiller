@@ -134,7 +134,8 @@ html.sd-page .badge-done { background: var(--sd-ok); color: #fff; border-radius:
 html.sd-page .mode-grid { gap: 16px; }
 html.sd-page .mode { padding: 16px 12px; animation: none; transition: transform .1s steps(2), box-shadow .1s steps(2); display: flex; flex-direction: column; align-items: center; }
 html.sd-page .mode .mico { font-size: 0; min-height: 36px; display: flex; align-items: center; }
-html.sd-page .mode .mname { font-family: var(--sd-font-display); font-weight: 700; font-size: 17px; text-transform: uppercase; letter-spacing: .02em; line-height: 1.25; margin-top: 8px; }
+html.sd-page .mode { min-width: 0; }
+html.sd-page .mode .mname { max-width: 100%; overflow-wrap: anywhere; hyphens: auto; font-family: var(--sd-font-display); font-weight: 700; font-size: clamp(14px, 4.4vw, 17px); text-transform: uppercase; letter-spacing: .02em; line-height: 1.25; margin-top: 8px; }
 html.sd-page .mode .mdesc { color: var(--sd-text-soft); font-size: 14px; font-weight: 400; line-height: 1.35; }
 
 /* CEFR select */
@@ -178,8 +179,8 @@ html.sd-page .opt:disabled { cursor: default; }
 html.sd-page .opt:disabled:not(.correct):not(.wrong) { --_fg: var(--sd-text-soft); box-shadow: var(--sd-box), 0 8px 0 -4px var(--sd-ink); }
 html.sd-page .opt.correct { background: var(--sd-ok-bg); color: var(--sd-text); animation: none; box-shadow: var(--sd-box-ok), 0 12px 0 -4px var(--sd-ok); }
 html.sd-page .opt.wrong   { background: var(--sd-bad-bg); color: var(--sd-text); animation: none; box-shadow: var(--sd-box-bad), 0 12px 0 -4px var(--sd-bad); }
-html.sd-page .opt.correct::after { content: "  ✓ CORRECT"; font-family: var(--sd-font-display); font-size: 14px; color: var(--sd-ok); white-space: nowrap; }
-html.sd-page .opt.wrong::after   { content: "  ✗ WRONG"; font-family: var(--sd-font-display); font-size: 14px; color: var(--sd-bad); white-space: nowrap; }
+html.sd-page .opt.correct::after { content: "  ✓ RIGTIGT"; font-family: var(--sd-font-display); font-size: 14px; color: var(--sd-ok); white-space: nowrap; }
+html.sd-page .opt.wrong::after   { content: "  ✗ FORKERT"; font-family: var(--sd-font-display); font-size: 14px; color: var(--sd-bad); white-space: nowrap; }
 
 /* feedback (never colour-only: icon + text) */
 html.sd-page .feedback { text-align: left; min-height: 0; margin: 16px 4px 0; font-family: var(--sd-font-body); font-weight: 700; font-size: 17px; }
@@ -232,7 +233,7 @@ html.sd-page .match-cell {
 }
 html.sd-page .match-cell:hover { --_bg: var(--sd-cream); color: #101010; }
 html.sd-page .match-cell.sel { --_bg: var(--sd-cream); color: #101010; box-shadow: var(--sd-box-focus), 0 6px 0 -4px var(--sd-ink); }
-html.sd-page .match-cell.sel::after { content: "◀ PICKED"; font-family: var(--sd-font-display); font-size: 13px; display: block; }
+html.sd-page .match-cell.sel::after { content: "◀ VALGT"; font-family: var(--sd-font-display); font-size: 13px; display: block; }
 html.sd-page .match-cell.miss { background: var(--sd-bad-bg); color: var(--sd-text); animation: sd-shake .36s steps(6); box-shadow: var(--sd-box-bad); }
 html.sd-page .match-cell.miss::after { content: "✗"; font-family: var(--sd-font-display); font-size: 18px; color: var(--sd-bad); display: block; }
 html.sd-page .match-cell.gone { opacity: 0; transform: none; pointer-events: none; }
@@ -270,7 +271,8 @@ html.sd-page .badge-grid { gap: 16px; grid-template-columns: repeat(auto-fill, m
 html.sd-page .ach { background: var(--sd-panel-2); opacity: 1; filter: grayscale(1); transition: none; padding: 12px 8px; box-shadow: var(--sd-box); }
 html.sd-page .ach.un { filter: none; background: var(--sd-cream); color: #101010; box-shadow: var(--sd-box), 4px 4px 0 0 var(--sd-orange); }
 html.sd-page .ach .aico { font-size: 0; min-height: 40px; display: flex; justify-content: center; align-items: center; }
-html.sd-page .ach .aname { font-family: var(--sd-font-display); font-weight: 700; font-size: 15px; text-transform: uppercase; margin-top: 6px; line-height: 1.25; }
+html.sd-page .ach { min-width: 0; }
+html.sd-page .ach .aname { max-width: 100%; overflow-wrap: anywhere; hyphens: auto; font-family: var(--sd-font-display); font-weight: 700; font-size: clamp(12px, 3.6vw, 15px); text-transform: uppercase; margin-top: 6px; line-height: 1.25; }
 html.sd-page .ach:not(.un) .aname::after { content: " · LÅST"; display: block; font-size: 13px; font-weight: 400; }
 html.sd-page .ach.un .aname::after { content: " ✓"; }
 

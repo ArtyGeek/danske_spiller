@@ -252,3 +252,10 @@ html.sd-page header.topbar > .row.between { flex-wrap: nowrap; gap: 12px; }
 }
 html.sd-page body:has(#screen-play:not(.hidden)) header.topbar .xpbar { display: none; }
 html.sd-page body:has(#screen-play:not(.hidden)) header.topbar { margin-bottom: 16px; }
+
+/* US-037: headings wrap at word boundaries, never mid-word; confetti stays behind the results */
+html.sd-page .brand > span:last-child, html.sd-page .mode-btn .t, html.sd-page .section-title, html.sd-page .summary .score {
+  overflow-wrap: normal; word-break: normal; hyphens: manual; min-width: 0;
+}
+html.sd-page .sd-conf { z-index: 0; }
+html.sd-page .summary { position: relative; z-index: 1; }

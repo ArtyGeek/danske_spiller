@@ -380,8 +380,8 @@
 
   <!-- Import Modal -->
   <div id="importModal" class="hidden">
-    <div class="modal-content">
-      <h2>Importér CSV-data</h2>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="importModalTitle">
+      <h2 id="importModalTitle">Importér CSV-data</h2>
       <p>Indsæt din CSV (kolonner: word, meaning, sentence_da, sentence_en, category, level, theme, og valgfrit note). Adskil værdierne med komma eller tabulator.</p>
       <textarea id="csvInput" placeholder="Indsæt CSV her …"></textarea>
       <div>
@@ -393,8 +393,8 @@
 
   <!-- Settings Modal (contains reset/export) -->
   <div id="settingsModal" class="hidden">
-    <div class="modal-content">
-      <h2>Indstillinger</h2>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="settingsModalTitle">
+      <h2 id="settingsModalTitle">Indstillinger</h2>
       <p>
         Her kan du styre dine fremskridt. Dine data bliver gemt i browseren og
         er der næste gang, medmindre du rydder dem eller bruger privat browsing.
@@ -411,8 +411,8 @@
 
   <!-- Review Modal -->
   <div id="reviewModal" class="hidden">
-    <div class="modal-content">
-      <h2>Repetition</h2>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+      <h2 id="reviewModalTitle">Repetition</h2>
       <p>Øv de gemte ord, og besejr fejlmonstrene. Svar rigtigt tre gange på et ord for at slippe af med det.</p>
       <ul id="reviewList"></ul>
       <button id="startReviewBtn">Start repetition</button>
@@ -867,6 +867,57 @@
           break;
       }
       awaitingAnswer = true;
+      focusFirstControl();
+    }
+
+    // Move keyboard focus to the first answer control after a render (only once the learner has interacted,
+    // so the page does not grab focus on load). Never leaves focus on BODY after the old buttons are replaced.
+    function focusFirstControl() {
+      if (!userActive) return;
+      const first = document.querySelector("#options button, #reorderParts button");
+      if (first) { try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); } }
+    }
+
+    // Modal helper: focus the first control, trap Tab, close on Esc, restore focus to the opener.
+    const modalState = {};
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (!modal || modalState[id]) return;
+      const opener = document.activeElement && document.activeElement !== document.body ? document.activeElement : null;
+      modal.classList.remove("hidden");
+      const box = modal.querySelector(".modal-content");
+      // Tab trap over visible controls only (DanskCore.ui.focusTrap also counts the hidden export textarea)
+      const sel = "button:not([disabled]), textarea:not([readonly]), input:not([disabled]), a[href]";
+      const visible = () => Array.from(box.querySelectorAll(sel)).filter((n) => n.offsetParent !== null);
+      const onKey = (e) => {
+        if (e.key !== "Tab") return;
+        const f = visible();
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (!box.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+        else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      };
+      box.addEventListener("keydown", onKey);
+      const release = () => box.removeEventListener("keydown", onKey);
+      const f0 = visible();
+      if (f0.length) f0[0].focus();
+      modalState[id] = { opener: opener, release: release };
+    }
+    function closeModal(id, restore) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.add("hidden");
+      const st = modalState[id];
+      if (!st) return;
+      delete modalState[id];
+      st.release();
+      if (restore !== false && st.opener && document.body.contains(st.opener)) {
+        try { st.opener.focus({ preventScroll: true }); } catch (e) { st.opener.focus(); }
+      }
+    }
+    function closeSettingsModal() {
+      closeModal("settingsModal");
+      document.getElementById("exportArea").classList.add("hidden");
     }
 
     function addOptionButtons(optionsDiv, opts, isCorrect) {
@@ -1263,19 +1314,19 @@
 
     function openReview() {
       refreshReviewList();
-      const modal = document.getElementById("reviewModal");
-      modal.classList.remove("hidden");
+      openModal("reviewModal");
+      // Prefer the start button as the first control; the trap focuses the first enabled control otherwise
       const startBtn = document.getElementById("startReviewBtn");
       if (startBtn && !startBtn.disabled) startBtn.focus();
       else document.getElementById("closeReviewBtn").focus();
     }
 
-    function closeReviewModal() {
-      document.getElementById("reviewModal").classList.add("hidden");
+    function closeReviewModal(restore) {
+      closeModal("reviewModal", restore);
     }
 
     function startReview() {
-      if (reviewActive) { closeReviewModal(); return; }
+      if (reviewActive) { closeReviewModal(false); focusFirstControl(); return; }
       const words = reviewWords();
       if (words.length === 0) return;
       clearTimeout(advanceTimer);
@@ -1284,7 +1335,7 @@
       // Use meaning mode for review; could randomize
       reviewQueue = words.map((word) => ({ entry: dataset.find((e) => e.word === word), mode: MODES.MEANING }));
       reviewActive = true;
-      closeReviewModal();
+      closeReviewModal(false);
       refreshReviewList();
       loadQuestion();
     }
@@ -1293,7 +1344,7 @@
       clearTimeout(advanceTimer);
       reviewActive = false;
       reviewQueue = [];
-      closeReviewModal();
+      closeReviewModal(false);
       refreshReviewList();
       startZone(currentZone || zones[0]);
       updateDashboard();
@@ -1317,6 +1368,7 @@
       back.addEventListener("click", () => startZone(currentZone || zones[0]));
       game.appendChild(document.createElement("div")).appendChild(back);
       if (window.Sjovt) { Sjovt.hydrate(); Sjovt.fx.celebrate(); }
+      if (userActive) { try { back.focus({ preventScroll: true }); } catch (e) { back.focus(); } }
     }
 
     /* === CSV Import === */
@@ -1366,10 +1418,10 @@
       const importBtn = document.getElementById("importBtn");
       const importModal = document.getElementById("importModal");
       importBtn.addEventListener("click", () => {
-        importModal.classList.remove("hidden");
+        openModal("importModal");
       });
       document.getElementById("cancelImportBtn").addEventListener("click", () => {
-        importModal.classList.add("hidden");
+        closeModal("importModal");
       });
       document.getElementById("loadDataBtn").addEventListener("click", () => {
         const text = document.getElementById("csvInput").value;
@@ -1392,17 +1444,14 @@
         } else {
           alert("Der blev ikke fundet nogen gyldige poster. Tjek din CSV.");
         }
-        importModal.classList.add("hidden");
+        closeModal("importModal");
       });
       // Settings modal
       const settingsModal = document.getElementById("settingsModal");
       document.getElementById("settingsBtn").addEventListener("click", () => {
-        settingsModal.classList.remove("hidden");
+        openModal("settingsModal");
       });
-      document.getElementById("closeSettingsBtn").addEventListener("click", () => {
-        settingsModal.classList.add("hidden");
-        document.getElementById("exportArea").classList.add("hidden");
-      });
+      document.getElementById("closeSettingsBtn").addEventListener("click", closeSettingsModal);
       document.getElementById("exportProgressBtn").addEventListener("click", () => {
         const area = document.getElementById("exportArea");
         area.classList.toggle("hidden");
@@ -1436,13 +1485,20 @@
       document.getElementById("reviewBtn").addEventListener("click", () => {
         openReview();
       });
-      document.getElementById("closeReviewBtn").addEventListener("click", closeReviewModal);
+      document.getElementById("closeReviewBtn").addEventListener("click", () => closeReviewModal());
       document.getElementById("startReviewBtn").addEventListener("click", startReview);
       document.getElementById("endReviewBtn").addEventListener("click", endReview);
       // Global keyboard shortcuts
       const markActive = () => { userActive = true; };
       document.addEventListener("pointerdown", markActive, true);
       document.addEventListener("keydown", markActive, true);
+      // Esc closes the open dialog and returns focus to its opener
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        if (modalState.importModal) { e.preventDefault(); closeModal("importModal"); }
+        else if (modalState.settingsModal) { e.preventDefault(); closeSettingsModal(); }
+        else if (modalState.reviewModal) { e.preventDefault(); closeReviewModal(); }
+      });
       document.addEventListener("keydown", (e) => {
         if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey) return;
         const t = e.target;

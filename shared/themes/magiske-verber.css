@@ -44,7 +44,7 @@ html.sd-page h1 {
 }
 html.sd-page .subtitle { font-family: var(--sd-font-body); font-style: normal; font-weight: 700; color: var(--sd-text); font-size: 15px; letter-spacing: 0; margin: 0 0 20px; }
 html.sd-page h2, html.sd-page h3, html.sd-page .title { font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .01em; }
-html.sd-page h2.title { font-size: clamp(22px, 5vw, 30px); color: var(--sd-text) !important; margin: 12px 0 8px; overflow-wrap: anywhere; }
+html.sd-page h2.title { font-size: clamp(22px, 5vw, 30px); color: var(--sd-text) !important; margin: 12px 0 8px; overflow-wrap: break-word; hyphens: manual; }
 html.sd-page h2.title .sd-sprite { margin-right: 8px; }
 
 /* panels */
@@ -92,7 +92,7 @@ html.sd-page .game-card:nth-child(4n+4) { background: #FFA9C6; }
 html.sd-page .game-card:hover { transform: translate(-2px,-2px); border: 0; box-shadow: var(--sd-box), var(--sd-bevel), 10px 10px 0 0 var(--sd-ink); }
 html.sd-page .game-card:active { transform: translate(4px,4px); box-shadow: var(--sd-box), var(--sd-bevel), 2px 2px 0 0 var(--sd-ink); }
 html.sd-page .game-card .ico { filter: none; font-size: 0; width: 68px; min-width: 68px; display: grid; place-items: center; }
-html.sd-page .game-card .gc-t { font-family: var(--sd-font-display); font-weight: 700; font-size: 18px; color: #101010; text-transform: uppercase; line-height: 1.2; overflow-wrap: anywhere; }
+html.sd-page .game-card .gc-t { font-family: var(--sd-font-display); font-weight: 700; font-size: 18px; color: #101010; text-transform: uppercase; line-height: 1.2; overflow-wrap: break-word; hyphens: manual; }
 html.sd-page .game-card .gc-d { font-family: var(--sd-font-body); font-size: 14px; color: #101010; margin-top: 4px; line-height: 1.4; overflow-wrap: anywhere; }
 html.sd-page .gc-done { margin-left: 6px; background: #101010; color: var(--sd-cream); padding: 0 6px; font-family: var(--sd-font-body); font-size: 14px; }
 

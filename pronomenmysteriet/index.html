@@ -119,16 +119,17 @@
     <div class="brand"><span data-sd-sprite="bog" data-scale="3" aria-hidden="true"></span> Pronomenmysteriet</div>
     <button class="icon-btn" id="btn-dark" type="button" aria-label="Skift mørk tilstand" title="Mørk tilstand">MØRK</button>
     <button class="icon-btn" id="btn-sound" type="button" aria-label="Slå lyd til eller fra" title="Lyd">LYD</button>
+    <button class="icon-btn" id="btn-reset" type="button" aria-label="Nulstil fremskridt" title="Nulstil fremskridt">NULSTIL</button>
   </header>
 
   <main id="start-screen" class="card">
     <h1 class="title"><span data-sd-sprite="bog" data-scale="5" aria-hidden="true"></span>Pronomenmysteriet</h1>
     <p class="lede">Opklar sagen: hvem peger ordet på?</p>
+    <button class="primary" id="btn-play" type="button">Spil</button>
     <div class="group-label" id="lbl-mode">Tilstand</div>
     <div class="modes" id="mode-list" role="group" aria-labelledby="lbl-mode"></div>
     <div class="group-label" id="lbl-level">Niveau</div>
     <div class="chips" id="level-list" role="group" aria-labelledby="lbl-level"></div>
-    <button class="primary" id="btn-play" type="button">Spil</button>
   </main>
 
   <main id="play-screen" class="card hidden">
@@ -245,6 +246,16 @@
     b.textContent = on ? 'LYD' : 'LYD ✗';
     b.setAttribute('aria-pressed', String(!on));
   }
+  // reset progress (US-030): confirm, then clear only this game's SRS record (keeps mode/level/sound prefs)
+  document.getElementById('btn-reset').addEventListener('click', function(){
+    var ok = true;
+    try { ok = window.confirm('Vil du nulstille alle fremskridt? Det kan ikke fortrydes.'); } catch (e) { ok = false; }
+    if (!ok) return;
+    srsState.items = {};
+    srsState.patterns = {};
+    DC.store.remove('srs:' + GAME_ID);
+    DC.ui.announce('Fremskridt nulstillet.');
+  });
   document.getElementById('btn-play').addEventListener('click', startRound);
   document.getElementById('btn-back').addEventListener('click', showStart);
   document.addEventListener('keydown', function(e){
@@ -316,6 +327,7 @@
     el.start.classList.toggle('hidden', which !== 'start');
     el.play.classList.toggle('hidden', which !== 'play');
     el.summary.classList.toggle('hidden', which !== 'summary');
+    document.getElementById('btn-reset').classList.toggle('hidden', which !== 'start');
   }
 
   var advanceTimer = null;
@@ -333,17 +345,19 @@
   }
 
   // ---- round lifecycle ----
+  // Queue order (US-042, ported from Tidsmaskinen): just-missed (box 1, newest first), then due, then unseen, then not-yet-due.
   function buildRound(pool){
-    var shuffled = shuffle(pool.slice());
-    var due = shuffled.filter(function(it){ return DC.srs.isDue(srsState, srsKey(it)); }).slice(0, ROUND_SIZE);
-    var chosen = due.slice();
-    if (chosen.length < ROUND_SIZE){
-      var seen = {};
-      chosen.forEach(function(it){ seen[it.id] = true; });
-      var rest = shuffled.filter(function(it){ return !seen[it.id]; });
-      for (var i = 0; i < rest.length && chosen.length < ROUND_SIZE; i++) chosen.push(rest[i]);
-    }
-    return shuffle(chosen);
+    var boxed = [], unseen = [], dueRest = [], notDue = [];
+    shuffle(pool.slice()).forEach(function(it){
+      var e = srsState.items[srsKey(it)];
+      if (!e) unseen.push(it);
+      else if (e.box === 1) boxed.push(it);
+      else if (DC.srs.isDue(srsState, srsKey(it))) dueRest.push(it);
+      else notDue.push(it);
+    });
+    boxed.sort(function(a, b){ return (srsState.items[srsKey(b)].lastSeen || 0) - (srsState.items[srsKey(a)].lastSeen || 0); });
+    notDue.sort(function(a, b){ return srsState.items[srsKey(a)].dueAt - srsState.items[srsKey(b)].dueAt; });
+    return shuffle(boxed.concat(dueRest, unseen, notDue).slice(0, ROUND_SIZE));
   }
 
   function startRound(){
@@ -392,6 +406,8 @@
     SOUND.roundComplete();
     renderSummary();
     show('summary');
+    var again = el.sumHost.querySelector('.primary');
+    if (again) again.focus({ preventScroll: true });
   }
 
   function recordAnswer(item, correct){
@@ -500,7 +516,7 @@
       if (activeKeyHandler){ document.removeEventListener('keydown', activeKeyHandler); activeKeyHandler = null; }
       var correct = DC.diff.normalize(btn.getAttribute('data-value')) === DC.diff.normalize(item.correct);
       buttons.forEach(function(b){
-        b.disabled = true;
+        b.setAttribute('aria-disabled', 'true');
         var isRight = DC.diff.normalize(b.getAttribute('data-value')) === DC.diff.normalize(item.correct);
         if (b === btn) b.classList.add(correct ? 'chosen-correct' : 'chosen-wrong');
         else if (!correct && isRight) b.classList.add('reveal-correct');
@@ -511,6 +527,7 @@
         blank.classList.add(correct ? 'done-correct' : 'done-wrong');
       }
       recordAnswer(item, correct);
+      btn.focus({ preventScroll: true });
       sdFx(correct, btn);
       var full = filled(item, item.correct);
       if (correct){
@@ -648,7 +665,6 @@
     home.addEventListener('click', showStart);
     actions.appendChild(home);
     el.sumHost.appendChild(actions);
-    again.focus();
 
     var S = window.Sjovt;
     if (S && state.correct > 0 && S.fx && S.fx.celebrate) S.fx.celebrate();

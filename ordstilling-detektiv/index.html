@@ -288,7 +288,7 @@ body{
 <body>
 <div class="wrap">
   <div class="masthead">
-    <div class="mast-row"><span data-sd-sprite="lup" data-scale="6" class="sd-bob" aria-hidden="true"></span><h1>Ordstillingsdetektiven</h1></div>
+    <div class="mast-row"><span data-sd-sprite="lup" data-scale="6" class="sd-bob" aria-hidden="true"></span><h1>Ordstillings&shy;detektiven</h1></div>
     <div class="tag">Ordstillings&shy;detektiven — 12 sager · A1 → B2</div>
     <div class="rank" id="rankBadge">Rang: Detektivelev</div>
   </div>
@@ -376,7 +376,7 @@ const CASES = [
   {da:"Pigen synger en sang", en:"The girl sings a song"},
   {da:"Vi besøger bedstemor", en:"We visit grandma", alt:["Bedstemor besøger vi"]},
   {da:"Læreren retter opgaver", en:"The teacher corrects assignments"},
-  {da:"Jeg skriver en email", en:"I write an email"},
+  {da:"Jeg skriver en e-mail", en:"I write an email"},
   {da:"Hun maler væggen", en:"She paints the wall"},
   {da:"De bygger et hus", en:"They build a house"},
   {da:"Drengen kaster bolden", en:"The boy throws the ball"},
@@ -422,7 +422,7 @@ const CASES = [
   {da:"Hver weekend handler vi ind", en:"Every weekend we go shopping"},
   {da:"I dag har vi et vigtigt møde", en:"Today we have an important meeting"},
   {da:"I aftes så jeg nyhederne", en:"Last night I watched the news"},
-  {da:"Næste uge starter jeg på et nyt job", en:"Next week I start a new job"}
+  {da:"I næste uge starter jeg på et nyt job", en:"Next week I start a new job"}
  ]
 },
 {
@@ -616,7 +616,7 @@ const CASES = [
   {da:"Han har rejst til mange lande", en:"He has travelled to many countries"},
   {da:"Jeg har lavet mad til alle", en:"I have made food for everyone"},
   {da:"Børnene har sovet godt", en:"The children have slept well"},
-  {da:"Hun har sendt en email", en:"She has sent an email"},
+  {da:"Hun har sendt en e-mail", en:"She has sent an email"},
   {da:"Vi har talt med chefen", en:"We have talked to the boss"},
   {da:"Han har mistet sit job", en:"He has lost his job"},
   {da:"Jeg har ikke set ham i dag", en:"I haven't seen him today"},
@@ -665,7 +665,7 @@ const CASES = [
  n:10, title:"Skyggenetværket", cefr:"B1", lvl:"lb-b1",
  focus:"Flere konjunktioner (selvom, når, hvis, mens)",
  story:"Et skjult netværk kommunikerer i betingelsesskode: <i>hvis</i> det ene, <i>når</i> det andet, <i>selvom</i> det tredje. Når bisætningen står først, vender hovedsætningen om. Nøgl netværket op.",
- grammarTip:"Når en bisætning (<b>selvom, når, hvis, mens</b>) står <i>først</i>, udfylder hele sætningen forreste plads – så hovedsætningen må vende om: komma, og derefter <b>verbum før grundled</b>: <b>Hvis du har tid, kan vi mødes</b>.",
+ grammarTip:"Når en bisætning (<b>selvom, når, hvis, mens</b>) står <i>først</i>, udfylder hele bisætningen forreste plads – så hovedsætningen må vende om: komma, og derefter <b>verbum før grundled</b>: <b>Hvis du har tid, kan vi mødes</b>.",
  sents:[
   {da:"Selvom det regner, går jeg en tur", en:"Even though it's raining, I'm going for a walk"},
   {da:"Når mødet er slut, tager vi hjem", en:"When the meeting is over, we go home"},
@@ -882,7 +882,12 @@ $("resetBtn").onclick=()=>{
   if(confirm("Vil du nulstille alle fremskridt og stempler?")){prog={solved:{},best:{},weak:{},finalBest:0};saveP(prog);renderMap();}
 };
 $("weakBtn").onclick=()=>startWeak();
-$("backBtn").onclick=()=>{ stopTimer(); show("map"); renderMap(); };
+$("backBtn").onclick=()=>{ stopTimer(); show("map"); renderMap(); focusMapStart(); };
+
+function focusMapStart(){
+  const b=document.querySelector("#mapGrid .casebtn:not(:disabled)");
+  if(b){ try{ b.focus({preventScroll:true}); }catch(e){} }
+}
 
 function startWeak(){
   const pool=[];
@@ -1006,6 +1011,13 @@ function loadQuestion(){
   const sb=document.querySelector("#caseHead .storybox");
   if(sb) sb.open=(G.i===0);
   if(G.i>0) keepAnswerInView();
+  focusFirstTile();
+}
+
+/* US-031: keep focus on a sensible control (never BODY) after render. */
+function focusFirstTile(){
+  const t=$("pool").querySelector(".tile:not(.used)");
+  if(t){ try{ t.focus({preventScroll:true}); }catch(e){ t.focus(); } }
 }
 
 /* Keep tiles + UNDERSØG reachable (US-013). Scroll is instant (no smooth), so it is also reduced-motion safe. */
@@ -1021,31 +1033,36 @@ function keepAnswerInView(){
 
 function placeTile(el,o){
   if(el.classList.contains("used")) return;
-  el.classList.add("used");
+  el.classList.add("used"); el.tabIndex=-1;
   cur.placed.push(o.t);
   const ans=$("answer"); ans.classList.remove("empty");
   const chip=document.createElement("button");
   chip.className="tile inans"; chip.textContent=o.t;
   chip.onclick=()=>{ // return to pool
     if(ans.classList.contains("locked"))return;
-    el.classList.remove("used");
+    el.classList.remove("used"); el.removeAttribute("tabindex");
     chip.remove();
     const k=cur.placed.indexOf(o.t); // remove first matching
     // rebuild placed from remaining chips to stay accurate
     cur.placed=[...ans.querySelectorAll(".tile")].map(c=>c.textContent);
     if(cur.placed.length===0) ans.classList.add("empty");
     $("checkBtn").disabled=cur.placed.length!==cur.correct.length;
+    try{ el.focus({preventScroll:true}); }catch(e){}
   };
   ans.appendChild(chip);
   $("checkBtn").disabled=cur.placed.length!==cur.correct.length;
+  /* US-031: the clicked tile is now invisible - move focus on */
+  const nxt=$("checkBtn").disabled?$("pool").querySelector(".tile:not(.used)"):$("checkBtn");
+  if(nxt){ try{ nxt.focus({preventScroll:true}); }catch(e){} }
 }
 
 $("clearBtn").onclick=()=>{
   const ans=$("answer"); if(ans.classList.contains("locked"))return;
   ans.innerHTML=""; ans.classList.add("empty");
   cur.placed=[];
-  $("pool").querySelectorAll(".tile").forEach(t=>t.classList.remove("used"));
+  $("pool").querySelectorAll(".tile").forEach(t=>{t.classList.remove("used");t.removeAttribute("tabindex");});
   $("checkBtn").disabled=true;
+  focusFirstTile();
 };
 
 $("checkBtn").onclick=()=>{
@@ -1101,7 +1118,7 @@ function showExplain(ok){
   if(G.mode!=="final" && G.mode!=="weak" && G.lives<=0){
     $("nextBtn").textContent="Se resultatet ▸";
   }else{
-    $("nextBtn").textContent = (G.i>=G.queue.length-1)?"Finish ▸":"Next ▸";
+    $("nextBtn").textContent = (G.i>=G.queue.length-1)?"Afslut ▸":"Næste ▸";
   }
   const nb=$("nextBtn");
   try{ nb.focus({preventScroll:true}); }catch(e){ nb.focus(); }
@@ -1139,7 +1156,8 @@ function finishSession(){
          <button class="btn check" id="mapBtn2">Tilbage til kortvalg ▸</button>
        </div>`;
     $("againBtn").onclick=()=>startWeak();
-    $("mapBtn2").onclick=()=>{show("map");renderMap();};
+    try{ $("againBtn").focus({preventScroll:true}); }catch(e){}
+    $("mapBtn2").onclick=()=>{show("map");renderMap();focusMapStart();};
   }else if(G.mode==="case"){
     const passed=G.lives>0 && pct>=60;
     if(passed){
@@ -1161,7 +1179,8 @@ function finishSession(){
          <button class="btn check" id="mapBtn2">Sagskort ▸</button>
        </div>`;
     $("againBtn").onclick=()=>startCase(G.caseN);
-    $("mapBtn2").onclick=()=>{show("map");renderMap();};
+    try{ $("againBtn").focus({preventScroll:true}); }catch(e){}
+    $("mapBtn2").onclick=()=>{show("map");renderMap();focusMapStart();};
   }else{
     prog.finalBest=Math.max(prog.finalBest,pct); saveP(prog);
     const m=Math.floor(G.time/60),s=G.time%60;
@@ -1177,7 +1196,8 @@ function finishSession(){
          <button class="btn check" id="mapBtn2">Sagskort ▸</button>
        </div>`;
     $("againBtn").onclick=()=>startFinal();
-    $("mapBtn2").onclick=()=>{show("map");renderMap();};
+    try{ $("againBtn").focus({preventScroll:true}); }catch(e){}
+    $("mapBtn2").onclick=()=>{show("map");renderMap();focusMapStart();};
   }
 }
 

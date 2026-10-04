@@ -211,6 +211,11 @@ html.sd-page .xgame { min-height: 48px; border: 0; border-radius: 0; background:
 html.sd-page .xgame:hover { background: var(--sd-orange); color: #101010; }
 html.sd-page .sum-actions { justify-content: center; gap: var(--sd-3); }
 
+/* ---- US-037: results confetti stays behind the result text (the card background is under the confetti, text above it) */
+html.sd-page .sd-conf { z-index: 1; }
+html.sd-page #summary-screen { animation-fill-mode: backwards; } /* no lingering animation = no stacking context around the card */
+html.sd-page #summary-screen #summary-host > * { position: relative; z-index: 2; }
+
 /* ---- motion (stepped, gated): correct = the gate segment fills, wrong = quick shake */
 @keyframes td-gate { from { clip-path: inset(0 0 0 0) } to { clip-path: inset(0 0 0 100%) } }
 @keyframes td-pop { 0% { transform: scale(.9); opacity: .3 } 100% { transform: scale(1); opacity: 1 } }

@@ -1339,7 +1339,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "present_vs_preterite",
       "context": "Du fortæller om gamle dage.",
-      "sentence": "Den gang ___ man ikke mobiltelefon, så vi skrev breve.",
+      "sentence": "Dengang ___ man ikke mobiltelefon, så vi skrev breve.",
       "options": [
         "har",
         "havde haft",
@@ -1870,7 +1870,7 @@ window.TIDS_DATA = {
       "id": "auktionen-finder-sted-den-3-marts",
       "level": "B1",
       "mode": "present_vs_preterite",
-      "context": "Din læge har sat det på.",
+      "context": "Datoen er fastsat.",
       "sentence": "Auktionen ___ sted den 3. marts.",
       "options": [
         "fandt",
@@ -3103,8 +3103,8 @@ window.TIDS_DATA = {
       "options": [
         "flyttede",
         "flytter",
-        "har flyttet",
-        "havde flyttet"
+        "er flyttet",
+        "var flyttet"
       ],
       "correct": "flyttede",
       "accepted_answers": [
@@ -3374,7 +3374,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Det var i julen 2022.",
-      "sentence": "Julen 2022 ___ vi hos mormor.",
+      "sentence": "I julen 2022 ___ vi hos mormor.",
       "options": [
         "har været",
         "var",
@@ -3422,7 +3422,7 @@ window.TIDS_DATA = {
       "context": "Det var i 2005.",
       "sentence": "I 2005 ___ de til Aarhus.",
       "options": [
-        "har flyttet",
+        "er flyttet",
         "flytter",
         "flyttede"
       ],
@@ -3784,7 +3784,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om hele dit liv indtil nu.",
-      "sentence": "Jeg ___ til Island indtil nu.",
+      "sentence": "Jeg ___ på Island.",
       "options": [
         "var aldrig",
         "havde aldrig været",
@@ -3830,7 +3830,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det handler om hele hendes liv indtil nu.",
-      "sentence": "Hun ___ en bil indtil nu.",
+      "sentence": "Hun ___ en bil.",
       "options": [
         "ejer aldrig",
         "har aldrig ejet",
@@ -3900,7 +3900,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Hun er 35 og taler om sit liv.",
-      "sentence": "Hun ___ på ski indtil nu.",
+      "sentence": "Hun ___ på ski.",
       "options": [
         "står aldrig",
         "stod aldrig",
@@ -3992,7 +3992,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Jeg ___ så mange mennesker samlet indtil nu.",
+      "sentence": "Jeg ___ så mange mennesker samlet.",
       "options": [
         "så aldrig",
         "havde aldrig set",
@@ -4061,7 +4061,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Jeg ___ en rigtig ferie indtil nu.",
+      "sentence": "Jeg ___ en rigtig ferie.",
       "options": [
         "havde aldrig haft",
         "har aldrig haft",
@@ -4107,7 +4107,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dine forældre og deres liv indtil nu.",
-      "sentence": "Mine forældre ___ i USA indtil nu.",
+      "sentence": "Mine forældre ___ i USA.",
       "options": [
         "var aldrig",
         "er aldrig",
@@ -4153,7 +4153,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om hele hans liv indtil nu.",
-      "sentence": "Han ___ til koncert indtil nu.",
+      "sentence": "Han ___ til koncert.",
       "options": [
         "havde aldrig været",
         "har aldrig været",
@@ -4176,7 +4176,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Vi ___ en kat indtil nu.",
+      "sentence": "Vi ___ en kat.",
       "options": [
         "blev aldrig",
         "havde aldrig haft",
@@ -4199,7 +4199,7 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om din erfaring indtil nu.",
-      "sentence": "Jeg ___ brug for en tolk indtil nu.",
+      "sentence": "Jeg ___ brug for en tolk.",
       "options": [
         "var aldrig",
         "blev aldrig",
@@ -4222,7 +4222,7 @@ window.TIDS_DATA = {
       "level": "A2",
       "mode": "preterite_vs_perfect",
       "context": "Du taler om dit liv indtil nu.",
-      "sentence": "Min mormor ___ i et fly indtil nu.",
+      "sentence": "Min mormor ___ i et fly.",
       "options": [
         "har aldrig siddet",
         "sidder aldrig",
@@ -4917,7 +4917,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "preterite_vs_perfect",
       "context": "Det gælder hele ugen frem til nu.",
-      "sentence": "Vi ___ hele ugen travlt.",
+      "sentence": "Vi ___ travlt hele ugen.",
       "options": [
         "havde haft",
         "havde",
@@ -5552,7 +5552,7 @@ window.TIDS_DATA = {
       "sentence": "For et halvt år siden ___ de til København.",
       "options": [
         "flytter",
-        "har flyttet",
+        "er flyttet",
         "flyttede"
       ],
       "correct": "flyttede",
@@ -5846,7 +5846,7 @@ window.TIDS_DATA = {
       "id": "de-har-kendt-hinanden-siden-de-var-boern",
       "level": "B1",
       "mode": "preterite_vs_perfect",
-      "context": "Vi har kendt hinanden, siden vi var børn.",
+      "context": "Du fortæller om to gamle venner.",
       "sentence": "De ___ hinanden, siden de var børn.",
       "options": [
         "har kendt",
@@ -6474,7 +6474,7 @@ window.TIDS_DATA = {
       "id": "min-mor-havde-ringet-allerede-to-gange-da-jeg-vaagnede",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Min mor ringede kl. 10. Jeg vågnede kl. 11.",
+      "context": "Min mor ringede to gange mellem kl. 10 og 10.30. Jeg vågnede kl. 11.",
       "sentence": "Min mor ___ to gange allerede, da jeg vågnede.",
       "options": [
         "har ringet",
@@ -6821,7 +6821,7 @@ window.TIDS_DATA = {
       "id": "da-jeg-vaagnede-havde-han-allerede-ringet-tre-gange",
       "level": "B1",
       "mode": "pluperfect",
-      "context": "Han ringede kl. 10. Jeg vågnede kl. 11.",
+      "context": "Han ringede tre gange mellem kl. 10 og 10.30. Jeg vågnede kl. 11.",
       "sentence": "Da jeg vågnede, ___ han allerede ringet tre gange.",
       "options": [
         "havde",
@@ -7076,7 +7076,7 @@ window.TIDS_DATA = {
       "id": "da-hun-fandt-en-ny-havde-hun-allerede-solgt-den-gamle",
       "level": "B2",
       "mode": "pluperfect",
-      "context": "Hun solgte lejligheden i foråret. I sommeren fandt hun en ny.",
+      "context": "Hun solgte lejligheden i foråret. I sommer fandt hun en ny.",
       "sentence": "Da hun fandt en ny, ___ hun allerede solgt den gamle.",
       "options": [
         "blev",
@@ -7150,7 +7150,7 @@ window.TIDS_DATA = {
       "context": "Du refererer, hvad hun fortalte i går.",
       "sentence": "Hun fortalte, at hun allerede ___ alt til festen.",
       "options": [
-        "forberedede",
+        "forberedte",
         "forbereder",
         "ville have forberedet",
         "havde forberedet"
@@ -8982,7 +8982,7 @@ window.TIDS_DATA = {
         "kommer ikke til at larme",
         "larmede ikke"
       ],
-      "note": "Skal ikke udtrykker et forbud eller en pligt til at lade være.",
+      "note": "Skal ikke udtrykker en pligt til at lade være; et egentligt forbud udtrykkes oftest med \"må ikke\".",
       "verify": true
     },
     {
@@ -8999,7 +8999,7 @@ window.TIDS_DATA = {
         "vil ikke spise",
         "spiste ikke"
       ],
-      "note": "Skal ikke udtrykker et forbud eller en pligt til at lade være.",
+      "note": "Skal ikke udtrykker en pligt til at lade være; et egentligt forbud udtrykkes oftest med \"må ikke\".",
       "verify": true
     },
     {
@@ -9093,7 +9093,7 @@ window.TIDS_DATA = {
       ],
       "distractors": [
         "flyttede",
-        "har flyttet",
+        "er flyttet",
         "kommer til at flytte"
       ],
       "note": "Skal udtrykker en aftale eller en plan, der allerede er lagt.",
@@ -9178,7 +9178,7 @@ window.TIDS_DATA = {
         "vil ikke gå",
         "gik ikke"
       ],
-      "note": "Skal ikke udtrykker et forbud eller en pligt til at lade være.",
+      "note": "Skal ikke udtrykker en pligt til at lade være; et egentligt forbud udtrykkes oftest med \"må ikke\".",
       "verify": true
     },
     {
@@ -9289,7 +9289,7 @@ window.TIDS_DATA = {
       "distractors": [
         "kommer til at flytte",
         "flyttede",
-        "har flyttet"
+        "er flyttet"
       ],
       "note": "Vil udtrykker egen vilje eller beslutning."
     },
@@ -12214,7 +12214,7 @@ window.TIDS_DATA = {
       "id": "hun-maa-vaere-meget-dygtig",
       "level": "B1",
       "mode": "modal",
-      "context": "Hun fik en 12-tal på eksamen.",
+      "context": "Hun fik et 12-tal på eksamen.",
       "sentence": "Hun ___ være meget dygtig.",
       "options": [
         "vil",
@@ -15024,7 +15024,7 @@ window.TIDS_DATA = {
           "distractors": [
             "bor",
             "har boet",
-            "er boet"
+            "ville bo"
           ]
         }
       ],
@@ -15207,7 +15207,7 @@ window.TIDS_DATA = {
           "distractors": [
             "cykler",
             "har cyklet",
-            "er cyklet"
+            "ville cykle"
           ]
         }
       ],
@@ -15388,7 +15388,7 @@ window.TIDS_DATA = {
           "distractors": [
             "regner",
             "har regnet",
-            "er regnet"
+            "ville regne"
           ]
         }
       ],
@@ -15468,7 +15468,7 @@ window.TIDS_DATA = {
           "distractors": [
             "bor",
             "har boet",
-            "er boet"
+            "ville bo"
           ]
         }
       ],
@@ -16196,7 +16196,7 @@ window.TIDS_DATA = {
       "id": "hvis-du-var-kommet-i-gaar-havde-du-set-ham",
       "level": "B1",
       "mode": "conditional",
-      "context": "Du kom ikke i går, så du missede festen.",
+      "context": "Du kom ikke i går, så du gik glip af festen.",
       "sentence": "Hvis du ___ i går, havde du set ham.",
       "slots": [
         {
@@ -20381,7 +20381,7 @@ window.TIDS_DATA = {
       "id": "alle-billetterne-var-solgt-allerede-da-vi-kom-til-kassen",
       "level": "B1",
       "mode": "passive",
-      "context": "Du fortæller om en billetsalg.",
+      "context": "Du fortæller om et billetsalg.",
       "sentence": "Alle billetterne ___ allerede, da vi kom til kassen.",
       "options": [
         "blev solgt",
@@ -21084,7 +21084,7 @@ window.TIDS_DATA = {
       "level": "B1",
       "mode": "passive",
       "context": "Det foregår nu.",
-      "sentence": "Alle bagagerne ___ af sikkerhedsvagterne.",
+      "sentence": "Al bagagen ___ af sikkerhedsvagterne.",
       "options": [
         "er kontrolleret",
         "kontrollerer",
@@ -22161,8 +22161,8 @@ window.TIDS_DATA = {
       "context": "Du kan købe den.",
       "sentence": "Bogen ___ i alle boghandlere.",
       "options": [
-        "blev fået",
-        "er fået",
+        "fik",
+        "har fået",
         "får",
         "fås"
       ],
@@ -22948,8 +22948,8 @@ window.TIDS_DATA = {
       "sentence": "Den ___ i alle supermarkeder.",
       "options": [
         "fås",
-        "er fået",
-        "blev fået",
+        "har fået",
+        "fik",
         "får"
       ],
       "correct": "fås",
@@ -24370,16 +24370,16 @@ window.TIDS_DATA = {
       "level": "B2",
       "mode": "imperative",
       "context": "Du vil have ham til at stoppe.",
-      "sentence": "___ nu med at skrige!",
+      "sentence": "___ nu være med at skrige!",
       "options": [
-        "Ladet være",
-        "Lader være",
-        "Lade være",
-        "Lad være"
+        "Ladet",
+        "Lader",
+        "Lade",
+        "Lad"
       ],
-      "correct": "Lad være",
+      "correct": "Lad",
       "accepted_answers": [
-        "Lad være"
+        "Lad"
       ],
       "note": "\"Lad være med at\" og \"hold op med at\" er faste forbindelser, der udtrykker et forbud."
     },

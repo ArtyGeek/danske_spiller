@@ -103,6 +103,7 @@
   function buildFireFormer() {
     var items = [];
     NOUNS.forEach(function (noun) {
+      if (noun.verify) { return; }          // US-050: skip forms not yet native-verified (QA-089, LANG-025)
       FORMS.forEach(function (form) {
         var answer = noun[form.key];
         if (!answer) { return; }
@@ -171,14 +172,18 @@
         level: a.level, mode: 'adjektivvaerkstedet', adjective_id: a.id,
         gender: null, definiteness: 'indefinite', number: 'plural',
         accepted_answers: [ePlur],
-        note: 'I flertal ender tillægsordet på -e: ' + ePlur + '.'
+        note: ePlur === common
+          ? capitalize(a.base) + ' er uændret i flertal: ' + ePlur + '.'
+          : 'I flertal ender tillægsordet på -e: ' + ePlur + '.'
       });
       items.push({
         id: a.id + '-adj-bestemt',
         level: a.level, mode: 'adjektivvaerkstedet', adjective_id: a.id,
         gender: 'common', definiteness: 'definite', number: 'singular',
         accepted_answers: [ePlur],
-        note: 'Bestemt form bruger også -e-formen: ' + ePlur + '.'
+        note: ePlur === common
+          ? capitalize(a.base) + ' er uændret i bestemt form: ' + ePlur + '.'
+          : 'Bestemt form bruger også -e-formen: ' + ePlur + '.'
       });
     });
     return items;
@@ -197,7 +202,11 @@
   var OBJECTS = ['hus', 'bord', 'stol', 'seng', 'lampe', 'bil', 'tog', 'baad', 'skib', 'cykel', 'telefon', 'computer', 'bog', 'sko', 'by', 'park', 'kirke', 'butik', 'restaurant', 'skole'];
   var OBJECTS_ADJ = ['stor', 'ny', 'god', 'dyr', 'flot'];
 
+  // Implausible noun+adjective pairs (QA-089 / LANG-026), left out of the generated set.
+  var SKIP_PAIRS = { 'dyr-park': 1, 'god-kirke': 1, 'sjov-ulv': 1 };
+
   function phraseItems(nounId, adjId) {
+    if (SKIP_PAIRS[adjId + '-' + nounId]) { return []; }
     var noun = NOUN_BY_ID[nounId], adj = ADJ_BY_ID[adjId];
     if (!noun || !adj || ADJ_EXCLUDE[adjId]) { return []; }
     var base = noun.base, defsg = noun.definite_singular,
@@ -286,6 +295,12 @@
       // form is 'mest ' + definite/plural form (den mest typiske), so the
       // ungrammatical "den mest typisk" is not accepted.
       var supAns = uniq([sup, supDef, 'den ' + supDef, 'det ' + supDef]);
+      var kompAns = [komp];
+      // dårlig: dårligere / dårligst are standard alongside værre / værst (QA-089, LANG-021).
+      if (a.id === 'daarlig') {
+        kompAns = [komp, 'dårligere'];
+        supAns = uniq(supAns.concat(['dårligst', 'dårligste', 'den dårligste', 'det dårligste']));
+      }
 
       var note;
       if (a.irregular_comparison) {
@@ -296,7 +311,8 @@
       } else if (a.periphrastic) {
         note = capitalize(a.base) + ' gradbøjes med mere/mest: ' + komp + ' → ' + sup + '.';
       } else {
-        note = capitalize(a.base) + ' gradbøjes med -ere/-est: ' + komp + ' → ' + sup + '.';
+        // -ig/-lig adjectives take -ere/-st (rolig → roligere → roligst); others -ere/-est.
+        note = capitalize(a.base) + ' gradbøjes med ' + (/est$/.test(sup) ? '-ere/-est' : '-ere/-st') + ': ' + komp + ' → ' + sup + '.';
       }
 
       items.push({
@@ -307,7 +323,7 @@
         comparison_type: ctype,
         slots: [
           { label: 'grundform', accepted_answers: [grund] },
-          { label: 'komparativ', accepted_answers: [komp] },
+          { label: 'komparativ', accepted_answers: kompAns },
           { label: 'superlativ', accepted_answers: supAns }
         ],
         note: note
@@ -659,7 +675,7 @@
     { id:'b6-mange-elever', level:'A2', pattern:'mange-meget', context:'Der går ___ elever på skolen.', options:['mange','meget'], correct:'mange', note:'Elever er tælleligt flertal: mange elever.' },
     { id:'b6-meget-regn', level:'A2', pattern:'mange-meget', context:'Vi fik ___ regn i sommer.', options:['meget','mange'], correct:'meget', note:'Regn er utælleligt: meget regn.' },
     { id:'b6-mange-spoergsmaal', level:'A2', pattern:'mange-meget', context:'Eleverne stillede ___ spørgsmål.', options:['mange','meget'], correct:'mange', note:'Spørgsmål er tælleligt flertal: mange spørgsmål.' },
-    { id:'b6-meget-hjaelp', level:'A2', pattern:'mange-meget', context:'Tak for ___ hjælp.', options:['meget','mange'], correct:'meget', note:'Hjælp er utælleligt: meget hjælp.' },
+    { id:'b6-meget-hjaelp', level:'A2', pattern:'mange-meget', context:'Hun har brug for ___ hjælp med lektierne.', options:['meget','mange'], correct:'meget', note:'Hjælp er utælleligt: meget hjælp.' },
     { id:'b6-mange-lande', level:'B1', pattern:'mange-meget', context:'Hun har besøgt ___ lande.', options:['mange','meget'], correct:'mange', note:'Lande er tælleligt flertal: mange lande.' },
     { id:'b6-meget-mad', level:'A1', pattern:'mange-meget', context:'Der er ___ mad tilbage fra festen.', options:['meget','mange'], correct:'meget', note:'Mad er utælleligt: meget mad.' },
     { id:'b6-mange-ideer', level:'B1', pattern:'mange-meget', context:'Vi fik ___ gode idéer på mødet.', options:['mange','meget'], correct:'mange', note:'Idéer er tælleligt flertal: mange idéer.' },

@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Danske modsætninger — øv antonymer | Sjovt Dansk</title>
-<meta name="description" content="Lær danske modsætningsord gennem quiz og par-spil. Gratis ordforrådsøvelser på B1–B2-niveau." />
+<meta name="description" content="Lær danske modsætningsord gennem quiz og par-spil. Gratis ordforrådsøvelser på B1–C1-niveau." />
 <meta property="og:title" content="Danske modsætninger — øv antonymer | Sjovt Dansk" />
-<meta property="og:description" content="Lær danske modsætningsord gennem quiz og par-spil. Gratis ordforrådsøvelser på B1–B2-niveau." />
+<meta property="og:description" content="Lær danske modsætningsord gennem quiz og par-spil. Gratis ordforrådsøvelser på B1–C1-niveau." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://sjovtdansk.dk/danish-antonyms-game.html" />
 <meta property="og:locale" content="da_DK" />
@@ -24,7 +24,7 @@
     "name": "Sjovt Dansk"
   },
   "teaches": ["Antonymer", "Ordforråd", "Danske ord"],
-  "educationalLevel": "B1 B2",
+  "educationalLevel": "B1 B2 C1",
   "inLanguage": "da",
   "isAccessibleForFree": true
 }
@@ -330,7 +330,7 @@
     <!-- ===================== INTRO ===================== -->
     <section style="background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; margin: 16px 0; box-shadow: var(--shadow);">
       <h2 style="margin: 0 0 12px; font-size: 20px; font-weight: 800; color: var(--ink);">Danske Modsætninger</h2>
-      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted);">Øv danske modsætningsord (antonymer) gennem quiz og par-spil. Lær ord, der betyder det modsatte, og styrk dit ordforråd på B1–B2-niveau.</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted);">Øv danske modsætningsord (antonymer) gennem quiz og par-spil. Lær ord, der betyder det modsatte, og styrk dit ordforråd på B1–C1-niveau.</p>
     </section>
 
     <h2 class="section-title">Din fremgang</h2>
@@ -373,7 +373,7 @@
       <span class="timer hidden" id="speedTimer">60</span>
     </div>
     <div id="playArea"></div>
-    <div id="feedbackArea"></div>
+    <div id="feedbackArea" tabindex="-1"></div>
     <div style="margin-top:16px" class="hidden" id="nextWrap">
       <button class="btn block alt" id="nextBtn">Fortsæt →</button>
     </div>
@@ -501,7 +501,7 @@ const ANTONYMS = [
   {wordA:"frem",wordB:"tilbage",enA:"forward",enB:"backward",category:"Direction",difficulty:"Medium",exampleA:"Gå et skridt frem.",exampleB:"Han trådte tilbage."},
   {wordA:"ind",wordB:"ud",enA:"in",enB:"out",category:"Direction",difficulty:"Easy",exampleA:"Kom ind i huset.",exampleB:"Gå ud i haven."},
   {wordA:"venstre",wordB:"højre",enA:"left",enB:"right",category:"Direction",difficulty:"Easy",exampleA:"Drej til venstre.",exampleB:"Drej til højre."},
-  {wordA:"nær",wordB:"fjern",enA:"near",enB:"far",category:"Direction",difficulty:"Medium",exampleA:"Skolen ligger nær.",exampleB:"Byen er fjern herfra."},
+  {wordA:"nær",wordB:"fjern",enA:"near",enB:"far",category:"Direction",difficulty:"Medium",exampleA:"Vi bor nær skolen.",exampleB:"Byen er fjern herfra."},
   {wordA:"over",wordB:"under",enA:"above",enB:"below",category:"Direction",difficulty:"Medium",exampleA:"Lampen hænger over bordet.",exampleB:"Katten sover under bordet."},
   {wordA:"foran",wordB:"bag",enA:"front",enB:"back",category:"Direction",difficulty:"Medium",exampleA:"Bilen holder foran huset.",exampleB:"Haven ligger bag huset."},
   {wordA:"god",wordB:"dårlig",enA:"good",enB:"bad",category:"Quality",difficulty:"Easy",exampleA:"Maden er god.",exampleB:"Vejret er dårligt."},
@@ -570,7 +570,7 @@ const ANTONYMS = [
   {wordA:"gavmild",wordB:"nærig",enA:"generous",enB:"stingy",category:"Personality",difficulty:"Hard",exampleA:"Han er meget gavmild.",exampleB:"Hun er lidt nærig."},
   {wordA:"ærlig",wordB:"uærlig",enA:"honest",enB:"dishonest",category:"Personality",difficulty:"Medium",exampleA:"Han er en ærlig mand.",exampleB:"Det er uærligt at lyve."},
   {wordA:"entusiastisk",wordB:"apatisk",enA:"enthusiastic",enB:"apathetic",category:"Personality",difficulty:"Hard",exampleA:"Hun var entusiastisk over jobbet.",exampleB:"Han virkede apatisk."},
-  {wordA:"ivrig",wordB:"modvillig",enA:"eager",enB:"reluctant",category:"Personality",difficulty:"Hard",exampleA:"Drengen var ivrig efter at starte.",exampleB:"Hun var modvillig til at hjælpe."},
+  {wordA:"ivrig",wordB:"modvillig",enA:"eager",enB:"reluctant",category:"Personality",difficulty:"Hard",exampleA:"Drengen var ivrig efter at starte.",exampleB:"Hun var modvillig og ville helst ikke hjælpe."},
   {wordA:"vinder",wordB:"taber",enA:"winner",enB:"loser",category:"Other",difficulty:"Medium",exampleA:"Hun blev kåret som vinder.",exampleB:"Han følte sig som en taber."},
   {wordA:"allieret",wordB:"fjendtlig",enA:"allied",enB:"hostile",category:"Other",difficulty:"Hard",exampleA:"Landene er allierede.",exampleB:"Stemningen var fjendtlig."},
   {wordA:"ven",wordB:"fjende",enA:"friend",enB:"enemy",category:"Other",difficulty:"Easy",exampleA:"Han er min bedste ven.",exampleB:"De blev fjender."},
@@ -705,7 +705,7 @@ const ANTONYMS = [
   {wordA:"pludselig",wordB:"langsom",enA:"sudden",enB:"slow",category:"Time",difficulty:"Medium",exampleA:"Det kom som et pludseligt chok.",exampleB:"Bedringen var langsom."},
   {wordA:"hurtig",wordB:"adstadig",enA:"rapid",enB:"leisurely",category:"Everyday adjectives",difficulty:"Hard",exampleA:"Udviklingen var hurtig.",exampleB:"De tog en adstadig gåtur."},
   {wordA:"rap",wordB:"træg",enA:"swift",enB:"sluggish",category:"Quality",difficulty:"Hard",exampleA:"Reaktionen var rap.",exampleB:"Systemet var trægt."},
-  {wordA:"prompte",wordB:"forsinket",enA:"prompt",enB:"tardy",category:"Quality",difficulty:"Hard",exampleA:"Han gav et prompte svar.",exampleB:"Toget var forsinket."},
+  {wordA:"prompte",wordB:"forsinket",enA:"prompt",enB:"tardy",category:"Quality",difficulty:"Hard",exampleA:"Hun svarede prompte på mailen.",exampleB:"Toget var forsinket."},
   {wordA:"miniature",wordB:"gigantisk",enA:"miniature",enB:"gigantic",category:"Size",difficulty:"Hard",exampleA:"Huset er bygget i miniature.",exampleB:"Bygningen er gigantisk."},
   {wordA:"spinkel",wordB:"overstørrelse",enA:"petite",enB:"oversized",category:"Size",difficulty:"Hard",exampleA:"Hun har en spinkel figur.",exampleB:"Trøjen er i overstørrelse."},
   {wordA:"bred",wordB:"begrænset",enA:"wide",enB:"restricted",category:"Size",difficulty:"Medium",exampleA:"Han har et bredt udvalg.",exampleB:"Adgangen er begrænset."},
@@ -736,7 +736,7 @@ const ANTONYMS = [
   {wordA:"tæt",wordB:"porøs",enA:"dense",enB:"porous",category:"Quality",difficulty:"Hard",exampleA:"Materialet er tæt.",exampleB:"Stenen er porøs."},
   {wordA:"ledende",wordB:"isolerende",enA:"conductive",enB:"insulating",category:"Quality",difficulty:"Hard",exampleA:"Metal er ledende.",exampleB:"Gummi er isolerende."},
   {wordA:"gennemtrængelig",wordB:"uigennemtrængelig",enA:"permeable",enB:"impermeable",category:"Quality",difficulty:"Hard",exampleA:"Stoffet er gennemtrængeligt.",exampleB:"Membranen er uigennemtrængelig."},
-  {wordA:"accelererende",wordB:"decelererende",enA:"accelerating",enB:"decelerating",category:"Movement",difficulty:"Hard",exampleA:"Bilen er accelererende.",exampleB:"Toget er decelererende."},
+  {wordA:"accelererende",wordB:"decelererende",enA:"accelerating",enB:"decelerating",category:"Movement",difficulty:"Hard",exampleA:"Den accelererende bil overhalede os.",exampleB:"Den decelererende bil nærmede sig lyskrydset."},
   {wordA:"stigende",wordB:"faldende",enA:"increasing",enB:"decreasing",category:"Movement",difficulty:"Medium",exampleA:"Temperaturen er stigende.",exampleB:"Salget er faldende."},
   {wordA:"eskalerende",wordB:"deeskalerende",enA:"escalating",enB:"deescalating",category:"Movement",difficulty:"Hard",exampleA:"Konflikten er eskalerende.",exampleB:"Situationen er deeskalerende."},
   {wordA:"konstant",wordB:"variabel",enA:"constant",enB:"variable",category:"Quality",difficulty:"Hard",exampleA:"Hastigheden er konstant.",exampleB:"Renten er variabel."},
@@ -937,7 +937,7 @@ function speakerBtn(text, cls){
   b.className = "speaker " + (cls||"");
   b.type = "button";
   b.innerHTML = '<svg viewBox="0 0 8 8" width="16" height="16" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><path fill="currentColor" d="M0 3h2V2h1V1h1v6H3V6H2V5H0zM5 2h1v1H5zM6 3h1v2H6zM5 5h1v1H5z"/></svg>';
-  b.setAttribute("aria-label","Pronounce");
+  b.setAttribute("aria-label","Udtal");
   b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
   return b;
 }
@@ -946,9 +946,17 @@ function speakerBtn(text, cls){
    5) NAVIGATION
    ============================================================ */
 const screens = ["dashboard","category","difficulty","play","summary","review","settings"];
-function showScreen(name){
+function focusEl(el){
+  if(!el) return;
+  try{ el.focus({preventScroll:true}); }catch(e){ try{ el.focus(); }catch(_){} }
+}
+function showScreen(name, noFocus){
   screens.forEach(s=>$("#screen-"+s).classList.toggle("hidden", s!==name));
   window.scrollTo({top:0,behavior:"smooth"});
+  /* focus after the screen is visible (US-031); the play screen focuses its own first control */
+  if(noFocus || name==="play") return;
+  const scr = $("#screen-"+name);
+  focusEl(name==="summary" ? $("#sumAgain") : scr.querySelector(".back-link, .mode-btn, .btn"));
 }
 
 /* ============================================================
@@ -1053,9 +1061,18 @@ function getPool(opts){
    ============================================================ */
 let session = null;
 const QUESTIONS_PER_ROUND = 10;
+/* Advance / summary timeouts are tracked so leaving a round can cancel them (US-041). */
+let pendingTimers = [];
+function later(fn, ms){
+  const id = setTimeout(()=>{ pendingTimers = pendingTimers.filter(t=>t!==id); fn(); }, ms);
+  pendingTimers.push(id);
+  return id;
+}
+function clearPending(){ pendingTimers.forEach(clearTimeout); pendingTimers = []; }
 
 function startSession(mode, opts){
   opts = opts || {};
+  clearPending();
   let pool = getPool(opts);
   if(pool.length < 1){
     toast("Ingen par matcher filteret endnu.");
@@ -1080,11 +1097,13 @@ function startSession(mode, opts){
 }
 
 function endSession(){
-  if(session && session.timerId){ clearInterval(session.timerId); }
+  clearPending();
+  if(session){ session.over = true; if(session.timerId){ clearInterval(session.timerId); } }
   if('speechSynthesis' in window) speechSynthesis.cancel();
 }
 
 function nextQuestion(){
+  if(!session || session.over) return;
   $("#feedbackArea").innerHTML = "";
   $("#nextWrap").classList.add("hidden");
 
@@ -1154,6 +1173,7 @@ function renderChoice(){
     });
     box.appendChild(b);
   });
+  focusEl(box.querySelector(".option"));
 }
 
 /* ---------- MODE 3: Reverse Translation ---------- */
@@ -1190,6 +1210,7 @@ function renderReverse(){
     });
     box.appendChild(b);
   });
+  focusEl(box.querySelector(".option"));
 }
 
 /* ---------- MODE 4: Missing Antonym (type the answer) ---------- */
@@ -1211,13 +1232,13 @@ function renderMissing(){
     <div class="typebox">
       <input id="answerInput" type="text" autocomplete="off" autocapitalize="off"
              spellcheck="false" placeholder="Skriv her…" />
-      <button class="btn" id="checkBtn">Check</button>
+      <button class="btn" id="checkBtn">Tjek</button>
     </div>`;
   $("#promptWord").appendChild(speakerBtn(shown,"sm"));
   if(session.mode!=="speed") speak(shown);
 
   const input = $("#answerInput");
-  input.focus();
+  focusEl(input);
   const submit = ()=>{
     const ok = acceptedNorm.includes(normalize(input.value));
     input.disabled = true; $("#checkBtn").disabled = true;
@@ -1225,7 +1246,7 @@ function renderMissing(){
     showFeedback(pair, ok);
   };
   $("#checkBtn").addEventListener("click", submit);
-  input.addEventListener("keydown", e=>{ if(e.key==="Enter") submit(); });
+  input.addEventListener("keydown", e=>{ if(e.key==="Enter"){ e.preventDefault(); if(!input.disabled) submit(); } });   // preventDefault: the Enter keypress must not also click the Fortsæt button that receives focus
 }
 
 /* ---------- MODE 2: Match Pairs ---------- */
@@ -1257,20 +1278,24 @@ function renderMatch(){
       if(el.classList.contains("done")) return;
       if(side==="L"){
         if(item.pair) speak(item.text);
+        $("#feedbackArea").innerHTML = "";
         clearSel("L"); el.classList.add("selected"); selected={el,item,side};
       }else{
         if(!selected){ el.classList.add("selected"); setTimeout(()=>el.classList.remove("selected"),200); return; }
         const ok = selected.item.k===item.k;
-        recordAnswer(item.pair, ok);
+        /* a miss is recorded against the prompted (left) word's pair, not the wrongly tapped partner */
+        recordAnswer(ok ? item.pair : selected.item.pair, ok);
         if(ok){
           el.classList.add("done"); selected.el.classList.add("done");
           selected=null; solved++;
-          if(solved===count) setTimeout(showSummary, 500);
+          if(solved===count) later(showSummary, 500);
         }else{
           el.classList.add("bad");
           const badL = selected.el; badL.classList.add("bad");
           setTimeout(()=>{el.classList.remove("bad","selected");badL.classList.remove("bad","selected");},400);
+          const missPair = selected.item.pair;
           selected=null;
+          showFeedback(missPair, false, true);
         }
       }
     });
@@ -1281,13 +1306,14 @@ function renderMatch(){
   const colL=$("#colL"), colR=$("#colR");
   left.forEach(it=>colL.appendChild(makeItem(it,"L")));
   right.forEach(it=>colR.appendChild(makeItem(it,"R")));
+  focusEl(colL.querySelector(".match-item"));
   // match mode has no per-question feedback panel
 }
 
 /* ============================================================
    10) FEEDBACK PANEL
    ============================================================ */
-function showFeedback(pair, ok){
+function showFeedback(pair, ok, inline){
   const fb = document.createElement("div");
   fb.className = "feedback " + (ok?"ok":"no");
 
@@ -1321,9 +1347,14 @@ function showFeedback(pair, ok){
   // speak the correct antonym
   speak(ok ? pair.wordB : (pair.wordA + ", " + pair.wordB));
 
+  if(inline){   // Find par: feedback stays beside the board, no Fortsæt / auto-advance
+    try{ fb.scrollIntoView({block:"nearest", behavior:"auto"}); }catch(e){}
+    return;
+  }
   if(session.mode==="speed"){
+    focusEl($("#feedbackArea"));   // answered controls are disabled: keep focus off <body>
     // auto-advance quickly in speed mode
-    setTimeout(()=>{ if(session && session.mode==="speed") nextQuestion(); }, 650);
+    later(()=>{ if(session && !session.over && session.mode==="speed") nextQuestion(); }, 650);
   }else{
     $("#nextWrap").classList.remove("hidden");
     revealNext();
@@ -1361,6 +1392,7 @@ function startSpeedTimer(){
     session.timeLeft--;
     el.textContent = session.timeLeft;
     el.classList.toggle("calm", session.timeLeft>10);
+    if(session.over){ clearInterval(session.timerId); return; }
     if(session.timeLeft<=0){
       clearInterval(session.timerId);
       // score = correct answers this round
@@ -1555,7 +1587,7 @@ function init(){
   updateDashboard();
   buildReview();
   // add a "Review" shortcut on dashboard via the mode menu already.
-  showScreen("dashboard");
+  showScreen("dashboard", true);
 
   // refresh daily streak display on load (without incrementing)
   const today = new Date().toDateString();

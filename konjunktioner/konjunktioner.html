@@ -315,11 +315,11 @@ footer{text-align:center;color:var(--muted);font-size:11px;margin-top:14px;font-
 <script>
 // ===== RULE DEFINITIONS (display word + explanation) =====
 const RULES = {
-  og:["og","<b>og</b> — hovedsætningskonjunktion. Betyder en <b>sideordning / tilføjelse</b>. Ordstilling efter: <b>SVA</b> (subjekt–verbum–adverbium).","A1"],
-  men:["men","<b>men</b> — hovedsætningskonjunktion. Betyder en <b>modsætning</b>. Ordstilling efter: <b>SVA</b>.","A1"],
-  eller:["eller","<b>eller</b> — hovedsætningskonjunktion. Betyder et <b>alternativ</b>. Ordstilling efter: <b>SVA</b>.","A1"],
-  for:["for","<b>for</b> — hovedsætningskonjunktion. Betyder en <b>forklaring</b>. Ordstilling efter: <b>SVA</b>.","A1"],
-  saa_k:["så","<b>så</b> — hovedsætningskonjunktion. Betyder en <b>konsekvens</b> (= derfor). Ordstilling efter: <b>SVA</b>.","A1"],
+  og:["og","<b>og</b> — hovedsætningskonjunktion. Betyder en <b>sideordning / tilføjelse</b>. Ordstilling efter: <b>hovedsætningsordstilling (V2)</b> – verbet står på 2. plads.","A1"],
+  men:["men","<b>men</b> — hovedsætningskonjunktion. Betyder en <b>modsætning</b>. Ordstilling efter: <b>hovedsætningsordstilling (V2)</b>.","A1"],
+  eller:["eller","<b>eller</b> — hovedsætningskonjunktion. Betyder et <b>alternativ</b>. Ordstilling efter: <b>hovedsætningsordstilling (V2)</b>.","A1"],
+  for:["for","<b>for</b> — hovedsætningskonjunktion. Betyder en <b>forklaring</b>. Ordstilling efter: <b>hovedsætningsordstilling (V2)</b>.","A1"],
+  saa_k:["så","<b>så</b> — hovedsætningskonjunktion. Betyder en <b>konsekvens</b> (= derfor). Ordstilling efter: <b>hovedsætningsordstilling (V2)</b>.","A1"],
   at:["at","<b>at</b> — bisætningskonjunktion. Indleder en <b>objektsætning</b>. Ordstilling: <b>SAV</b> (subjekt–adverbium–verbum).","A2"],
   om:["om","<b>om</b> — bisætningskonjunktion. Indleder en <b>spørgende bisætning</b> (ja/nej-spørgsmål). Ordstilling: <b>SAV</b>.","B1"],
   fordi:["fordi","<b>fordi</b> — bisætningskonjunktion. Betyder en <b>forklaring / årsag</b>. Ordstilling: <b>SAV</b>.","A2"],
@@ -554,7 +554,7 @@ const RAW = [
 ["siden","Vi har været venner, ___ vi var små.",["da","som","der"]],
 ["siden","Han har spillet klaver, ___ han var fem år.",["da","når","om"]],
 ["siden","Der er sket meget, ___ du rejste.",["da","som","hvis"]],
-["siden","Jeg har ikke spist sukker, ___ nytår.",["da","der","når"]],
+["siden","Jeg har ikke spist sukker, ___ vi fejrede nytår.",["da","der","når"]],
 ["siden","Byen har forandret sig, ___ jeg flyttede væk.",["da","når","om"]],
 // --- LEDSÆTNING: dengang ---
 ["dengang","Jeg besøgte ham tit, ___ jeg boede i USA.",["når","hvis","som"]],
@@ -598,12 +598,12 @@ const RAW = [
 ["som","Det er noget, ___ jeg aldrig vil glemme.",["der","om","når"]],
 // --- LEDSÆTNING: end (sammenligning) ---
 ["end","Jeg er bedre til tennis, ___ jeg er til badminton.",["som","der","at"]],
-["end","Han er højere, ___ sin storebror.",["som","når","om"]],
+["end","Han er højere ___ sin storebror.",["som","når","om"]],
 ["end","Det tog længere tid, ___ vi havde regnet med.",["som","der","hvis"]],
-["end","Hun løber hurtigere, ___ de fleste i klassen.",["som","at","om"]],
+["end","Hun løber hurtigere ___ de fleste i klassen.",["som","at","om"]],
 ["end","Bogen var bedre, ___ jeg havde forventet.",["som","der","når"]],
 ["end","Der kom flere gæster, ___ vi havde plads til.",["som","hvis","at"]],
-["end","Vinteren blev koldere, ___ sidste år.",["som","der","om"]],
+["end","Vinteren blev koldere ___ sidste år.",["som","der","om"]],
 ["end","Det er billigere at tage toget, ___ at flyve.",["som","når","at"]],
 // --- LEDSÆTNING: ligesom ---
 ["ligesom","Priserne stiger, ___ de gjorde sidste år.",["fordi","da","når"]],
@@ -611,7 +611,7 @@ const RAW = [
 ["ligesom","Det gik galt, ___ jeg havde frygtet.",["fordi","at","hvis"]],
 ["ligesom","Han klarer sig godt, ___ alle havde forudset.",["fordi","der","når"]],
 ["ligesom","Vejret blev dårligt, ___ meteorologerne sagde.",["fordi","da","om"]],
-["ligesom","Maden smagte præcis, ___ da bedstemor lavede den.",["fordi","der","hvis"]],
+["ligesom","Maden smagte præcis ___ da bedstemor lavede den.",["fordi","der","hvis"]],
 ["ligesom","Han synger godt, ___ hans far altid har gjort.",["fordi","at","når"]],
 ["ligesom","Festen blev en succes, ___ vi havde håbet.",["fordi","der","om"]],
 // --- LEDSÆTNING: hvis (betingelse) ---
@@ -977,7 +977,8 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Enter'){
     if(!$('startScreen').classList.contains('hidden')) start();
     else if(!$('overScreen').classList.contains('hidden')) start();
-    else if(answered && lives>0) nextQuestion();
+    else if(!$('reviewDoneScreen').classList.contains('hidden')) start();
+    else if(answered && (lives>0 || inReview)) nextQuestion();
   }
   if(answered) return;
   const n=parseInt(e.key);

@@ -261,7 +261,7 @@ function speakerBtn(text, cls){
     b.className = "speaker " + (cls||"");
     b.type = "button";
     b.textContent = "▶";
-    b.setAttribute("aria-label","Pronounce");
+    b.setAttribute("aria-label","Udtal");
     b.addEventListener("click", e=>{ e.stopPropagation(); speak(text); });
     return b;
 }
@@ -378,6 +378,8 @@ function buildCefrFilter() {
             if (!fv.includes(verbs[currentIndex])) {
                 currentIndex = verbs.indexOf(fv[0]);
             }
+            // US-043: never rest on an already-answered card (both buttons would be disabled)
+            if (!inReviewMode()) skipToUnanswered();
             renderAll();
         });
         filterRow.appendChild(btn);
@@ -385,6 +387,24 @@ function buildCefrFilter() {
 
     // Insert filter row between heading and verb list
     heading.insertAdjacentElement('afterend', filterRow);
+
+    // US-037: on small screens the sidebar sits below the card, so show the
+    // compact level-chip row above the card instead.
+    const mq = window.matchMedia ? window.matchMedia('(max-width: 480px)') : null;
+    function placeFilter() {
+        if (mq && mq.matches) {
+            const main = document.querySelector('.main-content');
+            const sb = main && main.querySelector('.scoreboard');
+            if (main && sb) main.insertBefore(filterRow, sb);
+        } else {
+            heading.insertAdjacentElement('afterend', filterRow);
+        }
+    }
+    if (mq) {
+        placeFilter();
+        if (mq.addEventListener) mq.addEventListener('change', placeFilter);
+        else if (mq.addListener) mq.addListener(placeFilter);
+    }
 }
 
 // Create and display the card for the current verb
@@ -459,11 +479,17 @@ function renderVerbList() {
     fv.forEach((verb) => {
         const index = verbs.indexOf(verb);
         const li = document.createElement('li');
-        li.textContent = verb.infinitive;
+        // US-043: keyboard-operable list item (real button inside the li)
+        const itemBtn = document.createElement('button');
+        itemBtn.type = 'button';
+        itemBtn.className = 'verb-item-btn';
+        itemBtn.textContent = verb.infinitive;
+        li.appendChild(itemBtn);
 
         // Determine status class
         if (index === currentIndex) {
             li.classList.add('now');
+            itemBtn.setAttribute('aria-current', 'true');
         } else if (fv.indexOf(verb) === fv.indexOf(verbs[currentIndex]) + 1) {
             li.classList.add('next');
         }
@@ -475,9 +501,12 @@ function renderVerbList() {
         }
 
         // Add click event to jump to card
-        li.addEventListener('click', () => {
+        itemBtn.addEventListener('click', () => {
             currentIndex = index;
             renderAll();
+            // renderAll rebuilds the list: keep keyboard focus on the chosen verb
+            const nowBtn = verbListEl.querySelector('li.now button');
+            if (nowBtn) nowBtn.focus();
         });
 
         verbListEl.appendChild(li);
@@ -544,33 +573,70 @@ function updateScoreboard() {
 
 // Render everything
 function renderAll() {
+    cancelAdvance();
     renderVerbList();
     renderCard();
     updateScoreboard();
 }
 
-// Move to the next card within the filtered set; if at the end, stay
-function goToNext() {
+// US-043: index of the next unanswered card in the filtered set after fromIdx
+// (wrapping around), or -1 when every card in the filter is answered.
+function nextUnanswered(fromIdx) {
     const fv = filteredVerbs();
-    const currentPosInFilter = fv.indexOf(verbs[currentIndex]);
-    if (currentPosInFilter < fv.length - 1) {
-        currentIndex = verbs.indexOf(fv[currentPosInFilter + 1]);
+    const pos = fv.indexOf(verbs[fromIdx]);
+    for (let k = 1; k <= fv.length; k++) {
+        const v = fv[(pos + k) % fv.length];
+        const idx = verbs.indexOf(v);
+        if (statuses[idx].status === 'unreviewed') return idx;
     }
+    return -1;
+}
+
+// If the current card is already answered, move to an unanswered one (if any)
+function skipToUnanswered() {
+    if (statuses[currentIndex].status === 'unreviewed') return;
+    const n = nextUnanswered(currentIndex);
+    if (n !== -1) currentIndex = n;
+}
+
+// Move to the next unanswered card within the filtered set; if none are left,
+// stay put (the "Bunken er færdig" panel is shown).
+function goToNext() {
+    const n = nextUnanswered(currentIndex);
+    if (n !== -1) currentIndex = n;
     renderAll();
+}
+
+// US-043: pending auto-advance. While one is pending, further answer clicks are ignored.
+let advanceTimer = null;
+let lastClickAccepted = false;   // read by the Sjovt hooks below
+function cancelAdvance() {
+    if (advanceTimer !== null) { clearTimeout(advanceTimer); advanceTimer = null; }
+    wrongBtn.classList.remove('disabled');
+    rightBtn.classList.remove('disabled');
+}
+function scheduleAdvance(fn) {
+    wrongBtn.classList.add('disabled');
+    rightBtn.classList.add('disabled');
+    advanceTimer = setTimeout(() => { advanceTimer = null; fn(); }, 1200);
 }
 
 // Handle marking as wrong — also auto-flips the card to reveal note
 wrongBtn.addEventListener('click', () => {
+    lastClickAccepted = false;
+    if (advanceTimer !== null) return;
     if (inReviewMode()) {
+        lastClickAccepted = true;
         // In review mode: verb stays 'wrong', flip to show answer, then advance
         const card = cardWrapper.querySelector('.flashcard');
         if (card && !card.classList.contains('is-flipped')) {
             card.classList.add('is-flipped');
         }
-        setTimeout(() => reviewGoToNext(), 1200);
+        scheduleAdvance(reviewGoToNext);
         return;
     }
     if (statuses[currentIndex].status === 'unreviewed') {
+        lastClickAccepted = true;
         statuses[currentIndex].status = 'wrong';
         wrongCount++;
         saveProgress();
@@ -580,13 +646,16 @@ wrongBtn.addEventListener('click', () => {
             card.classList.add('is-flipped');
         }
         // Delay advance so learner can read the note
-        setTimeout(() => goToNext(), 1200);
+        scheduleAdvance(goToNext);
     }
 });
 
 // Handle marking as correct
 rightBtn.addEventListener('click', () => {
+    lastClickAccepted = false;
+    if (advanceTimer !== null) return;
     if (inReviewMode()) {
+        lastClickAccepted = true;
         // Promote this verb from 'wrong' to 'correct' and advance
         if (statuses[currentIndex].status === 'wrong') {
             statuses[currentIndex].status = 'correct';
@@ -598,6 +667,7 @@ rightBtn.addEventListener('click', () => {
         return;
     }
     if (statuses[currentIndex].status === 'unreviewed') {
+        lastClickAccepted = true;
         statuses[currentIndex].status = 'correct';
         correctCount++;
         saveProgress();
@@ -648,6 +718,7 @@ window.addEventListener('DOMContentLoaded', () => {
     currentIndex = saved.currentIndex;
     correctCount = saved.correctCount;
     wrongCount = saved.wrongCount;
+    skipToUnanswered();
 
     renderAll();
     // Reflect persisted mistake state on the Review button
@@ -669,12 +740,12 @@ window.addEventListener('DOMContentLoaded', () => {
         fbEl.textContent = (ok ? '✓ ' : '✗ ') + text;
     }
     wrongBtn.addEventListener('click', () => {
-        if (wrongBtn.disabled) return;
+        if (wrongBtn.disabled || !lastClickAccepted) return;
         setFb(false, 'Markeret som forkert – kortet er vendt, så du kan studere det');
         if (S) S.fx.wrong(wrongBtn);
     });
     rightBtn.addEventListener('click', () => {
-        if (rightBtn.disabled) return;
+        if (rightBtn.disabled || !lastClickAccepted) return;
         setFb(true, 'Markeret som rigtigt');
         if (S) S.fx.correct(rightBtn);
     });

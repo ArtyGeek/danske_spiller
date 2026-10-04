@@ -68,7 +68,6 @@ html.sd-page .cat {
 }
 html.sd-page .cat > span:first-child { background: var(--sd-orange); color: #101010; padding: 4px 10px; box-shadow: var(--sd-box); margin: 4px; }
 html.sd-page .cat::before { display: none; }
-html.sd-page .cat .en { color: var(--sd-text-soft); letter-spacing: .02em; font-family: var(--sd-font-body); font-weight: 400; font-size: 14px; text-transform: none; }
 html.sd-page .sentence { font-family: var(--sd-font-body); font-size: clamp(18px, 4.6vw, 22px); line-height: 1.7; color: var(--sd-text); overflow-wrap: anywhere; }
 html.sd-page .speaker {
   width: 48px; height: 48px; border: 0; border-radius: 0; margin: 4px; font-family: var(--sd-font-display); font-weight: 700; font-size: 22px;
@@ -124,6 +123,15 @@ html.sd-page .weak-btn { background: var(--sd-cream); font-size: 15px; padding: 
 html.sd-page .weak-btn:hover { background: var(--sd-white); transform: translateY(-2px); box-shadow: var(--sd-box), var(--sd-bevel), 0 12px 0 -4px var(--sd-ink); }
 html.sd-page .back-btn { background: var(--sd-panel); color: var(--sd-text); font-size: 14px; padding: 8px 14px; margin: 4px 4px 10px; }
 html.sd-page .back-btn:hover { background: var(--sd-cream); color: #101010; }
+/* reset (US-030) */
+html.sd-page .tools { margin: 20px 4px 0; }
+html.sd-page .reset-btn {
+  border: 0; border-radius: 0; font-family: var(--sd-font-display); font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  background: var(--sd-panel); color: var(--sd-text); min-height: 48px; min-width: 48px; padding: 10px 16px; font-size: 14px; cursor: pointer;
+  box-shadow: var(--sd-box), 4px 4px 0 0 var(--sd-ink);
+}
+html.sd-page .reset-btn:hover { background: var(--sd-cream); color: #101010; }
+html.sd-page .reset-btn:active { transform: translate(2px, 2px); box-shadow: var(--sd-box); }
 html.sd-page .weak-banner {
   background: var(--sd-cream); color: #101010; border: 0; border-radius: 0; margin: 4px 4px 16px; padding: 12px 14px;
   box-shadow: var(--sd-box), 4px 4px 0 0 var(--sd-ink); font-size: 15px; letter-spacing: 0; font-family: var(--sd-font-body);
