@@ -1,0 +1,24 @@
+# Findings ledger (append-only)
+
+Each row: Example → Expected → Actual problem → Root cause → Fix → Regression test.
+Scope: sample-specific | candidate | generalizable. Status: open | adopted-pending-review | rejected | needs-native.
+
+| id | date | Example → Expected → Actual | Root cause | Fix | Regression | scope | n | status |
+|---|---|---|---|---|---|---|---|---|
+| F001 | 2026-10-03 | "kl. 19.00" → "klokken nitten" → engine reads "kl" as letters / "nitten komma nul nul" (tidsmaskinen data, ~33 strings) | raw data spoken, no normalisation | `DanskSpeech.normalize` time rule, wired into `DanskCore.tts` | speech.test.cjs `time-*` | generalizable via authority (Danish clock reading); n=33 is one template, counts once | 33 | adopted-pending-review |
+| F002 | 2026-10-03 | "den 24. juni" → "den fireogtyvende juni" → ordinal dot treated as sentence stop | no ordinal expansion | ordinal rule | `ord-*` | generalizable | 3+ | adopted-pending-review |
+| F003 | 2026-10-03 | "50 år" → "halvtreds år" → digits left to the voice's own number logic (vigesimal tens are a known engine failure) | no number expansion | `cardinal()` / `year()` | `num-*`, `year-*` | generalizable | 10+ | adopted-pending-review |
+| F004 | 2026-10-03 | gap "Nu … aftensmad" → short pause → "…" voiced or skipped | blank char passed to voice | blank → pause | `blank-*` | generalizable | 3 games | adopted-pending-review |
+| F005 | 2026-10-03 | explainer "en bil → bilen", "kan/skal/vil + verbum" → symbols inconsistently read | symbols passed raw | symbol rules; explainer `say()` now normalizes + ranks voice (both copies; `modal.js` loads the module) | `sym-*`, `sym-spaced-slash` | generalizable | 5 | adopted-pending-review |
+| F006 | 2026-10-03 | first `da-DK` voice chosen (may be legacy SAPI "Helle") → robotic voice instead of neural "Natural" | no voice-quality ranking | `rankVoices` used by `findVoice` | `voice-*` | generalizable (engine quality; no citation yet, needs one) | 1 | adopted-pending-review (core, 10 copies, explainer) |
+| F007 | 2026-10-03 | pronomenmysteriet data "Test sentence N." spoken as Danish | placeholder English data (760 items) | none: data issue for the owner | none | sample-specific | 760 | open |
+| F008 | 2026-10-03 | "Aarhus" → [ˈɒːhuːˀs] → my own `Aarhus→Århus` respelling (a guess that some engines say "aa-rhus") | unverified, voice-dependent respelling | REMOVED from lexicon (violates [verify] rule) | `lex-aarhus-untouched`, suite NA01/LS01 identity | candidate | 1 | needs-native (listen on target voice) |
+| F009 | 2026-10-03 | "EU" → my own `E U` respelling | same: letter-name rendering unverified | REMOVED | `abbr-eu-untouched` | candidate | 1 | needs-native |
+| F010 | 2026-10-03 | "bil, hus osv." → "…og så videre." → my expansion ate the sentence-final full stop (found by suite SM03/NU10) | abbreviation dot doubles as sentence end | keep "." when abbreviation ends the sentence (end of text or before a capital) | `abbr-osv`, SM03, NU10 | generalizable (punctuation drives falling intonation) | 2 | adopted-pending-review |
+| F011 | 2026-10-03 | "3,5 kg", "1/5", "03.10.2026", "d. 3. okt.", "12 34 56 78", "hans 3. forsøg" → suite rows exposed missing rules | normaliser gaps | date/phone/unit/ordinal rules | NU07–NU11, DA02–DA05 | six separate rules, one example each: treat each as candidate until a 2nd independent item or authority | 6 | adopted-pending-review (baseline) |
+| F012 | 2026-10-03 | "kl. 1" → "klokken et" → "klokken en" | cardinal reused for neuter-agreeing hour 1 | hour 1 → "et" | `time-bare`, TI02 | generalizable (rule) | 1 + rule | adopted-pending-review |
+| F013 | 2026-10-03 | "1/5 af eleverne", "24/7", "3/4 time" → fraction/pair → read as dates | d/m rule had no date context | date only with date word before or clause end after; else fraction/pair | `fraction`, `pair-24-7`, NG02/NG03 | generalizable | 3 | adopted-pending-review |
+| F014 | 2026-10-03 | "og/eller" → "og eller" → "og eller eller" | slash rule after word expansion | special-case before slash rule | `og-eller`, SY03 | generalizable | 1 | adopted-pending-review |
+| F015 | 2026-10-03 | "12 05 67 89" → "tolv nul fem …" → leading zero dropped | cardinal(+x) | zero-prefixed pair → "nul X" | `phone-zero`, NG04 | generalizable | 1 | adopted-pending-review |
+| F016 | 2026-10-03 | "2000-tallet" → "totusindtallet"; "80'erne" → "firserne"; "Svar 12. han kom" not an ordinal | century/decade/ordinal rules too broad or narrow | special-case 2000; 2-digit decades; ordinal whitelist of nouns | `century-2000`, `decade-2digit`, `neg-*`, `ord-gang-*` | generalizable | 4 | adopted-pending-review |
+| F017 | 2026-10-03 | no Danish voice → silent replay (looks broken); modal.js loaded normaliser racily | UX + load order | `ttsButton` no-voice state; modal.js waits for load | manual / code review | sample-specific (UI) | 2 | adopted-pending-review; Android untested |
