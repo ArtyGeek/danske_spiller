@@ -4,7 +4,7 @@ window.EXPLAINER_SCENE = {
   id: "adverbier-betydning",
   title: "hvad de betyder",
   level: "B1",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", words: ["Jeg kom for sent,", "men", "jeg nåede", "{3}", "mødet"], slots: { 3: { answer: "alligevel" } }, t: 2600 },
     { type: "highlight", word: 1, color: "Y", t: 1200 },

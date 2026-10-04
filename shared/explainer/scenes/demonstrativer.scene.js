@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "demonstrativer",
   title: "denne, dette, disse",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Hvad", "koster", "{2}", "bil"], slots: { 2: { answer: "denne" } } },
     { type: "highlight", t: 1200, word: 3, color: "Y" },

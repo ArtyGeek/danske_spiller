@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "gradboejning-mere-mest",
   title: "mere og mest",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Filmen", "er", "{2}", "spændende", "end", "bogen"], slots: { 2: { answer: "mere" } } },
     { type: "highlight", t: 1200, word: 4, color: "Y" },

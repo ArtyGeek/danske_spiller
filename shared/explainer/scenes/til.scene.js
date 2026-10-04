@@ -6,7 +6,7 @@ window.EXPLAINER_SCENE = {
   id: "til",
   title: "til: hvorhen?",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     // Part 1: sted (i) vs. retning (til)
     { type: "sentence", words: ["Jeg", "bor", "{2}", "København"], slots: { 2: { answer: "i" } }, t: 2200 },

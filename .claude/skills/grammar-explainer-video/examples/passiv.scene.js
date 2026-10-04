@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "passiv",
   title: "passiv: -s",
   level: "B1",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Maden", "{1}", "kun", "mellem", "11", "og", "13"], slots: { 1: { answer: "serveres" } } },
     { type: "highlight", t: 1200, word: 0, color: "Y" },

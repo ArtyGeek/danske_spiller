@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "konjunktioner-betydning",
   title: "og, men, fordi, så",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", words: ["Mor laver kaffe,", "{1}", "far smører brød"], slots: { 1: { answer: "og" } }, t: 2400 },
     { type: "try", slot: 1, word: "men", ok: false, t: 1800 },

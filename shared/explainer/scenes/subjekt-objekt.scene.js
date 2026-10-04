@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "subjekt-objekt",
   title: "han eller ham",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Hun", "hjælper", "{2}", "med", "lektierne"], slots: { 2: { answer: "ham" } } },
     { type: "highlight", t: 1200, word: 1, color: "Y" },

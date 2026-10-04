@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "at-infinitiv",
   title: "at + verbum",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Jeg", "prøver", "{2}", "lære", "dansk"], slots: { 2: { answer: "at" } } },
     { type: "highlight", t: 1200, words: [1, 3], color: "Y" },

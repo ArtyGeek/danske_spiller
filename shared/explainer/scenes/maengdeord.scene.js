@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "maengdeord",
   title: "mange eller meget",
   level: "A2",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Der", "er", "{2}", "mennesker", "i", "parken"], slots: { 2: { answer: "mange" } } },
     { type: "highlight", t: 1200, word: 3, color: "Y" },

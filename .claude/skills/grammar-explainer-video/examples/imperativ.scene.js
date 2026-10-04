@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "imperativ",
   title: "bydeform",
   level: "A1",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["{0}", "døren,", "tak"], slots: { 0: { answer: "Luk" } } },
     { type: "highlight", t: 1200, words: [1, 2], color: "Y" },

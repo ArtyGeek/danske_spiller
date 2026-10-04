@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "pluskvamperfektum",
   title: "pluskvamperfektum",
   level: "B1",
-  verify: false,
+  verify: true,
   steps: [
     { type: "sentence", t: 3000, words: ["Butikken", "{1}", "allerede,", "da", "vi", "kom"], slots: { 1: { answer: "havde lukket" } } },
     { type: "highlight", t: 1200, words: [3, 4, 5], color: "Y" },
