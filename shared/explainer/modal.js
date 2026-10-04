@@ -32,9 +32,16 @@
 
   function ensurePlayer() {
     var js = window.Explainer ? Promise.resolve() : new Promise(function (res, rej) {
-      var s = doc.createElement("script"); s.src = base + "explainer.js";
-      s.onload = res; s.onerror = function () { rej(new Error("explainer.js")); };
-      doc.head.appendChild(s);
+      function loadPlayer() {
+        var s = doc.createElement("script"); s.src = base + "explainer.js";
+        s.onload = res; s.onerror = function () { rej(new Error("explainer.js")); };
+        doc.head.appendChild(s);
+      }
+      if (window.DanskSpeech) return loadPlayer();
+      // optional speech normaliser: wait for it, but never block the player if it is missing
+      var ds = doc.createElement("script"); ds.src = base + "../dansk-speech.js";
+      ds.onload = ds.onerror = loadPlayer;
+      doc.head.appendChild(ds);
     });
     return Promise.all([js, ensureCss()]);
   }

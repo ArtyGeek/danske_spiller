@@ -199,8 +199,11 @@
       if (!ttsOn || !window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
       try {
         window.speechSynthesis.cancel();
-        var u = new window.SpeechSynthesisUtterance(text);
+        var DS = window.DanskSpeech, voices = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+        var u = new window.SpeechSynthesisUtterance(DS ? DS.normalize(text) : text);
         u.lang = "da-DK"; u.rate = 0.9;
+        var dv = DS && voices.length ? DS.pickVoice(voices) : null;
+        if (dv) u.voice = dv;
         window.speechSynthesis.speak(u);
       } catch (e) { /* tts is optional */ }
     }

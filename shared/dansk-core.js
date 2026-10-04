@@ -86,6 +86,12 @@
       return null;
     }
     if (!voices.length) return null;
+    var speech = window.DanskSpeech;
+    if (speech && speech.pickVoice) {
+      // Ranked: neural/"Natural" da-DK voices before legacy SAPI ones.
+      cachedVoice = speech.pickVoice(voices);
+      return cachedVoice;
+    }
     var exact = null;
     var partial = null;
     for (var i = 0; i < voices.length; i++) {
@@ -126,10 +132,14 @@
         return;
       }
       try {
-        window.speechSynthesis.cancel();
-        var utterance = new window.SpeechSynthesisUtterance(text);
-        utterance.lang = 'da-DK';
         var voice = findVoice();
+        var listLoaded = (window.speechSynthesis.getVoices() || []).length > 0;
+        // Voice list loaded but no Danish voice: a foreign voice reading Danish is worse than silence.
+        if (listLoaded && !voice && !options.allowForeignVoice) { resolve(); return; }
+        window.speechSynthesis.cancel();
+        var spoken = window.DanskSpeech && !options.raw ? window.DanskSpeech.normalize(text, options) : text;
+        var utterance = new window.SpeechSynthesisUtterance(spoken);
+        utterance.lang = 'da-DK';
         if (voice) utterance.voice = voice;
         utterance.rate = typeof options.rate === 'number' ? options.rate : 1;
         utterance.pitch = typeof options.pitch === 'number' ? options.pitch : 1;
@@ -160,7 +170,13 @@
       return ttsSpeak(lastSpokenText, lastSpokenOptions || {});
     },
     isAvailable: ttsAvailable,
-    findVoice: findVoice
+    findVoice: findVoice,
+    // true when a Danish voice is usable (or the voice list has not loaded yet); false = show a notice
+    hasDanishVoice: function () {
+      if (!ttsAvailable()) return false;
+      var n = (window.speechSynthesis.getVoices() || []).length;
+      return n === 0 || !!findVoice();
+    }
   };
 
   // ---------------------------------------------------------------------
@@ -594,6 +610,15 @@
     button.className = 'dc-tts-button';
     button.setAttribute('aria-label', 'Afspil igen');
     button.innerHTML = '<span aria-hidden="true">&#128266;</span>';
+    // Voice lists load asynchronously: re-check when they arrive. No Danish voice => say so instead of silence.
+    function syncVoiceState() {
+      var ok = DanskCore.tts.hasDanishVoice();
+      button.setAttribute('aria-label', ok ? 'Afspil igen' : 'Afspil igen (ingen dansk stemme fundet på denne enhed)');
+      button.title = ok ? '' : 'Ingen dansk stemme fundet på denne enhed';
+      button.style.opacity = ok ? '' : '0.5';
+    }
+    syncVoiceState();
+    try { window.speechSynthesis.addEventListener('voiceschanged', syncVoiceState); } catch (err) { /* optional */ }
     button.addEventListener('click', function () {
       DanskCore.tts.speak(text);
     });
