@@ -14,7 +14,19 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # claude-code-action rejects the push event, so re-run this workflow as workflow_dispatch.
+  dispatch:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run claude-conflicts.yml --repo "${{ github.repository }}" --ref master
+
   find:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: read
