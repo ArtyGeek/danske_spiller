@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "den-det-de",
   title: "den, det eller de",
   level: "A2",
-  verify: true,
+  verify: false,
   steps: [
     { type: "sentence", t: 3000, words: ["Jeg", "har", "en", "hund", "og", "{5}", "hedder", "Bo"], slots: { 5: { answer: "den" } } },
     { type: "highlight", t: 1200, word: 3, color: "Y" },

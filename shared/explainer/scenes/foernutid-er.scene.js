@@ -6,7 +6,7 @@ window.EXPLAINER_SCENE = {
   id: "foernutid-er",
   title: "er + tillægsform",
   level: "A2",
-  verify: true,
+  verify: false,
   steps: [
     { type: "sentence", t: 3000, words: ["Toget", "{1}", "kommet", "til", "tiden"], slots: { 1: { answer: "er" } } },
     { type: "highlight", t: 1200, word: 2, color: "Y" },

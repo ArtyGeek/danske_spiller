@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "gradboejning",
   title: "stor, større, størst",
   level: "A2",
-  verify: true,
+  verify: false,
   steps: [
     { type: "sentence", t: 3000, words: ["Huset", "er", "{2}", "end", "bilen"], slots: { 2: { answer: "større" } } },
     { type: "highlight", t: 1200, word: 3, color: "Y" },

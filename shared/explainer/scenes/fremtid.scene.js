@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "fremtid",
   title: "fremtid: skal",
   level: "A2",
-  verify: true,
+  verify: false,
   steps: [
     { type: "sentence", t: 3000, words: ["Jeg", "{1}", "på", "fredag"], slots: { 1: { answer: "skal rejse" } } },
     { type: "highlight", t: 1200, words: [2, 3], color: "Y" },

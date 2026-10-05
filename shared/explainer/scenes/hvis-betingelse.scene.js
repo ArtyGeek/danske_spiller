@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "hvis-betingelse",
   title: "hvis + nutid",
   level: "A2",
-  verify: true,
+  verify: false,
   steps: [
     { type: "sentence", t: 3000, words: ["Hvis", "jeg", "{2}", "tid,", "ringer", "jeg"], slots: { 2: { answer: "får" } } },
     { type: "highlight", t: 1200, word: 0, color: "Y" },

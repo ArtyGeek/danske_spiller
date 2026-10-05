@@ -5,7 +5,7 @@ window.EXPLAINER_SCENE = {
   id: "nogen-nogle-noget",
   title: "nogen, nogle, noget",
   level: "A2",
-  verify: true,
+  verify: false,
   steps: [
     { type: "sentence", t: 3000, words: ["Jeg", "har", "ikke", "{3}", "bil"], slots: { 3: { answer: "nogen" } } },
     { type: "highlight", t: 1200, word: 4, color: "Y" },

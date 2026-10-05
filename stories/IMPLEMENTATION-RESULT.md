@@ -153,3 +153,11 @@ Process incidents: two agents ran `taskkill` on `node.exe` (and `msedge.exe` onc
 **READY FOR FINAL MANUAL QA**
 
 All implementable P0/P1 stories are fixed; their machine-checkable criteria were independently verified and the final regression found no P0/P1 defects. It is **not READY TO PUBLISH**: (1) none of the changed Danish content has had native-speaker review (27 stories depend on it), (2) several pre-existing Major issues have no story yet (listed above), and (3) five stories and the frozen-file remainders await owner decisions or approval.
+
+## Update 2026-10-05: native review accepted, round 2 merged into the branch
+
+- **Native-speaker review:** the owner reports the reviewer accepted all changed Danish content, with no corrections (decision #14 in `stories/DECISIONS.md`). The 18 explainer scenes that were `verify:true` are now `verify:false`.
+- **Round 2** (`stories/QA-USER-STORIES-2.md`, plan `stories/IMPLEMENTATION-PLAN-2.md`): US-054, 055, 056, 057 implemented and independently VERIFIED, plus a cleanup batch; US-058..061 (content) remain READY FOR DEVELOPMENT.
+- **Story status now (53 stories in `QA-USER-STORIES.md`):** 43 VERIFIED, 2 VERIFIED-partial (US-050 portal slice and US-051 authoring are BLOCKED), 1 IMPLEMENTED BUT NOT VERIFIED (US-029: the small inline listen button is 32 px visible with a 44 px hit area), 2 IMPLEMENTED BUT NOT VERIFIED-partial (US-038, US-039: frozen-file remainder BLOCKED), 5 BLOCKED (US-026, 027, 040, 052, 053).
+- **Verdict:** the native-review condition is met; remaining work before publishing is the blocked stories (owner decisions / frozen files), US-058..061, and the pre-existing items listed above. Updated verdict: **READY FOR FINAL MANUAL QA** (manual play-through on real devices is the last step that was never done).
+- Pull requests: fork #3 (round 1, draft), fork #4 (round 2, stacked on #3), upstream **tasio1/danske_spiller#10** (both rounds, draft).
