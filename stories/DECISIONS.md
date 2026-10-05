@@ -12,3 +12,6 @@
 | 8 | En/Et mode icons do not always match their mode | US-032 | Re-pick the closest-fitting sprites from the existing shared library (no frozen file edits). TODO: implement. | 2026-10-04 |
 | 9 | Stale Sætningsmaskinen docs (1,020 vs 99 items) | US-051 | Update PROGRESS.md AND both specs files (`specs.md`, `improvement/specs.md`) to match the 99-item reality: the user explicitly approved editing the specs files for this change only. TODO: implement. | 2026-10-04 |
 | 10 | Tidsmaskinen: "six planned-future duplicates across modes" (list in `stories/implementation/D-TIDS-duplicates.md`) | US-050 | Keep all six duplicate pairs: no change (no learner-visible harm, no progress lost, no test changes). | 2026-10-04 |
+| 11 | New Danish UI strings from round 2 ("Næste", "Lyt til ordet", "Lyt til sætningen", "Lyt til hele sætningen", "Fortsæt →") | US-056, US-057 | Approved by the owner's review ("Good"). | 2026-10-05 |
+| 12 | Dansk Mester timed mode (Tidsudfordring) still advances 1.5 s after a wrong answer or timeout (countdown is per question and already stopped) | US-057 | Leave as is: timed mode stays a fast drill; no wait-for-Fortsæt, no mistakes list. | 2026-10-05 |
+| 13 | Tidsmaskinen spec-test row "correct: auto-advance 700-1000 ms" is flaky (can exceed 1000 ms) | tests | Accepted as is (OK). | 2026-10-05 |
