@@ -1,15 +1,21 @@
-// Functional spec for tidsmaskinen. Run from the worktree cwd:
+// Functional spec for tidsmaskinen. The game file is resolved relative to this script (<repo>/tidsmaskinen/index.html),
+// so it can be started from any cwd; only --shots uses a cwd-relative default (set SHOT_ROOT otherwise).
+// Dump files (tids-content.json, tids-rounds.json, tids-dumps.json) go to OUT, default <os tmpdir>/tids-spectest (never the repo); the path is printed.
 //   cd <worktree> && SHOT_ROOT=<main>/docs/redesign/screenshots OUT=<dir> node <main>/tests/tidsmaskinen.mjs [--shots] [--only=a,b,c]
 // Sections: boot, rounds, unlock, timed, persist, kbd, layout, theme, root
 import { launch, openGame, sleep, hasHorizontalOverflow, smallTapTargets, focusRingProblems, unlabelledButtons, shot } from './lib/harness.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
+import { fileURLToPath } from 'node:url';
 
-const FILE = 'tidsmaskinen/index.html';
+const FILE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'tidsmaskinen', 'index.html');
 const SHOTS = process.argv.includes('--shots');
 const ONLY = (process.argv.find(a => a.startsWith('--only=')) || '').replace('--only=', '').split(',').filter(Boolean);
 const want = s => !ONLY.length || ONLY.includes(s);
-const OUT = process.env.OUT || '.';
+const OUT = process.env.OUT || path.join(os.tmpdir(), 'tids-spectest');
+fs.mkdirSync(OUT, { recursive: true });
+console.log('NOTE dump files are written to ' + OUT);
 const MODES = ['present_vs_preterite','preterite_vs_perfect','pluperfect','future','modal','conditional','infinitive','passive','imperative'];
 const POOLS = [120,180,100,140,180,140,140,180,80];
 const results = [];
@@ -526,7 +532,7 @@ try {
     const el = Date.now() - t0;
     rec('timed: real expiry after ~20 s shows "Tiden er gået" + answer + one note, waits', slip && /Tiden er gået/.test(slip.text) && /Rigtigt svar: \S/.test(slip.text) && slip.notes === 1 && el >= 19000 && el <= 22500, JSON.stringify({ el, slip }));
     const srsAfter = await srsDump(page);
-    rec('timed expiry: no SRS write (item key + pattern + counts unchanged)', JSON.stringify(srsBefore) === JSON.stringify(srsAfter) && !(srsAfter.items[key]), `key present=${!!srsAfter.items[key]}`);
+    rec('timed expiry: no SRS write (item key + pattern + counts unchanged)', JSON.stringify(srsBefore) === JSON.stringify(srsAfter) && JSON.stringify(srsBefore?.items?.[key] ?? null) === JSON.stringify(srsAfter?.items?.[key] ?? null), `key before=${JSON.stringify(srsBefore?.items?.[key] ?? null)} after=${JSON.stringify(srsAfter?.items?.[key] ?? null)}`);
     const optsDis = await page.$$eval('#item-host .opt', ns => ns.every(n => n.disabled));
     const revealed = await page.$$eval('#item-host .opt.reveal-correct', ns => ns.length);
     rec('timed expiry: options locked and correct option revealed', optsDis && revealed === 1, `dis=${optsDis} reveal=${revealed}`);

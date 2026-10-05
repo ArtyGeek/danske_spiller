@@ -286,3 +286,5 @@ html.sd-page .sd-conf { z-index: 1; }
 html.sd-page #app { position: relative; z-index: 2; }
 html.sd-page .section-title, html.sd-page .badge .t, html.sd-page .menu-grid .btn { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
 html.sd-page .panel.center .row { flex-wrap: wrap; }
+
+html.sd-page h2.section-title[tabindex="-1"]:focus { outline: none; }

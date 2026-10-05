@@ -1018,6 +1018,19 @@ function finishAnswer(correct,msg){
   }
   if(G._ask==='en2da') fb.appendChild(speakerBtn(G._answer));
   G.idx++;
+  if(!correct && cfg.mode!=='timed'){
+    // US-057: wrong answer waits for the learner (note stays until "Fortsæt →")
+    const cb=document.createElement("button");
+    cb.type="button"; cb.className="btn"; cb.id="btn-continue-q";
+    cb.style.cssText="display:block;margin:10px auto 0;scroll-margin-bottom:16px";
+    cb.textContent="Fortsæt →";
+    cb.addEventListener("click",()=>{ if(G&&$("#gamewrap")) nextQuestion(); });
+    fb.appendChild(cb);
+    try{cb.focus({preventScroll:true});}catch(e){}
+    const rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+    try{cb.scrollIntoView({block:"nearest",behavior:rm?"auto":"smooth"});}catch(e){}
+    return;
+  }
   G._adv=setTimeout(()=>{G._adv=null;nextQuestion();}, correct?750:1500);
 }
 
@@ -1139,7 +1152,7 @@ function finishMatch(){
   // Build Continue button with closure over ret (avoids JSON.stringify in inline onclick)
   const matchContinueBtn=document.createElement("button");
   matchContinueBtn.className="btn";
-  matchContinueBtn.textContent="Fortsæt ▸";
+  matchContinueBtn.textContent="Fortsæt →";
   const matchRet=G.cfg.ret;
   matchContinueBtn.addEventListener("click",()=>go(matchRet.name,matchRet));
   document.getElementById("matchContinueRow").appendChild(matchContinueBtn);
@@ -1191,7 +1204,7 @@ function finishGame(){
   finishRow.appendChild(retryBtn);
   const contBtn=document.createElement("button");
   contBtn.className="btn secondary";
-  contBtn.textContent="Fortsæt ▸";
+  contBtn.textContent="Fortsæt →";
   const finishRet=G.cfg.ret;
   contBtn.addEventListener("click",()=>go(finishRet.name,finishRet));
   finishRow.appendChild(contBtn);

@@ -538,14 +538,16 @@
       },
     ];
 
-    // Define categories used in the Fluency Map
+    // Define categories used in the Fluency Map.
+    // unlockLevel = the level index (see `levels` below) a zone needs; it is set per zone and never derived from the
+    // zone's position, so hiding or adding zones cannot make one unreachable. It is clamped to the top level in populateMap().
     const zones = [
-      { id: "time", name: "Tid", filter: (entry) => /Time/.test(entry.category) },
-      { id: "place", name: "Sted", filter: (entry) => /Place/.test(entry.category) },
-      { id: "manner", name: "Måde", filter: (entry) => /Manner/.test(entry.category) },
-      { id: "frequency", name: "Frekvens", filter: (entry) => /Frequency/.test(entry.category) },
-      { id: "connector", name: "Bindeord", filter: (entry) => /conjunction/i.test(entry.category) },
-      { id: "order", name: "Sætningsbygning", filter: (entry) => true }, // fallback
+      { id: "time", name: "Tid", unlockLevel: 0, filter: (entry) => /Time/.test(entry.category) },
+      { id: "place", name: "Sted", unlockLevel: 1, filter: (entry) => /Place/.test(entry.category) },
+      { id: "manner", name: "Måde", unlockLevel: 2, filter: (entry) => /Manner/.test(entry.category) },
+      { id: "frequency", name: "Frekvens", unlockLevel: 3, filter: (entry) => /Frequency/.test(entry.category) },
+      { id: "connector", name: "Bindeord", unlockLevel: 4, filter: (entry) => /conjunction/i.test(entry.category) },
+      { id: "order", name: "Sætningsbygning", unlockLevel: 4, filter: (entry) => true }, // fallback; unlocks at the top level
     ];
 
     // Progress object to track scores, levels, etc.
@@ -695,13 +697,13 @@
       map.innerHTML = "";
       zones.forEach((zone) => {
         // Never offer a topic without entries; it reappears once the data has some.
-        // (Unlock level below still uses the zone's position in the full list.)
+        // (Unlock level is per zone, see `zones`.)
         if (!dataset.some(zone.filter)) return;
         const btn = document.createElement("button");
         btn.textContent = zone.name;
         btn.dataset.zone = zone.id;
         // Determine completion or locked status based on level
-        const levelUnlock = zones.indexOf(zone);
+        const levelUnlock = Math.min(zone.unlockLevel, levels.length - 1);
         if (progress.level < levelUnlock) {
           btn.classList.add("locked");
           btn.disabled = true;
@@ -758,20 +760,32 @@
     // Render the blank ("______") as a shared .sd-gap placeholder
     function appendGapText(p, sentence) {
       sentence.split("______").forEach((part, i) => {
+        let tail = part;
         if (i > 0) {
           const g = document.createElement("span");
           g.className = "sd-gap";
           g.setAttribute("role", "img");
           g.setAttribute("aria-label", "mellemrum");
-          p.appendChild(g);
+          // Keep punctuation that directly follows the blank (e.g. the final ".") on the blank's line
+          const m = /^[^\s\p{L}\p{N}]+/u.exec(part);
+          if (m) {
+            const keep = document.createElement("span");
+            keep.style.whiteSpace = "nowrap";
+            keep.appendChild(g);
+            keep.appendChild(document.createTextNode(m[0]));
+            p.appendChild(keep);
+            tail = part.slice(m[0].length);
+          } else {
+            p.appendChild(g);
+          }
         }
-        if (part) p.appendChild(document.createTextNode(part));
+        if (tail) p.appendChild(document.createTextNode(tail));
       });
     }
 
-    function addTts(container, text) {
+    function addTts(container, text, label) {
       if (!window.DanskCore || !DanskCore.ui || !DanskCore.ui.ttsButton || !container) return null;
-      return DanskCore.ui.ttsButton(text, container);
+      return DanskCore.ui.ttsButton(text, container, label);
     }
 
     function spokenGap(sentence) {
@@ -889,11 +903,33 @@
           break;
       }
       awaitingAnswer = true;
+      if (userActive) scrollGameIntoView();
       focusFirstControl();
     }
 
     // Move keyboard focus to the first answer control after a render (only once the learner has interacted,
     // so the page does not grab focus on load). Never leaves focus on BODY after the old buttons are replaced.
+    // Scroll helpers that respect the sticky MENU bar (measured, not the token: the rendered bar is taller than --sd-bar-h).
+    function stickyBarH() {
+      const b = document.querySelector(".sd-bar");
+      return b ? Math.ceil(b.getBoundingClientRect().height) : 0;
+    }
+    function scrollFeedbackIntoView() {
+      const fb = document.getElementById("feedback");
+      if (!fb) return;
+      const h = stickyBarH() + 12, vh = window.innerHeight;
+      const r = fb.getBoundingClientRect();
+      let d = 0;
+      if (r.bottom > vh - 16) d = r.bottom - (vh - 16);
+      if (r.top - d < h) d = r.top - h;
+      if (Math.abs(d) > 0.5) window.scrollBy(0, d);
+    }
+    function scrollGameIntoView() {
+      const g = document.getElementById("game");
+      if (!g) return;
+      const h = stickyBarH() + 8, r = g.getBoundingClientRect();
+      if (r.top < h) window.scrollBy(0, r.top - h);
+    }
     function focusFirstControl() {
       if (!userActive) return;
       const first = document.querySelector("#options button, #reorderParts button");
@@ -961,7 +997,7 @@
       row.className = "tts-row";
       p.appendChild(row);
       content.appendChild(p);
-      addTts(row, currentEntry.word);
+      addTts(row, currentEntry.word, "Lyt til ordet");
       // Build options: correct meaning + random wrong options
       currentOptions = shuffle([currentEntry.meaning].concat(distractors("meaning", 3)));
       addOptionButtons(optionsDiv, currentOptions, (opt) => opt === currentEntry.meaning);
@@ -976,7 +1012,7 @@
       p.appendChild(row);
       content.appendChild(p);
       // The audio skips the blank so it never gives the answer away
-      addTts(row, spokenGap(gapSentence));
+      addTts(row, spokenGap(gapSentence), "Lyt til sætningen");
       currentOptions = shuffle([currentEntry.word].concat(distractors("word", 3)));
       addOptionButtons(optionsDiv, currentOptions, (opt) => opt === currentEntry.word);
     }
@@ -1100,7 +1136,7 @@
       row.className = "tts-row";
       p.appendChild(row);
       content.appendChild(p);
-      addTts(row, currentEntry.word);
+      addTts(row, currentEntry.word, "Lyt til ordet");
       const correctCat = categoryKey(currentEntry.category);
       CATEGORY_BUTTONS.forEach((c) => {
         const btn = document.createElement("button");
@@ -1120,7 +1156,7 @@
       row.className = "tts-row";
       p.appendChild(row);
       content.appendChild(p);
-      addTts(row, spokenGap(gapSentence));
+      addTts(row, spokenGap(gapSentence), "Lyt til sætningen");
       // Options: the target word plus other connectors
       const conj = dataset.filter((e) => /conjunction/i.test(e.category));
       currentOptions = shuffle([currentEntry.word].concat(distractors("word", 3, conj)));
@@ -1139,7 +1175,7 @@
       row.className = "tts-row";
       p.appendChild(row);
       content.appendChild(p);
-      addTts(row, currentEntry.sentence_da);
+      addTts(row, currentEntry.sentence_da, "Lyt til sætningen");
       // Distractors must not occur in the spoken sentence
       const inSentence = (e) => !sentenceHasWord(currentEntry.sentence_da, e.word);
       currentOptions = shuffle([currentEntry.word].concat(distractors("word", 3, dataset, inSentence)));
@@ -1259,10 +1295,10 @@
         explanation.appendChild(r);
         return r;
       })();
-      addTts(row, currentEntry.sentence_da);
-      // After a delay, load the next question automatically
+      addTts(row, currentEntry.sentence_da, "Lyt til hele sætningen");
       clearTimeout(advanceTimer);
-      advanceTimer = setTimeout(() => {
+      const advance = () => {
+        clearTimeout(advanceTimer);
         if (reviewActive) {
           // If wrong, push the item back to the end of the queue
           if (!correct) reviewQueue.push({ entry: currentEntry, mode: currentMode });
@@ -1276,7 +1312,25 @@
         }
         updateDashboard();
         populateMap();
-      }, 2000);
+      };
+      if (correct) {
+        // A correct answer keeps the short automatic advance.
+        advanceTimer = setTimeout(advance, 2000);
+      } else {
+        // A wrong answer waits for the learner: answer, note and replay stay in view until "Næste".
+        updateDashboard();
+        populateMap();
+        const next = document.createElement("button");
+        next.type = "button";
+        next.id = "nextBtn";
+        next.className = "fb-next";
+        next.textContent = "Næste";
+        next.addEventListener("click", advance);
+        feedback.appendChild(next);
+        try { next.focus({ preventScroll: true }); } catch (e) { next.focus(); }
+        scrollFeedbackIntoView();
+        // The feedback box is styled (padding, icon) by the hook below; it scrolls the box into view afterwards.
+      }
     }
 
     function updateLevel() {
@@ -1567,6 +1621,7 @@
         if (!was) return;
         var fb = document.getElementById("feedback");
         if (fb) fb.className = correct ? "fb-ok" : "fb-bad";
+        if (fb && !correct) { try { scrollFeedbackIntoView(); } catch (e) { /* optional */ } }
         if (correct) { S.fx.correct(last); }
         else {
           S.fx.wrong(last);

@@ -2,6 +2,8 @@
 //   cd <worktree> && SHOT_ROOT=<main>/docs/redesign/screenshots node <main>/tests/pronomenmysteriet.mjs [--shots]
 import { launch, openGame, sleep, hasHorizontalOverflow, smallTapTargets, shot } from './lib/harness.mjs';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const FILE = 'pronomenmysteriet/index.html';
@@ -218,8 +220,12 @@ try {
   rec('Escape returns to start', await page.$eval('#start-screen', n => !n.classList.contains('hidden')), '');
   // Space on focused chip
   await page.focus('#level-list .chip:nth-child(2)'); await page.keyboard.press('Space');
-  const sp = await page.$eval('#level-list .chip:nth-child(2)', n => n.getAttribute('aria-pressed'));
-  rec('Space toggles a chip', sp === 'true', sp);
+  // All level chips start pressed, so the first Space correctly un-presses chip 2; a second Space presses it again.
+  const chip2 = () => page.$eval('#level-list .chip:nth-child(2)', n => n.getAttribute('aria-pressed'));
+  const spOff = await chip2();
+  await page.keyboard.press('Space');
+  const spOn = await chip2();
+  rec('Space toggles a chip (true -> false -> true)', spOff === 'false' && spOn === 'true', `after 1st Space=${spOff}; after 2nd=${spOn}`);
 
   // ---------- mute
   await page.evaluate(() => localStorage.clear());
@@ -287,6 +293,9 @@ try {
   }
 } catch (e) { rec('SPEC CRASH', false, e.stack); }
 await browser.close();
-fs.writeFileSync(process.env.OUT || 'pm-items.json', JSON.stringify(shownItems, null, 1));
+// Dump of every shown item: OUT overrides; default is the OS temp dir so nothing is written into the repo.
+const outFile = process.env.OUT || path.join(os.tmpdir(), 'pm-items.json');
+fs.writeFileSync(outFile, JSON.stringify(shownItems, null, 1));
+console.log('items dump written to ' + outFile);
 console.log(`\n${results.filter(r => r.ok).length}/${results.length} passed`);
 process.exit(results.some(r => !r.ok) ? 1 : 0);

@@ -16,10 +16,10 @@
 
 | Story | Priority | Area | Games | Dependency | Status |
 |---|---|---|---|---|---|
-| US-054 | P1 | Gameplay | Adverbier | none | READY FOR DEVELOPMENT |
-| US-055 | P1 | UI / Mobile | Magiske Verber, Idiomjæger | none (reuse the US-013 pattern) | READY FOR DEVELOPMENT |
-| US-056 | P1 | Gameplay / UI | Adverbier | none | READY FOR DEVELOPMENT |
-| US-057 | P1 | Gameplay / UI | Dansk Mester | none | READY FOR DEVELOPMENT |
+| US-054 | P1 | Gameplay | Adverbier | none | VERIFIED |
+| US-055 | P1 | UI / Mobile | Magiske Verber, Idiomjæger | none (reuse the US-013 pattern) | VERIFIED |
+| US-056 | P1 | Gameplay / UI | Adverbier | none | VERIFIED |
+| US-057 | P1 | Gameplay / UI | Dansk Mester | none | VERIFIED |
 | US-058 | P1 | Language | Tidsmaskinen | native sign-off | READY FOR DEVELOPMENT |
 | US-059 | P1 | Language / Gameplay | Præpositioner | native sign-off | READY FOR DEVELOPMENT |
 | US-060 | P1 | Language | Konjunktioner | native sign-off | READY FOR DEVELOPMENT |
@@ -75,7 +75,7 @@ None.
 **Validation:**  
 Seed progress at each level 0 to 4 and check which zones are locked; start a round in the last zone and answer to completion; run smoke.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -130,7 +130,7 @@ Scroll the feedback block into view (`block:'nearest'`) after it is shown, then 
 **Validation:**  
 The same measurement script as `VERIFY-US-013-prep.md`: bounding rects of feedback and Næste after answers, at three viewports, normal and reduced motion.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -181,7 +181,7 @@ Skip scheduling `advanceTimer` when the answer is wrong, show a Næste control (
 **Validation:**  
 Answer wrongly in each mode at the three viewports; measure the note's rect; wait more than 2 seconds and confirm the question is unchanged; press Næste.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 
@@ -232,7 +232,7 @@ Don't schedule `G._adv` for the wrong path; show a continue control and scroll t
 **Validation:**  
 Wrong answers in flervalg, vendekort and blandet modes at the three viewports; measure the note rect; wait 3 seconds; continue via keyboard.
 
-**Status:** READY FOR DEVELOPMENT
+**Status:** VERIFIED
 
 ---
 

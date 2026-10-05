@@ -691,6 +691,8 @@ restartBtn.addEventListener('click', () => {
     wrongCount = 0;
     saveProgress();
     renderAll();
+    const sdFb = document.getElementById('sd-fb');
+    if (sdFb) { sdFb.className = 'sd-fb-line'; sdFb.textContent = ''; }
 });
 
 // Enter review mode when "Review Mistakes" is clicked
@@ -748,7 +750,7 @@ window.addEventListener('DOMContentLoaded', () => {
         setFb(true, 'Markeret som rigtigt');
         if (S) S.fx.correct(rightBtn);
     });
-    restartBtn.addEventListener('click', () => { if (fbEl) { fbEl.className = 'sd-fb-line'; fbEl.textContent = ''; } });
+    // Feedback line is cleared inside the restart handler, only after the reset is confirmed.
 
     const baseUpdate = updateScoreboard;
     updateScoreboard = function () {

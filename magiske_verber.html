@@ -196,9 +196,7 @@ h1{
   color:#fbf3e0;font-weight:400;text-shadow:0 1px 10px rgba(0,0,0,.5);
 }
 .q-prompt .pre{display:block;color:var(--muted);font-size:.78em;font-style:italic;margin-bottom:6px}
-.q-prompt .blank{color:var(--gold2);font-weight:500;border-bottom:3px dotted var(--gold);padding:0 6px}
 .q-chain{font-family:var(--heading);letter-spacing:1px}
-.q-chain .blank{color:var(--gold2)}
 
 /* TTS button: shared/tts-button.css */
 .q-prompt-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
@@ -993,7 +991,24 @@ function answer(i, el){
     $('nextBtn').textContent = last ? 'Se resultat →' : 'Næste →';
     /* US-031: focus moves to Næste so Enter advances (also after a mouse click on an option) */
     try{ $('nextBtn').focus({preventScroll:true}); }catch(e){}
+    revealNext();
   }
+}
+
+/* US-055: bring the feedback block and Næste into view after an answer (instant under reduced motion) */
+function revealNext(){
+  const btn=$('nextBtn'), fb=$('feedback');
+  const reduce = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) || document.documentElement.getAttribute('data-sd-motion')==='off';
+  const behavior = reduce ? 'auto' : 'smooth';
+  try{
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    const fbTop = fb.getBoundingClientRect().top;
+    const btnBottom = btn.getBoundingClientRect().bottom;
+    const need = Math.max(0, btnBottom - vh + 12);   // scroll down just enough to show Næste
+    const maxUp = Math.max(0, fbTop - 64);           // keep the feedback top below the MENU bar
+    if(need>maxUp) btn.scrollIntoView({block:'nearest', behavior});  // too tall: Næste wins
+    else if(need>0) window.scrollBy({top:need, behavior});
+  }catch(e){ try{ btn.scrollIntoView({block:'nearest'}); }catch(_){} }
 }
 
 function recordResult(q, correct){
