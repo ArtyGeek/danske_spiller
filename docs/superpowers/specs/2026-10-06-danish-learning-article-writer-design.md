@@ -146,6 +146,26 @@ Then write the skill against the observed failures and re-run. The cut-don't-hed
 wording micro-tests (5+ reps against a no-guidance control), since it is the rule most exposed
 to negotiation under deadline pressure.
 
+## Changes after baseline testing (2026-10-06)
+
+The RED phase contradicted parts of this design. Implementation follows the evidence; see
+`CHANGELOG.md` 0.1.0 and ledger A001-A007.
+
+- **Cut:** the da/en equivalence prose section (A006) and the broad research mandate (A007).
+  Both predicted failures did not reproduce in the no-guidance control, so no guidance was
+  written against them. Mechanical parity checks stay in the linter.
+- **Narrowed:** the research rule now targets what reaches the reader under pressure, not
+  whether the writer searches. The core rule is "the reader gets the same uncertainty the editor
+  gets" — the observed failure was hedged publication of knowingly unverified facts, not
+  fabrication.
+- **Added:** `verified: fetched|search-extract|derived` per claim, with `fetched` plus an
+  authority host required for fee/rule/date/deadline claims (A002); `kind: derived` with `from`
+  for the writer's own arithmetic (A003).
+- **Changed:** LIX is a **ceiling, not a band** — the two-sided band failed clear prose at LIX 19
+  (da) and 14 (en), and English LIX runs structurally lower than Danish (A005).
+- **Fixed:** authority hosts match exactly, never by suffix; `sprogskolen.kolding.dk` is a school
+  on a kommune domain, not the kommune (A004).
+
 ## Out of scope
 
 HTML generation, `sitemap.xml`, canonical/hreflang tags, JSON-LD, image creation, publishing
