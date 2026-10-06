@@ -86,7 +86,7 @@ body{
   display:flex;align-items:center;gap:10px;
   padding:6px 2px 14px;
 }
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;letter-spacing:.3px}
+.brand{margin:0;display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;letter-spacing:.3px}
 .brand .flag{
   width:34px;height:24px;border-radius:5px;overflow:hidden;flex:none;
   background:
@@ -323,6 +323,7 @@ body{
 <link rel="stylesheet" href="../shared/sd-extras.css">
 </head>
 <body>
+<nav class="sd-bar" aria-label="Sjovt Dansk" data-sd-static><a class="sd-bar-home" href="../index.html">← MENU</a></nav>
 <div id="toast" role="status" aria-live="polite"></div>
 <div id="app"></div>
 
@@ -750,7 +751,7 @@ function filterItems(items){
 
 function topbar(){
   return `<div class="topbar">
-    <div class="brand"><span data-sd-sprite="snak" data-scale="3" aria-hidden="true"></span> Dansk Mester</div>
+    <h1 class="brand"><span data-sd-sprite="snak" data-scale="3" aria-hidden="true"></span> Dansk Mester</h1>
     <div class="spacer"></div>
     <div class="stat-chip xp" role="img" aria-label="XP: ${P.xp}"><span class="ico" data-sd-sprite="stjerne" data-scale="2" aria-hidden="true"></span><span aria-hidden="true">${P.xp}</span></div>
     <div class="stat-chip streak" role="img" aria-label="Dage i træk: ${P.currentStreak}"><span class="ico" data-sd-sprite="molle" data-scale="2" aria-hidden="true"></span><span aria-hidden="true">${P.currentStreak}</span></div>

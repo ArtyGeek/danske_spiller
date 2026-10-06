@@ -37,6 +37,9 @@ jobs:
       - name: Speech normaliser tests
         run: node tests/speech.test.cjs
 
+      - name: SEO static checks
+        run: node tests/seo-static.mjs
+
       - name: Syntax-check JavaScript
         run: |
           set -euo pipefail

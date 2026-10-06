@@ -6,7 +6,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 DIRS=(
-  "boejningsvaerkstedet" "danish_flashcards" "danske-phraser" "en og et" "forbindenor"
+  "boejningsvaerkstedet" "danish_flashcards" "danske-phraser" "en-og-et" "forbindenor"
   "konjunktioner" "ordstilling-detektiv" "pronomenmysteriet" "saetningsmaskinen"
   "shared" "tidsmaskinen"
 )

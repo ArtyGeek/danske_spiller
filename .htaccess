@@ -10,3 +10,6 @@ RewriteRule ^ https://sjovtdansk.dk%{REQUEST_URI} [R=301,L,NE]
 
 RewriteCond %{HTTP_HOST} ^www\.sjovtdansk\.dk$ [NC]
 RewriteRule ^ https://sjovtdansk.dk%{REQUEST_URI} [R=301,L,NE]
+
+# Old folder name with spaces -> en-og-et/
+RewriteRule ^en\ og\ et/(.*)$ /en-og-et/$1 [R=301,L,NE]

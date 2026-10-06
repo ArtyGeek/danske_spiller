@@ -761,12 +761,20 @@
 
   /* ----------------------------------------------------- game chrome bar */
   function buildBar() {
-    if (root.hasAttribute("data-sd-nobar") || doc.querySelector(".sd-bar") || doc.body.hasAttribute("data-sd-home")) return;
-    var bar = doc.createElement("nav");
-    bar.className = "sd-bar"; bar.setAttribute("aria-label", "Sjovt Dansk");
-    bar.innerHTML = '<a class="sd-bar-home" href="' + homeUrl + '">← MENU</a>' +
-      '<span class="sd-bar-logo">' + '<span class="sd-sprite">' + spriteSVG("polle", 2) + '</span><span class="t">SJOVT <b>DANSK</b></span></span>';
-    doc.body.insertBefore(bar, doc.body.firstChild);
+    if (root.hasAttribute("data-sd-nobar") || doc.body.hasAttribute("data-sd-home")) return;
+    var logo = '<span class="sd-bar-logo">' + '<span class="sd-sprite">' + spriteSVG("polle", 2) + '</span><span class="t">SJOVT <b>DANSK</b></span></span>';
+    var bar = doc.querySelector(".sd-bar");
+    if (bar && bar.hasAttribute("data-sd-static")) {
+      /* Page ships a plain-HTML bar (crawlable home link); only add the sprite logo. */
+      if (!bar.querySelector(".sd-bar-logo")) bar.insertAdjacentHTML("beforeend", logo);
+    } else if (bar) {
+      return;
+    } else {
+      bar = doc.createElement("nav");
+      bar.className = "sd-bar"; bar.setAttribute("aria-label", "Sjovt Dansk");
+      bar.innerHTML = '<a class="sd-bar-home" href="' + homeUrl + '">← MENU</a>' + logo;
+      doc.body.insertBefore(bar, doc.body.firstChild);
+    }
     root.style.setProperty("--sd-bar-h", "48px");
   }
 
