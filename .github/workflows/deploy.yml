@@ -40,6 +40,9 @@ jobs:
       - name: SEO static checks
         run: node tests/seo-static.mjs
 
+      - name: Blog static checks
+        run: node tests/blog-static.mjs
+
       - name: Syntax-check JavaScript
         run: |
           set -euo pipefail
