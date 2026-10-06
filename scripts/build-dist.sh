@@ -14,7 +14,7 @@ DIRS=(
 rm -rf dist dist.manifest
 mkdir dist
 
-cp ./*.html robots.txt sitemap.xml dist/
+cp ./*.html robots.txt sitemap.xml .htaccess dist/
 for d in "${DIRS[@]}"; do
   [ -d "$d" ] || { echo "ERROR: expected directory '$d' is missing" >&2; exit 1; }
   mkdir -p "dist/$d"
@@ -23,9 +23,10 @@ for d in "${DIRS[@]}"; do
 done
 
 [ -f dist/index.html ] || { echo "ERROR: dist/index.html missing" >&2; exit 1; }
-if find dist \( -name '.*' -o -name 'tmp_*' -o -name '*.md' -o -name node_modules \) | grep -q .; then
+# dist/.htaccess (server redirects) is the only dotfile allowed.
+if find dist \( -name '.*' -o -name 'tmp_*' -o -name '*.md' -o -name node_modules \) ! -path dist/.htaccess | grep -q .; then
   echo "ERROR: dist contains files that must not be deployed:" >&2
-  find dist \( -name '.*' -o -name 'tmp_*' -o -name '*.md' -o -name node_modules \) >&2
+  find dist \( -name '.*' -o -name 'tmp_*' -o -name '*.md' -o -name node_modules \) ! -path dist/.htaccess >&2
   exit 1
 fi
 
