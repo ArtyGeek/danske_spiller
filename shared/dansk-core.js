@@ -602,19 +602,23 @@
 
   // -- ttsButton / focusTrap / announce -----------------------------------
 
-  function ttsButton(text, container) {
+  // ttsButton(text, container[, label]) - the one "listen" button. Default label "Lyt" (Danish); pass e.g. "Lyt til sætningen" to override.
+  // Look comes from shared/tts-button.css (pixel speaker, 48x48); without that file the base styles keep it a >=44px button.
+  function ttsButton(text, container, label) {
     if (!container) return null;
     injectBaseStyles();
+    var baseLabel = (typeof label === 'string' && label) ? label : 'Lyt';
     var button = document.createElement('button');
     button.type = 'button';
     button.className = 'dc-tts-button';
-    button.setAttribute('aria-label', 'Afspil igen');
+    button.setAttribute('aria-label', baseLabel);
+    button.title = baseLabel;
     button.innerHTML = '<span aria-hidden="true">&#128266;</span>';
     // Voice lists load asynchronously: re-check when they arrive. No Danish voice => say so instead of silence.
     function syncVoiceState() {
       var ok = DanskCore.tts.hasDanishVoice();
-      button.setAttribute('aria-label', ok ? 'Afspil igen' : 'Afspil igen (ingen dansk stemme fundet på denne enhed)');
-      button.title = ok ? '' : 'Ingen dansk stemme fundet på denne enhed';
+      button.setAttribute('aria-label', ok ? baseLabel : baseLabel + ' (ingen dansk stemme fundet på denne enhed)');
+      button.title = ok ? baseLabel : 'Ingen dansk stemme fundet på denne enhed';
       button.style.opacity = ok ? '' : '0.5';
     }
     syncVoiceState();
